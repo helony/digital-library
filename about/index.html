@@ -1,43 +1,141 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#11213d">
-<title>About · Kurdish Digital Library</title>
-<link rel="stylesheet" href="../assets/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Kurdish Digital Library — open Kurdish books and historical language works with clear sources, rights notes, and multilingual browsing.">
+  <meta name="theme-color" content="#11213d">
+  <title>Kurdish Digital Library</title>
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">▥</span><span><strong>Kurdish Digital Library</strong><small>Independent catalogue & preservation archive</small></span></a>
-    <nav class="top-nav" aria-label="Library">
-      <a href="../authors/index.html">Authors</a>
-      <a href="../preservation/index.html">Preservation</a>
-      <a href="../about/index.html">About</a>
-    </nav>
+  <a class="skip-link" href="#catalogue">Skip to catalogue</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="Kurdish Digital Library home">
+        <span class="brand-mark" aria-hidden="true">▥</span>
+        <span><strong>Kurdish Digital Library</strong><small data-i18n="brandSub">Open books across Kurdish languages and scripts</small></span>
+      </a>
+      <nav class="top-nav" aria-label="Library">
+        <a href="authors/index.html" data-i18n="navAuthors">Authors</a>
+        <a href="preservation/index.html" data-i18n="navPreservation">Preservation</a>
+        <a href="about/index.html" data-i18n="navAbout">About</a>
+      </nav>
+      <div class="header-actions">
+        <button class="pill-button" id="suggestButton" type="button" data-i18n="suggest">Suggest a book</button>
+        <button class="language-button" id="languageButton" type="button" aria-haspopup="dialog" aria-controls="languageDialog">⚑ <span id="languageButtonLabel">English</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <section class="catalogue-page" id="cataloguePage">
+      <div class="shell">
+        <section class="hero" aria-labelledby="heroTitle">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="sun-icon" aria-hidden="true">☼</span><span data-i18n="eyebrow">Open books across Kurdish languages and scripts</span></div>
+            <h1 id="heroTitle" data-i18n="headline">Find your next book</h1>
+            <p data-i18n="intro">Browse verified public-domain and open-access works. Every title includes its source and reuse status.</p>
+            <div class="kilim" aria-hidden="true">
+              <img src="assets/kurdish-kilim-motif.png" alt="" loading="eager">
+            </div>
+          </div>
+          <aside class="collection-card" aria-label="Collection statistics">
+            <div class="collection-kicker"><span>☼</span><span data-i18n="glance">THE COLLECTION AT A GLANCE</span></div>
+            <div class="stat-grid">
+              <div><strong id="bookCount">43</strong><span data-i18n="openBooks">open books</span></div>
+              <div><strong id="varietyCount">5</strong><span data-i18n="kurdishVarieties">Kurdish varieties</span></div>
+              <div><strong id="interfaceCount">6</strong><span data-i18n="displayLanguages">display languages</span></div>
+            </div>
+            <div class="rights-chip">◫ <span data-i18n="rightsChecked">Rights checked</span></div>
+          </aside>
+        </section>
+
+        <section class="catalogue-panel" id="catalogue" aria-labelledby="catalogueHeading">
+          <h2 class="visually-hidden" id="catalogueHeading" data-i18n="catalogue">Catalogue</h2>
+          <div class="filter-grid">
+            <label class="field search-field"><span data-i18n="searchCatalogue">Search catalogue</span><span class="input-wrap"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search titles, authors, languages, or sources"></span></label>
+            <label class="field"><span data-i18n="bookLanguage">Book language</span><select id="varietyFilter"></select></label>
+            <label class="field"><span data-i18n="subject">Subject</span><select id="subjectFilter"></select></label>
+            <label class="field"><span data-i18n="sortBooks">Sort books</span><select id="sortFilter"></select></label>
+          </div>
+          <div class="advanced-row">
+            <button class="text-button" id="moreFiltersButton" type="button" aria-expanded="false" aria-controls="advancedFilters"><span data-i18n="moreFilters">More filters</span> <span aria-hidden="true">＋</span></button>
+            <button class="text-button" id="clearFiltersButton" type="button" data-i18n="clearFilters">Clear filters</button>
+          </div>
+          <div class="advanced-filters" id="advancedFilters" hidden>
+            <label class="field"><span data-i18n="script">Script</span><select id="scriptFilter"></select></label>
+            <label class="field"><span data-i18n="format">Format</span><select id="formatFilter"></select></label>
+            <label class="field"><span data-i18n="availability">Availability</span><select id="availabilityFilter"></select></label>
+          </div>
+          <div class="catalogue-meta"><strong id="resultsCount">43 verified titles</strong><span data-i18n="catalogueNote">All books remain visible in every display language. Descriptions change language; the collection does not.</span></div>
+          <div class="book-grid" id="bookGrid" aria-live="polite"></div>
+          <div class="empty-state" id="emptyState" hidden><strong data-i18n="noResults">No matching books</strong><p data-i18n="noResultsHelp">Try removing a filter or searching a different spelling.</p></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="details-page" id="detailsPage" hidden aria-labelledby="detailsTitle">
+      <div class="shell details-shell">
+        <button class="back-link" id="detailsBack" type="button">← <span data-i18n="backCatalogue">Back to catalogue</span></button>
+        <div id="detailsContent"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner"><strong>Kurdish Digital Library</strong><span data-i18n="footer">Open access · Clear sources · Every Kurdish variety welcome</span><span class="footer-links"><a href="catalogue.json">JSON</a> · <a href="catalogue.csv">CSV</a> · <a href="about/index.html" data-i18n="navAbout">About</a></span></div>
+  </footer>
+
+  <div class="dialog-backdrop" id="languageDialog" role="dialog" aria-modal="true" aria-labelledby="languageTitle" hidden>
+    <div class="dialog-card language-dialog" tabindex="-1">
+      <button class="dialog-close" data-close-dialog="languageDialog" type="button" aria-label="Close">×</button>
+      <h2 id="languageTitle" data-i18n="chooseLanguage">Choose the language you want to browse</h2>
+      <p data-i18n="languageHelp">You can change this at any time. Right-to-left scripts are supported throughout the library.</p>
+      <div class="language-grid" id="languageGrid"></div>
+    </div>
   </div>
-</header>
-<main class="info-page"><div class="shell info-shell">
-<div class="page-kicker">ABOUT THE PROJECT</div>
-<h1>A Kurdish library built to last.</h1>
-<p class="page-lead">The Kurdish Digital Library is an independent, preservation-first catalogue of Kurdish books and historical texts. The goal is not only to link to material elsewhere, but—where redistribution is clearly permitted—to preserve a local copy so a source disappearing does not make the work disappear from the library.</p>
 
-<div class="policy-grid">
-  <section class="policy-card"><h2>Preserve</h2><p>Public-domain and clearly reusable material can be mirrored under the library’s own <code>/books/</code> archive. The reader prefers the local copy when one exists.</p></section>
-  <section class="policy-card"><h2>Document</h2><p>Every record keeps its original source, institution, rights note, last-check date, permanent KDL identifier, and planned local archive path.</p></section>
-  <section class="policy-card"><h2>Be careful</h2><p>Access does not automatically mean permission to redistribute. Regional, uncertain, or permission-limited files remain in manual review instead of being automatically copied.</p></section>
-</div>
+  <div class="dialog-backdrop" id="suggestDialog" role="dialog" aria-modal="true" aria-labelledby="suggestTitle" hidden>
+    <div class="dialog-card suggest-dialog" tabindex="-1">
+      <button class="dialog-close" data-close-dialog="suggestDialog" type="button" aria-label="Close">×</button>
+      <h2 id="suggestTitle" data-i18n="suggestTitle">Suggest a public-domain Kurdish work</h2>
+      <p data-i18n="suggestHelp">Suggestions are reviewed before anything is added. Submitting a form never publishes a book automatically.</p>
+      <form name="suggest-book" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" class="suggest-form">
+        <input type="hidden" name="form-name" value="suggest-book">
+        <p class="honeypot"><label>Do not fill this out: <input name="bot-field"></label></p>
+        <label><span data-i18n="formTitle">Book or work title</span><input name="title" required></label>
+        <label><span data-i18n="formAuthor">Author</span><input name="author"></label>
+        <label><span data-i18n="formVariety">Kurdish variety</span><input name="variety" placeholder="Kurmancî, Soranî, Zazakî…"></label>
+        <label><span data-i18n="formSource">Exact source URL</span><input name="source_url" type="url" required placeholder="https://…"></label>
+        <label><span data-i18n="formRights">Rights or public-domain evidence URL</span><input name="rights_url" type="url" placeholder="https://…"></label>
+        <label><span data-i18n="formEmail">Your email (optional)</span><input name="email" type="email"></label>
+        <label class="full"><span data-i18n="formNotes">Notes</span><textarea name="notes" rows="4"></textarea></label>
+        <div class="full form-note" data-i18n="netlifyNote">This moderated form is ready for Netlify Forms. If you host elsewhere, connect it to your preferred form service.</div>
+        <div class="full"><button class="primary-button" type="submit" data-i18n="submitSuggestion">Submit suggestion</button></div>
+      </form>
+    </div>
+  </div>
 
-<section class="record-main">
-<h2>What “rights checked” means</h2>
-<p>It means the catalogue stores a source-specific rights note and a date when that information was checked. It is not a universal legal determination. Copyright can vary by edition, transcription, translation, scan and jurisdiction.</p>
-<h2>Why original sources stay visible</h2>
-<p>Even after the library stores a preservation copy, the source link stays on the record as provenance: it documents where the file or transcription came from and helps preserve attribution and context.</p>
-<h2>Permanent identifiers</h2>
-<p>Each catalogue record now has a permanent identifier such as <code>KDL-KMR-0001</code>. These identifiers should never be recycled, even if a title is corrected or a source URL changes.</p>
-<h2>Machine-readable catalogue</h2>
-<p>The entire catalogue is available as JSON and CSV so the metadata can survive independently of this interface and can be migrated into another library system later.</p>
-<div class="machine-links"><a class="secondary-button" href="../catalogue.json">Download catalogue.json</a><a class="secondary-button" href="../catalogue.csv">Download catalogue.csv</a><a class="secondary-button" href="../archive-manifest.json">Download archive manifest</a></div>
-</section>
-</div></main><footer class="site-footer"><div class="shell footer-inner"><strong>Kurdish Digital Library</strong><span>Open access · Clear provenance · Preservation-first</span><span class="footer-links"><a href="../catalogue.json">JSON</a> · <a href="../catalogue.csv">CSV</a></span></div></footer></body></html>
+  <div class="reader" id="reader" role="dialog" aria-modal="true" aria-labelledby="readerTitle" hidden>
+    <header class="reader-toolbar">
+      <button class="tool-button" id="readerClose" type="button">← <span data-i18n="closeReader">Library</span></button>
+      <div class="reader-heading"><strong id="readerTitle">Reader</strong><span id="readerSubtitle"></span></div>
+      <div class="reader-actions">
+        <button class="tool-button" id="fontDown" type="button" aria-label="Decrease text size">A−</button>
+        <button class="tool-button" id="fontUp" type="button" aria-label="Increase text size">A+</button>
+        <button class="tool-button" id="readerWidth" type="button" data-i18n="readingWidth">Width</button>
+        <a class="tool-button" id="readerOriginal" href="#" target="_blank" rel="noopener"><span data-i18n="openOriginal">Open original source</span> ↗</a>
+      </div>
+    </header>
+    <div class="reader-nav" id="readerNav" hidden>
+      <button class="section-nav" id="prevSection" type="button">← <span data-i18n="previousSection">Previous section</span></button>
+      <span id="sectionLabel"></span>
+      <button class="section-nav" id="nextSection" type="button"><span data-i18n="nextSection">Next section</span> →</button>
+    </div>
+    <div class="reader-content" id="readerContent"><div class="reader-loading" data-i18n="loading">Loading…</div></div>
+  </div>
+
+  <script src="assets/app.js?v=5.2"></script>
+</body>
+</html>
