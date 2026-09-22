@@ -1,0 +1,258 @@
+{
+  "ok": 0,
+  "missing": 35,
+  "checksum_mismatch": 0,
+  "manual_review": 8,
+  "items": [
+    {
+      "kdl_id": "KDL-KMR-0001",
+      "slug": "soane-grammar-1913",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0002",
+      "slug": "mem-u-zin",
+      "status": "missing",
+      "path": "books/mem-u-zin/content.html"
+    },
+    {
+      "kdl_id": "KDL-KMR-0003",
+      "slug": "diwana-ehmede-xani",
+      "status": "missing",
+      "path": "books/diwana-ehmede-xani/content.html"
+    },
+    {
+      "kdl_id": "KDL-CKB-0001",
+      "slug": "diwani-fayiq-bekes",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-CKB-0002",
+      "slug": "practical-kurdish-grammar",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-CKB-0003",
+      "slug": "elementary-kurmanji-grammar",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0004",
+      "slug": "rezana-elfabeya-qurdi",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0005",
+      "slug": "rupelinen-elfabe",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0006",
+      "slug": "diwana-melaye-ciziri",
+      "status": "missing",
+      "path": "books/diwana-melaye-ciziri/content.html"
+    },
+    {
+      "kdl_id": "KDL-CKB-0004",
+      "slug": "diwani-mahwi",
+      "status": "missing",
+      "path": "books/diwani-mahwi/content.html"
+    },
+    {
+      "kdl_id": "KDL-CKB-0005",
+      "slug": "diwani-wefayi",
+      "status": "missing",
+      "path": "books/diwani-wefayi/content.html"
+    },
+    {
+      "kdl_id": "KDL-HAC-0001",
+      "slug": "diwani-xanay-qubadi",
+      "status": "missing",
+      "path": "books/diwani-xanay-qubadi/content.html"
+    },
+    {
+      "kdl_id": "KDL-DIQ-0001",
+      "slug": "lerkh-forschungen-1857",
+      "status": "missing",
+      "path": "books/lerkh-forschungen-1857/book.pdf"
+    },
+    {
+      "kdl_id": "KDL-SDH-0001",
+      "slug": "shake-u-xan-mensur",
+      "status": "missing",
+      "path": "books/shake-u-xan-mensur/content.html"
+    },
+    {
+      "kdl_id": "KDL-DIQ-0002",
+      "slug": "mewlide-nebi-xasi",
+      "status": "missing",
+      "path": "books/mewlide-nebi-xasi/content.html"
+    },
+    {
+      "kdl_id": "KDL-KMR-0007",
+      "slug": "nubehara-bicukan",
+      "status": "missing",
+      "path": "books/nubehara-bicukan/content.html"
+    },
+    {
+      "kdl_id": "KDL-KMR-0008",
+      "slug": "mewlida-kurmanci-bateyi",
+      "status": "missing",
+      "path": "books/mewlida-kurmanci-bateyi/content.html"
+    },
+    {
+      "kdl_id": "KDL-KMR-0009",
+      "slug": "zembilfiros",
+      "status": "missing",
+      "path": "books/zembilfiros/content.html"
+    },
+    {
+      "kdl_id": "KDL-KMR-0010",
+      "slug": "fi-beyani-el-eeqide-we-tewhid",
+      "status": "missing",
+      "path": "books/fi-beyani-el-eeqide-we-tewhid/content.html"
+    },
+    {
+      "kdl_id": "KDL-KMR-0011",
+      "slug": "garzoni-grammatica-vocabolario-1787",
+      "status": "missing",
+      "path": "books/garzoni-grammatica-vocabolario-1787/book.pdf"
+    },
+    {
+      "kdl_id": "KDL-KMR-0012",
+      "slug": "recueil-notices-recits-kourdes-1860",
+      "status": "missing",
+      "path": "books/recueil-notices-recits-kourdes-1860/book.pdf"
+    },
+    {
+      "kdl_id": "KDL-KMR-0013",
+      "slug": "dictionnaire-kurde-francais-1879",
+      "status": "missing",
+      "path": "books/dictionnaire-kurde-francais-1879/book.pdf"
+    },
+    {
+      "kdl_id": "KDL-KMR-0014",
+      "slug": "rhea-hakari-grammar-1872",
+      "status": "missing",
+      "path": "books/rhea-hakari-grammar-1872/book.pdf"
+    },
+    {
+      "kdl_id": "KDL-KMR-0015",
+      "slug": "kurdische-sammlungen-1887",
+      "status": "missing",
+      "path": "books/kurdische-sammlungen-1887/book.pdf"
+    },
+    {
+      "kdl_id": "KDL-KMR-0016",
+      "slug": "makas-kurdische-texte-mardin-1924",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0017",
+      "slug": "justi-kurdische-grammatik-1880",
+      "status": "missing",
+      "path": "books/justi-kurdische-grammatik-1880/book.pdf"
+    },
+    {
+      "kdl_id": "KDL-KMR-0018",
+      "slug": "leyl-u-mecnun-mihemed-can",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0019",
+      "slug": "bersise-abid",
+      "status": "missing",
+      "path": "books/bersise-abid/content.html"
+    },
+    {
+      "kdl_id": "KDL-KMR-0020",
+      "slug": "ballade-kurde-1859",
+      "status": "missing",
+      "path": "books/ballade-kurde-1859/book.pdf"
+    },
+    {
+      "kdl_id": "KDL-KMR-0021",
+      "slug": "kurdische-texte-transkription-1903",
+      "status": "missing",
+      "path": "books/kurdische-texte-transkription-1903/book.pdf"
+    },
+    {
+      "kdl_id": "KDL-KMR-0022",
+      "slug": "abecedaire-kurde-1868",
+      "status": "missing",
+      "path": "books/abecedaire-kurde-1868/book.pdf"
+    },
+    {
+      "kdl_id": "KDL-KMR-0023",
+      "slug": "feqiye-teyran-u-quling",
+      "status": "missing",
+      "path": "books/feqiye-teyran-u-quling/content.html"
+    },
+    {
+      "kdl_id": "KDL-KMR-0024",
+      "slug": "feqiye-teyran-u-roj",
+      "status": "missing",
+      "path": "books/feqiye-teyran-u-roj/content.html"
+    },
+    {
+      "kdl_id": "KDL-KMR-0025",
+      "slug": "melaye-ciziri-hartmann-facsimile-1904",
+      "status": "missing",
+      "path": "books/melaye-ciziri-hartmann-facsimile-1904/book.pdf"
+    },
+    {
+      "kdl_id": "KDL-KMR-0026",
+      "slug": "derd-u-dax-im",
+      "status": "missing",
+      "path": "books/derd-u-dax-im/content.html"
+    },
+    {
+      "kdl_id": "KDL-KMR-0027",
+      "slug": "di-nav-qewme-xerib",
+      "status": "missing",
+      "path": "books/di-nav-qewme-xerib/content.html"
+    },
+    {
+      "kdl_id": "KDL-KMR-0028",
+      "slug": "el-wefayi-wesla-canan",
+      "status": "missing",
+      "path": "books/el-wefayi-wesla-canan/content.html"
+    },
+    {
+      "kdl_id": "KDL-KMR-0029",
+      "slug": "ey-nete-tu",
+      "status": "missing",
+      "path": "books/ey-nete-tu/content.html"
+    },
+    {
+      "kdl_id": "KDL-KMR-0030",
+      "slug": "ger-tu-nazik-sorgul-i",
+      "status": "missing",
+      "path": "books/ger-tu-nazik-sorgul-i/content.html"
+    },
+    {
+      "kdl_id": "KDL-KMR-0031",
+      "slug": "ji-cirya-pasi-pe-da",
+      "status": "missing",
+      "path": "books/ji-cirya-pasi-pe-da/content.html"
+    },
+    {
+      "kdl_id": "KDL-KMR-0032",
+      "slug": "qiblegeha-asiqan-ke-yi-tu",
+      "status": "missing",
+      "path": "books/qiblegeha-asiqan-ke-yi-tu/content.html"
+    },
+    {
+      "kdl_id": "KDL-KMR-0033",
+      "slug": "subhan-ji-mire-qadiri",
+      "status": "missing",
+      "path": "books/subhan-ji-mire-qadiri/content.html"
+    },
+    {
+      "kdl_id": "KDL-KMR-0034",
+      "slug": "ya-reb-hawar",
+      "status": "missing",
+      "path": "books/ya-reb-hawar/content.html"
+    }
+  ]
+}

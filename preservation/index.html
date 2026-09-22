@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#11213d"><title>Preservation · Kurdish Digital Library</title><link rel="stylesheet" href="../assets/styles.css"></head><body>
+<header class="site-header"><div class="header-inner"><a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">▥</span><span><strong>Kurdish Digital Library</strong><small>Independent catalogue & preservation archive</small></span></a><nav class="top-nav" aria-label="Library"><a href="../authors/index.html">Authors</a><a href="index.html">Preservation</a><a href="../about/index.html">About</a></nav></div></header>
+<main class="info-page"><div class="shell info-shell">
+<div class="page-kicker">PRESERVATION DASHBOARD</div><h1>Archive status</h1>
+<p class="page-lead">This page checks the deployed library itself. Green means a local preservation file is actually present; amber means an eligible item still falls back to its external source; purple means automatic copying is disabled pending rights review.</p>
+<div class="status-grid"><div class="status-card"><strong id="totalCount">…</strong><span>catalogue records</span></div><div class="status-card"><strong id="eligibleCount">…</strong><span>eligible for automatic archiving</span></div><div class="status-card"><strong id="manualCount">…</strong><span>manual-rights-review records</span></div><div class="status-card"><strong id="localCount">…</strong><span>local preservation files detected</span></div></div>
+<div class="machine-links"><a class="secondary-button" href="../archive-manifest.json">Archive manifest</a><a class="secondary-button" href="../catalogue.json">Catalogue JSON</a><a class="secondary-button" href="../catalogue.csv">Catalogue CSV</a><a class="secondary-button" href="../library-audit.json">Latest audit JSON</a></div>
+<div class="audit-wrap"><table class="audit-table"><thead><tr><th>ID</th><th>Work</th><th>Format</th><th>Policy</th><th>Local status</th></tr></thead><tbody id="auditBody"><tr><td colspan="5">Loading catalogue…</td></tr></tbody></table></div>
+</div></main>
+<footer class="site-footer"><div class="shell footer-inner"><strong>Kurdish Digital Library</strong><span>Open access · Clear provenance · Preservation-first</span><span class="footer-links"><a href="../catalogue.json">JSON</a> · <a href="../catalogue.csv">CSV</a></span></div></footer>
+<script src="../assets/catalogue-data.js"></script>
+<script>
+(async function(){
+ const books=window.KDL_BOOKS||[];
+ const eligible=books.filter(b=>b.archiveEligible===true);
+ const manual=books.filter(b=>b.archiveEligible!==true);
+ document.getElementById('totalCount').textContent=books.length;
+ document.getElementById('eligibleCount').textContent=eligible.length;
+ document.getElementById('manualCount').textContent=manual.length;
+ const body=document.getElementById('auditBody'); body.innerHTML='';
+ const rows=[];
+ for(const b of books){
+   const tr=document.createElement('tr');
+   tr.innerHTML='<td><code></code></td><td><a></a></td><td></td><td></td><td class="runtime-status"></td>';
+   tr.children[0].firstChild.textContent=b.kdlId;
+   const a=tr.children[1].firstChild; a.textContent=b.title; a.href='../book/'+encodeURIComponent(b.slug)+'/index.html';
+   tr.children[2].textContent=String(b.format||'').toUpperCase();
+   tr.children[3].textContent=b.archiveEligible?'Auto-archive eligible':'Manual review';
+   const cell=tr.children[4];
+   cell.innerHTML=b.archiveEligible?'<span class="status-pill status-missing">Checking…</span>':'<span class="status-pill status-review">Review</span>';
+   body.appendChild(tr); rows.push({b,cell});
+ }
+ let present=0;
+ await Promise.all(rows.filter(x=>x.b.archiveEligible&&x.b.localPath).map(async ({b,cell})=>{
+   try{
+     const res=await fetch('../'+b.localPath,{method:'HEAD',cache:'no-store'});
+     if(res.ok){present++;cell.innerHTML='<span class="status-pill status-present">Local copy</span>';}
+     else cell.innerHTML='<span class="status-pill status-missing">External fallback</span>';
+   }catch(e){cell.innerHTML='<span class="status-pill status-missing">External fallback</span>';}
+ }));
+ document.getElementById('localCount').textContent=present;
+})();
+</script></body></html>
