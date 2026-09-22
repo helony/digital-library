@@ -7,6 +7,12 @@
   <meta name="theme-color" content="#11213d">
   <title>Kurdish Digital Library</title>
   <link rel="stylesheet" href="assets/styles.css">
+
+  <style>
+    #suggestForm .honeypot { position:absolute !important; left:-9999px !important; width:1px !important; height:1px !important; opacity:0 !important; pointer-events:none !important; }
+    #suggestStatus:not(:empty) { padding:10px 12px; border-radius:10px; background:rgba(17,33,61,.06); color:#11213d; font-weight:600; }
+    #suggestSubmit:disabled { opacity:.65; cursor:wait; }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#catalogue">Skip to catalogue</a>
@@ -69,7 +75,954 @@
             <label class="field"><span data-i18n="availability">Availability</span><select id="availabilityFilter"></select></label>
           </div>
           <div class="catalogue-meta"><strong id="resultsCount">43 verified titles</strong><span data-i18n="catalogueNote">All books remain visible in every display language. Descriptions change language; the collection does not.</span></div>
-          <div class="book-grid" id="bookGrid" aria-live="polite"></div>
+          <div class="book-grid" id="bookGrid" aria-live="polite">
+<article class="book-card static-book-card" data-slug="soane-grammar-1913" data-variety="kmr" data-subject="reference" data-script="latin" data-format="pdf" data-availability="full">
+      <div class="cover tone-red" dir="ltr">
+        <div class="cover-code">KDL-KMR-0001</div>
+        <div class="cover-title">Grammar of the Kurmanji or</div>
+        <div class="cover-author">E. B. Soane</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>1913</span></div>
+        <h3 class="book-title" dir="auto">Grammar of the Kurmanji or Kurdish Language</h3>
+        <a class="book-author author-link" href="authors/e-b-soane/index.html">E. B. Soane</a>
+        <div class="book-source">↗ Internet Archive / Rosetta Project</div>
+        <p class="book-desc">An early reference grammar of Kurmanji, digitized by the Rosetta Project and preserved by the Internet Archive.</p>
+        <div class="badges">
+          <span class="badge">Language &amp; reference</span>
+          <span class="badge rights">Public domain / jurisdiction note</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/soane-grammar-1913/index.html">Details</a>
+          <a class="secondary-button" href="https://archive.org/details/rosettaproject_kmr_multiple-1" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="mem-u-zin" data-variety="kmr" data-subject="poetry" data-script="latin" data-format="wiki" data-availability="partial">
+      <div class="cover tone-gold" dir="ltr">
+        <div class="cover-code">KDL-KMR-0002</div>
+        <div class="cover-title">Mem û Zîn</div>
+        <div class="cover-author">Ehmedê Xanî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>1692</span></div>
+        <h3 class="book-title" dir="auto">Mem û Zîn</h3>
+        <a class="book-author author-link" href="authors/ehmede-xani/index.html">Ehmedê Xanî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">Ehmedê Xanî’s foundational classical Kurdish romance. The current Wikisource record provides its substantial opening section rather than a complete edition.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain</span><span class="badge partial">Partial work</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/mem-u-zin/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/Mem_%C3%BB_Z%C3%AEn" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="diwana-ehmede-xani" data-variety="kmr" data-subject="poetry" data-script="arabic" data-format="wiki" data-availability="full">
+      <div class="cover tone-teal" dir="rtl">
+        <div class="cover-code">KDL-KMR-0003</div>
+        <div class="cover-title">دیوانی ئەحمەدی خانی</div>
+        <div class="cover-author">Ehmedê Xanî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>1707</span></div>
+        <h3 class="book-title" dir="rtl">دیوانی ئەحمەدی خانی</h3>
+        <a class="book-author author-link" href="authors/ehmede-xani/index.html">Ehmedê Xanî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A navigable collection of Ehmedê Xanî’s poetry preserved on Wikisource in Kurdish Arabic script.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/diwana-ehmede-xani/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/%D8%AF%DB%8C%D9%88%D8%A7%D9%86%DB%8C_%D8%A6%DB%95%D8%AD%D9%85%DB%95%D8%AF%DB%8C_%D8%AE%D8%A7%D9%86%DB%8C" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="diwani-fayiq-bekes" data-variety="ckb" data-subject="poetry" data-script="arabic" data-format="wiki" data-availability="full">
+      <div class="cover tone-plum" dir="rtl">
+        <div class="cover-code">KDL-CKB-0001</div>
+        <div class="cover-title">دیوانی فایق بێکەس</div>
+        <div class="cover-author">Fayiq Bêkes</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Soranî</span><span>·</span><span>1948</span></div>
+        <h3 class="book-title" dir="rtl">دیوانی فایق بێکەس</h3>
+        <a class="book-author author-link" href="authors/fayiq-bekes/index.html">Fayiq Bêkes</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A Sorani poetry collection arranged into thematic sections on Wikisource.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain / jurisdiction note</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/diwani-fayiq-bekes/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/%D8%AF%DB%8C%D9%88%D8%A7%D9%86%DB%8C_%D9%81%D8%A7%DB%8C%D9%82_%D8%A8%DB%8E%DA%A9%DB%95%D8%B3" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="practical-kurdish-grammar" data-variety="ckb" data-subject="reference" data-script="mixed" data-format="pdf" data-availability="full">
+      <div class="cover tone-brown" dir="ltr">
+        <div class="cover-code">KDL-CKB-0002</div>
+        <div class="cover-title">A Practical Kurdish Grammar</div>
+        <div class="cover-author">L. O. Fossum</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Soranî / Central Kurdish</span><span>·</span><span>1919</span></div>
+        <h3 class="book-title" dir="auto">A Practical Kurdish Grammar</h3>
+        <a class="book-author author-link" href="authors/l-o-fossum/index.html">L. O. Fossum</a>
+        <div class="book-source">↗ Kurdish Institute of Paris Digital Library</div>
+        <p class="book-desc">A 280-page historical grammar with pronunciation, exercises, short texts, syntax and vocabulary focused on Central Kurdish dialects.</p>
+        <div class="badges">
+          <span class="badge">Language &amp; reference</span>
+          <span class="badge rights">Public domain / jurisdiction note</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/practical-kurdish-grammar/index.html">Details</a>
+          <a class="secondary-button" href="https://bnk.institutkurde.org/images/pdf/BXQSR9A3D7.pdf" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="elementary-kurmanji-grammar" data-variety="ckb" data-subject="reference" data-script="mixed" data-format="pdf" data-availability="full">
+      <div class="cover tone-green" dir="ltr">
+        <div class="cover-code">KDL-CKB-0003</div>
+        <div class="cover-title">Elementary Kurmanji Grammar</div>
+        <div class="cover-author">E. B. Soane</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Soranî / Central Kurdish</span><span>·</span><span>1919</span></div>
+        <h3 class="book-title" dir="auto">Elementary Kurmanji Grammar</h3>
+        <a class="book-author author-link" href="authors/e-b-soane/index.html">E. B. Soane</a>
+        <div class="book-source">↗ Kurdish Institute of Paris Digital Library</div>
+        <p class="book-desc">Despite the historical title “Kurmanji,” this grammar describes the Kurdish of Sulaimaniyah and is catalogued here as Central Kurdish.</p>
+        <div class="badges">
+          <span class="badge">Language &amp; reference</span>
+          <span class="badge rights">Public domain / jurisdiction note</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/elementary-kurmanji-grammar/index.html">Details</a>
+          <a class="secondary-button" href="https://bnk.institutkurde.org/images/pdf/LZ68BVJ32M.pdf" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="rezana-elfabeya-qurdi" data-variety="kmr" data-subject="reference" data-script="latin" data-format="pdf" data-availability="full">
+      <div class="cover tone-blue" dir="ltr">
+        <div class="cover-code">KDL-KMR-0004</div>
+        <div class="cover-title">Rêzana elfabêya qurdî</div>
+        <div class="cover-author">Celadet Alî Bedir-Xan</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>1932</span></div>
+        <h3 class="book-title" dir="auto">Rêzana elfabêya qurdî</h3>
+        <a class="book-author author-link" href="authors/celadet-ali-bedir-xan/index.html">Celadet Alî Bedir-Xan</a>
+        <div class="book-source">↗ Kurdish Institute of Paris Digital Library</div>
+        <p class="book-desc">A short historical guide to the Latin-based Kurdish alphabet from the Hawar publishing tradition.</p>
+        <div class="badges">
+          <span class="badge">Language &amp; reference</span>
+          <span class="badge caution">Rights review</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/rezana-elfabeya-qurdi/index.html">Details</a>
+          <a class="secondary-button" href="https://bnk.institutkurde.org/images/pdf/JSE3P1NGHY.pdf" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="rupelinen-elfabe" data-variety="kmr" data-subject="education" data-script="latin" data-format="pdf" data-availability="full">
+      <div class="cover tone-rust" dir="ltr">
+        <div class="cover-code">KDL-KMR-0005</div>
+        <div class="cover-title">Rûpelinên Elfabê</div>
+        <div class="cover-author">Celadet Alî Bedir-Xan</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>1932</span></div>
+        <h3 class="book-title" dir="auto">Rûpelinên Elfabê</h3>
+        <a class="book-author author-link" href="authors/celadet-ali-bedir-xan/index.html">Celadet Alî Bedir-Xan</a>
+        <div class="book-source">↗ Kurdish Institute of Paris Digital Library</div>
+        <p class="book-desc">A short illustrated alphabet reader connected with the development of the modern Latin Kurdish alphabet.</p>
+        <div class="badges">
+          <span class="badge">Education</span>
+          <span class="badge caution">Rights review</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/rupelinen-elfabe/index.html">Details</a>
+          <a class="secondary-button" href="https://bnk.institutkurde.org/images/pdf/72A9XUKYVC.pdf" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="diwana-melaye-ciziri" data-variety="kmr" data-subject="poetry" data-script="arabic" data-format="wiki" data-availability="full">
+      <div class="cover tone-plum" dir="rtl">
+        <div class="cover-code">KDL-KMR-0006</div>
+        <div class="cover-title">دیوانا مەلایێ جزیری</div>
+        <div class="cover-author">Melayê Cizîrî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>c. 1630</span></div>
+        <h3 class="book-title" dir="rtl">دیوانا مەلایێ جزیری</h3>
+        <a class="book-author author-link" href="authors/melaye-ciziri/index.html">Melayê Cizîrî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">The classical divan of Melayê Cizîrî, arranged into navigable sections and openly readable on Wikisource.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/diwana-melaye-ciziri/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/%D8%AF%DB%8C%D9%88%D8%A7%D9%86%D8%A7_%D9%85%DB%95%D9%84%D8%A7%DB%8C%DB%8E_%D8%AC%D8%B2%DB%8C%D8%B1%DB%8C" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="diwani-mahwi" data-variety="ckb" data-subject="poetry" data-script="arabic" data-format="wiki" data-availability="full">
+      <div class="cover tone-violet" dir="rtl">
+        <div class="cover-code">KDL-CKB-0004</div>
+        <div class="cover-title">دیوانی مەحوی</div>
+        <div class="cover-author">Mahwî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Soranî</span><span>·</span><span>1896</span></div>
+        <h3 class="book-title" dir="rtl">دیوانی مەحوی</h3>
+        <a class="book-author author-link" href="authors/mahwi/index.html">Mahwî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A large classical Sorani divan organized by letter and form on Wikisource.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/diwani-mahwi/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/%D8%AF%DB%8C%D9%88%D8%A7%D9%86%DB%8C_%D9%85%DB%95%D8%AD%D9%88%DB%8C" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="diwani-wefayi" data-variety="ckb" data-subject="poetry" data-script="arabic" data-format="wiki" data-availability="full">
+      <div class="cover tone-tan" dir="rtl">
+        <div class="cover-code">KDL-CKB-0005</div>
+        <div class="cover-title">دیوانی وەفایی</div>
+        <div class="cover-author">Wefayî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Soranî</span><span>·</span><span>1902</span></div>
+        <h3 class="book-title" dir="rtl">دیوانی وەفایی</h3>
+        <a class="book-author author-link" href="authors/wefayi/index.html">Wefayî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A classical Kurdish poetry collection on Wikisource, with poems grouped by letter.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/diwani-wefayi/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/%D8%AF%DB%8C%D9%88%D8%A7%D9%86%DB%8C_%D9%88%DB%95%D9%81%D8%A7%DB%8C%DB%8C" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="diwani-xanay-qubadi" data-variety="hac" data-subject="poetry" data-script="arabic" data-format="wiki" data-availability="full">
+      <div class="cover tone-teal" dir="rtl">
+        <div class="cover-code">KDL-HAC-0001</div>
+        <div class="cover-title">دیوانی خانای قوبادی</div>
+        <div class="cover-author">Xanay Qubadî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Hewramî / Goranî</span><span>·</span><span>c. 1750</span></div>
+        <h3 class="book-title" dir="rtl">دیوانی خانای قوبادی</h3>
+        <a class="book-author author-link" href="authors/xanay-qubadi/index.html">Xanay Qubadî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A classical Gorani/Hewrami divan by Xanay Qubadî, with thematic sections on Wikisource.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/diwani-xanay-qubadi/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/%D8%AF%DB%8C%D9%88%D8%A7%D9%86%DB%8C_%D8%AE%D8%A7%D9%86%D8%A7%DB%8C_%D9%82%D9%88%D8%A8%D8%A7%D8%AF%DB%8C" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="lerkh-forschungen-1857" data-variety="diq" data-subject="reference" data-script="mixed" data-format="pdf" data-availability="full">
+      <div class="cover tone-blue" dir="ltr">
+        <div class="cover-code">KDL-DIQ-0001</div>
+        <div class="cover-title">Forschungen über die Kurden und</div>
+        <div class="cover-author">Petr Lerkh</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Zazakî + Kurdish texts</span><span>·</span><span>1857</span></div>
+        <h3 class="book-title" dir="auto">Forschungen über die Kurden und die iranischen Nordchaldäer</h3>
+        <a class="book-author author-link" href="authors/petr-lerkh/index.html">Petr Lerkh</a>
+        <div class="book-source">↗ Wikimedia Commons / Internet Archive</div>
+        <p class="book-desc">A 19th-century linguistic and ethnographic work containing early documented Zaza and Kurdish language material; the scan is marked public domain.</p>
+        <div class="badges">
+          <span class="badge">Language &amp; reference</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/lerkh-forschungen-1857/index.html">Details</a>
+          <a class="secondary-button" href="https://commons.wikimedia.org/wiki/File:Forschungen_%C3%BCber_die_Kurden_und_die_iranischen_Nordchald%C3%A4er_(IA_forschungenberd01lerkgoog).pdf" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="shake-u-xan-mensur" data-variety="sdh" data-subject="poetry" data-script="arabic" data-format="wiki" data-availability="full">
+      <div class="cover tone-brown" dir="rtl">
+        <div class="cover-code">KDL-SDH-0001</div>
+        <div class="cover-title">دیوان شاکە و خان مەسۊر</div>
+        <div class="cover-author">Şake û Xan Mensur</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Southern Kurdish / Kelhurî</span><span>·</span><span>18th c.</span></div>
+        <h3 class="book-title" dir="rtl">دیوان شاکە و خان مەسۊر</h3>
+        <a class="book-author author-link" href="authors/sake-u-xan-mensur/index.html">Şake û Xan Mensur</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">Classical Southern Kurdish (Kelhurî) poetry attributed to Şake and Xan Mensur, with texts available on Wikisource.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/shake-u-xan-mensur/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/%D8%AF%DB%8C%D9%88%D8%A7%D9%86_%D8%B4%D8%A7%DA%A9%DB%95_%D9%88_%D8%AE%D8%A7%D9%86_%D9%85%DB%95%D8%B3%DB%8A%D8%B1/%D9%BE%DB%95%DB%8E%DA%A9_%D9%A2" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="mewlide-nebi-xasi" data-variety="diq" data-subject="religious" data-script="latin" data-format="wiki" data-availability="full">
+      <div class="cover tone-red" dir="ltr">
+        <div class="cover-code">KDL-DIQ-0002</div>
+        <div class="cover-title">Mewlıdê Nebi</div>
+        <div class="cover-author">Mela Ehmedê Xasi</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Zazakî</span><span>·</span><span>1899</span></div>
+        <h3 class="book-title" dir="auto">Mewlıdê Nebi</h3>
+        <a class="book-author author-link" href="authors/mela-ehmede-xasi/index.html">Mela Ehmedê Xasi</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A major early printed Zazaki literary work by Mela Ehmedê Xasi, first printed in Diyarbakır in 1899 and readable in full on Wikisource.</p>
+        <div class="badges">
+          <span class="badge">Religious &amp; classical</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/mewlide-nebi-xasi/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/Mewl%C4%B1d%C3%AA_Nebi" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="nubehara-bicukan" data-variety="kmr" data-subject="education" data-script="latin" data-format="wiki" data-availability="full">
+      <div class="cover tone-green" dir="ltr">
+        <div class="cover-code">KDL-KMR-0007</div>
+        <div class="cover-title">Nûbehara Biçûkan</div>
+        <div class="cover-author">Ehmedê Xanî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>1683</span></div>
+        <h3 class="book-title" dir="auto">Nûbehara Biçûkan</h3>
+        <a class="book-author author-link" href="authors/ehmede-xani/index.html">Ehmedê Xanî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">Ehmedê Xanî’s 1683 verse Arabic–Kurdish lexicon for Kurdish children, an early Kurmanji educational and lexicographic work.</p>
+        <div class="badges">
+          <span class="badge">Education</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/nubehara-bicukan/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/N%C3%BBbehara_Bi%C3%A7%C3%BBkan" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="mewlida-kurmanci-bateyi" data-variety="kmr" data-subject="religious" data-script="latin" data-format="wiki" data-availability="full">
+      <div class="cover tone-gold" dir="ltr">
+        <div class="cover-code">KDL-KMR-0008</div>
+        <div class="cover-title">Mewlîda Kurmancî</div>
+        <div class="cover-author">Mela Huseynê Bateyî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>15th c.</span></div>
+        <h3 class="book-title" dir="auto">Mewlîda Kurmancî</h3>
+        <a class="book-author author-link" href="authors/mela-huseyne-bateyi/index.html">Mela Huseynê Bateyî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A long classical Kurmanji mewlid attributed to Mela Huseynê Bateyî, preserved as a readable public-domain work on Wikisource.</p>
+        <div class="badges">
+          <span class="badge">Religious &amp; classical</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/mewlida-kurmanci-bateyi/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/Mewl%C3%AEda_Kurmanc%C3%AE" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="zembilfiros" data-variety="kmr" data-subject="folklore" data-script="latin" data-format="wiki" data-availability="full">
+      <div class="cover tone-rust" dir="ltr">
+        <div class="cover-code">KDL-KMR-0009</div>
+        <div class="cover-title">Zembîlfiroş</div>
+        <div class="cover-author">Mela Huseynê Bateyî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>15th c.</span></div>
+        <h3 class="book-title" dir="auto">Zembîlfiroş</h3>
+        <a class="book-author author-link" href="authors/mela-huseyne-bateyi/index.html">Mela Huseynê Bateyî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">The classical Kurmanji narrative poem of Zembîlfiroş, attributed to Mela Huseynê Bateyî and available as a public-domain text on Wikisource.</p>
+        <div class="badges">
+          <span class="badge">Folklore &amp; oral literature</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/zembilfiros/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/Zemb%C3%AElfiro%C5%9F" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="fi-beyani-el-eeqide-we-tewhid" data-variety="kmr" data-subject="religious" data-script="latin" data-format="wiki" data-availability="full">
+      <div class="cover tone-violet" dir="ltr">
+        <div class="cover-code">KDL-KMR-0010</div>
+        <div class="cover-title">Fî Beyanî El Eeqîde We Tewhîd</div>
+        <div class="cover-author">Ehmedê Xanî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>17th c.</span></div>
+        <h3 class="book-title" dir="auto">Fî Beyanî El Eeqîde We Tewhîd</h3>
+        <a class="book-author author-link" href="authors/ehmede-xani/index.html">Ehmedê Xanî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A Kurmanji theological poem by Ehmedê Xanî on creed and divine unity, preserved on Wikisource as a public-domain historical work.</p>
+        <div class="badges">
+          <span class="badge">Religious &amp; classical</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/fi-beyani-el-eeqide-we-tewhid/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/F%C3%AE_Beyan%C3%AE_El_Eeq%C3%AEde_We_Tewh%C3%AEd" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="garzoni-grammatica-vocabolario-1787" data-variety="kmr" data-subject="reference" data-script="latin" data-format="pdf" data-availability="full">
+      <div class="cover tone-teal" dir="ltr">
+        <div class="cover-code">KDL-KMR-0011</div>
+        <div class="cover-title">Grammatica e vocabolario della lingua</div>
+        <div class="cover-author">Maurizio Garzoni</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî / Bahdînî</span><span>·</span><span>1787</span></div>
+        <h3 class="book-title" dir="auto">Grammatica e vocabolario della lingua Kurda</h3>
+        <a class="book-author author-link" href="authors/maurizio-garzoni/index.html">Maurizio Garzoni</a>
+        <div class="book-source">↗ Wikimedia Commons / Wellcome Collection / Internet Archive</div>
+        <p class="book-desc">Maurizio Garzoni’s 1787 grammar and vocabulary, based on Kurdish learned in the Bahdinan region. It is one of the earliest substantial printed studies of Kurdish.</p>
+        <div class="badges">
+          <span class="badge">Language &amp; reference</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/garzoni-grammatica-vocabolario-1787/index.html">Details</a>
+          <a class="secondary-button" href="https://commons.wikimedia.org/wiki/File:Grammatica_e_vocabolario_della_lingua_kurda_..._(IA_b28777086).pdf" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="recueil-notices-recits-kourdes-1860" data-variety="kmr" data-subject="folklore" data-script="mixed" data-format="pdf" data-availability="full">
+      <div class="cover tone-brown" dir="ltr">
+        <div class="cover-code">KDL-KMR-0012</div>
+        <div class="cover-title">Recueil de notices et récits</div>
+        <div class="cover-author">Auguste Jaba &amp; Mele Mehmûdê Bazîdî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>1860</span></div>
+        <h3 class="book-title" dir="auto">Recueil de notices et récits kourdes</h3>
+        <a class="book-author author-link" href="authors/auguste-jaba-and-mele-mehmude-bazidi/index.html">Auguste Jaba &amp; Mele Mehmûdê Bazîdî</a>
+        <div class="book-source">↗ Internet Archive</div>
+        <p class="book-desc">A major nineteenth-century collection of Kurmanji texts, stories and ethnographic material associated with Auguste Jaba and Mele Mehmûdê Bazîdî, with French translation and notes.</p>
+        <div class="badges">
+          <span class="badge">Folklore &amp; oral literature</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/recueil-notices-recits-kourdes-1860/index.html">Details</a>
+          <a class="secondary-button" href="https://archive.org/details/recueildenotice01jabagoog" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="dictionnaire-kurde-francais-1879" data-variety="kmr" data-subject="reference" data-script="mixed" data-format="pdf" data-availability="full">
+      <div class="cover tone-blue" dir="ltr">
+        <div class="cover-code">KDL-KMR-0013</div>
+        <div class="cover-title">Dictionnaire Kurde-Français</div>
+        <div class="cover-author">Auguste Jaba; ed. Ferdinand Justi</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>1879</span></div>
+        <h3 class="book-title" dir="auto">Dictionnaire Kurde-Français</h3>
+        <a class="book-author author-link" href="authors/auguste-jaba-ed-ferdinand-justi/index.html">Auguste Jaba; ed. Ferdinand Justi</a>
+        <div class="book-source">↗ Wikimedia Commons / Kurdish Institute of Paris</div>
+        <p class="book-desc">Auguste Jaba’s large 1879 Kurdish–French dictionary, edited by Ferdinand Justi. The Kurdish Institute of Paris catalogues it as including Northern Kurdish (Kurmanji).</p>
+        <div class="badges">
+          <span class="badge">Language &amp; reference</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/dictionnaire-kurde-francais-1879/index.html">Details</a>
+          <a class="secondary-button" href="https://commons.wikimedia.org/wiki/File:Dictionnaire_Kurde-Fran%C3%A7ais_by_Auguste_Jaba_and_Ferdinand_Justi.pdf" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="rhea-hakari-grammar-1872" data-variety="kmr" data-subject="reference" data-script="latin" data-format="pdf" data-availability="full">
+      <div class="cover tone-green" dir="ltr">
+        <div class="cover-code">KDL-KMR-0014</div>
+        <div class="cover-title">Brief Grammar and Vocabulary of</div>
+        <div class="cover-author">Samuel A. Rhea</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî / Hekarî</span><span>·</span><span>1872</span></div>
+        <h3 class="book-title" dir="auto">Brief Grammar and Vocabulary of the Kurdish Language of the Hakari District</h3>
+        <a class="book-author author-link" href="authors/samuel-a-rhea/index.html">Samuel A. Rhea</a>
+        <div class="book-source">↗ JSTOR / Journal of the American Oriental Society</div>
+        <p class="book-desc">A nineteenth-century grammar, vocabulary and set of language specimens from the Hakkari Kurdish area, first published in the Journal of the American Oriental Society.</p>
+        <div class="badges">
+          <span class="badge">Language &amp; reference</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/rhea-hakari-grammar-1872/index.html">Details</a>
+          <a class="secondary-button" href="https://www.jstor.org/stable/592123" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="kurdische-sammlungen-1887" data-variety="kmr" data-subject="folklore" data-script="latin" data-format="pdf" data-availability="full">
+      <div class="cover tone-rust" dir="ltr">
+        <div class="cover-code">KDL-KMR-0015</div>
+        <div class="cover-title">Kurdische Sammlungen: Erzählungen und Lieder</div>
+        <div class="cover-author">Eugen Prym &amp; Albert Socin</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>1887</span></div>
+        <h3 class="book-title" dir="auto">Kurdische Sammlungen: Erzählungen und Lieder</h3>
+        <a class="book-author author-link" href="authors/eugen-prym-and-albert-socin/index.html">Eugen Prym &amp; Albert Socin</a>
+        <div class="book-source">↗ Bibliothèque nationale de France (Gallica)</div>
+        <p class="book-desc">An important collection of Kurmanji oral literature from Tur Abdin and, in later volumes, Bohtan, including stories, songs and linguistic material gathered by Eugen Prym and Albert Socin.</p>
+        <div class="badges">
+          <span class="badge">Folklore &amp; oral literature</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/kurdische-sammlungen-1887/index.html">Details</a>
+          <a class="secondary-button" href="https://gallica.bnf.fr/ark:/12148/bpt6k841758s" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="makas-kurdische-texte-mardin-1924" data-variety="kmr" data-subject="folklore" data-script="mixed" data-format="pdf" data-availability="full">
+      <div class="cover tone-violet" dir="ltr">
+        <div class="cover-code">KDL-KMR-0016</div>
+        <div class="cover-title">Kurdische Texte im Kurmānǰī-Dialekte aus</div>
+        <div class="cover-author">Hugo Makas</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî / Mêrdîn</span><span>·</span><span>1924</span></div>
+        <h3 class="book-title" dir="auto">Kurdische Texte im Kurmānǰī-Dialekte aus der Gegend von Mardin</h3>
+        <a class="book-author author-link" href="authors/hugo-makas/index.html">Hugo Makas</a>
+        <div class="book-source">↗ Kurdish Institute of Paris Digital Library</div>
+        <p class="book-desc">A collection of Kurmanji texts from the Mardin region with transcription, translation, notes and glossary, published in 1924 and preserved by the Kurdish Institute of Paris.</p>
+        <div class="badges">
+          <span class="badge">Folklore &amp; oral literature</span>
+          <span class="badge rights">Public domain / jurisdiction note</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/makas-kurdische-texte-mardin-1924/index.html">Details</a>
+          <a class="secondary-button" href="https://pmb.institutkurde.org/opac_css/index.php?lvl=notice_display&amp;id=10175" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="justi-kurdische-grammatik-1880" data-variety="kmr" data-subject="reference" data-script="mixed" data-format="pdf" data-availability="full">
+      <div class="cover tone-gold" dir="ltr">
+        <div class="cover-code">KDL-KMR-0017</div>
+        <div class="cover-title">Kurdische Grammatik</div>
+        <div class="cover-author">Ferdinand Justi</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî + comparative Kurdish</span><span>·</span><span>1880</span></div>
+        <h3 class="book-title" dir="auto">Kurdische Grammatik</h3>
+        <a class="book-author author-link" href="authors/ferdinand-justi/index.html">Ferdinand Justi</a>
+        <div class="book-source">↗ Internet Archive</div>
+        <p class="book-desc">Ferdinand Justi’s 1880 comparative Kurdish grammar. It draws heavily on Kurmanji examples while also comparing material from other Kurdish varieties.</p>
+        <div class="badges">
+          <span class="badge">Language &amp; reference</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/justi-kurdische-grammatik-1880/index.html">Details</a>
+          <a class="secondary-button" href="https://archive.org/details/kurdischegramma00justgoog" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="leyl-u-mecnun-mihemed-can" data-variety="kmr" data-subject="poetry" data-script="mixed" data-format="pdf" data-availability="full">
+      <div class="cover tone-plum" dir="ltr">
+        <div class="cover-code">KDL-KMR-0018</div>
+        <div class="cover-title">Leyl û Mecnûn</div>
+        <div class="cover-author">Şêx Mihemed Can</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>1992 edition</span></div>
+        <h3 class="book-title" dir="auto">Leyl û Mecnûn</h3>
+        <a class="book-author author-link" href="authors/sex-mihemed-can/index.html">Şêx Mihemed Can</a>
+        <div class="book-source">↗ Nevgur Kitêbxane / Kurdish Institute of Paris</div>
+        <p class="book-desc">A 352-page Kurmanji verse telling of Leyl and Mecnûn, by the classical Kurdish poet Şêx Mihemed Can. This 1992 edition presents the work in Latin and Kurdish Arabic scripts.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Sharing permitted</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/leyl-u-mecnun-mihemed-can/index.html">Details</a>
+          <a class="secondary-button" href="https://kiteb.nevgur.net/book/5f00s" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="bersise-abid" data-variety="kmr" data-subject="poetry" data-script="latin" data-format="wiki" data-availability="full">
+      <div class="cover tone-gold" dir="ltr">
+        <div class="cover-code">KDL-KMR-0019</div>
+        <div class="cover-title">Bersîsê ‘Abid</div>
+        <div class="cover-author">Feqiyê Teyran</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>classical / undated</span></div>
+        <h3 class="book-title" dir="auto">Bersîsê ‘Abid</h3>
+        <a class="book-author author-link" href="authors/feqiye-teyran/index.html">Feqiyê Teyran</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A long classical Kurmanji narrative poem by Feqiyê Teyran, telling the cautionary story of the ascetic Bersîs.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/bersise-abid/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/Bers%C3%AEs%C3%AA_%E2%80%98Abid" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="ballade-kurde-1859" data-variety="kmr" data-subject="poetry" data-script="mixed" data-format="pdf" data-availability="full">
+      <div class="cover tone-rust" dir="ltr">
+        <div class="cover-code">KDL-KMR-0020</div>
+        <div class="cover-title">Ballade kurde</div>
+        <div class="cover-author">Auguste Jaba &amp; Piotr Tchikhatchov</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî + French</span><span>·</span><span>1859</span></div>
+        <h3 class="book-title" dir="auto">Ballade kurde</h3>
+        <a class="book-author author-link" href="authors/auguste-jaba-and-piotr-tchikhatchov/index.html">Auguste Jaba &amp; Piotr Tchikhatchov</a>
+        <div class="book-source">↗ Nevgur Kitêbxane</div>
+        <p class="book-desc">An 1859 Kurdish ballad publication from Paris, presenting Kurmanji alongside French in a compact historical edition.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/ballade-kurde-1859/index.html">Details</a>
+          <a class="secondary-button" href="https://kiteb.nevgur.net/book/1210a" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="kurdische-texte-transkription-1903" data-variety="kmr" data-subject="folklore" data-script="latin" data-format="pdf" data-availability="full">
+      <div class="cover tone-blue" dir="ltr">
+        <div class="cover-code">KDL-KMR-0021</div>
+        <div class="cover-title">Kurdische Texte — Die Texte</div>
+        <div class="cover-author">Albert von Le Coq</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî + Zazakî + Soranî</span><span>·</span><span>1903</span></div>
+        <h3 class="book-title" dir="auto">Kurdische Texte — Die Texte in Transkription</h3>
+        <a class="book-author author-link" href="authors/albert-von-le-coq/index.html">Albert von Le Coq</a>
+        <div class="book-source">↗ Nevgur Kitêbxane / Kurdish Institute of Paris</div>
+        <p class="book-desc">The transcription volume of Albert von Le Coq’s 1903 Kurdish text collection, containing Kurmanji stories and songs alongside Zazaki and other Kurdish material.</p>
+        <div class="badges">
+          <span class="badge">Folklore &amp; oral literature</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/kurdische-texte-transkription-1903/index.html">Details</a>
+          <a class="secondary-button" href="https://kiteb.nevgur.net/book/ye18k" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="abecedaire-kurde-1868" data-variety="kmr" data-subject="education" data-script="arabic" data-format="pdf" data-availability="full">
+      <div class="cover tone-green" dir="rtl">
+        <div class="cover-code">KDL-KMR-0022</div>
+        <div class="cover-title">Abécédaire Kurde / Rûpela zarokan</div>
+        <div class="cover-author">Mele Mehmûdê Bazîdî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>1868</span></div>
+        <h3 class="book-title" dir="rtl">Abécédaire Kurde / Rûpela zarokan</h3>
+        <a class="book-author author-link" href="authors/mele-mehmude-bazidi/index.html">Mele Mehmûdê Bazîdî</a>
+        <div class="book-source">↗ Nevgur Kitêbxane</div>
+        <p class="book-desc">A rare 1868 Kurmanji children’s primer associated with Mele Mehmûdê Bazîdî, preserved in Kurdish Arabic script and historically part of the Alexander Jaba collection.</p>
+        <div class="badges">
+          <span class="badge">Education</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/abecedaire-kurde-1868/index.html">Details</a>
+          <a class="secondary-button" href="https://kiteb.nevgur.net/book/fekra" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="feqiye-teyran-u-quling" data-variety="kmr" data-subject="poetry" data-script="latin" data-format="wiki" data-availability="full">
+      <div class="cover tone-teal" dir="ltr">
+        <div class="cover-code">KDL-KMR-0023</div>
+        <div class="cover-title">Feqiyê Teyran û Quling</div>
+        <div class="cover-author">Feqiyê Teyran</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>classical / undated</span></div>
+        <h3 class="book-title" dir="auto">Feqiyê Teyran û Quling</h3>
+        <a class="book-author author-link" href="authors/feqiye-teyran/index.html">Feqiyê Teyran</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A classical Kurmanji poem in which Feqiyê Teyran addresses a crane as a travelling messenger and companion.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/feqiye-teyran-u-quling/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/Feqiy%C3%AA_Teyran_%C3%BB_Quling" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="feqiye-teyran-u-roj" data-variety="kmr" data-subject="poetry" data-script="latin" data-format="wiki" data-availability="full">
+      <div class="cover tone-red" dir="ltr">
+        <div class="cover-code">KDL-KMR-0024</div>
+        <div class="cover-title">Feqiyê Teyran û Roj</div>
+        <div class="cover-author">Feqiyê Teyran</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>classical / undated</span></div>
+        <h3 class="book-title" dir="auto">Feqiyê Teyran û Roj</h3>
+        <a class="book-author author-link" href="authors/feqiye-teyran/index.html">Feqiyê Teyran</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A classical Kurmanji poem by Feqiyê Teyran addressing the sun and reflecting on nature, life and creation.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/feqiye-teyran-u-roj/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/Feqiy%C3%AA_Teyran_%C3%BB_Roj" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="melaye-ciziri-hartmann-facsimile-1904" data-variety="kmr" data-subject="poetry" data-script="arabic" data-format="pdf" data-availability="full">
+      <div class="cover tone-violet" dir="rtl">
+        <div class="cover-code">KDL-KMR-0025</div>
+        <div class="cover-title">Der Kurdische Diwan des Mala&#x27;i</div>
+        <div class="cover-author">Melayê Cizîrî; ed. Martin Hartmann</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>1904 edition</span></div>
+        <h3 class="book-title" dir="rtl">Der Kurdische Diwan des Mala&#x27;i Gizri</h3>
+        <a class="book-author author-link" href="authors/melaye-ciziri-ed-martin-hartmann/index.html">Melayê Cizîrî; ed. Martin Hartmann</a>
+        <div class="book-source">↗ Nevgur Kitêbxane / Internet Archive</div>
+        <p class="book-desc">A 222-page 1904 Berlin facsimile edition of Melayê Cizîrî’s divan in Kurdish Arabic script, with a German prefatory contribution by Martin Hartmann.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/melaye-ciziri-hartmann-facsimile-1904/index.html">Details</a>
+          <a class="secondary-button" href="https://kiteb.nevgur.net/book/20znk" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="derd-u-dax-im" data-variety="kmr" data-subject="poetry" data-script="latin" data-format="wiki" data-availability="full">
+      <div class="cover tone-red" dir="ltr">
+        <div class="cover-code">KDL-KMR-0026</div>
+        <div class="cover-title">Derd û Dax im</div>
+        <div class="cover-author">Mela Huseynê Bateyî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>15th century</span></div>
+        <h3 class="book-title" dir="auto">Derd û Dax im</h3>
+        <a class="book-author author-link" href="authors/mela-huseyne-bateyi/index.html">Mela Huseynê Bateyî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A short classical Kurmanji lyric by Mela Huseynê Bateyî, centered on longing, love and the pain of separation.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/derd-u-dax-im/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/Derd_%C3%BB_Dax_im" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="di-nav-qewme-xerib" data-variety="kmr" data-subject="poetry" data-script="latin" data-format="wiki" data-availability="full">
+      <div class="cover tone-blue" dir="ltr">
+        <div class="cover-code">KDL-KMR-0027</div>
+        <div class="cover-title">Di Nav Qewmê Xerîb</div>
+        <div class="cover-author">Mela Huseynê Bateyî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>15th century</span></div>
+        <h3 class="book-title" dir="auto">Di Nav Qewmê Xerîb</h3>
+        <a class="book-author author-link" href="authors/mela-huseyne-bateyi/index.html">Mela Huseynê Bateyî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A classical Kurmanji poem of exile and estrangement, repeatedly returning to the image of living among strangers.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/di-nav-qewme-xerib/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/Di_Nav_Qewm%C3%AA_Xer%C3%AEb" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="el-wefayi-wesla-canan" data-variety="kmr" data-subject="poetry" data-script="latin" data-format="wiki" data-availability="full">
+      <div class="cover tone-violet" dir="ltr">
+        <div class="cover-code">KDL-KMR-0028</div>
+        <div class="cover-title">El Wefayî Wesla Canan Xemzîdara</div>
+        <div class="cover-author">Mela Huseynê Bateyî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>15th century</span></div>
+        <h3 class="book-title" dir="auto">El Wefayî Wesla Canan Xemzîdara Min</h3>
+        <a class="book-author author-link" href="authors/mela-huseyne-bateyi/index.html">Mela Huseynê Bateyî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A love lyric by Bateyî built around waiting for the beloved and the emotional imagery of separation.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/el-wefayi-wesla-canan/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/El_Wefay%C3%AE_Wesla_Canan_Xemz%C3%AEdara_Min" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="ey-nete-tu" data-variety="kmr" data-subject="religious" data-script="latin" data-format="wiki" data-availability="full">
+      <div class="cover tone-green" dir="ltr">
+        <div class="cover-code">KDL-KMR-0029</div>
+        <div class="cover-title">Ey Netê Tû</div>
+        <div class="cover-author">Mela Huseynê Bateyî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>15th century</span></div>
+        <h3 class="book-title" dir="auto">Ey Netê Tû</h3>
+        <a class="book-author author-link" href="authors/mela-huseyne-bateyi/index.html">Mela Huseynê Bateyî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A devotional Kurmanji poem praising the Prophet, written in Bateyî’s ornate classical style.</p>
+        <div class="badges">
+          <span class="badge">Religious &amp; classical</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/ey-nete-tu/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/Ey_Net%C3%AA_T%C3%BB" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="ger-tu-nazik-sorgul-i" data-variety="kmr" data-subject="poetry" data-script="latin" data-format="wiki" data-availability="full">
+      <div class="cover tone-teal" dir="ltr">
+        <div class="cover-code">KDL-KMR-0030</div>
+        <div class="cover-title">Ger Tu Nazik Sorgul î</div>
+        <div class="cover-author">Mela Huseynê Bateyî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>15th century</span></div>
+        <h3 class="book-title" dir="auto">Ger Tu Nazik Sorgul î</h3>
+        <a class="book-author author-link" href="authors/mela-huseyne-bateyi/index.html">Mela Huseynê Bateyî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A compact classical love poem comparing the beloved to a red rose and the speaker to a nightingale and moth.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/ger-tu-nazik-sorgul-i/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/Ger_Tu_Nazik_Sorgul_%C3%AE" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="ji-cirya-pasi-pe-da" data-variety="kmr" data-subject="poetry" data-script="latin" data-format="wiki" data-availability="full">
+      <div class="cover tone-rust" dir="ltr">
+        <div class="cover-code">KDL-KMR-0031</div>
+        <div class="cover-title">Ji Çirya Paşî Pê Da</div>
+        <div class="cover-author">Mela Huseynê Bateyî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>15th century</span></div>
+        <h3 class="book-title" dir="auto">Ji Çirya Paşî Pê Da</h3>
+        <a class="book-author author-link" href="authors/mela-huseyne-bateyi/index.html">Mela Huseynê Bateyî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A vivid Kurmanji winter poem connected with Bateyî’s journey toward Miks, full of snow, fog, cold and landscape imagery.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/ji-cirya-pasi-pe-da/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/Ji_%C3%87irya_Pa%C5%9F%C3%AE_P%C3%AA_Da" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="qiblegeha-asiqan-ke-yi-tu" data-variety="kmr" data-subject="poetry" data-script="latin" data-format="wiki" data-availability="full">
+      <div class="cover tone-gold" dir="ltr">
+        <div class="cover-code">KDL-KMR-0032</div>
+        <div class="cover-title">Qiblegeha Aşiqan (Kê Yî Tu)</div>
+        <div class="cover-author">Mela Huseynê Bateyî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>15th century</span></div>
+        <h3 class="book-title" dir="auto">Qiblegeha Aşiqan (Kê Yî Tu)</h3>
+        <a class="book-author author-link" href="authors/mela-huseyne-bateyi/index.html">Mela Huseynê Bateyî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">An elaborate classical Kurmanji love poem rich in garden, celestial and mystical imagery.</p>
+        <div class="badges">
+          <span class="badge">Poetry &amp; classics</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/qiblegeha-asiqan-ke-yi-tu/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/Qiblegeha_A%C5%9Fiqan_%28K%C3%AA_Y%C3%AE_Tu%29" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="subhan-ji-mire-qadiri" data-variety="kmr" data-subject="religious" data-script="latin" data-format="wiki" data-availability="full">
+      <div class="cover tone-blue" dir="ltr">
+        <div class="cover-code">KDL-KMR-0033</div>
+        <div class="cover-title">Subhan Ji Mîrê Qadirî</div>
+        <div class="cover-author">Mela Huseynê Bateyî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>15th century</span></div>
+        <h3 class="book-title" dir="auto">Subhan Ji Mîrê Qadirî</h3>
+        <a class="book-author author-link" href="authors/mela-huseyne-bateyi/index.html">Mela Huseynê Bateyî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A long devotional Kurmanji poem on divine power, creation and praise, attributed to Mela Huseynê Bateyî.</p>
+        <div class="badges">
+          <span class="badge">Religious &amp; classical</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/subhan-ji-mire-qadiri/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/Subhan_Ji_M%C3%AEr%C3%AA_Qadir%C3%AE" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="book-card static-book-card" data-slug="ya-reb-hawar" data-variety="kmr" data-subject="religious" data-script="latin" data-format="wiki" data-availability="full">
+      <div class="cover tone-plum" dir="ltr">
+        <div class="cover-code">KDL-KMR-0034</div>
+        <div class="cover-title">Ya Reb Hawar</div>
+        <div class="cover-author">Mela Huseynê Bateyî</div>
+      </div>
+      <div class="card-body">
+        <div class="book-meta"><span>Kurmancî</span><span>·</span><span>15th century</span></div>
+        <h3 class="book-title" dir="auto">Ya Reb Hawar</h3>
+        <a class="book-author author-link" href="authors/mela-huseyne-bateyi/index.html">Mela Huseynê Bateyî</a>
+        <div class="book-source">↗ Wikisource</div>
+        <p class="book-desc">A devotional Kurmanji supplication by Bateyî, structured around the refrain asking God for aid and healing.</p>
+        <div class="badges">
+          <span class="badge">Religious &amp; classical</span>
+          <span class="badge rights">Public domain</span>
+        </div>
+        <div class="card-actions">
+          <a class="primary-button" href="book/ya-reb-hawar/index.html">Details</a>
+          <a class="secondary-button" href="https://wikisource.org/wiki/Ya_Reb_Hawar" target="_blank" rel="noopener">Original source ↗</a>
+        </div>
+      </div>
+    </article>
+          </div>
           <div class="empty-state" id="emptyState" hidden><strong data-i18n="noResults">No matching books</strong><p data-i18n="noResultsHelp">Try removing a filter or searching a different spelling.</p></div>
         </section>
       </div>
@@ -101,18 +1054,19 @@
       <button class="dialog-close" data-close-dialog="suggestDialog" type="button" aria-label="Close">×</button>
       <h2 id="suggestTitle" data-i18n="suggestTitle">Suggest a public-domain Kurdish work</h2>
       <p data-i18n="suggestHelp">Suggestions are reviewed before anything is added. Submitting a form never publishes a book automatically.</p>
-      <form name="suggest-book" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" class="suggest-form">
-        <input type="hidden" name="form-name" value="suggest-book">
-        <p class="honeypot"><label>Do not fill this out: <input name="bot-field"></label></p>
+      <form id="suggestForm" name="suggest-book" action="https://formspree.io/f/xppwdnkp" method="POST" accept-charset="UTF-8" class="suggest-form">
+        <input type="hidden" name="subject" value="New Kurdish Digital Library book suggestion">
+        <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
         <label><span data-i18n="formTitle">Book or work title</span><input name="title" required></label>
         <label><span data-i18n="formAuthor">Author</span><input name="author"></label>
         <label><span data-i18n="formVariety">Kurdish variety</span><input name="variety" placeholder="Kurmancî, Soranî, Zazakî…"></label>
         <label><span data-i18n="formSource">Exact source URL</span><input name="source_url" type="url" required placeholder="https://…"></label>
         <label><span data-i18n="formRights">Rights or public-domain evidence URL</span><input name="rights_url" type="url" placeholder="https://…"></label>
         <label><span data-i18n="formEmail">Your email (optional)</span><input name="email" type="email"></label>
-        <label class="full"><span data-i18n="formNotes">Notes</span><textarea name="notes" rows="4"></textarea></label>
-        <div class="full form-note" data-i18n="netlifyNote">This moderated form is ready for Netlify Forms. If you host elsewhere, connect it to your preferred form service.</div>
-        <div class="full"><button class="primary-button" type="submit" data-i18n="submitSuggestion">Submit suggestion</button></div>
+        <label class="full"><span data-i18n="formNotes">Notes</span><textarea name="message" rows="4"></textarea></label>
+        <div class="full form-note">Suggestions are sent privately to the library curator by email through Formspree and are reviewed before anything is added.</div>
+        <div class="full" id="suggestStatus" role="status" aria-live="polite"></div>
+        <div class="full"><button class="primary-button" id="suggestSubmit" type="submit" data-i18n="submitSuggestion">Submit suggestion</button></div>
       </form>
     </div>
   </div>
@@ -136,7 +1090,50 @@
     <div class="reader-content" id="readerContent"><div class="reader-loading" data-i18n="loading">Loading…</div></div>
   </div>
 
-  <script src="assets/catalogue-data.js"></script>
-  <script src="assets/app.js"></script>
+  <script src="assets/app.js?v=5.5"></script>
+
+  <script>
+  (() => {
+    const form = document.getElementById('suggestForm');
+    if (!form) return;
+    const endpoint = 'https://formspree.io/f/xppwdnkp';
+    form.action = endpoint;
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const button = document.getElementById('suggestSubmit');
+      const status = document.getElementById('suggestStatus');
+      const originalLabel = button ? button.textContent : 'Submit suggestion';
+      if (button) { button.disabled = true; button.textContent = 'Sending…'; }
+      if (status) status.textContent = '';
+
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.reset();
+          if (status) status.textContent = 'Thank you! Your book suggestion has been sent for review.';
+        } else {
+          let message = 'The suggestion could not be sent. Please try again.';
+          try {
+            const data = await response.json();
+            if (data && Array.isArray(data.errors) && data.errors.length) {
+              message = data.errors.map(error => error.message).filter(Boolean).join(' ');
+            }
+          } catch (_) {}
+          if (status) status.textContent = message;
+        }
+      } catch (_) {
+        if (status) status.textContent = 'The suggestion could not be sent. Please check your connection and try again.';
+      } finally {
+        if (button) { button.disabled = false; button.textContent = originalLabel; }
+      }
+    });
+  })();
+  </script>
 </body>
 </html>
