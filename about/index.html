@@ -1048,17 +1048,16 @@
       <button class="dialog-close" data-close-dialog="suggestDialog" type="button" aria-label="Close">×</button>
       <h2 id="suggestTitle" data-i18n="suggestTitle">Suggest a public-domain Kurdish work</h2>
       <p data-i18n="suggestHelp">Suggestions are reviewed before anything is added. Submitting a form never publishes a book automatically.</p>
-      <form name="suggest-book" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" class="suggest-form">
-        <input type="hidden" name="form-name" value="suggest-book">
-        <p class="honeypot"><label>Do not fill this out: <input name="bot-field"></label></p>
+      <form name="suggest-book" action="https://formspree.io/f/xppwdnkp" method="POST" accept-charset="UTF-8" class="suggest-form">
+        <input type="hidden" name="subject" value="New Kurdish Digital Library book suggestion">
         <label><span data-i18n="formTitle">Book or work title</span><input name="title" required></label>
         <label><span data-i18n="formAuthor">Author</span><input name="author"></label>
         <label><span data-i18n="formVariety">Kurdish variety</span><input name="variety" placeholder="Kurmancî, Soranî, Zazakî…"></label>
         <label><span data-i18n="formSource">Exact source URL</span><input name="source_url" type="url" required placeholder="https://…"></label>
         <label><span data-i18n="formRights">Rights or public-domain evidence URL</span><input name="rights_url" type="url" placeholder="https://…"></label>
         <label><span data-i18n="formEmail">Your email (optional)</span><input name="email" type="email"></label>
-        <label class="full"><span data-i18n="formNotes">Notes</span><textarea name="notes" rows="4"></textarea></label>
-        <div class="full form-note" data-i18n="netlifyNote">This moderated form is ready for Netlify Forms. If you host elsewhere, connect it to your preferred form service.</div>
+        <label class="full"><span data-i18n="formNotes">Notes</span><textarea name="message" rows="4"></textarea></label>
+        <div class="full form-note" data-i18n="netlifyNote">Suggestions are sent privately to the library curator by email through Formspree and are reviewed before anything is added.</div>
         <div class="full"><button class="primary-button" type="submit" data-i18n="submitSuggestion">Submit suggestion</button></div>
       </form>
     </div>
@@ -1083,6 +1082,6 @@
     <div class="reader-content" id="readerContent"><div class="reader-loading" data-i18n="loading">Loading…</div></div>
   </div>
 
-  <script src="assets/app.js?v=5.3"></script>
+  <script src="assets/app.js?v=5.4"></script>
 </body>
 </html>
