@@ -60,8 +60,8 @@
         <section class="browse-hub" aria-labelledby="browseHubTitle">
           <div class="browse-hub-copy">
             <div class="page-kicker">BROWSE THE LIBRARY</div>
-            <h2 id="browseHubTitle">What would you like to read?</h2>
-            <p>Start with the full collection, or jump straight into stories, poetry, or language and reference works.</p>
+            <h2 id="browseHubTitle">What would you like to explore?</h2>
+            <p>Browse the full collection, jump into stories and poetry, or hear Kurdish voices from open archives.</p>
           </div>
           <div class="browse-modes" id="libraryBrowseModes" role="group" aria-label="Library sections">
             <button class="browse-mode is-active" type="button" data-library-mode="all" aria-pressed="true">
@@ -80,6 +80,87 @@
               <span class="browse-mode-icon" aria-hidden="true">Aa</span>
               <span><strong>Reference</strong><small>Language & research</small></span>
             </button>
+            <button class="browse-mode" type="button" data-library-mode="voices" aria-pressed="false">
+              <span class="browse-mode-icon" aria-hidden="true">◉</span>
+              <span><strong>Voices · Deng</strong><small>Listen & watch</small></span>
+            </button>
+          </div>
+        </section>
+
+        <section class="voices-browser" id="voicesBrowsePanel" aria-labelledby="voicesBrowseTitle" hidden>
+          <div class="voices-browser-head">
+            <div>
+              <div class="page-kicker">VOICES · DENG · ZIMANÊ ZINDÎ</div>
+              <h2 id="voicesBrowseTitle">Hear Kurdish as it is spoken</h2>
+              <p>Open-licensed recordings of Kurdish speakers and pronunciation archives. This is the beginning of an oral collection alongside the books.</p>
+            </div>
+            <span class="voices-open-chip">Open media · Sources credited</span>
+          </div>
+
+          <div class="voice-grid">
+            <article class="voice-card">
+              <div class="voice-media">
+                <video controls preload="metadata" playsinline aria-label="Mohamad speaking Kurmanji Kurdish">
+                  <source src="https://commons.wikimedia.org/wiki/Special:Redirect/file/WIKITONGUES-_Mohamad_speaking_Kurdish.webm" type="video/webm">
+                </video>
+              </div>
+              <div class="voice-card-body">
+                <div class="voice-label">KURMANCÎ · NORTHERN KURDISH</div>
+                <h3>Mohamad speaking Kurmancî</h3>
+                <p>A short Wikitongues recording of Mohamad Saeed speaking the Northern variety of Kurdish.</p>
+                <div class="badges"><span class="badge">1:55</span><span class="badge rights">CC BY-SA 4.0</span></div>
+                <div class="voice-credit">Wikitongues · Mohamad Saeed · 2018</div>
+                <a class="secondary-button" href="https://commons.wikimedia.org/wiki/File:WIKITONGUES-_Mohamad_speaking_Kurdish.webm" target="_blank" rel="noopener">Source & license ↗</a>
+              </div>
+            </article>
+
+            <article class="voice-card">
+              <div class="voice-media">
+                <video controls preload="metadata" playsinline aria-label="Golala speaking Sorani Kurdish">
+                  <source src="https://commons.wikimedia.org/wiki/Special:Redirect/file/WIKITONGUES-_Golala_speaking_Sorani_Kurdish.webm" type="video/webm">
+                </video>
+              </div>
+              <div class="voice-card-body">
+                <div class="voice-label">SORANÎ · CENTRAL KURDISH</div>
+                <h3>Golala speaking Soranî</h3>
+                <p>A Wikitongues oral-language recording made in Oslo, preserving a natural sample of spoken Soranî.</p>
+                <div class="badges"><span class="badge">1:54</span><span class="badge rights">CC BY-SA 4.0</span></div>
+                <div class="voice-credit">Wikitongues · Irena Dahl · Golala · 2017</div>
+                <a class="secondary-button" href="https://commons.wikimedia.org/wiki/File:WIKITONGUES-_Golala_speaking_Sorani_Kurdish.webm" target="_blank" rel="noopener">Source & license ↗</a>
+              </div>
+            </article>
+
+            <article class="voice-card">
+              <div class="voice-media">
+                <video controls preload="metadata" playsinline aria-label="Zakia speaking Central Kurdish">
+                  <source src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Zakia_speaking_Central_Kurdish.webm" type="video/webm">
+                </video>
+              </div>
+              <div class="voice-card-body">
+                <div class="voice-label">CENTRAL KURDISH · ORAL HISTORY</div>
+                <h3>Zakia speaking Central Kurdish</h3>
+                <p>A newer Wikitongues oral-history contribution, donated to Wikimedia Commons for open reuse.</p>
+                <div class="badges"><span class="badge">2:34</span><span class="badge rights">CC BY-SA 4.0</span></div>
+                <div class="voice-credit">Wikitongues · Zakia · 2024</div>
+                <a class="secondary-button" href="https://commons.wikimedia.org/wiki/File:Zakia_speaking_Central_Kurdish.webm" target="_blank" rel="noopener">Source & license ↗</a>
+              </div>
+            </article>
+
+            <article class="voice-card voice-archive-card">
+              <div class="voice-archive-mark" aria-hidden="true">)))</div>
+              <div class="voice-card-body">
+                <div class="voice-label">AUDIO ARCHIVE · PRONUNCIATION</div>
+                <h3>Lingua Libre Kurdish recordings</h3>
+                <p>Explore thousands of short pronunciation recordings. The gallery currently lists 3,857 Kurmancî recordings, plus additional Kurdish-language material.</p>
+                <div class="badges"><span class="badge">3,857 Kurmancî recordings</span><span class="badge">Audio</span></div>
+                <a class="primary-button" href="https://lingualibre.org/gallery" target="_blank" rel="noopener">Explore audio archive ↗</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="voices-note">
+            <strong>Why voices?</strong>
+            <p>Kurdish has a long written literary tradition, while oral storytelling, dengbêj performance, songs and regional speech are also central parts of its cultural record. The goal here is to preserve both.</p>
           </div>
         </section>
 
@@ -1587,13 +1668,14 @@
 (() => {
   const catalogue = document.getElementById('catalogue');
   const stories = document.getElementById('storyBrowsePanel');
+  const voices = document.getElementById('voicesBrowsePanel');
   const subject = document.getElementById('subjectFilter');
   const modeButtons = [...document.querySelectorAll('[data-library-mode]')];
   const storyTabs = [...document.querySelectorAll('[data-story-language]')];
   const kurmanji = document.getElementById('kurmanjiStoryShelf');
   const sorani = document.getElementById('storyCorner');
 
-  if (!catalogue || !stories || !subject) return;
+  if (!catalogue || !stories || !voices || !subject) return;
 
   function markMode(mode) {
     modeButtons.forEach(button => {
@@ -1612,8 +1694,10 @@
 
   function showLibraryMode(mode, scroll = false) {
     const storyMode = mode === 'stories';
+    const voicesMode = mode === 'voices';
     stories.hidden = !storyMode;
-    catalogue.hidden = storyMode;
+    voices.hidden = !voicesMode;
+    catalogue.hidden = storyMode || voicesMode;
 
     if (mode === 'all') setSubject('all');
     if (mode === 'poetry') setSubject('poetry');
@@ -1621,7 +1705,8 @@
 
     markMode(mode);
     if (scroll) {
-      (storyMode ? stories : catalogue).scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const target = storyMode ? stories : voicesMode ? voices : catalogue;
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 
@@ -1645,14 +1730,14 @@
   });
 
   subject.addEventListener('change', () => {
-    if (stories.hidden) {
+    if (stories.hidden && voices.hidden) {
       if (subject.value === 'poetry') markMode('poetry');
       else if (subject.value === 'reference') markMode('reference');
       else markMode('all');
     }
   });
 
-  // Story-reader pages link back to these anchors. Open the story view automatically.
+  // Reader pages can return directly to the right shelf.
   if (location.hash === '#kurmanjiStoryShelf') {
     showLibraryMode('stories');
     showStoryLanguage('kmr');
@@ -1661,6 +1746,9 @@
     showLibraryMode('stories');
     showStoryLanguage('ckb');
     requestAnimationFrame(() => sorani && sorani.scrollIntoView({ block: 'start' }));
+  } else if (location.hash === '#voicesBrowsePanel') {
+    showLibraryMode('voices');
+    requestAnimationFrame(() => voices.scrollIntoView({ block: 'start' }));
   } else {
     showLibraryMode('all');
     showStoryLanguage('all');
