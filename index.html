@@ -57,6 +57,452 @@
           </aside>
         </section>
 
+        <section class="browse-hub" aria-labelledby="browseHubTitle">
+          <div class="browse-hub-copy">
+            <div class="page-kicker">BROWSE THE LIBRARY</div>
+            <h2 id="browseHubTitle">What would you like to read?</h2>
+            <p>Start with the full collection, or jump straight into stories, poetry, or language and reference works.</p>
+          </div>
+          <div class="browse-modes" id="libraryBrowseModes" role="group" aria-label="Library sections">
+            <button class="browse-mode is-active" type="button" data-library-mode="all" aria-pressed="true">
+              <span class="browse-mode-icon" aria-hidden="true">▥</span>
+              <span><strong>All books</strong><small>Full catalogue</small></span>
+            </button>
+            <button class="browse-mode" type="button" data-library-mode="stories" aria-pressed="false">
+              <span class="browse-mode-icon" aria-hidden="true">◫</span>
+              <span><strong>Stories · Çîrok</strong><small>Kurmancî + Soranî</small></span>
+            </button>
+            <button class="browse-mode" type="button" data-library-mode="poetry" aria-pressed="false">
+              <span class="browse-mode-icon" aria-hidden="true">✦</span>
+              <span><strong>Poetry</strong><small>Poems & divans</small></span>
+            </button>
+            <button class="browse-mode" type="button" data-library-mode="reference" aria-pressed="false">
+              <span class="browse-mode-icon" aria-hidden="true">Aa</span>
+              <span><strong>Reference</strong><small>Language & research</small></span>
+            </button>
+          </div>
+        </section>
+
+        <section class="story-browser" id="storyBrowsePanel" aria-labelledby="storyBrowseTitle" hidden>
+          <div class="story-browser-head">
+            <div>
+              <div class="page-kicker">STORIES · ÇÎROK · DESTAN</div>
+              <h2 id="storyBrowseTitle">Stories from across the collection</h2>
+              <p>Folktales, love epics, oral narratives and open storybooks — all in one place.</p>
+            </div>
+            <div class="story-language-tabs" role="group" aria-label="Story language">
+              <button class="story-language-tab is-active" type="button" data-story-language="all" aria-pressed="true">All stories</button>
+              <button class="story-language-tab" type="button" data-story-language="kmr" aria-pressed="false">Kurmancî</button>
+              <button class="story-language-tab" type="button" data-story-language="ckb" aria-pressed="false">Soranî</button>
+            </div>
+          </div>
+
+        <section class="catalogue-panel" id="kurmanjiStoryShelf" aria-labelledby="kurmanjiStoryTitle" style="margin-bottom:24px;">
+          <div class="catalogue-meta" style="align-items:flex-end;">
+            <div>
+              <div class="page-kicker" style="margin-bottom:6px;">KURMANCÎ · ÇÎROK · SERHATÎ · DESTAN</div>
+              <h2 id="kurmanjiStoryTitle" style="margin:0;">Çîrokên Kurmancî</h2>
+              <p style="margin:.45rem 0 0;max-width:820px;">Historic Kurmancî and Northern Kurdish stories, epics and oral narratives — because the library should be much more than grammar books.</p>
+            </div>
+            <span>Historic sources · Provenance shown</span>
+          </div>
+
+          <div class="book-grid" aria-label="Historic Kurmanji stories and oral narratives">
+            <article class="book-card">
+              <div class="cover tone-red">
+                <div class="cover-code">SERHATÎ · SÊRT · 1910</div>
+                <div class="cover-title">Salih û Kejê</div>
+                <div class="cover-author">Oral love narrative</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Love story</span></div>
+                <h3 class="book-title">Salih û Kejê</h3>
+                <div class="book-author">Recorded in Sêrt / Siirt by M. Dufresne</div>
+                <div class="book-source">↗ Journal Asiatique, 1910</div>
+                <p class="book-desc">A well-known Kurdish oral love story. The early printed version was recorded in Sêrt and published in 1910.</p>
+                <div class="badges"><span class="badge">Serhatî</span><span class="badge rights">Historic source</span></div>
+                <div class="card-actions">
+                  <a class="primary-button" href="stories/salih-u-keje/index.html">Read in library</a>
+                  <a class="secondary-button" href="https://fr.wikisource.org/wiki/Journal_asiatique/S%C3%A9rie_10,_tome_15" target="_blank" rel="noopener">1910 source ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="cover tone-gold">
+                <div class="cover-code">DESTAN · 1903 SOURCE</div>
+                <div class="cover-title">Mamê Alan</div>
+                <div class="cover-author">Kurdish epic tradition</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Epic / tale</span></div>
+                <h3 class="book-title">Hîkayeya Mamê Alan</h3>
+                <div class="book-author">Traditional narrative</div>
+                <div class="book-source">↗ Albert von Le Coq, Kurdische Texte (1903)</div>
+                <p class="book-desc">A classic Kurdish epic narrative preserved among the Kurmancî stories in Le Coq’s early twentieth-century collection.</p>
+                <div class="badges"><span class="badge">Destan</span><span class="badge rights">1903 source</span></div>
+                <div class="card-actions"><a class="primary-button" href="stories/mame-alan/index.html">Read in library</a><a class="secondary-button" href="https://books.google.com/books?id=mStIAQAAMAAJ" target="_blank" rel="noopener">1903 source ↗</a></div>
+              </div>
+            </article>
+
+                        <article class="book-card">
+              <div class="cover tone-rust">
+                <div class="cover-code">DESTAN · SÎPAN</div>
+                <div class="cover-title">Siyabend û Xecê</div>
+                <div class="cover-author">Kurdish oral tradition</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Love epic</span></div>
+                <h3 class="book-title">Siyabend û Xecê</h3>
+                <div class="book-author">Traditional dengbêj narrative</div>
+                <div class="book-source">↗ Oral tradition · 1860 collection provenance</div>
+                <p class="book-desc">A tragic Kurmancî love epic: Siyabend and Xecê flee together to Mount Sîpan, where a deer hunt leads to their final separation and death.</p>
+                <div class="badges"><span class="badge">Destan</span><span class="badge">Evîn</span><span class="badge rights">Traditional</span></div>
+                <div class="card-actions"><a class="primary-button" href="stories/siyabend-u-xece/index.html">Read in library</a><a class="secondary-button" href="https://kiteb.nevgur.net/book/9ekd4" target="_blank" rel="noopener">1860 collection ↗</a></div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="cover tone-brown">
+                <div class="cover-code">DESTAN · DIMDIM</div>
+                <div class="cover-title">Kela Dimdim û Xanê Lepzêrîn</div>
+                <div class="cover-author">Kurdish oral-historical tradition</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Epic / history</span></div>
+                <h3 class="book-title">Kela Dimdim û Xanê Lepzêrîn</h3>
+                <div class="book-author">Traditional narrative · 1608–1610 historical core</div>
+                <div class="book-source">↗ Bazîdî/Jaba archive · later Hekarî variants</div>
+                <p class="book-desc">The story of Dimdim Castle and Xanê Lepzêrîn, where a seventeenth-century siege became one of the best-known Kurdish heroic epics.</p>
+                <div class="badges"><span class="badge">Destan</span><span class="badge">Dîrok</span><span class="badge rights">Historic tradition</span></div>
+                <div class="card-actions"><a class="primary-button" href="stories/kela-dimdim/index.html">Read in library</a><a class="secondary-button" href="https://kiteb.nevgur.net/book/9ekd4" target="_blank" rel="noopener">1860 collection ↗</a></div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="cover tone-violet">
+                <div class="cover-code">ARCHIVE · 40 ÇÎROK</div>
+                <div class="cover-title">40 Çîrokên Mele Mehmûdê Bazîdî</div>
+                <div class="cover-author">Bazîdî · Jaba · 1860</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Archive guide</span></div>
+                <h3 class="book-title">40 Çîrokên Mele Mehmûdê Bazîdî</h3>
+                <div class="book-author">Mele Mehmûdê Bazîdî · Alexandre Jaba</div>
+                <div class="book-source">↗ Cami'eya Risaleyan û Hikayetan / Recueil, 1860</div>
+                <p class="book-desc">A guide to Bazîdî’s forty Kurmancî stories: love stories, historical episodes, social tales and a Siyabend û Xecê variant, with links back to the public-domain 1860 scan.</p>
+                <div class="badges"><span class="badge">40 çîrok</span><span class="badge">Archive guide</span><span class="badge rights">1860 public domain</span></div>
+                <div class="card-actions"><a class="primary-button" href="stories/bazidi-40-cirok/index.html">Explore collection</a><a class="secondary-button" href="https://kiteb.nevgur.net/book/9ekd4" target="_blank" rel="noopener">Open 1860 scan ↗</a></div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="cover tone-gold">
+                <div class="cover-code">DESTAN · FEQIYÊ TEYRAN</div>
+                <div class="cover-title">Zembîlfiroş</div>
+                <div class="cover-author">Classical Kurmanji tradition</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Moral love epic</span></div>
+                <h3 class="book-title">Zembîlfiroş</h3>
+                <div class="book-author">Attributed to Feqiyê Teyran</div>
+                <div class="book-source">↗ Classical poem · oral tradition</div>
+                <p class="book-desc">A prince leaves wealth behind to live by selling baskets, then faces a noblewoman’s relentless attempt to win him away from his chosen life and loyalties.</p>
+                <div class="badges"><span class="badge">Destan</span><span class="badge">Wefadarî</span><span class="badge rights">Classical tradition</span></div>
+                <div class="card-actions"><a class="primary-button" href="stories/zembilfiros/index.html">Read in library</a><a class="secondary-button" href="https://islamansiklopedisi.org.tr/faki-yi-teyran" target="_blank" rel="noopener">Source ↗</a></div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="cover tone-plum">
+                <div class="cover-code">DESTAN · BERAZÎ / MILAN</div>
+                <div class="cover-title">Derwêşê Evdî û Edûlê</div>
+                <div class="cover-author">Kurdish oral tradition</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>War &amp; love epic</span></div>
+                <h3 class="book-title">Derwêşê Evdî û Edûlê</h3>
+                <div class="book-author">Traditional dengbêj narrative</div>
+                <div class="book-source">↗ Berazî / Milan oral tradition</div>
+                <p class="book-desc">A major Kurmanji epic of Derwêş and Edûl, combining tragic love, tribal obligations, religious difference and intertribal war.</p>
+                <div class="badges"><span class="badge">Destan</span><span class="badge">Evîn</span><span class="badge">Şer</span></div>
+                <div class="card-actions"><a class="primary-button" href="stories/derwese-evdi/index.html">Read in library</a><a class="secondary-button" href="https://wikisource.org/wiki/Derw%C3%AA%C5%9F%C3%AA_Evd%C3%AE" target="_blank" rel="noopener">Kurmancî source ↗</a></div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="cover tone-teal">
+                <div class="cover-code">MANZÛME · 1621</div>
+                <div class="cover-title">Şêx Sen'an</div>
+                <div class="cover-author">Feqiyê Teyran</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Sufi love narrative</span></div>
+                <h3 class="book-title">Şêx Sen'an</h3>
+                <div class="book-author">Feqiyê Teyran</div>
+                <div class="book-source">↗ Classical Kurmanji poem · 1621</div>
+                <p class="book-desc">A devout sheikh dreams of an Armenian woman, travels in search of her, and faces a severe test between religious identity, desire and mystical love.</p>
+                <div class="badges"><span class="badge">Manzûme</span><span class="badge">Tasavvuf</span><span class="badge rights">Classical work</span></div>
+                <div class="card-actions"><a class="primary-button" href="stories/sex-senan/index.html">Read in library</a><a class="secondary-button" href="https://pmb.institutkurde.org/opac_css/index.php?lvl=notice_display&id=4789" target="_blank" rel="noopener">Catalogue record ↗</a></div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="cover tone-green">
+                <div class="cover-code">MANZÛME · FEQIYÊ TEYRAN</div>
+                <div class="cover-title">Bersîsê ‘Abid</div>
+                <div class="cover-author">Classical Kurmanji</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Moral / religious tale</span></div>
+                <h3 class="book-title">Bersîsê ‘Abid</h3>
+                <div class="book-author">Feqiyê Teyran</div>
+                <div class="book-source">↗ 211-quatrain classical narrative</div>
+                <p class="book-desc">The story of an ascetic who, after decades of devotion, is gradually drawn into temptation, crime and a final betrayal by the devil.</p>
+                <div class="badges"><span class="badge">Manzûme</span><span class="badge">Çîrok</span><span class="badge rights">Original text public domain</span></div>
+                <div class="card-actions"><a class="primary-button" href="stories/bersise-abid/index.html">Read in library</a><a class="secondary-button" href="https://wikisource.org/wiki/Bers%C3%AEs%C3%AA_%E2%80%98Abid" target="_blank" rel="noopener">Original Kurmancî ↗</a></div>
+              </div>
+            </article>
+
+<article class="book-card">
+              <div class="cover tone-blue">
+                <div class="cover-code">ÇÎROK · 1923 SOURCE</div>
+                <div class="cover-title">Suto û Tato</div>
+                <div class="cover-author">Molla Said Kazi tradition</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Northern Kurdish</span><span>·</span><span>Historical tale</span></div>
+                <h3 class="book-title">Suto û Tato</h3>
+                <div class="book-author">B. Nikitine &amp; E. B. Soane</div>
+                <div class="book-source">↗ Bulletin of SOAS, 1923</div>
+                <p class="book-desc">A long Kurdish narrative connected with Barzan and the surrounding region, published with Kurdish text, translation and notes.</p>
+                <div class="badges"><span class="badge">Historical tale</span><span class="badge caution">Source record</span></div>
+                <div class="card-actions"><a class="primary-button" href="stories/suto-u-tato/index.html">Read in library</a><a class="secondary-button" href="https://bnk.institutkurde.org/images/pdf/PCCS9HEK9S.pdf" target="_blank" rel="noopener">Historical text ↗</a></div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="cover tone-plum">
+                <div class="cover-code">ÇÎROK · ŞEMZÎNAN · 1926</div>
+                <div class="cover-title">Çîroka Mam Mizgo</div>
+                <div class="cover-author">Molla Said Kazi tradition</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Northern Kurdish</span><span>·</span><span>Folktale</span></div>
+                <h3 class="book-title">Çîroka Mam Mizgo</h3>
+                <div class="book-author">Recorded by Basile Nikitine</div>
+                <div class="book-source">↗ Kurdish Stories from my Collection (1926)</div>
+                <p class="book-desc">One of the Kurdish tales Nikitine published from material associated with Molla Said Kazi of the Şemzînan / Nehrî region.</p>
+                <div class="badges"><span class="badge">Çîrok</span><span class="badge caution">Source record</span></div>
+                <div class="card-actions"><a class="primary-button" href="https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531" target="_blank" rel="noopener">Source record ↗</a></div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="cover tone-green">
+                <div class="cover-code">ÇÎROK · ŞEMZÎNAN · 1926</div>
+                <div class="cover-title">Xort û Pîr</div>
+                <div class="cover-author">Molla Said Kazi tradition</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Northern Kurdish</span><span>·</span><span>Folktale</span></div>
+                <h3 class="book-title">Xort û Pîr</h3>
+                <div class="book-author">Recorded by Basile Nikitine</div>
+                <div class="book-source">↗ Kurdish Stories from my Collection (1926)</div>
+                <p class="book-desc">A historical Kurdish story title preserved in Nikitine’s 1926 collection of narratives from the northern Kurdish dialect area.</p>
+                <div class="badges"><span class="badge">Çîrok</span><span class="badge caution">Source record</span></div>
+                <div class="card-actions"><a class="primary-button" href="https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531" target="_blank" rel="noopener">Source record ↗</a></div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="cover tone-teal">
+                <div class="cover-code">ÇÎROK · ŞEMZÎNAN · 1926</div>
+                <div class="cover-title">Şêx Silêman</div>
+                <div class="cover-author">Molla Said Kazi tradition</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Northern Kurdish</span><span>·</span><span>Folktale</span></div>
+                <h3 class="book-title">Şêx Silêman</h3>
+                <div class="book-author">Recorded by Basile Nikitine</div>
+                <div class="book-source">↗ Kurdish Stories from my Collection (1926)</div>
+                <p class="book-desc">One of the named tales in Nikitine’s collection, preserved with Kurdish text and English translation in the original publication.</p>
+                <div class="badges"><span class="badge">Çîrok</span><span class="badge caution">Source record</span></div>
+                <div class="card-actions"><a class="primary-button" href="https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531" target="_blank" rel="noopener">Source record ↗</a></div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="cover tone-rust">
+                <div class="cover-code">ÇÎROK · HEKARÎ · 1926</div>
+                <div class="cover-title">Mîrê Hekarê û Mizgîniya Teyrê Biharê</div>
+                <div class="cover-author">Molla Said Kazi tradition</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Northern Kurdish</span><span>·</span><span>Folktale</span></div>
+                <h3 class="book-title">Çîroka Mîrê Hekarê û Mizgîniya Teyrê Biharê</h3>
+                <div class="book-author">Recorded by Basile Nikitine</div>
+                <div class="book-source">↗ Kurdish Stories from my Collection (1926)</div>
+                <p class="book-desc">A Hekarî-linked tale listed among Nikitine’s early published Kurdish story collection.</p>
+                <div class="badges"><span class="badge">Çîrok</span><span class="badge caution">Source record</span></div>
+                <div class="card-actions"><a class="primary-button" href="stories/mire-hekare-teyre-bihare/index.html">Read in library</a><a class="secondary-button" href="https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531" target="_blank" rel="noopener">1926 source ↗</a></div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="cover tone-brown">
+                <div class="cover-code">ÇÎROK COLLECTION · 1860</div>
+                <div class="cover-title">Recueil de notices et récits kourdes</div>
+                <div class="cover-author">Alexandre Jaba · Mele Mehmûdê Bazîdî</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Story collection</span></div>
+                <h3 class="book-title">Recueil de notices et récits kourdes</h3>
+                <div class="book-author">Alexandre Jaba &amp; Mele Mehmûdê Bazîdî</div>
+                <div class="book-source">↗ 1860 · Nevgur / Internet Archive</div>
+                <p class="book-desc">A nineteenth-century Kurmancî and French collection of Kurdish narratives and literary material, digitized from an old public-domain edition.</p>
+                <div class="badges"><span class="badge">Çîrok collection</span><span class="badge rights">Public-domain file</span></div>
+                <div class="card-actions"><a class="primary-button" href="https://kiteb.nevgur.net/book/9ekd4" target="_blank" rel="noopener">Read / download ↗</a></div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="cover tone-violet">
+                <div class="cover-code">ÇÎROK &amp; STRAN · 1903</div>
+                <div class="cover-title">Kurdische Texte</div>
+                <div class="cover-author">Albert von Le Coq</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Stories &amp; songs</span></div>
+                <h3 class="book-title">Kurdische Texte: Kurmānǧī-Erzählungen und -Lieder</h3>
+                <div class="book-author">Albert von Le Coq</div>
+                <div class="book-source">↗ Berlin, 1903 · Google Books / Open Library</div>
+                <p class="book-desc">An early printed collection explicitly devoted to Kurmancî narratives and songs, including Hîkayeya Mamê Alan and other tales.</p>
+                <div class="badges"><span class="badge">Çîrok &amp; stran</span><span class="badge rights">1903 edition</span></div>
+                <div class="card-actions">
+                  <a class="primary-button" href="https://books.google.com/books?id=mStIAQAAMAAJ" target="_blank" rel="noopener">Read full view ↗</a>
+                  <a class="secondary-button" href="https://openlibrary.org/books/OL6287474M/Kurdische_texte" target="_blank" rel="noopener">Open Library ↗</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="catalogue-panel" id="storyCorner" aria-labelledby="storyCornerTitle" style="margin-bottom:24px;">
+          <div class="catalogue-meta" style="align-items:flex-end;">
+            <div>
+              <div class="page-kicker" style="margin-bottom:6px;">SORANÎ · ÇÎROK</div>
+              <h2 id="storyCornerTitle" style="margin:0;">Çîrokên Soranî</h2>
+              <p style="margin:.45rem 0 0;max-width:760px;">Open-licensed Soranî storybooks you can read online, gathered here as a separate story shelf.</p>
+            </div>
+            <span>Openly licensed · Source credited</span>
+          </div>
+          <div class="book-grid" aria-label="Open Soranî storybooks">
+            <article class="book-card">
+              <div class="cover tone-gold" dir="rtl">
+                <div class="cover-code">ÇÎROK · SORANÎ</div>
+                <div class="cover-title">ئانانسی و زانایی</div>
+                <div class="cover-author">Ghanaian folktale</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Soranî</span><span>·</span><span>Folktale</span></div>
+                <h3 class="book-title" dir="rtl">ئانانسی و زانایی</h3>
+                <div class="book-author">Anansi and Wisdom</div>
+                <div class="book-source">↗ Storybooks Canada / African Storybook</div>
+                <p class="book-desc">A playful folktale about Anansi trying to keep all the world’s wisdom for himself.</p>
+                <div class="badges"><span class="badge">Story</span><span class="badge rights">CC BY 3.0</span></div>
+                <div class="card-actions"><a class="primary-button" href="https://www.storybookscanada.ca/stories/ckb/0006/" target="_blank" rel="noopener">Read story ↗</a></div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="cover tone-plum" dir="rtl">
+                <div class="cover-code">ÇÎROK · SORANÎ</div>
+                <div class="cover-title">نوزیبێله و سێ تاڵە موو</div>
+                <div class="cover-author">Tessa Welch</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Soranî</span><span>·</span><span>Folktale</span></div>
+                <h3 class="book-title" dir="rtl">نوزیبێله و سێ تاڵە موو</h3>
+                <div class="book-author">Nozibele and the Three Hairs</div>
+                <div class="book-source">↗ Storybooks Canada / African Storybook</div>
+                <p class="book-desc">A suspenseful tale of a girl who must outwit a dangerous dog and find her way home.</p>
+                <div class="badges"><span class="badge">Story</span><span class="badge rights">CC BY 3.0</span></div>
+                <div class="card-actions"><a class="primary-button" href="https://www.storybookscanada.ca/stories/ckb/0066/" target="_blank" rel="noopener">Read story ↗</a></div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="cover tone-blue" dir="rtl">
+                <div class="cover-code">ÇÎROK · SORANÎ</div>
+                <div class="cover-title">مریشك و هەڵۆ</div>
+                <div class="cover-author">Ann Nduku</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Soranî</span><span>·</span><span>Animal tale</span></div>
+                <h3 class="book-title" dir="rtl">مریشك و هەڵۆ</h3>
+                <div class="book-author">Hen and Eagle</div>
+                <div class="book-source">↗ Storybooks Canada / African Storybook</div>
+                <p class="book-desc">A traditional-style animal story explaining why the eagle flies and the hen scratches the ground.</p>
+                <div class="badges"><span class="badge">Story</span><span class="badge rights">CC BY 3.0</span></div>
+                <div class="card-actions"><a class="primary-button" href="https://www.storybookscanada.ca/stories/ckb/0158/" target="_blank" rel="noopener">Read story ↗</a></div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="cover tone-red" dir="rtl">
+                <div class="cover-code">ÇÎROK · SORANÎ</div>
+                <div class="cover-title">منداڵانی مۆمی</div>
+                <div class="cover-author">Southern African folktale</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Soranî</span><span>·</span><span>Folktale</span></div>
+                <h3 class="book-title" dir="rtl">منداڵانی مۆمی</h3>
+                <div class="book-author">Children of Wax</div>
+                <div class="book-source">↗ Storybooks Canada / African Storybook</div>
+                <p class="book-desc">A strange and imaginative folktale about children made of wax and the brother who reaches the sunlight.</p>
+                <div class="badges"><span class="badge">Story</span><span class="badge rights">CC BY 3.0</span></div>
+                <div class="card-actions"><a class="primary-button" href="https://www.storybookscanada.ca/stories/ckb/0337/" target="_blank" rel="noopener">Read story ↗</a></div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="cover tone-green" dir="rtl">
+                <div class="cover-code">ÇÎROK · SORANÎ</div>
+                <div class="cover-title">تۆمی مۆز فرۆش</div>
+                <div class="cover-author">Humphreys Odunga</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Soranî</span><span>·</span><span>Story</span></div>
+                <h3 class="book-title" dir="rtl">تۆمی مۆز فرۆش</h3>
+                <div class="book-author">Tom the Banana Seller</div>
+                <div class="book-source">↗ Storybooks Canada / African Storybook</div>
+                <p class="book-desc">Tom challenges expectations at the market and keeps trying until customers finally buy his bananas.</p>
+                <div class="badges"><span class="badge">Story</span><span class="badge rights">CC BY 4.0</span></div>
+                <div class="card-actions"><a class="primary-button" href="https://www.storybookscanada.ca/stories/ckb/0296/" target="_blank" rel="noopener">Read story ↗</a></div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="cover tone-teal" dir="rtl">
+                <div class="cover-code">ÇÎROK · SORANÎ</div>
+                <div class="cover-title">مۆزەكانی داپیرە</div>
+                <div class="cover-author">Ursula Nafula</div>
+              </div>
+              <div class="card-body">
+                <div class="book-meta"><span>Soranî</span><span>·</span><span>Story</span></div>
+                <h3 class="book-title" dir="rtl">مۆزەكانی داپیرە</h3>
+                <div class="book-author">Grandmother’s Bananas</div>
+                <div class="book-source">↗ Global African Storybook Project</div>
+                <p class="book-desc">A child becomes fascinated by a grandmother’s mysterious “magic” basket of ripening bananas.</p>
+                <div class="badges"><span class="badge">Story</span><span class="badge rights">CC BY 3.0</span></div>
+                <div class="card-actions"><a class="primary-button" href="https://global-asp.github.io/stories/ckb/0294_%D9%85%DB%86%D8%B2%DB%95%D9%83%D8%A7%D9%86%DB%8C-%D8%AF%D8%A7%D9%BE%DB%8C%D8%B1%DB%95_slides.html" target="_blank" rel="noopener">Read story ↗</a></div>
+              </div>
+            </article>
+          </div>
+        </section>
+        </section>
+
         <section class="catalogue-panel" id="catalogue" aria-labelledby="catalogueHeading">
           <h2 class="visually-hidden" id="catalogueHeading" data-i18n="catalogue">Catalogue</h2>
           <div class="filter-grid">
@@ -1026,418 +1472,6 @@
           <div class="empty-state" id="emptyState" hidden><strong data-i18n="noResults">No matching books</strong><p data-i18n="noResultsHelp">Try removing a filter or searching a different spelling.</p></div>
         </section>
 
-        <div style="margin:34px 0 16px;">
-          <div class="page-kicker" style="margin-bottom:6px;">STORY SHELVES · ÇÎROK</div>
-          <h2 style="margin:0 0 8px;">Explore Kurdish stories</h2>
-          <p style="margin:0;max-width:760px;color:#56627a;">After browsing the full catalogue, continue with dedicated Kurmancî and Soranî story collections.</p>
-        </div>
-
-        <section class="catalogue-panel" id="kurmanjiStoryShelf" aria-labelledby="kurmanjiStoryTitle" style="margin-bottom:24px;">
-          <div class="catalogue-meta" style="align-items:flex-end;">
-            <div>
-              <div class="page-kicker" style="margin-bottom:6px;">KURMANCÎ · ÇÎROK · SERHATÎ · DESTAN</div>
-              <h2 id="kurmanjiStoryTitle" style="margin:0;">Çîrokên Kurmancî</h2>
-              <p style="margin:.45rem 0 0;max-width:820px;">Historic Kurmancî and Northern Kurdish stories, epics and oral narratives — because the library should be much more than grammar books.</p>
-            </div>
-            <span>Historic sources · Provenance shown</span>
-          </div>
-
-          <div class="book-grid" aria-label="Historic Kurmanji stories and oral narratives">
-            <article class="book-card">
-              <div class="cover tone-red">
-                <div class="cover-code">SERHATÎ · SÊRT · 1910</div>
-                <div class="cover-title">Salih û Kejê</div>
-                <div class="cover-author">Oral love narrative</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Love story</span></div>
-                <h3 class="book-title">Salih û Kejê</h3>
-                <div class="book-author">Recorded in Sêrt / Siirt by M. Dufresne</div>
-                <div class="book-source">↗ Journal Asiatique, 1910</div>
-                <p class="book-desc">A well-known Kurdish oral love story. The early printed version was recorded in Sêrt and published in 1910.</p>
-                <div class="badges"><span class="badge">Serhatî</span><span class="badge rights">Historic source</span></div>
-                <div class="card-actions">
-                  <a class="primary-button" href="stories/salih-u-keje/index.html">Read in library</a>
-                  <a class="secondary-button" href="https://fr.wikisource.org/wiki/Journal_asiatique/S%C3%A9rie_10,_tome_15" target="_blank" rel="noopener">1910 source ↗</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <div class="cover tone-gold">
-                <div class="cover-code">DESTAN · 1903 SOURCE</div>
-                <div class="cover-title">Mamê Alan</div>
-                <div class="cover-author">Kurdish epic tradition</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Epic / tale</span></div>
-                <h3 class="book-title">Hîkayeya Mamê Alan</h3>
-                <div class="book-author">Traditional narrative</div>
-                <div class="book-source">↗ Albert von Le Coq, Kurdische Texte (1903)</div>
-                <p class="book-desc">A classic Kurdish epic narrative preserved among the Kurmancî stories in Le Coq’s early twentieth-century collection.</p>
-                <div class="badges"><span class="badge">Destan</span><span class="badge rights">1903 source</span></div>
-                <div class="card-actions"><a class="primary-button" href="stories/mame-alan/index.html">Read in library</a><a class="secondary-button" href="https://books.google.com/books?id=mStIAQAAMAAJ" target="_blank" rel="noopener">1903 source ↗</a></div>
-              </div>
-            </article>
-
-                        <article class="book-card">
-              <div class="cover tone-rust">
-                <div class="cover-code">DESTAN · SÎPAN</div>
-                <div class="cover-title">Siyabend û Xecê</div>
-                <div class="cover-author">Kurdish oral tradition</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Love epic</span></div>
-                <h3 class="book-title">Siyabend û Xecê</h3>
-                <div class="book-author">Traditional dengbêj narrative</div>
-                <div class="book-source">↗ Oral tradition · 1860 collection provenance</div>
-                <p class="book-desc">A tragic Kurmancî love epic: Siyabend and Xecê flee together to Mount Sîpan, where a deer hunt leads to their final separation and death.</p>
-                <div class="badges"><span class="badge">Destan</span><span class="badge">Evîn</span><span class="badge rights">Traditional</span></div>
-                <div class="card-actions"><a class="primary-button" href="stories/siyabend-u-xece/index.html">Read in library</a><a class="secondary-button" href="https://kiteb.nevgur.net/book/9ekd4" target="_blank" rel="noopener">1860 collection ↗</a></div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <div class="cover tone-brown">
-                <div class="cover-code">DESTAN · DIMDIM</div>
-                <div class="cover-title">Kela Dimdim û Xanê Lepzêrîn</div>
-                <div class="cover-author">Kurdish oral-historical tradition</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Epic / history</span></div>
-                <h3 class="book-title">Kela Dimdim û Xanê Lepzêrîn</h3>
-                <div class="book-author">Traditional narrative · 1608–1610 historical core</div>
-                <div class="book-source">↗ Bazîdî/Jaba archive · later Hekarî variants</div>
-                <p class="book-desc">The story of Dimdim Castle and Xanê Lepzêrîn, where a seventeenth-century siege became one of the best-known Kurdish heroic epics.</p>
-                <div class="badges"><span class="badge">Destan</span><span class="badge">Dîrok</span><span class="badge rights">Historic tradition</span></div>
-                <div class="card-actions"><a class="primary-button" href="stories/kela-dimdim/index.html">Read in library</a><a class="secondary-button" href="https://kiteb.nevgur.net/book/9ekd4" target="_blank" rel="noopener">1860 collection ↗</a></div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <div class="cover tone-violet">
-                <div class="cover-code">ARCHIVE · 40 ÇÎROK</div>
-                <div class="cover-title">40 Çîrokên Mele Mehmûdê Bazîdî</div>
-                <div class="cover-author">Bazîdî · Jaba · 1860</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Archive guide</span></div>
-                <h3 class="book-title">40 Çîrokên Mele Mehmûdê Bazîdî</h3>
-                <div class="book-author">Mele Mehmûdê Bazîdî · Alexandre Jaba</div>
-                <div class="book-source">↗ Cami'eya Risaleyan û Hikayetan / Recueil, 1860</div>
-                <p class="book-desc">A guide to Bazîdî’s forty Kurmancî stories: love stories, historical episodes, social tales and a Siyabend û Xecê variant, with links back to the public-domain 1860 scan.</p>
-                <div class="badges"><span class="badge">40 çîrok</span><span class="badge">Archive guide</span><span class="badge rights">1860 public domain</span></div>
-                <div class="card-actions"><a class="primary-button" href="stories/bazidi-40-cirok/index.html">Explore collection</a><a class="secondary-button" href="https://kiteb.nevgur.net/book/9ekd4" target="_blank" rel="noopener">Open 1860 scan ↗</a></div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <div class="cover tone-gold">
-                <div class="cover-code">DESTAN · FEQIYÊ TEYRAN</div>
-                <div class="cover-title">Zembîlfiroş</div>
-                <div class="cover-author">Classical Kurmanji tradition</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Moral love epic</span></div>
-                <h3 class="book-title">Zembîlfiroş</h3>
-                <div class="book-author">Attributed to Feqiyê Teyran</div>
-                <div class="book-source">↗ Classical poem · oral tradition</div>
-                <p class="book-desc">A prince leaves wealth behind to live by selling baskets, then faces a noblewoman’s relentless attempt to win him away from his chosen life and loyalties.</p>
-                <div class="badges"><span class="badge">Destan</span><span class="badge">Wefadarî</span><span class="badge rights">Classical tradition</span></div>
-                <div class="card-actions"><a class="primary-button" href="stories/zembilfiros/index.html">Read in library</a><a class="secondary-button" href="https://islamansiklopedisi.org.tr/faki-yi-teyran" target="_blank" rel="noopener">Source ↗</a></div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <div class="cover tone-plum">
-                <div class="cover-code">DESTAN · BERAZÎ / MILAN</div>
-                <div class="cover-title">Derwêşê Evdî û Edûlê</div>
-                <div class="cover-author">Kurdish oral tradition</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>War &amp; love epic</span></div>
-                <h3 class="book-title">Derwêşê Evdî û Edûlê</h3>
-                <div class="book-author">Traditional dengbêj narrative</div>
-                <div class="book-source">↗ Berazî / Milan oral tradition</div>
-                <p class="book-desc">A major Kurmanji epic of Derwêş and Edûl, combining tragic love, tribal obligations, religious difference and intertribal war.</p>
-                <div class="badges"><span class="badge">Destan</span><span class="badge">Evîn</span><span class="badge">Şer</span></div>
-                <div class="card-actions"><a class="primary-button" href="stories/derwese-evdi/index.html">Read in library</a><a class="secondary-button" href="https://wikisource.org/wiki/Derw%C3%AA%C5%9F%C3%AA_Evd%C3%AE" target="_blank" rel="noopener">Kurmancî source ↗</a></div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <div class="cover tone-teal">
-                <div class="cover-code">MANZÛME · 1621</div>
-                <div class="cover-title">Şêx Sen'an</div>
-                <div class="cover-author">Feqiyê Teyran</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Sufi love narrative</span></div>
-                <h3 class="book-title">Şêx Sen'an</h3>
-                <div class="book-author">Feqiyê Teyran</div>
-                <div class="book-source">↗ Classical Kurmanji poem · 1621</div>
-                <p class="book-desc">A devout sheikh dreams of an Armenian woman, travels in search of her, and faces a severe test between religious identity, desire and mystical love.</p>
-                <div class="badges"><span class="badge">Manzûme</span><span class="badge">Tasavvuf</span><span class="badge rights">Classical work</span></div>
-                <div class="card-actions"><a class="primary-button" href="stories/sex-senan/index.html">Read in library</a><a class="secondary-button" href="https://pmb.institutkurde.org/opac_css/index.php?lvl=notice_display&id=4789" target="_blank" rel="noopener">Catalogue record ↗</a></div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <div class="cover tone-green">
-                <div class="cover-code">MANZÛME · FEQIYÊ TEYRAN</div>
-                <div class="cover-title">Bersîsê ‘Abid</div>
-                <div class="cover-author">Classical Kurmanji</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Moral / religious tale</span></div>
-                <h3 class="book-title">Bersîsê ‘Abid</h3>
-                <div class="book-author">Feqiyê Teyran</div>
-                <div class="book-source">↗ 211-quatrain classical narrative</div>
-                <p class="book-desc">The story of an ascetic who, after decades of devotion, is gradually drawn into temptation, crime and a final betrayal by the devil.</p>
-                <div class="badges"><span class="badge">Manzûme</span><span class="badge">Çîrok</span><span class="badge rights">Original text public domain</span></div>
-                <div class="card-actions"><a class="primary-button" href="stories/bersise-abid/index.html">Read in library</a><a class="secondary-button" href="https://wikisource.org/wiki/Bers%C3%AEs%C3%AA_%E2%80%98Abid" target="_blank" rel="noopener">Original Kurmancî ↗</a></div>
-              </div>
-            </article>
-
-<article class="book-card">
-              <div class="cover tone-blue">
-                <div class="cover-code">ÇÎROK · 1923 SOURCE</div>
-                <div class="cover-title">Suto û Tato</div>
-                <div class="cover-author">Molla Said Kazi tradition</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Northern Kurdish</span><span>·</span><span>Historical tale</span></div>
-                <h3 class="book-title">Suto û Tato</h3>
-                <div class="book-author">B. Nikitine &amp; E. B. Soane</div>
-                <div class="book-source">↗ Bulletin of SOAS, 1923</div>
-                <p class="book-desc">A long Kurdish narrative connected with Barzan and the surrounding region, published with Kurdish text, translation and notes.</p>
-                <div class="badges"><span class="badge">Historical tale</span><span class="badge caution">Source record</span></div>
-                <div class="card-actions"><a class="primary-button" href="stories/suto-u-tato/index.html">Read in library</a><a class="secondary-button" href="https://bnk.institutkurde.org/images/pdf/PCCS9HEK9S.pdf" target="_blank" rel="noopener">Historical text ↗</a></div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <div class="cover tone-plum">
-                <div class="cover-code">ÇÎROK · ŞEMZÎNAN · 1926</div>
-                <div class="cover-title">Çîroka Mam Mizgo</div>
-                <div class="cover-author">Molla Said Kazi tradition</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Northern Kurdish</span><span>·</span><span>Folktale</span></div>
-                <h3 class="book-title">Çîroka Mam Mizgo</h3>
-                <div class="book-author">Recorded by Basile Nikitine</div>
-                <div class="book-source">↗ Kurdish Stories from my Collection (1926)</div>
-                <p class="book-desc">One of the Kurdish tales Nikitine published from material associated with Molla Said Kazi of the Şemzînan / Nehrî region.</p>
-                <div class="badges"><span class="badge">Çîrok</span><span class="badge caution">Source record</span></div>
-                <div class="card-actions"><a class="primary-button" href="https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531" target="_blank" rel="noopener">Source record ↗</a></div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <div class="cover tone-green">
-                <div class="cover-code">ÇÎROK · ŞEMZÎNAN · 1926</div>
-                <div class="cover-title">Xort û Pîr</div>
-                <div class="cover-author">Molla Said Kazi tradition</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Northern Kurdish</span><span>·</span><span>Folktale</span></div>
-                <h3 class="book-title">Xort û Pîr</h3>
-                <div class="book-author">Recorded by Basile Nikitine</div>
-                <div class="book-source">↗ Kurdish Stories from my Collection (1926)</div>
-                <p class="book-desc">A historical Kurdish story title preserved in Nikitine’s 1926 collection of narratives from the northern Kurdish dialect area.</p>
-                <div class="badges"><span class="badge">Çîrok</span><span class="badge caution">Source record</span></div>
-                <div class="card-actions"><a class="primary-button" href="https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531" target="_blank" rel="noopener">Source record ↗</a></div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <div class="cover tone-teal">
-                <div class="cover-code">ÇÎROK · ŞEMZÎNAN · 1926</div>
-                <div class="cover-title">Şêx Silêman</div>
-                <div class="cover-author">Molla Said Kazi tradition</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Northern Kurdish</span><span>·</span><span>Folktale</span></div>
-                <h3 class="book-title">Şêx Silêman</h3>
-                <div class="book-author">Recorded by Basile Nikitine</div>
-                <div class="book-source">↗ Kurdish Stories from my Collection (1926)</div>
-                <p class="book-desc">One of the named tales in Nikitine’s collection, preserved with Kurdish text and English translation in the original publication.</p>
-                <div class="badges"><span class="badge">Çîrok</span><span class="badge caution">Source record</span></div>
-                <div class="card-actions"><a class="primary-button" href="https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531" target="_blank" rel="noopener">Source record ↗</a></div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <div class="cover tone-rust">
-                <div class="cover-code">ÇÎROK · HEKARÎ · 1926</div>
-                <div class="cover-title">Mîrê Hekarê û Mizgîniya Teyrê Biharê</div>
-                <div class="cover-author">Molla Said Kazi tradition</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Northern Kurdish</span><span>·</span><span>Folktale</span></div>
-                <h3 class="book-title">Çîroka Mîrê Hekarê û Mizgîniya Teyrê Biharê</h3>
-                <div class="book-author">Recorded by Basile Nikitine</div>
-                <div class="book-source">↗ Kurdish Stories from my Collection (1926)</div>
-                <p class="book-desc">A Hekarî-linked tale listed among Nikitine’s early published Kurdish story collection.</p>
-                <div class="badges"><span class="badge">Çîrok</span><span class="badge caution">Source record</span></div>
-                <div class="card-actions"><a class="primary-button" href="stories/mire-hekare-teyre-bihare/index.html">Read in library</a><a class="secondary-button" href="https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531" target="_blank" rel="noopener">1926 source ↗</a></div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <div class="cover tone-brown">
-                <div class="cover-code">ÇÎROK COLLECTION · 1860</div>
-                <div class="cover-title">Recueil de notices et récits kourdes</div>
-                <div class="cover-author">Alexandre Jaba · Mele Mehmûdê Bazîdî</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Story collection</span></div>
-                <h3 class="book-title">Recueil de notices et récits kourdes</h3>
-                <div class="book-author">Alexandre Jaba &amp; Mele Mehmûdê Bazîdî</div>
-                <div class="book-source">↗ 1860 · Nevgur / Internet Archive</div>
-                <p class="book-desc">A nineteenth-century Kurmancî and French collection of Kurdish narratives and literary material, digitized from an old public-domain edition.</p>
-                <div class="badges"><span class="badge">Çîrok collection</span><span class="badge rights">Public-domain file</span></div>
-                <div class="card-actions"><a class="primary-button" href="https://kiteb.nevgur.net/book/9ekd4" target="_blank" rel="noopener">Read / download ↗</a></div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <div class="cover tone-violet">
-                <div class="cover-code">ÇÎROK &amp; STRAN · 1903</div>
-                <div class="cover-title">Kurdische Texte</div>
-                <div class="cover-author">Albert von Le Coq</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Kurmancî</span><span>·</span><span>Stories &amp; songs</span></div>
-                <h3 class="book-title">Kurdische Texte: Kurmānǧī-Erzählungen und -Lieder</h3>
-                <div class="book-author">Albert von Le Coq</div>
-                <div class="book-source">↗ Berlin, 1903 · Google Books / Open Library</div>
-                <p class="book-desc">An early printed collection explicitly devoted to Kurmancî narratives and songs, including Hîkayeya Mamê Alan and other tales.</p>
-                <div class="badges"><span class="badge">Çîrok &amp; stran</span><span class="badge rights">1903 edition</span></div>
-                <div class="card-actions">
-                  <a class="primary-button" href="https://books.google.com/books?id=mStIAQAAMAAJ" target="_blank" rel="noopener">Read full view ↗</a>
-                  <a class="secondary-button" href="https://openlibrary.org/books/OL6287474M/Kurdische_texte" target="_blank" rel="noopener">Open Library ↗</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
-
-
-        <section class="catalogue-panel" id="storyCorner" aria-labelledby="storyCornerTitle" style="margin-bottom:24px;">
-          <div class="catalogue-meta" style="align-items:flex-end;">
-            <div>
-              <div class="page-kicker" style="margin-bottom:6px;">SORANÎ · ÇÎROK</div>
-              <h2 id="storyCornerTitle" style="margin:0;">Çîrokên Soranî</h2>
-              <p style="margin:.45rem 0 0;max-width:760px;">Open-licensed Soranî storybooks you can read online, gathered here as a separate story shelf.</p>
-            </div>
-            <span>Openly licensed · Source credited</span>
-          </div>
-          <div class="book-grid" aria-label="Open Soranî storybooks">
-            <article class="book-card">
-              <div class="cover tone-gold" dir="rtl">
-                <div class="cover-code">ÇÎROK · SORANÎ</div>
-                <div class="cover-title">ئانانسی و زانایی</div>
-                <div class="cover-author">Ghanaian folktale</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Soranî</span><span>·</span><span>Folktale</span></div>
-                <h3 class="book-title" dir="rtl">ئانانسی و زانایی</h3>
-                <div class="book-author">Anansi and Wisdom</div>
-                <div class="book-source">↗ Storybooks Canada / African Storybook</div>
-                <p class="book-desc">A playful folktale about Anansi trying to keep all the world’s wisdom for himself.</p>
-                <div class="badges"><span class="badge">Story</span><span class="badge rights">CC BY 3.0</span></div>
-                <div class="card-actions"><a class="primary-button" href="https://www.storybookscanada.ca/stories/ckb/0006/" target="_blank" rel="noopener">Read story ↗</a></div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <div class="cover tone-plum" dir="rtl">
-                <div class="cover-code">ÇÎROK · SORANÎ</div>
-                <div class="cover-title">نوزیبێله و سێ تاڵە موو</div>
-                <div class="cover-author">Tessa Welch</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Soranî</span><span>·</span><span>Folktale</span></div>
-                <h3 class="book-title" dir="rtl">نوزیبێله و سێ تاڵە موو</h3>
-                <div class="book-author">Nozibele and the Three Hairs</div>
-                <div class="book-source">↗ Storybooks Canada / African Storybook</div>
-                <p class="book-desc">A suspenseful tale of a girl who must outwit a dangerous dog and find her way home.</p>
-                <div class="badges"><span class="badge">Story</span><span class="badge rights">CC BY 3.0</span></div>
-                <div class="card-actions"><a class="primary-button" href="https://www.storybookscanada.ca/stories/ckb/0066/" target="_blank" rel="noopener">Read story ↗</a></div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <div class="cover tone-blue" dir="rtl">
-                <div class="cover-code">ÇÎROK · SORANÎ</div>
-                <div class="cover-title">مریشك و هەڵۆ</div>
-                <div class="cover-author">Ann Nduku</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Soranî</span><span>·</span><span>Animal tale</span></div>
-                <h3 class="book-title" dir="rtl">مریشك و هەڵۆ</h3>
-                <div class="book-author">Hen and Eagle</div>
-                <div class="book-source">↗ Storybooks Canada / African Storybook</div>
-                <p class="book-desc">A traditional-style animal story explaining why the eagle flies and the hen scratches the ground.</p>
-                <div class="badges"><span class="badge">Story</span><span class="badge rights">CC BY 3.0</span></div>
-                <div class="card-actions"><a class="primary-button" href="https://www.storybookscanada.ca/stories/ckb/0158/" target="_blank" rel="noopener">Read story ↗</a></div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <div class="cover tone-red" dir="rtl">
-                <div class="cover-code">ÇÎROK · SORANÎ</div>
-                <div class="cover-title">منداڵانی مۆمی</div>
-                <div class="cover-author">Southern African folktale</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Soranî</span><span>·</span><span>Folktale</span></div>
-                <h3 class="book-title" dir="rtl">منداڵانی مۆمی</h3>
-                <div class="book-author">Children of Wax</div>
-                <div class="book-source">↗ Storybooks Canada / African Storybook</div>
-                <p class="book-desc">A strange and imaginative folktale about children made of wax and the brother who reaches the sunlight.</p>
-                <div class="badges"><span class="badge">Story</span><span class="badge rights">CC BY 3.0</span></div>
-                <div class="card-actions"><a class="primary-button" href="https://www.storybookscanada.ca/stories/ckb/0337/" target="_blank" rel="noopener">Read story ↗</a></div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <div class="cover tone-green" dir="rtl">
-                <div class="cover-code">ÇÎROK · SORANÎ</div>
-                <div class="cover-title">تۆمی مۆز فرۆش</div>
-                <div class="cover-author">Humphreys Odunga</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Soranî</span><span>·</span><span>Story</span></div>
-                <h3 class="book-title" dir="rtl">تۆمی مۆز فرۆش</h3>
-                <div class="book-author">Tom the Banana Seller</div>
-                <div class="book-source">↗ Storybooks Canada / African Storybook</div>
-                <p class="book-desc">Tom challenges expectations at the market and keeps trying until customers finally buy his bananas.</p>
-                <div class="badges"><span class="badge">Story</span><span class="badge rights">CC BY 4.0</span></div>
-                <div class="card-actions"><a class="primary-button" href="https://www.storybookscanada.ca/stories/ckb/0296/" target="_blank" rel="noopener">Read story ↗</a></div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <div class="cover tone-teal" dir="rtl">
-                <div class="cover-code">ÇÎROK · SORANÎ</div>
-                <div class="cover-title">مۆزەكانی داپیرە</div>
-                <div class="cover-author">Ursula Nafula</div>
-              </div>
-              <div class="card-body">
-                <div class="book-meta"><span>Soranî</span><span>·</span><span>Story</span></div>
-                <h3 class="book-title" dir="rtl">مۆزەكانی داپیرە</h3>
-                <div class="book-author">Grandmother’s Bananas</div>
-                <div class="book-source">↗ Global African Storybook Project</div>
-                <p class="book-desc">A child becomes fascinated by a grandmother’s mysterious “magic” basket of ripening bananas.</p>
-                <div class="badges"><span class="badge">Story</span><span class="badge rights">CC BY 3.0</span></div>
-                <div class="card-actions"><a class="primary-button" href="https://global-asp.github.io/stories/ckb/0294_%D9%85%DB%86%D8%B2%DB%95%D9%83%D8%A7%D9%86%DB%8C-%D8%AF%D8%A7%D9%BE%DB%8C%D8%B1%DB%95_slides.html" target="_blank" rel="noopener">Read story ↗</a></div>
-              </div>
-            </article>
-          </div>
-        </section>
-
       </div>
     </section>
 
@@ -1548,5 +1582,90 @@
     });
   })();
   </script>
+
+<script id="libraryBrowseModeScript">
+(() => {
+  const catalogue = document.getElementById('catalogue');
+  const stories = document.getElementById('storyBrowsePanel');
+  const subject = document.getElementById('subjectFilter');
+  const modeButtons = [...document.querySelectorAll('[data-library-mode]')];
+  const storyTabs = [...document.querySelectorAll('[data-story-language]')];
+  const kurmanji = document.getElementById('kurmanjiStoryShelf');
+  const sorani = document.getElementById('storyCorner');
+
+  if (!catalogue || !stories || !subject) return;
+
+  function markMode(mode) {
+    modeButtons.forEach(button => {
+      const active = button.dataset.libraryMode === mode;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+  }
+
+  function setSubject(value) {
+    if (subject.value !== value) {
+      subject.value = value;
+      subject.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+  }
+
+  function showLibraryMode(mode, scroll = false) {
+    const storyMode = mode === 'stories';
+    stories.hidden = !storyMode;
+    catalogue.hidden = storyMode;
+
+    if (mode === 'all') setSubject('all');
+    if (mode === 'poetry') setSubject('poetry');
+    if (mode === 'reference') setSubject('reference');
+
+    markMode(mode);
+    if (scroll) {
+      (storyMode ? stories : catalogue).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function showStoryLanguage(language) {
+    if (!kurmanji || !sorani) return;
+    kurmanji.hidden = language === 'ckb';
+    sorani.hidden = language === 'kmr';
+    storyTabs.forEach(button => {
+      const active = button.dataset.storyLanguage === language;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+  }
+
+  modeButtons.forEach(button => {
+    button.addEventListener('click', () => showLibraryMode(button.dataset.libraryMode, true));
+  });
+
+  storyTabs.forEach(button => {
+    button.addEventListener('click', () => showStoryLanguage(button.dataset.storyLanguage));
+  });
+
+  subject.addEventListener('change', () => {
+    if (stories.hidden) {
+      if (subject.value === 'poetry') markMode('poetry');
+      else if (subject.value === 'reference') markMode('reference');
+      else markMode('all');
+    }
+  });
+
+  // Story-reader pages link back to these anchors. Open the story view automatically.
+  if (location.hash === '#kurmanjiStoryShelf') {
+    showLibraryMode('stories');
+    showStoryLanguage('kmr');
+    requestAnimationFrame(() => kurmanji && kurmanji.scrollIntoView({ block: 'start' }));
+  } else if (location.hash === '#storyCorner') {
+    showLibraryMode('stories');
+    showStoryLanguage('ckb');
+    requestAnimationFrame(() => sorani && sorani.scrollIntoView({ block: 'start' }));
+  } else {
+    showLibraryMode('all');
+    showStoryLanguage('all');
+  }
+})();
+</script>
 </body>
 </html>
