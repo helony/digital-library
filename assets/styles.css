@@ -188,3 +188,68 @@
   transform:scale(1.025);
   transition:transform .22s ease;
 }
+
+
+/* Story shelf simplification */
+#storyBrowsePanel .book-card .book-source,
+#storyBrowsePanel .book-card .badges{
+  display:none;
+}
+#storyBrowsePanel .book-card .book-meta{
+  font-size:.56rem;
+  opacity:.78;
+}
+#storyBrowsePanel .book-card .book-title{
+  margin-top:6px;
+}
+#storyBrowsePanel .book-card .book-author{
+  font-size:.69rem;
+  margin-top:1px;
+}
+#storyBrowsePanel .book-card .book-desc{
+  -webkit-line-clamp:2;
+  margin:8px 0 7px;
+  line-height:1.48;
+}
+#storyBrowsePanel .book-card .card-actions{
+  margin-top:auto;
+}
+#storyBrowsePanel .book-card .secondary-button{
+  font-size:.64rem;
+}
+#storyBrowsePanel .book-card .cover-author{
+  display:none;
+}
+
+/* Let the motif read as part of the cover, not as a small sticker. */
+#storyBrowsePanel .cover-motif::before{
+  inset:28% 4% 7%;
+  background-position:center bottom;
+  background-size:var(--cover-motif-size,92%) auto;
+  opacity:var(--cover-motif-opacity,.46);
+}
+#storyBrowsePanel .motif-love-classical{
+  --cover-motif-size:96%;
+  --cover-motif-opacity:.48;
+}
+#storyBrowsePanel .motif-epic-historical{
+  --cover-motif-size:104%;
+  --cover-motif-opacity:.50;
+}
+#storyBrowsePanel .motif-folk-oral{
+  --cover-motif-size:108%;
+  --cover-motif-opacity:.48;
+}
+#storyBrowsePanel .motif-mystical-medallion{
+  --cover-motif-size:94%;
+  --cover-motif-opacity:.45;
+}
+#storyBrowsePanel .cover-title{
+  max-width:94%;
+  margin-top:auto;
+  margin-bottom:auto;
+}
+#storyBrowsePanel .motif-epic-historical .cover-title{
+  font-size:1.02rem;
+  line-height:1.02;
+}
