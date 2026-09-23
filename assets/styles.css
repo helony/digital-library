@@ -43,7 +43,7 @@
 .browse-hub{display:grid;grid-template-columns:minmax(0,1fr) minmax(560px,1.35fr);gap:28px;align-items:end;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:24px;margin:0 0 20px;box-shadow:0 12px 32px rgba(38,32,25,.055)}
 .browse-hub-copy h2{font:700 clamp(1.8rem,3.2vw,2.7rem)/1.05 Georgia,"Times New Roman",serif;letter-spacing:-.025em;margin:2px 0 8px}
 .browse-hub-copy p{margin:0;color:var(--muted);max-width:520px}
-.browse-modes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.browse-modes{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}
 .browse-mode{appearance:none;border:1px solid var(--line);background:var(--paper-2);color:var(--ink);border-radius:16px;padding:13px 12px;text-align:left;cursor:pointer;display:flex;align-items:center;gap:10px;min-height:72px;transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease,background .15s ease}
 .browse-mode:hover{transform:translateY(-2px);border-color:#bcae99;box-shadow:0 8px 22px rgba(38,32,25,.07)}
 .browse-mode.is-active{background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:0 9px 24px rgba(18,33,60,.16)}
@@ -78,4 +78,43 @@
   .browse-mode{min-height:66px;padding:11px 10px}
   .browse-mode-icon{width:30px;height:30px;flex-basis:30px}
   .story-browser-head{padding:18px;border-radius:18px}
+}
+
+
+/* Voices / Deng */
+.voices-browser{scroll-margin-top:96px;margin:8px 0 20px}
+.voices-browser-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;background:linear-gradient(145deg,#5f3f32,#8c5b3e);color:#fff;border-radius:22px;padding:23px 25px;margin-bottom:14px;position:relative;overflow:hidden}
+.voices-browser-head:after{content:"";position:absolute;right:-30px;bottom:-55px;width:180px;height:180px;border-radius:50%;border:26px solid rgba(255,255,255,.06);box-shadow:0 0 0 26px rgba(255,255,255,.035)}
+.voices-browser-head>div,.voices-open-chip{position:relative;z-index:1}
+.voices-browser-head .page-kicker{color:#f2cf83}
+.voices-browser-head h2{font:700 clamp(1.85rem,3.2vw,2.8rem)/1.04 Georgia,"Times New Roman",serif;letter-spacing:-.025em;margin:2px 0 8px}
+.voices-browser-head p{margin:0;color:#f0e5de;max-width:700px}
+.voices-open-chip{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);padding:8px 11px;border-radius:999px;font-size:.7rem;white-space:nowrap}
+.voice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.voice-card{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 10px 28px rgba(38,32,25,.055)}
+.voice-media{background:#111827;aspect-ratio:16/9}
+.voice-media video{display:block;width:100%;height:100%;object-fit:cover;background:#111827}
+.voice-card-body{padding:18px}
+.voice-label{font-size:.63rem;font-weight:850;letter-spacing:.1em;color:#8b5d32;margin-bottom:7px}
+.voice-card h3{font:700 1.45rem/1.1 Georgia,"Times New Roman",serif;margin:0 0 8px}
+.voice-card p{margin:0 0 13px;color:#626b79;font-size:.84rem}
+.voice-credit{font-size:.67rem;color:#7b8390;margin:11px 0 14px}
+.voice-card .badges{margin-top:2px}
+.voice-archive-card{display:grid;grid-template-columns:150px minmax(0,1fr);align-items:stretch;background:linear-gradient(135deg,#faf3e6,#fffdf7)}
+.voice-archive-mark{display:grid;place-items:center;background:var(--navy);color:#fff1b5;font:800 2.3rem Georgia,serif;letter-spacing:-.15em}
+.voices-note{margin-top:14px;border:1px solid #d8c9b7;background:#f8f1e6;border-radius:18px;padding:17px 19px}
+.voices-note strong{font:700 1.05rem Georgia,serif}
+.voices-note p{margin:5px 0 0;color:#626b79;font-size:.8rem}
+
+@media(max-width:1120px){
+  .browse-modes{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  .voices-browser-head{align-items:flex-start;flex-direction:column}
+  .voice-grid{grid-template-columns:1fr}
+  .voice-archive-card{grid-template-columns:110px minmax(0,1fr)}
+}
+@media(max-width:460px){
+  .voice-archive-card{grid-template-columns:1fr}
+  .voice-archive-mark{min-height:100px}
 }
