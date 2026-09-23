@@ -221,35 +221,50 @@
   display:none;
 }
 
-/* Let the motif read as part of the cover, not as a small sticker. */
+/* Let the motif feel built into the cover rather than pasted on top. */
 #storyBrowsePanel .cover-motif::before{
-  inset:28% 4% 7%;
+  inset:42% -11% -9%;
   background-position:center bottom;
-  background-size:var(--cover-motif-size,92%) auto;
-  opacity:var(--cover-motif-opacity,.46);
+  background-size:var(--cover-motif-size,116%) auto;
+  opacity:var(--cover-motif-opacity,.36);
+  filter:saturate(.88) brightness(1.08);
 }
 #storyBrowsePanel .motif-love-classical{
-  --cover-motif-size:96%;
-  --cover-motif-opacity:.48;
+  --cover-motif-size:114%;
+  --cover-motif-opacity:.37;
+  background:linear-gradient(180deg,#873342 0%,#742c3a 100%);
 }
 #storyBrowsePanel .motif-epic-historical{
-  --cover-motif-size:104%;
-  --cover-motif-opacity:.50;
+  --cover-motif-size:124%;
+  --cover-motif-opacity:.40;
+  background:linear-gradient(180deg,#1b3151 0%,#142843 100%);
 }
 #storyBrowsePanel .motif-folk-oral{
-  --cover-motif-size:108%;
-  --cover-motif-opacity:.48;
+  --cover-motif-size:122%;
+  --cover-motif-opacity:.37;
+  background:linear-gradient(180deg,#35645d 0%,#294f4a 100%);
 }
 #storyBrowsePanel .motif-mystical-medallion{
-  --cover-motif-size:94%;
-  --cover-motif-opacity:.45;
+  --cover-motif-size:110%;
+  --cover-motif-opacity:.35;
+  background:linear-gradient(180deg,#1c5b54 0%,#164a45 100%);
 }
 #storyBrowsePanel .cover-title{
-  max-width:94%;
-  margin-top:auto;
-  margin-bottom:auto;
+  position:absolute;
+  left:13px;
+  right:13px;
+  top:38%;
+  transform:translateY(-50%);
+  margin:0;
+  max-width:none;
+  font-size:1.13rem;
+  line-height:1.04;
 }
 #storyBrowsePanel .motif-epic-historical .cover-title{
-  font-size:1.02rem;
-  line-height:1.02;
+  top:35%;
+  font-size:.98rem;
+  line-height:1.01;
+}
+#storyBrowsePanel .motif-mystical-medallion .cover-title{
+  top:36%;
 }
