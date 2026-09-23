@@ -1632,7 +1632,7 @@
       const button = document.getElementById('suggestSubmit');
       const status = document.getElementById('suggestStatus');
       const originalLabel = button ? button.textContent : 'Submit suggestion';
-      if (button) { button.disabled = true; button.textContent = 'Sending…'; }
+      if (button) { button.disabled = true; button.textContent = (window.kdlTranslatePhrase ? window.kdlTranslatePhrase('Sending…') : 'Sending…'); }
       if (status) status.textContent = '';
 
       try {
@@ -1644,9 +1644,9 @@
 
         if (response.ok) {
           form.reset();
-          if (status) status.textContent = 'Thank you! Your book suggestion has been sent for review.';
+          if (status) status.textContent = (window.kdlTranslatePhrase ? window.kdlTranslatePhrase('Thank you! Your book suggestion has been sent for review.') : 'Thank you! Your book suggestion has been sent for review.');
         } else {
-          let message = 'The suggestion could not be sent. Please try again.';
+          let message = (window.kdlTranslatePhrase ? window.kdlTranslatePhrase('The suggestion could not be sent. Please try again.') : 'The suggestion could not be sent. Please try again.');
           try {
             const data = await response.json();
             if (data && Array.isArray(data.errors) && data.errors.length) {
@@ -1656,7 +1656,7 @@
           if (status) status.textContent = message;
         }
       } catch (_) {
-        if (status) status.textContent = 'The suggestion could not be sent. Please check your connection and try again.';
+        if (status) status.textContent = (window.kdlTranslatePhrase ? window.kdlTranslatePhrase('The suggestion could not be sent. Please check your connection and try again.') : 'The suggestion could not be sent. Please check your connection and try again.');
       } finally {
         if (button) { button.disabled = false; button.textContent = originalLabel; }
       }
@@ -1759,7 +1759,7 @@
 (() => {
   const TRANSLATIONS = {
     kmr: {
-      "BROWSE THE LIBRARY":"PIRTÛKXANEYÊ BIGERE",
+      "Skip to catalogue":"Here katalogê","Suggestions are sent privately to the library curator by email through Formspree and are reviewed before anything is added.":"Pêşniyar bi taybetî bi e-nameyê û bi riya Formspree ji rêveberê pirtûkxaneyê re tên şandin û berî ku tiştek were zêdekirin tên kontrolkirin.","Sending…":"Tê şandin…","Thank you! Your book suggestion has been sent for review.":"Spas! Pêşniyara pirtûka te ji bo kontrolê hat şandin.","The suggestion could not be sent. Please try again.":"Pêşniyar nehat şandin. Ji kerema xwe dîsa biceribîne.","The suggestion could not be sent. Please check your connection and try again.":"Pêşniyar nehat şandin. Ji kerema xwe girêdana xwe kontrol bike û dîsa biceribîne.","BROWSE THE LIBRARY":"PIRTÛKXANEYÊ BIGERE",
       "What would you like to explore?":"Tu dixwazî çi keşf bikî?",
       "Browse the full collection, jump into stories and poetry, or hear Kurdish voices from open archives.":"Hemû koleksiyonê bigere, rasterast biçî çîrok û helbestan, an dengên kurdî ji arşîvên vekirî bibihîze.",
       "All books":"Hemû pirtûk","Full catalogue":"Kataloga tevahî","Stories · Çîrok":"Çîrok","Poetry":"Helbest","Poems & divans":"Helbest û dîwan","Reference":"Çavkanî","Language & research":"Ziman û lêkolîn","Voices · Deng":"Deng","Listen & watch":"Bibihîze û temaşe bike",
@@ -1792,7 +1792,7 @@
       "Nozibele and the Three Hairs":"Nozibele û Sê Por","A suspenseful tale of a girl who must outwit a dangerous dog and find her way home.":"Çîrokeke heyecanî ya keçikekê ye ku divê kûçikekî xeternak bi aqil têk bibe û rêya mala xwe bibîne.","Animal tale":"Çîroka heywanan","Hen and Eagle":"Mirîşk û Baz","A traditional-style animal story explaining why the eagle flies and the hen scratches the ground.":"Çîrokeke heywanan a bi şêweya kevneşopî ku rave dike çima baz difire û mirîşk erdê dikeve.","Southern African folktale":"Çîroka gelêrî ya Afrîkaya Başûr","Children of Wax":"Zarokên Momê","A strange and imaginative folktale about children made of wax and the brother who reaches the sunlight.":"Çîrokeke ecêb û xeyalî ya zarokên ji momê çêkirî û birayê ku digihîje ronahiya rojê.","Tom the Banana Seller":"Tom Firoşkarê Mozan","Tom challenges expectations at the market and keeps trying until customers finally buy his bananas.":"Tom li bazarê pêşdaraziyan diceribîne û hewl dide heta xerîdar dawiyê mozên wî dikirin.","Grandmother’s Bananas":"Mozên Dapîrê","A child becomes fascinated by a grandmother’s mysterious “magic” basket of ripening bananas.":"Zarokek bi sepeteke nepenî ya dapîrê ku tê de moz digihîjin, matmayî dibe."
     },
     ckb: {
-      "BROWSE THE LIBRARY":"بگەڕێ بە کتێبخانەکەدا","What would you like to explore?":"حەز دەکەیت چی بدۆزیتەوە؟","Browse the full collection, jump into stories and poetry, or hear Kurdish voices from open archives.":"لە تەواوی کۆمەڵەکە بگەڕێ، ڕاستەوخۆ بچۆ بۆ چیرۆک و شیعر، یان دەنگی کوردی لە ئەرشیڤە کراوەکان ببیستە.",
+      "Skip to catalogue":"بڕۆ بۆ کاتەلۆگ","Suggestions are sent privately to the library curator by email through Formspree and are reviewed before anything is added.":"پێشنیارەکان بە تایبەتی لە ڕێگەی Formspree بە ئیمەیڵ بۆ بەڕێوەبەری کتێبخانە دەنێردرێن و پێش زیادکردنی هەر شتێک پشکنین دەکرێن.","Sending…":"دەنێردرێت…","Thank you! Your book suggestion has been sent for review.":"سوپاس! پێشنیاری کتێبەکەت بۆ پشکنین نێردرا.","The suggestion could not be sent. Please try again.":"پێشنیارەکە نەنێردرا. تکایە دووبارە هەوڵ بدەوە.","The suggestion could not be sent. Please check your connection and try again.":"پێشنیارەکە نەنێردرا. تکایە پەیوەندییەکەت بپشکنە و دووبارە هەوڵ بدەوە.","BROWSE THE LIBRARY":"بگەڕێ بە کتێبخانەکەدا","What would you like to explore?":"حەز دەکەیت چی بدۆزیتەوە؟","Browse the full collection, jump into stories and poetry, or hear Kurdish voices from open archives.":"لە تەواوی کۆمەڵەکە بگەڕێ، ڕاستەوخۆ بچۆ بۆ چیرۆک و شیعر، یان دەنگی کوردی لە ئەرشیڤە کراوەکان ببیستە.",
       "All books":"هەموو کتێبەکان","Full catalogue":"کاتەلۆگی تەواو","Stories · Çîrok":"چیرۆک","Poetry":"شیعر","Poems & divans":"شیعر و دیوان","Reference":"سەرچاوە","Language & research":"زمان و توێژینەوە","Voices · Deng":"دەنگ","Listen & watch":"ببیستە و ببینە",
       "VOICES · DENG · ZIMANÊ ZINDÎ":"دەنگ · زمانی زیندوو","Hear Kurdish as it is spoken":"کوردی وەک قسەی پێدەکرێت ببیستە","Open-licensed recordings of Kurdish speakers and pronunciation archives. This is the beginning of an oral collection alongside the books.":"تۆمارە کراوە-مۆڵەتپێدراوەکانی قسەکەرانی کوردی و ئەرشیڤی دەربڕین. ئەمە دەستپێکی کۆمەڵەیەکی زارەکییە لە تەنیشت کتێبەکان.","Open media · Sources credited":"میدیای کراوە · سەرچاوەکان دیاریکراون",
       "KURMANCÎ · NORTHERN KURDISH":"کورمانجی · کوردی باکوور","Mohamad speaking Kurmancî":"Mohamad بە کورمانجی قسە دەکات","A short Wikitongues recording of Mohamad Saeed speaking the Northern variety of Kurdish.":"تۆمارێکی کورتی Wikitongues ـە لە Mohamad Saeed کە بە جۆری باکووری کوردی قسە دەکات.","Source & license ↗":"سەرچاوە و مۆڵەت ↗",
@@ -1821,7 +1821,7 @@
       "Nozibele and the Three Hairs":"نوزیبێلە و سێ تاڵە موو","A suspenseful tale of a girl who must outwit a dangerous dog and find her way home.":"چیرۆکێکی پڕ هەستە لە کچێک کە دەبێت بە زیرەکی سەگێکی مەترسیدار تێپەڕێنێت و ڕێگای ماڵەوە بدۆزێتەوە.","Animal tale":"چیرۆکی ئاژەڵان","Hen and Eagle":"مریشک و هەڵۆ","A traditional-style animal story explaining why the eagle flies and the hen scratches the ground.":"چیرۆکێکی ئاژەڵانی بە شێوازی نەریتی کە ڕوون دەکاتەوە بۆچی هەڵۆ دەفڕێت و مریشک زەوی دەکۆڵێت.","Southern African folktale":"چیرۆکی فۆلکلۆری ئەفریقای باشوور","Children of Wax":"منداڵانی مۆم","A strange and imaginative folktale about children made of wax and the brother who reaches the sunlight.":"چیرۆکێکی سەیر و خەیاڵییە دەربارەی منداڵانی دروستکراو لە مۆم و براکەیان کە دەگاتە تیشکی خۆر.","Tom the Banana Seller":"تۆم موزفرۆش","Tom challenges expectations at the market and keeps trying until customers finally buy his bananas.":"Tom لە بازاڕدا دژی چاوەڕوانییەکان دەوەستێتەوە و بەردەوام دەبێت تا کڕیارەکان لە کۆتاییدا موزەکانی دەکڕن.","Grandmother’s Bananas":"موزەکانی داپیرە","A child becomes fascinated by a grandmother’s mysterious “magic” basket of ripening bananas.":"منداڵێک بە سەبەتە نهێنییە «جادووییەکەی» داپیرە سەرسام دەبێت کە موزەکان تێیدا دەگەن."
     },
     diq: {
-      "BROWSE THE LIBRARY":"KITABXANE DE GEYRÊ","What would you like to explore?":"To wazena çı keşf bikerê?","Browse the full collection, jump into stories and poetry, or hear Kurdish voices from open archives.":"Pêro koleksiyon de geyrê, rast çîrokan û şiiran de kewê, ya zi arşîvanê akerdeyan ra vengê Kurdî goşdar bikerê.","All books":"Pêro kıtabi","Full catalogue":"Katalogê pêro","Stories · Çîrok":"Çîrokî","Poetry":"Şiir","Poems & divans":"Şiir û dîwani","Reference":"Referans","Language & research":"Zıwan û cigêrayış","Voices · Deng":"Vengi · Deng","Listen & watch":"Goşdar be û temaşe ke",
+      "Skip to catalogue":"Katalog de şo","Suggestions are sent privately to the library curator by email through Formspree and are reviewed before anything is added.":"Pêşniyari bi taybetî Formspree ra bi e-mail rê yê idarekerdoxê kıtabxaneyî şınê û verê ke çı zêde bibo kontrol benê.","Sending…":"Şiyeno…","Thank you! Your book suggestion has been sent for review.":"Sipas! Pêşniyarê kıtabê to qandê kontrolî şiya.","The suggestion could not be sent. Please try again.":"Pêşniyar nêşiya. Kerem ke reyna bıcerrebnê.","The suggestion could not be sent. Please check your connection and try again.":"Pêşniyar nêşiya. Kerem ke girêdana xo kontrol ke û reyna bıcerrebnê.","BROWSE THE LIBRARY":"KITABXANE DE GEYRÊ","What would you like to explore?":"To wazena çı keşf bikerê?","Browse the full collection, jump into stories and poetry, or hear Kurdish voices from open archives.":"Pêro koleksiyon de geyrê, rast çîrokan û şiiran de kewê, ya zi arşîvanê akerdeyan ra vengê Kurdî goşdar bikerê.","All books":"Pêro kıtabi","Full catalogue":"Katalogê pêro","Stories · Çîrok":"Çîrokî","Poetry":"Şiir","Poems & divans":"Şiir û dîwani","Reference":"Referans","Language & research":"Zıwan û cigêrayış","Voices · Deng":"Vengi · Deng","Listen & watch":"Goşdar be û temaşe ke",
       "VOICES · DENG · ZIMANÊ ZINDÎ":"VENGI · ZIWANÊ CANLI","Hear Kurdish as it is spoken":"Kurdî sey ke qal beno goşdar bikerê","Open-licensed recordings of Kurdish speakers and pronunciation archives. This is the beginning of an oral collection alongside the books.":"Qeydê akerdeyê qalikerdişê Kurdî û arşîvê vengkerdişi. No destpêkê koleksiyonê fekî yo ke kıtaban de het de esto.","Open media · Sources credited":"Medyayê akerde · Çıme nışan biyi",
       "KURMANCÎ · NORTHERN KURDISH":"KURMANCÎ · KURDÎYA VAKUR","Mohamad speaking Kurmancî":"Mohamad bi Kurmancî qal keno","A short Wikitongues recording of Mohamad Saeed speaking the Northern variety of Kurdish.":"Qeydê kılm ê Wikitongues yo ke Mohamad Saeed bi varyantê vakurê Kurdî qal keno.","Source & license ↗":"Çıme û lîsans ↗",
       "SORANÎ · CENTRAL KURDISH":"SORANÎ · KURDÎYA MERKEZÎ","Golala speaking Soranî":"Golala bi Soranî qal kena","A Wikitongues oral-language recording made in Oslo, preserving a natural sample of spoken Soranî.":"Qeydê fekî yê Wikitongues yo ke Oslo de ameyo kerdene û numuneyê tabiî yê Soranîya qalbiyayey parasteno.",
@@ -1851,12 +1851,19 @@
   };
 
   const originals = new WeakMap();
-  const roots = () => document.querySelectorAll('.browse-hub,.voices-browser,.story-browser');
+  const roots = () => document.querySelectorAll('.browse-hub,.voices-browser,.story-browser,.form-note,.skip-link');
 
   function mapFor(locale) {
     if (locale === 'hac' || locale === 'sdh') return TRANSLATIONS.ckb;
     return TRANSLATIONS[locale] || {};
   }
+
+  function translatePhrase(phrase) {
+    const locale = document.documentElement.lang || 'en';
+    const map = mapFor(locale);
+    return locale === 'en' ? phrase : (map[phrase] || phrase);
+  }
+  window.kdlTranslatePhrase = translatePhrase;
 
   function applyStaticTranslations() {
     const locale = document.documentElement.lang || 'en';
