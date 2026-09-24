@@ -63,7 +63,7 @@ function bookSearchText(b){
     b.variety||'',b.v||'',b.institution||'',b.year||'',b.subject||'',subjectLabel(b.subject),
     b.script||'',scriptLabel(b.script),b.format||'',formatLabel(b.format),
     b.availability||'',availabilityLabel(b.availability),b.source||'',b.url||'',
-    ...(b.aliases||[]),(b.desc&&b.desc.en)||'',desc(b)||''
+    ...(b.aliases||[]),...Object.values(b.desc||{})
   ].join(' '));
 }
 
@@ -73,11 +73,8 @@ function matchesSearchText(searchText,query){
 }
 
 function storyCardSearchText(card){
-  if(!card.dataset.searchBase){
-    const links=[...card.querySelectorAll('a')].map(a=>a.getAttribute('href')||'').join(' ');
-    card.dataset.searchBase=normalizeText(card.textContent+' '+links);
-  }
-  return card.dataset.searchBase;
+  const links=[...card.querySelectorAll('a')].map(a=>a.getAttribute('href')||'').join(' ');
+  return normalizeText(card.textContent+' '+links);
 }
 function filterStoryShelvesBySearch(){
   const panel=$('#storyBrowsePanel');
@@ -134,6 +131,14 @@ function updateUrl(extra={}){
 }
 function readUrlState(){ const p=new URL(location.href).searchParams; state.q=p.get('q')||''; state.variety=p.get('language')||'all'; state.subject=p.get('subject')||'all'; state.script=p.get('script')||'all'; state.format=p.get('format')||'all'; state.availability=p.get('availability')||'all'; state.sort=p.get('sort')||'catalogue'; if(p.get('lang')&&LOCALES[p.get('lang')])state.locale=p.get('lang'); $('#searchInput').value=state.q; }
 function syncFilter(key,value){state[key]=value; renderCatalogue(); updateUrl();}
+function startGlobalSearch(value){
+  // A new query starts across every record; filters chosen afterward still apply.
+  if(value.trim()&&!state.q){
+    const selects={variety:'varietyFilter',subject:'subjectFilter',script:'scriptFilter',format:'formatFilter',availability:'availabilityFilter'};
+    Object.entries(selects).forEach(([key,id])=>{state[key]='all';$('#'+id).value='all'});
+  }
+  syncFilter('q',value);
+}
 
 async function downloadBook(b){let target=b.url;if(archiveEligible(b)&&b.format==='pdf'&&await urlExists(localPdfUrl(b)))target=localPdfUrl(b);const a=document.createElement('a');a.href=target;a.target='_blank';a.rel='noopener';if(target.startsWith('books/'))a.download='';document.body.appendChild(a);a.click();a.remove();}
 
@@ -184,7 +189,7 @@ function updateSectionControls(){const prev=$('#prevSection'),next=$('#nextSecti
 function goSection(delta){if(!readerSections.length)return;currentSection=Math.max(0,Math.min(readerSections.length-1,currentSection+delta));const section=readerSections[currentSection];const target=document.getElementById(section.anchor)||document.querySelector(`[id="${CSS.escape(section.anchor)}"]`);if(target)target.scrollIntoView({behavior:'smooth',block:'start'});updateSectionControls();}
 
 function initEvents(){
-  $('#searchInput').addEventListener('input',e=>syncFilter('q',e.target.value)); $('#varietyFilter').addEventListener('change',e=>syncFilter('variety',e.target.value)); $('#subjectFilter').addEventListener('change',e=>syncFilter('subject',e.target.value)); $('#sortFilter').addEventListener('change',e=>syncFilter('sort',e.target.value)); $('#scriptFilter').addEventListener('change',e=>syncFilter('script',e.target.value)); $('#formatFilter').addEventListener('change',e=>syncFilter('format',e.target.value)); $('#availabilityFilter').addEventListener('change',e=>syncFilter('availability',e.target.value));
+  $('#searchInput').addEventListener('input',e=>startGlobalSearch(e.target.value)); $('#varietyFilter').addEventListener('change',e=>syncFilter('variety',e.target.value)); $('#subjectFilter').addEventListener('change',e=>syncFilter('subject',e.target.value)); $('#sortFilter').addEventListener('change',e=>syncFilter('sort',e.target.value)); $('#scriptFilter').addEventListener('change',e=>syncFilter('script',e.target.value)); $('#formatFilter').addEventListener('change',e=>syncFilter('format',e.target.value)); $('#availabilityFilter').addEventListener('change',e=>syncFilter('availability',e.target.value));
   $('#moreFiltersButton').addEventListener('click',()=>{const a=$('#advancedFilters'),open=a.hidden;a.hidden=!open;$('#moreFiltersButton').setAttribute('aria-expanded',String(open));$('#moreFiltersButton').firstElementChild.textContent=t(open?'fewerFilters':'moreFilters')});
   $('#clearFiltersButton').addEventListener('click',()=>{Object.assign(state,{q:'',variety:'all',subject:'all',script:'all',format:'all',availability:'all',sort:'catalogue'});$('#searchInput').value='';applyLocale();updateUrl()});
   $('#languageButton').addEventListener('click',()=>openDialog('languageDialog')); $('#suggestButton').addEventListener('click',()=>openDialog('suggestDialog')); $$('[data-close-dialog]').forEach(b=>b.addEventListener('click',()=>closeDialog(b.dataset.closeDialog))); $$('.dialog-backdrop').forEach(d=>d.addEventListener('mousedown',e=>{if(e.target===d)closeDialog(d.id)}));
