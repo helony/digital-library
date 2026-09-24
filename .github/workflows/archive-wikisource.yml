@@ -4,13 +4,15 @@ on:
   push:
     paths:
       - .github/workflows/archive-wikisource.yml
+      - tools/archive_books.py
+      - archive-manifest.json
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: archive-wikisource
+  group: archive-library
   cancel-in-progress: false
 
 jobs:
