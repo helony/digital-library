@@ -1,6 +1,6 @@
 {
-  "ok": 10,
-  "missing": 25,
+  "ok": 11,
+  "missing": 24,
   "checksum_mismatch": 0,
   "manual_review": 8,
   "items": [
@@ -243,8 +243,9 @@
     {
       "kdl_id": "KDL-KMR-0031",
       "slug": "ji-cirya-pasi-pe-da",
-      "status": "missing",
-      "path": "books/ji-cirya-pasi-pe-da/content.html"
+      "status": "ok",
+      "path": "books/ji-cirya-pasi-pe-da/content.html",
+      "sha256": "4c1bf7c1b424c862de586a59b3a9c011e4fff42b80c49d9a993b2941490f5742"
     },
     {
       "kdl_id": "KDL-KMR-0032",

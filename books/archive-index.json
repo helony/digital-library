@@ -1,254 +1,149 @@
 {
-  "created_at": "2026-09-24T15:33:22Z",
+  "created_at": "2026-09-24T15:36:39Z",
   "items": [
     {
       "slug": "mem-u-zin",
       "ok": true,
+      "preserved": true,
       "path": "books/mem-u-zin/content.html",
-      "bytes": 15704,
-      "sha256": "9a67d0192c15d1a2da224ba7cfd67b8685a3b2f5fe20bfec8bd571f6f212a471",
-      "revision": 302883,
-      "sections": []
+      "sha256": "9a67d0192c15d1a2da224ba7cfd67b8685a3b2f5fe20bfec8bd571f6f212a471"
     },
     {
       "slug": "diwana-ehmede-xani",
       "ok": true,
+      "preserved": true,
       "path": "books/diwana-ehmede-xani/content.html",
-      "bytes": 4080,
-      "sha256": "46ab60f459ff00deb0a053f33a2c19d37b2a05ab7d9bc231a65327b1819169c5",
-      "revision": 936354,
-      "sections": []
+      "sha256": "46ab60f459ff00deb0a053f33a2c19d37b2a05ab7d9bc231a65327b1819169c5"
     },
     {
       "slug": "diwana-melaye-ciziri",
       "ok": true,
+      "preserved": true,
       "path": "books/diwana-melaye-ciziri/content.html",
-      "bytes": 9214,
-      "sha256": "ac1fa431952a10eff0fa77fdabe1628187f86c9192795d99d7433b799df748bb",
-      "revision": 960961,
-      "sections": []
+      "sha256": "ac1fa431952a10eff0fa77fdabe1628187f86c9192795d99d7433b799df748bb"
     },
     {
       "slug": "diwani-mahwi",
       "ok": true,
+      "preserved": true,
       "path": "books/diwani-mahwi/content.html",
-      "bytes": 7926,
-      "sha256": "1e405a7d0ad48f7611840bb3a44f0cfbe83aa5d7421f7a833bd78ba7bdf314c7",
-      "revision": 934804,
-      "sections": []
+      "sha256": "1e405a7d0ad48f7611840bb3a44f0cfbe83aa5d7421f7a833bd78ba7bdf314c7"
     },
     {
       "slug": "diwani-wefayi",
       "ok": true,
+      "preserved": true,
       "path": "books/diwani-wefayi/content.html",
-      "bytes": 5639,
-      "sha256": "2dca783183322d090c7fa0d578362950ab668cd8790faf312c3c8e08469d7b90",
-      "revision": 936493,
-      "sections": []
+      "sha256": "2dca783183322d090c7fa0d578362950ab668cd8790faf312c3c8e08469d7b90"
     },
     {
       "slug": "diwani-xanay-qubadi",
       "ok": true,
+      "preserved": true,
       "path": "books/diwani-xanay-qubadi/content.html",
-      "bytes": 2735,
-      "sha256": "e02cb94e5968f82ea48af16924bf2cbaf961bdeb4b9cc192fc1ca71b2498a21b",
-      "revision": 959640,
-      "sections": []
+      "sha256": "e02cb94e5968f82ea48af16924bf2cbaf961bdeb4b9cc192fc1ca71b2498a21b"
     },
     {
       "slug": "shake-u-xan-mensur",
       "ok": true,
+      "preserved": true,
       "path": "books/shake-u-xan-mensur/content.html",
-      "bytes": 2046,
-      "sha256": "8bc26ecb99d3bf026298d64037913b72cb137655ab74627e9935cb5f6d8035cc",
-      "revision": 942920,
-      "sections": []
+      "sha256": "8bc26ecb99d3bf026298d64037913b72cb137655ab74627e9935cb5f6d8035cc"
     },
     {
       "slug": "mewlide-nebi-xasi",
       "ok": true,
+      "preserved": true,
       "path": "books/mewlide-nebi-xasi/content.html",
-      "bytes": 23238,
-      "sha256": "1eb86445176f2e7f9690a155b4fb02326ec624dcaa420f6f1a3c22cddaaadd2f",
-      "revision": 670470,
-      "sections": [
-        {
-          "toclevel": 1,
-          "level": "2",
-          "line": "Bısmıllahirrehmanirrehim",
-          "number": "1",
-          "index": "1",
-          "fromtitle": "Mewlıdê_Nebi",
-          "byteoffset": 354,
-          "anchor": "Bısmıllahirrehmanirrehim",
-          "linkAnchor": "Bısmıllahirrehmanirrehim"
-        },
-        {
-          "toclevel": 1,
-          "level": "2",
-          "line": "Eno Mebhesê Tertıbê Mewludê Fedley Wendışi",
-          "number": "2",
-          "index": "2",
-          "fromtitle": "Mewlıdê_Nebi",
-          "byteoffset": 1814,
-          "anchor": "Eno_Mebhesê_Tertıbê_Mewludê_Fedley_Wendışi",
-          "linkAnchor": "Eno_Mebhesê_Tertıbê_Mewludê_Fedley_Wendışi"
-        },
-        {
-          "toclevel": 1,
-          "level": "2",
-          "line": "Eno Mebhesê Çınêbiyayışê Eşyan u Sırrê Homayo",
-          "number": "3",
-          "index": "3",
-          "fromtitle": "Mewlıdê_Nebi",
-          "byteoffset": 4844,
-          "anchor": "Eno_Mebhesê_Çınêbiyayışê_Eşyan_u_Sırrê_Homayo",
-          "linkAnchor": "Eno_Mebhesê_Çınêbiyayışê_Eşyan_u_Sırrê_Homayo"
-        },
-        {
-          "toclevel": 1,
-          "level": "2",
-          "line": "Eno Mebhesê Pêxemberê Ma u Xelqe Eşyano",
-          "number": "4",
-          "index": "4",
-          "fromtitle": "Mewlıdê_Nebi",
-          "byteoffset": 5955,
-          "anchor": "Eno_Mebhesê_Pêxemberê_Ma_u_Xelqe_Eşyano",
-          "linkAnchor": "Eno_Mebhesê_Pêxemberê_Ma_u_Xelqe_Eşyano"
-        },
-        {
-          "toclevel": 1,
-          "level": "2",
-          "line": "Eno Mebhesê Emre Homayo Qey Qeleme",
-          "number": "5",
-          "index": "5",
-          "fromtitle": "Mewlıdê_Nebi",
-          "byteoffset": 8001,
-          "anchor": "Eno_Mebhesê_Emre_Homayo_Qey_Qeleme",
-          "linkAnchor": "Eno_Mebhesê_Emre_Homayo_Qey_Qeleme"
-        },
-        {
-          "toclevel": 1,
-          "level": "2",
-          "line": "Eno Mebhesê Xelqê Ademi yo u Nurê Pêxemberi yo Kewtê Paştey yê",
-          "number": "6",
-          "index": "6",
-          "fromtitle": "Mewlıdê_Nebi",
-          "byteoffset": 9224,
-          "anchor": "Eno_Mebhesê_Xelqê_Ademi_yo_u_Nurê_Pêxemberi_yo_Kewtê_Paştey_yê",
-          "linkAnchor": "Eno_Mebhesê_Xelqê_Ademi_yo_u_Nurê_Pêxemberi_yo_Kewtê_Paştey_yê"
-        },
-        {
-          "toclevel": 1,
-          "level": "2",
-          "line": "Eno Mebhesê Estışe Ademi yo Cennet ra u Mardışe Kalıkanê Pêxemberê Ma",
-          "number": "7",
-          "index": "7",
-          "fromtitle": "Mewlıdê_Nebi",
-          "byteoffset": 12003,
-          "anchor": "Eno_Mebhesê_Estışe_Ademi_yo_Cennet_ra_u_Mardışe_Kalıkanê_Pêxemberê_Ma",
-          "linkAnchor": "Eno_Mebhesê_Estışe_Ademi_yo_Cennet_ra_u_Mardışe_Kalıkanê_Pêxemberê_Ma"
-        },
-        {
-          "toclevel": 1,
-          "level": "2",
-          "line": "Eno Mebhesê Abdullahi Cuhudê Şamiyan u Waştışe Amina Cı rê",
-          "number": "8",
-          "index": "8",
-          "fromtitle": "Mewlıdê_Nebi",
-          "byteoffset": 13616,
-          "anchor": "Eno_Mebhesê_Abdullahi_Cuhudê_Şamiyan_u_Waştışe_Amina_Cı_rê",
-          "linkAnchor": "Eno_Mebhesê_Abdullahi_Cuhudê_Şamiyan_u_Waştışe_Amina_Cı_rê"
-        }
-      ]
+      "sha256": "1eb86445176f2e7f9690a155b4fb02326ec624dcaa420f6f1a3c22cddaaadd2f"
     },
     {
       "slug": "nubehara-bicukan",
       "ok": true,
+      "preserved": true,
       "path": "books/nubehara-bicukan/content.html",
-      "bytes": 3674,
-      "sha256": "346b6c2b2b0324dcfe5fcfebb0a0de87a08c0011a479eddf20cc10f99d87f1e9",
-      "revision": 949387,
-      "sections": []
+      "sha256": "346b6c2b2b0324dcfe5fcfebb0a0de87a08c0011a479eddf20cc10f99d87f1e9"
     },
     {
       "slug": "mewlida-kurmanci-bateyi",
       "ok": true,
+      "preserved": true,
       "path": "books/mewlida-kurmanci-bateyi/content.html",
-      "bytes": 27437,
-      "sha256": "a90dc61eb9c30daecbb046d23303c692a05b12eb0c19b33e33a09acbd96a3384",
-      "revision": 960447,
-      "sections": []
+      "sha256": "a90dc61eb9c30daecbb046d23303c692a05b12eb0c19b33e33a09acbd96a3384"
     },
     {
       "slug": "zembilfiros",
       "ok": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "error": "Extra data: line 2 column 1 (char 8997)"
     },
     {
       "slug": "fi-beyani-el-eeqide-we-tewhid",
       "ok": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "error": "Extra data: line 2 column 1 (char 14917)"
     },
     {
       "slug": "bersise-abid",
       "ok": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "error": "Extra data: line 2 column 1 (char 9646)"
     },
     {
       "slug": "feqiye-teyran-u-quling",
       "ok": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "error": "Extra data: line 2 column 1 (char 7049)"
     },
     {
       "slug": "feqiye-teyran-u-roj",
       "ok": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "error": "Extra data: line 2 column 1 (char 6889)"
     },
     {
       "slug": "derd-u-dax-im",
       "ok": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "error": "Extra data: line 2 column 1 (char 6955)"
     },
     {
       "slug": "di-nav-qewme-xerib",
       "ok": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "error": "Extra data: line 2 column 1 (char 7499)"
     },
     {
       "slug": "el-wefayi-wesla-canan",
       "ok": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "error": "Extra data: line 2 column 1 (char 7972)"
     },
     {
       "slug": "ey-nete-tu",
       "ok": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "error": "Extra data: line 2 column 1 (char 8565)"
     },
     {
       "slug": "ger-tu-nazik-sorgul-i",
       "ok": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "error": "Extra data: line 2 column 1 (char 6877)"
     },
     {
       "slug": "ji-cirya-pasi-pe-da",
-      "ok": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "ok": true,
+      "path": "books/ji-cirya-pasi-pe-da/content.html",
+      "bytes": 1927,
+      "sha256": "4c1bf7c1b424c862de586a59b3a9c011e4fff42b80c49d9a993b2941490f5742",
+      "revision": 960446,
+      "sections": []
     },
     {
       "slug": "qiblegeha-asiqan-ke-yi-tu",
       "ok": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "error": "Extra data: line 2 column 1 (char 8949)"
     },
     {
       "slug": "subhan-ji-mire-qadiri",
       "ok": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "error": "Extra data: line 2 column 1 (char 9041)"
     },
     {
       "slug": "ya-reb-hawar",
       "ok": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "error": "Extra data: line 2 column 1 (char 7887)"
     }
   ]
 }
