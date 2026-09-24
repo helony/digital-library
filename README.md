@@ -31,7 +31,7 @@ python3 tools/archive_books.py
 ```
 
 The script only automatically mirrors records marked `eligible: true` in `archive-manifest.json`. Records with regional, uncertain, or permission-limited rights remain manual-review items.
-Use `--format=wiki` or `--format=pdf` to archive one format at a time. Separate GitHub Actions workflows archive eligible Wikisource texts and historical PDF scans; each can be rerun manually in the Actions tab. They commit successful local copies and the updated audit to the repository. PDF downloads are capped at 50 MiB per file to stay within repository hosting limits.
+Use `--format=wiki` or `--format=pdf` to archive one format at a time. Separate GitHub Actions workflows archive eligible Wikisource texts and historical PDF scans; each can be rerun manually in the Actions tab. They commit successful local copies and the updated audit to the repository. PDF downloads are capped at 90 MiB per file to stay within GitHub's per-file limit.
 
 ### 2. Verify the archive
 

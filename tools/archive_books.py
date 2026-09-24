@@ -24,7 +24,7 @@ MANIFEST = ROOT / "archive-manifest.json"
 BOOKS_DIR = ROOT / "books"
 UA = "KurdishDigitalLibraryPreservation/1.0 (https://github.com/helony/digital-library; static archival copy)"
 TIMEOUT = 45
-MAX_PDF_BYTES = 50 * 1024 * 1024
+MAX_PDF_BYTES = 90 * 1024 * 1024
 
 SAFE_TAGS = set('article blockquote br center code dd div dl dt em h1 h2 h3 h4 h5 h6 hr i li ol p pre rb rp rt ruby section small span strong sub sup table tbody td tfoot th thead tr u ul a'.split())
 VOID_TAGS = {'br', 'hr'}
@@ -38,10 +38,10 @@ def fetch(url: str, max_bytes: int | None = None) -> bytes:
         try:
             with urlopen(req, timeout=TIMEOUT) as r:
                 if max_bytes and int(r.headers.get('Content-Length') or 0) > max_bytes:
-                    raise RuntimeError('PDF exceeds 50 MiB hosting limit')
+                    raise RuntimeError('PDF exceeds 90 MiB hosting limit')
                 data = r.read(max_bytes + 1 if max_bytes else -1)
                 if max_bytes and len(data) > max_bytes:
-                    raise RuntimeError('PDF exceeds 50 MiB hosting limit')
+                    raise RuntimeError('PDF exceeds 90 MiB hosting limit')
                 return data
         except HTTPError as error:
             if error.code not in (429, 503) or attempt == 3:

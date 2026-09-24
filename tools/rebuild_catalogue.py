@@ -54,7 +54,7 @@ def main():
     },ensure_ascii=False,indent=2),encoding='utf-8')
     fields=['kdl_id','slug','title','author','year_display','year_sort','variety','language_code','script','subject','format','availability','source_institution','source_url','rights_type','rights_note_en','source_rights_checked','catalogue_added','archive_eligible','planned_local_path','description_en']
     with (ROOT/'catalogue.csv').open('w',encoding='utf-8-sig',newline='') as f:
-        w=csv.DictWriter(f,fieldnames=fields); w.writeheader()
+        w=csv.DictWriter(f,fieldnames=fields,lineterminator='\n'); w.writeheader()
         for r in ports:
             w.writerow({k:r.get(k,'') for k in fields})
     manifest={
