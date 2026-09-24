@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-24T17:51:24Z",
+  "created_at": "2026-09-24T17:51:35Z",
   "items": [
     {
       "slug": "mem-u-zin",
@@ -248,8 +248,10 @@
     },
     {
       "slug": "makas-kurdische-studien-1900",
-      "ok": false,
-      "error": "local copy missing"
+      "ok": true,
+      "path": "books/makas-kurdische-studien-1900/book.pdf",
+      "bytes": 4039907,
+      "sha256": "6502163588e905f899f4e96c83fd373902675f1c74388c0e407f61ba6339a6db"
     }
   ]
 }

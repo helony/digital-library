@@ -1,6 +1,6 @@
 {
-  "ok": 35,
-  "missing": 1,
+  "ok": 36,
+  "missing": 0,
   "checksum_mismatch": 0,
   "manual_review": 10,
   "items": [
@@ -292,8 +292,9 @@
     {
       "kdl_id": "KDL-KMR-0035",
       "slug": "makas-kurdische-studien-1900",
-      "status": "missing",
-      "path": "books/makas-kurdische-studien-1900/book.pdf"
+      "status": "ok",
+      "path": "books/makas-kurdische-studien-1900/book.pdf",
+      "sha256": "6502163588e905f899f4e96c83fd373902675f1c74388c0e407f61ba6339a6db"
     },
     {
       "kdl_id": "KDL-KMR-0036",
