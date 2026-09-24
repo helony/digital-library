@@ -31,6 +31,7 @@ python3 tools/archive_books.py
 ```
 
 The script only automatically mirrors records marked `eligible: true` in `archive-manifest.json`. Records with regional, uncertain, or permission-limited rights remain manual-review items.
+Use `--format=wiki` or `--format=pdf` to archive one format at a time. The GitHub Actions workflow archives eligible Wikisource texts when its workflow file is first pushed, and can be rerun manually in the Actions tab. It commits successful local copies and the updated audit to the repository. PDFs remain a separate step because their sizes and source access vary.
 
 ### 2. Verify the archive
 
