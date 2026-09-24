@@ -1,6 +1,6 @@
 {
-  "ok": 24,
-  "missing": 11,
+  "ok": 33,
+  "missing": 2,
   "checksum_mismatch": 0,
   "manual_review": 8,
   "items": [
@@ -79,8 +79,9 @@
     {
       "kdl_id": "KDL-DIQ-0001",
       "slug": "lerkh-forschungen-1857",
-      "status": "missing",
-      "path": "books/lerkh-forschungen-1857/book.pdf"
+      "status": "ok",
+      "path": "books/lerkh-forschungen-1857/book.pdf",
+      "sha256": "64af08ca1fa8c4f1b530c769f1e46df61f7e72857aecc41ea3bd14f07611884c"
     },
     {
       "kdl_id": "KDL-SDH-0001",
@@ -127,20 +128,23 @@
     {
       "kdl_id": "KDL-KMR-0011",
       "slug": "garzoni-grammatica-vocabolario-1787",
-      "status": "missing",
-      "path": "books/garzoni-grammatica-vocabolario-1787/book.pdf"
+      "status": "ok",
+      "path": "books/garzoni-grammatica-vocabolario-1787/book.pdf",
+      "sha256": "f9f2c0a39b1fdd010fbe1c34cd338eb9f3de0f000c698174932a21cf46fc74fe"
     },
     {
       "kdl_id": "KDL-KMR-0012",
       "slug": "recueil-notices-recits-kourdes-1860",
-      "status": "missing",
-      "path": "books/recueil-notices-recits-kourdes-1860/book.pdf"
+      "status": "ok",
+      "path": "books/recueil-notices-recits-kourdes-1860/book.pdf",
+      "sha256": "5a4b315471b9f69ddf905a50c4185f8c9953b1f0ecd1dfecb73ea3b406f91c6c"
     },
     {
       "kdl_id": "KDL-KMR-0013",
       "slug": "dictionnaire-kurde-francais-1879",
-      "status": "missing",
-      "path": "books/dictionnaire-kurde-francais-1879/book.pdf"
+      "status": "ok",
+      "path": "books/dictionnaire-kurde-francais-1879/book.pdf",
+      "sha256": "0abfc7c0225d50a52afbb9bd8623fd13eb7884f97ad31250a0ad7f1081e365dd"
     },
     {
       "kdl_id": "KDL-KMR-0014",
@@ -162,8 +166,9 @@
     {
       "kdl_id": "KDL-KMR-0017",
       "slug": "justi-kurdische-grammatik-1880",
-      "status": "missing",
-      "path": "books/justi-kurdische-grammatik-1880/book.pdf"
+      "status": "ok",
+      "path": "books/justi-kurdische-grammatik-1880/book.pdf",
+      "sha256": "92fa9fff12f9e6dbc8fbb5c6ab85c334956f58269fbd2d75d327cf4f646cca1f"
     },
     {
       "kdl_id": "KDL-KMR-0018",
@@ -180,20 +185,23 @@
     {
       "kdl_id": "KDL-KMR-0020",
       "slug": "ballade-kurde-1859",
-      "status": "missing",
-      "path": "books/ballade-kurde-1859/book.pdf"
+      "status": "ok",
+      "path": "books/ballade-kurde-1859/book.pdf",
+      "sha256": "e89e0830b28c6a5daf25055be889eede45a91c26adbb90f9103222157b5d4086"
     },
     {
       "kdl_id": "KDL-KMR-0021",
       "slug": "kurdische-texte-transkription-1903",
-      "status": "missing",
-      "path": "books/kurdische-texte-transkription-1903/book.pdf"
+      "status": "ok",
+      "path": "books/kurdische-texte-transkription-1903/book.pdf",
+      "sha256": "08c038f09f8c92afcc951d180a0a09ad7247a441666d90159db2b0d5da1d5e8f"
     },
     {
       "kdl_id": "KDL-KMR-0022",
       "slug": "abecedaire-kurde-1868",
-      "status": "missing",
-      "path": "books/abecedaire-kurde-1868/book.pdf"
+      "status": "ok",
+      "path": "books/abecedaire-kurde-1868/book.pdf",
+      "sha256": "42975b8bc50a201d87439b12cbc15550466becf301c9ba3495950d386e96e642"
     },
     {
       "kdl_id": "KDL-KMR-0023",
@@ -212,8 +220,9 @@
     {
       "kdl_id": "KDL-KMR-0025",
       "slug": "melaye-ciziri-hartmann-facsimile-1904",
-      "status": "missing",
-      "path": "books/melaye-ciziri-hartmann-facsimile-1904/book.pdf"
+      "status": "ok",
+      "path": "books/melaye-ciziri-hartmann-facsimile-1904/book.pdf",
+      "sha256": "9e7c30ce7bd0dc7edcd94fbf80df345c1ceb32798ef08f56b43e9e967e15db6f"
     },
     {
       "kdl_id": "KDL-KMR-0026",
