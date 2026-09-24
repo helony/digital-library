@@ -374,3 +374,9 @@
     font-size:.78rem;
   }
 }
+
+
+/* Global library search visibility */
+.search-no-match{
+  display:none!important;
+}
