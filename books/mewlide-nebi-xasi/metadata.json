@@ -1,0 +1,106 @@
+{
+  "kdl_id": "KDL-DIQ-0002",
+  "slug": "mewlide-nebi-xasi",
+  "title": "Mewlıdê Nebi",
+  "author": "Mela Ehmedê Xasi",
+  "source": "https://wikisource.org/wiki/Mewl%C4%B1d%C3%AA_Nebi",
+  "remote_url": "https://wikisource.org/wiki/Mewl%C4%B1d%C3%AA_Nebi",
+  "rights_type": "pd",
+  "rights_key": "rights_zazaki1899",
+  "source_checked": "2026-09-18",
+  "archived_at": "2026-09-24T15:33:22Z",
+  "path": "books/mewlide-nebi-xasi/content.html",
+  "bytes": 23238,
+  "sha256": "1eb86445176f2e7f9690a155b4fb02326ec624dcaa420f6f1a3c22cddaaadd2f",
+  "revision": 670470,
+  "sections": [
+    {
+      "toclevel": 1,
+      "level": "2",
+      "line": "Bısmıllahirrehmanirrehim",
+      "number": "1",
+      "index": "1",
+      "fromtitle": "Mewlıdê_Nebi",
+      "byteoffset": 354,
+      "anchor": "Bısmıllahirrehmanirrehim",
+      "linkAnchor": "Bısmıllahirrehmanirrehim"
+    },
+    {
+      "toclevel": 1,
+      "level": "2",
+      "line": "Eno Mebhesê Tertıbê Mewludê Fedley Wendışi",
+      "number": "2",
+      "index": "2",
+      "fromtitle": "Mewlıdê_Nebi",
+      "byteoffset": 1814,
+      "anchor": "Eno_Mebhesê_Tertıbê_Mewludê_Fedley_Wendışi",
+      "linkAnchor": "Eno_Mebhesê_Tertıbê_Mewludê_Fedley_Wendışi"
+    },
+    {
+      "toclevel": 1,
+      "level": "2",
+      "line": "Eno Mebhesê Çınêbiyayışê Eşyan u Sırrê Homayo",
+      "number": "3",
+      "index": "3",
+      "fromtitle": "Mewlıdê_Nebi",
+      "byteoffset": 4844,
+      "anchor": "Eno_Mebhesê_Çınêbiyayışê_Eşyan_u_Sırrê_Homayo",
+      "linkAnchor": "Eno_Mebhesê_Çınêbiyayışê_Eşyan_u_Sırrê_Homayo"
+    },
+    {
+      "toclevel": 1,
+      "level": "2",
+      "line": "Eno Mebhesê Pêxemberê Ma u Xelqe Eşyano",
+      "number": "4",
+      "index": "4",
+      "fromtitle": "Mewlıdê_Nebi",
+      "byteoffset": 5955,
+      "anchor": "Eno_Mebhesê_Pêxemberê_Ma_u_Xelqe_Eşyano",
+      "linkAnchor": "Eno_Mebhesê_Pêxemberê_Ma_u_Xelqe_Eşyano"
+    },
+    {
+      "toclevel": 1,
+      "level": "2",
+      "line": "Eno Mebhesê Emre Homayo Qey Qeleme",
+      "number": "5",
+      "index": "5",
+      "fromtitle": "Mewlıdê_Nebi",
+      "byteoffset": 8001,
+      "anchor": "Eno_Mebhesê_Emre_Homayo_Qey_Qeleme",
+      "linkAnchor": "Eno_Mebhesê_Emre_Homayo_Qey_Qeleme"
+    },
+    {
+      "toclevel": 1,
+      "level": "2",
+      "line": "Eno Mebhesê Xelqê Ademi yo u Nurê Pêxemberi yo Kewtê Paştey yê",
+      "number": "6",
+      "index": "6",
+      "fromtitle": "Mewlıdê_Nebi",
+      "byteoffset": 9224,
+      "anchor": "Eno_Mebhesê_Xelqê_Ademi_yo_u_Nurê_Pêxemberi_yo_Kewtê_Paştey_yê",
+      "linkAnchor": "Eno_Mebhesê_Xelqê_Ademi_yo_u_Nurê_Pêxemberi_yo_Kewtê_Paştey_yê"
+    },
+    {
+      "toclevel": 1,
+      "level": "2",
+      "line": "Eno Mebhesê Estışe Ademi yo Cennet ra u Mardışe Kalıkanê Pêxemberê Ma",
+      "number": "7",
+      "index": "7",
+      "fromtitle": "Mewlıdê_Nebi",
+      "byteoffset": 12003,
+      "anchor": "Eno_Mebhesê_Estışe_Ademi_yo_Cennet_ra_u_Mardışe_Kalıkanê_Pêxemberê_Ma",
+      "linkAnchor": "Eno_Mebhesê_Estışe_Ademi_yo_Cennet_ra_u_Mardışe_Kalıkanê_Pêxemberê_Ma"
+    },
+    {
+      "toclevel": 1,
+      "level": "2",
+      "line": "Eno Mebhesê Abdullahi Cuhudê Şamiyan u Waştışe Amina Cı rê",
+      "number": "8",
+      "index": "8",
+      "fromtitle": "Mewlıdê_Nebi",
+      "byteoffset": 13616,
+      "anchor": "Eno_Mebhesê_Abdullahi_Cuhudê_Şamiyan_u_Waştışe_Amina_Cı_rê",
+      "linkAnchor": "Eno_Mebhesê_Abdullahi_Cuhudê_Şamiyan_u_Waştışe_Amina_Cı_rê"
+    }
+  ]
+}

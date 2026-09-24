@@ -1,6 +1,6 @@
 {
-  "ok": 0,
-  "missing": 35,
+  "ok": 10,
+  "missing": 25,
   "checksum_mismatch": 0,
   "manual_review": 8,
   "items": [
@@ -12,14 +12,16 @@
     {
       "kdl_id": "KDL-KMR-0002",
       "slug": "mem-u-zin",
-      "status": "missing",
-      "path": "books/mem-u-zin/content.html"
+      "status": "ok",
+      "path": "books/mem-u-zin/content.html",
+      "sha256": "9a67d0192c15d1a2da224ba7cfd67b8685a3b2f5fe20bfec8bd571f6f212a471"
     },
     {
       "kdl_id": "KDL-KMR-0003",
       "slug": "diwana-ehmede-xani",
-      "status": "missing",
-      "path": "books/diwana-ehmede-xani/content.html"
+      "status": "ok",
+      "path": "books/diwana-ehmede-xani/content.html",
+      "sha256": "46ab60f459ff00deb0a053f33a2c19d37b2a05ab7d9bc231a65327b1819169c5"
     },
     {
       "kdl_id": "KDL-CKB-0001",
@@ -49,26 +51,30 @@
     {
       "kdl_id": "KDL-KMR-0006",
       "slug": "diwana-melaye-ciziri",
-      "status": "missing",
-      "path": "books/diwana-melaye-ciziri/content.html"
+      "status": "ok",
+      "path": "books/diwana-melaye-ciziri/content.html",
+      "sha256": "ac1fa431952a10eff0fa77fdabe1628187f86c9192795d99d7433b799df748bb"
     },
     {
       "kdl_id": "KDL-CKB-0004",
       "slug": "diwani-mahwi",
-      "status": "missing",
-      "path": "books/diwani-mahwi/content.html"
+      "status": "ok",
+      "path": "books/diwani-mahwi/content.html",
+      "sha256": "1e405a7d0ad48f7611840bb3a44f0cfbe83aa5d7421f7a833bd78ba7bdf314c7"
     },
     {
       "kdl_id": "KDL-CKB-0005",
       "slug": "diwani-wefayi",
-      "status": "missing",
-      "path": "books/diwani-wefayi/content.html"
+      "status": "ok",
+      "path": "books/diwani-wefayi/content.html",
+      "sha256": "2dca783183322d090c7fa0d578362950ab668cd8790faf312c3c8e08469d7b90"
     },
     {
       "kdl_id": "KDL-HAC-0001",
       "slug": "diwani-xanay-qubadi",
-      "status": "missing",
-      "path": "books/diwani-xanay-qubadi/content.html"
+      "status": "ok",
+      "path": "books/diwani-xanay-qubadi/content.html",
+      "sha256": "e02cb94e5968f82ea48af16924bf2cbaf961bdeb4b9cc192fc1ca71b2498a21b"
     },
     {
       "kdl_id": "KDL-DIQ-0001",
@@ -79,26 +85,30 @@
     {
       "kdl_id": "KDL-SDH-0001",
       "slug": "shake-u-xan-mensur",
-      "status": "missing",
-      "path": "books/shake-u-xan-mensur/content.html"
+      "status": "ok",
+      "path": "books/shake-u-xan-mensur/content.html",
+      "sha256": "8bc26ecb99d3bf026298d64037913b72cb137655ab74627e9935cb5f6d8035cc"
     },
     {
       "kdl_id": "KDL-DIQ-0002",
       "slug": "mewlide-nebi-xasi",
-      "status": "missing",
-      "path": "books/mewlide-nebi-xasi/content.html"
+      "status": "ok",
+      "path": "books/mewlide-nebi-xasi/content.html",
+      "sha256": "1eb86445176f2e7f9690a155b4fb02326ec624dcaa420f6f1a3c22cddaaadd2f"
     },
     {
       "kdl_id": "KDL-KMR-0007",
       "slug": "nubehara-bicukan",
-      "status": "missing",
-      "path": "books/nubehara-bicukan/content.html"
+      "status": "ok",
+      "path": "books/nubehara-bicukan/content.html",
+      "sha256": "346b6c2b2b0324dcfe5fcfebb0a0de87a08c0011a479eddf20cc10f99d87f1e9"
     },
     {
       "kdl_id": "KDL-KMR-0008",
       "slug": "mewlida-kurmanci-bateyi",
-      "status": "missing",
-      "path": "books/mewlida-kurmanci-bateyi/content.html"
+      "status": "ok",
+      "path": "books/mewlida-kurmanci-bateyi/content.html",
+      "sha256": "a90dc61eb9c30daecbb046d23303c692a05b12eb0c19b33e33a09acbd96a3384"
     },
     {
       "kdl_id": "KDL-KMR-0009",
