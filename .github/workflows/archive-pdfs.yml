@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/archive-pdfs.yml
+      - archive-manifest.json
   workflow_dispatch:
 
 permissions:
