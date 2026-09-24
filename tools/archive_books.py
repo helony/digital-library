@@ -22,8 +22,9 @@ from urllib.error import HTTPError, URLError
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "archive-manifest.json"
 BOOKS_DIR = ROOT / "books"
-UA = "KurdishDigitalLibraryPreservation/1.0 (+static archival copy)"
+UA = "KurdishDigitalLibraryPreservation/1.0 (https://github.com/helony/digital-library; static archival copy)"
 TIMEOUT = 45
+MAX_PDF_BYTES = 50 * 1024 * 1024
 
 SAFE_TAGS = set('article blockquote br center code dd div dl dt em h1 h2 h3 h4 h5 h6 hr i li ol p pre rb rp rt ruby section small span strong sub sup table tbody td tfoot th thead tr u ul a'.split())
 VOID_TAGS = {'br', 'hr'}
@@ -31,10 +32,28 @@ DROP_TAGS = {'script', 'style', 'iframe', 'object', 'embed', 'form', 'svg', 'mat
 DROP_CLASSES = {'mw-editsection', 'navbox', 'metadata', 'noprint', 'catlinks', 'printfooter', 'sistersitebox', 'ws-noexport'}
 
 
-def fetch(url: str) -> bytes:
+def fetch(url: str, max_bytes: int | None = None) -> bytes:
     req = Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
-    with urlopen(req, timeout=TIMEOUT) as r:
-        return r.read()
+    for attempt in range(4):
+        try:
+            with urlopen(req, timeout=TIMEOUT) as r:
+                if max_bytes and int(r.headers.get('Content-Length') or 0) > max_bytes:
+                    raise RuntimeError('PDF exceeds 50 MiB hosting limit')
+                data = r.read(max_bytes + 1 if max_bytes else -1)
+                if max_bytes and len(data) > max_bytes:
+                    raise RuntimeError('PDF exceeds 50 MiB hosting limit')
+                return data
+        except HTTPError as error:
+            if error.code not in (429, 503) or attempt == 3:
+                raise
+            retry_after = error.headers.get('Retry-After', '')
+            wait = int(retry_after) if retry_after.isdigit() else 60 * (attempt + 1)
+            if wait > 600:
+                raise
+            wait = max(30, wait)
+            print(f'  Source asked us to slow down; retrying after {wait}s', flush=True)
+            time.sleep(wait)
+    raise RuntimeError('source request failed after retries')
 
 
 def sha256(data: bytes) -> str:
@@ -114,7 +133,7 @@ def clean_fragment(fragment: str, source: str) -> str:
 
 
 def archive_pdf(item: dict, folder: Path) -> dict:
-    data = fetch(item["remote_url"])
+    data = fetch(item["remote_url"], MAX_PDF_BYTES)
     if not data.startswith(b"%PDF"):
         raise RuntimeError("download did not look like a PDF")
     dest = folder / "book.pdf"
@@ -129,10 +148,11 @@ def archive_wiki(item: dict, folder: Path) -> dict:
     params = urlencode({
         "action": "parse", "page": title,
         "prop": "text|sections|displaytitle|revid",
-        "format": "json", "origin": "*"
+        "format": "json", "origin": "*", "maxlag": 5
     })
     api = "https://wikisource.org/w/api.php?" + params
     payload = json.loads(fetch(api).decode("utf-8"))
+    time.sleep(2)
     if "error" in payload:
         raise RuntimeError(payload["error"].get("info", "Wikisource API error"))
     parsed = payload["parse"]
