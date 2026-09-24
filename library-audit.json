@@ -1,6 +1,6 @@
 {
-  "ok": 11,
-  "missing": 24,
+  "ok": 24,
+  "missing": 11,
   "checksum_mismatch": 0,
   "manual_review": 8,
   "items": [
@@ -113,14 +113,16 @@
     {
       "kdl_id": "KDL-KMR-0009",
       "slug": "zembilfiros",
-      "status": "missing",
-      "path": "books/zembilfiros/content.html"
+      "status": "ok",
+      "path": "books/zembilfiros/content.html",
+      "sha256": "1ca32b35600fb560e407e61b01a7ff7a9cdc61ee00b7ffc8d9f923f7131661b9"
     },
     {
       "kdl_id": "KDL-KMR-0010",
       "slug": "fi-beyani-el-eeqide-we-tewhid",
-      "status": "missing",
-      "path": "books/fi-beyani-el-eeqide-we-tewhid/content.html"
+      "status": "ok",
+      "path": "books/fi-beyani-el-eeqide-we-tewhid/content.html",
+      "sha256": "dd33f39385af57a9522ff1b3247a99a6e368930e65e569156380e3781ad4bd05"
     },
     {
       "kdl_id": "KDL-KMR-0011",
@@ -171,8 +173,9 @@
     {
       "kdl_id": "KDL-KMR-0019",
       "slug": "bersise-abid",
-      "status": "missing",
-      "path": "books/bersise-abid/content.html"
+      "status": "ok",
+      "path": "books/bersise-abid/content.html",
+      "sha256": "265a598d9d47992a92670bcc10ac61e699dcbb9a223a3144be9d22f1e1a3199d"
     },
     {
       "kdl_id": "KDL-KMR-0020",
@@ -195,14 +198,16 @@
     {
       "kdl_id": "KDL-KMR-0023",
       "slug": "feqiye-teyran-u-quling",
-      "status": "missing",
-      "path": "books/feqiye-teyran-u-quling/content.html"
+      "status": "ok",
+      "path": "books/feqiye-teyran-u-quling/content.html",
+      "sha256": "6fa99db8b27f6f33edb7492dc181732b04f70a40e965b947e754cf0f9a19f967"
     },
     {
       "kdl_id": "KDL-KMR-0024",
       "slug": "feqiye-teyran-u-roj",
-      "status": "missing",
-      "path": "books/feqiye-teyran-u-roj/content.html"
+      "status": "ok",
+      "path": "books/feqiye-teyran-u-roj/content.html",
+      "sha256": "9b466e51ac661d0644cb227c1087947788dd839d66bedf057a0d0917b50aee7b"
     },
     {
       "kdl_id": "KDL-KMR-0025",
@@ -213,32 +218,37 @@
     {
       "kdl_id": "KDL-KMR-0026",
       "slug": "derd-u-dax-im",
-      "status": "missing",
-      "path": "books/derd-u-dax-im/content.html"
+      "status": "ok",
+      "path": "books/derd-u-dax-im/content.html",
+      "sha256": "cb8d818e469e74026225d014f82c9f3013d2f0d8f906df3aa39001d2477be627"
     },
     {
       "kdl_id": "KDL-KMR-0027",
       "slug": "di-nav-qewme-xerib",
-      "status": "missing",
-      "path": "books/di-nav-qewme-xerib/content.html"
+      "status": "ok",
+      "path": "books/di-nav-qewme-xerib/content.html",
+      "sha256": "3f92742a88e9377a7901ab3a2a7e75baef5c650154375870efe710b0f5d19df9"
     },
     {
       "kdl_id": "KDL-KMR-0028",
       "slug": "el-wefayi-wesla-canan",
-      "status": "missing",
-      "path": "books/el-wefayi-wesla-canan/content.html"
+      "status": "ok",
+      "path": "books/el-wefayi-wesla-canan/content.html",
+      "sha256": "a0a126cf6f73725fca381c45a84b976ffe888ff794247896a21c59560120aa14"
     },
     {
       "kdl_id": "KDL-KMR-0029",
       "slug": "ey-nete-tu",
-      "status": "missing",
-      "path": "books/ey-nete-tu/content.html"
+      "status": "ok",
+      "path": "books/ey-nete-tu/content.html",
+      "sha256": "ebefbf9908eb28a8c0eb76a51d1af0ab7b35d320e6bf686991513b6c460ae081"
     },
     {
       "kdl_id": "KDL-KMR-0030",
       "slug": "ger-tu-nazik-sorgul-i",
-      "status": "missing",
-      "path": "books/ger-tu-nazik-sorgul-i/content.html"
+      "status": "ok",
+      "path": "books/ger-tu-nazik-sorgul-i/content.html",
+      "sha256": "8ae85defd30e4813bbf7a87507f622e6b4e533b437d65d9ad898667716e3ae5c"
     },
     {
       "kdl_id": "KDL-KMR-0031",
@@ -250,20 +260,23 @@
     {
       "kdl_id": "KDL-KMR-0032",
       "slug": "qiblegeha-asiqan-ke-yi-tu",
-      "status": "missing",
-      "path": "books/qiblegeha-asiqan-ke-yi-tu/content.html"
+      "status": "ok",
+      "path": "books/qiblegeha-asiqan-ke-yi-tu/content.html",
+      "sha256": "97051ec8167f1fef27fff89fcba81493dfcf6f22ebea87d8cfadeca5f5eb101f"
     },
     {
       "kdl_id": "KDL-KMR-0033",
       "slug": "subhan-ji-mire-qadiri",
-      "status": "missing",
-      "path": "books/subhan-ji-mire-qadiri/content.html"
+      "status": "ok",
+      "path": "books/subhan-ji-mire-qadiri/content.html",
+      "sha256": "ed29f3e238f1f6d92cf58bcea583836c919571ede74699139cba70eb2bac79cf"
     },
     {
       "kdl_id": "KDL-KMR-0034",
       "slug": "ya-reb-hawar",
-      "status": "missing",
-      "path": "books/ya-reb-hawar/content.html"
+      "status": "ok",
+      "path": "books/ya-reb-hawar/content.html",
+      "sha256": "6f2b216b1f1faee38f8b167fcae9b4f38615e962ac80d5193526bb8783a58182"
     }
   ]
 }

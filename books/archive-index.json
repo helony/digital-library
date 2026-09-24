@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-24T15:38:24Z",
+  "created_at": "2026-09-24T15:39:46Z",
   "items": [
     {
       "slug": "mem-u-zin",
@@ -73,53 +73,93 @@
     },
     {
       "slug": "zembilfiros",
-      "ok": false,
-      "error": "Extra data: line 2 column 1 (char 8997)"
+      "ok": true,
+      "path": "books/zembilfiros/content.html",
+      "bytes": 3110,
+      "sha256": "1ca32b35600fb560e407e61b01a7ff7a9cdc61ee00b7ffc8d9f923f7131661b9",
+      "revision": 960451,
+      "sections": []
     },
     {
       "slug": "fi-beyani-el-eeqide-we-tewhid",
-      "ok": false,
-      "error": "Extra data: line 2 column 1 (char 14917)"
+      "ok": true,
+      "path": "books/fi-beyani-el-eeqide-we-tewhid/content.html",
+      "bytes": 7270,
+      "sha256": "dd33f39385af57a9522ff1b3247a99a6e368930e65e569156380e3781ad4bd05",
+      "revision": 949377,
+      "sections": []
     },
     {
       "slug": "bersise-abid",
-      "ok": false,
-      "error": "Extra data: line 2 column 1 (char 9646)"
+      "ok": true,
+      "path": "books/bersise-abid/content.html",
+      "bytes": 3427,
+      "sha256": "265a598d9d47992a92670bcc10ac61e699dcbb9a223a3144be9d22f1e1a3199d",
+      "revision": 946812,
+      "sections": []
     },
     {
       "slug": "feqiye-teyran-u-quling",
-      "ok": false,
-      "error": "Extra data: line 2 column 1 (char 7049)"
+      "ok": true,
+      "path": "books/feqiye-teyran-u-quling/content.html",
+      "bytes": 1752,
+      "sha256": "6fa99db8b27f6f33edb7492dc181732b04f70a40e965b947e754cf0f9a19f967",
+      "revision": 946819,
+      "sections": []
     },
     {
       "slug": "feqiye-teyran-u-roj",
-      "ok": false,
-      "error": "Extra data: line 2 column 1 (char 6889)"
+      "ok": true,
+      "path": "books/feqiye-teyran-u-roj/content.html",
+      "bytes": 1602,
+      "sha256": "9b466e51ac661d0644cb227c1087947788dd839d66bedf057a0d0917b50aee7b",
+      "revision": 946821,
+      "sections": []
     },
     {
       "slug": "derd-u-dax-im",
-      "ok": false,
-      "error": "Extra data: line 2 column 1 (char 6955)"
+      "ok": true,
+      "path": "books/derd-u-dax-im/content.html",
+      "bytes": 1653,
+      "sha256": "cb8d818e469e74026225d014f82c9f3013d2f0d8f906df3aa39001d2477be627",
+      "revision": 960441,
+      "sections": []
     },
     {
       "slug": "di-nav-qewme-xerib",
-      "ok": false,
-      "error": "Extra data: line 2 column 1 (char 7499)"
+      "ok": true,
+      "path": "books/di-nav-qewme-xerib/content.html",
+      "bytes": 2021,
+      "sha256": "3f92742a88e9377a7901ab3a2a7e75baef5c650154375870efe710b0f5d19df9",
+      "revision": 960442,
+      "sections": []
     },
     {
       "slug": "el-wefayi-wesla-canan",
-      "ok": false,
-      "error": "Extra data: line 2 column 1 (char 7972)"
+      "ok": true,
+      "path": "books/el-wefayi-wesla-canan/content.html",
+      "bytes": 2356,
+      "sha256": "a0a126cf6f73725fca381c45a84b976ffe888ff794247896a21c59560120aa14",
+      "revision": 960443,
+      "sections": []
     },
     {
       "slug": "ey-nete-tu",
-      "ok": false,
-      "error": "Extra data: line 2 column 1 (char 8565)"
+      "ok": true,
+      "path": "books/ey-nete-tu/content.html",
+      "bytes": 2825,
+      "sha256": "ebefbf9908eb28a8c0eb76a51d1af0ab7b35d320e6bf686991513b6c460ae081",
+      "revision": 960444,
+      "sections": []
     },
     {
       "slug": "ger-tu-nazik-sorgul-i",
-      "ok": false,
-      "error": "Extra data: line 2 column 1 (char 6877)"
+      "ok": true,
+      "path": "books/ger-tu-nazik-sorgul-i/content.html",
+      "bytes": 1550,
+      "sha256": "8ae85defd30e4813bbf7a87507f622e6b4e533b437d65d9ad898667716e3ae5c",
+      "revision": 960445,
+      "sections": []
     },
     {
       "slug": "ji-cirya-pasi-pe-da",
@@ -130,18 +170,30 @@
     },
     {
       "slug": "qiblegeha-asiqan-ke-yi-tu",
-      "ok": false,
-      "error": "Extra data: line 2 column 1 (char 8949)"
+      "ok": true,
+      "path": "books/qiblegeha-asiqan-ke-yi-tu/content.html",
+      "bytes": 2940,
+      "sha256": "97051ec8167f1fef27fff89fcba81493dfcf6f22ebea87d8cfadeca5f5eb101f",
+      "revision": 960448,
+      "sections": []
     },
     {
       "slug": "subhan-ji-mire-qadiri",
-      "ok": false,
-      "error": "Extra data: line 2 column 1 (char 9041)"
+      "ok": true,
+      "path": "books/subhan-ji-mire-qadiri/content.html",
+      "bytes": 2986,
+      "sha256": "ed29f3e238f1f6d92cf58bcea583836c919571ede74699139cba70eb2bac79cf",
+      "revision": 960449,
+      "sections": []
     },
     {
       "slug": "ya-reb-hawar",
-      "ok": false,
-      "error": "Extra data: line 2 column 1 (char 7887)"
+      "ok": true,
+      "path": "books/ya-reb-hawar/content.html",
+      "bytes": 2389,
+      "sha256": "6f2b216b1f1faee38f8b167fcae9b4f38615e962ac80d5193526bb8783a58182",
+      "revision": 960450,
+      "sections": []
     }
   ]
 }
