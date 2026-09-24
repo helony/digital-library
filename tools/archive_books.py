@@ -206,6 +206,9 @@ def main() -> int:
         print(f"[{i}/{len(eligible)}] {item['title']} ...", flush=True)
         if target.exists() and meta_path.exists() and not refresh:
             existing = json.loads(meta_path.read_text(encoding="utf-8"))
+            if existing.get("rights_key") != item["rights_key"]:
+                existing["rights_key"] = item["rights_key"]
+                meta_path.write_text(json.dumps(existing, ensure_ascii=False, indent=2), encoding="utf-8")
             report["items"].append({"slug": item["slug"], "ok": True, "preserved": True, "path": str(target.relative_to(ROOT)), "sha256": existing.get("sha256")})
             print("  already preserved; kept existing snapshot (use --refresh to update)")
             continue
@@ -223,7 +226,22 @@ def main() -> int:
         except (HTTPError, URLError, TimeoutError, RuntimeError, ValueError, OSError) as e:
             report["items"].append({"slug": item["slug"], "ok": False, "error": str(e)})
             print(f"  SKIPPED/FAILED: {e}")
-    (BOOKS_DIR / "archive-index.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    index_path = BOOKS_DIR / "archive-index.json"
+    previous = json.loads(index_path.read_text(encoding="utf-8")) if index_path.exists() else {}
+    attempted = {item["slug"]: item for item in report["items"]}
+    all_items = []
+    for item in manifest["items"]:
+        if not item.get("eligible"):
+            continue
+        path = BOOKS_DIR / item["slug"] / ("book.pdf" if item["format"] == "pdf" else "content.html")
+        metadata = path.parent / "metadata.json"
+        if path.is_file() and metadata.is_file():
+            saved = json.loads(metadata.read_text(encoding="utf-8"))
+            all_items.append({"slug": item["slug"], "ok": True, "path": str(path.relative_to(ROOT)), "bytes": path.stat().st_size, "sha256": saved.get("sha256")})
+        else:
+            all_items.append({"slug": item["slug"], "ok": False, "error": attempted.get(item["slug"], {}).get("error", "local copy missing")})
+    if previous.get("items") != all_items:
+        index_path.write_text(json.dumps({"created_at": report["created_at"], "items": all_items}, ensure_ascii=False, indent=2), encoding="utf-8")
     ok = sum(1 for x in report["items"] if x["ok"])
     print(f"\nFinished: {ok}/{len(eligible)} archived. See books/archive-index.json for details.")
     return 0 if ok else 1

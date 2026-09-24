@@ -20,6 +20,8 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
       - name: Save eligible PDFs and verify checksums
         run: |
           python3 tools/archive_books.py --format=pdf
