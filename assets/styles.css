@@ -268,3 +268,109 @@
 #storyBrowsePanel .motif-mystical-medallion .cover-title{
   top:36%;
 }
+
+
+/* Story shelf v2: compact cards + complete motif coverage */
+#storyBrowsePanel .book-grid{
+  gap:12px;
+}
+#storyBrowsePanel .book-card{
+  grid-template-columns:132px minmax(0,1fr);
+  min-height:218px;
+  border-radius:17px;
+}
+#storyBrowsePanel .card-body{
+  padding:13px 14px 12px;
+}
+#storyBrowsePanel .book-meta{
+  font-size:.53rem;
+  letter-spacing:.075em;
+}
+#storyBrowsePanel .book-title{
+  font-size:1.04rem;
+  line-height:1.12;
+  margin:6px 0 2px;
+}
+#storyBrowsePanel .book-author{
+  font-size:.66rem;
+  line-height:1.3;
+}
+#storyBrowsePanel .book-desc{
+  font-size:.71rem;
+  line-height:1.45;
+  -webkit-line-clamp:2;
+  margin:7px 0 5px;
+}
+#storyBrowsePanel .card-actions{
+  gap:6px;
+  margin-top:auto;
+}
+#storyBrowsePanel .primary-button,
+#storyBrowsePanel .secondary-button{
+  padding:7px 10px;
+  font-size:.62rem;
+}
+#storyBrowsePanel .cover{
+  padding:13px 11px 11px;
+}
+#storyBrowsePanel .cover-code{
+  font-size:.49rem;
+  letter-spacing:.13em;
+}
+#storyBrowsePanel .cover-title{
+  left:11px;
+  right:11px;
+  font-size:1.02rem;
+}
+#storyBrowsePanel .motif-epic-historical .cover-title{
+  font-size:.88rem;
+}
+#storyBrowsePanel .cover-title[dir="rtl"],
+#storyBrowsePanel .cover[dir="rtl"] .cover-title{
+  line-height:1.18;
+}
+
+/* Fifth family for archives, source collections and scholarly story records. */
+.motif-editorial-reference{
+  --cover-motif:url("motifs/editorial-reference.svg");
+  --cover-motif-size:112%;
+  --cover-motif-opacity:.30;
+}
+#storyBrowsePanel .motif-editorial-reference::before{
+  inset:46% -8% -7%;
+  background-position:center bottom;
+  background-size:var(--cover-motif-size,112%) auto;
+  opacity:var(--cover-motif-opacity,.30);
+}
+
+/* Keep one cohesive motif system while allowing each existing cover tone to retain personality. */
+#storyBrowsePanel .cover-motif.tone-red{background:linear-gradient(180deg,#913342 0%,#772d3a 100%)}
+#storyBrowsePanel .cover-motif.tone-gold{background:linear-gradient(180deg,#b77b18 0%,#8f5e17 100%)}
+#storyBrowsePanel .cover-motif.tone-teal{background:linear-gradient(180deg,#23645e 0%,#194c49 100%)}
+#storyBrowsePanel .cover-motif.tone-plum{background:linear-gradient(180deg,#76517b 0%,#5e4167 100%)}
+#storyBrowsePanel .cover-motif.tone-brown{background:linear-gradient(180deg,#775438 0%,#5f422f 100%)}
+#storyBrowsePanel .cover-motif.tone-green{background:linear-gradient(180deg,#356b4b 0%,#28563d 100%)}
+#storyBrowsePanel .cover-motif.tone-blue{background:linear-gradient(180deg,#416a8d 0%,#315473 100%)}
+#storyBrowsePanel .cover-motif.tone-rust{background:linear-gradient(180deg,#934b36 0%,#763b2d 100%)}
+#storyBrowsePanel .cover-motif.tone-violet{background:linear-gradient(180deg,#68558c 0%,#504270 100%)}
+#storyBrowsePanel .cover-motif.tone-tan{background:linear-gradient(180deg,#8a6144 0%,#6f4c37 100%)}
+
+/* Genre shapes stay recognizable without dominating the title. */
+#storyBrowsePanel .motif-love-classical{--cover-motif-size:118%;--cover-motif-opacity:.34}
+#storyBrowsePanel .motif-epic-historical{--cover-motif-size:128%;--cover-motif-opacity:.37}
+#storyBrowsePanel .motif-folk-oral{--cover-motif-size:126%;--cover-motif-opacity:.34}
+#storyBrowsePanel .motif-mystical-medallion{--cover-motif-size:114%;--cover-motif-opacity:.33}
+#storyBrowsePanel .motif-editorial-reference{--cover-motif-size:116%;--cover-motif-opacity:.28}
+
+@media(max-width:720px){
+  #storyBrowsePanel .book-card{
+    grid-template-columns:112px minmax(0,1fr);
+    min-height:205px;
+  }
+  #storyBrowsePanel .cover-title{
+    font-size:.9rem;
+  }
+  #storyBrowsePanel .motif-epic-historical .cover-title{
+    font-size:.78rem;
+  }
+}
