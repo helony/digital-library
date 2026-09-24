@@ -58,13 +58,12 @@ function renderLanguageGrid(){
 function permanentRecordUrl(b){return `book/${b.slug}/index.html`}
 function authorRecordUrl(b){return `authors/${b.authorSlug}/index.html`}
 function bookSearchText(b){
-  const descriptions=Object.values(b.desc||{});
   return normalizeText([
     b.kdlId,b.slug,b.title||'Untitled record',b.author||'',b.authorSlug||'',
     b.variety||'',b.v||'',b.institution||'',b.year||'',b.subject||'',subjectLabel(b.subject),
     b.script||'',scriptLabel(b.script),b.format||'',formatLabel(b.format),
     b.availability||'',availabilityLabel(b.availability),b.source||'',b.url||'',
-    ...(b.aliases||[]),...descriptions
+    ...(b.aliases||[]),(b.desc&&b.desc.en)||'',desc(b)||''
   ].join(' '));
 }
 
