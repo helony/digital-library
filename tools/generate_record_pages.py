@@ -18,6 +18,7 @@ def footer(prefix):
 
 RIGHTS={
   'rights_pd_old':'Underlying historical work is public domain because the author died more than 100 years ago. A Wikisource transcription may carry CC BY-SA attribution requirements.',
+  'rights_pd_old_scan':'The underlying historical work is public domain because the author died more than 100 years ago. Check the source record for any terms applying to this scan.',
   'rights_pd_us':'The source identifies this pre-1931 scan as public domain in the United States. Copyright status can differ by jurisdiction.',
   'rights_pd_commons':'The source file is marked public domain or free of known copyright restrictions by Wikimedia Commons or the source archive.',
   'rights_pd_iraq':'Wikisource labels this work as public domain in Iraq. Reuse elsewhere may depend on local law.',
