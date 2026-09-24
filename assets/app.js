@@ -57,14 +57,28 @@ function renderLanguageGrid(){
 
 function permanentRecordUrl(b){return `book/${b.slug}/index.html`}
 function authorRecordUrl(b){return `authors/${b.authorSlug}/index.html`}
-function bookSearchText(b){ return normalizeText([b.kdlId,b.title||'Untitled record',b.author||'',b.variety||'',b.institution||'',b.year||'',subjectLabel(b.subject),...(b.aliases||[]),desc(b)||''].join(' ')); }
+function bookSearchText(b){
+  const descriptions=Object.values(b.desc||{});
+  return normalizeText([
+    b.kdlId,b.slug,b.title||'Untitled record',b.author||'',b.authorSlug||'',
+    b.variety||'',b.v||'',b.institution||'',b.year||'',b.subject||'',subjectLabel(b.subject),
+    b.script||'',scriptLabel(b.script),b.format||'',formatLabel(b.format),
+    b.availability||'',availabilityLabel(b.availability),b.source||'',b.url||'',
+    ...(b.aliases||[]),...descriptions
+  ].join(' '));
+}
+
+function matchesSearchText(searchText,query){
+  const tokens=normalizeText(query).split(/\s+/).filter(Boolean);
+  return !tokens.length||tokens.every(token=>searchText.includes(token));
+}
 
 function storyCardSearchText(card){
   if(!card.dataset.searchBase){
     const links=$('a',card).map(a=>a.getAttribute('href')||'').join(' ');
     card.dataset.searchBase=normalizeText(card.textContent+' '+links);
   }
-  return normalizeText(card.dataset.searchBase+' '+card.textContent);
+  return card.dataset.searchBase;
 }
 function filterStoryShelvesBySearch(){
   const panel=$('#storyBrowsePanel');
@@ -73,7 +87,7 @@ function filterStoryShelvesBySearch(){
   const cards=$('.book-card',panel);
   let matches=0;
   cards.forEach(card=>{
-    const hit=!q||storyCardSearchText(card).includes(q);
+    const hit=!q||matchesSearchText(storyCardSearchText(card),q);
     card.classList.toggle('search-no-match',!hit);
     if(hit)matches++;
   });
@@ -89,7 +103,7 @@ function filterStoryShelvesBySearch(){
 
 function filteredBooks(){
   const q=normalizeText(state.q); let items=BOOKS.filter(b=>(state.variety==='all'||b.v===state.variety)&&(state.subject==='all'||b.subject===state.subject)&&(state.script==='all'||b.script===state.script)&&(state.format==='all'||b.format===state.format)&&(state.availability==='all'||b.availability===state.availability));
-  if(q) items=items.filter(b=>bookSearchText(b).includes(q));
+  if(q) items=items.filter(b=>matchesSearchText(bookSearchText(b),q));
   const collator=new Intl.Collator(state.locale,{sensitivity:'base',numeric:true});
   items.sort((a,b)=>{switch(state.sort){case'title':return collator.compare(a.title,b.title);case'author':return collator.compare(a.author,b.author)||collator.compare(a.title,b.title);case'year-asc':return a.yearSort-b.yearSort;case'year-desc':return b.yearSort-a.yearSort;case'recent':return b.added.localeCompare(a.added)||b.id-a.id;default:return a.id-b.id;}}); return items;
 }
