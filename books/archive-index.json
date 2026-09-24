@@ -1,82 +1,250 @@
 {
-  "created_at": "2026-09-24T16:04:58Z",
+  "created_at": "2026-09-24T16:08:04Z",
   "items": [
+    {
+      "slug": "mem-u-zin",
+      "ok": true,
+      "path": "books/mem-u-zin/content.html",
+      "bytes": 15704,
+      "sha256": "9a67d0192c15d1a2da224ba7cfd67b8685a3b2f5fe20bfec8bd571f6f212a471"
+    },
+    {
+      "slug": "diwana-ehmede-xani",
+      "ok": true,
+      "path": "books/diwana-ehmede-xani/content.html",
+      "bytes": 4080,
+      "sha256": "46ab60f459ff00deb0a053f33a2c19d37b2a05ab7d9bc231a65327b1819169c5"
+    },
+    {
+      "slug": "diwana-melaye-ciziri",
+      "ok": true,
+      "path": "books/diwana-melaye-ciziri/content.html",
+      "bytes": 9214,
+      "sha256": "ac1fa431952a10eff0fa77fdabe1628187f86c9192795d99d7433b799df748bb"
+    },
+    {
+      "slug": "diwani-mahwi",
+      "ok": true,
+      "path": "books/diwani-mahwi/content.html",
+      "bytes": 7926,
+      "sha256": "1e405a7d0ad48f7611840bb3a44f0cfbe83aa5d7421f7a833bd78ba7bdf314c7"
+    },
+    {
+      "slug": "diwani-wefayi",
+      "ok": true,
+      "path": "books/diwani-wefayi/content.html",
+      "bytes": 5639,
+      "sha256": "2dca783183322d090c7fa0d578362950ab668cd8790faf312c3c8e08469d7b90"
+    },
+    {
+      "slug": "diwani-xanay-qubadi",
+      "ok": true,
+      "path": "books/diwani-xanay-qubadi/content.html",
+      "bytes": 2735,
+      "sha256": "e02cb94e5968f82ea48af16924bf2cbaf961bdeb4b9cc192fc1ca71b2498a21b"
+    },
     {
       "slug": "lerkh-forschungen-1857",
       "ok": true,
-      "preserved": true,
       "path": "books/lerkh-forschungen-1857/book.pdf",
+      "bytes": 10654816,
       "sha256": "64af08ca1fa8c4f1b530c769f1e46df61f7e72857aecc41ea3bd14f07611884c"
+    },
+    {
+      "slug": "shake-u-xan-mensur",
+      "ok": true,
+      "path": "books/shake-u-xan-mensur/content.html",
+      "bytes": 2046,
+      "sha256": "8bc26ecb99d3bf026298d64037913b72cb137655ab74627e9935cb5f6d8035cc"
+    },
+    {
+      "slug": "mewlide-nebi-xasi",
+      "ok": true,
+      "path": "books/mewlide-nebi-xasi/content.html",
+      "bytes": 23238,
+      "sha256": "1eb86445176f2e7f9690a155b4fb02326ec624dcaa420f6f1a3c22cddaaadd2f"
+    },
+    {
+      "slug": "nubehara-bicukan",
+      "ok": true,
+      "path": "books/nubehara-bicukan/content.html",
+      "bytes": 3674,
+      "sha256": "346b6c2b2b0324dcfe5fcfebb0a0de87a08c0011a479eddf20cc10f99d87f1e9"
+    },
+    {
+      "slug": "mewlida-kurmanci-bateyi",
+      "ok": true,
+      "path": "books/mewlida-kurmanci-bateyi/content.html",
+      "bytes": 27437,
+      "sha256": "a90dc61eb9c30daecbb046d23303c692a05b12eb0c19b33e33a09acbd96a3384"
+    },
+    {
+      "slug": "zembilfiros",
+      "ok": true,
+      "path": "books/zembilfiros/content.html",
+      "bytes": 3110,
+      "sha256": "1ca32b35600fb560e407e61b01a7ff7a9cdc61ee00b7ffc8d9f923f7131661b9"
+    },
+    {
+      "slug": "fi-beyani-el-eeqide-we-tewhid",
+      "ok": true,
+      "path": "books/fi-beyani-el-eeqide-we-tewhid/content.html",
+      "bytes": 7270,
+      "sha256": "dd33f39385af57a9522ff1b3247a99a6e368930e65e569156380e3781ad4bd05"
     },
     {
       "slug": "garzoni-grammatica-vocabolario-1787",
       "ok": true,
-      "preserved": true,
       "path": "books/garzoni-grammatica-vocabolario-1787/book.pdf",
+      "bytes": 11786800,
       "sha256": "f9f2c0a39b1fdd010fbe1c34cd338eb9f3de0f000c698174932a21cf46fc74fe"
     },
     {
       "slug": "recueil-notices-recits-kourdes-1860",
       "ok": true,
-      "preserved": true,
       "path": "books/recueil-notices-recits-kourdes-1860/book.pdf",
+      "bytes": 6581298,
       "sha256": "5a4b315471b9f69ddf905a50c4185f8c9953b1f0ecd1dfecb73ea3b406f91c6c"
     },
     {
       "slug": "dictionnaire-kurde-francais-1879",
       "ok": true,
-      "preserved": true,
       "path": "books/dictionnaire-kurde-francais-1879/book.pdf",
+      "bytes": 676957,
       "sha256": "0abfc7c0225d50a52afbb9bd8623fd13eb7884f97ad31250a0ad7f1081e365dd"
     },
     {
       "slug": "rhea-hakari-grammar-1872",
       "ok": true,
-      "preserved": true,
       "path": "books/rhea-hakari-grammar-1872/book.pdf",
+      "bytes": 1386423,
       "sha256": "93a1b88c3fccfbfd338525c886febbca0144f607cf203ae6fce04d4214010954"
     },
     {
       "slug": "kurdische-sammlungen-1887",
       "ok": true,
-      "preserved": true,
       "path": "books/kurdische-sammlungen-1887/book.pdf",
+      "bytes": 68572300,
       "sha256": "cceb4a4971fcc1763e966284ecc4d5fcfd305842f8c744e6e5b676d4a391698d"
     },
     {
       "slug": "justi-kurdische-grammatik-1880",
       "ok": true,
-      "preserved": true,
       "path": "books/justi-kurdische-grammatik-1880/book.pdf",
+      "bytes": 11837481,
       "sha256": "92fa9fff12f9e6dbc8fbb5c6ab85c334956f58269fbd2d75d327cf4f646cca1f"
+    },
+    {
+      "slug": "bersise-abid",
+      "ok": true,
+      "path": "books/bersise-abid/content.html",
+      "bytes": 3427,
+      "sha256": "265a598d9d47992a92670bcc10ac61e699dcbb9a223a3144be9d22f1e1a3199d"
     },
     {
       "slug": "ballade-kurde-1859",
       "ok": true,
-      "preserved": true,
       "path": "books/ballade-kurde-1859/book.pdf",
+      "bytes": 561165,
       "sha256": "e89e0830b28c6a5daf25055be889eede45a91c26adbb90f9103222157b5d4086"
     },
     {
       "slug": "kurdische-texte-transkription-1903",
       "ok": true,
-      "preserved": true,
       "path": "books/kurdische-texte-transkription-1903/book.pdf",
+      "bytes": 3277832,
       "sha256": "08c038f09f8c92afcc951d180a0a09ad7247a441666d90159db2b0d5da1d5e8f"
     },
     {
       "slug": "abecedaire-kurde-1868",
       "ok": true,
-      "preserved": true,
       "path": "books/abecedaire-kurde-1868/book.pdf",
+      "bytes": 9619475,
       "sha256": "42975b8bc50a201d87439b12cbc15550466becf301c9ba3495950d386e96e642"
+    },
+    {
+      "slug": "feqiye-teyran-u-quling",
+      "ok": true,
+      "path": "books/feqiye-teyran-u-quling/content.html",
+      "bytes": 1752,
+      "sha256": "6fa99db8b27f6f33edb7492dc181732b04f70a40e965b947e754cf0f9a19f967"
+    },
+    {
+      "slug": "feqiye-teyran-u-roj",
+      "ok": true,
+      "path": "books/feqiye-teyran-u-roj/content.html",
+      "bytes": 1602,
+      "sha256": "9b466e51ac661d0644cb227c1087947788dd839d66bedf057a0d0917b50aee7b"
     },
     {
       "slug": "melaye-ciziri-hartmann-facsimile-1904",
       "ok": true,
-      "preserved": true,
       "path": "books/melaye-ciziri-hartmann-facsimile-1904/book.pdf",
+      "bytes": 23227722,
       "sha256": "9e7c30ce7bd0dc7edcd94fbf80df345c1ceb32798ef08f56b43e9e967e15db6f"
+    },
+    {
+      "slug": "derd-u-dax-im",
+      "ok": true,
+      "path": "books/derd-u-dax-im/content.html",
+      "bytes": 1653,
+      "sha256": "cb8d818e469e74026225d014f82c9f3013d2f0d8f906df3aa39001d2477be627"
+    },
+    {
+      "slug": "di-nav-qewme-xerib",
+      "ok": true,
+      "path": "books/di-nav-qewme-xerib/content.html",
+      "bytes": 2021,
+      "sha256": "3f92742a88e9377a7901ab3a2a7e75baef5c650154375870efe710b0f5d19df9"
+    },
+    {
+      "slug": "el-wefayi-wesla-canan",
+      "ok": true,
+      "path": "books/el-wefayi-wesla-canan/content.html",
+      "bytes": 2356,
+      "sha256": "a0a126cf6f73725fca381c45a84b976ffe888ff794247896a21c59560120aa14"
+    },
+    {
+      "slug": "ey-nete-tu",
+      "ok": true,
+      "path": "books/ey-nete-tu/content.html",
+      "bytes": 2825,
+      "sha256": "ebefbf9908eb28a8c0eb76a51d1af0ab7b35d320e6bf686991513b6c460ae081"
+    },
+    {
+      "slug": "ger-tu-nazik-sorgul-i",
+      "ok": true,
+      "path": "books/ger-tu-nazik-sorgul-i/content.html",
+      "bytes": 1550,
+      "sha256": "8ae85defd30e4813bbf7a87507f622e6b4e533b437d65d9ad898667716e3ae5c"
+    },
+    {
+      "slug": "ji-cirya-pasi-pe-da",
+      "ok": true,
+      "path": "books/ji-cirya-pasi-pe-da/content.html",
+      "bytes": 1927,
+      "sha256": "4c1bf7c1b424c862de586a59b3a9c011e4fff42b80c49d9a993b2941490f5742"
+    },
+    {
+      "slug": "qiblegeha-asiqan-ke-yi-tu",
+      "ok": true,
+      "path": "books/qiblegeha-asiqan-ke-yi-tu/content.html",
+      "bytes": 2940,
+      "sha256": "97051ec8167f1fef27fff89fcba81493dfcf6f22ebea87d8cfadeca5f5eb101f"
+    },
+    {
+      "slug": "subhan-ji-mire-qadiri",
+      "ok": true,
+      "path": "books/subhan-ji-mire-qadiri/content.html",
+      "bytes": 2986,
+      "sha256": "ed29f3e238f1f6d92cf58bcea583836c919571ede74699139cba70eb2bac79cf"
+    },
+    {
+      "slug": "ya-reb-hawar",
+      "ok": true,
+      "path": "books/ya-reb-hawar/content.html",
+      "bytes": 2389,
+      "sha256": "6f2b216b1f1faee38f8b167fcae9b4f38615e962ac80d5193526bb8783a58182"
     }
   ]
 }
