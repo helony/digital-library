@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-24T15:54:54Z",
+  "created_at": "2026-09-24T16:04:58Z",
   "items": [
     {
       "slug": "lerkh-forschungen-1857",
@@ -32,15 +32,15 @@
     {
       "slug": "rhea-hakari-grammar-1872",
       "ok": true,
+      "preserved": true,
       "path": "books/rhea-hakari-grammar-1872/book.pdf",
-      "bytes": 1386423,
       "sha256": "93a1b88c3fccfbfd338525c886febbca0144f607cf203ae6fce04d4214010954"
     },
     {
       "slug": "kurdische-sammlungen-1887",
       "ok": true,
+      "preserved": true,
       "path": "books/kurdische-sammlungen-1887/book.pdf",
-      "bytes": 68572300,
       "sha256": "cceb4a4971fcc1763e966284ecc4d5fcfd305842f8c744e6e5b676d4a391698d"
     },
     {
