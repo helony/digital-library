@@ -1,6 +1,6 @@
 {
-  "ok": 33,
-  "missing": 2,
+  "ok": 35,
+  "missing": 0,
   "checksum_mismatch": 0,
   "manual_review": 8,
   "items": [
@@ -149,14 +149,16 @@
     {
       "kdl_id": "KDL-KMR-0014",
       "slug": "rhea-hakari-grammar-1872",
-      "status": "missing",
-      "path": "books/rhea-hakari-grammar-1872/book.pdf"
+      "status": "ok",
+      "path": "books/rhea-hakari-grammar-1872/book.pdf",
+      "sha256": "93a1b88c3fccfbfd338525c886febbca0144f607cf203ae6fce04d4214010954"
     },
     {
       "kdl_id": "KDL-KMR-0015",
       "slug": "kurdische-sammlungen-1887",
-      "status": "missing",
-      "path": "books/kurdische-sammlungen-1887/book.pdf"
+      "status": "ok",
+      "path": "books/kurdische-sammlungen-1887/book.pdf",
+      "sha256": "cceb4a4971fcc1763e966284ecc4d5fcfd305842f8c744e6e5b676d4a391698d"
     },
     {
       "kdl_id": "KDL-KMR-0016",
