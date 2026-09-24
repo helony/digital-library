@@ -1675,6 +1675,7 @@
   const storyTabs = [...document.querySelectorAll('[data-story-language]')];
   const kurmanji = document.getElementById('kurmanjiStoryShelf');
   const sorani = document.getElementById('storyCorner');
+  const search = document.getElementById('searchInput');
 
   if (!catalogue || !stories || !voices || !subject) return;
 
@@ -1730,6 +1731,17 @@
   storyTabs.forEach(button => {
     button.addEventListener('click', () => showStoryLanguage(button.dataset.storyLanguage));
   });
+
+  // Search is global: typing a query returns to All books and searches both
+  // the core catalogue and the Kurmancî/Soranî story shelves.
+  if (search) {
+    search.addEventListener('input', () => {
+      if (search.value.trim()) {
+        showLibraryMode('all');
+        showStoryLanguage('all');
+      }
+    });
+  }
 
   subject.addEventListener('change', () => {
     if (stories.hidden && voices.hidden) {
