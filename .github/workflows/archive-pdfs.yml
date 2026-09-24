@@ -1,0 +1,34 @@
+name: Archive eligible historical PDF scans
+
+on:
+  push:
+    paths:
+      - .github/workflows/archive-pdfs.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: archive-library
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Save eligible PDFs and verify checksums
+        run: |
+          python3 tools/archive_books.py --format=pdf
+          python3 tools/verify_library.py
+      - name: Commit local preservation copies
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add books library-audit.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Archive eligible historical PDF scans"
+            git push
+          fi
