@@ -151,7 +151,12 @@ def archive_wiki(item: dict, folder: Path) -> dict:
         "format": "json", "origin": "*", "maxlag": 5
     })
     api = "https://wikisource.org/w/api.php?" + params
-    payload = json.loads(fetch(api).decode("utf-8"))
+    response = fetch(api).decode("utf-8")
+    try:
+        payload = json.loads(response)
+    except json.JSONDecodeError as error:
+        print(f'  Unexpected Wikisource response near byte {error.pos}: {response[error.pos:error.pos + 120]!r}', flush=True)
+        raise
     time.sleep(2)
     if "error" in payload:
         raise RuntimeError(payload["error"].get("info", "Wikisource API error"))
