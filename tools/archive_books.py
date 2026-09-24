@@ -60,6 +60,17 @@ def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def parse_wiki_response(response: str) -> dict:
+    try:
+        return json.loads(response)
+    except json.JSONDecodeError:
+        payload, end = json.JSONDecoder().raw_decode(response)
+        # Some source responses include a stray HTTP chunk terminator after valid JSON.
+        if response[end:].strip() != '0':
+            raise
+        return payload
+
+
 class SafeWikiHTML(HTMLParser):
     """Keep readable text markup without executable content or unsafe links."""
     def __init__(self, source: str):
@@ -151,12 +162,7 @@ def archive_wiki(item: dict, folder: Path) -> dict:
         "format": "json", "origin": "*", "maxlag": 5
     })
     api = "https://wikisource.org/w/api.php?" + params
-    response = fetch(api).decode("utf-8")
-    try:
-        payload = json.loads(response)
-    except json.JSONDecodeError as error:
-        print(f'  Unexpected Wikisource response near byte {error.pos}: {response[error.pos:error.pos + 120]!r}', flush=True)
-        raise
+    payload = parse_wiki_response(fetch(api).decode("utf-8"))
     time.sleep(2)
     if "error" in payload:
         raise RuntimeError(payload["error"].get("info", "Wikisource API error"))
