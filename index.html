@@ -1619,7 +1619,7 @@
     <div class="reader-content" id="readerContent"><div class="reader-loading" data-i18n="loading">Loading…</div></div>
   </div>
 
-  <script src="assets/app.js?v=5.5"></script>
+  <script src="assets/app.js?v=5.6"></script>
 
   <script>
   (() => {
@@ -1725,7 +1725,10 @@
   }
 
   modeButtons.forEach(button => {
-    button.addEventListener('click', () => showLibraryMode(button.dataset.libraryMode, true));
+    button.addEventListener('click', () => {
+      if (button.dataset.libraryMode === 'all') document.getElementById('clearFiltersButton').click();
+      showLibraryMode(button.dataset.libraryMode, true);
+    });
   });
 
   storyTabs.forEach(button => {
@@ -1897,7 +1900,11 @@
     });
   }
 
-  new MutationObserver(applyStaticTranslations).observe(document.documentElement, {attributes:true, attributeFilter:['lang']});
+  new MutationObserver(() => {
+    applyStaticTranslations();
+    const search = document.getElementById('searchInput');
+    if (search.value) search.dispatchEvent(new Event('input', { bubbles: true }));
+  }).observe(document.documentElement, {attributes:true, attributeFilter:['lang']});
   applyStaticTranslations();
 })();
 </script>
