@@ -1,8 +1,8 @@
 {
   "ok": 35,
-  "missing": 0,
+  "missing": 1,
   "checksum_mismatch": 0,
-  "manual_review": 8,
+  "manual_review": 10,
   "items": [
     {
       "kdl_id": "KDL-KMR-0001",
@@ -288,6 +288,22 @@
       "status": "ok",
       "path": "books/ya-reb-hawar/content.html",
       "sha256": "6f2b216b1f1faee38f8b167fcae9b4f38615e962ac80d5193526bb8783a58182"
+    },
+    {
+      "kdl_id": "KDL-KMR-0035",
+      "slug": "makas-kurdische-studien-1900",
+      "status": "missing",
+      "path": "books/makas-kurdische-studien-1900/book.pdf"
+    },
+    {
+      "kdl_id": "KDL-KMR-0036",
+      "slug": "neo-aramaic-kurdish-folklore-2022-v1",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0037",
+      "slug": "neo-aramaic-kurdish-folklore-2022-v2",
+      "status": "manual_review"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-24T16:08:04Z",
+  "created_at": "2026-09-24T17:51:24Z",
   "items": [
     {
       "slug": "mem-u-zin",
@@ -245,6 +245,11 @@
       "path": "books/ya-reb-hawar/content.html",
       "bytes": 2389,
       "sha256": "6f2b216b1f1faee38f8b167fcae9b4f38615e962ac80d5193526bb8783a58182"
+    },
+    {
+      "slug": "makas-kurdische-studien-1900",
+      "ok": false,
+      "error": "local copy missing"
     }
   ]
 }
