@@ -75,7 +75,7 @@ function matchesSearchText(searchText,query){
 
 function storyCardSearchText(card){
   if(!card.dataset.searchBase){
-    const links=$('a',card).map(a=>a.getAttribute('href')||'').join(' ');
+    const links=[...card.querySelectorAll('a')].map(a=>a.getAttribute('href')||'').join(' ');
     card.dataset.searchBase=normalizeText(card.textContent+' '+links);
   }
   return card.dataset.searchBase;
@@ -84,7 +84,7 @@ function filterStoryShelvesBySearch(){
   const panel=$('#storyBrowsePanel');
   if(!panel)return {matches:0,total:0};
   const q=normalizeText(state.q);
-  const cards=$('.book-card',panel);
+  const cards=[...panel.querySelectorAll('.book-card')];
   let matches=0;
   cards.forEach(card=>{
     const hit=!q||matchesSearchText(storyCardSearchText(card),q);
@@ -94,7 +94,7 @@ function filterStoryShelvesBySearch(){
   ['#kurmanjiStoryShelf','#storyCorner'].forEach(selector=>{
     const shelf=$(selector);
     if(!shelf)return;
-    const shelfMatches=$('.book-card',shelf).filter(card=>!card.classList.contains('search-no-match')).length;
+    const shelfMatches=[...shelf.querySelectorAll('.book-card')].filter(card=>!card.classList.contains('search-no-match')).length;
     shelf.classList.toggle('search-no-match',!!q&&shelfMatches===0);
   });
   panel.classList.toggle('search-no-match',!!q&&matches===0);
