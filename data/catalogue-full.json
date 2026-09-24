@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "library": "Kurdish Digital Library",
-  "updated": "2026-09-21",
+  "updated": "2026-09-24",
   "records": [
     {
       "id": 1,
@@ -1715,6 +1715,128 @@
       "authorSlug": "mela-huseyne-bateyi",
       "archiveEligible": true,
       "localPath": "books/ya-reb-hawar/content.html"
+    },
+    {
+      "v": "kmr",
+      "format": "pdf",
+      "availability": "full",
+      "added": "2026-09-24",
+      "checked": "2026-09-24",
+      "wiki": null,
+      "rtl": false,
+      "id": 44,
+      "slug": "makas-kurdische-studien-1900",
+      "title": "Kurdische Studien",
+      "author": "Hugo Makas",
+      "authorSlug": "hugo-makas",
+      "year": "1900",
+      "yearSort": 1900,
+      "variety": "Kurmancî",
+      "subject": "folklore",
+      "script": "latin",
+      "institution": "Internet Archive (1900 Heidelberg edition)",
+      "tone": "teal",
+      "rightsKey": "rights_pd_old_scan",
+      "rightsType": "pd",
+      "url": "https://archive.org/download/kurdischestudie00makagoog/kurdischestudie00makagoog.pdf",
+      "source": "https://archive.org/details/kurdischestudie00makagoog",
+      "aliases": [
+        "kurdische studien",
+        "hugo makas",
+        "diarbekir",
+        "gawar poem",
+        "yezidi prayers"
+      ],
+      "desc": {
+        "en": "A 1900 edition of Kurdish texts: a Diyarbakır dialect sample, a Gawar poem and Yazidi prayers, with German commentary.",
+        "kmr": "Çapa 1900an a metnên Kurdî: nimûneyeke devoka Diyarbekirê, helbesteke Gawarê û duayên Êzidiyan, bi şîroveyên almanî.",
+        "ckb": "چاپی ١٩٠٠ی دەقە کوردییەکان: نموونەیەکی شێوەزاری دیاربەکر، هۆنراوەیەکی گەوەر و دوعاکانی ئێزیدییەکان، لەگەڵ ڕوونکردنەوەی ئەڵمانی.",
+        "diq": "Çapa 1900an de metnê Kurdî: nimûneyê lehçeyê Diyarbekirî, şiirê Gawarî û dualê Êzîdîyan, bi şıroveya Almankî."
+      },
+      "kdlId": "KDL-KMR-0035",
+      "archiveEligible": true,
+      "localPath": "books/makas-kurdische-studien-1900/book.pdf"
+    },
+    {
+      "v": "kmr",
+      "format": "pdf",
+      "availability": "full",
+      "added": "2026-09-24",
+      "checked": "2026-09-24",
+      "wiki": null,
+      "rtl": false,
+      "id": 45,
+      "slug": "neo-aramaic-kurdish-folklore-2022-v1",
+      "title": "Neo-Aramaic and Kurdish Folklore from Northern Iraq · Vol. 1",
+      "author": "Geoffrey Khan, Masoud Mohammadirad, Dorota Molin & Paul M. Noorlander",
+      "authorSlug": "khan-mohammadirad-molin-noorlander",
+      "year": "2022",
+      "yearSort": 2022,
+      "variety": "Kurmancî + Soranî + Neo-Aramaic",
+      "subject": "folklore",
+      "script": "latin",
+      "institution": "Open Book Publishers",
+      "tone": "plum",
+      "rightsKey": "rights_cc_by_nc_external",
+      "rightsType": "licensed",
+      "url": "https://library.oapen.org/bitstream/id/efee4ff8-6d74-46f6-8043-f685b3eb223a/9781800647688.pdf",
+      "source": "https://www.openbookpublishers.com/books/10.11647/obp.0306",
+      "aliases": [
+        "comparative folklore",
+        "kurdish oral literature",
+        "glossed kurdish text",
+        "northern iraq folklore"
+      ],
+      "desc": {
+        "en": "The first volume introduces shared oral traditions and provides glossed samples of Northern and Central Kurdish alongside Neo-Aramaic. Free publisher PDF; some images have separate reuse terms.",
+        "kmr": "Cilda yekem kevneşopiyên devkî nas dike û nimûneyên bi şîrove yên Kurmancî û Soranî li kêleka Aramîya Nû pêşkêş dike. PDF li cem weşanxaneyê belaş e.",
+        "ckb": "بەرگی یەکەم نەریتی زارەکی و نموونە دەقەکانی کورمانجی و سۆرانی لەگەڵ ئارامیی نوێ دەناسێنێت. PDF لەلایەن بڵاوکەرەوە بەخۆڕایی بەردەستە.",
+        "diq": "Cildê yewın edebîyatê fekî nasneno; nimûneyê Kurmancî û Soranî, Neo-Aramî ra pêşkêş keno. PDFê weşanxaneyî belaş o."
+      },
+      "kdlId": "KDL-KMR-0036",
+      "archiveEligible": false,
+      "localPath": null
+    },
+    {
+      "v": "kmr",
+      "format": "pdf",
+      "availability": "full",
+      "added": "2026-09-24",
+      "checked": "2026-09-24",
+      "wiki": null,
+      "rtl": false,
+      "id": 46,
+      "slug": "neo-aramaic-kurdish-folklore-2022-v2",
+      "title": "Neo-Aramaic and Kurdish Folklore from Northern Iraq · Vol. 2",
+      "author": "Geoffrey Khan, Masoud Mohammadirad, Dorota Molin & Paul M. Noorlander",
+      "authorSlug": "khan-mohammadirad-molin-noorlander",
+      "year": "2022",
+      "yearSort": 2022,
+      "variety": "Kurmancî + Soranî + Neo-Aramaic",
+      "subject": "folklore",
+      "script": "latin",
+      "institution": "Open Book Publishers",
+      "tone": "gold",
+      "rightsKey": "rights_cc_by_nc_external",
+      "rightsType": "licensed",
+      "url": "https://library.oapen.org/bitstream/handle/20.500.12657/57390/9781800647718.pdf?sequence=1&isAllowed=y",
+      "source": "https://www.openbookpublishers.com/books/10.11647/obp.0307",
+      "aliases": [
+        "zambilfrosh",
+        "zanbilfirosh",
+        "bridge of dalale",
+        "kurdish stories translations",
+        "northern iraq folklore"
+      ],
+      "desc": {
+        "en": "A comparative story anthology in Northern and Central Kurdish and Neo-Aramaic, with English translations. Includes a contemporary Zanbilfirosh telling. Free publisher PDF; images may have separate terms.",
+        "kmr": "Koleksiyona çîrokan bi Kurmancî, Soranî û Aramîya Nû, bi wergera îngilîzî. Vegotina Zanbilfiroş jî tê de ye; PDF li cem weşanxaneyê belaş e.",
+        "ckb": "کۆمەڵە چیرۆکێک بە کورمانجی و سۆرانی و ئارامیی نوێ لەگەڵ وەرگێڕانی ئینگلیزی. ڕیوایەتێکی زەمبیلفرۆشیش لەخۆدەگرێت؛ PDF بەخۆڕاییە.",
+        "diq": "Koleksiyonê çîrokan bi Kurmancî, Soranî û Neo-Aramî û tercumeyo Îngilîzkî. Vıraştışê Zanbilfiroşî zî tede esto; PDF belaş o."
+      },
+      "kdlId": "KDL-KMR-0037",
+      "archiveEligible": false,
+      "localPath": null
     }
   ]
 }

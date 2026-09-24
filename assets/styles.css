@@ -411,3 +411,18 @@
 .search-no-match{
   display:none!important;
 }
+
+/* Short trails connect preserved sources to other tellings. */
+.reading-paths{margin:18px 0 28px;padding:24px;border:1px solid #d6dfd9;border-radius:22px;background:#f3f5ee}
+.reading-paths-heading{display:flex;justify-content:space-between;align-items:end;gap:22px;margin-bottom:16px}
+.reading-paths-heading h2{margin:4px 0 0;color:#11213d;font-size:clamp(1.35rem,2.4vw,1.9rem)}
+.reading-paths-heading p{max-width:390px;margin:0;color:#536272;line-height:1.5}
+.path-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.path-card{padding:21px;border:1px solid #e0e6e1;border-radius:16px;background:#fff;min-width:0}
+.path-number{font-size:.75rem;letter-spacing:.12em;font-weight:800;color:#2f766e}
+.path-card h3{font-size:1.4rem;margin:10px 0 5px;color:#142b40}
+.path-card p{margin:0 0 16px;color:#536272;line-height:1.5}
+.path-links{display:flex;flex-wrap:wrap;gap:10px 18px}
+.path-links a{font-weight:700;color:#225e58;text-decoration:underline;text-underline-offset:3px}
+.path-links a:focus-visible{outline:3px solid #225e58;outline-offset:3px}
+@media(max-width:720px){.reading-paths{padding:18px}.reading-paths-heading{display:block}.reading-paths-heading p{margin-top:7px}.path-grid{grid-template-columns:1fr}}

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21",
+  "generated": "2026-09-24",
   "policy": "Only records explicitly marked archiveEligible are auto-archived. Other records require manual rights review.",
   "identifier_scheme": "KDL-<primary ISO 639-3 code>-<4 digit sequence>. Identifiers are permanent and should never be reassigned.",
   "items": [
@@ -733,6 +733,57 @@
       "wiki_title": "Ya_Reb_Hawar",
       "local_path": "books/ya-reb-hawar/content.html",
       "checked": "2026-09-21"
+    },
+    {
+      "id": 44,
+      "kdl_id": "KDL-KMR-0035",
+      "slug": "makas-kurdische-studien-1900",
+      "title": "Kurdische Studien",
+      "author": "Hugo Makas",
+      "author_slug": "hugo-makas",
+      "format": "pdf",
+      "eligible": true,
+      "rights_type": "pd",
+      "rights_key": "rights_pd_old_scan",
+      "source": "https://archive.org/details/kurdischestudie00makagoog",
+      "remote_url": "https://archive.org/download/kurdischestudie00makagoog/kurdischestudie00makagoog.pdf",
+      "wiki_title": null,
+      "local_path": "books/makas-kurdische-studien-1900/book.pdf",
+      "checked": "2026-09-24"
+    },
+    {
+      "id": 45,
+      "kdl_id": "KDL-KMR-0036",
+      "slug": "neo-aramaic-kurdish-folklore-2022-v1",
+      "title": "Neo-Aramaic and Kurdish Folklore from Northern Iraq · Vol. 1",
+      "author": "Geoffrey Khan, Masoud Mohammadirad, Dorota Molin & Paul M. Noorlander",
+      "author_slug": "khan-mohammadirad-molin-noorlander",
+      "format": "pdf",
+      "eligible": false,
+      "rights_type": "licensed",
+      "rights_key": "rights_cc_by_nc_external",
+      "source": "https://www.openbookpublishers.com/books/10.11647/obp.0306",
+      "remote_url": "https://library.oapen.org/bitstream/id/efee4ff8-6d74-46f6-8043-f685b3eb223a/9781800647688.pdf",
+      "wiki_title": null,
+      "local_path": null,
+      "checked": "2026-09-24"
+    },
+    {
+      "id": 46,
+      "kdl_id": "KDL-KMR-0037",
+      "slug": "neo-aramaic-kurdish-folklore-2022-v2",
+      "title": "Neo-Aramaic and Kurdish Folklore from Northern Iraq · Vol. 2",
+      "author": "Geoffrey Khan, Masoud Mohammadirad, Dorota Molin & Paul M. Noorlander",
+      "author_slug": "khan-mohammadirad-molin-noorlander",
+      "format": "pdf",
+      "eligible": false,
+      "rights_type": "licensed",
+      "rights_key": "rights_cc_by_nc_external",
+      "source": "https://www.openbookpublishers.com/books/10.11647/obp.0307",
+      "remote_url": "https://library.oapen.org/bitstream/handle/20.500.12657/57390/9781800647718.pdf?sequence=1&isAllowed=y",
+      "wiki_title": null,
+      "local_path": null,
+      "checked": "2026-09-24"
     }
   ]
 }

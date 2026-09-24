@@ -6,7 +6,7 @@
   <meta name="description" content="Kurdish Digital Library — open Kurdish books and historical language works with clear sources, rights notes, and multilingual browsing.">
   <meta name="theme-color" content="#11213d">
   <title>Kurdish Digital Library</title>
-  <link rel="stylesheet" href="assets/styles.css?v=5.10">
+  <link rel="stylesheet" href="assets/styles.css?v=5.11">
 
   <style>
     #suggestForm .honeypot { position:absolute !important; left:-9999px !important; width:1px !important; height:1px !important; opacity:0 !important; pointer-events:none !important; }
@@ -50,7 +50,7 @@
           <aside class="collection-card" aria-label="Collection statistics">
             <div class="collection-kicker"><span>☼</span><span data-i18n="glance">THE COLLECTION AT A GLANCE</span></div>
             <div class="stat-grid">
-              <div><strong id="bookCount">43</strong><span data-i18n="openBooks">open books</span></div>
+              <div><strong id="bookCount">46</strong><span data-i18n="openBooks">open books</span></div>
               <div><strong id="varietyCount">5</strong><span data-i18n="kurdishVarieties">Kurdish varieties</span></div>
               <div><strong id="interfaceCount">6</strong><span data-i18n="displayLanguages">display languages</span></div>
             </div>
@@ -85,6 +85,17 @@
               <span class="browse-mode-icon" aria-hidden="true">◉</span>
               <span><strong>Voices · Deng</strong><small>Listen & watch</small></span>
             </button>
+          </div>
+        </section>
+
+        <section class="reading-paths" id="readingPaths" aria-labelledby="readingPathsTitle">
+          <div class="reading-paths-heading">
+            <div><div class="page-kicker" data-i18n="pathsKicker">READING PATHS</div><h2 id="readingPathsTitle" data-i18n="pathsTitle">Follow a story across time</h2></div>
+            <p data-i18n="pathsIntro">Start with a preserved source, then see another telling or a readable edition.</p>
+          </div>
+          <div class="path-grid">
+            <article class="path-card"><span class="path-number">01 · KURMANCÎ</span><h3>Zembilfiroş</h3><p data-i18n="pathZembil">Read the classical poem, then explore a modern telling from Khizava with English translation.</p><div class="path-links"><a href="book/zembilfiros/index.html" data-i18n="pathOldText">Open preserved text →</a><a href="https://www.openbookpublishers.com/books/10.11647/obp.0307/chapters/10.11647/obp.0307.04" target="_blank" rel="noopener" data-i18n="pathNewTelling">Compare the telling ↗</a></div></article>
+            <article class="path-card"><span class="path-number">02 · ÇÎROK</span><h3>Çil Ḧîkayet</h3><p data-i18n="pathForty">Meet forty short tales through the 1860 archival volume and a modern online transcription.</p><div class="path-links"><a href="book/recueil-notices-recits-kourdes-1860/index.html" data-i18n="pathOldScan">Open preserved scan →</a><a href="https://books.vejin.net/en/book/92" target="_blank" rel="noopener" data-i18n="pathModernText">Read the transcription ↗</a></div></article>
           </div>
         </section>
 
@@ -182,7 +193,7 @@
             <label class="field"><span data-i18n="format">Format</span><select id="formatFilter"></select></label>
             <label class="field"><span data-i18n="availability">Availability</span><select id="availabilityFilter"></select></label>
           </div>
-          <div class="catalogue-meta"><strong id="resultsCount">43 core catalogue titles</strong><span data-i18n="catalogueNote">The core catalogue appears first; story shelves are included below when viewing All books.</span></div>
+          <div class="catalogue-meta"><strong id="resultsCount">46 core catalogue titles</strong><span data-i18n="catalogueNote">The core catalogue appears first; story shelves are included below when viewing All books.</span></div>
           <div class="book-grid" id="bookGrid" aria-live="polite">
 <article class="book-card static-book-card" data-slug="soane-grammar-1913" data-variety="kmr" data-subject="reference" data-script="latin" data-format="pdf" data-availability="full">
       <div class="cover tone-red" dir="ltr">
@@ -1130,6 +1141,18 @@
         </div>
       </div>
     </article>
+<article class="book-card static-book-card" data-slug="makas-kurdische-studien-1900" data-variety="kmr" data-subject="folklore" data-script="latin" data-format="pdf" data-availability="full">
+      <div class="cover tone-teal" dir="ltr"><div class="cover-code">KDL-KMR-0035</div><div class="cover-title">Kurdische Studien</div><div class="cover-author">Hugo Makas</div></div>
+      <div class="card-body"><div class="book-meta"><span>Kurmancî</span><span>·</span><span>1900</span></div><h3 class="book-title" dir="auto">Kurdische Studien</h3><a class="book-author author-link" href="authors/hugo-makas/index.html">Hugo Makas</a><div class="book-source">↗ Internet Archive (1900 Heidelberg edition)</div><p class="book-desc">A 1900 edition of Kurdish texts: a Diyarbakır dialect sample, a Gawar poem and Yazidi prayers, with German commentary.</p><div class="badges"><span class="badge">Stories &amp; folklore</span><span class="badge rights">Public domain</span></div><div class="card-actions"><a class="primary-button" href="book/makas-kurdische-studien-1900/index.html">Details</a><a class="secondary-button" href="https://archive.org/details/kurdischestudie00makagoog" target="_blank" rel="noopener">Original source ↗</a></div></div>
+    </article>
+<article class="book-card static-book-card" data-slug="neo-aramaic-kurdish-folklore-2022-v1" data-variety="kmr" data-subject="folklore" data-script="latin" data-format="pdf" data-availability="full">
+      <div class="cover tone-plum" dir="ltr"><div class="cover-code">KDL-KMR-0036</div><div class="cover-title">Neo-Aramaic and Kurdish Folklore from Northern Iraq · Vol. 1</div><div class="cover-author">Geoffrey Khan, Masoud Mohammadirad, Dorota Molin &amp; Paul M. Noorlander</div></div>
+      <div class="card-body"><div class="book-meta"><span>Kurmancî + Soranî + Neo-Aramaic</span><span>·</span><span>2022</span></div><h3 class="book-title" dir="auto">Neo-Aramaic and Kurdish Folklore from Northern Iraq · Vol. 1</h3><a class="book-author author-link" href="authors/khan-mohammadirad-molin-noorlander/index.html">Geoffrey Khan, Masoud Mohammadirad, Dorota Molin &amp; Paul M. Noorlander</a><div class="book-source">↗ Open Book Publishers</div><p class="book-desc">The first volume introduces shared oral traditions and provides glossed samples of Northern and Central Kurdish alongside Neo-Aramaic. Free publisher PDF; some images have separate reuse terms.</p><div class="badges"><span class="badge">Stories &amp; folklore</span><span class="badge rights">CC BY-NC 4.0 · image terms vary</span></div><div class="card-actions"><a class="primary-button" href="book/neo-aramaic-kurdish-folklore-2022-v1/index.html">Details</a><a class="secondary-button" href="https://www.openbookpublishers.com/books/10.11647/obp.0306" target="_blank" rel="noopener">Original source ↗</a></div></div>
+    </article>
+<article class="book-card static-book-card" data-slug="neo-aramaic-kurdish-folklore-2022-v2" data-variety="kmr" data-subject="folklore" data-script="latin" data-format="pdf" data-availability="full">
+      <div class="cover tone-gold" dir="ltr"><div class="cover-code">KDL-KMR-0037</div><div class="cover-title">Neo-Aramaic and Kurdish Folklore from Northern Iraq · Vol. 2</div><div class="cover-author">Geoffrey Khan, Masoud Mohammadirad, Dorota Molin &amp; Paul M. Noorlander</div></div>
+      <div class="card-body"><div class="book-meta"><span>Kurmancî + Soranî + Neo-Aramaic</span><span>·</span><span>2022</span></div><h3 class="book-title" dir="auto">Neo-Aramaic and Kurdish Folklore from Northern Iraq · Vol. 2</h3><a class="book-author author-link" href="authors/khan-mohammadirad-molin-noorlander/index.html">Geoffrey Khan, Masoud Mohammadirad, Dorota Molin &amp; Paul M. Noorlander</a><div class="book-source">↗ Open Book Publishers</div><p class="book-desc">A comparative story anthology in Northern and Central Kurdish and Neo-Aramaic, with English translations. Includes a contemporary Zanbilfirosh telling. Free publisher PDF; images may have separate terms.</p><div class="badges"><span class="badge">Stories &amp; folklore</span><span class="badge rights">CC BY-NC 4.0 · image terms vary</span></div><div class="card-actions"><a class="primary-button" href="book/neo-aramaic-kurdish-folklore-2022-v2/index.html">Details</a><a class="secondary-button" href="https://www.openbookpublishers.com/books/10.11647/obp.0307" target="_blank" rel="noopener">Original source ↗</a></div></div>
+    </article>
           </div>
           <div class="empty-state" id="emptyState" hidden><strong data-i18n="noResults">No matching books</strong><p data-i18n="noResultsHelp">Try removing a filter or searching a different spelling.</p></div>
         </section>
@@ -1620,8 +1643,8 @@
     <div class="reader-content" id="readerContent"><div class="reader-loading" data-i18n="loading">Loading…</div></div>
   </div>
 
-  <script src="assets/catalogue-data.js?v=5.9"></script>
-  <script src="assets/app.js?v=5.9"></script>
+  <script src="assets/catalogue-data.js?v=5.10"></script>
+  <script src="assets/app.js?v=5.10"></script>
 
   <script>
   (() => {

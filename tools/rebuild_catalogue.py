@@ -29,7 +29,8 @@ def portable(r):
       'rights_historical':'The historical authors are out of copyright; a Wikisource transcription may remain under CC BY-SA.',
       'rights_wiki_pd':'The historical work is public domain; Wikisource text is available under CC BY-SA.',
       'rights_authorized_share':'The source states that the copyright holder authorized sharing. This is not the same as public domain and does not necessarily permit all reuse.',
-      'rights_zazaki1899':'The 1899 historical work is public domain; the Wikisource transcription is available under CC BY-SA.'
+      'rights_zazaki1899':'The 1899 historical work is public domain; the Wikisource transcription is available under CC BY-SA.',
+      'rights_cc_by_nc_external':'The publisher licenses the text under CC BY-NC 4.0. Some images have separate permissions; consult the publisher before reusing them. The PDF is linked from the publisher and is not mirrored here.'
     }
     return {
       'kdl_id':r['kdlId'],'slug':r['slug'],'title':r['title'],'author':r['author'],'author_slug':r['authorSlug'],
@@ -74,7 +75,7 @@ def main():
     ip=ROOT/'index.html'
     text=ip.read_text(encoding='utf-8')
     text=re.sub(r'(<strong id="bookCount">)\d+(</strong>)',rf'\g<1>{len(records)}\g<2>',text)
-    text=re.sub(r'(<strong id="resultsCount">)\d+(\s+verified titles</strong>)',rf'\g<1>{len(records)}\g<2>',text)
+    text=re.sub(r'(<strong id="resultsCount">)\d+(\s+core catalogue titles</strong>)',rf'\g<1>{len(records)}\g<2>',text)
     ip.write_text(text,encoding='utf-8')
     print(f'Rebuilt {len(records)} catalogue records.')
 
