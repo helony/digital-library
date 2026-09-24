@@ -53,6 +53,37 @@
 .browse-mode small{display:block;margin-top:5px;font-size:.66rem;line-height:1.25;color:var(--muted)}
 .browse-mode.is-active small{color:#d6deea}
 
+/* Keep the catalogue in the first screen, with book actions easy to scan. */
+.catalogue-page{padding-top:18px}
+.catalogue-page .hero{display:block;padding-bottom:16px}
+.catalogue-page .hero-copy{display:grid;grid-template-columns:minmax(0,1fr) 120px;column-gap:20px;align-items:center;padding:0}
+.catalogue-page .hero-copy>.eyebrow,.catalogue-page .hero-copy>h1,.catalogue-page .hero-copy>p{grid-column:1}
+.catalogue-page .hero h1{font-size:clamp(2rem,4vw,3rem);margin:5px 0 6px}
+.catalogue-page .hero p{font-size:.9rem}
+.catalogue-page .kilim{grid-column:2;grid-row:1/4;width:120px;margin:0}
+.catalogue-page .collection-card{display:none}
+.catalogue-page .browse-hub{padding:10px;margin-bottom:14px;border-radius:16px}
+.catalogue-page .browse-hub-copy{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.catalogue-page .browse-modes{gap:8px}
+.catalogue-page .browse-mode{min-height:50px;padding:8px 10px;gap:8px;border-radius:11px}
+.catalogue-page .browse-mode-icon{width:28px;height:28px;flex-basis:28px;border-radius:8px}
+.catalogue-page .browse-mode small{display:none}
+.catalogue-page #bookGrid .book-card{grid-template-columns:105px minmax(0,1fr);min-height:0}
+.catalogue-page #bookGrid .cover{padding:12px 10px}
+.catalogue-page #bookGrid .cover-title{font-size:1rem}
+.catalogue-page #bookGrid .card-body{padding:12px}
+.catalogue-page #bookGrid .book-title{margin:5px 0 2px}
+.catalogue-page #bookGrid .book-source,.catalogue-page #bookGrid .book-desc,.catalogue-page #bookGrid .badges .badge:first-child{display:none}
+.catalogue-page #bookGrid .badges{margin-top:8px}
+.catalogue-page #bookGrid .card-actions{margin-top:8px}
+@media(max-width:760px){
+  .catalogue-page .hero-copy{grid-template-columns:minmax(0,1fr) 75px;column-gap:8px}
+  .catalogue-page .hero h1{font-size:2.25rem}
+  .catalogue-page .kilim{width:75px}
+  .catalogue-page .browse-modes{display:flex;overflow-x:auto;scrollbar-width:thin}
+  .catalogue-page .browse-mode{flex:0 0 auto;min-width:122px}
+}
+
 .story-browser{scroll-margin-top:96px}
 .story-browser-head{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin:8px 0 14px;padding:22px 24px;border-radius:22px;background:linear-gradient(145deg,var(--navy),var(--navy-2));color:#fff}
 .story-browser-head h2{font:700 clamp(1.85rem,3.2vw,2.8rem)/1.04 Georgia,"Times New Roman",serif;letter-spacing:-.025em;margin:2px 0 8px}
