@@ -81,3 +81,6 @@ def main():
 
 if __name__=='__main__':
     main()
+    import runpy
+    if (ROOT/'tools/rebuild_home_fallback.py').exists():
+        runpy.run_path(str(ROOT/'tools/rebuild_home_fallback.py'),run_name='__main__')

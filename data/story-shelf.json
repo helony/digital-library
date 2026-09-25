@@ -1,0 +1,622 @@
+[
+  {
+    "id": 100,
+    "slug": "story-salih-u-keje",
+    "title": "Salih û Kejê",
+    "author": "Recorded in Sêrt / Siirt by M. Dufresne",
+    "variety": "Kurmancî",
+    "v": "kmr",
+    "subject": "folklore",
+    "script": "latin",
+    "format": "web",
+    "availability": "retelling",
+    "institution": "Journal Asiatique, 1910",
+    "tone": "red",
+    "motif": "love-classical",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "stories/salih-u-keje/index.html",
+    "source": "https://fr.wikisource.org/wiki/Journal_asiatique/S%C3%A9rie_10,_tome_15",
+    "rtl": false,
+    "desc": {
+      "en": "A well-known Kurdish oral love story. The early printed version was recorded in Sêrt and published in 1910."
+    },
+    "aliases": [
+      "Salih û Kejê",
+      "Oral love narrative"
+    ],
+    "kind": "story",
+    "localStory": true,
+    "sourceOnly": false
+  },
+  {
+    "id": 101,
+    "slug": "story-mame-alan",
+    "title": "Hîkayeya Mamê Alan",
+    "author": "Traditional narrative",
+    "variety": "Kurmancî",
+    "v": "kmr",
+    "subject": "folklore",
+    "script": "latin",
+    "format": "web",
+    "availability": "retelling",
+    "institution": "Albert von Le Coq, Kurdische Texte (1903)",
+    "tone": "gold",
+    "motif": "epic-historical",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "stories/mame-alan/index.html",
+    "source": "https://books.google.com/books?id=mStIAQAAMAAJ",
+    "rtl": false,
+    "desc": {
+      "en": "A classic Kurdish epic narrative preserved among the Kurmancî stories in Le Coq’s early twentieth-century collection."
+    },
+    "aliases": [
+      "Mamê Alan",
+      "Kurdish epic tradition"
+    ],
+    "kind": "story",
+    "localStory": true,
+    "sourceOnly": false
+  },
+  {
+    "id": 102,
+    "slug": "story-siyabend-u-xece",
+    "title": "Siyabend û Xecê",
+    "author": "Traditional dengbêj narrative",
+    "variety": "Kurmancî",
+    "v": "kmr",
+    "subject": "folklore",
+    "script": "latin",
+    "format": "web",
+    "availability": "retelling",
+    "institution": "Oral tradition · 1860 collection provenance",
+    "tone": "rust",
+    "motif": "love-classical",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "stories/siyabend-u-xece/index.html",
+    "source": "https://kiteb.nevgur.net/book/9ekd4",
+    "rtl": false,
+    "desc": {
+      "en": "A tragic Kurmancî love epic: Siyabend and Xecê flee together to Mount Sîpan, where a deer hunt leads to their final separation and death."
+    },
+    "aliases": [
+      "Siyabend û Xecê",
+      "Kurdish oral tradition"
+    ],
+    "kind": "story",
+    "localStory": true,
+    "sourceOnly": false
+  },
+  {
+    "id": 103,
+    "slug": "story-kela-dimdim",
+    "title": "Kela Dimdim û Xanê Lepzêrîn",
+    "author": "Traditional narrative · 1608–1610 historical core",
+    "variety": "Kurmancî",
+    "v": "kmr",
+    "subject": "folklore",
+    "script": "latin",
+    "format": "web",
+    "availability": "retelling",
+    "institution": "Bazîdî/Jaba archive · later Hekarî variants",
+    "tone": "brown",
+    "motif": "epic-historical",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "stories/kela-dimdim/index.html",
+    "source": "https://kiteb.nevgur.net/book/9ekd4",
+    "rtl": false,
+    "desc": {
+      "en": "The story of Dimdim Castle and Xanê Lepzêrîn, where a seventeenth-century siege became one of the best-known Kurdish heroic epics."
+    },
+    "aliases": [
+      "Kela Dimdim û Xanê Lepzêrîn",
+      "Kurdish oral-historical tradition"
+    ],
+    "kind": "story",
+    "localStory": true,
+    "sourceOnly": false
+  },
+  {
+    "id": 104,
+    "slug": "story-bazidi-40-cirok",
+    "title": "40 Çîrokên Mele Mehmûdê Bazîdî",
+    "author": "Mele Mehmûdê Bazîdî · Alexandre Jaba",
+    "variety": "Kurmancî",
+    "v": "kmr",
+    "subject": "folklore",
+    "script": "latin",
+    "format": "web",
+    "availability": "retelling",
+    "institution": "Cami'eya Risaleyan û Hikayetan / Recueil, 1860",
+    "tone": "violet",
+    "motif": "editorial-reference",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "stories/bazidi-40-cirok/index.html",
+    "source": "https://kiteb.nevgur.net/book/9ekd4",
+    "rtl": false,
+    "desc": {
+      "en": "A guide to Bazîdî’s forty Kurmancî stories: love stories, historical episodes, social tales and a Siyabend û Xecê variant, with links back to the public-domain 1860 scan."
+    },
+    "aliases": [
+      "40 Çîrokên Mele Mehmûdê Bazîdî",
+      "Bazîdî · Jaba · 1860"
+    ],
+    "kind": "story",
+    "localStory": true,
+    "sourceOnly": false
+  },
+  {
+    "id": 105,
+    "slug": "story-zembilfiros",
+    "title": "Zembîlfiroş",
+    "author": "Attributed to Feqiyê Teyran",
+    "variety": "Kurmancî",
+    "v": "kmr",
+    "subject": "folklore",
+    "script": "latin",
+    "format": "web",
+    "availability": "retelling",
+    "institution": "Classical poem · oral tradition",
+    "tone": "gold",
+    "motif": "folk-oral",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "stories/zembilfiros/index.html",
+    "source": "https://islamansiklopedisi.org.tr/faki-yi-teyran",
+    "rtl": false,
+    "desc": {
+      "en": "A prince leaves wealth behind to live by selling baskets, then faces a noblewoman’s relentless attempt to win him away from his chosen life and loyalties."
+    },
+    "aliases": [
+      "Zembîlfiroş",
+      "Classical Kurmanji tradition"
+    ],
+    "kind": "story",
+    "localStory": true,
+    "sourceOnly": false
+  },
+  {
+    "id": 106,
+    "slug": "story-derwese-evdi",
+    "title": "Derwêşê Evdî û Edûlê",
+    "author": "Traditional dengbêj narrative",
+    "variety": "Kurmancî",
+    "v": "kmr",
+    "subject": "folklore",
+    "script": "latin",
+    "format": "web",
+    "availability": "retelling",
+    "institution": "Berazî / Milan oral tradition",
+    "tone": "plum",
+    "motif": "epic-historical",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "stories/derwese-evdi/index.html",
+    "source": "https://wikisource.org/wiki/Derw%C3%AA%C5%9F%C3%AA_Evd%C3%AE",
+    "rtl": false,
+    "desc": {
+      "en": "A major Kurmanji epic of Derwêş and Edûl, combining tragic love, tribal obligations, religious difference and intertribal war."
+    },
+    "aliases": [
+      "Derwêşê Evdî û Edûlê",
+      "Kurdish oral tradition"
+    ],
+    "kind": "story",
+    "localStory": true,
+    "sourceOnly": false
+  },
+  {
+    "id": 107,
+    "slug": "story-sex-senan",
+    "title": "Şêx Sen'an",
+    "author": "Feqiyê Teyran",
+    "variety": "Kurmancî",
+    "v": "kmr",
+    "subject": "folklore",
+    "script": "latin",
+    "format": "web",
+    "availability": "retelling",
+    "institution": "Classical Kurmanji poem · 1621",
+    "tone": "teal",
+    "motif": "mystical-medallion",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "stories/sex-senan/index.html",
+    "source": "https://pmb.institutkurde.org/opac_css/index.php?lvl=notice_display&id=4789",
+    "rtl": false,
+    "desc": {
+      "en": "A devout sheikh dreams of an Armenian woman, travels in search of her, and faces a severe test between religious identity, desire and mystical love."
+    },
+    "aliases": [
+      "Şêx Sen'an",
+      "Feqiyê Teyran"
+    ],
+    "kind": "story",
+    "localStory": true,
+    "sourceOnly": false
+  },
+  {
+    "id": 108,
+    "slug": "story-bersise-abid",
+    "title": "Bersîsê ‘Abid",
+    "author": "Feqiyê Teyran",
+    "variety": "Kurmancî",
+    "v": "kmr",
+    "subject": "folklore",
+    "script": "latin",
+    "format": "web",
+    "availability": "retelling",
+    "institution": "211-quatrain classical narrative",
+    "tone": "green",
+    "motif": "mystical-medallion",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "stories/bersise-abid/index.html",
+    "source": "https://wikisource.org/wiki/Bers%C3%AEs%C3%AA_%E2%80%98Abid",
+    "rtl": false,
+    "desc": {
+      "en": "The story of an ascetic who, after decades of devotion, is gradually drawn into temptation, crime and a final betrayal by the devil."
+    },
+    "aliases": [
+      "Bersîsê ‘Abid",
+      "Classical Kurmanji"
+    ],
+    "kind": "story",
+    "localStory": true,
+    "sourceOnly": false
+  },
+  {
+    "id": 109,
+    "slug": "story-suto-u-tato",
+    "title": "Suto û Tato",
+    "author": "B. Nikitine & E. B. Soane",
+    "variety": "Kurmancî",
+    "v": "kmr",
+    "subject": "folklore",
+    "script": "latin",
+    "format": "web",
+    "availability": "retelling",
+    "institution": "Bulletin of SOAS, 1923",
+    "tone": "blue",
+    "motif": "epic-historical",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "stories/suto-u-tato/index.html",
+    "source": "https://bnk.institutkurde.org/images/pdf/PCCS9HEK9S.pdf",
+    "rtl": false,
+    "desc": {
+      "en": "A long Kurdish narrative connected with Barzan and the surrounding region, published with Kurdish text, translation and notes."
+    },
+    "aliases": [
+      "Suto û Tato",
+      "Molla Said Kazi tradition"
+    ],
+    "kind": "story",
+    "localStory": true,
+    "sourceOnly": false
+  },
+  {
+    "id": 110,
+    "slug": "story-11",
+    "title": "Çîroka Mam Mizgo",
+    "author": "Recorded by Basile Nikitine",
+    "variety": "Kurmancî",
+    "v": "kmr",
+    "subject": "folklore",
+    "script": "latin",
+    "format": "web",
+    "availability": "reference",
+    "institution": "Kurdish Stories from my Collection (1926)",
+    "tone": "plum",
+    "motif": "folk-oral",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531",
+    "source": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531",
+    "rtl": false,
+    "desc": {
+      "en": "One of the Kurdish tales Nikitine published from material associated with Molla Said Kazi of the Şemzînan / Nehrî region."
+    },
+    "aliases": [
+      "Çîroka Mam Mizgo",
+      "Molla Said Kazi tradition"
+    ],
+    "kind": "story",
+    "localStory": false,
+    "sourceOnly": true
+  },
+  {
+    "id": 111,
+    "slug": "story-12",
+    "title": "Xort û Pîr",
+    "author": "Recorded by Basile Nikitine",
+    "variety": "Kurmancî",
+    "v": "kmr",
+    "subject": "folklore",
+    "script": "latin",
+    "format": "web",
+    "availability": "reference",
+    "institution": "Kurdish Stories from my Collection (1926)",
+    "tone": "green",
+    "motif": "folk-oral",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531",
+    "source": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531",
+    "rtl": false,
+    "desc": {
+      "en": "A historical Kurdish story title preserved in Nikitine’s 1926 collection of narratives from the northern Kurdish dialect area."
+    },
+    "aliases": [
+      "Xort û Pîr",
+      "Molla Said Kazi tradition"
+    ],
+    "kind": "story",
+    "localStory": false,
+    "sourceOnly": true
+  },
+  {
+    "id": 112,
+    "slug": "story-13",
+    "title": "Şêx Silêman",
+    "author": "Recorded by Basile Nikitine",
+    "variety": "Kurmancî",
+    "v": "kmr",
+    "subject": "folklore",
+    "script": "latin",
+    "format": "web",
+    "availability": "reference",
+    "institution": "Kurdish Stories from my Collection (1926)",
+    "tone": "teal",
+    "motif": "mystical-medallion",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531",
+    "source": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531",
+    "rtl": false,
+    "desc": {
+      "en": "One of the named tales in Nikitine’s collection, preserved with Kurdish text and English translation in the original publication."
+    },
+    "aliases": [
+      "Şêx Silêman",
+      "Molla Said Kazi tradition"
+    ],
+    "kind": "story",
+    "localStory": false,
+    "sourceOnly": true
+  },
+  {
+    "id": 113,
+    "slug": "story-mire-hekare-teyre-bihare",
+    "title": "Çîroka Mîrê Hekarê û Mizgîniya Teyrê Biharê",
+    "author": "Recorded by Basile Nikitine",
+    "variety": "Kurmancî",
+    "v": "kmr",
+    "subject": "folklore",
+    "script": "latin",
+    "format": "web",
+    "availability": "retelling",
+    "institution": "Kurdish Stories from my Collection (1926)",
+    "tone": "rust",
+    "motif": "epic-historical",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "stories/mire-hekare-teyre-bihare/index.html",
+    "source": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531",
+    "rtl": false,
+    "desc": {
+      "en": "A Hekarî-linked tale listed among Nikitine’s early published Kurdish story collection."
+    },
+    "aliases": [
+      "Mîrê Hekarê û Mizgîniya Teyrê Biharê",
+      "Molla Said Kazi tradition"
+    ],
+    "kind": "story",
+    "localStory": true,
+    "sourceOnly": false
+  },
+  {
+    "id": 116,
+    "slug": "story-17",
+    "title": "ئانانسی و زانایی",
+    "author": "Anansi and Wisdom",
+    "variety": "Soranî",
+    "v": "ckb",
+    "subject": "folklore",
+    "script": "arabic",
+    "format": "web",
+    "availability": "full",
+    "institution": "Storybooks Canada / African Storybook",
+    "tone": "gold",
+    "motif": "folk-oral",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "https://www.storybookscanada.ca/stories/ckb/0006/",
+    "source": "https://www.storybookscanada.ca/stories/ckb/0006/",
+    "rtl": true,
+    "desc": {
+      "en": "A playful folktale about Anansi trying to keep all the world’s wisdom for himself."
+    },
+    "aliases": [
+      "ئانانسی و زانایی",
+      "Ghanaian folktale"
+    ],
+    "kind": "story",
+    "localStory": false,
+    "sourceOnly": false
+  },
+  {
+    "id": 117,
+    "slug": "story-18",
+    "title": "نوزیبێله و سێ تاڵە موو",
+    "author": "Nozibele and the Three Hairs",
+    "variety": "Soranî",
+    "v": "ckb",
+    "subject": "folklore",
+    "script": "arabic",
+    "format": "web",
+    "availability": "full",
+    "institution": "Storybooks Canada / African Storybook",
+    "tone": "plum",
+    "motif": "folk-oral",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "https://www.storybookscanada.ca/stories/ckb/0066/",
+    "source": "https://www.storybookscanada.ca/stories/ckb/0066/",
+    "rtl": true,
+    "desc": {
+      "en": "A suspenseful tale of a girl who must outwit a dangerous dog and find her way home."
+    },
+    "aliases": [
+      "نوزیبێله و سێ تاڵە موو",
+      "Tessa Welch"
+    ],
+    "kind": "story",
+    "localStory": false,
+    "sourceOnly": false
+  },
+  {
+    "id": 118,
+    "slug": "story-19",
+    "title": "مریشك و هەڵۆ",
+    "author": "Hen and Eagle",
+    "variety": "Soranî",
+    "v": "ckb",
+    "subject": "folklore",
+    "script": "arabic",
+    "format": "web",
+    "availability": "full",
+    "institution": "Storybooks Canada / African Storybook",
+    "tone": "blue",
+    "motif": "folk-oral",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "https://www.storybookscanada.ca/stories/ckb/0158/",
+    "source": "https://www.storybookscanada.ca/stories/ckb/0158/",
+    "rtl": true,
+    "desc": {
+      "en": "A traditional-style animal story explaining why the eagle flies and the hen scratches the ground."
+    },
+    "aliases": [
+      "مریشك و هەڵۆ",
+      "Ann Nduku"
+    ],
+    "kind": "story",
+    "localStory": false,
+    "sourceOnly": false
+  },
+  {
+    "id": 119,
+    "slug": "story-20",
+    "title": "منداڵانی مۆمی",
+    "author": "Children of Wax",
+    "variety": "Soranî",
+    "v": "ckb",
+    "subject": "folklore",
+    "script": "arabic",
+    "format": "web",
+    "availability": "full",
+    "institution": "Storybooks Canada / African Storybook",
+    "tone": "red",
+    "motif": "mystical-medallion",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "https://www.storybookscanada.ca/stories/ckb/0337/",
+    "source": "https://www.storybookscanada.ca/stories/ckb/0337/",
+    "rtl": true,
+    "desc": {
+      "en": "A strange and imaginative folktale about children made of wax and the brother who reaches the sunlight."
+    },
+    "aliases": [
+      "منداڵانی مۆمی",
+      "Southern African folktale"
+    ],
+    "kind": "story",
+    "localStory": false,
+    "sourceOnly": false
+  },
+  {
+    "id": 120,
+    "slug": "story-21",
+    "title": "تۆمی مۆز فرۆش",
+    "author": "Tom the Banana Seller",
+    "variety": "Soranî",
+    "v": "ckb",
+    "subject": "folklore",
+    "script": "arabic",
+    "format": "web",
+    "availability": "full",
+    "institution": "Storybooks Canada / African Storybook",
+    "tone": "green",
+    "motif": "folk-oral",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "https://www.storybookscanada.ca/stories/ckb/0296/",
+    "source": "https://www.storybookscanada.ca/stories/ckb/0296/",
+    "rtl": true,
+    "desc": {
+      "en": "Tom challenges expectations at the market and keeps trying until customers finally buy his bananas."
+    },
+    "aliases": [
+      "تۆمی مۆز فرۆش",
+      "Humphreys Odunga"
+    ],
+    "kind": "story",
+    "localStory": false,
+    "sourceOnly": false
+  },
+  {
+    "id": 121,
+    "slug": "story-22",
+    "title": "مۆزەكانی داپیرە",
+    "author": "Grandmother’s Bananas",
+    "variety": "Soranî",
+    "v": "ckb",
+    "subject": "folklore",
+    "script": "arabic",
+    "format": "web",
+    "availability": "full",
+    "institution": "Global African Storybook Project",
+    "tone": "teal",
+    "motif": "folk-oral",
+    "added": "2026-09-21",
+    "year": "",
+    "yearSort": 0,
+    "url": "https://global-asp.github.io/stories/ckb/0294_%D9%85%DB%86%D8%B2%DB%95%D9%83%D8%A7%D9%86%DB%8C-%D8%AF%D8%A7%D9%BE%DB%8C%D8%B1%DB%95_slides.html",
+    "source": "https://global-asp.github.io/stories/ckb/0294_%D9%85%DB%86%D8%B2%DB%95%D9%83%D8%A7%D9%86%DB%8C-%D8%AF%D8%A7%D9%BE%DB%8C%D8%B1%DB%95_slides.html",
+    "rtl": true,
+    "desc": {
+      "en": "A child becomes fascinated by a grandmother’s mysterious “magic” basket of ripening bananas."
+    },
+    "aliases": [
+      "مۆزەكانی داپیرە",
+      "Ursula Nafula"
+    ],
+    "kind": "story",
+    "localStory": false,
+    "sourceOnly": false
+  }
+]

@@ -8,24 +8,21 @@ const LOCALES = {
   sdh: {label:'کوردی خوارین', native:'کوردی خوارین / کەڵهوڕی', dir:'rtl', navAuthors:'نووسەران', navPreservation:'پاراستن', navAbout:'دەربارە', brandSub:'کتێبە کراوەکان لە جۆر و نووسینە کوردییەکان', eyebrow:'کتێبە کراوەکان لە جۆر و نووسینە کوردییەکان', headline:'کتێبی دوات پیدا بکە', intro:'لە بەرهەمە مڵکی گشتی و دەستگەیشتنە کراوە پشکنراوەکان بگەڕێ؛ هەر ناونیشان سەرچاوە و دۆخی ماف پیشان دەدات.', glance:'کۆمەڵەکە بە کورتی', openBooks:'ناونیشانی سەرەکی', kurdishVarieties:'جۆری کوردی', displayLanguages:'زمانی ڕووکار', rightsChecked:'ماف پشکنراوە', suggest:'پێشنیاری کتێب', catalogue:'کاتەلۆگ', searchCatalogue:'گەڕان لە کتێبخانە', searchPlaceholder:'ناونیشان، نووسەر، چیرۆک، زمان یان سەرچاوە بگەڕێ', bookLanguage:'زمانی کتێب', subject:'بابەت', sortBooks:'ڕیزکردنی کتێب', allVarieties:'هەموو جۆرەکان', allSubjects:'هەموو بابەتەکان', allScripts:'هەموو نووسینەکان', allFormats:'هەموو فۆرماتەکان', allAvailability:'هەموو بەردەستییەکان', poetry:'شیعر و کلاسیک', reference:'زمان و سەرچاوە', religious:'ئەدەبی دینی', education:'پەروەردە و فەرهەنگ', folklore:'فۆلکلۆر و چیرۆک', sortCatalogue:'ڕیزی کاتەلۆگ', sortTitle:'ناونیشان', sortAuthor:'نووسەر', sortOldest:'کۆنترین', sortNewest:'نوێترین', sortRecent:'تازە زیادکراو', moreFilters:'پاڵێوەری زیاتر', fewerFilters:'پاڵێوەری کەمتر', clearFilters:'پاککردنەوەی پاڵێوەر', script:'نووسین', format:'فۆرمات', availability:'بەردەستی', latin:'لاتینی', arabic:'بنەمای عەرەبی', mixed:'تێکەڵ', wiki:'دەقی ویکی‌سەرچاوە', pdf:'سکانی PDF', full:'تەواو', partial:'بەشی بەردەست', catalogueNote:'کاتەلۆگی سەرەکی لە پێشە؛ ڕەفەکانی چیرۆک لە خوارەوەن. گەڕان هەردووکیان دەگرێتەوە.', verifiedTitles:'ناونیشانی پشکنراو', libraryMatches:'ئەنجامی گەڕان لە کتێبخانە', readOnline:'بخوێنەوە', readAvailable:'بەشی بەردەست بخوێنەوە', openPdf:'PDF بخوێنەوە', downloadPdf:'PDF دابگرە', details:'وردەکاری', source:'سەرچاوە', publicDomain:'مڵکی گشتی', regionalPD:'مڵکی گشتی / تێبینی ناوچەیی', rightsReview:'پێویستی بە پشکنین هەیە', partialBadge:'بەشی بەردەست', noResults:'هیچ کتێبێک نەدۆزرایەوە', noResultsHelp:'پاڵێوەرێک لابە یان گەڕانێکی تر بکە.', backCatalogue:'گەڕانەوە بۆ کاتەلۆگ', description:'وەسف', languageVariety:'جۆری زمان', bookScript:'نووسین', publicationDate:'بەرواری بەرهەم', readingFormats:'فۆرماتەکان', sourceInstitution:'دامەزراوەی سەرچاوە', rightsReuse:'ماف و دووبارە بەکارهێنان', rightsCheckedDate:'دوایین پشکنین', shareLink:'بەستەری هاوبەشکردن', copyLink:'کۆپی بەستەر', copied:'کۆپی کرا', chooseLanguage:'زمانی ڕووکار هەڵبژێرە', languageHelp:'هەر کات دەتوانیت بگۆڕیت. نووسینی ڕاست بۆ چەپ پشتگیری دەکرێت.', suggestTitle:'پێشنیاری بەرهەمێکی کوردی مڵکی گشتی بکە', suggestHelp:'پێشنیارەکان پێش زیادکردن پشکنین دەکرێن و خۆکار بڵاوناکرێنەوە.', formTitle:'ناوی بەرهەم', formAuthor:'نووسەر', formVariety:'جۆری کوردی', formSource:'سەرچاوەی ڕاستەوخۆ', formRights:'بەڵگەی ماف', formEmail:'ئیمەیڵ (ئارەزوومەندانە)', formNotes:'تێبینی', netlifyNote:'ئەم فۆرمە بۆ Netlify Forms ئامادەیە.', submitSuggestion:'ناردن', closeReader:'کتێبخانە', readingWidth:'پانی', openOriginal:'سەرچاوەی ڕەسەن', previousSection:'بەشی پێشوو', nextSection:'بەشی دواتر', loading:'بارکردن…', readerFailed:'خوێنەرەوە نەیتوانی سەرچاوەکە بار بکات.', readerFallback:'سەرچاوەی ڕەسەن بکەرەوە.', pdfFallback:'ئەگەر PDF دەرنەکەوت، بە شاشەی تەواو بیکەرەوە یان دایبگرە.', openFullScreen:'شاشەی تەواو', partialNotice:'ئەم تۆمارە بەشێکی بەردەست نیشان دەدات.', footer:'دەستگەیشتنی کراوە · سەرچاوەی ڕوون · هەموو جۆرە کوردییەکان بەخێربێن', rights_pd_old:'بەرهەمە مێژووییەکە مڵکی گشتییە؛ دەقی ویکی‌سەرچاوە بە CC BY-SA بەردەستە.', rights_pd_old_scan:'بەرهەمە مێژووییەکە مڵکی گشتییە؛ بۆ مەرجەکانی ئەم سکانە سەرچاوەکە ببینە.', rights_pd_us:'سکانەکە لە ئەمریکا وەک مڵکی گشتی نیشان دراوە؛ لە شوێنی دیکە پشکنین بکە.', rights_pd_commons:'سەرچاوەکە وەک مڵکی گشتی نیشان دراوە.', rights_pd_iraq:'ویکی‌سەرچاوە لە عێراق وەک مڵکی گشتی نیشانی دەدات.', rights_1932:'سکانی ١٩٣٢ بۆ خوێندنەوەیە؛ دووبارە بەکارهێنان بە یاسای ناوچەکەت پشکنە.', rights_historical:'نووسەرە مێژووییەکان لە مافی نووسەر دەرچوون؛ دەقی ویکی‌سەرچاوە CC BY-SA ـە.', rights_wiki_pd:'بەرهەمەکە مڵکی گشتییە؛ دەقی ویکی‌سەرچاوە CC BY-SA ـە.', authorizedShare:'ڕێگە بە هاوبەشکردن دراوە', rights_authorized_share:'سەرچاوەکە دەڵێت خاوەنی ماف ڕێگەی بە هاوبەشکردنی ئەم فایلە داوە. ئەمە مڵکی گشتی نییە؛ بەکارهێنانی زیاتر لە ڕێگەپێدانە دیاریکراوەکەدا لەوانەیە مۆڵەتی تر بخوازێت.', rights_zazaki1899:'بەرهەمی ١٨٩٩ مڵکی گشتییە؛ دەقی ویکی‌سەرچاوە CC BY-SA ـە.'}
 };
 
-Object.assign(LOCALES.en,{pathsKicker:'READING PATHS',pathsTitle:'Follow a story across time',pathsIntro:'Start with a preserved source, then see another telling or a readable edition.',pathZembil:'Read the classical poem, then explore a modern telling from Khizava with English translation.',pathForty:'Meet forty short tales through the 1860 archival volume and a modern online transcription.',pathOldText:'Open preserved text →',pathNewTelling:'Compare the telling ↗',pathOldScan:'Open preserved scan →',pathModernText:'Read the transcription ↗',rights_cc_by_nc_external:'The publisher licenses the text under CC BY-NC 4.0. Images may have separate permissions; consult the publisher before reusing them. The PDF is linked directly and is not mirrored here.'});
-Object.assign(LOCALES.kmr,{pathsKicker:'RIYÊN XWENDINÊ',pathsTitle:'Çîrokekê di nav deman de bişopîne',pathsIntro:'Ji çavkaniya parastî dest pê bike, paşê vegotineke din an jî deqeke xwendinbar bibîne.',pathZembil:'Helbesta klasîk bixwîne, paşê vegotina nû ya Xizavayê bi wergera îngilîzî bibîne.',pathForty:'Çil çîrokên kurt di cilda arşîvê ya 1860an û transkrîpsiyona nû ya serhêl de bibîne.',pathOldText:'Deqa parastî veke →',pathNewTelling:'Vegotinê berhev bike ↗',pathOldScan:'Skana parastî veke →',pathModernText:'Transkrîpsiyonê bixwîne ↗',rights_cc_by_nc_external:'Weşanxane mafê deqê bi CC BY-NC 4.0 destnîşan dike. Wêne dikarin şertên cuda hebin; berî dubarebikaranînê çavkaniyê bibîne. PDF rasterast girêdayî ye û li vir nayê arşîvkirin.'});
-Object.assign(LOCALES.ckb,{pathsKicker:'ڕێگاکانی خوێندنەوە',pathsTitle:'شوێنی چیرۆکێک بەدوادا بگرە',pathsIntro:'لە سەرچاوەی پارێزراو دەست پێ بکە، پاشان ڕیوایەتێکی تر یان چاپێکی ئاسانتر بخوێنەوە.',pathZembil:'هۆنراوە کلاسیکییەکە بخوێنەوە، پاشان ڕیوایەتی نوێی خیزاڤا لەگەڵ وەرگێڕانی ئینگلیزی ببینە.',pathForty:'چل چیرۆکی کورت لە بەرگی ئەرشیڤی ١٨٦٠ و دەقی نوێی سەرهێڵدا بدۆزەوە.',pathOldText:'دەقی پارێزراو بکەرەوە →',pathNewTelling:'ڕیوایەتەکە بەراورد بکە ↗',pathOldScan:'سکانی پارێزراو بکەرەوە →',pathModernText:'دەقی نوێ بخوێنەوە ↗',rights_cc_by_nc_external:'بڵاوکەرەوە دەقەکەی بە CC BY-NC 4.0 مۆڵەت داوە. وێنەکان لەوانەیە مەرجی جیاوازیان هەبێت؛ پێش دووبارە بەکارهێنان سەرچاوە ببینە. PDF تەنها بەستەری ڕاستەوخۆی هەیە.'});
-Object.assign(LOCALES.diq,{pathsKicker:'RAYÎRÊ WENDIŞÎ',pathsTitle:'Çîrokêkî deman de bişopıne',pathsIntro:'Çımeyê parastî ra dest pê bike, raşteya bini yan metno asanê wendışî bivîne.',pathZembil:'Şiirê klasîk biwane, dima vıraştışê neweyê Xizava bi tercumeyo Îngilîzkî bivîne.',pathForty:'Çil çîrokê kılmî cildê arşîvê 1860an û metnê neweyê serxetî de bivîne.',pathOldText:'Metno parastî ake →',pathNewTelling:'Vıraştışî mukayese bike ↗',pathOldScan:'Skanê parastî ake →',pathModernText:'Transkripsiyonî biwane ↗',rights_cc_by_nc_external:'Weşanxane metn rê CC BY-NC 4.0 dayo. Resimî şertê cıyanî eşkenê bıbê; verê tekrar bikaranayışî çımeyî bivîne. PDF tenya bi girêdanê tê nîşandayış.'});
-for(const code of ['hac','sdh'])Object.assign(LOCALES[code],Object.fromEntries(['pathsKicker','pathsTitle','pathsIntro','pathZembil','pathForty','pathOldText','pathNewTelling','pathOldScan','pathModernText','rights_cc_by_nc_external'].map(key=>[key,LOCALES.ckb[key]])));
+for(const [code,labels] of Object.entries(window.KDL_INTERFACE||{}))Object.assign(LOCALES[code],labels);
+for(const code of ['hac','sdh'])Object.assign(LOCALES[code],window.KDL_INTERFACE?.ckb||{});
 
-const BOOKS = window.KDL_BOOKS || [];
+const BOOKS = [...(window.KDL_BOOKS || []), ...(window.KDL_STORIES || [])];
 
 const VARIETIES = [
   ['all','allVarieties'], ['kmr','Kurmancî'], ['ckb','Soranî / کوردیی ناوەندی'], ['diq','Zazakî / Kirmanckî'], ['hac','Hewramî / Goranî'], ['sdh','Kurdî Xwarîn / Southern Kurdish']
 ];
 const SUBJECTS = [['all','allSubjects'],['poetry','poetry'],['reference','reference'],['religious','religious'],['education','education'],['folklore','folklore']];
 const SCRIPTS = [['all','allScripts'],['latin','latin'],['arabic','arabic'],['mixed','mixed']];
-const FORMATS = [['all','allFormats'],['wiki','wiki'],['pdf','pdf']];
-const AVAIL = [['all','allAvailability'],['full','full'],['partial','partial']];
+const FORMATS = [['all','allFormats'],['wiki','wiki'],['pdf','pdf'],['web','webStory']];
+const AVAIL = [['all','allAvailability'],['full','full'],['partial','partial'],['retelling','retelling'],['reference','sourceOnly']];
 const SORTS = [['catalogue','sortCatalogue'],['title','sortTitle'],['author','sortAuthor'],['year-asc','sortOldest'],['year-desc','sortNewest'],['recent','sortRecent']];
 
-const state = {locale: localStorage.getItem('kdl_locale') || 'en', q:'', variety:'all', subject:'all', script:'all', format:'all', availability:'all', sort:'catalogue'};
+const state = {mode:'all',locale: localStorage.getItem('kdl_locale') || 'en', q:'', variety:'all', subject:'all', script:'all', format:'all', availability:'all', sort:'catalogue'};
 const $ = (s,root=document)=>root.querySelector(s);
 const $$ = (s,root=document)=>[...root.querySelectorAll(s)];
 const t = key => (LOCALES[state.locale] && LOCALES[state.locale][key]) || LOCALES.en[key] || key;
@@ -77,98 +74,127 @@ function matchesSearchText(searchText,query){
   return !tokens.length||tokens.every(token=>searchText.includes(token));
 }
 
-function storyCardSearchText(card){
-  const links=[...card.querySelectorAll('a')].map(a=>a.getAttribute('href')||'').join(' ');
-  return normalizeText(card.textContent+' '+links);
-}
-function filterStoryShelvesBySearch(){
-  const panel=$('#storyBrowsePanel');
-  if(!panel)return {matches:0,total:0};
-  const q=normalizeText(state.q);
-  const cards=[...panel.querySelectorAll('.book-card')];
-  let matches=0;
-  cards.forEach(card=>{
-    const hit=!q||matchesSearchText(storyCardSearchText(card),q);
-    card.classList.toggle('search-no-match',!hit);
-    if(hit)matches++;
-  });
-  ['#kurmanjiStoryShelf','#storyCorner'].forEach(selector=>{
-    const shelf=$(selector);
-    if(!shelf)return;
-    const shelfMatches=[...shelf.querySelectorAll('.book-card')].filter(card=>!card.classList.contains('search-no-match')).length;
-    shelf.classList.toggle('search-no-match',!!q&&shelfMatches===0);
-  });
-  panel.classList.toggle('search-no-match',!!q&&matches===0);
-  return {matches,total:cards.length};
-}
-
+const STARTER_BOOKS=['mem-u-zin','story-mame-alan','zembilfiros','neo-aramaic-kurdish-folklore-2022-v2','diwana-melaye-ciziri','story-siyabend-u-xece','diwani-mahwi','story-17'];
 function filteredBooks(){
-  const q=normalizeText(state.q); let items=BOOKS.filter(b=>(state.variety==='all'||b.v===state.variety)&&(state.subject==='all'||b.subject===state.subject)&&(state.script==='all'||b.script===state.script)&&(state.format==='all'||b.format===state.format)&&(state.availability==='all'||b.availability===state.availability));
-  if(q) items=items.filter(b=>matchesSearchText(bookSearchText(b),q));
+  const q=normalizeText(state.q);
+  let items=BOOKS.filter(b=>(state.variety==='all'||b.v===state.variety||(state.variety==='ckb'&&b.variety.includes('Soranî'))||(state.variety==='diq'&&b.variety.includes('Zazakî')))&&(state.subject==='all'||b.subject===state.subject)&&(state.script==='all'||b.script===state.script)&&(state.format==='all'||b.format===state.format)&&(state.availability==='all'||b.availability===state.availability));
+  if(q)items=items.filter(b=>matchesSearchText(bookSearchText(b),q));
   const collator=new Intl.Collator(state.locale,{sensitivity:'base',numeric:true});
-  items.sort((a,b)=>{switch(state.sort){case'title':return collator.compare(a.title,b.title);case'author':return collator.compare(a.author,b.author)||collator.compare(a.title,b.title);case'year-asc':return a.yearSort-b.yearSort;case'year-desc':return b.yearSort-a.yearSort;case'recent':return b.added.localeCompare(a.added)||b.id-a.id;default:return a.id-b.id;}}); return items;
+  const rank=b=>{const index=STARTER_BOOKS.indexOf(b.slug);return index>=0?index: b.sourceOnly?500:b.subject==='reference'?400:b.subject==='education'?300:100+b.id};
+  items.sort((a,b)=>{switch(state.sort){case'title':return collator.compare(a.title,b.title);case'author':return collator.compare(a.author,b.author)||collator.compare(a.title,b.title);case'year-asc':return (a.yearSort||9999)-(b.yearSort||9999);case'year-desc':return (b.yearSort||0)-(a.yearSort||0);case'recent':return b.added.localeCompare(a.added)||b.id-a.id;default:return rank(a)-rank(b)}});return items;
 }
-function coverTitle(b){ const title=(b&&b.title)||'Untitled record'; return title.length>34 ? title.split(' ').slice(0,5).join(' ') : title; }
+function motifFor(b){return b.motif||({folklore:'folk-oral',poetry:'love-classical',religious:'mystical-medallion',education:'editorial-reference',reference:'editorial-reference'}[b.subject])||'folk-oral'}
+function readLabel(b){return b.sourceOnly?t('sourceOnly'):t('readNow')}
+function readingUrl(b){return b.format==='web'&&!b.localStory?b.url:`?read=${encodeURIComponent(b.slug)}`}
+function markMode(){
+  $$('[data-library-mode]').forEach(button=>{const active=button.dataset.libraryMode===state.mode;button.classList.toggle('is-active',active);button.setAttribute('aria-pressed',String(active))});
+  $('#catalogue').hidden=state.mode==='voices';$('#voicesBrowsePanel').hidden=state.mode!=='voices';$('#moreFiltersButton').hidden=state.mode==='voices';
+}
 function renderCatalogue(){
   const items=filteredBooks();
-  const storySearch=filterStoryShelvesBySearch();
-  $('#bookCount').textContent=BOOKS.length;
-  $('#varietyCount').textContent=new Set(BOOKS.map(b=>b.v)).size;
-  $('#interfaceCount').textContent=Object.keys(LOCALES).length;
-  $('#resultsCount').textContent=normalizeText(state.q)
-    ? `${items.length+storySearch.matches} ${t('libraryMatches')}`
-    : `${items.length} ${t('verifiedTitles')}`;
-  const grid=$('#bookGrid'), empty=$('#emptyState');
-  if(!items.length){
-    grid.innerHTML='';
-    empty.hidden=storySearch.matches>0;
-    return;
-  }
-  empty.hidden=true;
-  grid.innerHTML=items.map(b=>`<article class="book-card" data-slug="${b.slug}"><div class="cover tone-${b.tone}" dir="${b.rtl?'rtl':'ltr'}"><div class="cover-code">${b.kdlId}</div><div class="cover-title">${escapeHtml(coverTitle(b))}</div><div class="cover-author">${escapeHtml(b.author)}</div></div><div class="card-body"><div class="book-meta"><span>${escapeHtml(b.variety)}</span><span>·</span><span>${escapeHtml(b.year)}</span></div><h3 class="book-title" dir="${b.rtl?'rtl':'auto'}">${escapeHtml(b.title)}</h3><a class="book-author author-link" href="${authorRecordUrl(b)}">${escapeHtml(b.author)}</a><div class="book-source">↗ ${escapeHtml(b.institution)}</div><p class="book-desc">${escapeHtml(desc(b))}</p><div class="badges"><span class="badge">${escapeHtml(subjectLabel(b.subject))}</span><span class="badge ${rightsClass(b)}">${escapeHtml(rightsLabel(b))}</span>${b.availability==='partial'?`<span class="badge partial">${escapeHtml(t('partialBadge'))}</span>`:''}</div><div class="card-actions">${b.format==='wiki'?`<button class="primary-button read-book" type="button" data-slug="${b.slug}">◫ ${escapeHtml(b.availability==='partial'?t('readAvailable'):t('readOnline'))}</button>`:`<button class="primary-button read-book" type="button" data-slug="${b.slug}">◫ ${escapeHtml(t('openPdf'))}</button>`}<button class="secondary-button details-book" type="button" data-slug="${b.slug}">${escapeHtml(t('details'))}</button>${b.format==='pdf'?`<button class="secondary-button download-book" type="button" data-slug="${b.slug}">⇩ ${escapeHtml(t('downloadPdf'))}</button>`:''}</div></div></article>`).join('');
-  $$('.read-book',grid).forEach(el=>el.addEventListener('click',()=>openReader(bookBySlug(el.dataset.slug)))); $$('.details-book',grid).forEach(el=>el.addEventListener('click',()=>showDetails(el.dataset.slug,true))); $$('.download-book',grid).forEach(el=>el.addEventListener('click',()=>downloadBook(bookBySlug(el.dataset.slug))));
+  $('#resultsCount').textContent=`${items.length} ${t('works')}`;
+  const count=['variety','subject','script','format','availability'].filter(k=>state[k]!=='all').length;
+  $('#filterCount').textContent=count;$('#filterCount').hidden=!count;
+  $('#clearFiltersButton').hidden=!count&&!state.q&&state.sort==='catalogue';
+  $('#emptyState').hidden=items.length>0;
+  $('#bookGrid').innerHTML=items.map(b=>{
+    const external=b.format==='web'&&!b.localStory;
+    const note=b.availability==='partial'?t('partialBadge'):b.availability==='retelling'?t('retelling'):b.sourceOnly?t('sourceOnly'):'';
+    const language=VARIETIES.find(x=>x[0]===b.v)?.[1]?.split(' / ')[0]||b.variety;
+    const author=b.author.length>80?'Khan, Mohammadirad, Molin & Noorlander':b.author;
+    return `<article class="book-card" data-slug="${b.slug}"><a class="cover tone-${b.tone} ${b.title.length>65?'long-title':''} ${external?'':'read-book'}" href="${escapeHtml(readingUrl(b))}" data-slug="${b.slug}" aria-label="${escapeHtml(readLabel(b)+': '+b.title)}" ${external?'target="_blank" rel="noopener"':''}><span class="cover-language">${escapeHtml(language)}${b.format==='pdf'?' · PDF':''}</span><h3 class="cover-title" dir="${b.rtl?'rtl':'auto'}">${escapeHtml(b.title)}</h3><img class="cover-ornament" src="assets/motifs/${motifFor(b)}.svg" alt="" loading="lazy" aria-hidden="true">${note?`<span class="edition-note">${escapeHtml(note)}</span>`:''}</a><div class="card-body"><p class="book-author" dir="auto">${escapeHtml(author)}</p><div class="card-actions"><a class="shelf-read ${external?'':'read-book'}" data-slug="${b.slug}" href="${escapeHtml(readingUrl(b))}" ${external?'target="_blank" rel="noopener"':''}>${escapeHtml(readLabel(b))} <span aria-hidden="true">${external?'↗':'→'}</span></a>${b.format==='pdf'?`<a class="shelf-download" href="${escapeHtml(archiveEligible(b)?localPdfUrl(b):b.url)}" ${archiveEligible(b)?'download':'target="_blank" rel="noopener"'} aria-label="${escapeHtml(t('downloadPdf')+': '+b.title)}" title="${escapeHtml(t('downloadPdf'))}">↓</a>`:''}<button class="shelf-info details-book" type="button" data-slug="${b.slug}" aria-label="${escapeHtml(t('aboutBook')+': '+b.title)}">${escapeHtml(t('bookInfo'))}</button></div></div></article>`;
+  }).join('');
+  $$('.read-book',$('#bookGrid')).forEach(el=>el.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();openReader(bookBySlug(el.dataset.slug))}));
+  $$('.details-book',$('#bookGrid')).forEach(el=>el.addEventListener('click',()=>showDetails(el.dataset.slug)));
+  markMode();
 }
 
 function updateUrl(extra={}){
-  const u=new URL(location.href); const params=u.searchParams; params.delete('book');
+  const u=new URL(location.href); const params=u.searchParams; params.delete('book');params.delete('read');params.delete('mode');if(state.mode==='voices')params.set('mode','voices');
   [['q',state.q],['language',state.variety==='all'?'':state.variety],['subject',state.subject==='all'?'':state.subject],['script',state.script==='all'?'':state.script],['format',state.format==='all'?'':state.format],['availability',state.availability==='all'?'':state.availability],['sort',state.sort==='catalogue'?'':state.sort],['lang',state.locale==='en'?'':state.locale]].forEach(([k,v])=>v?params.set(k,v):params.delete(k));
   Object.entries(extra).forEach(([k,v])=>v?params.set(k,v):params.delete(k)); history.replaceState({},'',u);
 }
-function readUrlState(){ const p=new URL(location.href).searchParams; state.q=p.get('q')||''; state.variety=p.get('language')||'all'; state.subject=p.get('subject')||'all'; state.script=p.get('script')||'all'; state.format=p.get('format')||'all'; state.availability=p.get('availability')||'all'; state.sort=p.get('sort')||'catalogue'; if(p.get('lang')&&LOCALES[p.get('lang')])state.locale=p.get('lang'); $('#searchInput').value=state.q; }
-function syncFilter(key,value){state[key]=value; renderCatalogue(); updateUrl();}
+function readUrlState(){ const p=new URL(location.href).searchParams; state.q=p.get('q')||'';state.mode=p.get('mode')==='voices'?'voices':'all'; state.variety=p.get('language')||'all'; state.subject=p.get('subject')||'all'; state.script=p.get('script')||'all'; state.format=p.get('format')||'all'; state.availability=p.get('availability')||'all'; state.sort=p.get('sort')||'catalogue'; if(state.mode!=='voices')state.mode=state.format==='pdf'?'pdf':state.subject==='folklore'?'stories':state.subject==='poetry'?'poetry':'all'; if(p.get('lang')&&LOCALES[p.get('lang')])state.locale=p.get('lang'); $('#searchInput').value=state.q; }
+function syncFilter(key,value){state[key]=value;if(key==='subject'||key==='format')state.mode=state.format==='pdf'?'pdf':state.subject==='folklore'?'stories':state.subject==='poetry'?'poetry':'all';renderCatalogue();updateUrl();}
 function startGlobalSearch(value){
   // A new query starts across every record; filters chosen afterward still apply.
   if(value.trim()&&!state.q){
     const selects={variety:'varietyFilter',subject:'subjectFilter',script:'scriptFilter',format:'formatFilter',availability:'availabilityFilter'};
     Object.entries(selects).forEach(([key,id])=>{state[key]='all';$('#'+id).value='all'});
   }
-  syncFilter('q',value);
+  state.mode='all';syncFilter('q',value);
 }
 
 async function downloadBook(b){let target=b.url;if(archiveEligible(b)&&b.format==='pdf'&&await urlExists(localPdfUrl(b)))target=localPdfUrl(b);const a=document.createElement('a');a.href=target;a.target='_blank';a.rel='noopener';if(target.startsWith('books/'))a.download='';document.body.appendChild(a);a.click();a.remove();}
 
+let detailsFocus=null, catalogueScroll=0;
 function showDetails(slug,push=true){
-  const b=bookBySlug(slug); if(!b)return; $('#cataloguePage').hidden=true; $('#detailsPage').hidden=false; window.scrollTo({top:0,behavior:'instant'});
-  const formats=b.format==='wiki' ? t('wiki') : `${t('pdf')} · ${t('downloadPdf')}`; const share=new URL(location.href); share.searchParams.set('book',b.slug);
-  $('#detailsContent').innerHTML=`<div class="details-layout"><aside class="details-cover tone-${b.tone}" dir="${b.rtl?'rtl':'ltr'}"><span>${b.kdlId}</span><h2>${escapeHtml(b.title)}</h2><small>${escapeHtml(b.author)}</small></aside><article class="details-main"><div class="details-eyebrow">${escapeHtml(b.variety)} · ${escapeHtml(b.year)}</div><h1 id="detailsTitle" dir="${b.rtl?'rtl':'auto'}">${escapeHtml(b.title)}</h1><div class="details-byline"><a class="author-link" href="${authorRecordUrl(b)}">${escapeHtml(b.author)}</a> · <span class="record-id">${escapeHtml(b.kdlId)}</span></div><p class="details-description">${escapeHtml(desc(b))}</p><div class="details-actions"><button class="primary-button" id="detailsRead" type="button">◫ ${escapeHtml(b.format==='wiki'?(b.availability==='partial'?t('readAvailable'):t('readOnline')):t('openPdf'))}</button>${b.format==='pdf'?`<button class="secondary-button" id="detailsDownload" type="button">⇩ ${escapeHtml(t('downloadPdf'))}</button>`:''}<a class="secondary-button" href="${b.source}" target="_blank" rel="noopener">↗ ${escapeHtml(t('source'))}</a><a class="secondary-button" href="${permanentRecordUrl(b)}">⌁ KDL record</a></div><div class="detail-grid"><div class="detail-item"><span>${t('languageVariety')}</span><strong>${escapeHtml(b.variety)}</strong></div><div class="detail-item"><span>${t('bookScript')}</span><strong>${escapeHtml(scriptLabel(b.script))}</strong></div><div class="detail-item"><span>${t('publicationDate')}</span><strong>${escapeHtml(b.year)}</strong></div><div class="detail-item"><span>${t('readingFormats')}</span><strong>${escapeHtml(formats)}</strong></div><div class="detail-item"><span>${t('sourceInstitution')}</span><strong>${escapeHtml(b.institution)}</strong></div><div class="detail-item"><span>${t('rightsCheckedDate')}</span><strong>${escapeHtml(b.checked)}</strong></div></div><div class="rights-box ${b.rightsType==='check'?'caution':''}"><h3>${escapeHtml(t('rightsReuse'))} · ${escapeHtml(rightsLabel(b))}</h3><p>${escapeHtml(t(b.rightsKey))}</p></div>${b.availability==='partial'?`<div class="rights-box caution"><h3>${escapeHtml(t('partialBadge'))}</h3><p>${escapeHtml(t('partialNotice'))}</p></div>`:''}<div class="share-line"><input id="shareInput" readonly value="${escapeHtml(share.toString())}" aria-label="${escapeHtml(t('shareLink'))}"><button class="secondary-button" id="copyShare" type="button">${escapeHtml(t('copyLink'))}</button></div></article></div>`;
-  $('#detailsRead').addEventListener('click',()=>openReader(b)); if($('#detailsDownload'))$('#detailsDownload').addEventListener('click',()=>downloadBook(b)); $('#copyShare').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('#shareInput').value); $('#copyShare').textContent=t('copied');}catch{ $('#shareInput').select(); document.execCommand('copy'); $('#copyShare').textContent=t('copied');}});
-  if(push){const u=new URL(location.href);u.searchParams.set('book',slug);history.pushState({book:slug},'',u);}
+ const b=bookBySlug(slug);if(!b)return;
+ if(push){detailsFocus=document.activeElement;catalogueScroll=window.scrollY;}
+ $('#cataloguePage').hidden=true;$('#detailsPage').hidden=false;window.scrollTo({top:0,behavior:'instant'});
+ const author=b.authorSlug?`<a href="${authorRecordUrl(b)}">${escapeHtml(b.author)}</a>`:escapeHtml(b.author);
+ const external=b.format==='web'&&!b.localStory;
+ $('#detailsContent').innerHTML=`<article class="details-main"><h1 id="detailsTitle" tabindex="-1" dir="auto">${escapeHtml(b.title)}</h1><p class="details-byline">${author} · ${escapeHtml(b.variety)}</p><p class="details-description">${escapeHtml(desc(b))}</p>${b.localStory?`<p>${escapeHtml(t('storyNotice'))}</p>`:''}<div class="details-actions"><a class="primary-button" id="detailsRead" href="${escapeHtml(readingUrl(b))}" ${external?'target="_blank" rel="noopener"':''}>${escapeHtml(readLabel(b))} →</a>${b.format==='pdf'?`<button class="secondary-button" id="detailsDownload" type="button">↓ ${escapeHtml(t('downloadPdf'))}</button>`:''}</div><details class="source-details"><summary>${escapeHtml(t('sourceAndRights'))}</summary><p><a href="${escapeHtml(b.source||b.url)}" target="_blank" rel="noopener">${escapeHtml(b.institution||t('source'))} ↗</a></p>${b.rightsKey?`<p>${escapeHtml(t(b.rightsKey))}</p>`:''}<p>${escapeHtml(b.year||'')}${b.kdlId?' · '+escapeHtml(b.kdlId):''}</p>${b.authorSlug?`<a href="${permanentRecordUrl(b)}">${escapeHtml(t('details'))} →</a>`:''}</details></article>`;
+ if(!external)$('#detailsRead').addEventListener('click',e=>{e.preventDefault();openReader(b)});
+ $('#detailsDownload')?.addEventListener('click',()=>downloadBook(b));
+ if(push){const u=new URL(location.href);u.searchParams.delete('read');u.searchParams.set('book',slug);history.pushState({book:slug},'',u);$('#detailsTitle').focus();}
 }
-function closeDetails(){ $('#detailsPage').hidden=true; $('#cataloguePage').hidden=false; const u=new URL(location.href);u.searchParams.delete('book');history.pushState({},'',u); requestAnimationFrame(()=>$('#catalogue').scrollIntoView({block:'start'})); }
+function closeDetails(){
+ $('#detailsPage').hidden=true;$('#cataloguePage').hidden=false;
+ const u=new URL(location.href);u.searchParams.delete('book');history.replaceState({},'',u);
+ window.scrollTo({top:catalogueScroll,behavior:'instant'});detailsFocus?.focus({preventScroll:true});
+}
 
 let lastFocus=null;
 function openDialog(id){const d=$('#'+id);lastFocus=document.activeElement;d.hidden=false;document.body.classList.add('modal-open');const card=$('.dialog-card',d);card.focus();trapSetup(d)}
 function closeDialog(id){const d=$('#'+id);d.hidden=true;document.body.classList.remove('modal-open'); if(lastFocus&&lastFocus.focus)lastFocus.focus();}
 function trapSetup(container){const focusables=$$('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])',container).filter(x=>!x.disabled&&!x.hidden); if(!focusables.length)return; container.onkeydown=e=>{if(e.key==='Escape'){closeDialog(container.id);return} if(e.key!=='Tab')return; const first=focusables[0],last=focusables[focusables.length-1]; if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}}
 
-let readerBook=null, readerSections=[], currentSection=-1, readerFont=Number(localStorage.getItem('kdl_reader_font')||18), wideReader=localStorage.getItem('kdl_reader_wide')==='1';
+let readerBook=null, readerSections=[], currentSection=-1, readerFont=Number(localStorage.getItem('kdl_reader_font')||20), wideReader=localStorage.getItem('kdl_reader_wide')==='1';
 function applyReaderPrefs(){document.documentElement.style.setProperty('--reader-size',readerFont+'px');document.documentElement.style.setProperty('--reader-width',wideReader?'1040px':'780px')}
-async function openReader(b){readerBook=b;$('#reader').hidden=false;document.body.classList.add('modal-open');$('#readerTitle').textContent=b.title;$('#readerSubtitle').textContent=`${b.author} · ${b.variety}`;$('#readerOriginal').href=b.source||b.url;$('#readerNav').hidden=true;$('#readerContent').innerHTML=`<div class="reader-loading">${escapeHtml(t('loading'))}</div>`;applyReaderPrefs(); if(b.format==='pdf'){let readUrl=b.url;if(archiveEligible(b)&&await urlExists(localPdfUrl(b)))readUrl=localPdfUrl(b);renderPdf(b,readUrl);}else await renderWiki(b,b.wiki);}
-function closeReader(){$('#reader').hidden=true;document.body.classList.remove('modal-open');readerBook=null;readerSections=[];currentSection=-1;}
-function renderPdf(b,readUrl=b.url){$('#readerContent').innerHTML=`<div class="pdf-fallback"><p>${escapeHtml(t('pdfFallback'))}</p><div class="card-actions" style="justify-content:center"><a class="primary-button" href="${readUrl}" target="_blank" rel="noopener">${escapeHtml(t('openFullScreen'))} ↗</a><a class="secondary-button" href="${readUrl}" target="_blank" rel="noopener">⇩ ${escapeHtml(t('downloadPdf'))}</a></div></div><iframe class="pdf-frame" title="${escapeHtml(b.title)} PDF" src="${readUrl}#view=FitH"></iframe>`;}
+let readerFocus=null;
+async function openReader(b,push=true){
+ if(!b)return;
+ if(b.format==='web'&&!b.localStory){location.href=b.url;return;}
+ readerFocus=document.activeElement;readerBook=b;readerSections=[];currentSection=-1;
+ $('#reader').hidden=false;$('#reader').classList.toggle('is-pdf',b.format==='pdf');document.body.classList.add('modal-open');
+ $('#readerTitle').textContent=b.title;$('#readerSubtitle').textContent=b.author;
+ $('#readerOriginal').href=b.source||b.url;$('#readerNav').hidden=true;$('#readerDownload').hidden=true;
+ for(const id of ['fontDown','fontUp','readerWidth'])$('#'+id).hidden=b.format==='pdf';
+ $('#readerContent').innerHTML=`<div class="reader-loading">${escapeHtml(t('loading'))}</div>`;$('#readerContent').scrollTop=0;
+ $('#readerClose').focus();applyReaderPrefs();
+ if(push){const u=new URL(location.href);u.searchParams.set('read',b.slug);history.pushState({read:b.slug},'',u);}
+ if(b.format==='pdf'){
+   let readUrl=b.url;if(archiveEligible(b)&&await urlExists(localPdfUrl(b)))readUrl=localPdfUrl(b);
+   if(readerBook!==b)return;renderPdf(b,readUrl);
+ }else if(b.localStory)await renderStory(b);else await renderWiki(b,b.wiki);
+}
+function closeReader(update=true){
+ $('#reader').hidden=true;document.body.classList.remove('modal-open');readerBook=null;readerSections=[];currentSection=-1;
+ if(update){const u=new URL(location.href);u.searchParams.delete('read');history.replaceState({},'',u);}
+ readerFocus?.focus({preventScroll:true});
+}
+function renderPdf(b,readUrl=b.url){
+ const download=$('#readerDownload');download.href=readUrl;download.hidden=false;if(!readUrl.startsWith('books/')){download.target='_blank';download.rel='noopener'}else{download.removeAttribute('target');download.removeAttribute('rel')}
+ $('#readerContent').innerHTML=`<div class="pdf-fallback"><a href="${escapeHtml(readUrl)}" target="_blank" rel="noopener">${escapeHtml(t('openFullScreen'))} ↗</a></div><iframe class="pdf-frame" title="${escapeHtml(b.title)} PDF" src="${escapeHtml(readUrl)}#view=FitH"></iframe>`;
+}
+async function renderStory(b){
+ try{
+  const response=await fetch(b.url);if(!response.ok)throw new Error('Story unavailable');
+  const doc=new DOMParser().parseFromString(await response.text(),'text/html');
+  if(readerBook!==b)return;
+  const article=doc.querySelector('.story-reader');if(!article)throw new Error('Story text missing');
+  article.querySelectorAll('script,style,iframe,object,embed,form,.reader-controls').forEach(el=>el.remove());
+  article.querySelectorAll('*').forEach(el=>[...el.attributes].forEach(a=>{if(/^on/i.test(a.name))el.removeAttribute(a.name)}));
+  article.querySelectorAll('a[href]').forEach(a=>{a.href=new URL(a.getAttribute('href'),new URL(b.url,location.href)).href});
+  article.className='reader-article';article.dir=b.rtl?'rtl':'ltr';
+  $('#readerContent').replaceChildren(article);
+ }catch(error){if(readerBook!==b)return;$('#readerContent').innerHTML=`<div class="reader-error"><p>${escapeHtml(t('readerFailed'))}</p><a href="${escapeHtml(b.url)}">${escapeHtml(t('readNow'))} →</a></div>`;}
+}
 async function renderWiki(b,page){
   const sourceUrl=b.source||b.url;
-  if(archiveEligible(b)){try{const local=localTextUrl(b);const lr=await fetch(local,{cache:'no-store'});if(lr.ok){const html=await lr.text();$('#readerContent').innerHTML=(b.availability==='partial'?`<div class="partial-banner">${escapeHtml(t('partialNotice'))}</div>`:'')+`<article class="reader-article" dir="${b.rtl?'rtl':'ltr'}">${html}</article>`;try{const metaRes=await fetch(`${archiveBase(b)}/metadata.json`,{cache:'no-store'});if(metaRes.ok){const meta=await metaRes.json();setReaderSections(meta.sections||[])}else setReaderSections([])}catch{setReaderSections([])}return}}catch{}}
+  if(archiveEligible(b)){try{const local=localTextUrl(b);const lr=await fetch(local,{cache:'no-store'});if(lr.ok){const html=await lr.text();if(readerBook!==b)return;$('#readerContent').innerHTML=(b.availability==='partial'?`<div class="partial-banner">${escapeHtml(t('partialNotice'))}</div>`:'')+`<article class="reader-article" dir="${b.rtl?'rtl':'ltr'}">${html}</article>`;try{const metaRes=await fetch(`${archiveBase(b)}/metadata.json`,{cache:'no-store'});if(metaRes.ok){const meta=await metaRes.json();if(readerBook===b)setReaderSections(meta.sections||[])}else if(readerBook===b)setReaderSections([])}catch{setReaderSections([])}return}}catch{}}
+  if(readerBook!==b)return;
   $('#readerContent').innerHTML=(b.availability==='partial'?`<div class="partial-banner">${escapeHtml(t('partialNotice'))}</div>`:'')+`<div class="reader-loading"><div>${escapeHtml(t('loading'))}</div><p><a class="secondary-button" href="${sourceUrl}" target="_blank" rel="noopener">${escapeHtml(t('openOriginal'))} ↗</a></p></div>`;
   const controller=new AbortController();
   const timeout=setTimeout(()=>controller.abort(),12000);
@@ -177,7 +203,7 @@ async function renderWiki(b,page){
     const res=await fetch(api,{signal:controller.signal,mode:'cors',credentials:'omit'});
     clearTimeout(timeout);
     if(!res.ok)throw new Error('HTTP '+res.status);
-    const data=await res.json(); if(data.error)throw new Error(data.error.info||'Wikisource error');
+    const data=await res.json();if(readerBook!==b)return; if(data.error)throw new Error(data.error.info||'Wikisource error');
     const doc=new DOMParser().parseFromString(data.parse.text['*'],'text/html');
     doc.querySelectorAll('script,style,iframe,object,embed,form,input,button,link,meta,.mw-editsection,.navbox,.metadata,.noprint,.catlinks,.printfooter,.sistersitebox,.ws-noexport').forEach(n=>n.remove());
     doc.querySelectorAll('[style]').forEach(el=>{const s=el.getAttribute('style')||''; if(/position\s*:\s*(fixed|absolute)/i.test(s))el.removeAttribute('style')});
@@ -187,7 +213,7 @@ async function renderWiki(b,page){
     const wrap=document.createElement('article');wrap.className='reader-article';wrap.dir=b.rtl?'rtl':'ltr';while(doc.body.firstChild)wrap.appendChild(doc.body.firstChild);
     const content=$('#readerContent'); content.innerHTML=''; if(b.availability==='partial'){const note=document.createElement('div');note.className='partial-banner';note.textContent=t('partialNotice');content.appendChild(note)} content.appendChild(wrap);
     setReaderSections(data.parse.sections||[]);
-  }catch(err){clearTimeout(timeout);$('#readerNav').hidden=true;$('#readerContent').innerHTML=`<div class="reader-error"><strong>${escapeHtml(t('readerFailed'))}</strong><p>${escapeHtml(t('readerFallback'))}</p><a class="primary-button" href="${sourceUrl}" target="_blank" rel="noopener">${escapeHtml(t('openOriginal'))} ↗</a></div>`;}
+  }catch(err){clearTimeout(timeout);if(readerBook!==b)return;$('#readerNav').hidden=true;$('#readerContent').innerHTML=`<div class="reader-error"><strong>${escapeHtml(t('readerFailed'))}</strong><p>${escapeHtml(t('readerFallback'))}</p><a class="primary-button" href="${sourceUrl}" target="_blank" rel="noopener">${escapeHtml(t('openOriginal'))} ↗</a></div>`;}
 }
 function setReaderSections(sections){readerSections=sections.filter(s=>s.anchor&&s.line).map(s=>({anchor:s.anchor,title:s.line.replace(/<[^>]+>/g,'')}));currentSection=readerSections.length?0:-1;setupSectionNav()}
 function setupSectionNav(){const nav=$('#readerNav');if(!readerSections.length){nav.hidden=true;return}nav.hidden=false;updateSectionControls();}
@@ -195,14 +221,23 @@ function updateSectionControls(){const prev=$('#prevSection'),next=$('#nextSecti
 function goSection(delta){if(!readerSections.length)return;currentSection=Math.max(0,Math.min(readerSections.length-1,currentSection+delta));const section=readerSections[currentSection];const target=document.getElementById(section.anchor)||document.querySelector(`[id="${CSS.escape(section.anchor)}"]`);if(target)target.scrollIntoView({behavior:'smooth',block:'start'});updateSectionControls();}
 
 function initEvents(){
+  document.querySelector('.site-header a[href="#catalogue"]')?.addEventListener('click',()=>{if(!$('#detailsPage').hidden)closeDetails();setMode('all')});
   $('#searchInput').addEventListener('input',e=>startGlobalSearch(e.target.value)); $('#varietyFilter').addEventListener('change',e=>syncFilter('variety',e.target.value)); $('#subjectFilter').addEventListener('change',e=>syncFilter('subject',e.target.value)); $('#sortFilter').addEventListener('change',e=>syncFilter('sort',e.target.value)); $('#scriptFilter').addEventListener('change',e=>syncFilter('script',e.target.value)); $('#formatFilter').addEventListener('change',e=>syncFilter('format',e.target.value)); $('#availabilityFilter').addEventListener('change',e=>syncFilter('availability',e.target.value));
-  $('#moreFiltersButton').addEventListener('click',()=>{const a=$('#advancedFilters'),open=a.hidden;a.hidden=!open;$('#moreFiltersButton').setAttribute('aria-expanded',String(open));$('#moreFiltersButton').firstElementChild.textContent=t(open?'fewerFilters':'moreFilters')});
-  $('#clearFiltersButton').addEventListener('click',()=>{Object.assign(state,{q:'',variety:'all',subject:'all',script:'all',format:'all',availability:'all',sort:'catalogue'});$('#searchInput').value='';applyLocale();updateUrl()});
+  $('#moreFiltersButton').addEventListener('click',()=>{const a=$('#advancedFilters'),open=a.hidden;a.hidden=!open;$('#moreFiltersButton').setAttribute('aria-expanded',String(open));$('#moreFiltersButton').querySelector('[data-i18n]').textContent=t('filters')});
+  $$('[data-library-mode]').forEach(button=>button.addEventListener('click',()=>setMode(button.dataset.libraryMode)));
+  $('#clearFiltersButton').addEventListener('click',()=>{Object.assign(state,{mode:'all',q:'',variety:'all',subject:'all',script:'all',format:'all',availability:'all',sort:'catalogue'});$('#searchInput').value='';applyLocale();updateUrl()});
   $('#languageButton').addEventListener('click',()=>openDialog('languageDialog')); $('#suggestButton').addEventListener('click',()=>openDialog('suggestDialog')); $$('[data-close-dialog]').forEach(b=>b.addEventListener('click',()=>closeDialog(b.dataset.closeDialog))); $$('.dialog-backdrop').forEach(d=>d.addEventListener('mousedown',e=>{if(e.target===d)closeDialog(d.id)}));
   $('#detailsBack').addEventListener('click',closeDetails); $('#readerClose').addEventListener('click',closeReader); $('#fontDown').addEventListener('click',()=>{readerFont=Math.max(14,readerFont-2);localStorage.setItem('kdl_reader_font',readerFont);applyReaderPrefs()}); $('#fontUp').addEventListener('click',()=>{readerFont=Math.min(28,readerFont+2);localStorage.setItem('kdl_reader_font',readerFont);applyReaderPrefs()}); $('#readerWidth').addEventListener('click',()=>{wideReader=!wideReader;localStorage.setItem('kdl_reader_wide',wideReader?'1':'0');applyReaderPrefs()}); $('#prevSection').addEventListener('click',()=>goSection(-1));$('#nextSection').addEventListener('click',()=>goSection(1));
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#reader').hidden)closeReader()});
-  window.addEventListener('popstate',()=>{const p=new URL(location.href).searchParams;const slug=p.get('book');if(slug)showDetails(slug,false);else{$('#detailsPage').hidden=true;$('#cataloguePage').hidden=false}});
+  window.addEventListener('popstate',()=>{const p=new URL(location.href).searchParams;closeReader(false);readUrlState();applyLocale();if(!p.get('book')){$('#detailsPage').hidden=true;$('#cataloguePage').hidden=false}if(p.get('read'))openReader(bookBySlug(p.get('read')),false)});
+  $('#reader').addEventListener('keydown',e=>{if(e.key!=='Tab')return;const nodes=$$('a[href],button,iframe',$('#reader')).filter(x=>!x.hidden&&!x.disabled&&x.getClientRects().length);const first=nodes[0],last=nodes[nodes.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}});
 }
 
-readUrlState(); initEvents(); applyLocale();
-if(!localStorage.getItem('kdl_seen_language')){localStorage.setItem('kdl_seen_language','1');setTimeout(()=>openDialog('languageDialog'),150)}
+function setMode(mode){
+ state.mode=mode;state.subject=mode==='stories'?'folklore':mode==='poetry'?'poetry':'all';state.format=mode==='pdf'?'pdf':'all';
+ $('#subjectFilter').value=state.subject;$('#formatFilter').value=state.format;renderCatalogue();updateUrl();
+}
+readUrlState();initEvents();applyLocale();
+const initialRead=new URL(location.href).searchParams.get('read');if(initialRead)openReader(bookBySlug(initialRead),false);
+if(location.hash==='#kurmanjiStoryShelf'||location.hash==='#storyCorner'){state.variety=location.hash==='#storyCorner'?'ckb':'kmr';$('#varietyFilter').value=state.variety;setMode('stories')}
+if(location.hash==='#voicesBrowsePanel')setMode('voices');
