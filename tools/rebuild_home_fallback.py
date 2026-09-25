@@ -40,7 +40,7 @@ def main():
     text = p.read_text()
     start = text.index('          <div class="book-grid" id="bookGrid"')
     end = text.index('          <div class="empty-state" id="emptyState"', start)
-    pagination = '          <div class="load-more-wrap"><button id="loadMoreBooks" class="secondary-button" type="button" data-i18n="showMoreBooks">Show more books</button></div>\n'
+    pagination = '          <div class="load-more-wrap"><button id="loadMoreBooks" class="secondary-button" type="button" data-i18n="loadMore">Show more books</button></div>\n'
     text = text[:start] + '          <div class="book-grid" id="bookGrid">\n' + '\n'.join(cards) + '\n          </div>\n' + pagination + text[end:]
     p.write_text(text)
     print(f'Rebuilt shelf with {len(records)} catalogue records and {len(stories)} story entries.')
