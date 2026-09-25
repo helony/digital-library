@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#11213d">
   <title>Kurdish Digital Library</title>
   <link rel="stylesheet" href="assets/styles.css?v=6.0">
-  <link rel="stylesheet" href="assets/library.css?v=6.2">
+  <link rel="stylesheet" href="assets/library.css?v=6.3">
 
   <style>
     #suggestForm .honeypot { position:absolute !important; left:-9999px !important; width:1px !important; height:1px !important; opacity:0 !important; pointer-events:none !important; }
@@ -47,6 +47,16 @@
           </div>
           <div class="welcome-art" aria-hidden="true"><img src="assets/kurdish-kilim-motif.png" alt="" width="1024" height="341" fetchpriority="high"></div>
         </section>
+        <section class="library-toolbar explore-picker" aria-labelledby="exploreTitle">
+          <h2 id="exploreTitle" data-i18n="explorePrompt">What would you like to explore?</h2>
+          <div class="shelf-tabs" role="group" aria-label="Browse books">
+            <button type="button" data-library-mode="all" aria-pressed="true" class="is-active"><span class="explore-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="25" height="25"><path d="M3 5h6a4 4 0 0 1 3 1.4A4 4 0 0 1 15 5h6v14h-6a4 4 0 0 0-3 1.4A4 4 0 0 0 9 19H3z"/><path d="M12 6.4v14"/></svg></span><span data-i18n="allBooks">All books</span></button>
+            <button type="button" data-library-mode="stories" aria-pressed="false"><span class="explore-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="25" height="25"><path d="M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-6 3V6a2 2 0 0 1 2-2Z"/><path d="M7 9h10M7 13h6"/></svg></span><span data-i18n="storiesTab">Stories</span></button>
+            <button type="button" data-library-mode="poetry" aria-pressed="false"><span class="explore-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="25" height="25"><path d="m14 4 6 6-8 8-7 1 1-7zM5 19l6-6"/><circle cx="12" cy="12" r="1"/></svg></span><span data-i18n="poetryTab">Poetry</span></button>
+            <button type="button" data-library-mode="pdf" aria-pressed="false"><span class="explore-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="25" height="25"><path d="M14 3H5v18h14V8zM14 3v5h5M12 11v6m-3-3 3 3 3-3"/></svg></span><span>PDF</span></button>
+            <button type="button" data-library-mode="voices" aria-pressed="false"><span class="explore-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="25" height="25"><path d="M5 10v4M9 6v12M13 3v18M17 7v10M21 10v4"/></svg></span><span data-i18n="listen">Listen</span></button>
+          </div>
+        </section>
         <section class="reading-start" id="readingStart" aria-labelledby="readingStartTitle">
           <div class="reading-start-intro">
             <h2 id="readingStartTitle" data-i18n="startTitle">A place to begin</h2>
@@ -55,30 +65,20 @@
           <a class="reading-pick" href="?read=story-mame-alan" data-featured-read="story-mame-alan">
             <img src="assets/motifs/folk-oral.svg" alt="" width="62" height="76">
             <span class="reading-pick-copy"><span class="reading-pick-label" data-i18n="startStory">Step into a story</span><strong dir="auto">Mamê Alan</strong><span class="reading-pick-note" data-i18n="startStoryNote">Kurmancî · A modern retelling</span></span>
-            <span class="reading-pick-arrow" aria-hidden="true">↗</span>
+            <span class="reading-pick-arrow" aria-hidden="true">→</span>
           </a>
           <a class="reading-pick" href="?read=zembilfiros" data-featured-read="zembilfiros">
             <img src="assets/motifs/love-classical.svg" alt="" width="62" height="76">
             <span class="reading-pick-copy"><span class="reading-pick-label" data-i18n="startPoem">Spend a moment with poetry</span><strong dir="auto">Zembîlfiroş</strong><span class="reading-pick-note" data-i18n="startPoemNote">Kurmancî · A classical poem</span></span>
-            <span class="reading-pick-arrow" aria-hidden="true">↗</span>
+            <span class="reading-pick-arrow" aria-hidden="true">→</span>
           </a>
         </section>
-        <div class="library-toolbar">
-          <div class="shelf-tabs" role="group" aria-label="Browse books">
-            <button type="button" data-library-mode="all" aria-pressed="true" class="is-active" data-i18n="allBooks">All books</button>
-            <button type="button" data-library-mode="stories" aria-pressed="false" data-i18n="storiesTab">Stories</button>
-            <button type="button" data-library-mode="poetry" aria-pressed="false" data-i18n="poetryTab">Poetry</button>
-            <button type="button" data-library-mode="pdf" aria-pressed="false">PDF</button>
-            <button type="button" data-library-mode="voices" aria-pressed="false" data-i18n="listen">Listen</button>
-          </div>
-          <button class="filter-toggle" id="moreFiltersButton" type="button" aria-expanded="false" aria-controls="advancedFilters"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3"/><circle cx="15" cy="17" r="3"/></svg><span data-i18n="filters">Filters</span><span id="filterCount" hidden></span></button>
-        </div>
         <section class="voices-browser" id="voicesBrowsePanel" aria-labelledby="voicesBrowseTitle" hidden>
           <div class="voices-browser-head">
             <div>
               <div class="page-kicker">VOICES · DENG · ZIMANÊ ZINDÎ</div>
               <h2 id="voicesBrowseTitle">Hear Kurdish as it is spoken</h2>
-              <p>Open-licensed recordings of Kurdish speakers and pronunciation archives. This is the beginning of an oral collection alongside the books.</p>
+              <p data-i18n="listeningIntro">Listen to Kurdish speakers in their own words.</p>
             </div>
             <span class="voices-open-chip">Open media · Sources credited</span>
           </div>
@@ -152,6 +152,7 @@
 
         <section class="catalogue-panel" id="catalogue" aria-labelledby="catalogueHeading">
           <h2 class="visually-hidden" id="catalogueHeading" data-i18n="catalogue">Catalogue</h2>
+          <div class="shelf-heading"><h2 data-i18n="exploreLibrary">Explore the library</h2><div><button class="filter-toggle" id="moreFiltersButton" type="button" aria-expanded="false" aria-controls="advancedFilters"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3"/><circle cx="15" cy="17" r="3"/></svg><span data-i18n="filters">Filters</span><span id="filterCount" hidden></span></button><span id="resultsCount" role="status" aria-live="polite"></span><button class="text-button" id="clearFiltersButton" type="button" data-i18n="clearFilters" hidden>Clear filters</button></div></div>
           <div class="advanced-filters" id="advancedFilters" hidden>
             <label class="field"><span data-i18n="bookLanguage">Book language</span><select id="varietyFilter"></select></label>
             <label class="field"><span data-i18n="subject">Subject</span><select id="subjectFilter"></select></label>
@@ -160,7 +161,6 @@
             <label class="field"><span data-i18n="script">Script</span><select id="scriptFilter"></select></label>
             <label class="field"><span data-i18n="availability">Availability</span><select id="availabilityFilter"></select></label>
           </div>
-          <div class="shelf-heading"><h2 data-i18n="exploreLibrary">Explore the library</h2><div><span id="resultsCount" role="status" aria-live="polite"></span><button class="text-button" id="clearFiltersButton" type="button" data-i18n="clearFilters" hidden>Clear filters</button></div></div>
           <div class="book-grid" id="bookGrid">
 <article class="book-card static-book-card" data-slug="mem-u-zin">
 <a class="cover tone-gold " href="books/mem-u-zin/content.html"><span class="cover-language">Kurmancî</span><h3 class="cover-title" dir="auto">Mem û Zîn</h3><img class="cover-ornament" src="assets/motifs/love-classical.svg" alt="" loading="lazy"><span class="edition-note">Available section</span></a>
@@ -432,7 +432,7 @@
 
   <script src="assets/catalogue-data.js?v=6.1"></script>
   <script src="assets/story-data.js?v=6.0"></script>
-  <script src="assets/library-i18n.js?v=6.2"></script>
+  <script src="assets/library-i18n.js?v=6.3"></script>
   <script src="assets/app.js?v=6.2"></script>
 
   <script>
@@ -597,6 +597,7 @@
       const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
       let node;
       while ((node = walker.nextNode())) {
+        if(node.parentElement.closest('[data-i18n]')) continue;
         const raw = originals.has(node) ? originals.get(node) : node.nodeValue;
         if (!originals.has(node)) originals.set(node, raw);
         const match = raw.match(/^(\s*)([\s\S]*?)(\s*)$/);

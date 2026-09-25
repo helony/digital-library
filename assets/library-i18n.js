@@ -10,3 +10,8 @@ Object.assign(window.KDL_INTERFACE.en,{startTitle:'A place to begin',startIntro:
 Object.assign(window.KDL_INTERFACE.kmr,{startTitle:'Ji vir dest pê bike',startIntro:'Çîrokek bixwîne. Helbestek keşf bike.',startStory:'Bikeve nav çîrokekê',startStoryNote:'Kurmancî · Vegotineke nûjen',startPoem:'Demek bi helbestê re',startPoemNote:'Kurmancî · Helbesteke klasîk'});
 Object.assign(window.KDL_INTERFACE.ckb,{startTitle:'لە ئێرەوە دەست پێ بکە',startIntro:'چیرۆکێک بخوێنەوە. شیعرێک بدۆزەوە.',startStory:'بچۆ ناو چیرۆکێک',startStoryNote:'کورمانجی · گێڕانەوەیەکی نوێ',startPoem:'ساتێک لەگەڵ شیعر',startPoemNote:'کورمانجی · شیعرێکی کلاسیکی'});
 Object.assign(window.KDL_INTERFACE.diq,{startTitle:'Tîya ra dest pê bike',startIntro:'Çîrokêk bıwane. Şiirêk keşf bike.',startStory:'Çîrokêk bıwane',startStoryNote:'Kurmancî · Vateyo newe',startPoem:'Wextêk bi şiirî',startPoemNote:'Kurmancî · Şiirê klasîk'});
+
+Object.assign(window.KDL_INTERFACE.en,{explorePrompt:'What would you like to explore?',listeningIntro:'Listen to Kurdish speakers in their own words.'});
+Object.assign(window.KDL_INTERFACE.kmr,{explorePrompt:'Tu dixwazî çi keşf bikî?',listeningIntro:'Li axaftina Kurdî bi dengê axêverên wê guhdarî bike.'});
+Object.assign(window.KDL_INTERFACE.ckb,{explorePrompt:'حەز دەکەیت چی بدۆزیتەوە؟',listeningIntro:'گوێ لە قسەکەرانی کوردی بگرە، بە وشەکانی خۆیان.'});
+Object.assign(window.KDL_INTERFACE.diq,{explorePrompt:'Ti wazenî çi keşf bikerî?',listeningIntro:'Goş bide qiseykerdoxê Kurdî.'});
