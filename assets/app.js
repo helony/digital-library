@@ -92,12 +92,13 @@ function shelfDescription(b){
 }
 function readLabel(b){return b.sourceOnly?t('sourceOnly'):t('readNow')}
 function readingUrl(b){return b.format==='web'&&!b.localStory?b.url:`?read=${encodeURIComponent(b.slug)}`}
+let dengbejExpanded=false;
 function renderDengbej(){
   const query=normalizeText($('#dengbejSearch').value);
   let count=0;
   $$('#dengbej .dengbej-card').forEach((card,index)=>{
     const searchable=normalizeText($$('h4,p',card).map(el=>el.textContent).join(' '));
-    const visible=query?matchesSearchText(searchable,query):index<3;
+    const visible=query?matchesSearchText(searchable,query):dengbejExpanded||index<3;
     card.hidden=!visible;if(visible)count++;
     const frame=$('iframe[data-src]',card);
     if(frame){if(state.mode==='voices'&&visible){if(!frame.getAttribute('src'))frame.src=frame.dataset.src;}else frame.removeAttribute('src');}
@@ -105,6 +106,9 @@ function renderDengbej(){
   $('#dengbejClear').hidden=!$('#dengbejSearch').value;
   $('#dengbejResults').textContent=query?t('dengbejResults').replace('{count}',count):'';
   $('#dengbejEmpty').hidden=!query||count>0;
+  $('#dengbejBrowse').hidden=!!query;
+  $('#dengbejToggle').textContent=t(dengbejExpanded?'showLessDengbej':'seeAllDengbej');
+  $('#dengbejToggle').setAttribute('aria-expanded',String(dengbejExpanded));
 }
 function markMode(){
   $$('[data-library-mode]').forEach(button=>{const active=button.dataset.libraryMode===state.mode;button.classList.toggle('is-active',active);button.setAttribute('aria-pressed',String(active))});
@@ -252,6 +256,7 @@ function goSection(delta){if(!readerSections.length)return;currentSection=Math.m
 
 function initEvents(){
   $('#dengbejSearch').addEventListener('input',renderDengbej);
+  $('#dengbejToggle').addEventListener('click',()=>{dengbejExpanded=!dengbejExpanded;renderDengbej()});
   $('#dengbejClear').addEventListener('click',()=>{$('#dengbejSearch').value='';renderDengbej();$('#dengbejSearch').focus()});
   $$('[data-featured-read]').forEach(link=>link.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();openReader(bookBySlug(link.dataset.featuredRead))}));
   document.querySelector('.site-header a[href="#catalogue"]')?.addEventListener('click',()=>{if(!$('#detailsPage').hidden)closeDetails();setMode('all')});

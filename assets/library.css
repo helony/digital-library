@@ -213,3 +213,7 @@
 .standalone-story>.story-reader{max-width:1040px;margin:auto}
 @media(min-width:800px){.illustrated-page{grid-template-columns:1fr 1fr;gap:36px}}
 @media(max-width:520px){.standalone-story{padding:16px}.illustrated-page{gap:16px;padding:20px 0}.illustrated-page img{max-height:340px}}
+
+/* Browse more recordings without expanding the initial three-card preview. */
+.dengbej-browse{grid-column:1/-1;display:flex;justify-content:center;padding:4px 0 8px}
+.dengbej-browse .secondary-button{min-height:46px;padding:12px 24px;font-size:16px;cursor:pointer}

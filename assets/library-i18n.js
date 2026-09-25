@@ -29,3 +29,8 @@ Object.assign(window.KDL_INTERFACE.ckb,{searchDengbej:'لە هەموو تۆما�
 Object.assign(window.KDL_INTERFACE.diq,{searchDengbej:'Hemû qeydê dengbêjan de bigêre',dengbejSearchHint:'Bi nameyê kilamî yan dengbêjî bigêre…',clearDengbejSearch:'Gêrayışî pak bike',dengbejResults:'{count} encam',dengbejEmpty:'Qeydêk nêame dîtış. Bi nameyêkê bînî bigêre.'});
 
 Object.assign(window.KDL_INTERFACE.en,{"rights_institutional_pdf": "This PDF is provided for reading by the Kurdish Institute of Paris. Copyright in the edition and translation may remain with their respective rights holders. The file is embedded from the institute; no redistribution permission is asserted.", "rights_cc_by_4": "This illustrated story is licensed under CC BY 4.0. Credit its author, illustrator, translator and African Storybook / Storybooks Canada when reusing it.", "rights_cc_by_nc_3": "This illustrated story is licensed under CC BY-NC 3.0 for noncommercial reuse with attribution. Credit its author, illustrator, translator and African Storybook / Storybooks Canada."});
+
+Object.assign(window.KDL_INTERFACE.en,{seeAllDengbej:'See all Dengbêj',showLessDengbej:'Show less'});
+Object.assign(window.KDL_INTERFACE.kmr,{seeAllDengbej:'Hemû dengbêjan bibîne',showLessDengbej:'Kêmtir nîşan bide'});
+Object.assign(window.KDL_INTERFACE.ckb,{seeAllDengbej:'هەموو دەنگبێژەکان ببینە',showLessDengbej:'کەمتر پیشان بدە'});
+Object.assign(window.KDL_INTERFACE.diq,{seeAllDengbej:'Hemû dengbêjan bivîne',showLessDengbej:'Tayêr nîşan bide'});
