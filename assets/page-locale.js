@@ -52,7 +52,7 @@
     'Review': 'review', 'Local copy': 'localCopy', 'External fallback': 'externalFallback',
     'Open access · Clear provenance · Preservation-first': 'footer',
     'Independent catalogue & preservation archive': 'brandSub',
-    'Loading catalogue…': 'loading', 'Download PDF': 'downloadPdf',
+    'Loading catalogue…': 'loading', 'Read PDF': 'openPdf', 'Download PDF': 'downloadPdf',
   };
   for (const [key, value] of Object.entries(dictionaries.en)) {
     if (key.startsWith('rights_')) phraseKeys[value] = key;
@@ -68,11 +68,12 @@
       if (element.children.length) return;
       if (!originalText.has(element)) originalText.set(element, element.textContent);
       const raw = originalText.get(element).trim();
-      const arrow = raw.startsWith('← ') ? '← ' : raw.endsWith(' →') ? ' →' : '';
-      const phrase = raw.replace(/^←\s*|\s*→$/g, '');
+      const leadingArrow = raw.match(/^[←→↑↓]\s*/)?.[0] || '';
+      const trailingArrow = raw.match(/\s*[←→↑↓]$/)?.[0] || '';
+      const phrase = raw.slice(leadingArrow.length, trailingArrow ? -trailingArrow.length : undefined).trim();
       if (phraseKeys[phrase]) {
         const label = t(phraseKeys[phrase]);
-        translatedText(element, arrow.startsWith('←') ? `← ${label}` : label + arrow);
+        translatedText(element, `${leadingArrow}${label}${trailingArrow}`);
       } else if (phrase === 'Catalogue JSON') translatedText(element, `${t('catalogue')} JSON`);
       else if (phrase === 'Catalogue CSV') translatedText(element, `${t('catalogue')} CSV`);
     });
@@ -103,9 +104,16 @@
     if (paragraphs[1] && dictionaries[locale][book.rightsKey]) bind(paragraphs[1], book.rightsKey);
     const metadata = paragraphs[2];
     if (metadata) translatedText(metadata, [book.year, t(book.script), book.kdlId].filter(Boolean).join(' · '));
-    // Legacy static records have an additional English archival policy note.
-    // It is source information, not a translated interface label.
-    if (paragraphs[3]) { paragraphs[3].lang = 'en'; paragraphs[3].dir = 'ltr'; }
+    // Only replace our three generated policy notes. Unrecognised source prose
+    // remains in its original language, and the original text survives switching.
+    const policy = paragraphs[3];
+    if (policy) {
+      if (!originalText.has(policy)) originalText.set(policy, policy.textContent);
+      const key = ['archivePolicyAutomatic', 'archivePolicyManual', 'archivePolicyLicensed']
+        .find(candidate => dictionaries.en[candidate] === originalText.get(policy).trim());
+      if (key) bind(policy, key);
+      else { policy.lang = 'en'; policy.dir = 'ltr'; }
+    }
   }
 
   function applyInformationalPages() {

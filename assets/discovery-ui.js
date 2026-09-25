@@ -1,7 +1,16 @@
 /* Discovery, listening and a small personal shelf, shared with app.js. */
 const MEDIA=window.KDL_MEDIA||{performers:[],recordings:[]};
-function localized(value){return typeof value==='string'?value:(value?.[state.locale]||value?.en||'')}
-function mediaLanguage(){return MEDIA.localeFallbacks?.[state.locale]||state.locale}
+function localizedContent(value){
+ if(typeof value==='string')return {text:value,language:''};
+ if(!value)return {text:'',language:''};
+ const fallback=MEDIA.localeFallbacks?.[state.locale];
+ const shared=fallback&&value[fallback]&&(!value[state.locale]||value[state.locale]===value[fallback]);
+ const language=shared?fallback:value[state.locale]?state.locale:value.en?'en':'';
+ return {text:value[language]||'',language};
+}
+function localized(value){return localizedContent(value).text}
+function mediaAttributes(value){const {language}=localizedContent(value);return language?` lang="${escapeHtml(language)}" dir="${LOCALES[language]?.dir==='rtl'?'rtl':'ltr'}"`:''}
+function mediaFallbackNote(value){const {language}=localizedContent(value);return language&&language!==state.locale?`<small class="media-language-note"${mediaAttributes(value)}>${escapeHtml(LOCALES[language]?.native||language)}</small>`:''}
 function performerById(id){return MEDIA.performers.find(p=>p.id===id)}
 function recordingById(id){return MEDIA.recordings.find(r=>r.id===id)}
 function performerLinks(r){return (r.performerIds||[]).map(id=>{const p=performerById(id);return p?`<a href="?mode=voices&performer=${encodeURIComponent(id)}&lang=${state.locale}" data-performer="${escapeHtml(id)}" dir="auto">${escapeHtml(p.name)}</a>`:''}).join(' · ')}
@@ -9,7 +18,7 @@ function recordingSearchText(r){return [r.title,r.credit,...Object.values(r.titl
 function performerPortrait(p){
  const portrait=p.portrait;if(!portrait)return '';
  const credit=localized(portrait.creditI18n)||portrait.credit||'';
- return `<figure class="performer-portrait"><img src="${escapeHtml(portrait.src)}" alt="${escapeHtml(localized(portrait.alt))}" width="240" height="240" loading="lazy"><figcaption>${portrait.source?`<a href="${escapeHtml(portrait.source)}" target="_blank" rel="noopener">${escapeHtml(credit)}</a>`:escapeHtml(credit)}${portrait.license&&portrait.type==='video-still'?` · <a href="${escapeHtml(portrait.licenseUrl)}" target="_blank" rel="noopener">${escapeHtml(portrait.license)}</a>`:''}</figcaption></figure>`;
+ return `<figure class="performer-portrait"><img src="${escapeHtml(portrait.src)}"${mediaAttributes(portrait.alt)} alt="${escapeHtml(localized(portrait.alt))}" width="240" height="240" loading="lazy"><figcaption${mediaAttributes(portrait.creditI18n)}>${portrait.source?`<a href="${escapeHtml(portrait.source)}" target="_blank" rel="noopener">${escapeHtml(credit)}</a>`:escapeHtml(credit)}${portrait.license&&portrait.type==='video-still'?` · <a href="${escapeHtml(portrait.licenseUrl)}" target="_blank" rel="noopener">${escapeHtml(portrait.license)}</a>`:''}</figcaption></figure>`;
 }
 function searchRecordings(q){return MEDIA.recordings.filter(r=>matchesSearchText(normalizeText(recordingSearchText(r)),q))}
 function recordingCard(r){
@@ -17,7 +26,7 @@ function recordingCard(r){
  const preview=r.thumbnailUrl||r.poster;
  const media=r.embedUrl?`<button class="recording-play" type="button" data-play="${r.id}" aria-label="${escapeHtml(t('listen')+': '+localized(r.titleTranslations||r.title))}">${preview?`<img src="${escapeHtml(preview)}" alt="" loading="lazy">`:''}<span aria-hidden="true">▶</span></button>`:r.videoUrl?`<video controls playsinline preload="none" poster="${escapeHtml(r.poster||'')}" aria-label="${title}"><source src="${escapeHtml(r.videoUrl)}" type="video/webm"></video>`:`<span class="archive-symbol" aria-hidden="true">◉</span>`;
  const related=(r.relatedBooks||[]).map(slug=>bookBySlug(slug)).filter(Boolean);
- return `<article class="dengbej-card dengbej-recording" data-recording="${r.id}"><div class="recording-media">${media}</div><div class="dengbej-recording-body"><h4 dir="auto">${title}</h4><p class="performer-links">${performerLinks(r)}</p>${r.kind==='archive'||r.kind==='spoken'?`<p>${escapeHtml(localized(r.description))}</p>`:''}${related.length?`<div class="related-reading"><span>${escapeHtml(t('relatedBooks'))}</span>${related.map(b=>`<a href="${escapeHtml(readingUrl(b))}" data-related-read="${b.slug}">${escapeHtml(b.title)} →</a>`).join('')}</div>`:''}<a class="text-button" href="${escapeHtml(r.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(t(r.embedUrl?'listenYoutube':r.kind==='archive'?'listenArchive':'sourceAndRights'))} ↗</a><span class="dengbej-credit">${r.creditUrl?`<a href="${escapeHtml(r.creditUrl)}" target="_blank" rel="noopener">${escapeHtml(r.credit||'')} ↗</a>`:escapeHtml(r.credit||'')}${r.license?' · '+escapeHtml(typeof r.license==='string'?r.license:r.license.label||''):''}</span><button class="text-button media-report" type="button" data-report-media="${r.id}">${escapeHtml(t('reportProblem'))}</button></div></article>`;
+ return `<article class="dengbej-card dengbej-recording" data-recording="${r.id}"><div class="recording-media">${media}</div><div class="dengbej-recording-body"><h4${mediaAttributes(r.titleTranslations)||' dir="auto"'}>${title}</h4><p class="performer-links">${performerLinks(r)}</p>${r.kind==='archive'||r.kind==='spoken'?`<p${mediaAttributes(r.description)}>${escapeHtml(localized(r.description))}${mediaFallbackNote(r.description)}</p>`:''}${related.length?`<div class="related-reading"><span>${escapeHtml(t('relatedBooks'))}</span>${related.map(b=>`<a href="${escapeHtml(readingUrl(b))}" data-related-read="${b.slug}">${escapeHtml(b.title)} →</a>`).join('')}</div>`:''}<a class="text-button" href="${escapeHtml(r.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(t(r.embedUrl?'listenYoutube':r.kind==='archive'?'listenArchive':'sourceAndRights'))} ↗</a><span class="dengbej-credit">${r.creditUrl?`<a href="${escapeHtml(r.creditUrl)}" target="_blank" rel="noopener">${escapeHtml(r.credit||'')} ↗</a>`:escapeHtml(r.credit||'')}${r.license?' · '+escapeHtml(typeof r.license==='string'?r.license:r.license.label||''):''}</span><button class="text-button media-report" type="button" data-report-media="${r.id}">${escapeHtml(t('reportProblem'))}</button></div></article>`;
 }
 function renderDengbej(){
  const query=$('#dengbejSearch').value;
@@ -32,7 +41,7 @@ function renderDengbej(){
  $('#dengbejToggle').textContent=t(dengbejExpanded?'showLessDengbej':'seeAllDengbej');
  $('#dengbejToggle').setAttribute('aria-expanded',String(dengbejExpanded));
  $('#performerProfile').hidden=!performer;
- $('#performerProfile').innerHTML=performer?`<button type="button" class="text-button" data-performer-back>← ${escapeHtml(t('backToListening'))}</button><div class="performer-profile-content">${performerPortrait(performer)}<div><h2 tabindex="-1" dir="auto">${escapeHtml(performer.name)}</h2><p lang="${mediaLanguage()}">${escapeHtml(localized(performer.intro))}</p>${mediaLanguage()!==state.locale?'<small lang="ckb">ئەم ناساندنە بە سۆرانی نووسراوە.</small>':''}${performer.sources?.length?`<details class="performer-sources"><summary>${escapeHtml(t('sourceAndRights'))}</summary>${performer.sources.map(source=>`<a href="${escapeHtml(source.url)}" target="_blank" rel="noopener">${escapeHtml(source.title)} ↗</a>`).join('')}</details>`:''}</div></div>`:'';
+ $('#performerProfile').innerHTML=performer?`<button type="button" class="text-button" data-performer-back>← ${escapeHtml(t('backToListening'))}</button><div class="performer-profile-content">${performerPortrait(performer)}<div><h2 tabindex="-1" dir="auto">${escapeHtml(performer.name)}</h2><p${mediaAttributes(performer.intro)}>${escapeHtml(localized(performer.intro))}${mediaFallbackNote(performer.intro)}</p>${performer.sources?.length?`<details class="performer-sources"><summary>${escapeHtml(t('sourceAndRights'))}</summary>${performer.sources.map(source=>`<a href="${escapeHtml(source.url)}" target="_blank" rel="noopener">${escapeHtml(source.title)} ↗</a>`).join('')}</details>`:''}</div></div>`:'';
  bindDiscoveryActions($('#voicesBrowsePanel'));
 }
 function renderSpoken(){
@@ -69,7 +78,7 @@ function openRecording(id,update=true){
 }
 function relatedPerformanceHtml(b){
  const records=MEDIA.recordings.filter(r=>(r.relatedBooks||[]).includes(b.slug));
- return records.length?`<section class="related-performances"><h2>${escapeHtml(t('relatedPerformances'))}</h2><p>${escapeHtml(localized(records[0].connection)||t('connectionNote'))}</p>${records.map(r=>`<a class="related-performance" data-open-recording="${r.id}" href="?mode=voices&recording=${r.id}&lang=${state.locale}">${r.thumbnailUrl?`<img src="${escapeHtml(r.thumbnailUrl)}" alt="" loading="lazy">`:''}<span><strong>${escapeHtml(localized(r.titleTranslations||r.title))}</strong><span>${escapeHtml((r.performerIds||[]).map(id=>performerById(id)?.name||'').join(' · '))}</span><small>${escapeHtml(r.credit||'')}</small></span><span aria-hidden="true">▶</span></a>`).join('')}</section>`:'';
+ return records.length?`<section class="related-performances"><h2>${escapeHtml(t('relatedPerformances'))}</h2><p${mediaAttributes(records[0].connection)}>${escapeHtml(localized(records[0].connection)||t('connectionNote'))}${mediaFallbackNote(records[0].connection)}</p>${records.map(r=>`<a class="related-performance" data-open-recording="${r.id}" href="?mode=voices&recording=${r.id}&lang=${state.locale}">${r.thumbnailUrl?`<img src="${escapeHtml(r.thumbnailUrl)}" alt="" loading="lazy">`:''}<span><strong>${escapeHtml(localized(r.titleTranslations||r.title))}</strong><span>${escapeHtml((r.performerIds||[]).map(id=>performerById(id)?.name||'').join(' · '))}</span><small>${escapeHtml(r.credit||'')}</small></span><span aria-hidden="true">▶</span></a>`).join('')}</section>`:'';
 }
 function persistShelf(){safeStorage.setItem('kdl_personal_shelf',JSON.stringify(personalShelf))}
 function saveButton(b){return `<button type="button" class="save-book${personalShelf.saved[b.slug]?' is-saved':''}" data-save="${b.slug}" aria-pressed="${!!personalShelf.saved[b.slug]}" aria-label="${escapeHtml(t(personalShelf.saved[b.slug]?'unsaveBook':'saveBook')+': '+b.title)}" title="${escapeHtml(t(personalShelf.saved[b.slug]?'unsaveBook':'saveBook'))}">${personalShelf.saved[b.slug]?'♥':'♡'}</button>`}

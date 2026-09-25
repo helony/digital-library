@@ -270,7 +270,10 @@ window.KDL_COMPLETE = {
     "aboutPreserve": "Books keep their original source links. Where reuse permission allows it, the library preserves a reading copy so a changed source link does not remove access.",
     "aboutRightsHeading": "Rights and reuse",
     "aboutRights": "A book being readable online does not automatically permit redistribution. Check the source and licence for each edition before reusing it.",
-    "archiveIntro": "The library checks whether eligible reading copies are present. Local copy means a file is hosted here; external source means reading depends on another site. Manual review means automatic copying is disabled."
+    "archiveIntro": "The library checks whether eligible reading copies are present. Local copy means a file is hosted here; external source means reading depends on another site. Manual review means automatic copying is disabled.",
+    "archivePolicyAutomatic": "This record is eligible for a library-hosted preservation copy. When the local archive file is present, the main reader prefers it over the external source.",
+    "archivePolicyManual": "This record is not automatically mirrored by the preservation tool. The rights status requires jurisdiction-specific or manual review.",
+    "archivePolicyLicensed": "An unmodified publisher PDF is hosted here for noncommercial reading under CC BY-NC 4.0. The original credits and license notices are retained."
   },
   "kmr": {
     "label": "Kurmancî",
@@ -537,7 +540,10 @@ window.KDL_COMPLETE = {
     "aboutPreserve": "Girêdanên çavkaniyên orîjînal tên parastin. Dema destûra bikaranînê hebe, pirtûkxane kopiyeke xwendinê diparêze da ku guhertina girêdanê gihîştinê nebirîne.",
     "aboutRightsHeading": "Maf û bikaranîna nû",
     "aboutRights": "Xwendina pirtûkekê li ser înternetê bixwe destûra belavkirinê nade. Berî bikaranîna nû, çavkanî û destûra her çapê kontrol bike.",
-    "archiveIntro": "Pirtûkxane hebûna kopiyên xwendinê yên destûrdayî kontrol dike. Kopiya li vir dosyayeke li vê malperê ye; çavkaniya derveyî bi malpereke din ve girêdayî ye. Kontrola destî tê wê maneyê ku kopîkirina xweber neçalak e."
+    "archiveIntro": "Pirtûkxane hebûna kopiyên xwendinê yên destûrdayî kontrol dike. Kopiya li vir dosyayeke li vê malperê ye; çavkaniya derveyî bi malpereke din ve girêdayî ye. Kontrola destî tê wê maneyê ku kopîkirina xweber neçalak e.",
+    "archivePolicyAutomatic": "Ev tomar ji bo kopiyeke parastinê ya li pirtûkxaneyê guncaw e. Dema dosyeya arşîvê li vir hebe, xwînera sereke wê li şûna çavkaniya derveyî bikar tîne.",
+    "archivePolicyManual": "Amûra parastinê vê tomarê bi xweber kopî nake. Rewşa mafan li gorî qanûnên herêmê an bi kontrola destî divê were nirxandin.",
+    "archivePolicyLicensed": "PDFa neguherandî ya weşanxaneyê li vir bi CC BY-NC 4.0 ji bo xwendina ne-bazirganî tê dayîn. Navdêrkirin û agahiyên destûra orîjînal hatine parastin."
   },
   "ckb": {
     "label": "سۆرانی",
@@ -804,7 +810,10 @@ window.KDL_COMPLETE = {
     "aboutPreserve": "بەستەری سەرچاوە ڕەسەنەکان دەپارێزرێت. لەو شوێنانەی مۆڵەتی دووبارە بەکارهێنان ڕێگە دەدات، کتێبخانە کۆپییەکی خوێندنەوە دەپارێزێت تا گۆڕانی بەستەر دەستگەیشتن نەبڕێت.",
     "aboutRightsHeading": "ماف و دووبارە بەکارهێنان",
     "aboutRights": "بەردەستبوونی کتێبێک بۆ خوێندنەوەی ئۆنلاین خۆکارانە مۆڵەتی بڵاوکردنەوە نادات. پێش دووبارە بەکارهێنان، سەرچاوە و مۆڵەتی هەر چاپێک بپشکنە.",
-    "archiveIntro": "کتێبخانە بوونی کۆپییە ڕێگەپێدراوەکانی خوێندنەوە دەپشکنێت. کۆپی ناوخۆیی واتە فایلێک لێرە میوانداریکراوە؛ سەرچاوەی دەرەکی واتە خوێندنەوە بە ماڵپەڕێکی ترەوە بەستراوە. پشکنینی دەستی واتە کۆپیکردنی خۆکار ناچالاکە."
+    "archiveIntro": "کتێبخانە بوونی کۆپییە ڕێگەپێدراوەکانی خوێندنەوە دەپشکنێت. کۆپی ناوخۆیی واتە فایلێک لێرە میوانداریکراوە؛ سەرچاوەی دەرەکی واتە خوێندنەوە بە ماڵپەڕێکی ترەوە بەستراوە. پشکنینی دەستی واتە کۆپیکردنی خۆکار ناچالاکە.",
+    "archivePolicyAutomatic": "ئەم تۆمارە گونجاوە بۆ کۆپییەکی پاراستن لە کتێبخانەدا. کاتێک فایلی ئەرشیڤ لێرە هەبێت، خوێنەرەوەی سەرەکی لەبری سەرچاوەی دەرەکی ئەو کۆپییە بەکاردەهێنێت.",
+    "archivePolicyManual": "ئامرازی پاراستن ئەم تۆمارە بە خۆکار کۆپی ناکات. دۆخی مافەکان پێویستی بە پشکنین بەپێی یاسای ناوچەکە یان پشکنینی دەستی هەیە.",
+    "archivePolicyLicensed": "PDFی بێگۆڕانی بڵاوکەرەوە لێرە بە CC BY-NC 4.0 بۆ خوێندنەوەی نابازرگانی پێشکەش دەکرێت. ناوهێنان و ئاگادارکردنەوەکانی مۆڵەتی ڕەسەن پارێزراون."
   },
   "diq": {
     "label": "Zazakî",
@@ -1071,7 +1080,10 @@ window.KDL_COMPLETE = {
     "aboutPreserve": "Linkê çımeyanê orijînalan parastî manenê. Destûrê bıkarnayışî ke est bo, kıtabxane kopyayê wanayışî parastena ke vurîyayışê linkî destresî nêbirno.",
     "aboutRightsHeading": "Heq û reyna bıkarnayış",
     "aboutRights": "Wanayışê kıtabêkî serxet de bi xo destûrê belavkerdişî nêdano. Verê reyna bıkarnayışî, çıme û destûrê her çapî kontrol bike.",
-    "archiveIntro": "Kıtabxane estbîyayışê kopyayanê destûrdayeyî kontrol kena. Kopyaya tîya dosyaya na malperî ya; çımeya teberî bi malperêkê bînî girêdaye ya. Kontrolê destî yanî kopyakerdişê otomatîk neçalak o."
+    "archiveIntro": "Kıtabxane estbîyayışê kopyayanê destûrdayeyî kontrol kena. Kopyaya tîya dosyaya na malperî ya; çımeya teberî bi malperêkê bînî girêdaye ya. Kontrolê destî yanî kopyakerdişê otomatîk neçalak o.",
+    "archivePolicyAutomatic": "Na tomar qandê kopyayêka parastışî ya kıtabxaneyî munasib a. Wexto dosyaya arşîvî tîya esta, wanoxê sereke çımeya teberî ra verê na kopya bıkar ano.",
+    "archivePolicyManual": "Amûrê arşîvkerdişî na tomar bi otomatîk kopya nêkeno. Rewşa heqan kontrolê gorê qanûnanê herêmî yan kontrolê destî wazena.",
+    "archivePolicyLicensed": "PDFê weşanxaneyî bê vurnayış tîya CC BY-NC 4.0 de qandê wanayışê ne-ticarî yeno dayış. Name û notê destûrê orijînalî parastî yê."
   },
   "hac": {
     "label": "هەورامی",
@@ -1338,7 +1350,10 @@ window.KDL_COMPLETE = {
     "aboutPreserve": "بەستەرێ سەرچاوەی ئەسڵی پارێز کەرێنە. هەر جا مۆڵەتێ بەکارئانەی ڕێ دەرۆ، کتێبخانە کۆپیێ خوێندنە پارێزۆ تا وەگۆڕەی بەستەر دەستگەیشتن نەبڕۆ.",
     "aboutRightsHeading": "ماف و دووبارە بەکارئانەی",
     "aboutRights": "خوێندنەی کتێبێ سەرهێڵ خۆکارانە مۆڵەتێ بڵاوکەردەی نەدەرۆ. پێش دووبارە بەکارئانەی، سەرچاوە و مۆڵەتێ هەر چاپێ پشکنە.",
-    "archiveIntro": "کتێبخانە هەبیەی کۆپیێ ڕێپێدراوێ خوێندنە پشکنۆ. کۆپیێ ئێرە واتە فایل ئێرەیەن؛ سەرچاوەی دەرەکی واتە خوێندنە وە ماڵپەڕێکی ترەوە بەستەن. پشکنەی دەستی واتە کۆپیکەردەی خۆکار ناچالاکەن."
+    "archiveIntro": "کتێبخانە هەبیەی کۆپیێ ڕێپێدراوێ خوێندنە پشکنۆ. کۆپیێ ئێرە واتە فایل ئێرەیەن؛ سەرچاوەی دەرەکی واتە خوێندنە وە ماڵپەڕێکی ترەوە بەستەن. پشکنەی دەستی واتە کۆپیکەردەی خۆکار ناچالاکەن.",
+    "archivePolicyAutomatic": "ئێ تۆمارە پەی کۆپیێکی پارێزەی چە کتێبخانە گونجاوەن. وەختێ فایلێ ئەرشیڤ ئێرە هەبۆ، خوێنەرێ سەرەکی چە جێگای سەرچاوەی دەرەکی ئەو کۆپییە بەکار ئانۆ.",
+    "archivePolicyManual": "ئامرازێ پارێزەی ئێ تۆمارە وە خۆکار کۆپی نەکەرۆ. ڕەوشێ ماف پێویست وە پشکنەی وە پێی یاسای ناوچە یا پشکنەی دەستیەن.",
+    "archivePolicyLicensed": "PDFێ بڵاوکەرەوە بێ وەگۆڕەی ئێرە وە CC BY-NC 4.0 پەی خوێندنەی نابازرگانی دەرێنە. نام و ئاگاداریێ مۆڵەتێ ئەسڵی پارێز بیەن."
   },
   "sdh": {
     "label": "کوردی خوارین",
@@ -1605,7 +1620,10 @@ window.KDL_COMPLETE = {
     "aboutPreserve": "بەستەر سەرچاوەی ئەسڵی پارێزریە. هەر جا مۆڵەت بەکار هێنان ڕێ ئەدەێ، کتێوخانە کۆپی خوەنین پارێزێ تا گۊڕان بەستەر دەسڕەسی نەبڕێ.",
     "aboutRightsHeading": "ماف و دووارە بەکار هێنان",
     "aboutRights": "خوەنین کتێوێگ سەرهێڵ خۆکارانە مۆڵەت بڵاو کردن نەدەێ. پێش دووارە بەکار هێنان، سەرچاوە و مۆڵەت هەر چاپێگ بپشکن.",
-    "archiveIntro": "کتێوخانە هەبۊن کۆپیەیل ڕێپێدراو خوەنین پشکنێ. کۆپی ئێرە واتە فایل ئێرەیە؛ سەرچاوەی دەرەکی واتە خوەنین وە ماڵپەڕێگ ترەوە بەستە. پشکنین دەستی واتە کۆپی کردن خۆکار ناچالاکە."
+    "archiveIntro": "کتێوخانە هەبۊن کۆپیەیل ڕێپێدراو خوەنین پشکنێ. کۆپی ئێرە واتە فایل ئێرەیە؛ سەرچاوەی دەرەکی واتە خوەنین وە ماڵپەڕێگ ترەوە بەستە. پشکنین دەستی واتە کۆپی کردن خۆکار ناچالاکە.",
+    "archivePolicyAutomatic": "ئی تۆمارە وە کۆپیێگ پارێزن لە کتێوخانە گونجاوە. وەختی فایل ئەرشیڤ ئێرە هەبۊ، خوەنەر سەرەکی وە جێ سەرچاوەی دەرەکی ئەو کۆپییە بەکار هێنێ.",
+    "archivePolicyManual": "ئامراز پارێزن ئی تۆمارە وە خۆکار کۆپی نەکەێ. ڕەوش ماف پێویستی وە پشکنین وە پێ یاسای ناوچە یا پشکنین دەستی هەیە.",
+    "archivePolicyLicensed": "PDF بڵاوکەرەوە بێ گۊڕان ئێرە وە CC BY-NC 4.0 وە خوەنین نابازرگانی دریە. ناو و ئاگاداریەیل مۆڵەت ئەسڵی پارێزریە."
   }
 };
 window.KDL_TRANSLATION_REVIEW = {

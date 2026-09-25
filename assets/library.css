@@ -113,7 +113,7 @@
  .library-home .reader-actions{width:100%;order:3;overflow-x:auto}.library-home .tool-button{font-size:14px;padding:9px 12px}.library-home .reader-content{padding:14px 10px 40px}.library-home .reader-article{padding:24px 18px}
  .library-home .details-main{padding:10px 0}.library-home .footer-inner{align-items:flex-start;flex-direction:column;gap:12px}
 }
-@media(max-width:370px){.library-home #bookGrid{gap:24px 14px}.library-home #bookGrid .cover{padding:18px 14px}.library-home #bookGrid .cover-title{font-size:20px}.library-home #bookGrid .long-title .cover-title{font-size:16px}.shelf-download{display:none}}
+@media(max-width:370px){.library-home #bookGrid{gap:24px 14px}.library-home #bookGrid .cover{padding:18px 14px}.library-home #bookGrid .cover-title{font-size:20px}.library-home #bookGrid .long-title .cover-title{font-size:16px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.library-home #bookGrid .cover{transition:none}.library-home #bookGrid .cover:hover{transform:none}}
 
 .library-home .info-shell{max-width:860px}
@@ -267,3 +267,21 @@ button:focus-visible,a:focus-visible{outline:3px solid #ad741f;outline-offset:3p
 .performer-sources{margin-top:12px;font-size:14px}
 .performer-sources a{display:block;margin-top:7px;overflow-wrap:anywhere}
 @media(max-width:560px){.performer-profile-content{align-items:flex-start;gap:16px}.performer-portrait{flex-basis:100px;max-width:100px}.performer-portrait img{height:100px}.performer-portrait figcaption{font-size:10px}}
+
+/* Keep every action reachable on a narrow screen. */
+@media(max-width:760px){
+ .library-home #suggestButton{display:inline-flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;min-width:44px;padding:0;font-size:0}
+ .library-home #suggestButton::before{content:"+";font-size:26px;line-height:1}
+ .library-home .suggest-form input,.library-home .suggest-form textarea{font-size:16px}
+ .library-home .footer-links{flex-wrap:wrap;white-space:normal}
+}
+@media(max-width:560px){
+ .performer-profile-content{flex-direction:column}
+ .performer-portrait{flex-basis:auto}
+ .performer-profile h2{overflow-wrap:anywhere}
+}
+@media(max-width:480px){
+ .reading-start{grid-template-columns:minmax(0,1fr)}
+}
+
+.media-language-note{display:block;margin-top:.35rem;font-size:.8rem;color:var(--muted)}

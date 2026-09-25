@@ -242,3 +242,29 @@ test('reader, shelf download and resumed PDF all use the same preferred file', a
     noErrors(app);
   } finally { app.close(); }
 });
+
+test('compact suggestion control keeps a translated name and opens the form in both directions', () => {
+  const app = createApp();
+  try {
+    const opener = app.query('#suggestButton');
+    assert.equal(opener.getAttribute('aria-label'), 'Suggest a book');
+    for (const locale of ['en', 'ckb']) {
+      if (locale !== 'en') {
+        app.click('#languageButton');
+        app.click('#languageGrid [data-locale="' + locale + '"]');
+      }
+      assert.equal(opener.getAttribute('aria-label'), opener.textContent);
+      assert.equal(opener.title, opener.textContent);
+      if (locale === 'ckb') assert.notEqual(opener.title, 'Suggest a book');
+      opener.focus();
+      app.click(opener);
+      assert.equal(app.query('#suggestDialog').hidden, false);
+      assert.ok(app.query('#suggestDialog').contains(app.document.activeElement));
+      assert.ok(app.query('#suggestForm [name="title"]'));
+      app.click('#suggestDialog [data-close-dialog]');
+      assert.equal(app.query('#suggestDialog').hidden, true);
+      assert.equal(app.document.activeElement, opener);
+    }
+    noErrors(app);
+  } finally { app.close(); }
+});

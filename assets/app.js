@@ -47,6 +47,8 @@ function buildOptions(select, data){select.innerHTML=data.map(([value,keyOrLabel
 function applyLocale(){
   const locale=LOCALES[state.locale]||LOCALES.en; document.documentElement.lang=state.locale; document.documentElement.dir=locale.dir; document.body.dir=locale.dir;
   $('#languageButtonLabel').textContent=locale.label;
+  $('#suggestButton').setAttribute('aria-label',t('suggest'));
+  $('#suggestButton').title=t('suggest');
   $$('[data-close-dialog]').forEach(el=>el.setAttribute('aria-label',t('close')));
   $$('.footer-links a,.top-nav a[href*="index.html"]').forEach(a=>{const u=new URL(a.href);u.searchParams.set('lang',state.locale);a.href=u.href});
   $$('[data-i18n]').forEach(el=>{el.textContent=t(el.dataset.i18n)}); $$('[data-i18n-placeholder]').forEach(el=>{el.placeholder=t(el.dataset.i18nPlaceholder)});

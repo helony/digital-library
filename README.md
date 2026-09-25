@@ -10,7 +10,7 @@ A multilingual library connecting Kurdish books, stories, poetry, and recorded v
 - Accent-insensitive and Arabic-keyboard-equivalent search, browse categories, saved books and reading progress in this browser.
 - A self-hosted PDF.js reader with mobile controls, page restoration, text access and an external-source fallback.
 - Linked reading/listening, performer introductions, source credits and problem reports.
-- Six interface dictionaries and catalogue descriptions. Editorial translations, especially Hewramî, Southern Kurdish and Zazakî, benefit from fluent-speaker review. Media profile introductions currently label their shared Sorani fallback where used.
+- Six interface dictionaries and catalogue descriptions. Editorial translations, especially Hewramî, Southern Kurdish and Zazakî, benefit from fluent-speaker review. Hewramî and Southern Kurdish media prose currently uses a shared Sorani fallback, with visible language labels and matching language attributes; native translations remain editorial work.
 
 ## Checks and maintenance
 
