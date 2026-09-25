@@ -38,7 +38,7 @@ function subjectLabel(v){return t(v)}
 function scriptLabel(v){return t(v)}
 function formatLabel(v){return t(v)}
 function availabilityLabel(v){return t(v)}
-function rightsLabel(b){if(b.rightsKey==='rights_cc_by_nc_external')return 'CC BY-NC 4.0'; if(b.rightsType==='pd')return t('publicDomain'); if(b.rightsType==='regional')return t('regionalPD'); if(b.rightsType==='licensed')return t('authorizedShare'); return t('rightsReview')}
+function rightsLabel(b){if(b.rightsKey==='rights_cc_by_nc_external')return 'CC BY-NC 4.0'; if(b.rightsKey==='rights_cc_by_3')return 'CC BY 3.0'; if(b.rightsType==='pd')return t('publicDomain'); if(b.rightsType==='regional')return t('regionalPD'); if(b.rightsType==='licensed')return t('authorizedShare'); return t('rightsReview')}
 function rightsClass(b){return b.rightsType==='check'?'caution':'rights'}
 function escapeHtml(s=''){return String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
 
@@ -84,10 +84,18 @@ function filteredBooks(){
   items.sort((a,b)=>{switch(state.sort){case'title':return collator.compare(a.title,b.title);case'author':return collator.compare(a.author,b.author)||collator.compare(a.title,b.title);case'year-asc':return (a.yearSort||9999)-(b.yearSort||9999);case'year-desc':return (b.yearSort||0)-(a.yearSort||0);case'recent':return b.added.localeCompare(a.added)||b.id-a.id;default:return rank(a)-rank(b)}});return items;
 }
 function motifFor(b){return b.motif||({folklore:'folk-oral',poetry:'love-classical',religious:'mystical-medallion',education:'editorial-reference',reference:'editorial-reference'}[b.subject])||'folk-oral'}
+function shelfDescription(b){
+  const locale=['hac','sdh'].includes(state.locale)?'ckb':state.locale;
+  const lang=b.summary?.[locale]||b.desc?.[locale]?locale:'en';
+  const text=b.summary?.[lang]||b.desc?.[lang]?.split(/(?<=[.!?])\s+/)[0]||'';
+  return text?`<p class="book-summary" lang="${lang}" dir="auto">${escapeHtml(text)}</p>`:'';
+}
 function readLabel(b){return b.sourceOnly?t('sourceOnly'):t('readNow')}
 function readingUrl(b){return b.format==='web'&&!b.localStory?b.url:`?read=${encodeURIComponent(b.slug)}`}
 function markMode(){
   $$('[data-library-mode]').forEach(button=>{const active=button.dataset.libraryMode===state.mode;button.classList.toggle('is-active',active);button.setAttribute('aria-pressed',String(active))});
+  $$('#dengbej iframe[data-src]').forEach(frame=>{if(state.mode==='voices'){if(!frame.getAttribute('src'))frame.src=frame.dataset.src;}else frame.removeAttribute('src');});
+  if(state.mode!=='voices')$$('#voicesBrowsePanel video').forEach(video=>video.pause());
   $('#catalogue').hidden=state.mode==='voices';$('#voicesBrowsePanel').hidden=state.mode!=='voices';$('#moreFiltersButton').hidden=state.mode==='voices';
 }
 function renderCatalogue(){
@@ -103,7 +111,7 @@ function renderCatalogue(){
     const note=b.availability==='partial'?t('partialBadge'):b.availability==='retelling'?t('retelling'):b.sourceOnly?t('sourceOnly'):'';
     const language=VARIETIES.find(x=>x[0]===b.v)?.[1]?.split(' / ')[0]||b.variety;
     const author=(b.author||'').length>80?'Khan, Mohammadirad, Molin & Noorlander':b.author;
-    return `<article class="book-card" data-slug="${b.slug}"><a class="cover tone-${b.tone} ${b.preview?'has-scan':''} ${(b.title||'').length>65?'long-title':''} ${external?'':'read-book'}" href="${escapeHtml(readingUrl(b))}" data-slug="${b.slug}" aria-label="${escapeHtml(readLabel(b)+': '+b.title)}" ${external?'target="_blank" rel="noopener"':''}><span class="cover-language">${escapeHtml(language)}${b.format==='pdf'?' · PDF':''}</span><h3 class="cover-title" dir="${b.rtl?'rtl':'auto'}">${escapeHtml(b.title)}</h3>${b.preview?`<img class="cover-scan" src="${escapeHtml(b.preview)}" alt="" loading="lazy">`:`<img class="cover-ornament" src="assets/motifs/${motifFor(b)}.svg" alt="" loading="lazy" aria-hidden="true">`}${note?`<span class="edition-note">${escapeHtml(note)}</span>`:''}</a><div class="card-body">${b.preview?`<p class="scan-title" dir="auto">${escapeHtml(b.title)}</p>`:''}<p class="book-author" dir="auto">${escapeHtml(author)}</p><div class="card-actions"><a class="shelf-read ${external?'':'read-book'}" data-slug="${b.slug}" href="${escapeHtml(readingUrl(b))}" ${external?'target="_blank" rel="noopener"':''}>${escapeHtml(readLabel(b))} <span aria-hidden="true">${external?'↗':'→'}</span></a>${b.format==='pdf'?`<a class="shelf-download" href="${escapeHtml(archiveEligible(b)?localPdfUrl(b):b.url)}" ${archiveEligible(b)?'download':'target="_blank" rel="noopener"'} aria-label="${escapeHtml(t('downloadPdf')+': '+b.title)}" title="${escapeHtml(t('downloadPdf'))}">↓</a>`:''}<button class="shelf-info details-book" type="button" data-slug="${b.slug}" aria-label="${escapeHtml(t('aboutBook')+': '+b.title)}">${escapeHtml(t('bookInfo'))}</button></div></div></article>`;
+    return `<article class="book-card" data-slug="${b.slug}"><a class="cover tone-${b.tone} ${b.preview?'has-scan':''} ${(b.title||'').length>65?'long-title':''} ${external?'':'read-book'}" href="${escapeHtml(readingUrl(b))}" data-slug="${b.slug}" aria-label="${escapeHtml(readLabel(b)+': '+b.title)}" ${external?'target="_blank" rel="noopener"':''}><span class="cover-language">${escapeHtml(language)}${b.format==='pdf'?' · PDF':''}</span><h3 class="cover-title" dir="${b.rtl?'rtl':'auto'}">${escapeHtml(b.title)}</h3>${b.preview?`<img class="cover-scan" src="${escapeHtml(b.preview)}" alt="" loading="lazy">`:`<img class="cover-ornament" src="assets/motifs/${motifFor(b)}.svg" alt="" loading="lazy" aria-hidden="true">`}${note?`<span class="edition-note">${escapeHtml(note)}</span>`:''}</a><div class="card-body">${b.preview?`<p class="scan-title" dir="auto">${escapeHtml(b.title)}</p>`:''}<p class="book-author" dir="auto">${escapeHtml(author)}</p>${shelfDescription(b)}<div class="card-actions"><a class="shelf-read ${external?'':'read-book'}" data-slug="${b.slug}" href="${escapeHtml(readingUrl(b))}" ${external?'target="_blank" rel="noopener"':''}>${escapeHtml(readLabel(b))} <span aria-hidden="true">${external?'↗':'→'}</span></a>${b.format==='pdf'?`<a class="shelf-download" href="${escapeHtml(archiveEligible(b)?localPdfUrl(b):b.url)}" ${archiveEligible(b)?'download':'target="_blank" rel="noopener"'} aria-label="${escapeHtml(t('downloadPdf')+': '+b.title)}" title="${escapeHtml(t('downloadPdf'))}">↓</a>`:''}<button class="shelf-info details-book" type="button" data-slug="${b.slug}" aria-label="${escapeHtml(t('aboutBook')+': '+b.title)}">${escapeHtml(t('bookInfo'))}</button></div></div></article>`;
   }).join('');
   $$('.read-book',$('#bookGrid')).forEach(el=>el.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();openReader(bookBySlug(el.dataset.slug))}));
   $$('.details-book',$('#bookGrid')).forEach(el=>el.addEventListener('click',()=>showDetails(el.dataset.slug)));

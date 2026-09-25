@@ -30,6 +30,7 @@ def portable(r):
       'rights_wiki_pd':'The historical work is public domain; Wikisource text is available under CC BY-SA.',
       'rights_authorized_share':'The source states that the copyright holder authorized sharing. This is not the same as public domain and does not necessarily permit all reuse.',
       'rights_zazaki1899':'The 1899 historical work is public domain; the Wikisource transcription is available under CC BY-SA.',
+      'rights_institutional_reading':'This 1988 edition is available to read from the Kurdish Institute of Paris. Its modern rewritings may remain copyrighted; no permission to redistribute the PDF is asserted.',
       'rights_cc_by_nc_external':'The publisher licenses the text under CC BY-NC 4.0. Some images have separate permissions; consult the publisher before reusing them. The PDF is linked from the publisher and is not mirrored here.'
     }
     return {

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "library": "Kurdish Digital Library",
-  "updated": "2026-09-24",
+  "updated": "2026-09-25",
   "records": [
     {
       "id": 1,
@@ -40,7 +40,10 @@
       "kdlId": "KDL-KMR-0001",
       "authorSlug": "e-b-soane",
       "archiveEligible": false,
-      "localPath": "books/soane-grammar-1913/book.pdf"
+      "localPath": "books/soane-grammar-1913/book.pdf",
+      "summary": {
+        "en": "An early guide to Kurmanji grammar, for readers interested in how the language works."
+      }
     },
     {
       "id": 2,
@@ -81,7 +84,10 @@
       "kdlId": "KDL-KMR-0002",
       "authorSlug": "ehmede-xani",
       "archiveEligible": true,
-      "localPath": "books/mem-u-zin/content.html"
+      "localPath": "books/mem-u-zin/content.html",
+      "summary": {
+        "en": "A classical Kurdish love story about Mem and Zîn, caught between devotion and separation."
+      }
     },
     {
       "id": 3,
@@ -119,7 +125,10 @@
       "kdlId": "KDL-KMR-0003",
       "authorSlug": "ehmede-xani",
       "archiveEligible": true,
-      "localPath": "books/diwana-ehmede-xani/content.html"
+      "localPath": "books/diwana-ehmede-xani/content.html",
+      "summary": {
+        "en": "A collection of Ehmedê Xanî’s classical Kurdish poetry in Arabic script."
+      }
     },
     {
       "id": 4,
@@ -157,7 +166,10 @@
       "kdlId": "KDL-CKB-0001",
       "authorSlug": "fayiq-bekes",
       "archiveEligible": false,
-      "localPath": "books/diwani-fayiq-bekes/content.html"
+      "localPath": "books/diwani-fayiq-bekes/content.html",
+      "summary": {
+        "en": "A collection of Sorani poems by Fayiq Bêkes, grouped by theme."
+      }
     },
     {
       "id": 5,
@@ -196,7 +208,10 @@
       "kdlId": "KDL-CKB-0002",
       "authorSlug": "l-o-fossum",
       "archiveEligible": false,
-      "localPath": "books/practical-kurdish-grammar/book.pdf"
+      "localPath": "books/practical-kurdish-grammar/book.pdf",
+      "summary": {
+        "en": "Learn through pronunciation guides, exercises, short readings and vocabulary in Central Kurdish."
+      }
     },
     {
       "id": 6,
@@ -234,7 +249,10 @@
       "kdlId": "KDL-CKB-0003",
       "authorSlug": "e-b-soane",
       "archiveEligible": false,
-      "localPath": "books/elementary-kurmanji-grammar/book.pdf"
+      "localPath": "books/elementary-kurmanji-grammar/book.pdf",
+      "summary": {
+        "en": "An introductory grammar of the Kurdish spoken around Sulaimaniyah, despite its historical “Kurmanji” title."
+      }
     },
     {
       "id": 7,
@@ -274,7 +292,10 @@
       "kdlId": "KDL-KMR-0004",
       "authorSlug": "celadet-ali-bedir-xan",
       "archiveEligible": false,
-      "localPath": "books/rezana-elfabeya-qurdi/book.pdf"
+      "localPath": "books/rezana-elfabeya-qurdi/book.pdf",
+      "summary": {
+        "en": "A short guide to the Latin Kurdish alphabet from the Hawar publishing tradition."
+      }
     },
     {
       "id": 8,
@@ -314,7 +335,10 @@
       "kdlId": "KDL-KMR-0005",
       "authorSlug": "celadet-ali-bedir-xan",
       "archiveEligible": false,
-      "localPath": "books/rupelinen-elfabe/book.pdf"
+      "localPath": "books/rupelinen-elfabe/book.pdf",
+      "summary": {
+        "en": "An illustrated early reader introducing the Latin Kurdish alphabet."
+      }
     },
     {
       "id": 9,
@@ -354,7 +378,10 @@
       "kdlId": "KDL-KMR-0006",
       "authorSlug": "melaye-ciziri",
       "archiveEligible": true,
-      "localPath": "books/diwana-melaye-ciziri/content.html"
+      "localPath": "books/diwana-melaye-ciziri/content.html",
+      "summary": {
+        "en": "Classical Kurmanji poetry exploring love and mystical longing."
+      }
     },
     {
       "id": 10,
@@ -392,7 +419,10 @@
       "kdlId": "KDL-CKB-0004",
       "authorSlug": "mahwi",
       "archiveEligible": true,
-      "localPath": "books/diwani-mahwi/content.html"
+      "localPath": "books/diwani-mahwi/content.html",
+      "summary": {
+        "en": "Mahwî’s classical Sorani poems, arranged by letter and verse form."
+      }
     },
     {
       "id": 11,
@@ -430,7 +460,10 @@
       "kdlId": "KDL-CKB-0005",
       "authorSlug": "wefayi",
       "archiveEligible": true,
-      "localPath": "books/diwani-wefayi/content.html"
+      "localPath": "books/diwani-wefayi/content.html",
+      "summary": {
+        "en": "A collection of Wefayî’s classical Kurdish poetry, arranged by letter."
+      }
     },
     {
       "id": 12,
@@ -470,7 +503,10 @@
       "kdlId": "KDL-HAC-0001",
       "authorSlug": "xanay-qubadi",
       "archiveEligible": true,
-      "localPath": "books/diwani-xanay-qubadi/content.html"
+      "localPath": "books/diwani-xanay-qubadi/content.html",
+      "summary": {
+        "en": "Classical Gorani poetry by Xanay Qubadî, collected in a single divan."
+      }
     },
     {
       "id": 13,
@@ -509,7 +545,10 @@
       "kdlId": "KDL-DIQ-0001",
       "authorSlug": "petr-lerkh",
       "archiveEligible": true,
-      "localPath": "books/lerkh-forschungen-1857/book.pdf"
+      "localPath": "books/lerkh-forschungen-1857/book.pdf",
+      "summary": {
+        "en": "Early Kurdish and Zazaki texts alongside nineteenth-century observations of language and everyday life."
+      }
     },
     {
       "id": 14,
@@ -548,7 +587,10 @@
       "kdlId": "KDL-SDH-0001",
       "authorSlug": "sake-u-xan-mensur",
       "archiveEligible": true,
-      "localPath": "books/shake-u-xan-mensur/content.html"
+      "localPath": "books/shake-u-xan-mensur/content.html",
+      "summary": {
+        "en": "Classical Southern Kurdish poetry attributed to Şake and Xan Mensur."
+      }
     },
     {
       "id": 15,
@@ -588,7 +630,10 @@
       "kdlId": "KDL-DIQ-0002",
       "authorSlug": "mela-ehmede-xasi",
       "archiveEligible": true,
-      "localPath": "books/mewlide-nebi-xasi/content.html"
+      "localPath": "books/mewlide-nebi-xasi/content.html",
+      "summary": {
+        "en": "A Zazaki poem celebrating the Prophet’s birth, first printed in Diyarbakır in 1899."
+      }
     },
     {
       "id": 16,
@@ -629,7 +674,10 @@
       "kdlId": "KDL-KMR-0007",
       "authorSlug": "ehmede-xani",
       "archiveEligible": true,
-      "localPath": "books/nubehara-bicukan/content.html"
+      "localPath": "books/nubehara-bicukan/content.html",
+      "summary": {
+        "en": "An Arabic–Kurdish vocabulary written in verse to help children learn."
+      }
     },
     {
       "id": 17,
@@ -669,7 +717,10 @@
       "kdlId": "KDL-KMR-0008",
       "authorSlug": "mela-huseyne-bateyi",
       "archiveEligible": true,
-      "localPath": "books/mewlida-kurmanci-bateyi/content.html"
+      "localPath": "books/mewlida-kurmanci-bateyi/content.html",
+      "summary": {
+        "en": "A classical Kurmanji verse account celebrating the Prophet’s birth."
+      }
     },
     {
       "id": 18,
@@ -709,7 +760,10 @@
       "kdlId": "KDL-KMR-0009",
       "authorSlug": "mela-huseyne-bateyi",
       "archiveEligible": true,
-      "localPath": "books/zembilfiros/content.html"
+      "localPath": "books/zembilfiros/content.html",
+      "summary": {
+        "en": "A prince becomes a basket seller and faces a test of love, temptation and faith."
+      }
     },
     {
       "id": 19,
@@ -749,7 +803,10 @@
       "kdlId": "KDL-KMR-0010",
       "authorSlug": "ehmede-xani",
       "archiveEligible": true,
-      "localPath": "books/fi-beyani-el-eeqide-we-tewhid/content.html"
+      "localPath": "books/fi-beyani-el-eeqide-we-tewhid/content.html",
+      "summary": {
+        "en": "Ehmedê Xanî’s Kurmanji poem about belief and the unity of God."
+      }
     },
     {
       "id": 20,
@@ -790,7 +847,10 @@
       "kdlId": "KDL-KMR-0011",
       "authorSlug": "maurizio-garzoni",
       "archiveEligible": true,
-      "localPath": "books/garzoni-grammatica-vocabolario-1787/book.pdf"
+      "localPath": "books/garzoni-grammatica-vocabolario-1787/book.pdf",
+      "summary": {
+        "en": "An early Kurdish grammar and vocabulary based on speech from the Bahdinan region."
+      }
     },
     {
       "id": 21,
@@ -831,7 +891,10 @@
       "kdlId": "KDL-KMR-0012",
       "authorSlug": "auguste-jaba-and-mele-mehmude-bazidi",
       "archiveEligible": true,
-      "localPath": "books/recueil-notices-recits-kourdes-1860/book.pdf"
+      "localPath": "books/recueil-notices-recits-kourdes-1860/book.pdf",
+      "summary": {
+        "en": "Kurmancî stories and accounts of Kurdish life, with French translations."
+      }
     },
     {
       "id": 22,
@@ -872,7 +935,10 @@
       "kdlId": "KDL-KMR-0013",
       "authorSlug": "auguste-jaba-ed-ferdinand-justi",
       "archiveEligible": true,
-      "localPath": "books/dictionnaire-kurde-francais-1879/book.pdf"
+      "localPath": "books/dictionnaire-kurde-francais-1879/book.pdf",
+      "summary": {
+        "en": "A substantial Kurdish–French dictionary for exploring older Kurdish words and expressions."
+      }
     },
     {
       "id": 23,
@@ -913,7 +979,10 @@
       "kdlId": "KDL-KMR-0014",
       "authorSlug": "samuel-a-rhea",
       "archiveEligible": true,
-      "localPath": "books/rhea-hakari-grammar-1872/book.pdf"
+      "localPath": "books/rhea-hakari-grammar-1872/book.pdf",
+      "summary": {
+        "en": "Grammar, vocabulary and short language samples from the Hakkari region."
+      }
     },
     {
       "id": 24,
@@ -954,7 +1023,10 @@
       "kdlId": "KDL-KMR-0015",
       "authorSlug": "eugen-prym-and-albert-socin",
       "archiveEligible": true,
-      "localPath": "books/kurdische-sammlungen-1887/book.pdf"
+      "localPath": "books/kurdische-sammlungen-1887/book.pdf",
+      "summary": {
+        "en": "Kurmancî stories and songs collected from the oral traditions of Tur Abdin and Bohtan."
+      }
     },
     {
       "id": 25,
@@ -995,7 +1067,10 @@
       "kdlId": "KDL-KMR-0016",
       "authorSlug": "hugo-makas",
       "archiveEligible": false,
-      "localPath": "books/makas-kurdische-texte-mardin-1924/book.pdf"
+      "localPath": "books/makas-kurdische-texte-mardin-1924/book.pdf",
+      "summary": {
+        "en": "Kurmancî texts from around Mardin, with translations, notes and a glossary."
+      }
     },
     {
       "id": 26,
@@ -1035,7 +1110,10 @@
       "kdlId": "KDL-KMR-0017",
       "authorSlug": "ferdinand-justi",
       "archiveEligible": true,
-      "localPath": "books/justi-kurdische-grammatik-1880/book.pdf"
+      "localPath": "books/justi-kurdische-grammatik-1880/book.pdf",
+      "summary": {
+        "en": "A historical grammar comparing examples from several Kurdish varieties."
+      }
     },
     {
       "id": 27,
@@ -1076,7 +1154,10 @@
       "kdlId": "KDL-KMR-0018",
       "authorSlug": "sex-mihemed-can",
       "archiveEligible": false,
-      "localPath": "books/leyl-u-mecnun-mihemed-can/book.pdf"
+      "localPath": "books/leyl-u-mecnun-mihemed-can/book.pdf",
+      "summary": {
+        "en": "The love story of Leyl and Mecnûn, told in Kurmanji verse in Latin and Arabic scripts."
+      }
     },
     {
       "id": 28,
@@ -1116,7 +1197,10 @@
       "kdlId": "KDL-KMR-0019",
       "authorSlug": "feqiye-teyran",
       "archiveEligible": true,
-      "localPath": "books/bersise-abid/content.html"
+      "localPath": "books/bersise-abid/content.html",
+      "summary": {
+        "en": "An ascetic is drawn into temptation and betrayal in this cautionary narrative poem."
+      }
     },
     {
       "id": 29,
@@ -1157,7 +1241,10 @@
       "kdlId": "KDL-KMR-0020",
       "authorSlug": "auguste-jaba-and-piotr-tchikhatchov",
       "archiveEligible": true,
-      "localPath": "books/ballade-kurde-1859/book.pdf"
+      "localPath": "books/ballade-kurde-1859/book.pdf",
+      "summary": {
+        "en": "A Kurdish ballad presented alongside French in a short historical edition."
+      }
     },
     {
       "id": 30,
@@ -1198,7 +1285,10 @@
       "kdlId": "KDL-KMR-0021",
       "authorSlug": "albert-von-le-coq",
       "archiveEligible": true,
-      "localPath": "books/kurdische-texte-transkription-1903/book.pdf"
+      "localPath": "books/kurdische-texte-transkription-1903/book.pdf",
+      "summary": {
+        "en": "Traditional Kurdish stories and songs, including Mamê Alan, transcribed in an early collection."
+      }
     },
     {
       "id": 31,
@@ -1240,7 +1330,10 @@
       "kdlId": "KDL-KMR-0022",
       "authorSlug": "mele-mehmude-bazidi",
       "archiveEligible": true,
-      "localPath": "books/abecedaire-kurde-1868/book.pdf"
+      "localPath": "books/abecedaire-kurde-1868/book.pdf",
+      "summary": {
+        "en": "A rare nineteenth-century Kurdish children’s primer in Arabic script."
+      }
     },
     {
       "id": 32,
@@ -1280,7 +1373,10 @@
       "kdlId": "KDL-KMR-0023",
       "authorSlug": "feqiye-teyran",
       "archiveEligible": true,
-      "localPath": "books/feqiye-teyran-u-quling/content.html"
+      "localPath": "books/feqiye-teyran-u-quling/content.html",
+      "summary": {
+        "en": "A poet addresses a crane as a travelling messenger and companion."
+      }
     },
     {
       "id": 33,
@@ -1320,7 +1416,10 @@
       "kdlId": "KDL-KMR-0024",
       "authorSlug": "feqiye-teyran",
       "archiveEligible": true,
-      "localPath": "books/feqiye-teyran-u-roj/content.html"
+      "localPath": "books/feqiye-teyran-u-roj/content.html",
+      "summary": {
+        "en": "A poem addressed to the sun, reflecting on nature, life and creation."
+      }
     },
     {
       "id": 34,
@@ -1362,7 +1461,10 @@
       "kdlId": "KDL-KMR-0025",
       "authorSlug": "melaye-ciziri-ed-martin-hartmann",
       "archiveEligible": true,
-      "localPath": "books/melaye-ciziri-hartmann-facsimile-1904/book.pdf"
+      "localPath": "books/melaye-ciziri-hartmann-facsimile-1904/book.pdf",
+      "summary": {
+        "en": "An early facsimile of Melayê Cizîrî’s poetry in Kurdish Arabic script."
+      }
     },
     {
       "id": 35,
@@ -1401,7 +1503,10 @@
       "kdlId": "KDL-KMR-0026",
       "authorSlug": "mela-huseyne-bateyi",
       "archiveEligible": true,
-      "localPath": "books/derd-u-dax-im/content.html"
+      "localPath": "books/derd-u-dax-im/content.html",
+      "summary": {
+        "en": "A short poem about longing, love and the pain of separation."
+      }
     },
     {
       "id": 36,
@@ -1440,7 +1545,10 @@
       "kdlId": "KDL-KMR-0027",
       "authorSlug": "mela-huseyne-bateyi",
       "archiveEligible": true,
-      "localPath": "books/di-nav-qewme-xerib/content.html"
+      "localPath": "books/di-nav-qewme-xerib/content.html",
+      "summary": {
+        "en": "A poem about exile and the feeling of living among strangers."
+      }
     },
     {
       "id": 37,
@@ -1479,7 +1587,10 @@
       "kdlId": "KDL-KMR-0028",
       "authorSlug": "mela-huseyne-bateyi",
       "archiveEligible": true,
-      "localPath": "books/el-wefayi-wesla-canan/content.html"
+      "localPath": "books/el-wefayi-wesla-canan/content.html",
+      "summary": {
+        "en": "A love lyric about waiting for the beloved and enduring separation."
+      }
     },
     {
       "id": 38,
@@ -1518,7 +1629,10 @@
       "kdlId": "KDL-KMR-0029",
       "authorSlug": "mela-huseyne-bateyi",
       "archiveEligible": true,
-      "localPath": "books/ey-nete-tu/content.html"
+      "localPath": "books/ey-nete-tu/content.html",
+      "summary": {
+        "en": "A devotional poem praising the Prophet in ornate classical Kurmanji."
+      }
     },
     {
       "id": 39,
@@ -1557,7 +1671,10 @@
       "kdlId": "KDL-KMR-0030",
       "authorSlug": "mela-huseyne-bateyi",
       "archiveEligible": true,
-      "localPath": "books/ger-tu-nazik-sorgul-i/content.html"
+      "localPath": "books/ger-tu-nazik-sorgul-i/content.html",
+      "summary": {
+        "en": "A love poem where roses, nightingales and moths express desire."
+      }
     },
     {
       "id": 40,
@@ -1596,7 +1713,10 @@
       "kdlId": "KDL-KMR-0031",
       "authorSlug": "mela-huseyne-bateyi",
       "archiveEligible": true,
-      "localPath": "books/ji-cirya-pasi-pe-da/content.html"
+      "localPath": "books/ji-cirya-pasi-pe-da/content.html",
+      "summary": {
+        "en": "A vivid winter poem filled with snow, fog and mountain landscapes."
+      }
     },
     {
       "id": 41,
@@ -1636,7 +1756,10 @@
       "kdlId": "KDL-KMR-0032",
       "authorSlug": "mela-huseyne-bateyi",
       "archiveEligible": true,
-      "localPath": "books/qiblegeha-asiqan-ke-yi-tu/content.html"
+      "localPath": "books/qiblegeha-asiqan-ke-yi-tu/content.html",
+      "summary": {
+        "en": "A classical love poem woven with gardens, stars and mystical imagery."
+      }
     },
     {
       "id": 42,
@@ -1675,7 +1798,10 @@
       "kdlId": "KDL-KMR-0033",
       "authorSlug": "mela-huseyne-bateyi",
       "archiveEligible": true,
-      "localPath": "books/subhan-ji-mire-qadiri/content.html"
+      "localPath": "books/subhan-ji-mire-qadiri/content.html",
+      "summary": {
+        "en": "A devotional poem reflecting on divine power and creation."
+      }
     },
     {
       "id": 43,
@@ -1714,7 +1840,10 @@
       "kdlId": "KDL-KMR-0034",
       "authorSlug": "mela-huseyne-bateyi",
       "archiveEligible": true,
-      "localPath": "books/ya-reb-hawar/content.html"
+      "localPath": "books/ya-reb-hawar/content.html",
+      "summary": {
+        "en": "A prayer in verse asking for help and healing."
+      }
     },
     {
       "v": "kmr",
@@ -1755,7 +1884,10 @@
       },
       "kdlId": "KDL-KMR-0035",
       "archiveEligible": true,
-      "localPath": "books/makas-kurdische-studien-1900/book.pdf"
+      "localPath": "books/makas-kurdische-studien-1900/book.pdf",
+      "summary": {
+        "en": "A Diyarbakır dialect sample, a Gawar poem and Yazidi prayers, with German commentary."
+      }
     },
     {
       "v": "kmr",
@@ -1795,7 +1927,10 @@
       },
       "kdlId": "KDL-KMR-0036",
       "archiveEligible": false,
-      "localPath": null
+      "localPath": null,
+      "summary": {
+        "en": "Explore shared oral traditions through Kurdish and Neo-Aramaic texts with word-by-word explanations."
+      }
     },
     {
       "v": "kmr",
@@ -1835,6 +1970,187 @@
         "diq": "Koleksiyonê çîrokan bi Kurmancî, Soranî û Neo-Aramî û tercumeyo Îngilîzkî. Vıraştışê Zanbilfiroşî zî tede esto; PDF belaş o."
       },
       "kdlId": "KDL-KMR-0037",
+      "archiveEligible": false,
+      "localPath": null,
+      "summary": {
+        "en": "Stories in Kurdish and Neo-Aramaic with English translations, including a telling of Zembîlfiroş."
+      }
+    },
+    {
+      "id": 47,
+      "slug": "mann-mukri-texts-1906",
+      "title": "Die Mundart der Mukri-Kurden · Teil I",
+      "author": "Oskar Mann",
+      "authorSlug": "oskar-mann",
+      "v": "ckb",
+      "variety": "Soranî (Mukrî)",
+      "year": "1906",
+      "yearSort": 1906,
+      "subject": "folklore",
+      "script": "mixed",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/PY3JGW72U5.pdf",
+      "source": "https://bnk.institutkurde.org/images/pdf/PY3JGW72U5.pdf",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_pd_old_scan",
+      "rightsType": "pd",
+      "desc": {
+        "en": "Mukrî stories, epic songs and poetry, including Dimdim, Mem û Zîn and Zembîlfiroş, with German commentary.",
+        "kmr": "Çîrok, kilam û helbestên Mukrî, di nav de Dimdim, Mem û Zîn û Zembîlfiroş, bi şîroveyên almanî.",
+        "ckb": "چیرۆک و بەیت و هۆنراوەی موکری، لەوانە دمدم و مەم و زین و زەمبیلفرۆش، لەگەڵ ڕوونکردنەوەی ئەڵمانی."
+      },
+      "summary": {
+        "en": "Mukrî stories, epic songs and poetry, including Dimdim, Mem û Zîn and Zembîlfiroş, with German commentary.",
+        "kmr": "Çîrok, kilam û helbestên Mukrî, di nav de Dimdim, Mem û Zîn û Zembîlfiroş, bi şîroveyên almanî.",
+        "ckb": "چیرۆک و بەیت و هۆنراوەی موکری، لەوانە دمدم و مەم و زین و زەمبیلفرۆش، لەگەڵ ڕوونکردنەوەی ئەڵمانی."
+      },
+      "aliases": [
+        "mukri folklore",
+        "oskar mann",
+        "sorani epic",
+        "dimdim",
+        "mem u zin",
+        "zembilfiros"
+      ],
+      "tone": "brown",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-CKB-0006",
+      "archiveEligible": false,
+      "localPath": null
+    },
+    {
+      "id": 48,
+      "slug": "suto-tato-1988",
+      "title": "Suto û Tato · The Tale of Suto and Tato",
+      "author": "E. B. Soane, B. Nikitin, Yousuf Zangana & Jawad Mella",
+      "authorSlug": "soane-nikitin-zangana-mella",
+      "v": "kmr",
+      "variety": "Kurmancî + Soranî",
+      "year": "1988",
+      "yearSort": 1988,
+      "subject": "folklore",
+      "script": "mixed",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/PCCS9HEK9S.pdf",
+      "source": "https://bnk.institutkurde.org/images/pdf/PCCS9HEK9S.pdf",
+      "institution": "Kurdish Institute of Paris / Kurdologia",
+      "rightsKey": "rights_institutional_reading",
+      "rightsType": "check",
+      "desc": {
+        "en": "A tale of rival Kurdish chiefs, with the historical text, English translation and modern Kurmanji and Sorani versions.",
+        "kmr": "Çîroka du axayên Kurd ên dijber, bi deqa dîrokî, wergera îngilîzî û vegotinên Kurmancî û Soranî.",
+        "ckb": "چیرۆکی دوو ئاغای کوردی ڕکابەر، لەگەڵ دەقی کۆن، وەرگێڕانی ئینگلیزی و دەقی کورمانجی و سۆرانی."
+      },
+      "summary": {
+        "en": "A tale of rival Kurdish chiefs, with the historical text, English translation and modern Kurmanji and Sorani versions.",
+        "kmr": "Çîroka du axayên Kurd ên dijber, bi deqa dîrokî, wergera îngilîzî û vegotinên Kurmancî û Soranî.",
+        "ckb": "چیرۆکی دوو ئاغای کوردی ڕکابەر، لەگەڵ دەقی کۆن، وەرگێڕانی ئینگلیزی و دەقی کورمانجی و سۆرانی."
+      },
+      "aliases": [
+        "suto and tato",
+        "suto u tato",
+        "horamar",
+        "oramar",
+        "barzan"
+      ],
+      "tone": "rust",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0038",
+      "archiveEligible": false,
+      "localPath": null
+    },
+    {
+      "id": 49,
+      "slug": "diwani-nali",
+      "title": "دیوانی نالی",
+      "author": "Nalî",
+      "authorSlug": "nali",
+      "v": "ckb",
+      "variety": "Soranî",
+      "year": "19th c.",
+      "yearSort": 0,
+      "subject": "poetry",
+      "script": "arabic",
+      "format": "wiki",
+      "url": "https://wikisource.org/wiki/%D8%AF%DB%8C%D9%88%D8%A7%D9%86%DB%8C_%D9%86%D8%A7%D9%84%DB%8C",
+      "source": "https://wikisource.org/wiki/%D8%AF%DB%8C%D9%88%D8%A7%D9%86%DB%8C_%D9%86%D8%A7%D9%84%DB%8C",
+      "institution": "Wikisource",
+      "rightsKey": "rights_pd_old",
+      "rightsType": "pd",
+      "desc": {
+        "en": "A Sorani poetry collection of love, longing and richly imagined landscapes.",
+        "kmr": "Dîwaneke Soranî li ser evîn, hesret û wêneyên xwezayê.",
+        "ckb": "کۆمەڵە هۆنراوەیەکی سۆرانی دەربارەی خۆشەویستی و دووری و وێنەکانی سروشت."
+      },
+      "summary": {
+        "en": "A Sorani poetry collection of love, longing and richly imagined landscapes.",
+        "kmr": "Dîwaneke Soranî li ser evîn, hesret û wêneyên xwezayê.",
+        "ckb": "کۆمەڵە هۆنراوەیەکی سۆرانی دەربارەی خۆشەویستی و دووری و وێنەکانی سروشت."
+      },
+      "aliases": [
+        "Nali",
+        "Nali divan",
+        "classical Sorani poetry"
+      ],
+      "tone": "plum",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": "دیوانی نالی",
+      "rtl": true,
+      "kdlId": "KDL-CKB-0007",
+      "archiveEligible": false,
+      "localPath": null
+    },
+    {
+      "id": 50,
+      "slug": "diwani-haji-qadiri-koyi",
+      "title": "دیوانی حاجی قادری کۆیی",
+      "author": "Hacî Qadirê Koyî",
+      "authorSlug": "haji-qadiri-koyi",
+      "v": "ckb",
+      "variety": "Soranî",
+      "year": "19th c.",
+      "yearSort": 0,
+      "subject": "poetry",
+      "script": "arabic",
+      "format": "wiki",
+      "url": "https://wikisource.org/wiki/%D8%AF%DB%8C%D9%88%D8%A7%D9%86%DB%8C_%D8%AD%D8%A7%D8%AC%DB%8C_%D9%82%D8%A7%D8%AF%D8%B1%DB%8C_%DA%A9%DB%86%DB%8C%DB%8C",
+      "source": "https://wikisource.org/wiki/%D8%AF%DB%8C%D9%88%D8%A7%D9%86%DB%8C_%D8%AD%D8%A7%D8%AC%DB%8C_%D9%82%D8%A7%D8%AF%D8%B1%DB%8C_%DA%A9%DB%86%DB%8C%DB%8C",
+      "institution": "Wikisource",
+      "rightsKey": "rights_pd_old",
+      "rightsType": "pd",
+      "desc": {
+        "en": "The collected Sorani poetry of Hacî Qadirê Koyî, arranged by rhyme and verse form.",
+        "kmr": "Helbestên Soranî yên Hacî Qadirê Koyî, li gorî qafiye û teşeya helbestê.",
+        "ckb": "کۆی هۆنراوە سۆرانییەکانی حاجی قادری کۆیی، بە پێی سەروا و فۆرمی هۆنراوە."
+      },
+      "summary": {
+        "en": "The collected Sorani poetry of Hacî Qadirê Koyî, arranged by rhyme and verse form.",
+        "kmr": "Helbestên Soranî yên Hacî Qadirê Koyî, li gorî qafiye û teşeya helbestê.",
+        "ckb": "کۆی هۆنراوە سۆرانییەکانی حاجی قادری کۆیی، بە پێی سەروا و فۆرمی هۆنراوە."
+      },
+      "aliases": [
+        "Haji Qadir Koyi",
+        "Haci Qadire Koyi",
+        "Haji Qadiri Koyi",
+        "Sorani poetry"
+      ],
+      "tone": "green",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": "دیوانی حاجی قادری کۆیی",
+      "rtl": true,
+      "kdlId": "KDL-CKB-0008",
       "archiveEligible": false,
       "localPath": null
     }

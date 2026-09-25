@@ -187,3 +187,11 @@
 .dengbej-card p{font-size:16px;line-height:1.6;margin:0 0 18px;color:#58616c}
 .dengbej-credit{display:block;font-size:14px;line-height:1.5;color:#716052;margin-top:12px;text-underline-offset:3px}
 @media(max-width:700px){.explore-icon{width:34px;height:34px;border-radius:9px}.dengbej-grid{grid-template-columns:1fr}.dengbej-card{padding:22px;gap:16px}.dengbej-mark{flex-basis:46px;height:60px;font-size:30px}.dengbej-card h4{font-size:24px}.listening-section-title{gap:8px;margin-top:26px}}
+
+/* Short reading descriptions stay visible, including on small screens. */
+.library-home #bookGrid .book-summary{font-size:16px;line-height:1.55;color:#505a66;margin:0 0 7px;overflow-wrap:anywhere}
+.dengbej-card.dengbej-recording{display:flex;flex-direction:column;padding:0;gap:0;overflow:hidden}
+.dengbej-recording iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:#15263e}
+.dengbej-recording .dengbej-recording-body{padding:24px;width:100%}
+.dengbej-recording h4{margin-bottom:8px}
+.dengbej-recording .dengbej-credit{margin-top:8px}

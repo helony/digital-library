@@ -35,7 +35,7 @@ def main():
         label = 'Source record' if b.get('sourceOnly') else 'Read available section' if b['availability'] == 'partial' else 'Read'
         cards.append(f'''<article class="book-card static-book-card" data-slug="{e(b['slug'])}">
 <a class="cover tone-{e(b['tone'])} {long_class} {preview_class}" href="{e(url)}"><span class="cover-language">{language}{' · PDF' if b['format']=='pdf' else ''}</span><h3 class="cover-title" dir="auto">{e(b['title'])}</h3>{art}{note_html}</a>
-<div class="card-body">{scan_title}<p class="book-author" dir="auto">{e(author)}</p><div class="card-actions"><a class="shelf-read" href="{e(url)}">{label} →</a>{info}</div></div></article>''')
+<div class="card-body">{scan_title}<p class="book-author" dir="auto">{e(author)}</p><p class="book-summary" lang="en" dir="auto">{e(b.get("summary",b.get("desc",{})).get("en",""))}</p><div class="card-actions"><a class="shelf-read" href="{e(url)}">{label} →</a>{info}</div></div></article>''')
     p = ROOT / 'index.html'
     text = p.read_text()
     start = text.index('          <div class="book-grid" id="bookGrid"')

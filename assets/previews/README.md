@@ -18,3 +18,6 @@ Dengbêj recordings remain with their original publishers; the library provides 
 
 - Dengbêj Gazîn: https://qed.perspectivia.net/gazin
 - Şakiro album and publisher-provided playlist: https://dengbejsakirovakfi.org/ku/dengbej-sakiro/albumen-derketine/sexe-kubar
+
+
+Dengbêj additions (2026-09-25): “Lor Loriyê”, performed by Dengbêj Apê Yusuf, Dengbêj Mukaddes and Aryen Kom, and “Mîr Mihemed”, performed by Dengbêj Ehmê, are embedded from KOM Müzik’s YouTube uploads. No recording or thumbnail is copied into this repository. Original publisher links remain visible. Embeds load only in Listen and are removed when leaving it.

@@ -28,7 +28,10 @@
     ],
     "kind": "story",
     "localStory": true,
-    "sourceOnly": false
+    "sourceOnly": false,
+    "summary": {
+      "en": "A well-known Kurdish oral love story."
+    }
   },
   {
     "id": 101,
@@ -59,7 +62,10 @@
     ],
     "kind": "story",
     "localStory": true,
-    "sourceOnly": false
+    "sourceOnly": false,
+    "summary": {
+      "en": "A classic Kurdish epic narrative preserved among the Kurmancî stories in Le Coq’s early twentieth-century collection."
+    }
   },
   {
     "id": 102,
@@ -90,7 +96,10 @@
     ],
     "kind": "story",
     "localStory": true,
-    "sourceOnly": false
+    "sourceOnly": false,
+    "summary": {
+      "en": "A tragic Kurmancî love epic: Siyabend and Xecê flee together to Mount Sîpan, where a deer hunt leads to their final separation and death."
+    }
   },
   {
     "id": 103,
@@ -121,7 +130,10 @@
     ],
     "kind": "story",
     "localStory": true,
-    "sourceOnly": false
+    "sourceOnly": false,
+    "summary": {
+      "en": "The story of Dimdim Castle and Xanê Lepzêrîn, where a seventeenth-century siege became one of the best-known Kurdish heroic epics."
+    }
   },
   {
     "id": 104,
@@ -152,7 +164,10 @@
     ],
     "kind": "story",
     "localStory": true,
-    "sourceOnly": false
+    "sourceOnly": false,
+    "summary": {
+      "en": "A guide to Bazîdî’s forty Kurmancî stories: love stories, historical episodes, social tales and a Siyabend û Xecê variant, with links back to the public-domain 1860 scan."
+    }
   },
   {
     "id": 105,
@@ -183,7 +198,10 @@
     ],
     "kind": "story",
     "localStory": true,
-    "sourceOnly": false
+    "sourceOnly": false,
+    "summary": {
+      "en": "A prince leaves wealth behind to live by selling baskets, then faces a noblewoman’s relentless attempt to win him away from his chosen life and loyalties."
+    }
   },
   {
     "id": 106,
@@ -214,7 +232,10 @@
     ],
     "kind": "story",
     "localStory": true,
-    "sourceOnly": false
+    "sourceOnly": false,
+    "summary": {
+      "en": "A major Kurmanji epic of Derwêş and Edûl, combining tragic love, tribal obligations, religious difference and intertribal war."
+    }
   },
   {
     "id": 107,
@@ -245,7 +266,10 @@
     ],
     "kind": "story",
     "localStory": true,
-    "sourceOnly": false
+    "sourceOnly": false,
+    "summary": {
+      "en": "A devout sheikh dreams of an Armenian woman, travels in search of her, and faces a severe test between religious identity, desire and mystical love."
+    }
   },
   {
     "id": 108,
@@ -276,7 +300,10 @@
     ],
     "kind": "story",
     "localStory": true,
-    "sourceOnly": false
+    "sourceOnly": false,
+    "summary": {
+      "en": "The story of an ascetic who, after decades of devotion, is gradually drawn into temptation, crime and a final betrayal by the devil."
+    }
   },
   {
     "id": 109,
@@ -307,7 +334,10 @@
     ],
     "kind": "story",
     "localStory": true,
-    "sourceOnly": false
+    "sourceOnly": false,
+    "summary": {
+      "en": "A long Kurdish narrative connected with Barzan and the surrounding region, published with Kurdish text, translation and notes."
+    }
   },
   {
     "id": 110,
@@ -338,7 +368,10 @@
     ],
     "kind": "story",
     "localStory": false,
-    "sourceOnly": true
+    "sourceOnly": true,
+    "summary": {
+      "en": "One of the Kurdish tales Nikitine published from material associated with Molla Said Kazi of the Şemzînan / Nehrî region."
+    }
   },
   {
     "id": 111,
@@ -369,7 +402,10 @@
     ],
     "kind": "story",
     "localStory": false,
-    "sourceOnly": true
+    "sourceOnly": true,
+    "summary": {
+      "en": "A historical Kurdish story title preserved in Nikitine’s 1926 collection of narratives from the northern Kurdish dialect area."
+    }
   },
   {
     "id": 112,
@@ -400,7 +436,10 @@
     ],
     "kind": "story",
     "localStory": false,
-    "sourceOnly": true
+    "sourceOnly": true,
+    "summary": {
+      "en": "One of the named tales in Nikitine’s collection, preserved with Kurdish text and English translation in the original publication."
+    }
   },
   {
     "id": 113,
@@ -431,7 +470,10 @@
     ],
     "kind": "story",
     "localStory": true,
-    "sourceOnly": false
+    "sourceOnly": false,
+    "summary": {
+      "en": "A Hekarî-linked tale listed among Nikitine’s early published Kurdish story collection."
+    }
   },
   {
     "id": 116,
@@ -462,7 +504,10 @@
     ],
     "kind": "story",
     "localStory": false,
-    "sourceOnly": false
+    "sourceOnly": false,
+    "summary": {
+      "en": "A playful folktale about Anansi trying to keep all the world’s wisdom for himself."
+    }
   },
   {
     "id": 117,
@@ -493,7 +538,10 @@
     ],
     "kind": "story",
     "localStory": false,
-    "sourceOnly": false
+    "sourceOnly": false,
+    "summary": {
+      "en": "A suspenseful tale of a girl who must outwit a dangerous dog and find her way home."
+    }
   },
   {
     "id": 118,
@@ -524,7 +572,10 @@
     ],
     "kind": "story",
     "localStory": false,
-    "sourceOnly": false
+    "sourceOnly": false,
+    "summary": {
+      "en": "A traditional-style animal story explaining why the eagle flies and the hen scratches the ground."
+    }
   },
   {
     "id": 119,
@@ -555,7 +606,10 @@
     ],
     "kind": "story",
     "localStory": false,
-    "sourceOnly": false
+    "sourceOnly": false,
+    "summary": {
+      "en": "A strange and imaginative folktale about children made of wax and the brother who reaches the sunlight."
+    }
   },
   {
     "id": 120,
@@ -586,7 +640,10 @@
     ],
     "kind": "story",
     "localStory": false,
-    "sourceOnly": false
+    "sourceOnly": false,
+    "summary": {
+      "en": "Tom challenges expectations at the market and keeps trying until customers finally buy his bananas."
+    }
   },
   {
     "id": 121,
@@ -617,6 +674,123 @@
     ],
     "kind": "story",
     "localStory": false,
-    "sourceOnly": false
+    "sourceOnly": false,
+    "summary": {
+      "en": "A child becomes fascinated by a grandmother’s mysterious “magic” basket of ripening bananas."
+    }
+  },
+  {
+    "id": 122,
+    "slug": "story-what-are-you-doing",
+    "title": "چی دەكەی؟",
+    "author": "Nina Orange · Agri Afshin (translation)",
+    "variety": "Soranî",
+    "v": "ckb",
+    "subject": "folklore",
+    "script": "arabic",
+    "format": "web",
+    "availability": "full",
+    "institution": "Storybooks Canada / African Storybook",
+    "tone": "teal",
+    "motif": "folk-oral",
+    "added": "2026-09-25",
+    "year": "",
+    "yearSort": 0,
+    "url": "https://www.storybookscanada.ca/stories/ckb/0008/",
+    "source": "https://www.storybookscanada.ca/stories/ckb/0008/",
+    "rtl": true,
+    "desc": {
+      "en": "An illustrated first reader about everyday actions, in Sorani with English and French alongside."
+    },
+    "summary": {
+      "en": "An illustrated first reader about everyday actions, in Sorani with English and French alongside."
+    },
+    "aliases": [
+      "What are you doing",
+      "children",
+      "illustrated",
+      "beginner"
+    ],
+    "kind": "story",
+    "localStory": false,
+    "sourceOnly": false,
+    "rightsKey": "rights_cc_by_3",
+    "rightsType": "licensed"
+  },
+  {
+    "id": 123,
+    "slug": "story-i-like-to-read",
+    "title": "من حەز دەكەم بخوێنمەوە",
+    "author": "Letta Machoga · Agri Afshin (translation)",
+    "variety": "Soranî",
+    "v": "ckb",
+    "subject": "folklore",
+    "script": "arabic",
+    "format": "web",
+    "availability": "full",
+    "institution": "Storybooks Canada / African Storybook",
+    "tone": "teal",
+    "motif": "folk-oral",
+    "added": "2026-09-25",
+    "year": "",
+    "yearSort": 0,
+    "url": "https://www.storybookscanada.ca/stories/ckb/0087/",
+    "source": "https://www.storybookscanada.ca/stories/ckb/0087/",
+    "rtl": true,
+    "desc": {
+      "en": "A young reader looks for someone to share a book with in this illustrated Sorani story."
+    },
+    "summary": {
+      "en": "A young reader looks for someone to share a book with in this illustrated Sorani story."
+    },
+    "aliases": [
+      "I like to read",
+      "children",
+      "illustrated",
+      "beginner"
+    ],
+    "kind": "story",
+    "localStory": false,
+    "sourceOnly": false,
+    "rightsKey": "rights_cc_by_3",
+    "rightsType": "licensed"
+  },
+  {
+    "id": 124,
+    "slug": "story-simbegwire",
+    "title": "سیمبەگوێرە",
+    "author": "Rukia Nantale · Agri Afshin (translation)",
+    "variety": "Soranî",
+    "v": "ckb",
+    "subject": "folklore",
+    "script": "arabic",
+    "format": "web",
+    "availability": "full",
+    "institution": "Storybooks Canada / African Storybook",
+    "tone": "teal",
+    "motif": "folk-oral",
+    "added": "2026-09-25",
+    "year": "",
+    "yearSort": 0,
+    "url": "https://www.storybookscanada.ca/stories/ckb/0052/",
+    "source": "https://www.storybookscanada.ca/stories/ckb/0052/",
+    "rtl": true,
+    "desc": {
+      "en": "A girl faces an unkind stepmother and finds help from her aunt in this illustrated Sorani story."
+    },
+    "summary": {
+      "en": "A girl faces an unkind stepmother and finds help from her aunt in this illustrated Sorani story."
+    },
+    "aliases": [
+      "Simbegwire",
+      "children",
+      "illustrated",
+      "beginner"
+    ],
+    "kind": "story",
+    "localStory": false,
+    "sourceOnly": false,
+    "rightsKey": "rights_cc_by_3",
+    "rightsType": "licensed"
   }
 ]

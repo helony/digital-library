@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24",
+  "generated": "2026-09-25",
   "policy": "Only records explicitly marked archiveEligible are auto-archived. Other records require manual rights review.",
   "identifier_scheme": "KDL-<primary ISO 639-3 code>-<4 digit sequence>. Identifiers are permanent and should never be reassigned.",
   "items": [
@@ -784,6 +784,74 @@
       "wiki_title": null,
       "local_path": null,
       "checked": "2026-09-24"
+    },
+    {
+      "id": 47,
+      "kdl_id": "KDL-CKB-0006",
+      "slug": "mann-mukri-texts-1906",
+      "title": "Die Mundart der Mukri-Kurden · Teil I",
+      "author": "Oskar Mann",
+      "author_slug": "oskar-mann",
+      "format": "pdf",
+      "eligible": false,
+      "rights_type": "pd",
+      "rights_key": "rights_pd_old_scan",
+      "source": "https://bnk.institutkurde.org/images/pdf/PY3JGW72U5.pdf",
+      "remote_url": "https://bnk.institutkurde.org/images/pdf/PY3JGW72U5.pdf",
+      "wiki_title": null,
+      "local_path": null,
+      "checked": "2026-09-25"
+    },
+    {
+      "id": 48,
+      "kdl_id": "KDL-KMR-0038",
+      "slug": "suto-tato-1988",
+      "title": "Suto û Tato · The Tale of Suto and Tato",
+      "author": "E. B. Soane, B. Nikitin, Yousuf Zangana & Jawad Mella",
+      "author_slug": "soane-nikitin-zangana-mella",
+      "format": "pdf",
+      "eligible": false,
+      "rights_type": "check",
+      "rights_key": "rights_institutional_reading",
+      "source": "https://bnk.institutkurde.org/images/pdf/PCCS9HEK9S.pdf",
+      "remote_url": "https://bnk.institutkurde.org/images/pdf/PCCS9HEK9S.pdf",
+      "wiki_title": null,
+      "local_path": null,
+      "checked": "2026-09-25"
+    },
+    {
+      "id": 49,
+      "kdl_id": "KDL-CKB-0007",
+      "slug": "diwani-nali",
+      "title": "دیوانی نالی",
+      "author": "Nalî",
+      "author_slug": "nali",
+      "format": "wiki",
+      "eligible": false,
+      "rights_type": "pd",
+      "rights_key": "rights_pd_old",
+      "source": "https://wikisource.org/wiki/%D8%AF%DB%8C%D9%88%D8%A7%D9%86%DB%8C_%D9%86%D8%A7%D9%84%DB%8C",
+      "remote_url": "https://wikisource.org/wiki/%D8%AF%DB%8C%D9%88%D8%A7%D9%86%DB%8C_%D9%86%D8%A7%D9%84%DB%8C",
+      "wiki_title": "دیوانی نالی",
+      "local_path": null,
+      "checked": "2026-09-25"
+    },
+    {
+      "id": 50,
+      "kdl_id": "KDL-CKB-0008",
+      "slug": "diwani-haji-qadiri-koyi",
+      "title": "دیوانی حاجی قادری کۆیی",
+      "author": "Hacî Qadirê Koyî",
+      "author_slug": "haji-qadiri-koyi",
+      "format": "wiki",
+      "eligible": false,
+      "rights_type": "pd",
+      "rights_key": "rights_pd_old",
+      "source": "https://wikisource.org/wiki/%D8%AF%DB%8C%D9%88%D8%A7%D9%86%DB%8C_%D8%AD%D8%A7%D8%AC%DB%8C_%D9%82%D8%A7%D8%AF%D8%B1%DB%8C_%DA%A9%DB%86%DB%8C%DB%8C",
+      "remote_url": "https://wikisource.org/wiki/%D8%AF%DB%8C%D9%88%D8%A7%D9%86%DB%8C_%D8%AD%D8%A7%D8%AC%DB%8C_%D9%82%D8%A7%D8%AF%D8%B1%DB%8C_%DA%A9%DB%86%DB%8C%DB%8C",
+      "wiki_title": "دیوانی حاجی قادری کۆیی",
+      "local_path": null,
+      "checked": "2026-09-25"
     }
   ]
 }
