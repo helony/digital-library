@@ -2153,6 +2153,817 @@
       "kdlId": "KDL-CKB-0008",
       "archiveEligible": false,
       "localPath": null
+    },
+    {
+      "id": 51,
+      "slug": "agire-sinema-amude",
+      "title": "Agirê sinema Amûdê",
+      "author": "M. Ahmedê Namî",
+      "authorSlug": "ahmede-nami",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "1987",
+      "yearSort": 1987,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/FT79RMV3A2.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=945",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "A Kurmancî account of the Amûdê cinema fire, preserving the memory of a tragedy through storytelling."
+      },
+      "summary": {
+        "en": "A Kurmancî account of the Amûdê cinema fire, preserving the memory of a tragedy through storytelling."
+      },
+      "aliases": [
+        "Amuda",
+        "cinema fire",
+        "history"
+      ],
+      "tone": "green",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0039",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 86
+    },
+    {
+      "id": 52,
+      "slug": "antolojiya-ciroka-nu",
+      "title": "Antolojiya çîroka nû ya Kurmancên Başûr",
+      "author": "Xelîl Duhokî",
+      "authorSlug": "xelil-duhoki",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "1995",
+      "yearSort": 1995,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/BUF852RWPN.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=29",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "Short fiction by more than twenty writers from southern Kurdistan, presented in Latin-script Kurmancî."
+      },
+      "summary": {
+        "en": "Short fiction by more than twenty writers from southern Kurdistan, presented in Latin-script Kurmancî."
+      },
+      "aliases": [
+        "anthology",
+        "short stories",
+        "Badinan"
+      ],
+      "tone": "gold",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0040",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 106
+    },
+    {
+      "id": 53,
+      "slug": "axirya-nes",
+      "title": "Axirya nes",
+      "author": "Hovhaness Tumanjan",
+      "authorSlug": "hovhaness-tumanjan",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "2012",
+      "yearSort": 2012,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/XAWE8RYQHJ.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=1567",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "An illustrated animal fable about a mother bird, her chicks and a threatening fox, translated by Casimê Celîl."
+      },
+      "summary": {
+        "en": "An illustrated animal fable about a mother bird, her chicks and a threatening fox, translated by Casimê Celîl."
+      },
+      "aliases": [
+        "Hovhannes Tumanyan",
+        "Casimê Celîl",
+        "children",
+        "fable"
+      ],
+      "tone": "blue",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0041",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 24
+    },
+    {
+      "id": 54,
+      "slug": "balafira-jine",
+      "title": "Balafira Jînê",
+      "author": "Zeynelabidîn Zinar",
+      "authorSlug": "zeynelabidin-zinar",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "1993",
+      "yearSort": 1993,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/ERFWLD1B9T.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=47",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "A Kurmancî tale opening in the town of Pêncşayê, where birds seek refuge as dawn breaks."
+      },
+      "summary": {
+        "en": "A Kurmancî tale opening in the town of Pêncşayê, where birds seek refuge as dawn breaks."
+      },
+      "aliases": [
+        "fiction",
+        "cirvanok"
+      ],
+      "tone": "rust",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0042",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 134
+    },
+    {
+      "id": 55,
+      "slug": "balulka-sekire",
+      "title": "Balûlka Şekirê",
+      "author": "Hesen Silêvaneyî",
+      "authorSlug": "hesen-silevaneyi",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "",
+      "yearSort": 0,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/P2BRV8NFJW.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=48",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "A collection of Kurmancî short stories by Hesen Silêvaneyî, with a glossary at the end."
+      },
+      "summary": {
+        "en": "A collection of Kurmancî short stories by Hesen Silêvaneyî, with a glossary at the end."
+      },
+      "aliases": [
+        "short stories",
+        "Badinan"
+      ],
+      "tone": "teal",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0043",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 87
+    },
+    {
+      "id": 56,
+      "slug": "bexceye-heywanan",
+      "title": "Bexçeyê Heywanan",
+      "author": "Ghislain Zuccolo",
+      "authorSlug": "ghislain-zuccolo",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "2009",
+      "yearSort": 2009,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/JGTZHUKDXS.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=972",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "An illustrated farm-animal story about how animals live and why their welfare matters."
+      },
+      "summary": {
+        "en": "An illustrated farm-animal story about how animals live and why their welfare matters."
+      },
+      "aliases": [
+        "children",
+        "animals",
+        "Sacha Ilitch",
+        "Nicolas Hunerblaes"
+      ],
+      "tone": "plum",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0044",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 28
+    },
+    {
+      "id": 57,
+      "slug": "bexceye-visne",
+      "title": "Bexçeyê Vîşne",
+      "author": "Anton Çexov",
+      "authorSlug": "anton-cexov",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "1995",
+      "yearSort": 1995,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/Y7GSZJH1T8.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=55",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "Chekhov’s The Cherry Orchard in Kurmancî: a family faces losing its estate and a changing world."
+      },
+      "summary": {
+        "en": "Chekhov’s The Cherry Orchard in Kurmancî: a family faces losing its estate and a changing world."
+      },
+      "aliases": [
+        "Anton Chekhov",
+        "The Cherry Orchard",
+        "play",
+        "Firat Cewerî"
+      ],
+      "tone": "green",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0045",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 95
+    },
+    {
+      "id": 58,
+      "slug": "bi-kurmanciya-gewr",
+      "title": "Bi Kurmanciya Gewr",
+      "author": "Rojen Barnas",
+      "authorSlug": "rojen-barnas",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "2005",
+      "yearSort": 2005,
+      "subject": "reference",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/MHTBKPRFQV.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=247",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "Essays on Kurdish language, literature and identity, including reflections on Cegerxwîn and writing in Kurmancî."
+      },
+      "summary": {
+        "en": "Essays on Kurdish language, literature and identity, including reflections on Cegerxwîn and writing in Kurmancî."
+      },
+      "aliases": [
+        "essays",
+        "literature",
+        "language"
+      ],
+      "tone": "gold",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0046",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 188
+    },
+    {
+      "id": 59,
+      "slug": "bilbil-andersen",
+      "title": "Bilbil",
+      "author": "H. C. Andersen",
+      "authorSlug": "h-c-andersen",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "1989",
+      "yearSort": 1989,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/B6ZLHXTMQV.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=4939",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "Five Andersen fairy tales in Kurmancî, including The Nightingale, Thumbelina and The Steadfast Tin Soldier."
+      },
+      "summary": {
+        "en": "Five Andersen fairy tales in Kurmancî, including The Nightingale, Thumbelina and The Steadfast Tin Soldier."
+      },
+      "aliases": [
+        "Hans Christian Andersen",
+        "The Nightingale",
+        "Thumbelina",
+        "Hazim Kiliç",
+        "children"
+      ],
+      "tone": "blue",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0047",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 56,
+      "startPage": 9
+    },
+    {
+      "id": 60,
+      "slug": "biyani-camus",
+      "title": "Biyanî",
+      "author": "Albert Camus",
+      "authorSlug": "albert-camus",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "1995",
+      "yearSort": 1995,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/D94U3BAEZH.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=40",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "The Stranger in Kurmancî, translated by Fawaz Husên: a novel of alienation, judgment and the absurd."
+      },
+      "summary": {
+        "en": "The Stranger in Kurmancî, translated by Fawaz Husên: a novel of alienation, judgment and the absurd."
+      },
+      "aliases": [
+        "The Stranger",
+        "The Outsider",
+        "L’Etranger",
+        "Fawaz Husên",
+        "novel"
+      ],
+      "tone": "rust",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0048",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 110
+    },
+    {
+      "id": 61,
+      "slug": "carinen-xeyam",
+      "title": "Çarînên Xeyam",
+      "author": "Omer Xeyam",
+      "authorSlug": "omer-xeyam",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "1939",
+      "yearSort": 1939,
+      "subject": "poetry",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/WJLYE157R6.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=624",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "Omar Khayyam’s quatrains on life, love and mortality, translated into Kurmancî by Kamiran Alî Bedirxan."
+      },
+      "summary": {
+        "en": "Omar Khayyam’s quatrains on life, love and mortality, translated into Kurmancî by Kamiran Alî Bedirxan."
+      },
+      "aliases": [
+        "Omar Khayyam",
+        "Rubaiyat",
+        "Kamiran Alî Bedirxan"
+      ],
+      "tone": "teal",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0049",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 36
+    },
+    {
+      "id": 62,
+      "slug": "cend-cirusk",
+      "title": "Çend çirûsk, pengek ji kurte çîrokan",
+      "author": "Mehmûdê Eko",
+      "authorSlug": "mehmude-eko",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "1999",
+      "yearSort": 1999,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/X5DBTFUELA.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=988",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "Nine short stories exploring love, memory, loss and identity in lyrical Kurmancî prose."
+      },
+      "summary": {
+        "en": "Nine short stories exploring love, memory, loss and identity in lyrical Kurmancî prose."
+      },
+      "aliases": [
+        "short stories",
+        "Pengek ji kurte çîrokan"
+      ],
+      "tone": "plum",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0050",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 72
+    },
+    {
+      "id": 63,
+      "slug": "cikus-moliere",
+      "title": "Çikûs",
+      "author": "Molière",
+      "authorSlug": "moliere",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "2003",
+      "yearSort": 2003,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/1YZSCMR8XJ.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=427",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "Molière’s The Miser in Kurmancî: Harpagon’s obsession with money tangles his family’s love lives."
+      },
+      "summary": {
+        "en": "Molière’s The Miser in Kurmancî: Harpagon’s obsession with money tangles his family’s love lives."
+      },
+      "aliases": [
+        "The Miser",
+        "L’Avare",
+        "comedy",
+        "play",
+        "Yakup Karademir"
+      ],
+      "tone": "green",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0051",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 146
+    },
+    {
+      "id": 64,
+      "slug": "ciroka-malbata-evdo",
+      "title": "Çîroka Malbata Evdo",
+      "author": "Firat Cewerî",
+      "authorSlug": "firat-ceweri",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "1999",
+      "yearSort": 1999,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/MUYVF2PK4D.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=65",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "A family tragedy drawn from events the author witnessed, depicting the hardship of Kurdish workers."
+      },
+      "summary": {
+        "en": "A family tragedy drawn from events the author witnessed, depicting the hardship of Kurdish workers."
+      },
+      "aliases": [
+        "novel",
+        "family",
+        "workers"
+      ],
+      "tone": "gold",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0052",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 120
+    },
+    {
+      "id": 65,
+      "slug": "ciroka-masigir",
+      "title": "Çîroka masîgir û masîya zêrin",
+      "author": "A. S. Pûşkîn",
+      "authorSlug": "a-s-puskin",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "2012",
+      "yearSort": 2012,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/JKAP4GTHRS.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=1561",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "Pushkin’s fisherman and golden fish tale in Kurmancî: magical wishes turn into a lesson about greed."
+      },
+      "summary": {
+        "en": "Pushkin’s fisherman and golden fish tale in Kurmancî: magical wishes turn into a lesson about greed."
+      },
+      "aliases": [
+        "Alexander Pushkin",
+        "The Fisherman and the Fish",
+        "Casimê Celîl",
+        "children"
+      ],
+      "tone": "blue",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0053",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 26
+    },
+    {
+      "id": 66,
+      "slug": "ciroka-newroze",
+      "title": "Çîroka Newrozê",
+      "author": "Şivan Perwer",
+      "authorSlug": "sivan-perwer",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "1990",
+      "yearSort": 1990,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/XQR8EP3ZA2.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=1167",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "An illustrated telling of the Newroz story for children, with pictures by Mamoste."
+      },
+      "summary": {
+        "en": "An illustrated telling of the Newroz story for children, with pictures by Mamoste."
+      },
+      "aliases": [
+        "children",
+        "Newroz",
+        "Nowruz",
+        "Mamoste"
+      ],
+      "tone": "rust",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0054",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 42
+    },
+    {
+      "id": 67,
+      "slug": "ciroken-hezar-u-seveke",
+      "title": "Çîrokên hezar û şevekê",
+      "author": "Anonymous · translated by Serdar Roşan",
+      "authorSlug": "serdar-rosan",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "1998",
+      "yearSort": 1998,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/C4VL1Z5X8R.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=177",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "Stories from One Thousand and One Nights in Kurmancî, beginning with Shahriyar and Shahzaman."
+      },
+      "summary": {
+        "en": "Stories from One Thousand and One Nights in Kurmancî, beginning with Shahriyar and Shahzaman."
+      },
+      "aliases": [
+        "Arabian Nights",
+        "One Thousand and One Nights",
+        "folktales",
+        "Şehrazad"
+      ],
+      "tone": "teal",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0055",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 146
+    },
+    {
+      "id": 68,
+      "slug": "ciya-arif-xelil",
+      "title": "Çiya",
+      "author": "Arif Xelîl",
+      "authorSlug": "arif-xelil",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "2023",
+      "yearSort": 2023,
+      "subject": "poetry",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/EY9M7PC8Z2.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=4593",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "Kurmancî poems on homeland, faith, longing and everyday life from Arif Xelîl’s collection Çiya."
+      },
+      "summary": {
+        "en": "Kurmancî poems on homeland, faith, longing and everyday life from Arif Xelîl’s collection Çiya."
+      },
+      "aliases": [
+        "poems",
+        "Bavê Gulê"
+      ],
+      "tone": "plum",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0056",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 120
+    },
+    {
+      "id": 69,
+      "slug": "ciyaye-agiri",
+      "title": "Çîyayê Agirî",
+      "author": "Yaşar Kemal",
+      "authorSlug": "yasar-kemal",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "1990",
+      "yearSort": 1990,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/S3R5XY2H16.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=176",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "A love story rooted in the legends and landscape of Mount Ararat, translated into Kurmancî."
+      },
+      "summary": {
+        "en": "A love story rooted in the legends and landscape of Mount Ararat, translated into Kurmancî."
+      },
+      "aliases": [
+        "Ağrıdağı Efsanesi",
+        "The Legend of Ararat",
+        "Şerefnaz",
+        "novel"
+      ],
+      "tone": "green",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0057",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 129
+    },
+    {
+      "id": 70,
+      "slug": "dara-hinare",
+      "title": "Dara hinarê",
+      "author": "Yaşar Kemal",
+      "authorSlug": "yasar-kemal",
+      "v": "kmr",
+      "variety": "Kurmancî",
+      "year": "1998",
+      "yearSort": 1998,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/Z691S28JYK.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=943",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "A short novel following mountain villagers through hardship and hope in Çukurova, translated by Firat Cewerî."
+      },
+      "summary": {
+        "en": "A short novel following mountain villagers through hardship and hope in Çukurova, translated by Firat Cewerî."
+      },
+      "aliases": [
+        "The Pomegranate Tree",
+        "Firat Cewerî",
+        "novel",
+        "Çukurova"
+      ],
+      "tone": "gold",
+      "added": "2026-09-25",
+      "checked": "2026-09-25",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-KMR-0058",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 122
     }
   ]
 }

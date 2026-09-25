@@ -19,7 +19,7 @@ const VARIETIES = [
 const SUBJECTS = [['all','allSubjects'],['poetry','poetry'],['reference','reference'],['religious','religious'],['education','education'],['folklore','folklore']];
 const SCRIPTS = [['all','allScripts'],['latin','latin'],['arabic','arabic'],['mixed','mixed']];
 const FORMATS = [['all','allFormats'],['wiki','wiki'],['pdf','pdf'],['web','webStory']];
-const AVAIL = [['all','allAvailability'],['full','full'],['partial','partial'],['retelling','retelling'],['reference','sourceOnly']];
+const AVAIL = [['all','allAvailability'],['full','full'],['partial','partial'],['retelling','retelling']];
 const SORTS = [['catalogue','sortCatalogue'],['title','sortTitle'],['author','sortAuthor'],['year-asc','sortOldest'],['year-desc','sortNewest'],['recent','sortRecent']];
 
 const state = {mode:'all',locale: localStorage.getItem('kdl_locale') || 'en', q:'', variety:'all', subject:'all', script:'all', format:'all', availability:'all', sort:'catalogue'};
@@ -38,7 +38,7 @@ function subjectLabel(v){return t(v)}
 function scriptLabel(v){return t(v)}
 function formatLabel(v){return t(v)}
 function availabilityLabel(v){return t(v)}
-function rightsLabel(b){if(b.rightsKey==='rights_cc_by_nc_external')return 'CC BY-NC 4.0'; if(b.rightsKey==='rights_cc_by_3')return 'CC BY 3.0'; if(b.rightsType==='pd')return t('publicDomain'); if(b.rightsType==='regional')return t('regionalPD'); if(b.rightsType==='licensed')return t('authorizedShare'); return t('rightsReview')}
+function rightsLabel(b){if(b.licenseLabel)return b.licenseLabel; if(b.rightsKey==='rights_cc_by_nc_external')return 'CC BY-NC 4.0'; if(b.rightsKey==='rights_cc_by_3')return 'CC BY 3.0'; if(b.rightsType==='pd')return t('publicDomain'); if(b.rightsType==='regional')return t('regionalPD'); if(b.rightsType==='licensed')return t('authorizedShare'); return t('rightsReview')}
 function rightsClass(b){return b.rightsType==='check'?'caution':'rights'}
 function escapeHtml(s=''){return String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
 
@@ -77,7 +77,7 @@ function matchesSearchText(searchText,query){
 const STARTER_BOOKS=['mem-u-zin','story-mame-alan','zembilfiros','makas-kurdische-studien-1900','diwana-melaye-ciziri','story-siyabend-u-xece','diwani-mahwi','kurdische-texte-transkription-1903'];
 function filteredBooks(){
   const q=normalizeText(state.q);
-  let items=BOOKS.filter(b=>(state.variety==='all'||b.v===state.variety||(state.variety==='ckb'&&b.variety.includes('Soranî'))||(state.variety==='diq'&&b.variety.includes('Zazakî')))&&(state.subject==='all'||b.subject===state.subject)&&(state.script==='all'||b.script===state.script)&&(state.format==='all'||b.format===state.format)&&(state.availability==='all'||b.availability===state.availability));
+  let items=BOOKS.filter(b=>!b.sourceOnly&&(state.variety==='all'||b.v===state.variety||(state.variety==='ckb'&&b.variety.includes('Soranî'))||(state.variety==='diq'&&b.variety.includes('Zazakî')))&&(state.subject==='all'||b.subject===state.subject)&&(state.script==='all'||b.script===state.script)&&(state.format==='all'||b.format===state.format)&&(state.availability==='all'||b.availability===state.availability));
   if(q)items=items.filter(b=>matchesSearchText(bookSearchText(b),q));
   const collator=new Intl.Collator(state.locale,{sensitivity:'base',numeric:true});
   const rank=b=>{const index=STARTER_BOOKS.indexOf(b.slug);return index>=0?index: b.sourceOnly?500:b.subject==='reference'?400:b.subject==='education'?300:100+b.id};
@@ -157,7 +157,7 @@ function showDetails(slug,push=true){
  $('#cataloguePage').hidden=true;$('#detailsPage').hidden=false;window.scrollTo({top:0,behavior:'instant'});
  const author=b.authorSlug?`<a href="${authorRecordUrl(b)}">${escapeHtml(b.author)}</a>`:escapeHtml(b.author);
  const external=b.format==='web'&&!b.localStory;
- $('#detailsContent').innerHTML=`<article class="details-main"><h1 id="detailsTitle" tabindex="-1" dir="auto">${escapeHtml(b.title)}</h1><p class="details-byline">${author} · ${escapeHtml(b.variety)}</p><p class="details-description">${escapeHtml(desc(b))}</p>${b.localStory?`<p>${escapeHtml(t('storyNotice'))}</p>`:''}<div class="details-actions"><a class="primary-button" id="detailsRead" href="${escapeHtml(readingUrl(b))}" ${external?'target="_blank" rel="noopener"':''}>${escapeHtml(readLabel(b))} →</a>${b.format==='pdf'?`<button class="secondary-button" id="detailsDownload" type="button">↓ ${escapeHtml(t('downloadPdf'))}</button>`:''}</div><details class="source-details"><summary>${escapeHtml(t('sourceAndRights'))}</summary><p><a href="${escapeHtml(b.source||b.url)}" target="_blank" rel="noopener">${escapeHtml(b.institution||t('source'))} ↗</a></p>${b.rightsKey?`<p>${escapeHtml(t(b.rightsKey))}</p>`:''}<p>${escapeHtml(b.year||'')}${b.kdlId?' · '+escapeHtml(b.kdlId):''}</p>${b.authorSlug?`<a href="${permanentRecordUrl(b)}">${escapeHtml(t('details'))} →</a>`:''}</details></article>`;
+ $('#detailsContent').innerHTML=`<article class="details-main"><h1 id="detailsTitle" tabindex="-1" dir="auto">${escapeHtml(b.title)}</h1><p class="details-byline">${author} · ${escapeHtml(b.variety)}</p><p class="details-description">${escapeHtml(desc(b))}</p>${b.availability==='retelling'?`<p>${escapeHtml(t('storyNotice'))}</p>`:''}<div class="details-actions"><a class="primary-button" id="detailsRead" href="${escapeHtml(readingUrl(b))}" ${external?'target="_blank" rel="noopener"':''}>${escapeHtml(readLabel(b))} →</a>${b.format==='pdf'?`<button class="secondary-button" id="detailsDownload" type="button">↓ ${escapeHtml(t('downloadPdf'))}</button>`:''}</div><details class="source-details"><summary>${escapeHtml(t('sourceAndRights'))}</summary><p><a href="${escapeHtml(b.source||b.url)}" target="_blank" rel="noopener">${escapeHtml(b.institution||t('source'))} ↗</a></p>${b.rightsKey?`<p>${escapeHtml(t(b.rightsKey))}</p>`:''}${b.license?`<p><a href="${escapeHtml(b.license)}" target="_blank" rel="noopener">${escapeHtml(b.licenseLabel)} ↗</a></p>`:''}<p>${escapeHtml(b.year||'')}${b.kdlId?' · '+escapeHtml(b.kdlId):''}</p>${b.authorSlug?`<a href="${permanentRecordUrl(b)}">${escapeHtml(t('details'))} →</a>`:''}</details></article>`;
  if(!external)$('#detailsRead').addEventListener('click',e=>{e.preventDefault();openReader(b)});
  $('#detailsDownload')?.addEventListener('click',()=>downloadBook(b));
  if(push){const u=new URL(location.href);u.searchParams.delete('read');u.searchParams.set('book',slug);history.pushState({book:slug},'',u);$('#detailsTitle').focus();}
@@ -205,7 +205,7 @@ function closeReader(update=true){
 }
 function renderPdf(b,readUrl=b.url){
  const download=$('#readerDownload');download.href=readUrl;download.hidden=false;if(!readUrl.startsWith('books/')){download.target='_blank';download.rel='noopener'}else{download.removeAttribute('target');download.removeAttribute('rel')}
- $('#readerContent').innerHTML=`<div class="pdf-fallback"><a href="${escapeHtml(readUrl)}" target="_blank" rel="noopener">${escapeHtml(t('openFullScreen'))} ↗</a></div><iframe class="pdf-frame" title="${escapeHtml(b.title)} PDF" src="${escapeHtml(readUrl)}#view=FitH"></iframe>`;
+ $('#readerContent').innerHTML=`<div class="pdf-fallback"><a href="${escapeHtml(readUrl)}" target="_blank" rel="noopener">${escapeHtml(t('openFullScreen'))} ↗</a></div><iframe class="pdf-frame" title="${escapeHtml(b.title)} PDF" src="${escapeHtml(readUrl)}#page=${b.startPage||1}&view=FitH"></iframe>`;
 }
 async function renderStory(b){
  try{
@@ -216,7 +216,8 @@ async function renderStory(b){
   article.querySelectorAll('script,style,iframe,object,embed,form,.reader-controls').forEach(el=>el.remove());
   article.querySelectorAll('*').forEach(el=>[...el.attributes].forEach(a=>{if(/^on/i.test(a.name))el.removeAttribute(a.name)}));
   article.querySelectorAll('a[href]').forEach(a=>{a.href=new URL(a.getAttribute('href'),new URL(b.url,location.href)).href});
-  article.className='reader-article';article.dir=b.rtl?'rtl':'ltr';
+  article.querySelectorAll('img[src]').forEach(img=>{img.src=new URL(img.getAttribute('src'),new URL(b.url,location.href)).href});
+  article.className='reader-article'+(article.querySelector('.illustrated-page')?' illustrated-story':'');article.dir=b.rtl?'rtl':'ltr';
   $('#readerContent').replaceChildren(article);
  }catch(error){if(readerBook!==b)return;$('#readerContent').innerHTML=`<div class="reader-error"><p>${escapeHtml(t('readerFailed'))}</p><a href="${escapeHtml(b.url)}">${escapeHtml(t('readNow'))} →</a></div>`;}
 }

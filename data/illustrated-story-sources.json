@@ -1,0 +1,606 @@
+{
+  "checked": "2026-09-25",
+  "notes": "Full Sorani text reproduced with source attribution and per-story licenses. Illustrations served by Storybooks Canada. Text unchanged; layout adapted.",
+  "stories": [
+    {
+      "slug": "story-i-like-to-read",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0087/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Letta Machoga",
+        "Illustrated by": "Wiehan de Jager",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 1",
+        "Source": "I like to read from African Storybook"
+      },
+      "pages": 8,
+      "textSha256": "0cb48995d90b82c00df4280841a134c76fcaa6078712cd11074c33b6724bb40a"
+    },
+    {
+      "slug": "story-ckb-0327",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0327/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Zanele Buthelezi, Thembani Dladla, Clare Verbeek",
+        "Illustrated by": "Rob Owen",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 1",
+        "Source": "Counting animals from African Storybook"
+      },
+      "pages": 8,
+      "textSha256": "c32b83f3a2bb36248d80a6f0d37dda878bf50a4e815eb55c6aa954497410e0e9"
+    },
+    {
+      "slug": "story-ckb-0030",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0030/",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "credits": {
+        "Written by": "Clare Verbeek, Thembani Dladla, Zanele Buthelezi",
+        "Illustrated by": "Kathy Arbuckle, Ingrid Schechter",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 1",
+        "Source": "Feelings from African Storybook"
+      },
+      "pages": 5,
+      "textSha256": "8e0d8fd83ac942a880ac8a8b8872a27a5d617dcf463f9c3554405f9d8a168d6d"
+    },
+    {
+      "slug": "story-ckb-0302",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0302/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Deborah Namugosa, Beatrice Nabune, Alison Tukei, Rose Sabano",
+        "Illustrated by": "Rob Owen",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 1",
+        "Source": "Fire from African Storybook"
+      },
+      "pages": 8,
+      "textSha256": "7c008bc58059248099096341eda53a5cfe4b478699eb4d5d71bc0ecb681cbd36"
+    },
+    {
+      "slug": "story-ckb-0156",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0156/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Christian G.",
+        "Illustrated by": "Wiehan de Jager",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 1",
+        "Source": "The hungry crocodile from African Storybook"
+      },
+      "pages": 5,
+      "textSha256": "6f54334973f6d0f1400c9bd01576e9b01de788d9f12cf24a65bc53f7b80d7dac"
+    },
+    {
+      "slug": "story-ckb-0002",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0002/",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "credits": {
+        "Written by": "Jenny Katz",
+        "Illustrated by": "Sandy Campbell",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 1",
+        "Source": "Look at the animals from African Storybook"
+      },
+      "pages": 8,
+      "textSha256": "a03831b7b2670450a118261d40c1f65dae72e56e48e2b5ee0540585dea03f18c"
+    },
+    {
+      "slug": "story-ckb-0003",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0003/",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "credits": {
+        "Written by": "Clare Verbeek, Thembani Dladla, Zanele Buthelezi",
+        "Illustrated by": "Mlungisi Dlamini, Ingrid Schechter",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 1",
+        "Source": "School clothes from African Storybook"
+      },
+      "pages": 8,
+      "textSha256": "ad045ceba62cadef0b4b598374aa83a855d1eb5a3b130a87e6cc623b99fbeccd"
+    },
+    {
+      "slug": "story-ckb-0120",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0120/",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "credits": {
+        "Written by": "Clare Verbeek, Thembani Dladla, Zanele Buthelezi",
+        "Illustrated by": "Bronwen Heath, Ingrid Schechter",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 1",
+        "Source": "Hair from African Storybook"
+      },
+      "pages": 8,
+      "textSha256": "7a215bfc131a06a45530ea456a913effe61fc3327192e8c841707bebf574756a"
+    },
+    {
+      "slug": "story-ckb-0271",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0271/",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "credits": {
+        "Written by": "Carole Bloch",
+        "Illustrated by": "Richard MacIntosh",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 1",
+        "Source": "Two from African Storybook"
+      },
+      "pages": 5,
+      "textSha256": "96cd82f5a3e9c33911029869eef45ffe5361b8ce51f9e9fc6a2f78b405f8278f"
+    },
+    {
+      "slug": "story-ckb-0231",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0231/",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "credits": {
+        "Written by": "Clare Verbeek, Thembani Dladla, Zanele Buthelezi",
+        "Illustrated by": "Sandra McDougall, Ingrid Schechter",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 1",
+        "Source": "Weather book from African Storybook"
+      },
+      "pages": 8,
+      "textSha256": "eddafd0cc6eefd13a3c9b85ee58edf363d5f8e7519bed0d9a63183d4d15dd0ac"
+    },
+    {
+      "slug": "story-ckb-0129",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0129/",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "credits": {
+        "Written by": "Clare Verbeek, Thembani Dladla, Zanele Buthelezi",
+        "Illustrated by": "Mlungisi Dlamini, Ingrid Schechter",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 1",
+        "Source": "Lazy little brother from African Storybook"
+      },
+      "pages": 7,
+      "textSha256": "25197d2201ed6d7b62f14ba8f868c484457d914ee13f41f6bd47f68cd0694039"
+    },
+    {
+      "slug": "story-ckb-0067",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0067/",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "credits": {
+        "Written by": "Clare Verbeek, Thembani Dladla, Zanele Buthelezi",
+        "Illustrated by": "Kathy Arbuckle, Ingrid Schechter",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 1",
+        "Source": "Cooking from African Storybook"
+      },
+      "pages": 8,
+      "textSha256": "8aca033c8212dd8c6879d98a7dde02aa5a72e6520c9e6deb51ac0aadcb636114"
+    },
+    {
+      "slug": "story-what-are-you-doing",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0008/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Nina Orange",
+        "Illustrated by": "Wiehan de Jager",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 1",
+        "Source": "What are you doing? from African Storybook"
+      },
+      "pages": 8,
+      "textSha256": "84e3753a737079f656bc4e88fbaa6fb20088df8bede8eae344e800565544443e"
+    },
+    {
+      "slug": "story-ckb-0009",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0009/",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "credits": {
+        "Written by": "Clare Verbeek, Thembani Dladla, Zanele Buthelezi",
+        "Illustrated by": "Bronwen Heath, Ingrid Schechter",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 1",
+        "Source": "Where is my cat? from African Storybook"
+      },
+      "pages": 8,
+      "textSha256": "ae47b7a754b8d2f0138a44ff3295c2a8a38c08ce9763f0509da4d85d1e72b4c5"
+    },
+    {
+      "slug": "story-ckb-0112",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0112/",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "credits": {
+        "Written by": "Clare Verbeek, Thembani Dladla, Zanele Buthelezi",
+        "Illustrated by": "Mlungisi Dlamini, Ingrid Schechter",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 1",
+        "Source": "My body from African Storybook"
+      },
+      "pages": 8,
+      "textSha256": "4ea45c53eace78d65739d97411184bebc0ce77110850b686a31345aa0e8587b9"
+    },
+    {
+      "slug": "story-ckb-0111",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0111/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Basilio Gimo, David Ker",
+        "Illustrated by": "Carol Liddiment",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 2",
+        "Source": "Why hippos have no hair from African Storybook"
+      },
+      "pages": 8,
+      "textSha256": "fa0168c1424f2eced5d144811533de826a371b7daee594b621b5f54bcfad53c1"
+    },
+    {
+      "slug": "story-20",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0337/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Southern African Folktale",
+        "Illustrated by": "Wiehan de Jager",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 2",
+        "Source": "Children of wax from African Storybook"
+      },
+      "pages": 11,
+      "textSha256": "f093fc071541a9120a943c5aa03195ce665ed41e1c2c20a741186ad75e8ca1ef"
+    },
+    {
+      "slug": "story-ckb-0210",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0210/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Ingrid Schechter",
+        "Illustrated by": "Ingrid Schechter",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 2",
+        "Source": "Tingi and the Cows from African Storybook"
+      },
+      "pages": 11,
+      "textSha256": "d91624b1578c38360adfee9c1b78f51b201fcd7658aca277ea4e71f999ce9080"
+    },
+    {
+      "slug": "story-21",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0296/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "credits": {
+        "Written by": "Humphreys Odunga",
+        "Illustrated by": "Zablon Alex Nguku",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 2",
+        "Source": "Tom the banana seller from African Storybook"
+      },
+      "pages": 12,
+      "textSha256": "8e8409e37cffaf33f43e9888910ae6f15f48de33bc0d263ac78472fdc6d4d2dd"
+    },
+    {
+      "slug": "story-ckb-0027",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0027/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "credits": {
+        "Written by": "Ursula Nafula",
+        "Illustrated by": "Vusi Malindi",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 2",
+        "Source": "Decision from African Storybook"
+      },
+      "pages": 16,
+      "textSha256": "182145b0a820e72aee89a43adaf2884db205b2068a8de4ad1352fd44a51bbd1f"
+    },
+    {
+      "slug": "story-ckb-0342",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0342/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Adelheid Marie Bwire",
+        "Illustrated by": "Melany Pietersen",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 2",
+        "Source": "Punishment from African Storybook"
+      },
+      "pages": 12,
+      "textSha256": "518c862b98beef6ca641d668d837cae0256aa5b2560a5b02998a5cdfbb8c9d07"
+    },
+    {
+      "slug": "story-ckb-0089",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0089/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "credits": {
+        "Written by": "Ursula Nafula",
+        "Illustrated by": "Jesse Pietersen",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 2",
+        "Source": "Khalai talks to plants from African Storybook"
+      },
+      "pages": 8,
+      "textSha256": "a7008ba7e97180973862dae9d0d4ddf97421465db8b6b3ed1bad2354b90d8e30"
+    },
+    {
+      "slug": "story-ckb-0234",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0234/",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "credits": {
+        "Written by": "Eden Daniels",
+        "Illustrated by": "Eden Daniels",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 2",
+        "Source": "Andiswa Soccer Star from African Storybook"
+      },
+      "pages": 8,
+      "textSha256": "3cd1c1326f737136a9342b5148a6fee93e28cef578b595627cef5bce30a343da"
+    },
+    {
+      "slug": "story-ckb-0001",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0001/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Cornelius Gulere",
+        "Illustrated by": "Catherine Groenewald",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 2",
+        "Source": "A very tall man from African Storybook"
+      },
+      "pages": 11,
+      "textSha256": "c63dfa444f18534002c9e4b1c3969f347df024d63c143ef91eb9e4e967656a62"
+    },
+    {
+      "slug": "story-ckb-0095",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0095/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Michael Oguttu",
+        "Illustrated by": "Vusi Malindi",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 2",
+        "Source": "Zama is great! from African Storybook"
+      },
+      "pages": 12,
+      "textSha256": "ff384d43767c434a4a5431746fc362c107434402481b4d95f4f87bd740415f98"
+    },
+    {
+      "slug": "story-ckb-0004",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0004/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Fabian Wakholi",
+        "Illustrated by": "Marleen Visser, Ingrid Schechter",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 2",
+        "Source": "Goat, Dog and Cow from African Storybook"
+      },
+      "pages": 8,
+      "textSha256": "1b7c5e7829cf38a11bdc2b2fd6a991ce4b1030aa1214447a059b9ece16f10c86"
+    },
+    {
+      "slug": "story-ckb-0201",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0201/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "credits": {
+        "Written by": "Lindiwe Matshikiza",
+        "Illustrated by": "Meghan Judge",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 3",
+        "Source": "Donkey Child from African Storybook"
+      },
+      "pages": 20,
+      "textSha256": "d82e6db5df9476752a5dd02d152949ca6fad4416a17834c162e4e8ceb0aa53e3"
+    },
+    {
+      "slug": "story-17",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0006/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Ghanaian folktale",
+        "Illustrated by": "Wiehan de Jager",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 3",
+        "Source": "Anansi and Wisdom from African Storybook"
+      },
+      "pages": 6,
+      "textSha256": "843bdf92727ca039a6f9a88ab32db71f27330b39fe6ba85b8549d74338f25d88"
+    },
+    {
+      "slug": "story-ckb-0110",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0110/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "credits": {
+        "Written by": "Nicola Rijsdijk",
+        "Illustrated by": "Maya Marshak",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 3",
+        "Source": "A Tiny Seed: The Story of Wangari Maathai from African Storybook"
+      },
+      "pages": 12,
+      "textSha256": "ec4bc7dd23a6863474127a148ff1eef564396d7b1e6c8f571d0a9fe9db213d53"
+    },
+    {
+      "slug": "story-19",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0158/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Ann Nduku",
+        "Illustrated by": "Wiehan de Jager",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 3",
+        "Source": "Hen and Eagle from African Storybook"
+      },
+      "pages": 10,
+      "textSha256": "b7e31b6671fb12286a1b80db7e9e70c51c1b6713f7820dfb3655c40d47552ec8"
+    },
+    {
+      "slug": "story-ckb-0324",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0324/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "credits": {
+        "Written by": "Lesley Koyi, Ursula Nafula",
+        "Illustrated by": "Brian Wambi",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 3",
+        "Source": "The day I left home for the city from African Storybook"
+      },
+      "pages": 16,
+      "textSha256": "18037651b3e8cc94249f75e77e2e86909b646c76dd2bca26d2d1889cf7bd7126"
+    },
+    {
+      "slug": "story-ckb-0141",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0141/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Winny Asara",
+        "Illustrated by": "Magriet Brink",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 3",
+        "Source": "Chicken and Millipede from African Storybook"
+      },
+      "pages": 12,
+      "textSha256": "f7ff28c4d44135c28517c3129774f0c1dbe76d777b4a9855c145a615c298199f"
+    },
+    {
+      "slug": "story-18",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0066/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Tessa Welch",
+        "Illustrated by": "Wiehan de Jager",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 3",
+        "Source": "Nozibele and the three hairs from African Storybook"
+      },
+      "pages": 13,
+      "textSha256": "fe247492d140dc015f614a34bd871cc1e8a3dd40fb68ecb4cc27e65b8496cc40"
+    },
+    {
+      "slug": "story-ckb-0315",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0315/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "credits": {
+        "Written by": "Ursula Nafula",
+        "Illustrated by": "Peris Wachuka",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 3",
+        "Source": "Sakima's song from African Storybook"
+      },
+      "pages": 18,
+      "textSha256": "6f01c3223c83d670d76bd59ecf4a5d339bb82f95025a45f1a45e522381adb079"
+    },
+    {
+      "slug": "story-ckb-0291",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0291/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Nina Orange",
+        "Illustrated by": "Wiehan de Jager",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 4",
+        "Source": "What Vusi's sister said from African Storybook"
+      },
+      "pages": 13,
+      "textSha256": "7a77c9e64cc199e4c942eca78b6b06393ebb57e925f2dab118659d3384f62b39"
+    },
+    {
+      "slug": "story-ckb-0072",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0072/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Zulu folktale",
+        "Illustrated by": "Wiehan de Jager",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 4",
+        "Source": "The Honeyguide's revenge from African Storybook"
+      },
+      "pages": 11,
+      "textSha256": "38aa407e0c9c7b5e8e6f89dedb33c565f2f7381b7f6ed4907367507b612cb2fe"
+    },
+    {
+      "slug": "story-22",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0294/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Ursula Nafula",
+        "Illustrated by": "Catherine Groenewald",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 4",
+        "Source": "Grandma's bananas from African Storybook"
+      },
+      "pages": 10,
+      "textSha256": "ba54d2e025ffcd3db6d3fdb90c960e1d333c4db4fac43c4e8a8e30d9aa964257"
+    },
+    {
+      "slug": "story-ckb-0243",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0243/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "credits": {
+        "Written by": "Violet Otieno",
+        "Illustrated by": "Catherine Groenewald",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 4",
+        "Source": "Holidays with grandmother from African Storybook"
+      },
+      "pages": 20,
+      "textSha256": "e425042db632334aab50570480cc20c29d9086448987839e3526e53f949b83ed"
+    },
+    {
+      "slug": "story-simbegwire",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0052/",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "credits": {
+        "Written by": "Rukia Nantale",
+        "Illustrated by": "Benjamin Mitchley",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 5",
+        "Source": "Simbegwire from African Storybook"
+      },
+      "pages": 16,
+      "textSha256": "41aedcc4ef826e59dddb2727d8ccb9f1fe4d687e9af90c0722473856fc40085a"
+    },
+    {
+      "slug": "story-ckb-0262",
+      "source": "https://www.storybookscanada.ca/stories/ckb/0262/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "credits": {
+        "Written by": "Lesley Koyi",
+        "Illustrated by": "Wiehan de Jager",
+        "Translated by": "Agri Afshin",
+        "Language": "Kurdish (Sorani)",
+        "Level": "Level 5",
+        "Source": "Magozwe from African Storybook"
+      },
+      "pages": 16,
+      "textSha256": "1a4550605cd25e6e830a6d2508db3a2a9abd52c3745702b2b5fd06ffde799ab3"
+    }
+  ]
+}

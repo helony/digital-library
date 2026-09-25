@@ -19,7 +19,7 @@ def main():
     previews = json.loads((ROOT / 'data/visual-previews.json').read_text())
     (ROOT / 'assets/visual-previews.js').write_text('/* Original edition previews; sources in assets/previews/README.md. */\nwindow.KDL_PREVIEWS = ' + json.dumps(previews) + ';\n')
     cards = []
-    for b in sorted(records + stories, key=rank):
+    for b in sorted((b for b in records + stories if not b.get('sourceOnly')), key=rank):
         url = b.get('localPath') if b.get('archiveEligible') else b['url']
         motif = b.get('motif') or {'poetry': 'love-classical', 'religious': 'mystical-medallion', 'reference': 'editorial-reference', 'education': 'editorial-reference'}.get(b['subject'], 'folk-oral')
         language = {'kmr': 'Kurmancî', 'ckb': 'Soranî', 'diq': 'Zazakî', 'hac': 'Hewramî', 'sdh': 'Kurdî Xwarîn'}[b['v']]

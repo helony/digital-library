@@ -201,3 +201,15 @@
 .dengbej-recording .dengbej-recording-body{padding:24px;width:100%}
 .dengbej-recording h4{margin-bottom:8px}
 .dengbej-recording .dengbej-credit{margin-top:8px}
+
+/* Full illustrated books: generous reading size, original credited artwork. */
+.library-home .reader-article.illustrated-story{max-width:1040px}
+.illustrated-page{display:grid;gap:24px;align-items:center;padding:28px 0;border-bottom:1px solid #e8dfd1}
+.illustrated-page img{display:block;width:100%;max-height:430px;object-fit:contain;border-radius:8px}
+.illustrated-text p{margin:0 0 1em;line-height:1.9}
+.illustrated-text p:last-child{margin-bottom:0}
+.standalone-story{padding:24px}
+.standalone-story>.back-link{display:block;max-width:1040px;margin:0 auto 24px}
+.standalone-story>.story-reader{max-width:1040px;margin:auto}
+@media(min-width:800px){.illustrated-page{grid-template-columns:1fr 1fr;gap:36px}}
+@media(max-width:520px){.standalone-story{padding:16px}.illustrated-page{gap:16px;padding:20px 0}.illustrated-page img{max-height:340px}}

@@ -34,3 +34,18 @@ Additional Dengbêj recordings (2026-09-25), verified against YouTube publisher/
 | Du Sêvin Du Hinarin | Aryen Kom / Dengbêj Yusuf / Dengbêj Mukaddes | Aryen Kom - Topic; supplied by KOM Müzik | https://www.youtube.com/watch?v=bWp_ip5l9v4 |
 
 These use the same external-player and attribution approach above. The Şakiro Foundation also lists the Nemînim album and its publisher: https://dengbejsakirovakfi.org/dengbej-sakiro/yayimlanmis-albumler/neminim
+
+## More Dengbêj recordings — 2026-09-25
+
+Embedded with YouTube’s player from the publisher channels below; recordings are not copied or represented as openly licensed. Titles and publishers checked with YouTube oEmbed. Only three cards are shown before searching.
+
+- Gûlê Dêran — Şakiro. SesMedia. https://www.youtube.com/watch?v=Xoxu2I_7BIU
+- Teres Babê — Dengbêj Mukaddes. Konserên Tamarayê · KOM Müzik. https://www.youtube.com/watch?v=Np53D5KhfpM
+- Şahîno — Dengbêj Ramazan. Seyme Müzik. https://www.youtube.com/watch?v=5VC8QQXnB7k
+- Zembîlfiroş — Karapetê Xaço. KOM Müzik. https://www.youtube.com/watch?v=VejPhmS5JOk
+- Meyrokê — Karapetê Xaço. KOM Müzik. https://www.youtube.com/watch?v=PIzYZJb4kss
+- Hesenîko — Karapetê Xaço. KOM Müzik. https://www.youtube.com/watch?v=r8WySWTGZYM
+- Sêvê — Meyremxan · Meryem Xan. KOM Müzik. https://www.youtube.com/watch?v=AGJhFVlMIJU
+- Dotmam — Meyremxan · Meryem Xan. KOM Müzik. https://www.youtube.com/watch?v=6bJ5FhxwgWQ
+- Narinke — Dengbêj Ehmê. KOM Müzik. https://www.youtube.com/watch?v=e6CpWGUUXmM
+- Hêlî Delal — Meyremxan · Meryem Xan. KOM Müzik. https://www.youtube.com/watch?v=w_9NzTDzgdA

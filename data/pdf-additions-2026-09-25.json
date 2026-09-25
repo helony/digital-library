@@ -1,0 +1,225 @@
+{
+  "checked": "2026-09-25",
+  "records": [
+    {
+      "slug": "agire-sinema-amude",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=945",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/FT79RMV3A2.pdf",
+      "pdfPages": 86,
+      "bytes": 1669064,
+      "sha256": "3b4e1bce0a170d971c5639898e3c07f2b3aab1e1ecd50399dfe1a4d958fcbdf8",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    },
+    {
+      "slug": "antolojiya-ciroka-nu",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=29",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/BUF852RWPN.pdf",
+      "pdfPages": 106,
+      "bytes": 4040142,
+      "sha256": "4528fcd3a15e919bd1e2461b80ca3d76fed7a52f6864be24ac46d9cfb117d475",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    },
+    {
+      "slug": "axirya-nes",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=1567",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/XAWE8RYQHJ.pdf",
+      "pdfPages": 24,
+      "bytes": 3548917,
+      "sha256": "170850008bd5edf29f15fea77b9d580e49ceb5ff9d99c53b9fc1a12ecd2162f5",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    },
+    {
+      "slug": "balafira-jine",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=47",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/ERFWLD1B9T.pdf",
+      "pdfPages": 134,
+      "bytes": 4568075,
+      "sha256": "a972ee25c252a2af9b731a09ad1ef3c75f5b9b881c88f67785d03d27b45ce61b",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    },
+    {
+      "slug": "balulka-sekire",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=48",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/P2BRV8NFJW.pdf",
+      "pdfPages": 87,
+      "bytes": 2264753,
+      "sha256": "72c392a2018df5f2dcd4fd364a3b2e88769c56af505e9ac488ea3d11f6b0018a",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    },
+    {
+      "slug": "bexceye-heywanan",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=972",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/JGTZHUKDXS.pdf",
+      "pdfPages": 28,
+      "bytes": 1737769,
+      "sha256": "8b8285f8bb5d48d77ca50453b6e05707f0bc3e32fc85ced02abb4f3c93a4103a",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    },
+    {
+      "slug": "bexceye-visne",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=55",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/Y7GSZJH1T8.pdf",
+      "pdfPages": 95,
+      "bytes": 1327108,
+      "sha256": "ab80bc9efd0e160aa636567b3e410bff279214cdc3b5e728ee2dec1120715ea7",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    },
+    {
+      "slug": "bi-kurmanciya-gewr",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=247",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/MHTBKPRFQV.pdf",
+      "pdfPages": 188,
+      "bytes": 382554,
+      "sha256": "77aff130c951245712944267f75c19c1cba4d1456fe4b127acf0fcf167d1a2b9",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    },
+    {
+      "slug": "bilbil-andersen",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=4939",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/B6ZLHXTMQV.pdf",
+      "pdfPages": 56,
+      "bytes": 2371344,
+      "sha256": "ffe71d5d0585d8f7ca53b951ea35c32560517937e4836e3a4c973630ee6d875a",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored. Unrelated leaves precede title page; reader starts on PDF page 9."
+    },
+    {
+      "slug": "biyani-camus",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=40",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/D94U3BAEZH.pdf",
+      "pdfPages": 110,
+      "bytes": 4996885,
+      "sha256": "6fcd3ae4d54b5c5f9a90bd34d14fe73033d8f9d2de0773828b878843f4b7475d",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    },
+    {
+      "slug": "carinen-xeyam",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=624",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/WJLYE157R6.pdf",
+      "pdfPages": 36,
+      "bytes": 391064,
+      "sha256": "5d6a31971b5ce573884deebe0e7645cb81395cb2b11c60e88d6f5543a6b4db3f",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    },
+    {
+      "slug": "cend-cirusk",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=988",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/X5DBTFUELA.pdf",
+      "pdfPages": 72,
+      "bytes": 1248606,
+      "sha256": "e94d719a7bd797bbd24c0ad121d8072c7ede625a73e3434cb8b00b5dfd930b04",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    },
+    {
+      "slug": "cikus-moliere",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=427",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/1YZSCMR8XJ.pdf",
+      "pdfPages": 146,
+      "bytes": 1881967,
+      "sha256": "732327f03a954a65e3ef21eee18a1d05b594d2eb34b408aa456d481b88832b77",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    },
+    {
+      "slug": "ciroka-malbata-evdo",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=65",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/MUYVF2PK4D.pdf",
+      "pdfPages": 120,
+      "bytes": 1493537,
+      "sha256": "487ecfd91b3a18176e453f505f11ea6aca98e9d1ca2fa42c74f91650d421f8a1",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    },
+    {
+      "slug": "ciroka-masigir",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=1561",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/JKAP4GTHRS.pdf",
+      "pdfPages": 26,
+      "bytes": 944123,
+      "sha256": "777463195e9ee8994e12cb1ba3df125b92a4891fcf21b5d87536323a00e48357",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    },
+    {
+      "slug": "ciroka-newroze",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=1167",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/XQR8EP3ZA2.pdf",
+      "pdfPages": 42,
+      "bytes": 1402775,
+      "sha256": "44186550e58ab568b30fae40e6a85e68506c0c6bc66f15a80ee5414aa39b5aa7",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    },
+    {
+      "slug": "ciroken-hezar-u-seveke",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=177",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/C4VL1Z5X8R.pdf",
+      "pdfPages": 146,
+      "bytes": 5325031,
+      "sha256": "302f6d35c55aa76f32b44dc079e638ad689eb44d856d973cdeca1c6aa9bf2c1e",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    },
+    {
+      "slug": "ciya-arif-xelil",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=4593",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/EY9M7PC8Z2.pdf",
+      "pdfPages": 120,
+      "bytes": 1078643,
+      "sha256": "2405eff1a3ec36d3e2055408885291c200823572ba70e06635671464ccd364b0",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    },
+    {
+      "slug": "ciyaye-agiri",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=176",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/S3R5XY2H16.pdf",
+      "pdfPages": 129,
+      "bytes": 1642467,
+      "sha256": "4f93de50860761496be55eae1ae2135889f6ea3ced8b06e971fcac78575f7c82",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    },
+    {
+      "slug": "dara-hinare",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=943",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/Z691S28JYK.pdf",
+      "pdfPages": 122,
+      "bytes": 1633374,
+      "sha256": "c633fd65eb9453336e5c5e39d5f6dbc38e4a95c2e93ac0da8c5d387057ea3507",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "Institution-hosted full PDF; not mirrored."
+    }
+  ]
+}
