@@ -2,7 +2,7 @@
   "ok": 36,
   "missing": 0,
   "checksum_mismatch": 0,
-  "manual_review": 14,
+  "manual_review": 34,
   "items": [
     {
       "kdl_id": "KDL-KMR-0001",
@@ -324,6 +324,106 @@
     {
       "kdl_id": "KDL-CKB-0008",
       "slug": "diwani-haji-qadiri-koyi",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0039",
+      "slug": "agire-sinema-amude",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0040",
+      "slug": "antolojiya-ciroka-nu",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0041",
+      "slug": "axirya-nes",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0042",
+      "slug": "balafira-jine",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0043",
+      "slug": "balulka-sekire",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0044",
+      "slug": "bexceye-heywanan",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0045",
+      "slug": "bexceye-visne",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0046",
+      "slug": "bi-kurmanciya-gewr",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0047",
+      "slug": "bilbil-andersen",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0048",
+      "slug": "biyani-camus",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0049",
+      "slug": "carinen-xeyam",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0050",
+      "slug": "cend-cirusk",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0051",
+      "slug": "cikus-moliere",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0052",
+      "slug": "ciroka-malbata-evdo",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0053",
+      "slug": "ciroka-masigir",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0054",
+      "slug": "ciroka-newroze",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0055",
+      "slug": "ciroken-hezar-u-seveke",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0056",
+      "slug": "ciya-arif-xelil",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0057",
+      "slug": "ciyaye-agiri",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0058",
+      "slug": "dara-hinare",
       "status": "manual_review"
     }
   ]
