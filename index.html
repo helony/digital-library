@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#11213d">
   <title>Kurdish Digital Library</title>
   <link rel="stylesheet" href="assets/styles.css?v=6.0">
-  <link rel="stylesheet" href="assets/library.css?v=6.6">
+  <link rel="stylesheet" href="assets/library.css?v=6.8">
 
   <style>
     #suggestForm .honeypot { position:absolute !important; left:-9999px !important; width:1px !important; height:1px !important; opacity:0 !important; pointer-events:none !important; }
@@ -85,7 +85,13 @@
 
           <section class="dengbej-section" id="dengbej" aria-labelledby="dengbejTitle">
             <div class="listening-section-title"><h3 id="dengbejTitle">Dengbêj</h3><p data-i18n="dengbejIntro">Stories carried in song.</p></div>
-            <div class="dengbej-grid">
+            <div class="dengbej-search" role="search" aria-labelledby="dengbejSearchLabel">
+              <label id="dengbejSearchLabel" class="visually-hidden" for="dengbejSearch" data-i18n="searchDengbej">Search all Dengbêj recordings</label>
+              <input id="dengbejSearch" type="search" dir="auto" placeholder="Search all recordings by title or performer…" data-i18n-placeholder="dengbejSearchHint" aria-controls="dengbejGrid" autocomplete="off">
+              <button id="dengbejClear" class="text-button" type="button" data-i18n="clearDengbejSearch" hidden>Clear search</button>
+              <span id="dengbejResults" class="dengbej-search-status" role="status" aria-live="polite" aria-atomic="true"></span>
+            </div>
+            <div class="dengbej-grid" id="dengbejGrid">
               <article class="dengbej-card dengbej-recording">
                 <iframe data-src="https://www.youtube-nocookie.com/embed/dBUeUVMeOxk" title="Nemînim — Dengbêj Şakiro" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
                 <div class="dengbej-recording-body"><h4>Nemînim</h4><p>Dengbêj Şakiro</p><a class="primary-button" href="https://www.youtube.com/watch?v=dBUeUVMeOxk" target="_blank" rel="noopener"><span data-i18n="listenYoutube">Listen on YouTube</span> ↗</a><span class="dengbej-credit">Archive Vol. 1 · Ses Media</span></div>
@@ -98,35 +104,36 @@
                 <iframe data-src="https://www.youtube-nocookie.com/embed/XTJRIK8F8gw" title="Qederê — Ayşe Şan and Îsa Berwarî" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
                 <div class="dengbej-recording-body"><h4>Qederê</h4><p>Ayşe Şan · Îsa Berwarî</p><a class="primary-button" href="https://www.youtube.com/watch?v=XTJRIK8F8gw" target="_blank" rel="noopener"><span data-i18n="listenYoutube">Listen on YouTube</span> ↗</a><span class="dengbej-credit">SesMedia</span></div>
               </article>
-              <article class="dengbej-card dengbej-recording">
+              <article class="dengbej-card dengbej-recording" hidden>
                 <iframe data-src="https://www.youtube-nocookie.com/embed/pEvwB-RAqQ4" title="Çiya Bilinde — Şeroyê Biro" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
                 <div class="dengbej-recording-body"><h4>Çiya Bilinde</h4><p>Şeroyê Biro</p><a class="primary-button" href="https://www.youtube.com/watch?v=pEvwB-RAqQ4" target="_blank" rel="noopener"><span data-i18n="listenYoutube">Listen on YouTube</span> ↗</a><span class="dengbej-credit">SesMedia</span></div>
               </article>
-              <article class="dengbej-card dengbej-recording">
+              <article class="dengbej-card dengbej-recording" hidden>
                 <iframe data-src="https://www.youtube-nocookie.com/embed/qSXfPshb5HU" title="Lor Loriyê — Dengbêj Apê Yusuf, Dengbêj Mukaddes and Aryen Kom" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
                 <div class="dengbej-recording-body"><h4>Lor Loriyê</h4><p>Dengbêj Apê Yusuf · Dengbêj Mukaddes · Aryen Kom</p><a class="primary-button" href="https://www.youtube.com/watch?v=qSXfPshb5HU" target="_blank" rel="noopener"><span data-i18n="listenYoutube">Listen on YouTube</span> ↗</a><span class="dengbej-credit">Konserên Tamarayê · KOM Müzik</span></div>
               </article>
-              <article class="dengbej-card dengbej-recording">
+              <article class="dengbej-card dengbej-recording" hidden>
                 <iframe data-src="https://www.youtube-nocookie.com/embed/LJ7Kh320HXA" title="Mîr Mihemed — Dengbêj Ehmê" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
                 <div class="dengbej-recording-body"><h4>Mîr Mihemed</h4><p>Dengbêj Ehmê</p><a class="primary-button" href="https://www.youtube.com/watch?v=LJ7Kh320HXA" target="_blank" rel="noopener"><span data-i18n="listenYoutube">Listen on YouTube</span> ↗</a><span class="dengbej-credit">KOM Müzik</span></div>
               </article>
-              <article class="dengbej-card dengbej-recording">
+              <article class="dengbej-card dengbej-recording" hidden>
                 <iframe data-src="https://www.youtube-nocookie.com/embed/UOJrkbX4exM" title="Xumxume — Karapetê Xaço" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
                 <div class="dengbej-recording-body"><h4>Xumxume</h4><p>Karapetê Xaço</p><a class="primary-button" href="https://www.youtube.com/watch?v=UOJrkbX4exM" target="_blank" rel="noopener"><span data-i18n="listenYoutube">Listen on YouTube</span> ↗</a><span class="dengbej-credit">KOM Müzik</span></div>
               </article>
-              <article class="dengbej-card dengbej-recording">
+              <article class="dengbej-card dengbej-recording" hidden>
                 <iframe data-src="https://www.youtube-nocookie.com/embed/bWp_ip5l9v4" title="Du Sêvin Du Hinarin — Aryen Kom, Dengbêj Yusuf and Dengbêj Mukaddes" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
                 <div class="dengbej-recording-body"><h4>Du Sêvin Du Hinarin</h4><p>Aryen Kom · Dengbêj Yusuf · Dengbêj Mukaddes</p><a class="primary-button" href="https://www.youtube.com/watch?v=bWp_ip5l9v4" target="_blank" rel="noopener"><span data-i18n="listenYoutube">Listen on YouTube</span> ↗</a><span class="dengbej-credit">Konserên Tamarayê 1 · KOM Müzik</span></div>
               </article>
-              <article class="dengbej-card">
+              <article class="dengbej-card" hidden>
                 <span class="dengbej-mark" aria-hidden="true">◉</span>
                 <div><h4>Dengbêj Gazîn</h4><p data-i18n="gazinIntro">Explore her recordings with Kurdish transcriptions and Turkish translations.</p><a class="primary-button" href="https://qed.perspectivia.net/gazin/search" target="_blank" rel="noopener"><span data-i18n="listenArchive">Listen in the archive</span> ↗</a><span class="dengbej-credit">Orient-Institut Istanbul · QED</span></div>
               </article>
-              <article class="dengbej-card">
+              <article class="dengbej-card" hidden>
                 <span class="dengbej-mark" aria-hidden="true">◉</span>
                 <div><h4>Şakiro · Şêxê Kûbar</h4><p data-i18n="sakiroIntro">An album playlist shared by the Şakiro Foundation.</p><a class="primary-button" href="https://youtube.com/playlist?list=PLSVeq6iYNyIjvy5iuwfAmcPaD9byUCjIC" target="_blank" rel="noopener"><span data-i18n="listenYoutube">Listen on YouTube</span> ↗</a><a class="dengbej-credit" href="https://dengbejsakirovakfi.org/ku/dengbej-sakiro/albumen-derketine/sexe-kubar" target="_blank" rel="noopener">Dengbêj Şakiro Vakfı ↗</a></div>
               </article>
             </div>
+            <p id="dengbejEmpty" class="dengbej-empty" data-i18n="dengbejEmpty" hidden>No recordings found. Try another title or performer.</p>
           </section>
           <div class="listening-section-title"><h3 data-i18n="spokenKurdish">Spoken Kurdish</h3></div>
           <div class="voice-grid">
@@ -500,8 +507,8 @@
   <script src="assets/catalogue-data.js?v=6.6"></script>
   <script src="assets/story-data.js?v=6.6"></script>
   <script src="assets/visual-previews.js?v=6.7"></script>
-  <script src="assets/library-i18n.js?v=6.6"></script>
-  <script src="assets/app.js?v=6.6"></script>
+  <script src="assets/library-i18n.js?v=6.8"></script>
+  <script src="assets/app.js?v=6.8"></script>
 
   <script>
   (() => {
