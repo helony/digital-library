@@ -11,7 +11,7 @@ const LOCALES = {
 for(const [code,labels] of Object.entries(window.KDL_INTERFACE||{}))Object.assign(LOCALES[code],labels);
 for(const code of ['hac','sdh'])Object.assign(LOCALES[code],window.KDL_INTERFACE?.ckb||{});
 
-const BOOKS = [...(window.KDL_BOOKS || []), ...(window.KDL_STORIES || [])];
+const BOOKS = [...(window.KDL_BOOKS || []), ...(window.KDL_STORIES || [])].map(b=>({...b,preview:window.KDL_PREVIEWS?.[b.slug]}));
 
 const VARIETIES = [
   ['all','allVarieties'], ['kmr','Kurmancî'], ['ckb','Soranî / کوردیی ناوەندی'], ['diq','Zazakî / Kirmanckî'], ['hac','Hewramî / Goranî'], ['sdh','Kurdî Xwarîn / Southern Kurdish']
@@ -74,7 +74,7 @@ function matchesSearchText(searchText,query){
   return !tokens.length||tokens.every(token=>searchText.includes(token));
 }
 
-const STARTER_BOOKS=['mem-u-zin','story-mame-alan','zembilfiros','neo-aramaic-kurdish-folklore-2022-v2','diwana-melaye-ciziri','story-siyabend-u-xece','diwani-mahwi','story-17'];
+const STARTER_BOOKS=['mem-u-zin','story-mame-alan','zembilfiros','makas-kurdische-studien-1900','diwana-melaye-ciziri','story-siyabend-u-xece','diwani-mahwi','kurdische-texte-transkription-1903'];
 function filteredBooks(){
   const q=normalizeText(state.q);
   let items=BOOKS.filter(b=>(state.variety==='all'||b.v===state.variety||(state.variety==='ckb'&&b.variety.includes('Soranî'))||(state.variety==='diq'&&b.variety.includes('Zazakî')))&&(state.subject==='all'||b.subject===state.subject)&&(state.script==='all'||b.script===state.script)&&(state.format==='all'||b.format===state.format)&&(state.availability==='all'||b.availability===state.availability));
@@ -103,7 +103,7 @@ function renderCatalogue(){
     const note=b.availability==='partial'?t('partialBadge'):b.availability==='retelling'?t('retelling'):b.sourceOnly?t('sourceOnly'):'';
     const language=VARIETIES.find(x=>x[0]===b.v)?.[1]?.split(' / ')[0]||b.variety;
     const author=(b.author||'').length>80?'Khan, Mohammadirad, Molin & Noorlander':b.author;
-    return `<article class="book-card" data-slug="${b.slug}"><a class="cover tone-${b.tone} ${(b.title||'').length>65?'long-title':''} ${external?'':'read-book'}" href="${escapeHtml(readingUrl(b))}" data-slug="${b.slug}" aria-label="${escapeHtml(readLabel(b)+': '+b.title)}" ${external?'target="_blank" rel="noopener"':''}><span class="cover-language">${escapeHtml(language)}${b.format==='pdf'?' · PDF':''}</span><h3 class="cover-title" dir="${b.rtl?'rtl':'auto'}">${escapeHtml(b.title)}</h3><img class="cover-ornament" src="assets/motifs/${motifFor(b)}.svg" alt="" loading="lazy" aria-hidden="true">${note?`<span class="edition-note">${escapeHtml(note)}</span>`:''}</a><div class="card-body"><p class="book-author" dir="auto">${escapeHtml(author)}</p><div class="card-actions"><a class="shelf-read ${external?'':'read-book'}" data-slug="${b.slug}" href="${escapeHtml(readingUrl(b))}" ${external?'target="_blank" rel="noopener"':''}>${escapeHtml(readLabel(b))} <span aria-hidden="true">${external?'↗':'→'}</span></a>${b.format==='pdf'?`<a class="shelf-download" href="${escapeHtml(archiveEligible(b)?localPdfUrl(b):b.url)}" ${archiveEligible(b)?'download':'target="_blank" rel="noopener"'} aria-label="${escapeHtml(t('downloadPdf')+': '+b.title)}" title="${escapeHtml(t('downloadPdf'))}">↓</a>`:''}<button class="shelf-info details-book" type="button" data-slug="${b.slug}" aria-label="${escapeHtml(t('aboutBook')+': '+b.title)}">${escapeHtml(t('bookInfo'))}</button></div></div></article>`;
+    return `<article class="book-card" data-slug="${b.slug}"><a class="cover tone-${b.tone} ${b.preview?'has-scan':''} ${(b.title||'').length>65?'long-title':''} ${external?'':'read-book'}" href="${escapeHtml(readingUrl(b))}" data-slug="${b.slug}" aria-label="${escapeHtml(readLabel(b)+': '+b.title)}" ${external?'target="_blank" rel="noopener"':''}><span class="cover-language">${escapeHtml(language)}${b.format==='pdf'?' · PDF':''}</span><h3 class="cover-title" dir="${b.rtl?'rtl':'auto'}">${escapeHtml(b.title)}</h3>${b.preview?`<img class="cover-scan" src="${escapeHtml(b.preview)}" alt="" loading="lazy">`:`<img class="cover-ornament" src="assets/motifs/${motifFor(b)}.svg" alt="" loading="lazy" aria-hidden="true">`}${note?`<span class="edition-note">${escapeHtml(note)}</span>`:''}</a><div class="card-body">${b.preview?`<p class="scan-title" dir="auto">${escapeHtml(b.title)}</p>`:''}<p class="book-author" dir="auto">${escapeHtml(author)}</p><div class="card-actions"><a class="shelf-read ${external?'':'read-book'}" data-slug="${b.slug}" href="${escapeHtml(readingUrl(b))}" ${external?'target="_blank" rel="noopener"':''}>${escapeHtml(readLabel(b))} <span aria-hidden="true">${external?'↗':'→'}</span></a>${b.format==='pdf'?`<a class="shelf-download" href="${escapeHtml(archiveEligible(b)?localPdfUrl(b):b.url)}" ${archiveEligible(b)?'download':'target="_blank" rel="noopener"'} aria-label="${escapeHtml(t('downloadPdf')+': '+b.title)}" title="${escapeHtml(t('downloadPdf'))}">↓</a>`:''}<button class="shelf-info details-book" type="button" data-slug="${b.slug}" aria-label="${escapeHtml(t('aboutBook')+': '+b.title)}">${escapeHtml(t('bookInfo'))}</button></div></div></article>`;
   }).join('');
   $$('.read-book',$('#bookGrid')).forEach(el=>el.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();openReader(bookBySlug(el.dataset.slug))}));
   $$('.details-book',$('#bookGrid')).forEach(el=>el.addEventListener('click',()=>showDetails(el.dataset.slug)));
@@ -146,9 +146,15 @@ function closeDetails(){
  window.scrollTo({top:catalogueScroll,behavior:'instant'});detailsFocus?.focus({preventScroll:true});
 }
 
-let lastFocus=null;
+let lastFocus=null,pendingInitialRead=null;
 function openDialog(id){const d=$('#'+id);lastFocus=document.activeElement;d.hidden=false;document.body.classList.add('modal-open');const card=$('.dialog-card',d);card.focus();trapSetup(d)}
-function closeDialog(id){const d=$('#'+id);d.hidden=true;document.body.classList.remove('modal-open'); if(lastFocus&&lastFocus.focus)lastFocus.focus();}
+function closeDialog(id){
+ const d=$('#'+id);d.hidden=true;document.body.classList.remove('modal-open');if(lastFocus&&lastFocus.focus)lastFocus.focus();
+ if(id==='languageDialog'){
+  localStorage.setItem('kdl_locale',state.locale);
+  if(pendingInitialRead){const slug=pendingInitialRead;pendingInitialRead=null;queueMicrotask(()=>{const u=new URL(location.href);u.searchParams.set('read',slug);history.replaceState({},'',u);openReader(bookBySlug(slug),false)});}
+ }
+}
 function trapSetup(container){const focusables=$$('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])',container).filter(x=>!x.disabled&&!x.hidden); if(!focusables.length)return; container.onkeydown=e=>{if(e.key==='Escape'){closeDialog(container.id);return} if(e.key!=='Tab')return; const first=focusables[0],last=focusables[focusables.length-1]; if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}}
 
 let readerBook=null, readerSections=[], currentSection=-1, readerFont=Number(localStorage.getItem('kdl_reader_font')||20), wideReader=localStorage.getItem('kdl_reader_wide')==='1';
@@ -241,6 +247,10 @@ function setMode(mode){
  $('#subjectFilter').value=state.subject;$('#formatFilter').value=state.format;renderCatalogue();updateUrl();
 }
 readUrlState();initEvents();applyLocale();
-const initialRead=new URL(location.href).searchParams.get('read');if(initialRead)openReader(bookBySlug(initialRead),false);
+const entryParams=new URL(location.href).searchParams;
+const initialRead=entryParams.get('read');
+const savedLocale=localStorage.getItem('kdl_locale');
+if(!LOCALES[savedLocale]&&!LOCALES[entryParams.get('lang')]){pendingInitialRead=initialRead;openDialog('languageDialog');}
+else if(initialRead)openReader(bookBySlug(initialRead),false);
 if(location.hash==='#kurmanjiStoryShelf'||location.hash==='#storyCorner'){state.variety=location.hash==='#storyCorner'?'ckb':'kmr';$('#varietyFilter').value=state.variety;setMode('stories')}
 if(location.hash==='#voicesBrowsePanel')setMode('voices');
