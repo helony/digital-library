@@ -77,7 +77,8 @@
 .source-details summary{font-size:17px;font-weight:650;cursor:pointer;min-height:44px;padding:8px 0}
 .source-details p,.source-details .rights-box p{font-size:16px;line-height:1.7}
 .source-details .detail-grid{margin-top:18px}.source-details .detail-item span,.source-details .detail-item strong{font-size:15px;text-transform:none;letter-spacing:0}
-.library-home .reader{grid-template-rows:auto auto minmax(0,1fr)}
+.library-home .reader{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto minmax(0,1fr)}
+.library-home .reader-toolbar,.library-home .reader-nav,.library-home .reader-content{min-width:0}
 .library-home .reader-toolbar{padding:12px 20px;gap:18px}
 .library-home .tool-button{font-size:15px;min-height:44px;padding:10px 14px}
 .library-home .reader-heading strong{font-size:18px}.library-home .reader-heading span{font-size:14px}
@@ -254,7 +255,7 @@
 .related-performance{display:flex;gap:18px;align-items:center;padding:12px 0;text-decoration:none;color:#15263e}
 .related-performance img{width:130px;aspect-ratio:16/9;object-fit:cover;border-radius:8px}.related-performance>span{display:flex;flex-direction:column;gap:5px}.related-performance strong{font-size:23px}.related-performance small{font-size:13px;color:#665947}
 #reportDialog{z-index:1100}#reportForm .honeypot{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}#reportStatus:not(:empty){padding:12px;background:#eee7da;border-radius:8px}
-.library-home .reader-actions{flex-wrap:wrap;gap:6px}.library-home .reader-actions .tool-button{font-size:14px;padding:8px 11px}
+.library-home .reader-actions{flex-wrap:wrap;gap:6px;min-width:0;max-width:100%}.library-home .reader-actions .tool-button{font-size:14px;padding:8px 11px}
 .native-pdf-note{font-size:14px;line-height:1.5;padding:8px 16px;margin:0;background:#fff8ea;color:#665947}
 button:focus-visible,a:focus-visible{outline:3px solid #ad741f;outline-offset:3px}
 @media(max-width:700px){#continueGrid{grid-template-columns:1fr}.continue-reading{padding:20px}.browse-choices{gap:8px}.browse-choices button{font-size:14px;padding:10px 14px}.performer-profile h2{font-size:32px}.related-performance img{width:86px}.related-performance strong{font-size:20px}.library-home .reader-actions{flex-wrap:nowrap;overflow-x:auto;padding-bottom:5px}.library-home .reader-actions .tool-button{flex-shrink:0}.mixed-results h2{font-size:27px}}
