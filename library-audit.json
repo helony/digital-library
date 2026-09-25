@@ -2,7 +2,7 @@
   "ok": 36,
   "missing": 0,
   "checksum_mismatch": 0,
-  "manual_review": 10,
+  "manual_review": 14,
   "items": [
     {
       "kdl_id": "KDL-KMR-0001",
@@ -304,6 +304,26 @@
     {
       "kdl_id": "KDL-KMR-0037",
       "slug": "neo-aramaic-kurdish-folklore-2022-v2",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-CKB-0006",
+      "slug": "mann-mukri-texts-1906",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0038",
+      "slug": "suto-tato-1988",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-CKB-0007",
+      "slug": "diwani-nali",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-CKB-0008",
+      "slug": "diwani-haji-qadiri-koyi",
       "status": "manual_review"
     }
   ]
