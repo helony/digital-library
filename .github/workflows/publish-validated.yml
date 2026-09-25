@@ -1,0 +1,73 @@
+name: Publish validated library
+
+# This stays manual until Settings > Pages > Source is GitHub Actions.
+# Once that source is configured, add a push trigger for main to enable
+# automatic publishing through these checks instead of the branch publisher.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    permissions:
+      contents: read
+      pages: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test dependencies
+        run: npm ci --ignore-scripts
+      - name: Install PDF parser
+        run: python3 -m pip install -r requirements-validation.txt
+      - name: Check publication
+        run: bash tools/prepublish.sh
+      - name: Add validation summary
+        if: always()
+        run: |
+          if [ -f reports/prepublish.md ]; then
+            cat reports/prepublish.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: publication-checks
+          path: reports/prepublish.*
+          if-no-files-found: ignore
+          retention-days: 30
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Prepare static website
+        run: |
+          mkdir _site
+          rsync -a --exclude='.git/' --exclude='.github/' --exclude='_site/' --exclude='reports/' --exclude='tests/' --exclude='tools/' --exclude='node_modules/' ./ _site/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy checked website
+        id: deployment
+        uses: actions/deploy-pages@v4

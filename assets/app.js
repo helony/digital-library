@@ -9,7 +9,8 @@ const LOCALES = {
 };
 
 for(const [code,labels] of Object.entries(window.KDL_INTERFACE||{}))Object.assign(LOCALES[code],labels);
-for(const code of ['hac','sdh'])Object.assign(LOCALES[code],window.KDL_INTERFACE?.ckb||{});
+for(const [code,labels] of Object.entries(window.KDL_COMPLETE||{}))Object.assign(LOCALES[code],labels);
+const safeStorage=window.KDLDiscovery.storage;
 
 const BOOKS = [...(window.KDL_BOOKS || []), ...(window.KDL_STORIES || [])].map(b=>({...b,preview:window.KDL_PREVIEWS?.[b.slug]}));
 
@@ -22,18 +23,18 @@ const FORMATS = [['all','allFormats'],['wiki','wiki'],['pdf','pdf'],['web','webS
 const AVAIL = [['all','allAvailability'],['full','full'],['partial','partial'],['retelling','retelling']];
 const SORTS = [['catalogue','sortCatalogue'],['title','sortTitle'],['author','sortAuthor'],['year-asc','sortOldest'],['year-desc','sortNewest'],['recent','sortRecent']];
 
-const state = {mode:'all',locale: localStorage.getItem('kdl_locale') || 'en', q:'', variety:'all', subject:'all', script:'all', format:'all', availability:'all', sort:'catalogue'};
+const state = {mode:'all',locale: safeStorage.getItem('kdl_locale') || 'en', q:'',browse:'all',performer:'',limit:24, variety:'all', subject:'all', script:'all', format:'all', availability:'all', sort:'catalogue'};
 const $ = (s,root=document)=>root.querySelector(s);
 const $$ = (s,root=document)=>[...root.querySelectorAll(s)];
 const t = key => (LOCALES[state.locale] && LOCALES[state.locale][key]) || LOCALES.en[key] || key;
-const desc = b => b.desc[state.locale] || ((state.locale==='hac'||state.locale==='sdh') ? b.desc.ckb : null) || b.desc.en;
+const desc = b => b.desc?.[state.locale] || b.desc?.en || '';
 const bookBySlug = slug => BOOKS.find(b=>b.slug===slug);
 const archiveBase = b => `books/${b.slug}`;
 const localPdfUrl = b => `${archiveBase(b)}/book.pdf`;
 const localTextUrl = b => `${archiveBase(b)}/content.html`;
 const archiveEligible = b => b.archiveEligible===true;
 async function urlExists(url,signal){try{await window.KDLReader.fetchText(url,{method:'HEAD',timeout:4000,signal});return true}catch{return false}}
-function normalizeText(value='') { return String(value).normalize('NFD').replace(/\p{Diacritic}/gu,'').replace(/[ıİ]/g,'i').replace(/[’'`´]/g,'').replace(/[^\p{L}\p{N}]+/gu,' ').trim().toLowerCase(); }
+const normalizeText=window.KDLDiscovery.normalize;
 function subjectLabel(v){return t(v)}
 function scriptLabel(v){return t(v)}
 function formatLabel(v){return t(v)}
@@ -46,6 +47,8 @@ function buildOptions(select, data){select.innerHTML=data.map(([value,keyOrLabel
 function applyLocale(){
   const locale=LOCALES[state.locale]||LOCALES.en; document.documentElement.lang=state.locale; document.documentElement.dir=locale.dir; document.body.dir=locale.dir;
   $('#languageButtonLabel').textContent=locale.label;
+  $$('[data-close-dialog]').forEach(el=>el.setAttribute('aria-label',t('close')));
+  $$('.footer-links a,.top-nav a[href*="index.html"]').forEach(a=>{const u=new URL(a.href);u.searchParams.set('lang',state.locale);a.href=u.href});
   $$('[data-i18n]').forEach(el=>{el.textContent=t(el.dataset.i18n)}); $$('[data-i18n-placeholder]').forEach(el=>{el.placeholder=t(el.dataset.i18nPlaceholder)});
   buildOptions($('#varietyFilter'),VARIETIES); buildOptions($('#subjectFilter'),SUBJECTS); buildOptions($('#sortFilter'),SORTS); buildOptions($('#scriptFilter'),SCRIPTS); buildOptions($('#formatFilter'),FORMATS); buildOptions($('#availabilityFilter'),AVAIL);
   $('#varietyFilter').value=state.variety; $('#subjectFilter').value=state.subject; $('#sortFilter').value=state.sort; $('#scriptFilter').value=state.script; $('#formatFilter').value=state.format; $('#availabilityFilter').value=state.availability;
@@ -54,11 +57,11 @@ function applyLocale(){
 
 function renderLanguageGrid(){
   $('#languageGrid').innerHTML=Object.entries(LOCALES).map(([code,l])=>`<button class="language-option" type="button" data-locale="${code}" aria-current="${code===state.locale}"><strong>${escapeHtml(l.native)}</strong><small>${escapeHtml(l.label)}</small></button>`).join('');
-  $$('.language-option').forEach(btn=>btn.addEventListener('click',()=>{state.locale=btn.dataset.locale; localStorage.setItem('kdl_locale',state.locale); closeDialog('languageDialog'); applyLocale(); updateUrl();}));
+  $$('.language-option').forEach(btn=>btn.addEventListener('click',()=>{state.locale=btn.dataset.locale; safeStorage.setItem('kdl_locale',state.locale); closeDialog('languageDialog'); applyLocale(); updateUrl();}));
 }
 
-function permanentRecordUrl(b){return `book/${b.slug}/index.html`}
-function authorRecordUrl(b){return `authors/${b.authorSlug}/index.html`}
+function permanentRecordUrl(b){return `book/${b.slug}/index.html?lang=${state.locale}`}
+function authorRecordUrl(b){return `authors/${b.authorSlug}/index.html?lang=${state.locale}`}
 function bookSearchText(b){
   return normalizeText([
     b.kdlId,b.slug,b.title||'Untitled record',b.author||'',b.authorSlug||'',
@@ -78,81 +81,69 @@ const STARTER_BOOKS=['mem-u-zin','story-mame-alan','zembilfiros','makas-kurdisch
 function filteredBooks(){
   const q=normalizeText(state.q);
   let items=BOOKS.filter(b=>!b.sourceOnly&&(state.variety==='all'||b.v===state.variety||(state.variety==='ckb'&&b.variety.includes('Soranî'))||(state.variety==='diq'&&b.variety.includes('Zazakî')))&&(state.subject==='all'||b.subject===state.subject)&&(state.script==='all'||b.script===state.script)&&(state.format==='all'||b.format===state.format)&&(state.availability==='all'||b.availability===state.availability));
+  if(state.browse==='saved')items=items.filter(b=>personalShelf.saved[b.slug]);
+  else if(!['all','recent'].includes(state.browse))items=items.filter(b=>(b.browseTags||[]).includes(state.browse));
   if(q)items=items.filter(b=>matchesSearchText(bookSearchText(b),q));
   const collator=new Intl.Collator(state.locale,{sensitivity:'base',numeric:true});
   const rank=b=>{const index=STARTER_BOOKS.indexOf(b.slug);return index>=0?index: b.sourceOnly?500:b.subject==='reference'?400:b.subject==='education'?300:100+b.id};
-  items.sort((a,b)=>{switch(state.sort){case'title':return collator.compare(a.title,b.title);case'author':return collator.compare(a.author,b.author)||collator.compare(a.title,b.title);case'year-asc':return (a.yearSort||9999)-(b.yearSort||9999);case'year-desc':return (b.yearSort||0)-(a.yearSort||0);case'recent':return b.added.localeCompare(a.added)||b.id-a.id;default:return rank(a)-rank(b)}});return items;
+  items.sort((a,b)=>{switch(state.browse==='recent'?'recent':state.sort){case'title':return collator.compare(a.title,b.title);case'author':return collator.compare(a.author,b.author)||collator.compare(a.title,b.title);case'year-asc':return (a.yearSort||9999)-(b.yearSort||9999);case'year-desc':return (b.yearSort||0)-(a.yearSort||0);case'recent':return b.added.localeCompare(a.added)||b.id-a.id;default:return rank(a)-rank(b)}});return items;
 }
 function motifFor(b){return b.motif||({folklore:'folk-oral',poetry:'love-classical',religious:'mystical-medallion',education:'editorial-reference',reference:'editorial-reference'}[b.subject])||'folk-oral'}
 function shelfDescription(b){
-  const locale=['hac','sdh'].includes(state.locale)?'ckb':state.locale;
+  const locale=state.locale;
   const lang=b.summary?.[locale]||b.desc?.[locale]?locale:'en';
   const text=b.summary?.[lang]||b.desc?.[lang]?.split(/(?<=[.!?])\s+/)[0]||'';
   return text?`<p class="book-summary" lang="${lang}" dir="auto">${escapeHtml(text)}</p>`:'';
 }
 function readLabel(b){return b.sourceOnly?t('sourceOnly'):t('readNow')}
-function readingUrl(b){return b.format==='web'&&!b.localStory?b.url:`?read=${encodeURIComponent(b.slug)}`}
+function readingUrl(b){return b.format==='web'&&!b.localStory?b.url:`?read=${encodeURIComponent(b.slug)}&lang=${state.locale}`}
 let dengbejExpanded=false;
-function renderDengbej(){
-  const query=normalizeText($('#dengbejSearch').value);
-  let count=0;
-  $$('#dengbej .dengbej-card').forEach((card,index)=>{
-    const searchable=normalizeText($$('h4,p',card).map(el=>el.textContent).join(' '));
-    const visible=query?matchesSearchText(searchable,query):dengbejExpanded||index<3;
-    card.hidden=!visible;if(visible)count++;
-    const frame=$('iframe[data-src]',card);
-    if(frame){if(state.mode==='voices'&&visible){if(!frame.getAttribute('src'))frame.src=frame.dataset.src;}else frame.removeAttribute('src');}
-  });
-  $('#dengbejClear').hidden=!$('#dengbejSearch').value;
-  $('#dengbejResults').textContent=query?t('dengbejResults').replace('{count}',count):'';
-  $('#dengbejEmpty').hidden=!query||count>0;
-  $('#dengbejBrowse').hidden=!!query;
-  $('#dengbejToggle').textContent=t(dengbejExpanded?'showLessDengbej':'seeAllDengbej');
-  $('#dengbejToggle').setAttribute('aria-expanded',String(dengbejExpanded));
-}
 function markMode(){
   $$('[data-library-mode]').forEach(button=>{const active=button.dataset.libraryMode===state.mode;button.classList.toggle('is-active',active);button.setAttribute('aria-pressed',String(active))});
-  renderDengbej();
+  renderDengbej();renderSpoken();
   if(state.mode!=='voices')$$('#voicesBrowsePanel video').forEach(video=>video.pause());
   $('#catalogue').hidden=state.mode==='voices';$('#voicesBrowsePanel').hidden=state.mode!=='voices';$('#moreFiltersButton').hidden=state.mode==='voices';
 }
 function renderCatalogue(){
-  const items=filteredBooks();
-  $('#resultsCount').textContent=`${items.length} ${t('works')}`;
+  const items=filteredBooks();renderDiscovery(items);
+  $('#resultsCount').textContent=`${items.length} ${t('showBooks')}${state.q?' · '+searchRecordings(state.q).length+' '+t('recordings'):''}`;
   const count=['variety','subject','script','format','availability'].filter(k=>state[k]!=='all').length;
   $('#filterCount').textContent=count;$('#filterCount').hidden=!count;
-  $('#readingStart').hidden=state.mode!=='all'||Boolean(state.q)||count>0;
-  $('#clearFiltersButton').hidden=!count&&!state.q&&state.sort==='catalogue';
-  $('#emptyState').hidden=items.length>0;
-  $('#bookGrid').innerHTML=items.map(b=>{
+  $('#readingStart').hidden=state.mode!=='all'||Boolean(state.q)||count>0||state.browse!=='all';
+  $('#clearFiltersButton').hidden=!count&&!state.q&&state.sort==='catalogue'&&state.browse==='all';
+  $('#emptyState').hidden=items.length>0||(!!state.q&&searchRecordings(state.q).length>0);
+  $('#loadMoreBooks').hidden=items.length<=state.limit;
+  $('#emptyState strong').textContent=state.browse==='saved'?t('noSavedBooks'):t('noResults');
+  $('#bookGrid').innerHTML=items.slice(0,state.limit).map(b=>{
     const external=b.format==='web'&&!b.localStory;
     const note=b.availability==='partial'?t('partialBadge'):b.availability==='retelling'?t('retelling'):b.sourceOnly?t('sourceOnly'):'';
     const language=VARIETIES.find(x=>x[0]===b.v)?.[1]?.split(' / ')[0]||b.variety;
     const author=(b.author||'').length>80?'Khan, Mohammadirad, Molin & Noorlander':b.author;
-    return `<article class="book-card" data-slug="${b.slug}"><a class="cover tone-${b.tone} ${b.preview?'has-scan':''} ${(b.title||'').length>65?'long-title':''} ${external?'':'read-book'}" href="${escapeHtml(readingUrl(b))}" data-slug="${b.slug}" aria-label="${escapeHtml(readLabel(b)+': '+b.title)}" ${external?'target="_blank" rel="noopener"':''}><span class="cover-language">${escapeHtml(language)}${b.format==='pdf'?' · PDF':''}</span><h3 class="cover-title" dir="${b.rtl?'rtl':'auto'}">${escapeHtml(b.title)}</h3>${b.preview?`<img class="cover-scan" src="${escapeHtml(b.preview)}" alt="" loading="lazy">`:`<img class="cover-ornament" src="assets/motifs/${motifFor(b)}.svg" alt="" loading="lazy" aria-hidden="true">`}${note?`<span class="edition-note">${escapeHtml(note)}</span>`:''}</a><div class="card-body">${b.preview?`<p class="scan-title" dir="auto">${escapeHtml(b.title)}</p>`:''}<p class="book-author" dir="auto">${escapeHtml(author)}</p>${shelfDescription(b)}<div class="card-actions"><a class="shelf-read ${external?'':'read-book'}" data-slug="${b.slug}" href="${escapeHtml(readingUrl(b))}" ${external?'target="_blank" rel="noopener"':''}>${escapeHtml(readLabel(b))} <span aria-hidden="true">${external?'↗':'→'}</span></a>${b.format==='pdf'?`<a class="shelf-download" href="${escapeHtml(archiveEligible(b)?localPdfUrl(b):b.url)}" ${archiveEligible(b)?'download':'target="_blank" rel="noopener"'} aria-label="${escapeHtml(t('downloadPdf')+': '+b.title)}" title="${escapeHtml(t('downloadPdf'))}">↓</a>`:''}<button class="shelf-info details-book" type="button" data-slug="${b.slug}" aria-label="${escapeHtml(t('aboutBook')+': '+b.title)}">${escapeHtml(t('bookInfo'))}</button></div></div></article>`;
+    return `<article class="book-card" data-slug="${b.slug}"><a class="cover tone-${b.tone} ${b.preview?'has-scan':''} ${(b.title||'').length>65?'long-title':''} ${external?'':'read-book'}" href="${escapeHtml(readingUrl(b))}" data-slug="${b.slug}" aria-label="${escapeHtml(readLabel(b)+': '+b.title)}" ${external?'target="_blank" rel="noopener"':''}><span class="cover-language">${escapeHtml(language)}${b.format==='pdf'?' · PDF':''}</span><h3 class="cover-title" dir="${b.rtl?'rtl':'auto'}">${escapeHtml(b.title)}</h3>${b.preview?`<img class="cover-scan" src="${escapeHtml(b.preview)}" alt="" loading="lazy">`:`<img class="cover-ornament" src="assets/motifs/${motifFor(b)}.svg" alt="" loading="lazy" aria-hidden="true">`}${note?`<span class="edition-note">${escapeHtml(note)}</span>`:''}</a><div class="card-body">${b.preview?`<p class="scan-title" dir="auto">${escapeHtml(b.title)}</p>`:''}<p class="book-author" dir="auto">${escapeHtml(author)}</p>${shelfDescription(b)}<div class="card-actions">${saveButton(b)}<a class="shelf-read ${external?'':'read-book'}" data-slug="${b.slug}" href="${escapeHtml(readingUrl(b))}" ${external?'target="_blank" rel="noopener"':''}>${escapeHtml(readLabel(b))} <span aria-hidden="true">${external?'↗':'→'}</span></a>${b.format==='pdf'?`<a class="shelf-download" data-download="${b.slug}" href="${escapeHtml(window.KDLDiscovery.preferredFile(b))}" ${archiveEligible(b)?'download':'target="_blank" rel="noopener"'} aria-label="${escapeHtml(t('downloadPdf')+': '+b.title)}" title="${escapeHtml(t('downloadPdf'))}">↓</a>`:''}<button class="shelf-info details-book" type="button" data-slug="${b.slug}" aria-label="${escapeHtml(t('aboutBook')+': '+b.title)}">${escapeHtml(t('bookInfo'))}</button></div></div></article>`;
   }).join('');
   $$('.read-book',$('#bookGrid')).forEach(el=>el.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();openReader(bookBySlug(el.dataset.slug))}));
   $$('.details-book',$('#bookGrid')).forEach(el=>el.addEventListener('click',()=>showDetails(el.dataset.slug)));
-  markMode();
+  bindDiscoveryActions($('#bookGrid'));markMode();
 }
 
 function updateUrl(extra={}){
-  const u=new URL(location.href); const params=u.searchParams; params.delete('book');params.delete('read');params.delete('mode');if(state.mode==='voices')params.set('mode','voices');
-  [['q',state.q],['language',state.variety==='all'?'':state.variety],['subject',state.subject==='all'?'':state.subject],['script',state.script==='all'?'':state.script],['format',state.format==='all'?'':state.format],['availability',state.availability==='all'?'':state.availability],['sort',state.sort==='catalogue'?'':state.sort],['lang',state.locale==='en'?'':state.locale]].forEach(([k,v])=>v?params.set(k,v):params.delete(k));
+  const u=new URL(location.href); const params=u.searchParams; params.delete('book');params.delete('read');params.delete('mode');params.delete('performer');params.delete('recording');params.delete('chapter');if(state.mode==='voices')params.set('mode','voices');
+  [['browse',state.browse==='all'?'':state.browse],['performer',state.performer],['q',state.q],['language',state.variety==='all'?'':state.variety],['subject',state.subject==='all'?'':state.subject],['script',state.script==='all'?'':state.script],['format',state.format==='all'?'':state.format],['availability',state.availability==='all'?'':state.availability],['sort',state.sort==='catalogue'?'':state.sort],['lang',state.locale==='en'?'':state.locale]].forEach(([k,v])=>v?params.set(k,v):params.delete(k));
   Object.entries(extra).forEach(([k,v])=>v?params.set(k,v):params.delete(k)); history.replaceState({},'',u);
 }
-function readUrlState(){ const p=new URL(location.href).searchParams; state.q=p.get('q')||'';state.mode=p.get('mode')==='voices'?'voices':'all'; state.variety=p.get('language')||'all'; state.subject=p.get('subject')||'all'; state.script=p.get('script')||'all'; state.format=p.get('format')||'all'; state.availability=p.get('availability')||'all'; state.sort=p.get('sort')||'catalogue'; if(state.mode!=='voices')state.mode=state.format==='pdf'?'pdf':state.subject==='folklore'?'stories':state.subject==='poetry'?'poetry':'all'; if(p.get('lang')&&LOCALES[p.get('lang')])state.locale=p.get('lang'); $('#searchInput').value=state.q; }
-function syncFilter(key,value){state[key]=value;if(key==='subject'||key==='format')state.mode=state.format==='pdf'?'pdf':state.subject==='folklore'?'stories':state.subject==='poetry'?'poetry':'all';renderCatalogue();updateUrl();}
+function readUrlState(){ const p=new URL(location.href).searchParams; state.q=p.get('q')||'';state.browse=p.get('browse')||'all';state.performer=p.get('performer')||'';state.limit=24;state.mode=p.get('mode')==='voices'?'voices':'all'; state.variety=p.get('language')||'all'; state.subject=p.get('subject')||'all'; state.script=p.get('script')||'all'; state.format=p.get('format')||'all'; state.availability=p.get('availability')||'all'; state.sort=p.get('sort')||'catalogue'; if(state.mode!=='voices')state.mode=state.format==='pdf'?'pdf':state.subject==='folklore'?'stories':state.subject==='poetry'?'poetry':'all'; if(p.get('lang')&&LOCALES[p.get('lang')]){state.locale=p.get('lang');safeStorage.setItem('kdl_locale',state.locale);} $('#searchInput').value=state.q;$('#dengbejSearch').value=''; }
+function syncFilter(key,value){state.limit=24;state[key]=value;if(key==='subject'||key==='format')state.mode=state.format==='pdf'?'pdf':state.subject==='folklore'?'stories':state.subject==='poetry'?'poetry':'all';renderCatalogue();updateUrl();}
 function startGlobalSearch(value){
   // A new query starts across every record; filters chosen afterward still apply.
   if(value.trim()&&!state.q){
     const selects={variety:'varietyFilter',subject:'subjectFilter',script:'scriptFilter',format:'formatFilter',availability:'availabilityFilter'};
     Object.entries(selects).forEach(([key,id])=>{state[key]='all';$('#'+id).value='all'});
   }
-  state.mode='all';syncFilter('q',value);
+  state.mode='all';state.browse='all';state.performer='';syncFilter('q',value);
 }
 
-async function downloadBook(b){let target=b.url;if(b.readerPath&&await urlExists(b.readerPath))target=b.readerPath;else if(archiveEligible(b)&&b.format==='pdf'&&await urlExists(localPdfUrl(b)))target=localPdfUrl(b);const a=document.createElement('a');a.href=target;a.target='_blank';a.rel='noopener';if(target.startsWith('books/'))a.download='';document.body.appendChild(a);a.click();a.remove();}
+function resolveBookFile(b){return window.KDLDiscovery.preferredFile(b)}
+async function downloadBook(b){const target=await resolveBookFile(b);const a=document.createElement('a');a.href=target;a.target='_blank';a.rel='noopener';if(target.startsWith('books/'))a.download='';document.body.appendChild(a);a.click();a.remove();}
 
 let detailsFocus=null, catalogueScroll=0;
 function showDetails(slug,push=true){
@@ -161,7 +152,8 @@ function showDetails(slug,push=true){
  $('#cataloguePage').hidden=true;$('#detailsPage').hidden=false;window.scrollTo({top:0,behavior:'instant'});
  const author=b.authorSlug?`<a href="${authorRecordUrl(b)}">${escapeHtml(b.author)}</a>`:escapeHtml(b.author);
  const external=b.format==='web'&&!b.localStory;
- $('#detailsContent').innerHTML=`<article class="details-main"><h1 id="detailsTitle" tabindex="-1" dir="auto">${escapeHtml(b.title)}</h1><p class="details-byline">${author} · ${escapeHtml(b.variety)}</p><p class="details-description">${escapeHtml(desc(b))}</p>${b.availability==='retelling'?`<p>${escapeHtml(t('storyNotice'))}</p>`:''}<div class="details-actions"><a class="primary-button" id="detailsRead" href="${escapeHtml(readingUrl(b))}" ${external?'target="_blank" rel="noopener"':''}>${escapeHtml(readLabel(b))} →</a>${b.format==='pdf'?`<button class="secondary-button" id="detailsDownload" type="button">↓ ${escapeHtml(t('downloadPdf'))}</button>`:''}</div><details class="source-details"><summary>${escapeHtml(t('sourceAndRights'))}</summary><p><a href="${escapeHtml(b.source||b.url)}" target="_blank" rel="noopener">${escapeHtml(b.institution||t('source'))} ↗</a></p>${b.rightsKey?`<p>${escapeHtml(t(b.rightsKey))}</p>`:''}${b.license?`<p><a href="${escapeHtml(b.license)}" target="_blank" rel="noopener">${escapeHtml(b.licenseLabel)} ↗</a></p>`:''}<p>${escapeHtml(b.year||'')}${b.kdlId?' · '+escapeHtml(b.kdlId):''}</p>${b.authorSlug?`<a href="${permanentRecordUrl(b)}">${escapeHtml(t('details'))} →</a>`:''}</details></article>`;
+ $('#detailsContent').innerHTML=`<article class="details-main"><h1 id="detailsTitle" tabindex="-1" dir="auto">${escapeHtml(b.title)}</h1><p class="details-byline">${author} · ${escapeHtml(b.variety)}</p><p class="details-description">${escapeHtml(desc(b))}</p>${b.availability==='retelling'?`<p>${escapeHtml(t('storyNotice'))}</p>`:''}<div class="details-actions">${saveButton(b)}<a class="primary-button" id="detailsRead" href="${escapeHtml(readingUrl(b))}" ${external?'target="_blank" rel="noopener"':''}>${escapeHtml(readLabel(b))} →</a>${b.format==='pdf'?`<button class="secondary-button" id="detailsDownload" type="button">↓ ${escapeHtml(t('downloadPdf'))}</button>`:''}</div>${relatedPerformanceHtml(b)}<button type="button" class="text-button" data-report-book="${b.slug}">${escapeHtml(t('reportProblem'))}</button><details class="source-details"><summary>${escapeHtml(t('sourceAndRights'))}</summary><p><a href="${escapeHtml(b.source||b.url)}" target="_blank" rel="noopener">${escapeHtml(b.institution||t('source'))} ↗</a></p>${b.rightsKey?`<p>${escapeHtml(t(b.rightsKey))}</p>`:''}${b.license?`<p><a href="${escapeHtml(b.license)}" target="_blank" rel="noopener">${escapeHtml(b.licenseLabel)} ↗</a></p>`:''}<p>${escapeHtml(b.year||'')}${b.kdlId?' · '+escapeHtml(b.kdlId):''}</p>${b.authorSlug?`<a href="${permanentRecordUrl(b)}">${escapeHtml(t('details'))} →</a>`:''}</details></article>`;
+ bindDiscoveryActions($('#detailsContent'));
  if(!external)$('#detailsRead').addEventListener('click',e=>{e.preventDefault();openReader(b)});
  $('#detailsDownload')?.addEventListener('click',()=>downloadBook(b));
  if(push){const u=new URL(location.href);u.searchParams.delete('read');u.searchParams.set('book',slug);history.pushState({book:slug},'',u);$('#detailsTitle').focus();}
@@ -175,18 +167,20 @@ function closeDetails(){
 let lastFocus=null,pendingInitialRead=null;
 function openDialog(id){const d=$('#'+id);lastFocus=document.activeElement;d.hidden=false;document.body.classList.add('modal-open');const card=$('.dialog-card',d);card.focus();trapSetup(d)}
 function closeDialog(id){
- const d=$('#'+id);d.hidden=true;document.body.classList.remove('modal-open');if(lastFocus&&lastFocus.focus)lastFocus.focus();
+ const d=$('#'+id);d.hidden=true;if($('#reader').hidden&&!$$('.dialog-backdrop').some(dialog=>!dialog.hidden))document.body.classList.remove('modal-open');if(lastFocus&&lastFocus.focus)lastFocus.focus();
  if(id==='languageDialog'){
-  localStorage.setItem('kdl_locale',state.locale);
+  safeStorage.setItem('kdl_locale',state.locale);
   if(pendingInitialRead){const slug=pendingInitialRead;pendingInitialRead=null;queueMicrotask(()=>{const u=new URL(location.href);u.searchParams.set('read',slug);history.replaceState({},'',u);openReader(bookBySlug(slug),false)});}
  }
 }
-function trapSetup(container){const focusables=$$('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])',container).filter(x=>!x.disabled&&!x.hidden); if(!focusables.length)return; container.onkeydown=e=>{if(e.key==='Escape'){closeDialog(container.id);return} if(e.key!=='Tab')return; const first=focusables[0],last=focusables[focusables.length-1]; if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}}
+function trapSetup(container){const focusables=$$('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])',container).filter(x=>!x.disabled&&!x.hidden); if(!focusables.length)return; container.onkeydown=e=>{if(e.key==='Escape'){e.stopPropagation();closeDialog(container.id);return} if(e.key!=='Tab')return; const first=focusables[0],last=focusables[focusables.length-1]; if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}}
 
-let readerBook=null, readerSections=[], currentSection=-1, readerFont=Number(localStorage.getItem('kdl_reader_font')||20), wideReader=localStorage.getItem('kdl_reader_wide')==='1';
-let readerController=null;
+let readerBook=null, readerSections=[], currentSection=-1, readerFont=Number(safeStorage.getItem('kdl_reader_font')||20), wideReader=safeStorage.getItem('kdl_reader_wide')==='1';
+let readerController=null,pdfSession=null,progressTimer=null,restoringProgress=false,readerChapter='';
+const personalShelf=window.KDLDiscovery.readObject('kdl_personal_shelf',{saved:{},progress:{}});
+personalShelf.saved=personalShelf.saved&&typeof personalShelf.saved==='object'&&!Array.isArray(personalShelf.saved)?personalShelf.saved:{};personalShelf.progress=personalShelf.progress&&typeof personalShelf.progress==='object'&&!Array.isArray(personalShelf.progress)?personalShelf.progress:{};
 function beginReaderLoad(){
- readerController?.abort();
+ clearTimeout(progressTimer);restoringProgress=true;readerController?.abort();
  const controller=new AbortController();readerController=controller;
  return {signal:controller.signal,current:()=>readerController===controller&&!controller.signal.aborted};
 }
@@ -195,38 +189,42 @@ let readerFocus=null;
 async function openReader(b,push=true){
  if(!b)return;
  if(b.format==='web'&&!b.localStory){location.href=b.url;return;}
- readerController?.abort();readerFocus=document.activeElement;readerBook=b;readerSections=[];currentSection=-1;
+ captureTextProgress();pdfSession?.destroy?.();pdfSession=null;readerController?.abort();readerFocus=document.activeElement;readerBook=b;readerSections=[];currentSection=-1;
  $('#reader').hidden=false;$('#reader').classList.toggle('is-pdf',b.format==='pdf');document.body.classList.add('modal-open');
+ $('#readerSave').dataset.save=b.slug;updateSaveButton($('#readerSave'),b);
+ $('#readerRelated').hidden=!MEDIA.recordings.some(r=>(r.relatedBooks||[]).includes(b.slug));
  $('#readerTitle').textContent=b.title;$('#readerSubtitle').textContent=b.author;
+ window.dispatchEvent(new CustomEvent('kdl-reader-open',{detail:{book:b}}));
  $('#readerOriginal').href=b.source||b.url;$('#readerNav').hidden=true;$('#readerDownload').hidden=true;$('#readerContents').hidden=true;
  for(const id of ['fontDown','fontUp','readerWidth'])$('#'+id).hidden=b.format==='pdf';
  $('#readerContent').innerHTML=`<div class="reader-loading" role="status">${escapeHtml(t('loading'))}</div>`;$('#readerContent').scrollTop=0;
  $('#readerClose').focus();applyReaderPrefs();
- if(push){const u=new URL(location.href);u.searchParams.set('read',b.slug);u.searchParams.delete('chapter');history.pushState({read:b.slug},'',u);}
+ if(push){const u=new URL(location.href);u.searchParams.set('read',b.slug);u.searchParams.delete('recording');u.searchParams.delete('chapter');const saved=personalShelf.progress[b.slug];if(saved?.chapter)u.searchParams.set('chapter',saved.chapter);history.pushState({read:b.slug},'',u);}
  if(b.format==='pdf'){
    const load=beginReaderLoad();
-   let readUrl=b.url;const hosted=b.readerPath||(archiveEligible(b)?localPdfUrl(b):null);if(hosted&&await urlExists(hosted,load.signal))readUrl=hosted;
-   if(!load.current())return;renderPdf(b,readUrl);
+   const readUrl=await resolveBookFile(b);
+   if(!load.current())return;await renderPdf(b,readUrl);
  }else if(b.localStory)await renderStory(b);else{
-   const chapter=new URL(location.href).searchParams.get('chapter');
+   const chapter=new URL(location.href).searchParams.get('chapter')||(!location.hash?personalShelf.progress[b.slug]?.chapter:'');
    const linked=chapter&&window.KDLReader.wikiLink('https://wikisource.org/wiki/'+encodeURIComponent(chapter),b.wiki);
    await renderWiki(b,linked?.page||b.wiki);
  }
 }
 function closeReader(update=true){
+ captureTextProgress();clearTimeout(progressTimer);pdfSession?.destroy?.();pdfSession=null;
  readerController?.abort();readerController=null;
- $('#reader').hidden=true;$('#readerContent').replaceChildren();document.body.classList.remove('modal-open');readerBook=null;readerSections=[];currentSection=-1;
+ $('#reader').hidden=true;$('#readerContent').replaceChildren();document.body.classList.remove('modal-open');readerBook=null;readerSections=[];currentSection=-1;readerChapter='';
  if(update){const u=new URL(location.href);u.searchParams.delete('read');u.searchParams.delete('chapter');history.replaceState({},'',u);}
- readerFocus?.focus({preventScroll:true});
+ readerFocus?.focus({preventScroll:true});renderContinueReading();
 }
 function renderReaderError(b,retry,sourceUrl=b.source||b.url){
  $('#readerNav').hidden=true;
  $('#readerContent').innerHTML=`<div class="reader-error" role="alert"><p>${escapeHtml(t('readerFailed'))}</p><div class="reader-recovery"><button class="primary-button" type="button" data-reader-retry>${escapeHtml(t('retryRead'))}</button><a class="secondary-button" href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(t('openOriginal'))} ↗</a></div></div>`;
  $('[data-reader-retry]').addEventListener('click',retry);
 }
-function renderPdf(b,readUrl=b.url){
+function renderNativePdf(b,readUrl=b.url){
  const download=$('#readerDownload');download.href=readUrl;download.hidden=false;if(!readUrl.startsWith('books/')){download.target='_blank';download.rel='noopener'}else{download.removeAttribute('target');download.removeAttribute('rel')}
- $('#readerContent').innerHTML=`<div class="pdf-fallback"><span>${escapeHtml(t('pdfHelp'))}</span><a href="${escapeHtml(readUrl)}" target="_blank" rel="noopener">${escapeHtml(t('openFullScreen'))} ↗</a><button type="button" class="text-button" data-reader-retry>${escapeHtml(t('retryRead'))}</button></div><iframe class="pdf-frame" title="${escapeHtml(b.title)} PDF" src="${escapeHtml(readUrl)}#page=${b.startPage||1}&view=FitH"></iframe>`;
+ $('#readerContent').innerHTML=`<p class="native-pdf-note">${escapeHtml(t('nativePdfNote'))}</p><div class="pdf-fallback"><span>${escapeHtml(t('pdfHelp'))}</span><a href="${escapeHtml(readUrl)}" target="_blank" rel="noopener">${escapeHtml(t('openFullScreen'))} ↗</a><button type="button" class="text-button" data-reader-retry>${escapeHtml(t('retryRead'))}</button></div><iframe class="pdf-frame" title="${escapeHtml(b.title)} PDF" src="${escapeHtml(readUrl)}#page=${personalShelf.progress[b.slug]?.page||b.startPage||1}&view=FitH"></iframe>`;
  $('[data-reader-retry]').addEventListener('click',()=>renderPdf(b,readUrl));
  $('.pdf-frame').addEventListener('error',()=>{if(readerBook===b)renderReaderError(b,()=>renderPdf(b,readUrl),readUrl)},{once:true});
 }
@@ -243,11 +241,11 @@ async function renderStory(b){
   article.querySelectorAll('a[href]').forEach(a=>{a.href=new URL(a.getAttribute('href'),new URL(b.url,location.href)).href});
   article.querySelectorAll('img[src]').forEach(img=>{img.src=new URL(img.getAttribute('src'),new URL(b.url,location.href)).href});
   article.className='reader-article'+(article.querySelector('.illustrated-page')?' illustrated-story':'');article.dir=b.rtl?'rtl':'ltr';
-  $('#readerContent').replaceChildren(article);
+  $('#readerContent').replaceChildren(article);restoreTextProgress(b);
  }catch(error){if(load.current())renderReaderError(b,()=>renderStory(b))}
 }
 function openWikiChapter(b,page,hash=''){
- const u=new URL(location.href);u.searchParams.set('read',b.slug);
+ captureTextProgress();const u=new URL(location.href);u.searchParams.set('read',b.slug);
  if(window.KDLReader.normalizeWikiPage(page)===window.KDLReader.normalizeWikiPage(b.wiki))u.searchParams.delete('chapter');else u.searchParams.set('chapter',page);
  history.pushState({read:b.slug},'',u);renderWiki(b,page,hash);
 }
@@ -281,7 +279,8 @@ async function renderWiki(b,page,hash=''){
  $('#readerContent').innerHTML=`<div class="reader-loading" role="status">${escapeHtml(t('loading'))}</div>`;
  const showArticle=html=>{
   $('#readerContent').innerHTML=(b.availability==='partial'?`<div class="partial-banner">${escapeHtml(t('partialNotice'))}</div>`:'')+`<article class="reader-article" dir="${b.rtl?'rtl':'ltr'}">${html}</article>`;
-  bindWikiChapters(b,page);scrollToReaderAnchor(hash||location.hash);
+  readerChapter=atContents?'':window.KDLReader.normalizeWikiPage(page);
+  bindWikiChapters(b,page);if(hash||location.hash){restoringProgress=false;scrollToReaderAnchor(hash||location.hash);captureTextProgress()}else restoreTextProgress(b,readerChapter);
  };
  if(atContents&&archiveEligible(b)){
   try{
@@ -321,6 +320,7 @@ function updateSectionControls(){const prev=$('#prevSection'),next=$('#nextSecti
 function goSection(delta){if(!readerSections.length)return;currentSection=Math.max(0,Math.min(readerSections.length-1,currentSection+delta));const section=readerSections[currentSection];const target=document.getElementById(section.anchor)||document.querySelector(`[id="${CSS.escape(section.anchor)}"]`);if(target)target.scrollIntoView({behavior:'smooth',block:'start'});updateSectionControls();}
 
 function initEvents(){
+ initDiscoveryEvents();
   $('#dengbejSearch').addEventListener('input',renderDengbej);
   $('#dengbejToggle').addEventListener('click',()=>{dengbejExpanded=!dengbejExpanded;renderDengbej()});
   $('#dengbejClear').addEventListener('click',()=>{$('#dengbejSearch').value='';renderDengbej();$('#dengbejSearch').focus()});
@@ -329,24 +329,27 @@ function initEvents(){
   $('#searchInput').addEventListener('input',e=>startGlobalSearch(e.target.value)); $('#varietyFilter').addEventListener('change',e=>syncFilter('variety',e.target.value)); $('#subjectFilter').addEventListener('change',e=>syncFilter('subject',e.target.value)); $('#sortFilter').addEventListener('change',e=>syncFilter('sort',e.target.value)); $('#scriptFilter').addEventListener('change',e=>syncFilter('script',e.target.value)); $('#formatFilter').addEventListener('change',e=>syncFilter('format',e.target.value)); $('#availabilityFilter').addEventListener('change',e=>syncFilter('availability',e.target.value));
   $('#moreFiltersButton').addEventListener('click',()=>{const a=$('#advancedFilters'),open=a.hidden;a.hidden=!open;$('#moreFiltersButton').setAttribute('aria-expanded',String(open));$('#moreFiltersButton').querySelector('[data-i18n]').textContent=t('filters')});
   $$('[data-library-mode]').forEach(button=>button.addEventListener('click',()=>setMode(button.dataset.libraryMode)));
-  $('#clearFiltersButton').addEventListener('click',()=>{Object.assign(state,{mode:'all',q:'',variety:'all',subject:'all',script:'all',format:'all',availability:'all',sort:'catalogue'});$('#searchInput').value='';applyLocale();updateUrl()});
+  $('#clearFiltersButton').addEventListener('click',()=>{Object.assign(state,{mode:'all',browse:'all',performer:'',limit:24,q:'',variety:'all',subject:'all',script:'all',format:'all',availability:'all',sort:'catalogue'});$('#searchInput').value='';applyLocale();updateUrl()});
   $('#languageButton').addEventListener('click',()=>openDialog('languageDialog')); $('#suggestButton').addEventListener('click',()=>openDialog('suggestDialog')); $$('[data-close-dialog]').forEach(b=>b.addEventListener('click',()=>closeDialog(b.dataset.closeDialog))); $$('.dialog-backdrop').forEach(d=>d.addEventListener('mousedown',e=>{if(e.target===d)closeDialog(d.id)}));
-  $('#detailsBack').addEventListener('click',closeDetails); $('#readerClose').addEventListener('click',closeReader); $('#fontDown').addEventListener('click',()=>{readerFont=Math.max(14,readerFont-2);localStorage.setItem('kdl_reader_font',readerFont);applyReaderPrefs()}); $('#fontUp').addEventListener('click',()=>{readerFont=Math.min(28,readerFont+2);localStorage.setItem('kdl_reader_font',readerFont);applyReaderPrefs()}); $('#readerWidth').addEventListener('click',()=>{wideReader=!wideReader;localStorage.setItem('kdl_reader_wide',wideReader?'1':'0');applyReaderPrefs()}); $('#prevSection').addEventListener('click',()=>goSection(-1));$('#nextSection').addEventListener('click',()=>goSection(1));
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#reader').hidden)closeReader()});
-  window.addEventListener('popstate',()=>{const p=new URL(location.href).searchParams;closeReader(false);readUrlState();applyLocale();if(!p.get('book')){$('#detailsPage').hidden=true;$('#cataloguePage').hidden=false}if(p.get('read'))openReader(bookBySlug(p.get('read')),false)});
-  $('#reader').addEventListener('keydown',e=>{if(e.key!=='Tab')return;const nodes=$$('a[href],button,iframe',$('#reader')).filter(x=>!x.hidden&&!x.disabled&&x.getClientRects().length);const first=nodes[0],last=nodes[nodes.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}});
+  $('#detailsBack').addEventListener('click',closeDetails); $('#readerClose').addEventListener('click',closeReader); $('#fontDown').addEventListener('click',()=>{readerFont=Math.max(14,readerFont-2);safeStorage.setItem('kdl_reader_font',readerFont);applyReaderPrefs()}); $('#fontUp').addEventListener('click',()=>{readerFont=Math.min(28,readerFont+2);safeStorage.setItem('kdl_reader_font',readerFont);applyReaderPrefs()}); $('#readerWidth').addEventListener('click',()=>{wideReader=!wideReader;safeStorage.setItem('kdl_reader_wide',wideReader?'1':'0');applyReaderPrefs()}); $('#prevSection').addEventListener('click',()=>goSection(-1));$('#nextSection').addEventListener('click',()=>goSection(1));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#reader').hidden&&!$$('.dialog-backdrop').some(dialog=>!dialog.hidden))closeReader()});
+  window.addEventListener('popstate',()=>{const p=new URL(location.href).searchParams;closeReader(false);readUrlState();applyLocale();if(!p.get('book')){$('#detailsPage').hidden=true;$('#cataloguePage').hidden=false}if(p.get('read'))openReader(bookBySlug(p.get('read')),false);else if(p.get('recording'))openRecording(p.get('recording'),false)});
+  $('#reader').addEventListener('keydown',e=>{if(e.key!=='Tab')return;const nodes=$$('a[href],button,input,select,iframe',$('#reader')).filter(x=>!x.hidden&&!x.disabled&&x.getClientRects().length);const first=nodes[0],last=nodes[nodes.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}});
 }
 
 function setMode(mode){
  if(!$('#detailsPage').hidden)closeDetails();
- state.mode=mode;state.subject=mode==='stories'?'folklore':mode==='poetry'?'poetry':'all';state.format=mode==='pdf'?'pdf':'all';
+ state.limit=24;state.browse='all';state.performer='';state.q='';$('#searchInput').value='';state.mode=mode;state.subject=mode==='stories'?'folklore':mode==='poetry'?'poetry':'all';state.format=mode==='pdf'?'pdf':'all';
  $('#subjectFilter').value=state.subject;$('#formatFilter').value=state.format;renderCatalogue();updateUrl();
 }
+/* DISCOVERY_FUNCTIONS */
 readUrlState();initEvents();applyLocale();
 const entryParams=new URL(location.href).searchParams;
 const initialRead=entryParams.get('read');
-const savedLocale=localStorage.getItem('kdl_locale');
+const savedLocale=safeStorage.getItem('kdl_locale');
 if(!LOCALES[savedLocale]&&!LOCALES[entryParams.get('lang')]){pendingInitialRead=initialRead;openDialog('languageDialog');}
 else if(initialRead)openReader(bookBySlug(initialRead),false);
 if(location.hash==='#kurmanjiStoryShelf'||location.hash==='#storyCorner'){state.variety=location.hash==='#storyCorner'?'ckb':'kmr';$('#varietyFilter').value=state.variety;setMode('stories')}
 if(location.hash==='#voicesBrowsePanel')setMode('voices');
+if(!initialRead&&entryParams.get('recording'))openRecording(entryParams.get('recording'),false);
+if(!initialRead&&state.performer&&entryParams.get('mode')==='voices')showPerformer(state.performer,false);

@@ -1,0 +1,20 @@
+.kdl-pdf-reader{display:flex;flex-direction:column;flex:1;min-width:0;min-height:0;height:100%;color:#17283f;background:#e9e3d8}
+.kdl-pdf-controls{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding:10px 16px;background:#fcf9f3;border-bottom:1px solid #d9cebd;flex-shrink:0}
+.kdl-pdf-paging{display:flex;gap:9px;align-items:center}
+.kdl-pdf-page-label,.kdl-pdf-zoom-label{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600}
+.kdl-pdf-reader .kdl-pdf-button,.kdl-pdf-reader .kdl-pdf-download{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:8px 13px;border:1px solid #cbbda9;border-radius:9px;background:#fffdf9;color:#17283f;font:inherit;line-height:1.25;text-decoration:none;cursor:pointer}
+.kdl-pdf-paging>.kdl-pdf-button{font-size:27px;padding:3px 13px;min-width:42px}
+.kdl-pdf-reader .kdl-pdf-button:hover,.kdl-pdf-reader .kdl-pdf-download:hover{background:#eee5d7}
+.kdl-pdf-reader .kdl-pdf-button:disabled{opacity:.38;cursor:default}
+.kdl-pdf-reader .kdl-pdf-page{width:68px;min-height:42px;box-sizing:border-box;padding:7px 6px;text-align:center;border:1px solid #cbbda9;border-radius:9px;background:#fff;color:#17283f;font:inherit}
+.kdl-pdf-reader .kdl-pdf-zoom{min-height:42px;padding:7px 9px;border:1px solid #cbbda9;border-radius:9px;background:#fff;color:#17283f;font:inherit;max-width:150px}
+.kdl-pdf-total{white-space:nowrap;font-size:15px}
+.kdl-pdf-reader .kdl-pdf-status{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;flex-shrink:0;min-height:24px;margin:0;padding:5px 12px;font-size:14px;color:#4a5566;background:#f5f0e7}
+.kdl-pdf-viewport{overflow:auto;overscroll-behavior:contain;flex:1;min-height:0;padding:16px;box-sizing:border-box;direction:ltr;scrollbar-gutter:stable}
+.kdl-pdf-paper{margin-inline:auto;background:#fff;box-shadow:0 5px 24px #17283f1a;min-width:0}
+.kdl-pdf-canvas{display:block;max-width:none;background:#fff}
+.kdl-pdf-text{color:#243448;background:#fffdf8;border-top:1px solid #e5ddcf;font-size:16px;overflow-wrap:anywhere}
+.kdl-pdf-text summary{padding:13px 17px;cursor:pointer;font-weight:600}
+.kdl-pdf-transcript{padding:0 20px 24px;line-height:1.7;white-space:pre-wrap}
+.kdl-pdf-reader :is(button,a,input,select,summary):focus-visible,.kdl-pdf-viewport:focus-visible{outline:3px solid #b97822;outline-offset:3px}
+@media(max-width:600px){.kdl-pdf-controls{gap:8px 12px;padding:8px}.kdl-pdf-paging{gap:5px}.kdl-pdf-page-label,.kdl-pdf-zoom-label{font-size:14px;gap:5px}.kdl-pdf-reader .kdl-pdf-download{font-size:14px;min-height:40px}.kdl-pdf-reader .kdl-pdf-zoom{max-width:125px}.kdl-pdf-viewport{padding:16px}.kdl-pdf-total{font-size:14px}.kdl-pdf-status{font-size:13px}}

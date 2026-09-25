@@ -1,20 +1,20 @@
-# Kurdish Digital Library — v5 Durable Archive
+# Kurdish Digital Library
 
-This release strengthens the library as an independent preservation project rather than a catalogue of outbound links.
+A multilingual library connecting Kurdish books, stories, poetry, and recorded voices.
 
-## What is included
+## Current collection and reader
 
-- **43 catalogue records**
-- **Permanent KDL identifiers** for every record (for example `KDL-KMR-0001`)
-- **43 permanent book record pages** under `book/<slug>/`
-- **26 author pages** under `authors/`
-- **About / preservation policy page**
-- **Live preservation dashboard** that checks whether archive files are actually present on the deployed site
-- Machine-readable **`catalogue.json`** and **`catalogue.csv`**
-- Preservation manifest with local target paths and rights-gated archive eligibility
-- Local archive downloader for clearly public-domain records
-- SHA-256 integrity verification tool
-- Dated backup creation tool
+- 121 readable works: 70 core catalogue entries plus story shelves, with three additional source-guide records kept out of the reading grid.
+- 43 PDF titles; 14 verified local PDF files, with publisher-hosted reading for the remaining titles.
+- One search across books, authors, performers and 24 media entries, including 18 Dengbêj performances.
+- Accent-insensitive and Arabic-keyboard-equivalent search, browse categories, saved books and reading progress in this browser.
+- A self-hosted PDF.js reader with mobile controls, page restoration, text access and an external-source fallback.
+- Linked reading/listening, performer introductions, source credits and problem reports.
+- Six interface dictionaries and catalogue descriptions. Editorial translations, especially Hewramî, Southern Kurdish and Zazakî, benefit from fluent-speaker review. Media profile introductions currently label their shared Sorani fallback where used.
+
+## Checks and maintenance
+
+See [docs/content-maintenance.md](docs/content-maintenance.md) for the source data, regeneration commands, local validation, weekly link audits and deployment gates. Netlify runs validation before deployment. The supplied GitHub Pages workflow can gate publishing after Pages is configured to use GitHub Actions; the current branch publisher does not wait for repository checks.
 
 ## Recommended workflow
 

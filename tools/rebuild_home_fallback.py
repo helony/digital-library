@@ -20,7 +20,7 @@ def main():
     (ROOT / 'assets/visual-previews.js').write_text('/* Original edition previews; sources in assets/previews/README.md. */\nwindow.KDL_PREVIEWS = ' + json.dumps(previews) + ';\n')
     cards = []
     for b in sorted((b for b in records + stories if not b.get('sourceOnly')), key=rank):
-        url = b.get('localPath') if b.get('archiveEligible') else b['url']
+        url = b.get('readerPath') or (b.get('localPath') if b.get('localPath') and (ROOT / b['localPath']).is_file() else None) or b['url']
         motif = b.get('motif') or {'poetry': 'love-classical', 'religious': 'mystical-medallion', 'reference': 'editorial-reference', 'education': 'editorial-reference'}.get(b['subject'], 'folk-oral')
         language = {'kmr': 'Kurmancî', 'ckb': 'Soranî', 'diq': 'Zazakî', 'hac': 'Hewramî', 'sdh': 'Kurdî Xwarîn'}[b['v']]
         note = {'partial': 'Available section', 'retelling': 'Retelling', 'reference': 'Source record'}.get(b['availability'], '')
@@ -40,7 +40,8 @@ def main():
     text = p.read_text()
     start = text.index('          <div class="book-grid" id="bookGrid"')
     end = text.index('          <div class="empty-state" id="emptyState"', start)
-    text = text[:start] + '          <div class="book-grid" id="bookGrid">\n' + '\n'.join(cards) + '\n          </div>\n' + text[end:]
+    pagination = '          <div class="load-more-wrap"><button id="loadMoreBooks" class="secondary-button" type="button" data-i18n="showMoreBooks">Show more books</button></div>\n'
+    text = text[:start] + '          <div class="book-grid" id="bookGrid">\n' + '\n'.join(cards) + '\n          </div>\n' + pagination + text[end:]
     p.write_text(text)
     print(f'Rebuilt shelf with {len(records)} catalogue records and {len(stories)} story entries.')
 

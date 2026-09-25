@@ -1,5 +1,10 @@
 [build]
-  publish = "."
+  publish = "_site"
+  command = "python3 -m pip install -r requirements-validation.txt && npm ci --ignore-scripts && bash tools/prepublish.sh && python3 tools/prepare_site.py"
+
+[build.environment]
+  NODE_VERSION = "22"
+  PYTHON_VERSION = "3.12"
 
 [[headers]]
   for = "/*"

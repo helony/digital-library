@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import hashlib, json, sys
+import argparse, hashlib, json, sys
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
+parser=argparse.ArgumentParser(description='Check preserved files and their SHA-256 checksums.')
+parser.add_argument('--allow-missing', action='store_true', help='Report optional missing copies without failing (checksum failures still fail).')
+parser.add_argument('--format', choices=('wiki', 'pdf'), help='Only fail missing copies of this format; still verify every existing checksum.')
+args=parser.parse_args()
 MANIFEST=json.loads((ROOT/"archive-manifest.json").read_text(encoding="utf-8"))
-ok=missing=bad=review=0
+ok=missing=blocking_missing=bad=review=0
 rows=[]
 
 def digest(path: Path)->str:
@@ -24,6 +28,8 @@ for item in MANIFEST["items"]:
     path=ROOT/rel
     if not path.exists():
         missing+=1
+        if args.format is None or item.get('format') == args.format:
+            blocking_missing+=1
         rows.append({"kdl_id":item.get("kdl_id"),"slug":item["slug"],"status":"missing","path":rel})
         continue
     meta=path.parent/"metadata.json"
@@ -39,8 +45,10 @@ for item in MANIFEST["items"]:
         ok+=1
         rows.append({"kdl_id":item.get("kdl_id"),"slug":item["slug"],"status":"ok","path":rel,"sha256":actual})
 
-report={"ok":ok,"missing":missing,"checksum_mismatch":bad,"manual_review":review,"items":rows}
+report={"ok":ok,"missing":missing,"blocking_missing":blocking_missing,"missing_scope":args.format or 'all',"checksum_mismatch":bad,"manual_review":review,"items":rows}
 (ROOT/"library-audit.json").write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding="utf-8")
 print(f"Verified local archive: {ok} OK, {missing} missing, {bad} checksum mismatch, {review} manual review.")
+if args.format:
+    print(f"Missing {args.format} copies required by this run: {blocking_missing}.")
 print("Report: library-audit.json")
-sys.exit(1 if bad else 0)
+sys.exit(1 if bad or (blocking_missing and not args.allow_missing) else 0)

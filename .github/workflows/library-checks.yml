@@ -1,0 +1,78 @@
+name: Library content and link checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 8 * * 1'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: library-checks-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Publication checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test dependencies
+        run: npm ci --ignore-scripts
+      - name: Install PDF parser
+        run: python3 -m pip install -r requirements-validation.txt
+      - name: Validate code, catalogue, local stories, media data, and PDF contents
+        run: bash tools/prepublish.sh
+      - name: Add validation summary
+        if: always()
+        run: |
+          if [ -f reports/prepublish.md ]; then
+            cat reports/prepublish.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: publication-checks
+          path: reports/prepublish.*
+          if-no-files-found: ignore
+          retention-days: 30
+
+  links:
+    name: External reading and media audit
+    needs: validate
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF parser
+        run: python3 -m pip install -r requirements-validation.txt
+      - name: Check PDF bytes, story images, Wikisource pages, and recordings
+        run: python3 tools/check_library.py --remote --workers 4 --timeout 15 --report reports/remote-audit.json
+      - name: Add actionable audit summary
+        if: always()
+        run: |
+          if [ -f reports/remote-audit.md ]; then
+            cat reports/remote-audit.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: remote-link-audit
+          path: reports/remote-audit.*
+          if-no-files-found: ignore
+          retention-days: 30

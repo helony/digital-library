@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240" viewBox="0 0 320 240" role="img" aria-labelledby="title desc">
+<title id="title">Voice and sun</title><desc id="desc">An original symbolic illustration of a sun above a sound wave. This is not a portrait.</desc>
+<rect width="320" height="240" rx="20" fill="#132a43"/>
+<g fill="none" stroke="#efbc5a" stroke-width="3"><circle cx="160" cy="87" r="29"/><circle cx="160" cy="87" r="21"/><path d="M160 41v-12m0 116v-12m46-46h12M102 87h12m78-32 9-9m-82 82 9-9m64 0 9 9m-82-82 9 9"/></g>
+<g stroke="#f0dfc6" stroke-width="4" stroke-linecap="round"><path d="M47 181v10m16-17v24m16-36v48m16-31v14m16-52v90m16-57v24m16-45v65m16-43v20m16-30v41m16-68v96m16-68v41m16-27v14m16-24v34m16-47v60m16-35v10"/></g>
+<path d="m21 24 7 7 7-7-7-7zm264 0 7 7 7-7-7-7z" fill="#aa6047"/>
+</svg>

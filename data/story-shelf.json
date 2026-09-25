@@ -20,7 +20,12 @@
     "source": "https://fr.wikisource.org/wiki/Journal_asiatique/S%C3%A9rie_10,_tome_15",
     "rtl": false,
     "desc": {
-      "en": "A well-known Kurdish oral love story. The early printed version was recorded in Sêrt and published in 1910."
+      "en": "A well-known Kurdish oral love story. The early printed version was recorded in Sêrt and published in 1910.",
+      "kmr": "Çîrokeke evînê ya devkî ya Kurdî. Versiyona çapkirî li Sêrtê hat tomarkirin û di 1910an de hat weşandin.",
+      "ckb": "چیرۆکێکی ناسراوی زارەکیی کوردی دەربارەی خۆشەویستی. وەشانی چاپکراوی سەرەتایی لە سێرت تۆمار کراوە و لە ١٩١٠ بڵاو کراوەتەوە.",
+      "diq": "Sanikêka eşqî ya fekî ya kurdkî. Versîyonê çapkerdeyî Sêrt de ameyo qeydkerdene û 1910 de weşanîyayo.",
+      "hac": "داستانێکی زارەکیی کوردی دەربارەی عەشق؛ سێرتدا تۆمار بیەن و ساڵی ١٩١٠ چاپ بیەن.",
+      "sdh": "حیکایەتێگ زارەکی کوردی دەربارەی عەشق؛ لە سێرت تۆمار بیە و ساڵ ١٩١٠ چاپ بیە."
     },
     "aliases": [
       "Salih û Kejê",
@@ -30,8 +35,16 @@
     "localStory": true,
     "sourceOnly": false,
     "summary": {
-      "en": "A well-known Kurdish oral love story."
-    }
+      "en": "A well-known Kurdish oral love story.",
+      "kmr": "Çîrokeke evînê ya devkî ya Kurdî. Versiyona çapkirî li Sêrtê hat tomarkirin û di 1910an de hat weşandin.",
+      "ckb": "چیرۆکێکی ناسراوی زارەکیی کوردی دەربارەی خۆشەویستی. وەشانی چاپکراوی سەرەتایی لە سێرت تۆمار کراوە و لە ١٩١٠ بڵاو کراوەتەوە.",
+      "diq": "Sanikêka eşqî ya fekî ya kurdkî. Versîyonê çapkerdeyî Sêrt de ameyo qeydkerdene û 1910 de weşanîyayo.",
+      "hac": "داستانێکی زارەکیی کوردی دەربارەی عەشق؛ سێرتدا تۆمار بیەن و ساڵی ١٩١٠ چاپ بیەن.",
+      "sdh": "حیکایەتێگ زارەکی کوردی دەربارەی عەشق؛ لە سێرت تۆمار بیە و ساڵ ١٩١٠ چاپ بیە."
+    },
+    "browseTags": [
+      "short"
+    ]
   },
   {
     "id": 101,
@@ -54,7 +67,12 @@
     "source": "https://books.google.com/books?id=mStIAQAAMAAJ",
     "rtl": false,
     "desc": {
-      "en": "A classic Kurdish epic narrative preserved among the Kurmancî stories in Le Coq’s early twentieth-century collection."
+      "en": "A classic Kurdish epic narrative preserved among the Kurmancî stories in Le Coq’s early twentieth-century collection.",
+      "kmr": "Destaneke klasîk a Kurdî, ji çîrokên Kurmancî yên berhevoka Le Coq a destpêka sedsala bîstan.",
+      "ckb": "دەستانێکی کلاسیکی کوردی، لەناو چیرۆکە کورمانجییەکانی کۆکراوەکەی لە کۆک لە سەرەتای سەدەی بیستەمدا پارێزراوە.",
+      "diq": "Destanêka klasîk a kurdkî, komelê sanikanê kurmanckî yê Le Coq ê destpêkê seserra vîstine de ameya pawitene.",
+      "hac": "دەستانێکی کۆنی کوردی، میانی داستانە کورمانجییەکانی لە کۆکدا، سەرەتای سەدەی بیستەم، پارێزرا بیەن.",
+      "sdh": "دەستانێگ کۆن کوردی، لە کۆمەڵ داستانە کورمانجیەیل لە کۆک لە سەرەتای سەدە بیستەم."
     },
     "aliases": [
       "Mamê Alan",
@@ -64,8 +82,16 @@
     "localStory": true,
     "sourceOnly": false,
     "summary": {
-      "en": "A classic Kurdish epic narrative preserved among the Kurmancî stories in Le Coq’s early twentieth-century collection."
-    }
+      "en": "A classic Kurdish epic narrative preserved among the Kurmancî stories in Le Coq’s early twentieth-century collection.",
+      "kmr": "Destaneke klasîk a Kurdî, ji çîrokên Kurmancî yên berhevoka Le Coq a destpêka sedsala bîstan.",
+      "ckb": "دەستانێکی کلاسیکی کوردی، لەناو چیرۆکە کورمانجییەکانی کۆکراوەکەی لە کۆک لە سەرەتای سەدەی بیستەمدا پارێزراوە.",
+      "diq": "Destanêka klasîk a kurdkî, komelê sanikanê kurmanckî yê Le Coq ê destpêkê seserra vîstine de ameya pawitene.",
+      "hac": "دەستانێکی کۆنی کوردی، میانی داستانە کورمانجییەکانی لە کۆکدا، سەرەتای سەدەی بیستەم، پارێزرا بیەن.",
+      "sdh": "دەستانێگ کۆن کوردی، لە کۆمەڵ داستانە کورمانجیەیل لە کۆک لە سەرەتای سەدە بیستەم."
+    },
+    "browseTags": [
+      "short"
+    ]
   },
   {
     "id": 102,
@@ -88,7 +114,12 @@
     "source": "https://kiteb.nevgur.net/book/9ekd4",
     "rtl": false,
     "desc": {
-      "en": "A tragic Kurmancî love epic: Siyabend and Xecê flee together to Mount Sîpan, where a deer hunt leads to their final separation and death."
+      "en": "A tragic Kurmancî love epic: Siyabend and Xecê flee together to Mount Sîpan, where a deer hunt leads to their final separation and death.",
+      "kmr": "Siyabend û Xecê direvin çiyayê Sîpanê; nêçîra xezalekê dibe sedema veqetîn û mirina wan.",
+      "ckb": "سیابەند و خەجێ پێکەوە بۆ چیای سیپان هەڵدێن؛ ڕاوێکی ئاسک دەبێتە هۆی جیابوونەوە و مەرگیان.",
+      "diq": "Siyabend û Xecê pîya remenê koyê Sîpanî; sayê xezalêk beno sebebê cîyayîye û merga înan.",
+      "hac": "سیابەند و خەجێ پێکەوە مەڕۆنە کۆی سیپان؛ ڕاوی ئاسکێ جیاوازی و مەرگیان پەی مەیارۆ.",
+      "sdh": "سیابەند و خەجێ وەگەرد یەک ڕەونە کەو سیپان؛ ڕاو ئاسکێگ وە جودایی و مەرگیان کۆتایی دێ."
     },
     "aliases": [
       "Siyabend û Xecê",
@@ -98,8 +129,16 @@
     "localStory": true,
     "sourceOnly": false,
     "summary": {
-      "en": "A tragic Kurmancî love epic: Siyabend and Xecê flee together to Mount Sîpan, where a deer hunt leads to their final separation and death."
-    }
+      "en": "A tragic Kurmancî love epic: Siyabend and Xecê flee together to Mount Sîpan, where a deer hunt leads to their final separation and death.",
+      "kmr": "Siyabend û Xecê direvin çiyayê Sîpanê; nêçîra xezalekê dibe sedema veqetîn û mirina wan.",
+      "ckb": "سیابەند و خەجێ پێکەوە بۆ چیای سیپان هەڵدێن؛ ڕاوێکی ئاسک دەبێتە هۆی جیابوونەوە و مەرگیان.",
+      "diq": "Siyabend û Xecê pîya remenê koyê Sîpanî; sayê xezalêk beno sebebê cîyayîye û merga înan.",
+      "hac": "سیابەند و خەجێ پێکەوە مەڕۆنە کۆی سیپان؛ ڕاوی ئاسکێ جیاوازی و مەرگیان پەی مەیارۆ.",
+      "sdh": "سیابەند و خەجێ وەگەرد یەک ڕەونە کەو سیپان؛ ڕاو ئاسکێگ وە جودایی و مەرگیان کۆتایی دێ."
+    },
+    "browseTags": [
+      "short"
+    ]
   },
   {
     "id": 103,
@@ -122,7 +161,12 @@
     "source": "https://kiteb.nevgur.net/book/9ekd4",
     "rtl": false,
     "desc": {
-      "en": "The story of Dimdim Castle and Xanê Lepzêrîn, where a seventeenth-century siege became one of the best-known Kurdish heroic epics."
+      "en": "The story of Dimdim Castle and Xanê Lepzêrîn, where a seventeenth-century siege became one of the best-known Kurdish heroic epics.",
+      "kmr": "Çîroka Kela Dimdim û Xanê Lepzêrîn: dorpêçeke sedsala heftdehan ku bû destaneke lehengî ya navdar.",
+      "ckb": "چیرۆکی قەڵای دمدم و خانی لەپزێڕین؛ گەمارۆیەکی سەدەی حەڤدەهەم بووەتە دەستانێکی ناسراوی پاڵەوانی.",
+      "diq": "Sanika Qeleya Dimdimî û Xanê Lepzêrînî: doragirewtişê seserra hewtêsine ke biyo destanêkê qehremanîye yê namdar.",
+      "hac": "داستانی قەڵای دمدم و خانی لەپزێڕین؛ گەمارۆی سەدەی حەڤدەهەم کە بیەنە دەستانێکی نامدار.",
+      "sdh": "حیکایەت قەڵا دمدم و خان لەپزێڕین؛ گەمارۆی سەدە حەڤدەهەم کە بیە دەستانێگ ناودار."
     },
     "aliases": [
       "Kela Dimdim û Xanê Lepzêrîn",
@@ -132,8 +176,16 @@
     "localStory": true,
     "sourceOnly": false,
     "summary": {
-      "en": "The story of Dimdim Castle and Xanê Lepzêrîn, where a seventeenth-century siege became one of the best-known Kurdish heroic epics."
-    }
+      "en": "The story of Dimdim Castle and Xanê Lepzêrîn, where a seventeenth-century siege became one of the best-known Kurdish heroic epics.",
+      "kmr": "Çîroka Kela Dimdim û Xanê Lepzêrîn: dorpêçeke sedsala heftdehan ku bû destaneke lehengî ya navdar.",
+      "ckb": "چیرۆکی قەڵای دمدم و خانی لەپزێڕین؛ گەمارۆیەکی سەدەی حەڤدەهەم بووەتە دەستانێکی ناسراوی پاڵەوانی.",
+      "diq": "Sanika Qeleya Dimdimî û Xanê Lepzêrînî: doragirewtişê seserra hewtêsine ke biyo destanêkê qehremanîye yê namdar.",
+      "hac": "داستانی قەڵای دمدم و خانی لەپزێڕین؛ گەمارۆی سەدەی حەڤدەهەم کە بیەنە دەستانێکی نامدار.",
+      "sdh": "حیکایەت قەڵا دمدم و خان لەپزێڕین؛ گەمارۆی سەدە حەڤدەهەم کە بیە دەستانێگ ناودار."
+    },
+    "browseTags": [
+      "short"
+    ]
   },
   {
     "id": 104,
@@ -156,7 +208,12 @@
     "source": "https://kiteb.nevgur.net/book/9ekd4",
     "rtl": false,
     "desc": {
-      "en": "A guide to Bazîdî’s forty Kurmancî stories: love stories, historical episodes, social tales and a Siyabend û Xecê variant, with links back to the public-domain 1860 scan."
+      "en": "A guide to Bazîdî’s forty Kurmancî stories: love stories, historical episodes, social tales and a Siyabend û Xecê variant, with links back to the public-domain 1860 scan.",
+      "kmr": "Rêberê çil çîrokên Bazîdî: evîn, dîrok û jiyana civakî, bi girêdanên ber bi skena 1860î ve.",
+      "ckb": "ڕێبەرێک بۆ چل چیرۆکەکەی بازیدی: خۆشەویستی، ڕووداوی مێژوویی و ژیانی کۆمەڵایەتی، لەگەڵ بەستەری سکانەکەی ١٨٦٠.",
+      "diq": "Rêberê çewres sanikanê Bazîdî: eşq, tarîx û cuyê komelkî, bi lînkanê skanê 1860î.",
+      "hac": "ڕێنیشانێ پەی چل داستانەکەی بازیدی؛ عەشق، مێژوو و ژیانی کۆمەڵ، و بەستەری سکانەکەی ١٨٦٠.",
+      "sdh": "ڕێبەرێگ وەی چل حیکایەتەیل بازیدی؛ عەشق، مێژوو و ژیان کۆمەڵایەتی، وەگەرد بەستەر سکان ١٨٦٠."
     },
     "aliases": [
       "40 Çîrokên Mele Mehmûdê Bazîdî",
@@ -166,8 +223,14 @@
     "localStory": true,
     "sourceOnly": false,
     "summary": {
-      "en": "A guide to Bazîdî’s forty Kurmancî stories: love stories, historical episodes, social tales and a Siyabend û Xecê variant, with links back to the public-domain 1860 scan."
-    }
+      "en": "A guide to Bazîdî’s forty Kurmancî stories: love stories, historical episodes, social tales and a Siyabend û Xecê variant, with links back to the public-domain 1860 scan.",
+      "kmr": "Rêberê çil çîrokên Bazîdî: evîn, dîrok û jiyana civakî, bi girêdanên ber bi skena 1860î ve.",
+      "ckb": "ڕێبەرێک بۆ چل چیرۆکەکەی بازیدی: خۆشەویستی، ڕووداوی مێژوویی و ژیانی کۆمەڵایەتی، لەگەڵ بەستەری سکانەکەی ١٨٦٠.",
+      "diq": "Rêberê çewres sanikanê Bazîdî: eşq, tarîx û cuyê komelkî, bi lînkanê skanê 1860î.",
+      "hac": "ڕێنیشانێ پەی چل داستانەکەی بازیدی؛ عەشق، مێژوو و ژیانی کۆمەڵ، و بەستەری سکانەکەی ١٨٦٠.",
+      "sdh": "ڕێبەرێگ وەی چل حیکایەتەیل بازیدی؛ عەشق، مێژوو و ژیان کۆمەڵایەتی، وەگەرد بەستەر سکان ١٨٦٠."
+    },
+    "browseTags": []
   },
   {
     "id": 105,
@@ -190,7 +253,12 @@
     "source": "https://islamansiklopedisi.org.tr/faki-yi-teyran",
     "rtl": false,
     "desc": {
-      "en": "A prince leaves wealth behind to live by selling baskets, then faces a noblewoman’s relentless attempt to win him away from his chosen life and loyalties."
+      "en": "A prince leaves wealth behind to live by selling baskets, then faces a noblewoman’s relentless attempt to win him away from his chosen life and loyalties.",
+      "kmr": "Mîrzayek dewlemendiyê dihêle û bi firotina zembîlan dijî; xatûnek dixwaze wî ji jiyana hilbijartî dûr bike.",
+      "ckb": "شازادەیەک دەست لە دەوڵەمەندی هەڵدەگرێت و بە زەمبیلفرۆشی دەژی؛ خاتونێک هەوڵ دەدات لە ژیانی هەڵبژاردەی دووری بخاتەوە.",
+      "diq": "Mîrze dewlemendîye vera dano û bi zembîlfirotişî ciwîyeno; xatûnêk wazena ey cuyê xo yê weçînite ra dûr bikero.",
+      "hac": "میرزایێ دەوڵەمەندی جە پەی مەهێڵۆ و زەمبیل مەفرۆشۆ؛ خاتونێ هەوڵ مەدۆ جە ژیانی وەگوزینەی دوورش کەرۆوە.",
+      "sdh": "میرزایێگ دەوڵەمەنی بەجێ ئەهێڵێ و زەمبیل فرۆشێ؛ خاتونێگ هەوڵ دەی کە لە ژیان هەڵبژاردەی دووری بکەیەوە."
     },
     "aliases": [
       "Zembîlfiroş",
@@ -200,8 +268,16 @@
     "localStory": true,
     "sourceOnly": false,
     "summary": {
-      "en": "A prince leaves wealth behind to live by selling baskets, then faces a noblewoman’s relentless attempt to win him away from his chosen life and loyalties."
-    }
+      "en": "A prince leaves wealth behind to live by selling baskets, then faces a noblewoman’s relentless attempt to win him away from his chosen life and loyalties.",
+      "kmr": "Mîrzayek dewlemendiyê dihêle û bi firotina zembîlan dijî; xatûnek dixwaze wî ji jiyana hilbijartî dûr bike.",
+      "ckb": "شازادەیەک دەست لە دەوڵەمەندی هەڵدەگرێت و بە زەمبیلفرۆشی دەژی؛ خاتونێک هەوڵ دەدات لە ژیانی هەڵبژاردەی دووری بخاتەوە.",
+      "diq": "Mîrze dewlemendîye vera dano û bi zembîlfirotişî ciwîyeno; xatûnêk wazena ey cuyê xo yê weçînite ra dûr bikero.",
+      "hac": "میرزایێ دەوڵەمەندی جە پەی مەهێڵۆ و زەمبیل مەفرۆشۆ؛ خاتونێ هەوڵ مەدۆ جە ژیانی وەگوزینەی دوورش کەرۆوە.",
+      "sdh": "میرزایێگ دەوڵەمەنی بەجێ ئەهێڵێ و زەمبیل فرۆشێ؛ خاتونێگ هەوڵ دەی کە لە ژیان هەڵبژاردەی دووری بکەیەوە."
+    },
+    "browseTags": [
+      "short"
+    ]
   },
   {
     "id": 106,
@@ -224,7 +300,12 @@
     "source": "https://wikisource.org/wiki/Derw%C3%AA%C5%9F%C3%AA_Evd%C3%AE",
     "rtl": false,
     "desc": {
-      "en": "A major Kurmanji epic of Derwêş and Edûl, combining tragic love, tribal obligations, religious difference and intertribal war."
+      "en": "A major Kurmanji epic of Derwêş and Edûl, combining tragic love, tribal obligations, religious difference and intertribal war.",
+      "kmr": "Destana Derwêş û Edûlê evîna trajîk, berpirsiyariyên eşîrî, cudahiya olî û şerê eşîran li hev tîne.",
+      "ckb": "دەستانی دەروێش و عەدوڵ خۆشەویستیی تراژیدی، ئەرکی هۆزایەتی، جیاوازیی ئایینی و شەڕی هۆزەکان کۆ دەکاتەوە.",
+      "diq": "Destanê Derwêş û Edûlî eşqê trajîkî, berpirsiyarîyê eşîran, cîyayîya bawerîye û şerê eşîran pîya ano.",
+      "hac": "دەستانی دەروێش و عەدوڵ؛ عەشقی تراژیدی، ئەرکی هۆز، جیاوازیی ئایین و شەڕی هۆزەکان.",
+      "sdh": "دەستان دەروێش و عەدوڵ؛ عەشق تراژیدی، ئەرک هۆزایەتی، جیاوازی ئایین و شەڕ هۆزەیل."
     },
     "aliases": [
       "Derwêşê Evdî û Edûlê",
@@ -234,8 +315,16 @@
     "localStory": true,
     "sourceOnly": false,
     "summary": {
-      "en": "A major Kurmanji epic of Derwêş and Edûl, combining tragic love, tribal obligations, religious difference and intertribal war."
-    }
+      "en": "A major Kurmanji epic of Derwêş and Edûl, combining tragic love, tribal obligations, religious difference and intertribal war.",
+      "kmr": "Destana Derwêş û Edûlê evîna trajîk, berpirsiyariyên eşîrî, cudahiya olî û şerê eşîran li hev tîne.",
+      "ckb": "دەستانی دەروێش و عەدوڵ خۆشەویستیی تراژیدی، ئەرکی هۆزایەتی، جیاوازیی ئایینی و شەڕی هۆزەکان کۆ دەکاتەوە.",
+      "diq": "Destanê Derwêş û Edûlî eşqê trajîkî, berpirsiyarîyê eşîran, cîyayîya bawerîye û şerê eşîran pîya ano.",
+      "hac": "دەستانی دەروێش و عەدوڵ؛ عەشقی تراژیدی، ئەرکی هۆز، جیاوازیی ئایین و شەڕی هۆزەکان.",
+      "sdh": "دەستان دەروێش و عەدوڵ؛ عەشق تراژیدی، ئەرک هۆزایەتی، جیاوازی ئایین و شەڕ هۆزەیل."
+    },
+    "browseTags": [
+      "short"
+    ]
   },
   {
     "id": 107,
@@ -258,7 +347,12 @@
     "source": "https://pmb.institutkurde.org/opac_css/index.php?lvl=notice_display&id=4789",
     "rtl": false,
     "desc": {
-      "en": "A devout sheikh dreams of an Armenian woman, travels in search of her, and faces a severe test between religious identity, desire and mystical love."
+      "en": "A devout sheikh dreams of an Armenian woman, travels in search of her, and faces a severe test between religious identity, desire and mystical love.",
+      "kmr": "Şêxekî dîndar bi xewna jineke Ermenî dikeve rêwîtiyê û di navbera bawerî, daxwaz û evîna îrfanî de tê ceribandin.",
+      "ckb": "شێخێکی ئایینپەروەر ژنێکی ئەرمەنی لە خەودا دەبینێت؛ بەدوایدا دەگەڕێت و لەنێوان باوەڕ، ئارەزوو و عەشقی عیرفانیدا تاقی دەکرێتەوە.",
+      "diq": "Şêxêko bawermend çenêka ermenîya xo rê de vêneno; peyê aye şino û mabênê bawerî, xwestiş û eşqê îrfanî de ceribîyeno.",
+      "hac": "شێخێکی دیندار ژنێکی ئەرمەنی وە خەو مەوینۆ؛ پەیشدا مەگەڕۆ و میان باوەڕ، ئارەزوو و عەشق تاقی مەبۆوە.",
+      "sdh": "شێخێگ دیندار ژنێگ ئەرمەنی لە خەو وینێ؛ وەدواش گەڕێ و لە نێوان باوەڕ، ئارەزوو و عەشق تاقی دەوە."
     },
     "aliases": [
       "Şêx Sen'an",
@@ -268,8 +362,16 @@
     "localStory": true,
     "sourceOnly": false,
     "summary": {
-      "en": "A devout sheikh dreams of an Armenian woman, travels in search of her, and faces a severe test between religious identity, desire and mystical love."
-    }
+      "en": "A devout sheikh dreams of an Armenian woman, travels in search of her, and faces a severe test between religious identity, desire and mystical love.",
+      "kmr": "Şêxekî dîndar bi xewna jineke Ermenî dikeve rêwîtiyê û di navbera bawerî, daxwaz û evîna îrfanî de tê ceribandin.",
+      "ckb": "شێخێکی ئایینپەروەر ژنێکی ئەرمەنی لە خەودا دەبینێت؛ بەدوایدا دەگەڕێت و لەنێوان باوەڕ، ئارەزوو و عەشقی عیرفانیدا تاقی دەکرێتەوە.",
+      "diq": "Şêxêko bawermend çenêka ermenîya xo rê de vêneno; peyê aye şino û mabênê bawerî, xwestiş û eşqê îrfanî de ceribîyeno.",
+      "hac": "شێخێکی دیندار ژنێکی ئەرمەنی وە خەو مەوینۆ؛ پەیشدا مەگەڕۆ و میان باوەڕ، ئارەزوو و عەشق تاقی مەبۆوە.",
+      "sdh": "شێخێگ دیندار ژنێگ ئەرمەنی لە خەو وینێ؛ وەدواش گەڕێ و لە نێوان باوەڕ، ئارەزوو و عەشق تاقی دەوە."
+    },
+    "browseTags": [
+      "short"
+    ]
   },
   {
     "id": 108,
@@ -292,7 +394,12 @@
     "source": "https://wikisource.org/wiki/Bers%C3%AEs%C3%AA_%E2%80%98Abid",
     "rtl": false,
     "desc": {
-      "en": "The story of an ascetic who, after decades of devotion, is gradually drawn into temptation, crime and a final betrayal by the devil."
+      "en": "The story of an ascetic who, after decades of devotion, is gradually drawn into temptation, crime and a final betrayal by the devil.",
+      "kmr": "Zahidek piştî dehsalan îbadetê hêdî hêdî dikeve xapandin û sûcê, û di dawiyê de şeytan xiyanetê lê dike.",
+      "ckb": "زاهیدێک دوای دەیان ساڵ پەرستن، هەنگاو بە هەنگاو دەکەوێتە داوی وەسوەسە و تاوان، تا شەیتان خیانەتی لێ دەکات.",
+      "diq": "Zahîdêk dimeyê desan serranê îbadetî hêdî hêdî keweno xapitiş û sûcî; peyênî de şeytan xîyanetê ey keno.",
+      "hac": "زاهیدێ پەی دەیان ساڵ پەرستش، هێواش هێواش مەکەوۆ دام و تاوانەوە؛ کۆتاییدا شەیتان خیانەتی پێ مەکەرۆ.",
+      "sdh": "زاهیدێگ دوای دەیان ساڵ پەرستش، هێدی هێدی کەفێ وە داو و تاوان؛ لە کۆتایی شەیتان خیانەتی پێ کەی."
     },
     "aliases": [
       "Bersîsê ‘Abid",
@@ -302,8 +409,16 @@
     "localStory": true,
     "sourceOnly": false,
     "summary": {
-      "en": "The story of an ascetic who, after decades of devotion, is gradually drawn into temptation, crime and a final betrayal by the devil."
-    }
+      "en": "The story of an ascetic who, after decades of devotion, is gradually drawn into temptation, crime and a final betrayal by the devil.",
+      "kmr": "Zahidek piştî dehsalan îbadetê hêdî hêdî dikeve xapandin û sûcê, û di dawiyê de şeytan xiyanetê lê dike.",
+      "ckb": "زاهیدێک دوای دەیان ساڵ پەرستن، هەنگاو بە هەنگاو دەکەوێتە داوی وەسوەسە و تاوان، تا شەیتان خیانەتی لێ دەکات.",
+      "diq": "Zahîdêk dimeyê desan serranê îbadetî hêdî hêdî keweno xapitiş û sûcî; peyênî de şeytan xîyanetê ey keno.",
+      "hac": "زاهیدێ پەی دەیان ساڵ پەرستش، هێواش هێواش مەکەوۆ دام و تاوانەوە؛ کۆتاییدا شەیتان خیانەتی پێ مەکەرۆ.",
+      "sdh": "زاهیدێگ دوای دەیان ساڵ پەرستش، هێدی هێدی کەفێ وە داو و تاوان؛ لە کۆتایی شەیتان خیانەتی پێ کەی."
+    },
+    "browseTags": [
+      "short"
+    ]
   },
   {
     "id": 109,
@@ -326,7 +441,12 @@
     "source": "https://bnk.institutkurde.org/images/pdf/PCCS9HEK9S.pdf",
     "rtl": false,
     "desc": {
-      "en": "A long Kurdish narrative connected with Barzan and the surrounding region, published with Kurdish text, translation and notes."
+      "en": "A long Kurdish narrative connected with Barzan and the surrounding region, published with Kurdish text, translation and notes.",
+      "kmr": "Çîrokeke dirêj a Kurdî ya girêdayî Barzan û derdora wê, bi nivîsa Kurdî, werger û têbîniyan hatî weşandin.",
+      "ckb": "چیرۆکێکی درێژی کوردی پەیوەست بە بارزان و دەوروبەری، بە دەقی کوردی، وەرگێڕان و تێبینی بڵاو کراوەتەوە.",
+      "diq": "Sanikêka kurdkî ya derga derheqê Barzan û derûdorê ci de, bi metnê kurdkî, açarnayîş û notan ameya weşanîyene.",
+      "hac": "داستانێکی درێژی کوردی پەیوەست وە بارزان و دەوروبەری؛ دەقی کوردی، وەرگێڕان و تێبینی پێوەیەن.",
+      "sdh": "حیکایەتێگ درێژ کوردی پەیوەست وە بارزان و دەوروبەری؛ دەق کوردی وەگەرد وەرگێڕان و تێبینی چاپ بیە."
     },
     "aliases": [
       "Suto û Tato",
@@ -336,8 +456,14 @@
     "localStory": true,
     "sourceOnly": false,
     "summary": {
-      "en": "A long Kurdish narrative connected with Barzan and the surrounding region, published with Kurdish text, translation and notes."
-    }
+      "en": "A long Kurdish narrative connected with Barzan and the surrounding region, published with Kurdish text, translation and notes.",
+      "kmr": "Çîrokeke dirêj a Kurdî ya girêdayî Barzan û derdora wê, bi nivîsa Kurdî, werger û têbîniyan hatî weşandin.",
+      "ckb": "چیرۆکێکی درێژی کوردی پەیوەست بە بارزان و دەوروبەری، بە دەقی کوردی، وەرگێڕان و تێبینی بڵاو کراوەتەوە.",
+      "diq": "Sanikêka kurdkî ya derga derheqê Barzan û derûdorê ci de, bi metnê kurdkî, açarnayîş û notan ameya weşanîyene.",
+      "hac": "داستانێکی درێژی کوردی پەیوەست وە بارزان و دەوروبەری؛ دەقی کوردی، وەرگێڕان و تێبینی پێوەیەن.",
+      "sdh": "حیکایەتێگ درێژ کوردی پەیوەست وە بارزان و دەوروبەری؛ دەق کوردی وەگەرد وەرگێڕان و تێبینی چاپ بیە."
+    },
+    "browseTags": []
   },
   {
     "id": 110,
@@ -360,7 +486,12 @@
     "source": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531",
     "rtl": false,
     "desc": {
-      "en": "One of the Kurdish tales Nikitine published from material associated with Molla Said Kazi of the Şemzînan / Nehrî region."
+      "en": "One of the Kurdish tales Nikitine published from material associated with Molla Said Kazi of the Şemzînan / Nehrî region.",
+      "kmr": "Çîrokeke ji berhevoka Nikitine, ji materyala girêdayî Mele Seîd Qazî yê herêma Şemzînan û Nehrî.",
+      "ckb": "چیرۆکێک لە کۆکراوەکەی نیکیتین، لە سەرچاوەکانی پەیوەست بە مەلا سەعید قازیی ناوچەی شەمزینان و نەهری.",
+      "diq": "Sanikêk komelê Nikitine ra, materyalê girêdayeyê bi Mela Seîd Qazî yê mintiqaya Şemzînan û Nehrî ra.",
+      "hac": "داستانێ جە کۆکراوەکەی نیکیتین، پەیوەست وە مەلا سەعید قازیی ناوچەی شەمزینان و نەهری.",
+      "sdh": "حیکایەتێگ لە کۆمەڵ نیکیتین، پەیوەست وە مەلا سەعید قازی ناوچە شەمزینان و نەهری."
     },
     "aliases": [
       "Çîroka Mam Mizgo",
@@ -370,8 +501,14 @@
     "localStory": false,
     "sourceOnly": true,
     "summary": {
-      "en": "One of the Kurdish tales Nikitine published from material associated with Molla Said Kazi of the Şemzînan / Nehrî region."
-    }
+      "en": "One of the Kurdish tales Nikitine published from material associated with Molla Said Kazi of the Şemzînan / Nehrî region.",
+      "kmr": "Çîrokeke ji berhevoka Nikitine, ji materyala girêdayî Mele Seîd Qazî yê herêma Şemzînan û Nehrî.",
+      "ckb": "چیرۆکێک لە کۆکراوەکەی نیکیتین، لە سەرچاوەکانی پەیوەست بە مەلا سەعید قازیی ناوچەی شەمزینان و نەهری.",
+      "diq": "Sanikêk komelê Nikitine ra, materyalê girêdayeyê bi Mela Seîd Qazî yê mintiqaya Şemzînan û Nehrî ra.",
+      "hac": "داستانێ جە کۆکراوەکەی نیکیتین، پەیوەست وە مەلا سەعید قازیی ناوچەی شەمزینان و نەهری.",
+      "sdh": "حیکایەتێگ لە کۆمەڵ نیکیتین، پەیوەست وە مەلا سەعید قازی ناوچە شەمزینان و نەهری."
+    },
+    "browseTags": []
   },
   {
     "id": 111,
@@ -394,7 +531,12 @@
     "source": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531",
     "rtl": false,
     "desc": {
-      "en": "A historical Kurdish story title preserved in Nikitine’s 1926 collection of narratives from the northern Kurdish dialect area."
+      "en": "A historical Kurdish story title preserved in Nikitine’s 1926 collection of narratives from the northern Kurdish dialect area.",
+      "kmr": "Sernaveke çîroka Kurdî di berhevoka Nikitine ya 1926an de, ji herêma zaravayê Kurdî yê bakur.",
+      "ckb": "ناونیشانی چیرۆکێکی کوردی لە کۆکراوەکەی نیکیتین لە ١٩٢٦، لە ناوچەی زاراوەی کوردیی باکوور پارێزراوە.",
+      "diq": "Sernuşteyê sanikêka kurdkî komelê Nikitine yê 1926î de, mintiqaya lehçeya kurdkî ya bakurî ra ameyo pawitene.",
+      "hac": "ناوی داستانێکی کوردی جە ناوچەی زاراوەی باکوور، کۆکراوەکەی نیکیتین، ساڵی ١٩٢٦دا پارێزرا بیەن.",
+      "sdh": "ناو حیکایەتێگ کوردی لە کۆمەڵ نیکیتین ساڵ ١٩٢٦، لە ناوچە زاراوە کوردی باکوور."
     },
     "aliases": [
       "Xort û Pîr",
@@ -404,8 +546,14 @@
     "localStory": false,
     "sourceOnly": true,
     "summary": {
-      "en": "A historical Kurdish story title preserved in Nikitine’s 1926 collection of narratives from the northern Kurdish dialect area."
-    }
+      "en": "A historical Kurdish story title preserved in Nikitine’s 1926 collection of narratives from the northern Kurdish dialect area.",
+      "kmr": "Sernaveke çîroka Kurdî di berhevoka Nikitine ya 1926an de, ji herêma zaravayê Kurdî yê bakur.",
+      "ckb": "ناونیشانی چیرۆکێکی کوردی لە کۆکراوەکەی نیکیتین لە ١٩٢٦، لە ناوچەی زاراوەی کوردیی باکوور پارێزراوە.",
+      "diq": "Sernuşteyê sanikêka kurdkî komelê Nikitine yê 1926î de, mintiqaya lehçeya kurdkî ya bakurî ra ameyo pawitene.",
+      "hac": "ناوی داستانێکی کوردی جە ناوچەی زاراوەی باکوور، کۆکراوەکەی نیکیتین، ساڵی ١٩٢٦دا پارێزرا بیەن.",
+      "sdh": "ناو حیکایەتێگ کوردی لە کۆمەڵ نیکیتین ساڵ ١٩٢٦، لە ناوچە زاراوە کوردی باکوور."
+    },
+    "browseTags": []
   },
   {
     "id": 112,
@@ -428,7 +576,12 @@
     "source": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531",
     "rtl": false,
     "desc": {
-      "en": "One of the named tales in Nikitine’s collection, preserved with Kurdish text and English translation in the original publication."
+      "en": "One of the named tales in Nikitine’s collection, preserved with Kurdish text and English translation in the original publication.",
+      "kmr": "Çîrokeke ji berhevoka Nikitine, di weşana eslî de bi nivîsa Kurdî û wergera Îngilîzî hatî parastin.",
+      "ckb": "چیرۆکێک لە کۆکراوەکەی نیکیتین، لە وەشانی ڕەسەندا بە دەقی کوردی و وەرگێڕانی ئینگلیزی پارێزراوە.",
+      "diq": "Sanikêk komelê Nikitine ra, weşanê orîjînalî de bi metnê kurdkî û açarnayîşê îngilizkî ameya pawitene.",
+      "hac": "داستانێ جە کۆکراوەکەی نیکیتین؛ وەشانی ڕەسەندا دەقی کوردی و وەرگێڕانی ئینگلیزی پێوەیەن.",
+      "sdh": "حیکایەتێگ لە کۆمەڵ نیکیتین؛ لە چاپ ڕەسەن دەق کوردی و وەرگێڕان ئینگلیزی هەی."
     },
     "aliases": [
       "Şêx Silêman",
@@ -438,8 +591,14 @@
     "localStory": false,
     "sourceOnly": true,
     "summary": {
-      "en": "One of the named tales in Nikitine’s collection, preserved with Kurdish text and English translation in the original publication."
-    }
+      "en": "One of the named tales in Nikitine’s collection, preserved with Kurdish text and English translation in the original publication.",
+      "kmr": "Çîrokeke ji berhevoka Nikitine, di weşana eslî de bi nivîsa Kurdî û wergera Îngilîzî hatî parastin.",
+      "ckb": "چیرۆکێک لە کۆکراوەکەی نیکیتین، لە وەشانی ڕەسەندا بە دەقی کوردی و وەرگێڕانی ئینگلیزی پارێزراوە.",
+      "diq": "Sanikêk komelê Nikitine ra, weşanê orîjînalî de bi metnê kurdkî û açarnayîşê îngilizkî ameya pawitene.",
+      "hac": "داستانێ جە کۆکراوەکەی نیکیتین؛ وەشانی ڕەسەندا دەقی کوردی و وەرگێڕانی ئینگلیزی پێوەیەن.",
+      "sdh": "حیکایەتێگ لە کۆمەڵ نیکیتین؛ لە چاپ ڕەسەن دەق کوردی و وەرگێڕان ئینگلیزی هەی."
+    },
+    "browseTags": []
   },
   {
     "id": 113,
@@ -462,7 +621,12 @@
     "source": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kurdish-stories-from-my-collection/9E99B0B043F61364CF0CABEC36DCE531",
     "rtl": false,
     "desc": {
-      "en": "A Hekarî-linked tale listed among Nikitine’s early published Kurdish story collection."
+      "en": "A Hekarî-linked tale listed among Nikitine’s early published Kurdish story collection.",
+      "kmr": "Çîrokeke girêdayî Hekariyê, di nav çîrokên Kurdî yên ku Nikitine zû weşandine de.",
+      "ckb": "چیرۆکێکی پەیوەست بە هەکاری، لەناو کۆکراوەی سەرەتایی چیرۆکە کوردییە بڵاوکراوەکانی نیکیتین.",
+      "diq": "Sanikêka girêdayeya bi Hekarî, komelê sanikanê kurdkî yê weşanê verênî yê Nikitine de.",
+      "hac": "داستانێ پەیوەست وە هەکاری، جە کۆکراوەی سەرەتایی داستانە کوردییەکانی نیکیتین.",
+      "sdh": "حیکایەتێگ پەیوەست وە هەکاری، لە کۆمەڵ حیکایەتە کوردیەیل سەرەتایی نیکیتین."
     },
     "aliases": [
       "Mîrê Hekarê û Mizgîniya Teyrê Biharê",
@@ -472,8 +636,16 @@
     "localStory": true,
     "sourceOnly": false,
     "summary": {
-      "en": "A Hekarî-linked tale listed among Nikitine’s early published Kurdish story collection."
-    }
+      "en": "A Hekarî-linked tale listed among Nikitine’s early published Kurdish story collection.",
+      "kmr": "Çîrokeke girêdayî Hekariyê, di nav çîrokên Kurdî yên ku Nikitine zû weşandine de.",
+      "ckb": "چیرۆکێکی پەیوەست بە هەکاری، لەناو کۆکراوەی سەرەتایی چیرۆکە کوردییە بڵاوکراوەکانی نیکیتین.",
+      "diq": "Sanikêka girêdayeya bi Hekarî, komelê sanikanê kurdkî yê weşanê verênî yê Nikitine de.",
+      "hac": "داستانێ پەیوەست وە هەکاری، جە کۆکراوەی سەرەتایی داستانە کوردییەکانی نیکیتین.",
+      "sdh": "حیکایەتێگ پەیوەست وە هەکاری، لە کۆمەڵ حیکایەتە کوردیەیل سەرەتایی نیکیتین."
+    },
+    "browseTags": [
+      "short"
+    ]
   },
   {
     "id": 116,
@@ -496,7 +668,12 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0006/",
     "rtl": true,
     "desc": {
-      "en": "Anansi tries to keep all the world’s wisdom for himself, until his clever son surprises him."
+      "en": "Anansi tries to keep all the world’s wisdom for himself, until his clever son surprises him.",
+      "kmr": "Anansi dixwaze hemû zanîna cîhanê ji xwe re bihêle, lê kurê wî yê zîrek wî şaş dike.",
+      "ckb": "ئانانسی دەیەوێت هەموو زاناییی جیهان بۆ خۆی بپارێزێت، بەڵام کوڕە زیرەکەکەی سەرسامی دەکات.",
+      "diq": "Anansi wazeno pêro zanayîşê dinya xo rê bipawo, la lacê ey yê zîrek ey şaş keno.",
+      "hac": "ئانانسی مەوازۆ هەموو زاناییی جیهان پەی وێش بپارێزۆ، بەڵام کوڕە زیرەکەکەش سەرسامش مەکەرۆ.",
+      "sdh": "ئانانسی هەوێ تەمام زانایی جیهان وەی خوەی نگا بدارێ، بەڵام کوڕ زیرەکی سەرسامی کەی."
     },
     "aliases": [
       "Anansi and Wisdom",
@@ -514,7 +691,12 @@
     "localStory": true,
     "sourceOnly": false,
     "summary": {
-      "en": "Anansi tries to keep all the world’s wisdom for himself, until his clever son surprises him."
+      "en": "Anansi tries to keep all the world’s wisdom for himself, until his clever son surprises him.",
+      "kmr": "Anansi dixwaze hemû zanîna cîhanê ji xwe re bihêle, lê kurê wî yê zîrek wî şaş dike.",
+      "ckb": "ئانانسی دەیەوێت هەموو زاناییی جیهان بۆ خۆی بپارێزێت، بەڵام کوڕە زیرەکەکەی سەرسامی دەکات.",
+      "diq": "Anansi wazeno pêro zanayîşê dinya xo rê bipawo, la lacê ey yê zîrek ey şaş keno.",
+      "hac": "ئانانسی مەوازۆ هەموو زاناییی جیهان پەی وێش بپارێزۆ، بەڵام کوڕە زیرەکەکەش سەرسامش مەکەرۆ.",
+      "sdh": "ئانانسی هەوێ تەمام زانایی جیهان وەی خوەی نگا بدارێ، بەڵام کوڕ زیرەکی سەرسامی کەی."
     },
     "translator": "Agri Afshin",
     "illustrator": "Wiehan de Jager",
@@ -524,7 +706,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 3",
-    "pageCount": 6
+    "pageCount": 6,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 117,
@@ -547,7 +733,12 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0066/",
     "rtl": true,
     "desc": {
-      "en": "Lost in the forest, Nozibele is trapped by a dog and finds a clever way to escape."
+      "en": "Lost in the forest, Nozibele is trapped by a dog and finds a clever way to escape.",
+      "kmr": "Nozibele di daristanê de winda dibe û dikeve destê kûçikekî; ew rêyekî zîrek ji bo revê dibîne.",
+      "ckb": "نوزیبێلە لە دارستان ون دەبێت و دەکەوێتە دەستی سەگێک؛ بە زیرەکی ڕێگایەک بۆ ڕاکردن دەدۆزێتەوە.",
+      "diq": "Nozibele daristan de vîndî bena û kewena destê kutikêk; bi zîrekîye rayîrêko remayîşî vînena.",
+      "hac": "نوزیبێلە دارستاندا ون مەبۆ و مەکەوۆ دەسی سەگێ؛ وە زیرەکی ڕێگای دەرچوون مەدۆزۆوە.",
+      "sdh": "نوزیبێلە لە دارستان ون وە و کەفێ وە دەس سەگێگ؛ وە زیرەکی ڕێ دەرڕەفتن دۆزێەوە."
     },
     "aliases": [
       "Nozibele and the three hairs",
@@ -565,7 +756,12 @@
     "localStory": true,
     "sourceOnly": false,
     "summary": {
-      "en": "Lost in the forest, Nozibele is trapped by a dog and finds a clever way to escape."
+      "en": "Lost in the forest, Nozibele is trapped by a dog and finds a clever way to escape.",
+      "kmr": "Nozibele di daristanê de winda dibe û dikeve destê kûçikekî; ew rêyekî zîrek ji bo revê dibîne.",
+      "ckb": "نوزیبێلە لە دارستان ون دەبێت و دەکەوێتە دەستی سەگێک؛ بە زیرەکی ڕێگایەک بۆ ڕاکردن دەدۆزێتەوە.",
+      "diq": "Nozibele daristan de vîndî bena û kewena destê kutikêk; bi zîrekîye rayîrêko remayîşî vînena.",
+      "hac": "نوزیبێلە دارستاندا ون مەبۆ و مەکەوۆ دەسی سەگێ؛ وە زیرەکی ڕێگای دەرچوون مەدۆزۆوە.",
+      "sdh": "نوزیبێلە لە دارستان ون وە و کەفێ وە دەس سەگێگ؛ وە زیرەکی ڕێ دەرڕەفتن دۆزێەوە."
     },
     "translator": "Agri Afshin",
     "illustrator": "Wiehan de Jager",
@@ -575,7 +771,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 3",
-    "pageCount": 13
+    "pageCount": 13,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 118,
@@ -598,7 +798,12 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0158/",
     "rtl": true,
     "desc": {
-      "en": "Hen borrows Eagle’s needle to make wings, but losing it puts their friendship in danger."
+      "en": "Hen borrows Eagle’s needle to make wings, but losing it puts their friendship in danger.",
+      "kmr": "Mirîşk ji bo çêkirina baskan derziya Eqlê deyn dike, lê wendabûna wê hevaltiya wan dixe xeterê.",
+      "ckb": "مریشک دەرزیی هەڵۆ قەرز دەکات بۆ دروستکردنی باڵ، بەڵام ونبوونی دەرزییەکە هاوڕێیەتییان دەخاتە مەترسییەوە.",
+      "diq": "Kerg deqma Heloyî deyn gêna ke baskan virazo, la vîndîbîyayîşê deqme hevaltîya înan xeter de nano.",
+      "hac": "کەرگ دەرزیی هەڵۆ قەرز مەکەرۆ پەی دروستکەردەی باڵ؛ ونبیەی دەرزی هاوڕێیەتییان مەخەرۆ خەتەرەوە.",
+      "sdh": "کەرگ دەرزی هەڵۆ قەرز کەی وەی دروست کردن باڵ؛ ون بین دەرزی هاوڕێیەتییان خەرێ وە خەتەر."
     },
     "aliases": [
       "Hen and Eagle",
@@ -616,7 +821,12 @@
     "localStory": true,
     "sourceOnly": false,
     "summary": {
-      "en": "Hen borrows Eagle’s needle to make wings, but losing it puts their friendship in danger."
+      "en": "Hen borrows Eagle’s needle to make wings, but losing it puts their friendship in danger.",
+      "kmr": "Mirîşk ji bo çêkirina baskan derziya Eqlê deyn dike, lê wendabûna wê hevaltiya wan dixe xeterê.",
+      "ckb": "مریشک دەرزیی هەڵۆ قەرز دەکات بۆ دروستکردنی باڵ، بەڵام ونبوونی دەرزییەکە هاوڕێیەتییان دەخاتە مەترسییەوە.",
+      "diq": "Kerg deqma Heloyî deyn gêna ke baskan virazo, la vîndîbîyayîşê deqme hevaltîya înan xeter de nano.",
+      "hac": "کەرگ دەرزیی هەڵۆ قەرز مەکەرۆ پەی دروستکەردەی باڵ؛ ونبیەی دەرزی هاوڕێیەتییان مەخەرۆ خەتەرەوە.",
+      "sdh": "کەرگ دەرزی هەڵۆ قەرز کەی وەی دروست کردن باڵ؛ ون بین دەرزی هاوڕێیەتییان خەرێ وە خەتەر."
     },
     "translator": "Agri Afshin",
     "illustrator": "Wiehan de Jager",
@@ -626,7 +836,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 3",
-    "pageCount": 10
+    "pageCount": 10,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 119,
@@ -649,7 +863,12 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0337/",
     "rtl": true,
     "desc": {
-      "en": "Children made of wax must avoid sunlight, but one brother longs to explore the day."
+      "en": "Children made of wax must avoid sunlight, but one brother longs to explore the day.",
+      "kmr": "Zarokên ji mûmê divê ji tavê dûr bimînin, lê birayek dixwaze jiyana rojê bibîne.",
+      "ckb": "منداڵانی دروستکراو لە مۆم دەبێت لە تیشکی خۆر دوور بکەونەوە، بەڵام برایەکیان ئارەزووی بینینی ڕۆژ دەکات.",
+      "diq": "Domankê mûmî ra virazîyayê ganî tîj ra dûr bimano, la birayêk wazeno rojî de bigeyro.",
+      "hac": "مناڵە مۆمییەکان پێویستەن جە تیشکی هۆر دوور بمانۆوە؛ بەڵام براێکیان ئارەزووی وینەی ڕۆژ مەکەرۆ.",
+      "sdh": "مناڵەیل مۆمی گەرەک لە تیشک خوەر دوور بمانن، بەڵام براێگیان هەوێ ڕۆژ ببینێ."
     },
     "aliases": [
       "Children of wax",
@@ -667,7 +886,12 @@
     "localStory": true,
     "sourceOnly": false,
     "summary": {
-      "en": "Children made of wax must avoid sunlight, but one brother longs to explore the day."
+      "en": "Children made of wax must avoid sunlight, but one brother longs to explore the day.",
+      "kmr": "Zarokên ji mûmê divê ji tavê dûr bimînin, lê birayek dixwaze jiyana rojê bibîne.",
+      "ckb": "منداڵانی دروستکراو لە مۆم دەبێت لە تیشکی خۆر دوور بکەونەوە، بەڵام برایەکیان ئارەزووی بینینی ڕۆژ دەکات.",
+      "diq": "Domankê mûmî ra virazîyayê ganî tîj ra dûr bimano, la birayêk wazeno rojî de bigeyro.",
+      "hac": "مناڵە مۆمییەکان پێویستەن جە تیشکی هۆر دوور بمانۆوە؛ بەڵام براێکیان ئارەزووی وینەی ڕۆژ مەکەرۆ.",
+      "sdh": "مناڵەیل مۆمی گەرەک لە تیشک خوەر دوور بمانن، بەڵام براێگیان هەوێ ڕۆژ ببینێ."
     },
     "translator": "Agri Afshin",
     "illustrator": "Wiehan de Jager",
@@ -677,7 +901,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 2",
-    "pageCount": 11
+    "pageCount": 11,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 120,
@@ -700,7 +928,12 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0296/",
     "rtl": true,
     "desc": {
-      "en": "Tom challenges the idea that only women sell fruit as he tries to sell his bananas at the market."
+      "en": "Tom challenges the idea that only women sell fruit as he tries to sell his bananas at the market.",
+      "kmr": "Tom li sûkê hewl dide mûzên xwe bifiroşe û nîşan dide ku firotina fêkiyan ne tenê karê jinan e.",
+      "ckb": "تۆم لە بازاڕ هەوڵ دەدات مۆزەکانی بفرۆشێت و نیشان دەدات کە میوەفرۆشتن تەنها کاری ژنان نییە.",
+      "diq": "Tom bazar de hewl dano mûzanê xo bifiroşo û mojneno ke fêkîfirotiş tenya karê cinîyan nîyo.",
+      "hac": "تۆم بازاڕدا هەوڵ مەدۆ مۆزەکەش بفرۆشۆ؛ نیشان مەدۆ میوەفرۆشی تەنیا کاری ژەنان نیەن.",
+      "sdh": "تۆم لە بازار هەوڵ دەی مۆزەیل خوەی بفرۆشێ و نیشان دەی میوەفرۆشی تەنیا کار ژنەیل نیە."
     },
     "aliases": [
       "Tom the banana seller",
@@ -718,7 +951,12 @@
     "localStory": true,
     "sourceOnly": false,
     "summary": {
-      "en": "Tom challenges the idea that only women sell fruit as he tries to sell his bananas at the market."
+      "en": "Tom challenges the idea that only women sell fruit as he tries to sell his bananas at the market.",
+      "kmr": "Tom li sûkê hewl dide mûzên xwe bifiroşe û nîşan dide ku firotina fêkiyan ne tenê karê jinan e.",
+      "ckb": "تۆم لە بازاڕ هەوڵ دەدات مۆزەکانی بفرۆشێت و نیشان دەدات کە میوەفرۆشتن تەنها کاری ژنان نییە.",
+      "diq": "Tom bazar de hewl dano mûzanê xo bifiroşo û mojneno ke fêkîfirotiş tenya karê cinîyan nîyo.",
+      "hac": "تۆم بازاڕدا هەوڵ مەدۆ مۆزەکەش بفرۆشۆ؛ نیشان مەدۆ میوەفرۆشی تەنیا کاری ژەنان نیەن.",
+      "sdh": "تۆم لە بازار هەوڵ دەی مۆزەیل خوەی بفرۆشێ و نیشان دەی میوەفرۆشی تەنیا کار ژنەیل نیە."
     },
     "translator": "Agri Afshin",
     "illustrator": "Zablon Alex Nguku",
@@ -728,7 +966,11 @@
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "licenseLabel": "CC BY 4.0",
     "readingLevel": "Level 2",
-    "pageCount": 12
+    "pageCount": 12,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 121,
@@ -751,7 +993,12 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0294/",
     "rtl": true,
     "desc": {
-      "en": "A child discovers why grandmother takes such care of the bananas growing in her garden."
+      "en": "A child discovers why grandmother takes such care of the bananas growing in her garden.",
+      "kmr": "Zarokek fêm dike çima dapîra wî ewqas li mûzên baxçeyê xwe miqate ye.",
+      "ckb": "منداڵێک دەزانێت بۆچی داپیری ئەوەندە گرنگی بە مۆزەکانی باخچەکەی دەدات.",
+      "diq": "Domano hêna beno ke çira dapîra ey hende balê mûzanê baxçeya xo dana.",
+      "hac": "مناڵێ مەزانۆ چەرا نەنگیش ئەوەندە گرنگی وە مۆزەکانی باخچەکەش مەدۆ.",
+      "sdh": "مناڵێگ زانێ وە چە نەنگی ئەو هەندە گرنگی وە مۆزەیل باخچەی دەی."
     },
     "aliases": [
       "Grandma's bananas",
@@ -769,7 +1016,12 @@
     "localStory": true,
     "sourceOnly": false,
     "summary": {
-      "en": "A child discovers why grandmother takes such care of the bananas growing in her garden."
+      "en": "A child discovers why grandmother takes such care of the bananas growing in her garden.",
+      "kmr": "Zarokek fêm dike çima dapîra wî ewqas li mûzên baxçeyê xwe miqate ye.",
+      "ckb": "منداڵێک دەزانێت بۆچی داپیری ئەوەندە گرنگی بە مۆزەکانی باخچەکەی دەدات.",
+      "diq": "Domano hêna beno ke çira dapîra ey hende balê mûzanê baxçeya xo dana.",
+      "hac": "مناڵێ مەزانۆ چەرا نەنگیش ئەوەندە گرنگی وە مۆزەکانی باخچەکەش مەدۆ.",
+      "sdh": "مناڵێگ زانێ وە چە نەنگی ئەو هەندە گرنگی وە مۆزەیل باخچەی دەی."
     },
     "translator": "Agri Afshin",
     "illustrator": "Catherine Groenewald",
@@ -779,7 +1031,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 4",
-    "pageCount": 10
+    "pageCount": 10,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 122,
@@ -802,10 +1058,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0008/",
     "rtl": true,
     "desc": {
-      "en": "Singing, clapping, stretching and listening: everyday actions in a short illustrated Sorani story."
+      "en": "Singing, clapping, stretching and listening: everyday actions in a short illustrated Sorani story.",
+      "kmr": "Stran, çepik, dirêjkirina laş û guhdarî: kiryarên rojane di çîrokeke kurt û wêneyî ya Soranî de.",
+      "ckb": "گۆرانیگوتن، چەپڵەلێدان، ڕاکێشانی لەش و گوێگرتن؛ کارە ڕۆژانەکان لە چیرۆکێکی کورتی وێنەداری سۆرانیدا.",
+      "diq": "Deyîrî, çepikî, antena laşî û goştarî: karê rojane sanikêka kurta û resimîna sorankî de.",
+      "hac": "گۆرانیوەتەی، چەپڵە و گوێگرتەی؛ کارە ڕۆژانەکان داستانێکی کورت و وێنەداری سۆرانیدا.",
+      "sdh": "گۆرانی گوتن، چەپڵە، ڕاکێشان لەش و گوێ گرتن؛ کارە ڕۆژانەیل لە حیکایەتێگ کورت سۆرانی وەگەرد وێنە."
     },
     "summary": {
-      "en": "Singing, clapping, stretching and listening: everyday actions in a short illustrated Sorani story."
+      "en": "Singing, clapping, stretching and listening: everyday actions in a short illustrated Sorani story.",
+      "kmr": "Stran, çepik, dirêjkirina laş û guhdarî: kiryarên rojane di çîrokeke kurt û wêneyî ya Soranî de.",
+      "ckb": "گۆرانیگوتن، چەپڵەلێدان، ڕاکێشانی لەش و گوێگرتن؛ کارە ڕۆژانەکان لە چیرۆکێکی کورتی وێنەداری سۆرانیدا.",
+      "diq": "Deyîrî, çepikî, antena laşî û goştarî: karê rojane sanikêka kurta û resimîna sorankî de.",
+      "hac": "گۆرانیوەتەی، چەپڵە و گوێگرتەی؛ کارە ڕۆژانەکان داستانێکی کورت و وێنەداری سۆرانیدا.",
+      "sdh": "گۆرانی گوتن، چەپڵە، ڕاکێشان لەش و گوێ گرتن؛ کارە ڕۆژانەیل لە حیکایەتێگ کورت سۆرانی وەگەرد وێنە."
     },
     "aliases": [
       "What are you doing?",
@@ -830,7 +1096,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 1",
-    "pageCount": 8
+    "pageCount": 8,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 123,
@@ -853,10 +1123,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0087/",
     "rtl": true,
     "desc": {
-      "en": "A young reader looks for someone to share a book with, then discovers the joy of reading alone."
+      "en": "A young reader looks for someone to share a book with, then discovers the joy of reading alone.",
+      "kmr": "Xwînerekî biçûk li kesekî digere ku pirtûkê pê re bixwîne, paşê kêfa xwendina bi tena serê xwe dibîne.",
+      "ckb": "خوێنەرێکی بچووک بەدوای کەسێکدا دەگەڕێت کە کتێبێک پێکەوە بخوێننەوە، پاشان چێژی خوێندنەوە بە تەنیا دەناسێت.",
+      "diq": "Wendoxêko qij merdimêk gêreno ke pîya kitab biwano, pey de keyfê wendişê tena keşf keno.",
+      "hac": "خوێنەرێکی وورد پەی کەسێ مەگەڕۆ کە کتێوێ پێکەوە بخوێنۆوە؛ دواتر چێژی خوێنەوە وە تەنیا مەناسۆ.",
+      "sdh": "خوێنەرێگ بچوگ وەدوا کەسێگ گەڕێ کە کتێوێگ وەگەرد یەک بخوەننەوە؛ پاشان چێژ خوەندنەوە وە تەنیا ناسێ."
     },
     "summary": {
-      "en": "A young reader looks for someone to share a book with, then discovers the joy of reading alone."
+      "en": "A young reader looks for someone to share a book with, then discovers the joy of reading alone.",
+      "kmr": "Xwînerekî biçûk li kesekî digere ku pirtûkê pê re bixwîne, paşê kêfa xwendina bi tena serê xwe dibîne.",
+      "ckb": "خوێنەرێکی بچووک بەدوای کەسێکدا دەگەڕێت کە کتێبێک پێکەوە بخوێننەوە، پاشان چێژی خوێندنەوە بە تەنیا دەناسێت.",
+      "diq": "Wendoxêko qij merdimêk gêreno ke pîya kitab biwano, pey de keyfê wendişê tena keşf keno.",
+      "hac": "خوێنەرێکی وورد پەی کەسێ مەگەڕۆ کە کتێوێ پێکەوە بخوێنۆوە؛ دواتر چێژی خوێنەوە وە تەنیا مەناسۆ.",
+      "sdh": "خوێنەرێگ بچوگ وەدوا کەسێگ گەڕێ کە کتێوێگ وەگەرد یەک بخوەننەوە؛ پاشان چێژ خوەندنەوە وە تەنیا ناسێ."
     },
     "aliases": [
       "I like to read!",
@@ -881,7 +1161,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 1",
-    "pageCount": 8
+    "pageCount": 8,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 124,
@@ -904,10 +1188,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0052/",
     "rtl": true,
     "desc": {
-      "en": "After her father remarries, Simbegwire faces an unkind stepmother and finds help from her aunt."
+      "en": "After her father remarries, Simbegwire faces an unkind stepmother and finds help from her aunt.",
+      "kmr": "Piştî ku bavê wê dîsa dizewice, Simbegwire bi dêmarîya xwe ya bê dilovanî re dijî û alîkariyê ji metika xwe dibîne.",
+      "ckb": "دوای هاوسەرگیرییەوەی باوکی، سیمبەگوێرە تووشی ژنباوکێکی دڵڕەق دەبێت و پووری یارمەتی دەدات.",
+      "diq": "Dimeyê zewacê neweyî yê pîyê xo, Simbegwire bi mardîyêka bêdil re rî bi rî bena û metika xo ra ardim vînena.",
+      "hac": "پەی ژنویستەوەی باوەش، سیمبەگوێرە تووشی ژنباوێکی دڵڕەق مەبۆ و پووریش یارمەتی مەدۆ.",
+      "sdh": "دوای ژن خواستنەوە باوگی، سیمبەگوێرە وەگەرد ژن باوگێگ دڵڕەق ژی و پووری یارمەتی دەی."
     },
     "summary": {
-      "en": "After her father remarries, Simbegwire faces an unkind stepmother and finds help from her aunt."
+      "en": "After her father remarries, Simbegwire faces an unkind stepmother and finds help from her aunt.",
+      "kmr": "Piştî ku bavê wê dîsa dizewice, Simbegwire bi dêmarîya xwe ya bê dilovanî re dijî û alîkariyê ji metika xwe dibîne.",
+      "ckb": "دوای هاوسەرگیرییەوەی باوکی، سیمبەگوێرە تووشی ژنباوکێکی دڵڕەق دەبێت و پووری یارمەتی دەدات.",
+      "diq": "Dimeyê zewacê neweyî yê pîyê xo, Simbegwire bi mardîyêka bêdil re rî bi rî bena û metika xo ra ardim vînena.",
+      "hac": "پەی ژنویستەوەی باوەش، سیمبەگوێرە تووشی ژنباوێکی دڵڕەق مەبۆ و پووریش یارمەتی مەدۆ.",
+      "sdh": "دوای ژن خواستنەوە باوگی، سیمبەگوێرە وەگەرد ژن باوگێگ دڵڕەق ژی و پووری یارمەتی دەی."
     },
     "aliases": [
       "Simbegwire",
@@ -931,7 +1225,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 5",
-    "pageCount": 16
+    "pageCount": 16,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 125,
@@ -957,10 +1255,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0327/",
     "rtl": true,
     "desc": {
-      "en": "Count animals from one to ten as they gather at a watering hole in this illustrated beginner story."
+      "en": "Count animals from one to ten as they gather at a watering hole in this illustrated beginner story.",
+      "kmr": "Di vê çîroka wêneyî ya destpêkê de heywanên li avê kom dibin ji yekê heta dehan bijmêre.",
+      "ckb": "لە ئەم چیرۆکە وێنەدارە بۆ سەرەتاکاراندا، ئاژەڵە کۆبووەکان لە دەوری ئاودانێک لە یەک تا دە بژمێرە.",
+      "diq": "Na sanika resimîne ya destpêkkerdoxan de heywananê dora awe de kom bîyê yew ra heta des bijmêre.",
+      "hac": "ئێ داستانە وێنەدارەدا پەی دەسپێکەران، ئاژەڵە کۆبیەکان دەوری ئاو، جە یەک تا دە بژمێرە.",
+      "sdh": "لە ئەی حیکایەتە وێنەدارە وەی سەرەتاکارەیل، ئاژەڵەیل لە دەور ئاو، لە یەک هەتا دە بژمێر."
     },
     "summary": {
-      "en": "Count animals from one to ten as they gather at a watering hole in this illustrated beginner story."
+      "en": "Count animals from one to ten as they gather at a watering hole in this illustrated beginner story.",
+      "kmr": "Di vê çîroka wêneyî ya destpêkê de heywanên li avê kom dibin ji yekê heta dehan bijmêre.",
+      "ckb": "لە ئەم چیرۆکە وێنەدارە بۆ سەرەتاکاراندا، ئاژەڵە کۆبووەکان لە دەوری ئاودانێک لە یەک تا دە بژمێرە.",
+      "diq": "Na sanika resimîne ya destpêkkerdoxan de heywananê dora awe de kom bîyê yew ra heta des bijmêre.",
+      "hac": "ئێ داستانە وێنەدارەدا پەی دەسپێکەران، ئاژەڵە کۆبیەکان دەوری ئاو، جە یەک تا دە بژمێرە.",
+      "sdh": "لە ئەی حیکایەتە وێنەدارە وەی سەرەتاکارەیل، ئاژەڵەیل لە دەور ئاو، لە یەک هەتا دە بژمێر."
     },
     "aliases": [
       "Counting animals",
@@ -980,7 +1288,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 1",
-    "pageCount": 8
+    "pageCount": 8,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 126,
@@ -1006,10 +1318,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0030/",
     "rtl": true,
     "desc": {
-      "en": "A child explores happiness, sadness, silliness and love through everyday moments with family and friends."
+      "en": "A child explores happiness, sadness, silliness and love through everyday moments with family and friends.",
+      "kmr": "Zarokek di jiyana rojane ya bi malbat û hevalan re kêfxweşî, xemgînî, pêkenok û evînê nas dike.",
+      "ckb": "منداڵێک لە ڕۆژانەی لەگەڵ خێزان و هاوڕێکانیدا شادی، خەم، گاڵتە و خۆشەویستی دەناسێت.",
+      "diq": "Domanêk cuyê rojane yê bi keye û hevalan de keyfxweşîye, xemgînîye, henek û heskerdişî nas keno.",
+      "hac": "مناڵێ ژیانی ڕۆژانەی میان خانەوادە و هاوڕێکانیشدا شایی، خەم، گاڵتە و عەشق مەناسۆ.",
+      "sdh": "مناڵێگ لە ژیان ڕۆژانە وەگەرد خانەوادە و هاوڕێیەیل، شادی، خەم، گاڵتە و عەشق ناسێ."
     },
     "summary": {
-      "en": "A child explores happiness, sadness, silliness and love through everyday moments with family and friends."
+      "en": "A child explores happiness, sadness, silliness and love through everyday moments with family and friends.",
+      "kmr": "Zarokek di jiyana rojane ya bi malbat û hevalan re kêfxweşî, xemgînî, pêkenok û evînê nas dike.",
+      "ckb": "منداڵێک لە ڕۆژانەی لەگەڵ خێزان و هاوڕێکانیدا شادی، خەم، گاڵتە و خۆشەویستی دەناسێت.",
+      "diq": "Domanêk cuyê rojane yê bi keye û hevalan de keyfxweşîye, xemgînîye, henek û heskerdişî nas keno.",
+      "hac": "مناڵێ ژیانی ڕۆژانەی میان خانەوادە و هاوڕێکانیشدا شایی، خەم، گاڵتە و عەشق مەناسۆ.",
+      "sdh": "مناڵێگ لە ژیان ڕۆژانە وەگەرد خانەوادە و هاوڕێیەیل، شادی، خەم، گاڵتە و عەشق ناسێ."
     },
     "aliases": [
       "Feelings",
@@ -1029,7 +1351,11 @@
     "license": "https://creativecommons.org/licenses/by-nc/3.0/",
     "licenseLabel": "CC BY-NC 3.0",
     "readingLevel": "Level 1",
-    "pageCount": 5
+    "pageCount": 5,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 127,
@@ -1055,10 +1381,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0302/",
     "rtl": true,
     "desc": {
-      "en": "A simple illustrated introduction to fire: its warmth, light, usefulness and power."
+      "en": "A simple illustrated introduction to fire: its warmth, light, usefulness and power.",
+      "kmr": "Nasandineke hêsan û wêneyî ya agir: germahî, ronahî, sûd û hêza wî.",
+      "ckb": "ناساندنێکی سادە و وێنەدار بۆ ئاگر؛ گەرمی، ڕووناکی، سوود و هێزەکەی.",
+      "diq": "Şinasnayîşêko hêsan û resimin ê agirî: germîye, ronayî, fayde û hêzê ey.",
+      "hac": "ناسانێکی سادە و وێنەدار پەی ئاگر؛ گەرمی، ڕووناکی، سوود و هێزەکەش.",
+      "sdh": "ناسینێگ سادە و وێنەدار وەی ئاگر؛ گەرمی، ڕووناکی، سوود و هێزی."
     },
     "summary": {
-      "en": "A simple illustrated introduction to fire: its warmth, light, usefulness and power."
+      "en": "A simple illustrated introduction to fire: its warmth, light, usefulness and power.",
+      "kmr": "Nasandineke hêsan û wêneyî ya agir: germahî, ronahî, sûd û hêza wî.",
+      "ckb": "ناساندنێکی سادە و وێنەدار بۆ ئاگر؛ گەرمی، ڕووناکی، سوود و هێزەکەی.",
+      "diq": "Şinasnayîşêko hêsan û resimin ê agirî: germîye, ronayî, fayde û hêzê ey.",
+      "hac": "ناسانێکی سادە و وێنەدار پەی ئاگر؛ گەرمی، ڕووناکی، سوود و هێزەکەش.",
+      "sdh": "ناسینێگ سادە و وێنەدار وەی ئاگر؛ گەرمی، ڕووناکی، سوود و هێزی."
     },
     "aliases": [
       "Fire",
@@ -1078,7 +1414,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 1",
-    "pageCount": 8
+    "pageCount": 8,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 128,
@@ -1104,10 +1444,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0156/",
     "rtl": true,
     "desc": {
-      "en": "A hungry crocodile waits quietly for a meal in this short illustrated story for new readers."
+      "en": "A hungry crocodile waits quietly for a meal in this short illustrated story for new readers.",
+      "kmr": "Di vê çîroka kurt a wêneyî de, tîmsahekî birçî bêdeng li benda xwarinê ye.",
+      "ckb": "لە ئەم چیرۆکە کورتە وێنەدارەدا، تیمساحێکی برسی بە بێدەنگی چاوەڕێی خواردنە.",
+      "diq": "Na sanika kurta resimîne de timsahêko vêşan bêveng paweno ke çîyêk biwero.",
+      "hac": "ئێ داستانە کورت و وێنەدارەدا، تیمساحێکی وەشمان بێدەنگ چاوەڕوانی خواردنەن.",
+      "sdh": "لە ئەی حیکایەتە کورتە وێنەدارە، تیمساحێگ برسێ بی دەنگ چاڕوان خواراکە."
     },
     "summary": {
-      "en": "A hungry crocodile waits quietly for a meal in this short illustrated story for new readers."
+      "en": "A hungry crocodile waits quietly for a meal in this short illustrated story for new readers.",
+      "kmr": "Di vê çîroka kurt a wêneyî de, tîmsahekî birçî bêdeng li benda xwarinê ye.",
+      "ckb": "لە ئەم چیرۆکە کورتە وێنەدارەدا، تیمساحێکی برسی بە بێدەنگی چاوەڕێی خواردنە.",
+      "diq": "Na sanika kurta resimîne de timsahêko vêşan bêveng paweno ke çîyêk biwero.",
+      "hac": "ئێ داستانە کورت و وێنەدارەدا، تیمساحێکی وەشمان بێدەنگ چاوەڕوانی خواردنەن.",
+      "sdh": "لە ئەی حیکایەتە کورتە وێنەدارە، تیمساحێگ برسێ بی دەنگ چاڕوان خواراکە."
     },
     "aliases": [
       "The hungry crocodile",
@@ -1127,7 +1477,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 1",
-    "pageCount": 5
+    "pageCount": 5,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 129,
@@ -1153,10 +1507,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0002/",
     "rtl": true,
     "desc": {
-      "en": "Meet farm animals and the sounds they make in this illustrated first-reading book."
+      "en": "Meet farm animals and the sounds they make in this illustrated first-reading book.",
+      "kmr": "Di vê pirtûka wêneyî ya xwendina destpêkê de heywanên çandiniyê û dengên wan nas bike.",
+      "ckb": "لە ئەم کتێبە وێنەدارەی سەرەتای خوێندنەوەدا، ئاژەڵە ماڵییەکان و دەنگەکانیان بناسە.",
+      "diq": "Na kitaba resimîne ya wendişê verênî de heywananê çîftlige û venganê înan nas bike.",
+      "hac": "ئێ کتێوە وێنەدارەی دەسپێکی خوێنەوەدا، ئاژەڵە ماڵییەکان و دەنگەکانیان بناسە.",
+      "sdh": "لە ئەی کتێوە وێنەدارە وەی دەسپێک خوەندنەوە، ئاژەڵە ماڵیەیل و دەنگیان بناس."
     },
     "summary": {
-      "en": "Meet farm animals and the sounds they make in this illustrated first-reading book."
+      "en": "Meet farm animals and the sounds they make in this illustrated first-reading book.",
+      "kmr": "Di vê pirtûka wêneyî ya xwendina destpêkê de heywanên çandiniyê û dengên wan nas bike.",
+      "ckb": "لە ئەم کتێبە وێنەدارەی سەرەتای خوێندنەوەدا، ئاژەڵە ماڵییەکان و دەنگەکانیان بناسە.",
+      "diq": "Na kitaba resimîne ya wendişê verênî de heywananê çîftlige û venganê înan nas bike.",
+      "hac": "ئێ کتێوە وێنەدارەی دەسپێکی خوێنەوەدا، ئاژەڵە ماڵییەکان و دەنگەکانیان بناسە.",
+      "sdh": "لە ئەی کتێوە وێنەدارە وەی دەسپێک خوەندنەوە، ئاژەڵە ماڵیەیل و دەنگیان بناس."
     },
     "aliases": [
       "Look at the animals",
@@ -1176,7 +1540,11 @@
     "license": "https://creativecommons.org/licenses/by-nc/3.0/",
     "licenseLabel": "CC BY-NC 3.0",
     "readingLevel": "Level 1",
-    "pageCount": 8
+    "pageCount": 8,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 130,
@@ -1202,10 +1570,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0003/",
     "rtl": true,
     "desc": {
-      "en": "School clothes are too big, too small or too short—but one new pair of shoes fits perfectly."
+      "en": "School clothes are too big, too small or too short—but one new pair of shoes fits perfectly.",
+      "kmr": "Cilên dibistanê yan pir mezin, yan biçûk û kurt in; lê cotek pêlavên nû tam li pêyan tên.",
+      "ckb": "جلوبەرگی قوتابخانە زۆر گەورە، بچووک یان کورتن؛ بەڵام جووتە پێڵاوێکی نوێ بە باشی دەگونجێت.",
+      "diq": "Cilê mektebî yan zaf girs ê, yan qij û kirt ê; la cotêk solê neweyî tam benê.",
+      "hac": "پۆشاکی قوتابخانە زۆر گەورە، وورد یا کورتەن؛ بەڵام جووتێ پێڵاوی نەوە تەواو وە پەی مەیارۆ.",
+      "sdh": "جلەیل مەدرەسە زۆر گەورە، بچوگ یا کورتن؛ بەڵام جووتێگ کلاش تازە تەواو وە پاش خەفێ."
     },
     "summary": {
-      "en": "School clothes are too big, too small or too short—but one new pair of shoes fits perfectly."
+      "en": "School clothes are too big, too small or too short—but one new pair of shoes fits perfectly.",
+      "kmr": "Cilên dibistanê yan pir mezin, yan biçûk û kurt in; lê cotek pêlavên nû tam li pêyan tên.",
+      "ckb": "جلوبەرگی قوتابخانە زۆر گەورە، بچووک یان کورتن؛ بەڵام جووتە پێڵاوێکی نوێ بە باشی دەگونجێت.",
+      "diq": "Cilê mektebî yan zaf girs ê, yan qij û kirt ê; la cotêk solê neweyî tam benê.",
+      "hac": "پۆشاکی قوتابخانە زۆر گەورە، وورد یا کورتەن؛ بەڵام جووتێ پێڵاوی نەوە تەواو وە پەی مەیارۆ.",
+      "sdh": "جلەیل مەدرەسە زۆر گەورە، بچوگ یا کورتن؛ بەڵام جووتێگ کلاش تازە تەواو وە پاش خەفێ."
     },
     "aliases": [
       "School clothes",
@@ -1225,7 +1603,11 @@
     "license": "https://creativecommons.org/licenses/by-nc/3.0/",
     "licenseLabel": "CC BY-NC 3.0",
     "readingLevel": "Level 1",
-    "pageCount": 8
+    "pageCount": 8,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 131,
@@ -1251,10 +1633,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0120/",
     "rtl": true,
     "desc": {
-      "en": "Meet children with different hairstyles in this simple illustrated Sorani vocabulary story."
+      "en": "Meet children with different hairstyles in this simple illustrated Sorani vocabulary story.",
+      "kmr": "Di vê çîroka hêsan û wêneyî ya peyvên Soranî de zarokên bi porên cûda nas bike.",
+      "ckb": "لە ئەم چیرۆکە سادە و وێنەدارەی فێربوونی وشەی سۆرانیدا، منداڵانی خاوەن شێوازە جیاوازەکانی قژ بناسە.",
+      "diq": "Na sanika hêsana resimîne ya çekuyanê sorankî de domananê bi poranê cîya nas bike.",
+      "hac": "ئێ داستانە سادە و وێنەدارەی وشەی سۆرانیدا، مناڵەکان وە شێوە جیاوازەکانی قژ بناسە.",
+      "sdh": "لە ئەی حیکایەتە سادە و وێنەدارە وشە سۆرانی، مناڵەیل وە قژە جیاوازەیل بناس."
     },
     "summary": {
-      "en": "Meet children with different hairstyles in this simple illustrated Sorani vocabulary story."
+      "en": "Meet children with different hairstyles in this simple illustrated Sorani vocabulary story.",
+      "kmr": "Di vê çîroka hêsan û wêneyî ya peyvên Soranî de zarokên bi porên cûda nas bike.",
+      "ckb": "لە ئەم چیرۆکە سادە و وێنەدارەی فێربوونی وشەی سۆرانیدا، منداڵانی خاوەن شێوازە جیاوازەکانی قژ بناسە.",
+      "diq": "Na sanika hêsana resimîne ya çekuyanê sorankî de domananê bi poranê cîya nas bike.",
+      "hac": "ئێ داستانە سادە و وێنەدارەی وشەی سۆرانیدا، مناڵەکان وە شێوە جیاوازەکانی قژ بناسە.",
+      "sdh": "لە ئەی حیکایەتە سادە و وێنەدارە وشە سۆرانی، مناڵەیل وە قژە جیاوازەیل بناس."
     },
     "aliases": [
       "Hair",
@@ -1274,7 +1666,11 @@
     "license": "https://creativecommons.org/licenses/by-nc/3.0/",
     "licenseLabel": "CC BY-NC 3.0",
     "readingLevel": "Level 1",
-    "pageCount": 8
+    "pageCount": 8,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 132,
@@ -1300,10 +1696,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0271/",
     "rtl": true,
     "desc": {
-      "en": "Two hands, two feet and a loving hug: a very short picture book about the body."
+      "en": "Two hands, two feet and a loving hug: a very short picture book about the body.",
+      "kmr": "Du dest, du ling û hembêzeke bi evîn: pirtûkeke wêneyî ya pir kurt li ser laş.",
+      "ckb": "دوو دەست، دوو پێ و باوەشێکی پڕ خۆشەویستی؛ کتێبێکی وێنەداری زۆر کورت دەربارەی لەش.",
+      "diq": "Di destî, di lingî û hembêzêka bi heskerdişî: kitabêka resimîne ya zaf kurta derheqê laşî de.",
+      "hac": "دوو دەس، دوو پەی و باوەشێکی پڕ عەشق؛ کتێوێکی وێنەداری زۆر کورت دەربارەی لەش.",
+      "sdh": "دوو دەس، دوو پا و باوەشێگ پڕ عەشق؛ کتێوێگ زۆر کورت و وێنەدار دەربارەی لەش."
     },
     "summary": {
-      "en": "Two hands, two feet and a loving hug: a very short picture book about the body."
+      "en": "Two hands, two feet and a loving hug: a very short picture book about the body.",
+      "kmr": "Du dest, du ling û hembêzeke bi evîn: pirtûkeke wêneyî ya pir kurt li ser laş.",
+      "ckb": "دوو دەست، دوو پێ و باوەشێکی پڕ خۆشەویستی؛ کتێبێکی وێنەداری زۆر کورت دەربارەی لەش.",
+      "diq": "Di destî, di lingî û hembêzêka bi heskerdişî: kitabêka resimîne ya zaf kurta derheqê laşî de.",
+      "hac": "دوو دەس، دوو پەی و باوەشێکی پڕ عەشق؛ کتێوێکی وێنەداری زۆر کورت دەربارەی لەش.",
+      "sdh": "دوو دەس، دوو پا و باوەشێگ پڕ عەشق؛ کتێوێگ زۆر کورت و وێنەدار دەربارەی لەش."
     },
     "aliases": [
       "Two",
@@ -1323,7 +1729,11 @@
     "license": "https://creativecommons.org/licenses/by-nc/3.0/",
     "licenseLabel": "CC BY-NC 3.0",
     "readingLevel": "Level 1",
-    "pageCount": 5
+    "pageCount": 5,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 133,
@@ -1349,10 +1759,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0231/",
     "rtl": true,
     "desc": {
-      "en": "Follow the weather from sunshine and wind to rain, thunder and a rainbow."
+      "en": "Follow the weather from sunshine and wind to rain, thunder and a rainbow.",
+      "kmr": "Ji tav û bayê heta baran, birûsk û keskesorê, guherîna hewayê bişopîne.",
+      "ckb": "کەشوهەوا لە خۆر و باوە تا باران، هەورەتریشقە و پەلکەزێڕینە بشوێنە.",
+      "diq": "Hewa tîj û vayî ra heta varan, birûsk û keskesorî bişopîne.",
+      "hac": "کەشوهەوا جە هۆر و وای تا واران، هەورەتریشقە و پەلکەزێڕینە بشوێنە.",
+      "sdh": "هەوا لە خوەر و وای هەتا واران، هەورەترێشقە و پەلکەزێڕینە ببین."
     },
     "summary": {
-      "en": "Follow the weather from sunshine and wind to rain, thunder and a rainbow."
+      "en": "Follow the weather from sunshine and wind to rain, thunder and a rainbow.",
+      "kmr": "Ji tav û bayê heta baran, birûsk û keskesorê, guherîna hewayê bişopîne.",
+      "ckb": "کەشوهەوا لە خۆر و باوە تا باران، هەورەتریشقە و پەلکەزێڕینە بشوێنە.",
+      "diq": "Hewa tîj û vayî ra heta varan, birûsk û keskesorî bişopîne.",
+      "hac": "کەشوهەوا جە هۆر و وای تا واران، هەورەتریشقە و پەلکەزێڕینە بشوێنە.",
+      "sdh": "هەوا لە خوەر و وای هەتا واران، هەورەترێشقە و پەلکەزێڕینە ببین."
     },
     "aliases": [
       "Weather book",
@@ -1372,7 +1792,11 @@
     "license": "https://creativecommons.org/licenses/by-nc/3.0/",
     "licenseLabel": "CC BY-NC 3.0",
     "readingLevel": "Level 1",
-    "pageCount": 8
+    "pageCount": 8,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 134,
@@ -1398,10 +1822,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0129/",
     "rtl": true,
     "desc": {
-      "en": "One sibling cooks, sweeps and washes while a little brother plays. Is that fair?"
+      "en": "One sibling cooks, sweeps and washes while a little brother plays. Is that fair?",
+      "kmr": "Yek xwarinê çêdike, malê dimale û dişo, lê birayê biçûk dilîze. Ma ev dadmend e?",
+      "ckb": "یەکێک چێشت لێ دەنێت، ماڵ دەسڕێت و دەشوات، کەچی برا بچووکەکە یاری دەکات. ئایا ئەمە دادپەروەرانەیە؟",
+      "diq": "Yew çîşt paweno, keye pak keno û şûyeno; birayê qij kay keno. No adil o?",
+      "hac": "یەکێ چێشت مەناوۆ، یانە پاک مەکەرۆ و مەشۆرۆ؛ برای وورد یاری مەکەرۆ. ئێنە دادپەروەریەن؟",
+      "sdh": "یەکێگ چێشت لێنێ، ماڵ پاک کەی و شوورێ؛ برا بچوگ وازی کەی. ئەرێ ئەی دادپەروەریە؟"
     },
     "summary": {
-      "en": "One sibling cooks, sweeps and washes while a little brother plays. Is that fair?"
+      "en": "One sibling cooks, sweeps and washes while a little brother plays. Is that fair?",
+      "kmr": "Yek xwarinê çêdike, malê dimale û dişo, lê birayê biçûk dilîze. Ma ev dadmend e?",
+      "ckb": "یەکێک چێشت لێ دەنێت، ماڵ دەسڕێت و دەشوات، کەچی برا بچووکەکە یاری دەکات. ئایا ئەمە دادپەروەرانەیە؟",
+      "diq": "Yew çîşt paweno, keye pak keno û şûyeno; birayê qij kay keno. No adil o?",
+      "hac": "یەکێ چێشت مەناوۆ، یانە پاک مەکەرۆ و مەشۆرۆ؛ برای وورد یاری مەکەرۆ. ئێنە دادپەروەریەن؟",
+      "sdh": "یەکێگ چێشت لێنێ، ماڵ پاک کەی و شوورێ؛ برا بچوگ وازی کەی. ئەرێ ئەی دادپەروەریە؟"
     },
     "aliases": [
       "Lazy little brother",
@@ -1421,7 +1855,11 @@
     "license": "https://creativecommons.org/licenses/by-nc/3.0/",
     "licenseLabel": "CC BY-NC 3.0",
     "readingLevel": "Level 1",
-    "pageCount": 7
+    "pageCount": 7,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 135,
@@ -1447,10 +1885,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0067/",
     "rtl": true,
     "desc": {
-      "en": "A child helps prepare vegetables for a meal—and discovers why chopping onions brings tears."
+      "en": "A child helps prepare vegetables for a meal—and discovers why chopping onions brings tears.",
+      "kmr": "Zarokek ji bo xwarinê alîkariya amadekirina sebzeyan dike û dibîne çima birrîna pîvazê mirovan dide girîn.",
+      "ckb": "منداڵێک لە ئامادەکردنی سەوزە بۆ خواردن یارمەتی دەدات و دەزانێت بۆچی بڕینی پیاز فرمێسک دەهێنێت.",
+      "diq": "Domanêk amadekerdişê sebzeyan rê ardim dano û zaneno ke çira birnayîşê pîyazî hêstran ano.",
+      "hac": "مناڵێ ئامادەکەردەی سەوزە پەی خواردندا یارمەتی مەدۆ و مەزانۆ چەرا بڕیەی پیاز فرمێسک مەیارۆ.",
+      "sdh": "مناڵێگ لە ئامادە کردن سەوزە وەی خواراک یارمەتی دەی و زانێ وە چە بڕین پیاز فرمێسک هارێ."
     },
     "summary": {
-      "en": "A child helps prepare vegetables for a meal—and discovers why chopping onions brings tears."
+      "en": "A child helps prepare vegetables for a meal—and discovers why chopping onions brings tears.",
+      "kmr": "Zarokek ji bo xwarinê alîkariya amadekirina sebzeyan dike û dibîne çima birrîna pîvazê mirovan dide girîn.",
+      "ckb": "منداڵێک لە ئامادەکردنی سەوزە بۆ خواردن یارمەتی دەدات و دەزانێت بۆچی بڕینی پیاز فرمێسک دەهێنێت.",
+      "diq": "Domanêk amadekerdişê sebzeyan rê ardim dano û zaneno ke çira birnayîşê pîyazî hêstran ano.",
+      "hac": "مناڵێ ئامادەکەردەی سەوزە پەی خواردندا یارمەتی مەدۆ و مەزانۆ چەرا بڕیەی پیاز فرمێسک مەیارۆ.",
+      "sdh": "مناڵێگ لە ئامادە کردن سەوزە وەی خواراک یارمەتی دەی و زانێ وە چە بڕین پیاز فرمێسک هارێ."
     },
     "aliases": [
       "Cooking",
@@ -1470,7 +1918,11 @@
     "license": "https://creativecommons.org/licenses/by-nc/3.0/",
     "licenseLabel": "CC BY-NC 3.0",
     "readingLevel": "Level 1",
-    "pageCount": 8
+    "pageCount": 8,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 136,
@@ -1496,10 +1948,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0009/",
     "rtl": true,
     "desc": {
-      "en": "A child searches under, behind and beside things at home to find a missing cat."
+      "en": "A child searches under, behind and beside things at home to find a missing cat.",
+      "kmr": "Zarokek ji bo dîtina pisîka xwe ya winda li bin, pişt û kêleka tiştên malê digere.",
+      "ckb": "منداڵێک بۆ دۆزینەوەی پشیلە ونبووەکەی، لە ژێر و پشت و تەنیشتی شتەکانی ماڵ دەگەڕێت.",
+      "diq": "Domanêk ke pisîka xo ya vîndîbîyaye bivîno, bin, pey û kîştê çîyanê keyeyî de gêreno.",
+      "hac": "مناڵێ پەی دۆزینەوەی کێشکە ونبیەکەش، ژێر و پشت و لای شتەکانی یانەدا مەگەڕۆ.",
+      "sdh": "مناڵێگ وەی دۆزینەوە پشیلە ون بیەکەی، لە ژێر و پشت و لای شتەیل ماڵ گەڕێ."
     },
     "summary": {
-      "en": "A child searches under, behind and beside things at home to find a missing cat."
+      "en": "A child searches under, behind and beside things at home to find a missing cat.",
+      "kmr": "Zarokek ji bo dîtina pisîka xwe ya winda li bin, pişt û kêleka tiştên malê digere.",
+      "ckb": "منداڵێک بۆ دۆزینەوەی پشیلە ونبووەکەی، لە ژێر و پشت و تەنیشتی شتەکانی ماڵ دەگەڕێت.",
+      "diq": "Domanêk ke pisîka xo ya vîndîbîyaye bivîno, bin, pey û kîştê çîyanê keyeyî de gêreno.",
+      "hac": "مناڵێ پەی دۆزینەوەی کێشکە ونبیەکەش، ژێر و پشت و لای شتەکانی یانەدا مەگەڕۆ.",
+      "sdh": "مناڵێگ وەی دۆزینەوە پشیلە ون بیەکەی، لە ژێر و پشت و لای شتەیل ماڵ گەڕێ."
     },
     "aliases": [
       "Where is my cat?",
@@ -1519,7 +1981,11 @@
     "license": "https://creativecommons.org/licenses/by-nc/3.0/",
     "licenseLabel": "CC BY-NC 3.0",
     "readingLevel": "Level 1",
-    "pageCount": 8
+    "pageCount": 8,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 137,
@@ -1545,10 +2011,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0112/",
     "rtl": true,
     "desc": {
-      "en": "Running, jumping, dancing and swimming: discover what a body can do."
+      "en": "Running, jumping, dancing and swimming: discover what a body can do.",
+      "kmr": "Bazdan, xweavêtin, reqs û avjenî: bibîne ku laş dikare çi bike.",
+      "ckb": "ڕاکردن، بازدان، سەما و مەلەوانی؛ بزانە لەش دەتوانێت چ شتێک بکات.",
+      "diq": "Remayîş, vazdayîş, reqs û avjenî: keşf bike ke laş eşkeno çi bikero.",
+      "hac": "ڕاکەردەی، بازدان، سەما و مەلە؛ بزانە لەش مەشایۆ چێش بکەرۆ.",
+      "sdh": "ڕەفتن، بازدان، سەما و مەلە؛ بزان لەش توانێ چە بکەی."
     },
     "summary": {
-      "en": "Running, jumping, dancing and swimming: discover what a body can do."
+      "en": "Running, jumping, dancing and swimming: discover what a body can do.",
+      "kmr": "Bazdan, xweavêtin, reqs û avjenî: bibîne ku laş dikare çi bike.",
+      "ckb": "ڕاکردن، بازدان، سەما و مەلەوانی؛ بزانە لەش دەتوانێت چ شتێک بکات.",
+      "diq": "Remayîş, vazdayîş, reqs û avjenî: keşf bike ke laş eşkeno çi bikero.",
+      "hac": "ڕاکەردەی، بازدان، سەما و مەلە؛ بزانە لەش مەشایۆ چێش بکەرۆ.",
+      "sdh": "ڕەفتن، بازدان، سەما و مەلە؛ بزان لەش توانێ چە بکەی."
     },
     "aliases": [
       "My body",
@@ -1568,7 +2044,11 @@
     "license": "https://creativecommons.org/licenses/by-nc/3.0/",
     "licenseLabel": "CC BY-NC 3.0",
     "readingLevel": "Level 1",
-    "pageCount": 8
+    "pageCount": 8,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 138,
@@ -1594,10 +2074,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0111/",
     "rtl": true,
     "desc": {
-      "en": "After Hippo steps on Rabbit’s foot, Rabbit turns to Fire for revenge in this animal folktale."
+      "en": "After Hippo steps on Rabbit’s foot, Rabbit turns to Fire for revenge in this animal folktale.",
+      "kmr": "Piştî ku Hîpopotam li ser lingê Keroşkê radiweste, Keroşk ji bo tolhildanê serî li Agir dide.",
+      "ckb": "کاتێک ئەسپی ئاو پێ لە پێی کەروێشک دەنێت، کەروێشک بۆ تۆڵەسەندنەوە پەنا دەباتە بەر ئاگر.",
+      "diq": "Wexto ke Hîpopotam lingê Kergûşî de pîya nano, Kergûş tolhildayîş rê rî dano Agirî.",
+      "hac": "کاتێ ئەسپی ئاو پەی منیۆ سەر پەی کەروێشک، کەروێشک پەی تۆڵە ڕوو مەکەرۆ ئاگر.",
+      "sdh": "وەختێ ئەسپ ئاو پا نێ وە پا کەروێشک، کەروێشک وەی تۆڵە ڕوو کەی وە ئاگر."
     },
     "summary": {
-      "en": "After Hippo steps on Rabbit’s foot, Rabbit turns to Fire for revenge in this animal folktale."
+      "en": "After Hippo steps on Rabbit’s foot, Rabbit turns to Fire for revenge in this animal folktale.",
+      "kmr": "Piştî ku Hîpopotam li ser lingê Keroşkê radiweste, Keroşk ji bo tolhildanê serî li Agir dide.",
+      "ckb": "کاتێک ئەسپی ئاو پێ لە پێی کەروێشک دەنێت، کەروێشک بۆ تۆڵەسەندنەوە پەنا دەباتە بەر ئاگر.",
+      "diq": "Wexto ke Hîpopotam lingê Kergûşî de pîya nano, Kergûş tolhildayîş rê rî dano Agirî.",
+      "hac": "کاتێ ئەسپی ئاو پەی منیۆ سەر پەی کەروێشک، کەروێشک پەی تۆڵە ڕوو مەکەرۆ ئاگر.",
+      "sdh": "وەختێ ئەسپ ئاو پا نێ وە پا کەروێشک، کەروێشک وەی تۆڵە ڕوو کەی وە ئاگر."
     },
     "aliases": [
       "Why hippos have no hair",
@@ -1617,7 +2107,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 2",
-    "pageCount": 8
+    "pageCount": 8,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 139,
@@ -1643,10 +2137,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0210/",
     "rtl": true,
     "desc": {
-      "en": "Tingi and his grandmother hide from soldiers after their village’s cows are taken."
+      "en": "Tingi and his grandmother hide from soldiers after their village’s cows are taken.",
+      "kmr": "Piştî ku çêlekên gundê wan tên birin, Tingi û dapîra wî ji leşkeran vedişêrin.",
+      "ckb": "دوای بردنی مانگاکانی گوندەکەیان، تینگی و داپیری خۆیان لە سەربازەکان دەشارنەوە.",
+      "diq": "Dimeyê ke mangayê dewa înan benê birdene, Tingi û dapîra ey leşkeran ra xo nimnenê.",
+      "hac": "پەی بەرەی مانگاکانی دێکەیان، تینگی و نەنگیش وێشان جە سەربازەکان مەشارۆوە.",
+      "sdh": "دوای بردن مانگایەیل دێیان، تینگی و نەنگی خویان لە سەربازەیل شارێنەوە."
     },
     "summary": {
-      "en": "Tingi and his grandmother hide from soldiers after their village’s cows are taken."
+      "en": "Tingi and his grandmother hide from soldiers after their village’s cows are taken.",
+      "kmr": "Piştî ku çêlekên gundê wan tên birin, Tingi û dapîra wî ji leşkeran vedişêrin.",
+      "ckb": "دوای بردنی مانگاکانی گوندەکەیان، تینگی و داپیری خۆیان لە سەربازەکان دەشارنەوە.",
+      "diq": "Dimeyê ke mangayê dewa înan benê birdene, Tingi û dapîra ey leşkeran ra xo nimnenê.",
+      "hac": "پەی بەرەی مانگاکانی دێکەیان، تینگی و نەنگیش وێشان جە سەربازەکان مەشارۆوە.",
+      "sdh": "دوای بردن مانگایەیل دێیان، تینگی و نەنگی خویان لە سەربازەیل شارێنەوە."
     },
     "aliases": [
       "Tingi and the cows",
@@ -1666,7 +2170,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 2",
-    "pageCount": 11
+    "pageCount": 11,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 140,
@@ -1692,10 +2200,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0027/",
     "rtl": true,
     "desc": {
-      "en": "When a village’s water tap runs dry, neighbours decide to solve their problems together."
+      "en": "When a village’s water tap runs dry, neighbours decide to solve their problems together.",
+      "kmr": "Gava ava gundekî diqete, cîran biryar didin ku pirsgirêkên xwe bi hev re çareser bikin.",
+      "ckb": "کاتێک شیری ئاوی گوندێک وشک دەبێت، دراوسێکان بڕیار دەدەن کێشەکانیان پێکەوە چارەسەر بکەن.",
+      "diq": "Wexto ke ava dewe qetîyena, cîranî biryar danê ke pirsê xo pîya çareser bikerê.",
+      "hac": "کاتێ ئاوی دێێ وشک مەبۆ، هاوساکان بڕیار مەدۆن گرفتی وێشان پێکەوە چارەسەر کەرۆن.",
+      "sdh": "وەختێ ئاو دێێگ وشک وە، هاوسایەیل بڕیار دەن گرفتەیل خویان وەگەرد یەک چارەسەر بکەن."
     },
     "summary": {
-      "en": "When a village’s water tap runs dry, neighbours decide to solve their problems together."
+      "en": "When a village’s water tap runs dry, neighbours decide to solve their problems together.",
+      "kmr": "Gava ava gundekî diqete, cîran biryar didin ku pirsgirêkên xwe bi hev re çareser bikin.",
+      "ckb": "کاتێک شیری ئاوی گوندێک وشک دەبێت، دراوسێکان بڕیار دەدەن کێشەکانیان پێکەوە چارەسەر بکەن.",
+      "diq": "Wexto ke ava dewe qetîyena, cîranî biryar danê ke pirsê xo pîya çareser bikerê.",
+      "hac": "کاتێ ئاوی دێێ وشک مەبۆ، هاوساکان بڕیار مەدۆن گرفتی وێشان پێکەوە چارەسەر کەرۆن.",
+      "sdh": "وەختێ ئاو دێێگ وشک وە، هاوسایەیل بڕیار دەن گرفتەیل خویان وەگەرد یەک چارەسەر بکەن."
     },
     "aliases": [
       "Decision",
@@ -1715,7 +2233,11 @@
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "licenseLabel": "CC BY 4.0",
     "readingLevel": "Level 2",
-    "pageCount": 16
+    "pageCount": 16,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 141,
@@ -1741,10 +2263,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0342/",
     "rtl": true,
     "desc": {
-      "en": "Rahim eats the fruit meant for everyone and learns a painful lesson about sharing."
+      "en": "Rahim eats the fruit meant for everyone and learns a painful lesson about sharing.",
+      "kmr": "Rahim fêkiyên ji bo hemû kesan dixwe û derbareyê parvekirinê de dersek bi êş hîn dibe.",
+      "ckb": "ڕەحیم ئەو میوانە دەخوات کە بۆ هەمووان بوون و دەرسێکی ئازاربەخش دەربارەی بەشکردن فێر دەبێت.",
+      "diq": "Rahim fêkîyanê ke her kesî rê yê weno û derheqê parvekerdişî de dersêko bi êş museno.",
+      "hac": "ڕەحیم ئەو میوانە مەوارۆ کە پەی هەمە بوون؛ دەرسێکی بەژاندار دەربارەی بەشکەردەی فێر مەبۆ.",
+      "sdh": "ڕەحیم ئەو میوەیلە خوەی کە وەی هەمە بوون و دەرسێگ ئازاردار دەربارەی بەش کردن فێر وە."
     },
     "summary": {
-      "en": "Rahim eats the fruit meant for everyone and learns a painful lesson about sharing."
+      "en": "Rahim eats the fruit meant for everyone and learns a painful lesson about sharing.",
+      "kmr": "Rahim fêkiyên ji bo hemû kesan dixwe û derbareyê parvekirinê de dersek bi êş hîn dibe.",
+      "ckb": "ڕەحیم ئەو میوانە دەخوات کە بۆ هەمووان بوون و دەرسێکی ئازاربەخش دەربارەی بەشکردن فێر دەبێت.",
+      "diq": "Rahim fêkîyanê ke her kesî rê yê weno û derheqê parvekerdişî de dersêko bi êş museno.",
+      "hac": "ڕەحیم ئەو میوانە مەوارۆ کە پەی هەمە بوون؛ دەرسێکی بەژاندار دەربارەی بەشکەردەی فێر مەبۆ.",
+      "sdh": "ڕەحیم ئەو میوەیلە خوەی کە وەی هەمە بوون و دەرسێگ ئازاردار دەربارەی بەش کردن فێر وە."
     },
     "aliases": [
       "Punishment",
@@ -1764,7 +2296,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 2",
-    "pageCount": 12
+    "pageCount": 12,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 142,
@@ -1790,10 +2326,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0089/",
     "rtl": true,
     "desc": {
-      "en": "Khalai talks to the trees, grass and flowers around her, asking them to grow strong."
+      "en": "Khalai talks to the trees, grass and flowers around her, asking them to grow strong.",
+      "kmr": "Khalai bi dar, giya û kulîlkên dora xwe re diaxive û ji wan dixwaze ku xurt mezin bibin.",
+      "ckb": "خاڵای لەگەڵ دار و گیا و گوڵەکانی دەوروبەری قسە دەکات و داوایان لێ دەکات بەهێز بڕوێن.",
+      "diq": "Khalai bi daran, giya û vilikanê derûdorê xo re qisey kena û wazena ke bi hêz bêrê mezinbîyene.",
+      "hac": "خاڵای وەگەڵ دار و گیا و وەڵەکانی دەوروبەریش قسە مەکەرۆ؛ داوایان جە مەکەرۆ بەهێز بڕوێنۆ.",
+      "sdh": "خاڵای وەگەرد دار و گیا و گوڵەیل دەوروبەری قسە کەی و داوا کەی بەهێز گەورە بوون."
     },
     "summary": {
-      "en": "Khalai talks to the trees, grass and flowers around her, asking them to grow strong."
+      "en": "Khalai talks to the trees, grass and flowers around her, asking them to grow strong.",
+      "kmr": "Khalai bi dar, giya û kulîlkên dora xwe re diaxive û ji wan dixwaze ku xurt mezin bibin.",
+      "ckb": "خاڵای لەگەڵ دار و گیا و گوڵەکانی دەوروبەری قسە دەکات و داوایان لێ دەکات بەهێز بڕوێن.",
+      "diq": "Khalai bi daran, giya û vilikanê derûdorê xo re qisey kena û wazena ke bi hêz bêrê mezinbîyene.",
+      "hac": "خاڵای وەگەڵ دار و گیا و وەڵەکانی دەوروبەریش قسە مەکەرۆ؛ داوایان جە مەکەرۆ بەهێز بڕوێنۆ.",
+      "sdh": "خاڵای وەگەرد دار و گیا و گوڵەیل دەوروبەری قسە کەی و داوا کەی بەهێز گەورە بوون."
     },
     "aliases": [
       "Khalai talks to plants",
@@ -1813,7 +2359,11 @@
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "licenseLabel": "CC BY 4.0",
     "readingLevel": "Level 2",
-    "pageCount": 8
+    "pageCount": 8,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 143,
@@ -1839,10 +2389,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0234/",
     "rtl": true,
     "desc": {
-      "en": "Andiswa wants to play football. When her school team needs help, she gets a chance to prove herself."
+      "en": "Andiswa wants to play football. When her school team needs help, she gets a chance to prove herself.",
+      "kmr": "Andiswa dixwaze fûtbolê bilîze; gava tîma dibistanê alîkariyê dixwaze, ew derfetê dibîne ku xwe nîşan bide.",
+      "ckb": "ئاندیسوا دەیەوێت تۆپی پێ بکات؛ کاتێک تیمی قوتابخانەکەی پێویستی بە یارمەتییە، دەرفەتی نیشاندانی خۆی دەدۆزێتەوە.",
+      "diq": "Andiswa wazena futbol bikero; wexto tîma mektebî ardim wazena, aye rê firsendê mojnena xo vejîyeno.",
+      "hac": "ئاندیسوا مەوازۆ تۆپی پەی کەرۆ؛ کاتێ تیمی قوتابخانە یارمەتی مەوازۆ، دەرفەتی نیشاندانەی وێش مەدۆزۆوە.",
+      "sdh": "ئاندیسوا هەوێ فووتباڵ بکەی؛ وەختێ تیم مەدرەسە یارمەتی هەوێ، دەرفەت نیشان دان خوەی دۆزێەوە."
     },
     "summary": {
-      "en": "Andiswa wants to play football. When her school team needs help, she gets a chance to prove herself."
+      "en": "Andiswa wants to play football. When her school team needs help, she gets a chance to prove herself.",
+      "kmr": "Andiswa dixwaze fûtbolê bilîze; gava tîma dibistanê alîkariyê dixwaze, ew derfetê dibîne ku xwe nîşan bide.",
+      "ckb": "ئاندیسوا دەیەوێت تۆپی پێ بکات؛ کاتێک تیمی قوتابخانەکەی پێویستی بە یارمەتییە، دەرفەتی نیشاندانی خۆی دەدۆزێتەوە.",
+      "diq": "Andiswa wazena futbol bikero; wexto tîma mektebî ardim wazena, aye rê firsendê mojnena xo vejîyeno.",
+      "hac": "ئاندیسوا مەوازۆ تۆپی پەی کەرۆ؛ کاتێ تیمی قوتابخانە یارمەتی مەوازۆ، دەرفەتی نیشاندانەی وێش مەدۆزۆوە.",
+      "sdh": "ئاندیسوا هەوێ فووتباڵ بکەی؛ وەختێ تیم مەدرەسە یارمەتی هەوێ، دەرفەت نیشان دان خوەی دۆزێەوە."
     },
     "aliases": [
       "Andiswa Soccer Star",
@@ -1862,7 +2422,11 @@
     "license": "https://creativecommons.org/licenses/by-nc/3.0/",
     "licenseLabel": "CC BY-NC 3.0",
     "readingLevel": "Level 2",
-    "pageCount": 8
+    "pageCount": 8,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 144,
@@ -1888,10 +2452,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0001/",
     "rtl": true,
     "desc": {
-      "en": "A very tall man makes a hoe, bed and doorway that finally fit him."
+      "en": "A very tall man makes a hoe, bed and doorway that finally fit him.",
+      "kmr": "Mêrekî pir dirêj bêr, nivîn û deriyekî li gorî bejna xwe çêdike.",
+      "ckb": "پیاوێکی زۆر بەرز، کێڵکەر و جێگا و دەرگایەک دروست دەکات کە لەگەڵ باڵای دەگونجێن.",
+      "diq": "Merdo zaf derg kazme, cayê razanî û berêko goreyê bejna xo virazeno.",
+      "hac": "پیاێکی زۆر بەرز، کێڵکەر، جێگا و بەرێ پەی باڵای وێش دروست مەکەرۆ.",
+      "sdh": "پیاگێگ زۆر بەرز، کێڵکەر و جێگا و دەرێگ وە ئەندازە باڵا خوەی دروست کەی."
     },
     "summary": {
-      "en": "A very tall man makes a hoe, bed and doorway that finally fit him."
+      "en": "A very tall man makes a hoe, bed and doorway that finally fit him.",
+      "kmr": "Mêrekî pir dirêj bêr, nivîn û deriyekî li gorî bejna xwe çêdike.",
+      "ckb": "پیاوێکی زۆر بەرز، کێڵکەر و جێگا و دەرگایەک دروست دەکات کە لەگەڵ باڵای دەگونجێن.",
+      "diq": "Merdo zaf derg kazme, cayê razanî û berêko goreyê bejna xo virazeno.",
+      "hac": "پیاێکی زۆر بەرز، کێڵکەر، جێگا و بەرێ پەی باڵای وێش دروست مەکەرۆ.",
+      "sdh": "پیاگێگ زۆر بەرز، کێڵکەر و جێگا و دەرێگ وە ئەندازە باڵا خوەی دروست کەی."
     },
     "aliases": [
       "A very tall man",
@@ -1911,7 +2485,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 2",
-    "pageCount": 11
+    "pageCount": 11,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 145,
@@ -1937,10 +2515,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0095/",
     "rtl": true,
     "desc": {
-      "en": "Zama proudly gets ready for school, helps at home and still makes time to play."
+      "en": "Zama proudly gets ready for school, helps at home and still makes time to play.",
+      "kmr": "Zama bi serbilindî ji bo dibistanê amade dibe, li malê alîkarî dike û dem ji bo lîstikê jî dibîne.",
+      "ckb": "زاما بە شانازییەوە بۆ قوتابخانە ئامادە دەبێت، لە ماڵ یارمەتی دەدات و کات بۆ یاریکردنیش دەدۆزێتەوە.",
+      "diq": "Zama bi serbilindî mekteb rê amade bena, keye de ardim dana û kayî rê zî wext vînena.",
+      "hac": "زاما وە شانازی پەی قوتابخانە ئامادە مەبۆ، یانەدا یارمەتی مەدۆ و پەی یاریش کات مەدۆزۆوە.",
+      "sdh": "زاما وە شانازی وەی مەدرەسە ئامادە وە، لە ماڵ یارمەتی دەی و وەی وازی کات دۆزێەوە."
     },
     "summary": {
-      "en": "Zama proudly gets ready for school, helps at home and still makes time to play."
+      "en": "Zama proudly gets ready for school, helps at home and still makes time to play.",
+      "kmr": "Zama bi serbilindî ji bo dibistanê amade dibe, li malê alîkarî dike û dem ji bo lîstikê jî dibîne.",
+      "ckb": "زاما بە شانازییەوە بۆ قوتابخانە ئامادە دەبێت، لە ماڵ یارمەتی دەدات و کات بۆ یاریکردنیش دەدۆزێتەوە.",
+      "diq": "Zama bi serbilindî mekteb rê amade bena, keye de ardim dana û kayî rê zî wext vînena.",
+      "hac": "زاما وە شانازی پەی قوتابخانە ئامادە مەبۆ، یانەدا یارمەتی مەدۆ و پەی یاریش کات مەدۆزۆوە.",
+      "sdh": "زاما وە شانازی وەی مەدرەسە ئامادە وە، لە ماڵ یارمەتی دەی و وەی وازی کات دۆزێەوە."
     },
     "aliases": [
       "Zama is great!",
@@ -1960,7 +2548,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 2",
-    "pageCount": 12
+    "pageCount": 12,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 146,
@@ -1986,10 +2578,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0004/",
     "rtl": true,
     "desc": {
-      "en": "A taxi ride explains why Dog chases cars, Goat runs away and Cow takes her time."
+      "en": "A taxi ride explains why Dog chases cars, Goat runs away and Cow takes her time.",
+      "kmr": "Rêwîtiyeke taksiyê eşkere dike çima Kûçik li dû erebeyan diçe, Bizina direve û Ga bi hêdî dimeşe.",
+      "ckb": "گەشتێکی تەکسی ڕوون دەکاتەوە بۆچی سەگ بەدوای ئۆتۆمبێلدا دەچێت، بزن هەڵدێت و مانگا بە ئارامی دەڕوات.",
+      "diq": "Rêwîtîya taksîye eşkera kena çira Kutik peyê erebeyan şino, Bize remena û Manga hêdî meşena.",
+      "hac": "گەشتێکی تەکسی ڕوون مەکەرۆوە چەرا سەگ پەی ماشێن مەڕۆ، بزن مەڕەمۆ و مانگا هێواش مەڕۆ.",
+      "sdh": "گەشتێگ تاکسی ڕوون کەیەوە وە چە سەگ وەدوا ماشین ڕەوێ، بزن ڕەمێ و مانگا هێدی ڕەوێ."
     },
     "summary": {
-      "en": "A taxi ride explains why Dog chases cars, Goat runs away and Cow takes her time."
+      "en": "A taxi ride explains why Dog chases cars, Goat runs away and Cow takes her time.",
+      "kmr": "Rêwîtiyeke taksiyê eşkere dike çima Kûçik li dû erebeyan diçe, Bizina direve û Ga bi hêdî dimeşe.",
+      "ckb": "گەشتێکی تەکسی ڕوون دەکاتەوە بۆچی سەگ بەدوای ئۆتۆمبێلدا دەچێت، بزن هەڵدێت و مانگا بە ئارامی دەڕوات.",
+      "diq": "Rêwîtîya taksîye eşkera kena çira Kutik peyê erebeyan şino, Bize remena û Manga hêdî meşena.",
+      "hac": "گەشتێکی تەکسی ڕوون مەکەرۆوە چەرا سەگ پەی ماشێن مەڕۆ، بزن مەڕەمۆ و مانگا هێواش مەڕۆ.",
+      "sdh": "گەشتێگ تاکسی ڕوون کەیەوە وە چە سەگ وەدوا ماشین ڕەوێ، بزن ڕەمێ و مانگا هێدی ڕەوێ."
     },
     "aliases": [
       "Goat, Dog, and Cow",
@@ -2009,7 +2611,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 2",
-    "pageCount": 8
+    "pageCount": 8,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 147,
@@ -2035,10 +2641,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0201/",
     "rtl": true,
     "desc": {
-      "en": "A mother and her donkey child struggle to understand each other, separate and find their way back."
+      "en": "A mother and her donkey child struggle to understand each other, separate and find their way back.",
+      "kmr": "Dayîkek û zarokê wê yê ker hewl didin hev fêm bikin; ji hev dûr dikevin û rêya vegerê dibînin.",
+      "ckb": "دایکێک و منداڵە کەرەکەی هەوڵ دەدەن لە یەکتر تێبگەن؛ لێک دوور دەکەونەوە و ڕێگای گەڕانەوە دەدۆزنەوە.",
+      "diq": "Mayêk û domanê aye yê herî hewl danê yewbîn fehm bikerê; cîya benê û rayîrê ageyrayîşî vînenê.",
+      "hac": "دایێ و مناڵە کەرەکەش هەوڵ مەدۆن جە یەک بفامن؛ جە یەک دوور مەبۆوە و ڕێگای گەڕانەوە مەدۆزنۆوە.",
+      "sdh": "دایەێگ و مناڵ کەرەکەی هەوڵ دەن لە یەک بزانن؛ لەیەک دوور وەن و ڕێ گەڕانەوە دۆزنەوە."
     },
     "summary": {
-      "en": "A mother and her donkey child struggle to understand each other, separate and find their way back."
+      "en": "A mother and her donkey child struggle to understand each other, separate and find their way back.",
+      "kmr": "Dayîkek û zarokê wê yê ker hewl didin hev fêm bikin; ji hev dûr dikevin û rêya vegerê dibînin.",
+      "ckb": "دایکێک و منداڵە کەرەکەی هەوڵ دەدەن لە یەکتر تێبگەن؛ لێک دوور دەکەونەوە و ڕێگای گەڕانەوە دەدۆزنەوە.",
+      "diq": "Mayêk û domanê aye yê herî hewl danê yewbîn fehm bikerê; cîya benê û rayîrê ageyrayîşî vînenê.",
+      "hac": "دایێ و مناڵە کەرەکەش هەوڵ مەدۆن جە یەک بفامن؛ جە یەک دوور مەبۆوە و ڕێگای گەڕانەوە مەدۆزنۆوە.",
+      "sdh": "دایەێگ و مناڵ کەرەکەی هەوڵ دەن لە یەک بزانن؛ لەیەک دوور وەن و ڕێ گەڕانەوە دۆزنەوە."
     },
     "aliases": [
       "Donkey Child",
@@ -2058,7 +2674,11 @@
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "licenseLabel": "CC BY 4.0",
     "readingLevel": "Level 3",
-    "pageCount": 20
+    "pageCount": 20,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 148,
@@ -2084,10 +2704,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0110/",
     "rtl": true,
     "desc": {
-      "en": "Follow Wangari Maathai from a childhood in Kenya to planting trees and winning the Nobel Peace Prize."
+      "en": "Follow Wangari Maathai from a childhood in Kenya to planting trees and winning the Nobel Peace Prize.",
+      "kmr": "Wangari Maathai ji zarokatiya li Kenyayê heta çandina daran û wergirtina Xelata Nobelê ya Aştiyê bişopîne.",
+      "ckb": "وانگاری ماتای لە منداڵیی لە کینیاوە تا چاندنی دار و بردنەوەی خەڵاتی نۆبڵی ئاشتی بشوێنە.",
+      "diq": "Wangari Maathai domanîya aye ya Kenya ra heta çiniştê daran û girewtişê Xelata Nobelî ya Aştîye bişopîne.",
+      "hac": "وانگاری ماتای جە مناڵیی کینیادا تا چانەی دار و بردنەوەی خەڵاتی نۆبڵی ئاشتی بشوێنە.",
+      "sdh": "وانگاری ماتای لە مناڵی لە کینیا هەتا چانن دار و بردن خەڵات نۆبڵ ئاشتی بناس."
     },
     "summary": {
-      "en": "Follow Wangari Maathai from a childhood in Kenya to planting trees and winning the Nobel Peace Prize."
+      "en": "Follow Wangari Maathai from a childhood in Kenya to planting trees and winning the Nobel Peace Prize.",
+      "kmr": "Wangari Maathai ji zarokatiya li Kenyayê heta çandina daran û wergirtina Xelata Nobelê ya Aştiyê bişopîne.",
+      "ckb": "وانگاری ماتای لە منداڵیی لە کینیاوە تا چاندنی دار و بردنەوەی خەڵاتی نۆبڵی ئاشتی بشوێنە.",
+      "diq": "Wangari Maathai domanîya aye ya Kenya ra heta çiniştê daran û girewtişê Xelata Nobelî ya Aştîye bişopîne.",
+      "hac": "وانگاری ماتای جە مناڵیی کینیادا تا چانەی دار و بردنەوەی خەڵاتی نۆبڵی ئاشتی بشوێنە.",
+      "sdh": "وانگاری ماتای لە مناڵی لە کینیا هەتا چانن دار و بردن خەڵات نۆبڵ ئاشتی بناس."
     },
     "aliases": [
       "A Tiny Seed: The Story of Wangari Maathai",
@@ -2107,7 +2737,11 @@
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "licenseLabel": "CC BY 4.0",
     "readingLevel": "Level 3",
-    "pageCount": 12
+    "pageCount": 12,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 149,
@@ -2133,10 +2767,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0324/",
     "rtl": true,
     "desc": {
-      "en": "A young traveller leaves a familiar village for the city on a crowded bus, full of memories and questions."
+      "en": "A young traveller leaves a familiar village for the city on a crowded bus, full of memories and questions.",
+      "kmr": "Rêwiyekî ciwan ji gundê xwe bi otobuseke qerebalix ber bi bajêr diçe, bi bîranîn û pirsên pir.",
+      "ckb": "ڕێبوارێکی گەنج بە پاسێکی قەرەباڵغ گوندە ئاشناکەی بەرەو شار بەجێ دەهێڵێت، پڕ لە یادەوەری و پرسیار.",
+      "diq": "Rêwîyêko ciwan bi otobusêko qelebalix dewa xo ra şino şaristan, tijî bîranîn û persî.",
+      "hac": "ڕێبوارێکی گەنج وە پاسێکی قەرەباڵغ، دێی ئاشنای وێش پەی شار بەجێ مەهێڵۆ؛ پڕ وە یاد و پرسیار.",
+      "sdh": "ڕێبوارێگ گەنج وە پاسێگ قەرەباڵغ دێ خوەی وەلا شار جێ ئەهێڵێ؛ پڕ لە یاد و پرسیار."
     },
     "summary": {
-      "en": "A young traveller leaves a familiar village for the city on a crowded bus, full of memories and questions."
+      "en": "A young traveller leaves a familiar village for the city on a crowded bus, full of memories and questions.",
+      "kmr": "Rêwiyekî ciwan ji gundê xwe bi otobuseke qerebalix ber bi bajêr diçe, bi bîranîn û pirsên pir.",
+      "ckb": "ڕێبوارێکی گەنج بە پاسێکی قەرەباڵغ گوندە ئاشناکەی بەرەو شار بەجێ دەهێڵێت، پڕ لە یادەوەری و پرسیار.",
+      "diq": "Rêwîyêko ciwan bi otobusêko qelebalix dewa xo ra şino şaristan, tijî bîranîn û persî.",
+      "hac": "ڕێبوارێکی گەنج وە پاسێکی قەرەباڵغ، دێی ئاشنای وێش پەی شار بەجێ مەهێڵۆ؛ پڕ وە یاد و پرسیار.",
+      "sdh": "ڕێبوارێگ گەنج وە پاسێگ قەرەباڵغ دێ خوەی وەلا شار جێ ئەهێڵێ؛ پڕ لە یاد و پرسیار."
     },
     "aliases": [
       "The day I left home for the city",
@@ -2156,7 +2800,11 @@
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "licenseLabel": "CC BY 4.0",
     "readingLevel": "Level 3",
-    "pageCount": 16
+    "pageCount": 16,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 150,
@@ -2182,10 +2830,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0141/",
     "rtl": true,
     "desc": {
-      "en": "A football match between Chicken and Millipede takes an unexpected turn in this animal tale."
+      "en": "A football match between Chicken and Millipede takes an unexpected turn in this animal tale.",
+      "kmr": "Maçek fûtbolê di navbera Mirîşk û Hezarpê de di vê çîroka heywanan de bi awayekî nediyar diguhere.",
+      "ckb": "لە ئەم چیرۆکە ئاژەڵانەدا، یارییەکی تۆپی پێ لەنێوان مریشک و هەزارپێدا ئاراستەیەکی چاوەڕواننەکراو وەردەگرێت.",
+      "diq": "Na sanika heywanan de maçêko futbolî mabênê Kerg û Hezarpê de bi awayêko nehewnîyaye vurîyeno.",
+      "hac": "ئێ داستانەی ئاژەڵاندا، یاریی تۆپی پەی میان کەرگ و هەزارپەی ئاراستەێکی چاوەڕواننەکەراو مەگێرۆ.",
+      "sdh": "لە ئەی حیکایەت ئاژەڵەیلە، وازی فووتباڵ نێوان کەرگ و هەزارپا وە شێوەێگ چاوەڕوان نەکراو گۆڕێ."
     },
     "summary": {
-      "en": "A football match between Chicken and Millipede takes an unexpected turn in this animal tale."
+      "en": "A football match between Chicken and Millipede takes an unexpected turn in this animal tale.",
+      "kmr": "Maçek fûtbolê di navbera Mirîşk û Hezarpê de di vê çîroka heywanan de bi awayekî nediyar diguhere.",
+      "ckb": "لە ئەم چیرۆکە ئاژەڵانەدا، یارییەکی تۆپی پێ لەنێوان مریشک و هەزارپێدا ئاراستەیەکی چاوەڕواننەکراو وەردەگرێت.",
+      "diq": "Na sanika heywanan de maçêko futbolî mabênê Kerg û Hezarpê de bi awayêko nehewnîyaye vurîyeno.",
+      "hac": "ئێ داستانەی ئاژەڵاندا، یاریی تۆپی پەی میان کەرگ و هەزارپەی ئاراستەێکی چاوەڕواننەکەراو مەگێرۆ.",
+      "sdh": "لە ئەی حیکایەت ئاژەڵەیلە، وازی فووتباڵ نێوان کەرگ و هەزارپا وە شێوەێگ چاوەڕوان نەکراو گۆڕێ."
     },
     "aliases": [
       "Chicken and Millipede",
@@ -2205,7 +2863,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 3",
-    "pageCount": 12
+    "pageCount": 12,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 151,
@@ -2231,10 +2893,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0315/",
     "rtl": true,
     "desc": {
-      "en": "Sakima, a blind boy with a beautiful singing voice, offers comfort to a father whose son is missing."
+      "en": "Sakima, a blind boy with a beautiful singing voice, offers comfort to a father whose son is missing.",
+      "kmr": "Sakima, kurekî kor bi dengekî xweş, bi strana xwe teselliyê dide bavekî ku kurê wî winda ye.",
+      "ckb": "ساکیما، کوڕێکی نابینا بە دەنگێکی خۆش، دڵنەوایی باوکێک دەکات کە کوڕەکەی ون بووە.",
+      "diq": "Sakima, lacêko kor bi vengêko rind, bi deyîra xo teselî dano pîyêkî ke lacê ey vîndî biyo.",
+      "hac": "ساکیما، کوڕێکی نەوینا وە دەنگێکی وەش، دڵنەواییی باوێ مەکەرۆ کە کوڕەکەش ون بیەن.",
+      "sdh": "ساکیما، کوڕێگ ناوینا وە دەنگێگ خاس، دڵنەوایی باوگێگ کەی کە کوڕی ون بیە."
     },
     "summary": {
-      "en": "Sakima, a blind boy with a beautiful singing voice, offers comfort to a father whose son is missing."
+      "en": "Sakima, a blind boy with a beautiful singing voice, offers comfort to a father whose son is missing.",
+      "kmr": "Sakima, kurekî kor bi dengekî xweş, bi strana xwe teselliyê dide bavekî ku kurê wî winda ye.",
+      "ckb": "ساکیما، کوڕێکی نابینا بە دەنگێکی خۆش، دڵنەوایی باوکێک دەکات کە کوڕەکەی ون بووە.",
+      "diq": "Sakima, lacêko kor bi vengêko rind, bi deyîra xo teselî dano pîyêkî ke lacê ey vîndî biyo.",
+      "hac": "ساکیما، کوڕێکی نەوینا وە دەنگێکی وەش، دڵنەواییی باوێ مەکەرۆ کە کوڕەکەش ون بیەن.",
+      "sdh": "ساکیما، کوڕێگ ناوینا وە دەنگێگ خاس، دڵنەوایی باوگێگ کەی کە کوڕی ون بیە."
     },
     "aliases": [
       "Sakima's song",
@@ -2254,7 +2926,11 @@
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "licenseLabel": "CC BY 4.0",
     "readingLevel": "Level 3",
-    "pageCount": 18
+    "pageCount": 18,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 152,
@@ -2280,10 +2956,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0291/",
     "rtl": true,
     "desc": {
-      "en": "Vusi’s wedding gift goes wrong again and again, but his sister shows him what really matters."
+      "en": "Vusi’s wedding gift goes wrong again and again, but his sister shows him what really matters.",
+      "kmr": "Diyariya Vusi ya daweta xwişka wî car bi car xerab dibe, lê xwişka wî nîşan dide ka tiştê girîng çi ye.",
+      "ckb": "دیاریی هاوسەرگیریی ڤوسی جار بە جار تێک دەچێت، بەڵام خوشکەکەی نیشانی دەدات چی بەڕاستی گرنگە.",
+      "diq": "Diyarîya Vusi ya zewacê waya xo her rey xirab bena, la waya ey mojnena ke çi bi rastî muhîm o.",
+      "hac": "دیاریی زەماوەنی ڤوسی جار وە جار تێک مەچۆ؛ بەڵام واڵەکەش نیشانش مەدۆ چێش وەڕاستی گرنگەن.",
+      "sdh": "دیاری زەماوەن ڤوسی جار وە جار تێک چوو؛ بەڵام خوەیشگی نیشانی دەی چە وەڕاستی گرنگە."
     },
     "summary": {
-      "en": "Vusi’s wedding gift goes wrong again and again, but his sister shows him what really matters."
+      "en": "Vusi’s wedding gift goes wrong again and again, but his sister shows him what really matters.",
+      "kmr": "Diyariya Vusi ya daweta xwişka wî car bi car xerab dibe, lê xwişka wî nîşan dide ka tiştê girîng çi ye.",
+      "ckb": "دیاریی هاوسەرگیریی ڤوسی جار بە جار تێک دەچێت، بەڵام خوشکەکەی نیشانی دەدات چی بەڕاستی گرنگە.",
+      "diq": "Diyarîya Vusi ya zewacê waya xo her rey xirab bena, la waya ey mojnena ke çi bi rastî muhîm o.",
+      "hac": "دیاریی زەماوەنی ڤوسی جار وە جار تێک مەچۆ؛ بەڵام واڵەکەش نیشانش مەدۆ چێش وەڕاستی گرنگەن.",
+      "sdh": "دیاری زەماوەن ڤوسی جار وە جار تێک چوو؛ بەڵام خوەیشگی نیشانی دەی چە وەڕاستی گرنگە."
     },
     "aliases": [
       "What Vusi's sister said",
@@ -2303,7 +2989,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 4",
-    "pageCount": 13
+    "pageCount": 13,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 153,
@@ -2329,10 +3019,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0072/",
     "rtl": true,
     "desc": {
-      "en": "A honey-hunter refuses to share with the bird that helped him, and the bird teaches him a lesson."
+      "en": "A honey-hunter refuses to share with the bird that helped him, and the bird teaches him a lesson.",
+      "kmr": "Nêçîrvanekî hingiv çûkê ku alîkariya wî kiriye bêpar dihêle; çûk jî dersekê dide wî.",
+      "ckb": "ڕاوچییەکی هەنگوین بەشی ئەو باڵندەیە نادات کە یارمەتی داوە؛ باڵندەکەش دەرسێکی پێ دەدات.",
+      "diq": "Saykerêko hingivî teyrê ke ardimê ey kerdo bêpar verdano; teyr zî dersêk dano ey.",
+      "hac": "ڕاوچیی هەنگوین بەشی ئەو وەشکە مەدەیۆ کە یارمەتی دا؛ وەشکەش دەرسێش پێ مەدۆ.",
+      "sdh": "ڕاوچیێگ هەنگوین بەش باڵنەێگ نادەی کە یارمەتی داوە؛ باڵنەکەیش دەرسێگی پێ دەی."
     },
     "summary": {
-      "en": "A honey-hunter refuses to share with the bird that helped him, and the bird teaches him a lesson."
+      "en": "A honey-hunter refuses to share with the bird that helped him, and the bird teaches him a lesson.",
+      "kmr": "Nêçîrvanekî hingiv çûkê ku alîkariya wî kiriye bêpar dihêle; çûk jî dersekê dide wî.",
+      "ckb": "ڕاوچییەکی هەنگوین بەشی ئەو باڵندەیە نادات کە یارمەتی داوە؛ باڵندەکەش دەرسێکی پێ دەدات.",
+      "diq": "Saykerêko hingivî teyrê ke ardimê ey kerdo bêpar verdano; teyr zî dersêk dano ey.",
+      "hac": "ڕاوچیی هەنگوین بەشی ئەو وەشکە مەدەیۆ کە یارمەتی دا؛ وەشکەش دەرسێش پێ مەدۆ.",
+      "sdh": "ڕاوچیێگ هەنگوین بەش باڵنەێگ نادەی کە یارمەتی داوە؛ باڵنەکەیش دەرسێگی پێ دەی."
     },
     "aliases": [
       "The Honeyguide's revenge",
@@ -2352,7 +3052,11 @@
     "license": "https://creativecommons.org/licenses/by/3.0/",
     "licenseLabel": "CC BY 3.0",
     "readingLevel": "Level 4",
-    "pageCount": 11
+    "pageCount": 11,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 154,
@@ -2378,10 +3082,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0243/",
     "rtl": true,
     "desc": {
-      "en": "Odongo and Apiyo spend a school holiday helping their grandmother and exploring village life."
+      "en": "Odongo and Apiyo spend a school holiday helping their grandmother and exploring village life.",
+      "kmr": "Odongo û Apiyo di betlaneya dibistanê de alîkariya dapîra xwe dikin û jiyana gund nas dikin.",
+      "ckb": "ئۆدۆنگۆ و ئەپیۆ لە پشووی قوتابخانەدا یارمەتی داپیریان دەدەن و ژیانی گوند دەناسێن.",
+      "diq": "Odongo û Apiyo betlaneya mektebî de ardimê dapîra xo kenê û cuyê dewe nas kenê.",
+      "hac": "ئۆدۆنگۆ و ئەپیۆ پشووی قوتابخانەدا نەنگیان یارمەتی مەدۆن و ژیانی دێ مەناسۆن.",
+      "sdh": "ئۆدۆنگۆ و ئەپیۆ لە پشووی مەدرەسە یارمەتی نەنگیان دەن و ژیان دێ ناسن."
     },
     "summary": {
-      "en": "Odongo and Apiyo spend a school holiday helping their grandmother and exploring village life."
+      "en": "Odongo and Apiyo spend a school holiday helping their grandmother and exploring village life.",
+      "kmr": "Odongo û Apiyo di betlaneya dibistanê de alîkariya dapîra xwe dikin û jiyana gund nas dikin.",
+      "ckb": "ئۆدۆنگۆ و ئەپیۆ لە پشووی قوتابخانەدا یارمەتی داپیریان دەدەن و ژیانی گوند دەناسێن.",
+      "diq": "Odongo û Apiyo betlaneya mektebî de ardimê dapîra xo kenê û cuyê dewe nas kenê.",
+      "hac": "ئۆدۆنگۆ و ئەپیۆ پشووی قوتابخانەدا نەنگیان یارمەتی مەدۆن و ژیانی دێ مەناسۆن.",
+      "sdh": "ئۆدۆنگۆ و ئەپیۆ لە پشووی مەدرەسە یارمەتی نەنگیان دەن و ژیان دێ ناسن."
     },
     "aliases": [
       "Holidays with grandmother",
@@ -2401,7 +3115,11 @@
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "licenseLabel": "CC BY 4.0",
     "readingLevel": "Level 4",
-    "pageCount": 20
+    "pageCount": 20,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   },
   {
     "id": 155,
@@ -2427,10 +3145,20 @@
     "source": "https://www.storybookscanada.ca/stories/ckb/0262/",
     "rtl": true,
     "desc": {
-      "en": "Magozwe leaves a difficult home, lives on the streets and gradually finds support and a way back to school."
+      "en": "Magozwe leaves a difficult home, lives on the streets and gradually finds support and a way back to school.",
+      "kmr": "Magozwe ji maleke dijwar derdikeve û li kolanan dijî; hêdî hêdî piştgirî û rêya vegera dibistanê dibîne.",
+      "ckb": "ماگۆزوە ماڵێکی پڕ کێشە بەجێ دەهێڵێت و لە شەقامەکان دەژی؛ وردەوردە پشتگیری و ڕێگای گەڕانەوە بۆ قوتابخانە دەدۆزێتەوە.",
+      "diq": "Magozwe keyeyêko zehmet ra vejîyeno û kuçeyan de ciwîyeno; hêdî hêdî piştgirî û rayîrê ageyrayîşê mektebî vîneno.",
+      "hac": "ماگۆزوە یانەێکی پڕ گرفت بەجێ مەهێڵۆ و شەقامدا مەژیوۆ؛ هێواش هێواش پشتگیری و ڕێگای گەڕانەوەی قوتابخانە مەدۆزۆوە.",
+      "sdh": "ماگۆزوە ماڵێگ پڕ گرفت جێ ئەهێڵێ و لە شەقام ژی؛ هێدی هێدی پشتگیری و ڕێ گەڕانەوە وە مەدرەسە دۆزێەوە."
     },
     "summary": {
-      "en": "Magozwe leaves a difficult home, lives on the streets and gradually finds support and a way back to school."
+      "en": "Magozwe leaves a difficult home, lives on the streets and gradually finds support and a way back to school.",
+      "kmr": "Magozwe ji maleke dijwar derdikeve û li kolanan dijî; hêdî hêdî piştgirî û rêya vegera dibistanê dibîne.",
+      "ckb": "ماگۆزوە ماڵێکی پڕ کێشە بەجێ دەهێڵێت و لە شەقامەکان دەژی؛ وردەوردە پشتگیری و ڕێگای گەڕانەوە بۆ قوتابخانە دەدۆزێتەوە.",
+      "diq": "Magozwe keyeyêko zehmet ra vejîyeno û kuçeyan de ciwîyeno; hêdî hêdî piştgirî û rayîrê ageyrayîşê mektebî vîneno.",
+      "hac": "ماگۆزوە یانەێکی پڕ گرفت بەجێ مەهێڵۆ و شەقامدا مەژیوۆ؛ هێواش هێواش پشتگیری و ڕێگای گەڕانەوەی قوتابخانە مەدۆزۆوە.",
+      "sdh": "ماگۆزوە ماڵێگ پڕ گرفت جێ ئەهێڵێ و لە شەقام ژی؛ هێدی هێدی پشتگیری و ڕێ گەڕانەوە وە مەدرەسە دۆزێەوە."
     },
     "aliases": [
       "Magozwe",
@@ -2450,6 +3178,10 @@
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "licenseLabel": "CC BY 4.0",
     "readingLevel": "Level 5",
-    "pageCount": 16
+    "pageCount": 16,
+    "browseTags": [
+      "children",
+      "short"
+    ]
   }
 ]

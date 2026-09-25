@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240" viewBox="0 0 320 240" role="img" aria-labelledby="title desc">
+<title id="title">A recorded voice</title><desc id="desc">An original symbolic illustration of a record and a woven border. This is not a portrait.</desc>
+<rect width="320" height="240" rx="20" fill="#ede2d0"/>
+<circle cx="160" cy="112" r="82" fill="#132a43"/>
+<g fill="none" stroke="#f3ead9" stroke-width="1" opacity=".22"><circle cx="160" cy="112" r="72"/><circle cx="160" cy="112" r="63"/><circle cx="160" cy="112" r="54"/><circle cx="160" cy="112" r="45"/></g>
+<circle cx="160" cy="112" r="32" fill="#aa6047"/><path d="m160 86 26 26-26 26-26-26z" fill="#efbc5a"/><circle cx="160" cy="112" r="6" fill="#132a43"/>
+<g fill="none" stroke="#74432e" stroke-width="3"><path d="m20 214 14-14 14 14 14-14 14 14 14-14 14 14 14-14 14 14 14-14 14 14 14-14 14 14 14-14 14 14 14-14 14 14 14-14 14 14 14-14 14 14"/></g>
+<circle cx="40" cy="42" r="6" fill="#aa6047"/><circle cx="280" cy="42" r="6" fill="#aa6047"/>
+</svg>
