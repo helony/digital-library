@@ -21,3 +21,16 @@ Dengbêj recordings remain with their original publishers; the library provides 
 
 
 Dengbêj additions (2026-09-25): “Lor Loriyê”, performed by Dengbêj Apê Yusuf, Dengbêj Mukaddes and Aryen Kom, and “Mîr Mihemed”, performed by Dengbêj Ehmê, are embedded from KOM Müzik’s YouTube uploads. No recording or thumbnail is copied into this repository. Original publisher links remain visible. Embeds load only in Listen and are removed when leaving it.
+
+Additional Dengbêj recordings (2026-09-25), verified against YouTube publisher/channel metadata:
+
+| Recording | Performer | Publisher / channel | Original upload |
+|---|---|---|---|
+| Nemînim | Dengbêj Şakiro | Dengbêj Şakiro; Archive Vol. 1, Ses Media | https://www.youtube.com/watch?v=dBUeUVMeOxk |
+| Filîtê Quto | Karapetê Xaço | KOM Müzik | https://www.youtube.com/watch?v=fLu1TXl4qro |
+| Qederê | Ayşe Şan / Îsa Berwarî | SesMedia | https://www.youtube.com/watch?v=XTJRIK8F8gw |
+| Çiya Bilinde | Şeroyê Biro | SesMedia | https://www.youtube.com/watch?v=pEvwB-RAqQ4 |
+| Xumxume | Karapetê Xaço | KOM Müzik | https://www.youtube.com/watch?v=UOJrkbX4exM |
+| Du Sêvin Du Hinarin | Aryen Kom / Dengbêj Yusuf / Dengbêj Mukaddes | Aryen Kom - Topic; supplied by KOM Müzik | https://www.youtube.com/watch?v=bWp_ip5l9v4 |
+
+These use the same external-player and attribution approach above. The Şakiro Foundation also lists the Nemînim album and its publisher: https://dengbejsakirovakfi.org/dengbej-sakiro/yayimlanmis-albumler/neminim
