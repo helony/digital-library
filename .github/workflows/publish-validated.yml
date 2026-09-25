@@ -1,10 +1,17 @@
 name: Publish validated library
 
-# This stays manual until Settings > Pages > Source is GitHub Actions.
-# Once that source is configured, add a push trigger for main to enable
-# automatic publishing through these checks instead of the branch publisher.
+# Pages Source must remain GitHub Actions so every publication passes this gate.
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
+  # Archive commits use GITHUB_TOKEN, so their pushes do not start workflows.
+  workflow_run:
+    workflows:
+      - Archive eligible historical PDF scans
+      - Archive eligible Wikisource texts
+    types: [completed]
+    branches: [main]
 
 permissions:
   contents: read
@@ -15,6 +22,7 @@ concurrency:
 
 jobs:
   validate:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     permissions:
       contents: read
       pages: read
@@ -22,6 +30,9 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Include newly preserved files after a successful archive run.
+          ref: ${{ github.event_name == 'workflow_run' && 'main' || github.sha }}
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -50,9 +61,7 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Prepare static website
-        run: |
-          mkdir _site
-          rsync -a --exclude='.git/' --exclude='.github/' --exclude='_site/' --exclude='reports/' --exclude='tests/' --exclude='tools/' --exclude='node_modules/' ./ _site/
+        run: python3 tools/prepare_site.py
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

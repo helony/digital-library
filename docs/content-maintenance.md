@@ -28,10 +28,10 @@ Netlify builds now run the publication gate from `netlify.toml` and stop on any 
 
 ### GitHub Pages
 
-The current branch publisher and a new custom publisher must not run together. `publish-validated.yml` therefore initially has only a manual trigger.
+**Publish validated library** (`publish-validated.yml`) runs on every push to `main` and can also be started from **Actions → Publish validated library → Run workflow**. It runs the publication gate, stages the exact checked checkout with `tools/prepare_site.py`, and uploads that website as the Pages artifact. The deploy job depends on successful validation; a failed check prevents publication and leaves the existing site online.
 
-1. In the repository, open **Settings → Pages → Build and deployment → Source**, and choose **GitHub Actions**. The REST equivalent is `PUT /repos/helony/digital-library/pages` with `{"build_type":"workflow"}`.
-2. In `.github/workflows/publish-validated.yml`, add `push: {branches: [main]}` under `on`, keeping `workflow_dispatch`.
-3. Run **Publish validated library** once. Its deploy job runs only when publication checks pass, and publishes the exact checked checkout.
+Successful PDF or Wikisource archive runs on `main` also start this workflow. It checks the latest `main` checkout, including newly preserved files, before publishing. This separate completion trigger is needed because commits made with the archive workflows' `GITHUB_TOKEN` do not start push workflows. Failed archive runs do not start validation or deployment.
 
-Until that repository setting is changed, the automatic branch publisher does not wait for the new checks; use `bash tools/prepublish.sh` before pushing. See [GitHub's custom Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+Keep **Settings → Pages → Build and deployment → Source** set to **GitHub Actions**. Switching back to branch publishing bypasses this gate. Check the validation summary and retained `publication-checks` artifact when a run fails. After correcting the issue, push the fix or rerun the workflow.
+
+See [GitHub's custom Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).

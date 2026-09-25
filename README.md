@@ -14,7 +14,7 @@ A multilingual library connecting Kurdish books, stories, poetry, and recorded v
 
 ## Checks and maintenance
 
-See [docs/content-maintenance.md](docs/content-maintenance.md) for the source data, regeneration commands, local validation, weekly link audits and deployment gates. Netlify runs validation before deployment. The supplied GitHub Pages workflow can gate publishing after Pages is configured to use GitHub Actions; the current branch publisher does not wait for repository checks.
+See [docs/content-maintenance.md](docs/content-maintenance.md) for the source data, regeneration commands, local validation, weekly link audits and deployment gates. Netlify and GitHub Pages run validation before deployment. Every push to `main` starts **Publish validated library**; only a successfully checked website is published. Keep the Pages source set to **GitHub Actions**.
 
 ## Recommended workflow
 
