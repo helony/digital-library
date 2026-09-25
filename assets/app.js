@@ -95,6 +95,7 @@ function renderCatalogue(){
   $('#resultsCount').textContent=`${items.length} ${t('works')}`;
   const count=['variety','subject','script','format','availability'].filter(k=>state[k]!=='all').length;
   $('#filterCount').textContent=count;$('#filterCount').hidden=!count;
+  $('#readingStart').hidden=state.mode!=='all'||Boolean(state.q)||count>0;
   $('#clearFiltersButton').hidden=!count&&!state.q&&state.sort==='catalogue';
   $('#emptyState').hidden=items.length>0;
   $('#bookGrid').innerHTML=items.map(b=>{
@@ -221,6 +222,7 @@ function updateSectionControls(){const prev=$('#prevSection'),next=$('#nextSecti
 function goSection(delta){if(!readerSections.length)return;currentSection=Math.max(0,Math.min(readerSections.length-1,currentSection+delta));const section=readerSections[currentSection];const target=document.getElementById(section.anchor)||document.querySelector(`[id="${CSS.escape(section.anchor)}"]`);if(target)target.scrollIntoView({behavior:'smooth',block:'start'});updateSectionControls();}
 
 function initEvents(){
+  $$('[data-featured-read]').forEach(link=>link.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();openReader(bookBySlug(link.dataset.featuredRead))}));
   document.querySelector('.site-header a[href="#catalogue"]')?.addEventListener('click',()=>{if(!$('#detailsPage').hidden)closeDetails();setMode('all')});
   $('#searchInput').addEventListener('input',e=>startGlobalSearch(e.target.value)); $('#varietyFilter').addEventListener('change',e=>syncFilter('variety',e.target.value)); $('#subjectFilter').addEventListener('change',e=>syncFilter('subject',e.target.value)); $('#sortFilter').addEventListener('change',e=>syncFilter('sort',e.target.value)); $('#scriptFilter').addEventListener('change',e=>syncFilter('script',e.target.value)); $('#formatFilter').addEventListener('change',e=>syncFilter('format',e.target.value)); $('#availabilityFilter').addEventListener('change',e=>syncFilter('availability',e.target.value));
   $('#moreFiltersButton').addEventListener('click',()=>{const a=$('#advancedFilters'),open=a.hidden;a.hidden=!open;$('#moreFiltersButton').setAttribute('aria-expanded',String(open));$('#moreFiltersButton').querySelector('[data-i18n]').textContent=t('filters')});
@@ -234,6 +236,7 @@ function initEvents(){
 }
 
 function setMode(mode){
+ if(!$('#detailsPage').hidden)closeDetails();
  state.mode=mode;state.subject=mode==='stories'?'folklore':mode==='poetry'?'poetry':'all';state.format=mode==='pdf'?'pdf':'all';
  $('#subjectFilter').value=state.subject;$('#formatFilter').value=state.format;renderCatalogue();updateUrl();
 }
