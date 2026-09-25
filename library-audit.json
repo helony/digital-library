@@ -2,9 +2,9 @@
   "ok": 36,
   "missing": 0,
   "blocking_missing": 0,
-  "missing_scope": "wiki",
+  "missing_scope": "pdf",
   "checksum_mismatch": 0,
-  "manual_review": 34,
+  "manual_review": 45,
   "items": [
     {
       "kdl_id": "KDL-KMR-0001",
@@ -426,6 +426,61 @@
     {
       "kdl_id": "KDL-KMR-0058",
       "slug": "dara-hinare",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0059",
+      "slug": "girti-firat-ceweri",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0060",
+      "slug": "kevoka-spi-firat-ceweri",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0061",
+      "slug": "xezal-sima-semend",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0062",
+      "slug": "zaroka-seve-jack-london",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0063",
+      "slug": "seven-spi-dostoyevski",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0064",
+      "slug": "mirzaye-bicuk",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0065",
+      "slug": "smirnoff-mete",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0066",
+      "slug": "helin-baksi",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0067",
+      "slug": "mirina-kaleki-rind",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0068",
+      "slug": "labirenta-cinan",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-KMR-0069",
+      "slug": "lescot-contes-proverbes-enigmes-1940",
       "status": "manual_review"
     }
   ]
