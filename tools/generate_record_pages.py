@@ -29,6 +29,7 @@ RIGHTS={
   'rights_zazaki1899':'The 1899 historical work is public domain; the Wikisource transcription is available under CC BY-SA.',
   'rights_institutional_pdf':'This PDF is provided for reading by the Kurdish Institute of Paris. Copyright in the edition and translation may remain with their respective rights holders. The file is embedded from the institute; no redistribution permission is asserted.',
       'rights_institutional_reading':'This 1988 edition is available to read from the Kurdish Institute of Paris. Its modern rewritings may remain copyrighted; no permission to redistribute the PDF is asserted.',
+      'rights_cc_by_nc_reader':'An unmodified publisher PDF is provided here for noncommercial reading under CC BY-NC 4.0. Original attribution and license notices are retained. Individual images may have separate reuse terms.',
       'rights_cc_by_nc_external':'The publisher licenses the text under CC BY-NC 4.0. Some images have separate permissions; consult the publisher before reusing them. The PDF is linked from the publisher and is not mirrored here.'
 }
 
@@ -61,7 +62,7 @@ def main():
     for r in records:
         d=book_root/r['slug']; d.mkdir(parents=True,exist_ok=True)
         local=r.get('localPath') or 'manual review'
-        note=('This record is eligible for a library-hosted preservation copy. When the local archive file is present, the main reader prefers it over the external source.' if r.get('archiveEligible') else 'This publisher-hosted PDF is linked directly. Images within the book have separate permissions, so the full file is not mirrored here.' if r['rightsKey']=='rights_cc_by_nc_external' else 'This record is not automatically mirrored by the preservation tool. The rights status requires jurisdiction-specific or manual review.')
+        note=('An unmodified publisher PDF is hosted here for noncommercial reading under CC BY-NC 4.0. The original credits and license notices are retained.' if r['rightsKey']=='rights_cc_by_nc_reader' else 'This record is eligible for a library-hosted preservation copy. When the local archive file is present, the main reader prefers it over the external source.' if r.get('archiveEligible') else 'This publisher-hosted PDF is linked directly. Images within the book have separate permissions, so the full file is not mirrored here.' if r['rightsKey']=='rights_cc_by_nc_external' else 'This record is not automatically mirrored by the preservation tool. The rights status requires jurisdiction-specific or manual review.')
         schema={'@context':'https://schema.org','@type':'Book','name':r['title'],'author':{'@type':'Person','name':r['author']},'datePublished':str(r['yearSort']),'identifier':r['kdlId'],'inLanguage':r['v']}
         read_label='Read available section' if r['availability']=='partial' else 'Read PDF' if r['format']=='pdf' else 'Read now'
         download_url='../../'+r['localPath'] if r.get('archiveEligible') and r.get('localPath') else r['url']

@@ -32,7 +32,7 @@ const archiveBase = b => `books/${b.slug}`;
 const localPdfUrl = b => `${archiveBase(b)}/book.pdf`;
 const localTextUrl = b => `${archiveBase(b)}/content.html`;
 const archiveEligible = b => b.archiveEligible===true;
-async function urlExists(url){try{const r=await fetch(url,{method:'HEAD',cache:'no-store'});return r.ok}catch{return false}}
+async function urlExists(url,signal){try{await window.KDLReader.fetchText(url,{method:'HEAD',timeout:4000,signal});return true}catch{return false}}
 function normalizeText(value='') { return String(value).normalize('NFD').replace(/\p{Diacritic}/gu,'').replace(/[ıİ]/g,'i').replace(/[’'`´]/g,'').replace(/[^\p{L}\p{N}]+/gu,' ').trim().toLowerCase(); }
 function subjectLabel(v){return t(v)}
 function scriptLabel(v){return t(v)}
@@ -152,7 +152,7 @@ function startGlobalSearch(value){
   state.mode='all';syncFilter('q',value);
 }
 
-async function downloadBook(b){let target=b.url;if(archiveEligible(b)&&b.format==='pdf'&&await urlExists(localPdfUrl(b)))target=localPdfUrl(b);const a=document.createElement('a');a.href=target;a.target='_blank';a.rel='noopener';if(target.startsWith('books/'))a.download='';document.body.appendChild(a);a.click();a.remove();}
+async function downloadBook(b){let target=b.url;if(b.readerPath&&await urlExists(b.readerPath))target=b.readerPath;else if(archiveEligible(b)&&b.format==='pdf'&&await urlExists(localPdfUrl(b)))target=localPdfUrl(b);const a=document.createElement('a');a.href=target;a.target='_blank';a.rel='noopener';if(target.startsWith('books/'))a.download='';document.body.appendChild(a);a.click();a.remove();}
 
 let detailsFocus=null, catalogueScroll=0;
 function showDetails(slug,push=true){
@@ -184,38 +184,59 @@ function closeDialog(id){
 function trapSetup(container){const focusables=$$('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])',container).filter(x=>!x.disabled&&!x.hidden); if(!focusables.length)return; container.onkeydown=e=>{if(e.key==='Escape'){closeDialog(container.id);return} if(e.key!=='Tab')return; const first=focusables[0],last=focusables[focusables.length-1]; if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}}
 
 let readerBook=null, readerSections=[], currentSection=-1, readerFont=Number(localStorage.getItem('kdl_reader_font')||20), wideReader=localStorage.getItem('kdl_reader_wide')==='1';
+let readerController=null;
+function beginReaderLoad(){
+ readerController?.abort();
+ const controller=new AbortController();readerController=controller;
+ return {signal:controller.signal,current:()=>readerController===controller&&!controller.signal.aborted};
+}
 function applyReaderPrefs(){document.documentElement.style.setProperty('--reader-size',readerFont+'px');document.documentElement.style.setProperty('--reader-width',wideReader?'1040px':'780px')}
 let readerFocus=null;
 async function openReader(b,push=true){
  if(!b)return;
  if(b.format==='web'&&!b.localStory){location.href=b.url;return;}
- readerFocus=document.activeElement;readerBook=b;readerSections=[];currentSection=-1;
+ readerController?.abort();readerFocus=document.activeElement;readerBook=b;readerSections=[];currentSection=-1;
  $('#reader').hidden=false;$('#reader').classList.toggle('is-pdf',b.format==='pdf');document.body.classList.add('modal-open');
  $('#readerTitle').textContent=b.title;$('#readerSubtitle').textContent=b.author;
- $('#readerOriginal').href=b.source||b.url;$('#readerNav').hidden=true;$('#readerDownload').hidden=true;
+ $('#readerOriginal').href=b.source||b.url;$('#readerNav').hidden=true;$('#readerDownload').hidden=true;$('#readerContents').hidden=true;
  for(const id of ['fontDown','fontUp','readerWidth'])$('#'+id).hidden=b.format==='pdf';
- $('#readerContent').innerHTML=`<div class="reader-loading">${escapeHtml(t('loading'))}</div>`;$('#readerContent').scrollTop=0;
+ $('#readerContent').innerHTML=`<div class="reader-loading" role="status">${escapeHtml(t('loading'))}</div>`;$('#readerContent').scrollTop=0;
  $('#readerClose').focus();applyReaderPrefs();
- if(push){const u=new URL(location.href);u.searchParams.set('read',b.slug);history.pushState({read:b.slug},'',u);}
+ if(push){const u=new URL(location.href);u.searchParams.set('read',b.slug);u.searchParams.delete('chapter');history.pushState({read:b.slug},'',u);}
  if(b.format==='pdf'){
-   let readUrl=b.url;if(archiveEligible(b)&&await urlExists(localPdfUrl(b)))readUrl=localPdfUrl(b);
-   if(readerBook!==b)return;renderPdf(b,readUrl);
- }else if(b.localStory)await renderStory(b);else await renderWiki(b,b.wiki);
+   const load=beginReaderLoad();
+   let readUrl=b.url;const hosted=b.readerPath||(archiveEligible(b)?localPdfUrl(b):null);if(hosted&&await urlExists(hosted,load.signal))readUrl=hosted;
+   if(!load.current())return;renderPdf(b,readUrl);
+ }else if(b.localStory)await renderStory(b);else{
+   const chapter=new URL(location.href).searchParams.get('chapter');
+   const linked=chapter&&window.KDLReader.wikiLink('https://wikisource.org/wiki/'+encodeURIComponent(chapter),b.wiki);
+   await renderWiki(b,linked?.page||b.wiki);
+ }
 }
 function closeReader(update=true){
- $('#reader').hidden=true;document.body.classList.remove('modal-open');readerBook=null;readerSections=[];currentSection=-1;
- if(update){const u=new URL(location.href);u.searchParams.delete('read');history.replaceState({},'',u);}
+ readerController?.abort();readerController=null;
+ $('#reader').hidden=true;$('#readerContent').replaceChildren();document.body.classList.remove('modal-open');readerBook=null;readerSections=[];currentSection=-1;
+ if(update){const u=new URL(location.href);u.searchParams.delete('read');u.searchParams.delete('chapter');history.replaceState({},'',u);}
  readerFocus?.focus({preventScroll:true});
+}
+function renderReaderError(b,retry,sourceUrl=b.source||b.url){
+ $('#readerNav').hidden=true;
+ $('#readerContent').innerHTML=`<div class="reader-error" role="alert"><p>${escapeHtml(t('readerFailed'))}</p><div class="reader-recovery"><button class="primary-button" type="button" data-reader-retry>${escapeHtml(t('retryRead'))}</button><a class="secondary-button" href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(t('openOriginal'))} ↗</a></div></div>`;
+ $('[data-reader-retry]').addEventListener('click',retry);
 }
 function renderPdf(b,readUrl=b.url){
  const download=$('#readerDownload');download.href=readUrl;download.hidden=false;if(!readUrl.startsWith('books/')){download.target='_blank';download.rel='noopener'}else{download.removeAttribute('target');download.removeAttribute('rel')}
- $('#readerContent').innerHTML=`<div class="pdf-fallback"><a href="${escapeHtml(readUrl)}" target="_blank" rel="noopener">${escapeHtml(t('openFullScreen'))} ↗</a></div><iframe class="pdf-frame" title="${escapeHtml(b.title)} PDF" src="${escapeHtml(readUrl)}#page=${b.startPage||1}&view=FitH"></iframe>`;
+ $('#readerContent').innerHTML=`<div class="pdf-fallback"><span>${escapeHtml(t('pdfHelp'))}</span><a href="${escapeHtml(readUrl)}" target="_blank" rel="noopener">${escapeHtml(t('openFullScreen'))} ↗</a><button type="button" class="text-button" data-reader-retry>${escapeHtml(t('retryRead'))}</button></div><iframe class="pdf-frame" title="${escapeHtml(b.title)} PDF" src="${escapeHtml(readUrl)}#page=${b.startPage||1}&view=FitH"></iframe>`;
+ $('[data-reader-retry]').addEventListener('click',()=>renderPdf(b,readUrl));
+ $('.pdf-frame').addEventListener('error',()=>{if(readerBook===b)renderReaderError(b,()=>renderPdf(b,readUrl),readUrl)},{once:true});
 }
 async function renderStory(b){
+ const load=beginReaderLoad();
+ $('#readerContent').innerHTML=`<div class="reader-loading" role="status">${escapeHtml(t('loading'))}</div>`;
  try{
-  const response=await fetch(b.url);if(!response.ok)throw new Error('Story unavailable');
-  const doc=new DOMParser().parseFromString(await response.text(),'text/html');
-  if(readerBook!==b)return;
+  const html=await window.KDLReader.fetchText(b.url,{signal:load.signal});
+  if(!load.current())return;
+  const doc=new DOMParser().parseFromString(html,'text/html');
   const article=doc.querySelector('.story-reader');if(!article)throw new Error('Story text missing');
   article.querySelectorAll('script,style,iframe,object,embed,form,.reader-controls').forEach(el=>el.remove());
   article.querySelectorAll('*').forEach(el=>[...el.attributes].forEach(a=>{if(/^on/i.test(a.name))el.removeAttribute(a.name)}));
@@ -223,31 +244,76 @@ async function renderStory(b){
   article.querySelectorAll('img[src]').forEach(img=>{img.src=new URL(img.getAttribute('src'),new URL(b.url,location.href)).href});
   article.className='reader-article'+(article.querySelector('.illustrated-page')?' illustrated-story':'');article.dir=b.rtl?'rtl':'ltr';
   $('#readerContent').replaceChildren(article);
- }catch(error){if(readerBook!==b)return;$('#readerContent').innerHTML=`<div class="reader-error"><p>${escapeHtml(t('readerFailed'))}</p><a href="${escapeHtml(b.url)}">${escapeHtml(t('readNow'))} →</a></div>`;}
+ }catch(error){if(load.current())renderReaderError(b,()=>renderStory(b))}
 }
-async function renderWiki(b,page){
-  const sourceUrl=b.source||b.url;
-  if(archiveEligible(b)){try{const local=localTextUrl(b);const lr=await fetch(local,{cache:'no-store'});if(lr.ok){const html=await lr.text();if(readerBook!==b)return;$('#readerContent').innerHTML=(b.availability==='partial'?`<div class="partial-banner">${escapeHtml(t('partialNotice'))}</div>`:'')+`<article class="reader-article" dir="${b.rtl?'rtl':'ltr'}">${html}</article>`;try{const metaRes=await fetch(`${archiveBase(b)}/metadata.json`,{cache:'no-store'});if(metaRes.ok){const meta=await metaRes.json();if(readerBook===b)setReaderSections(meta.sections||[])}else if(readerBook===b)setReaderSections([])}catch{setReaderSections([])}return}}catch{}}
-  if(readerBook!==b)return;
-  $('#readerContent').innerHTML=(b.availability==='partial'?`<div class="partial-banner">${escapeHtml(t('partialNotice'))}</div>`:'')+`<div class="reader-loading"><div>${escapeHtml(t('loading'))}</div><p><a class="secondary-button" href="${sourceUrl}" target="_blank" rel="noopener">${escapeHtml(t('openOriginal'))} ↗</a></p></div>`;
-  const controller=new AbortController();
-  const timeout=setTimeout(()=>controller.abort(),12000);
+function openWikiChapter(b,page,hash=''){
+ const u=new URL(location.href);u.searchParams.set('read',b.slug);
+ if(window.KDLReader.normalizeWikiPage(page)===window.KDLReader.normalizeWikiPage(b.wiki))u.searchParams.delete('chapter');else u.searchParams.set('chapter',page);
+ history.pushState({read:b.slug},'',u);renderWiki(b,page,hash);
+}
+function bindWikiChapters(b,page){
+ $$('#readerContent a[href]').forEach(link=>{
+  const chapter=window.KDLReader.wikiLink(link.href,b.wiki);
+  if(!chapter)return;
+  // Keep a real, shareable URL for opening chapters in a new tab too.
+  const url=new URL(location.href);url.searchParams.set('read',b.slug);
+  if(chapter.page===window.KDLReader.normalizeWikiPage(b.wiki))url.searchParams.delete('chapter');else url.searchParams.set('chapter',chapter.page);
+  url.hash=chapter.hash;link.href=url.href;link.removeAttribute('target');link.removeAttribute('rel');
+  link.addEventListener('click',event=>{
+   if(event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
+   event.preventDefault();
+   if(chapter.page===window.KDLReader.normalizeWikiPage(page)&&chapter.hash){scrollToReaderAnchor(chapter.hash);return}
+   openWikiChapter(b,chapter.page,chapter.hash);
+  });
+ });
+}
+function scrollToReaderAnchor(hash){
+ if(!hash)return;
+ try{const target=document.getElementById(decodeURIComponent(hash.replace(/^#/,'')));if(target&&$('#readerContent').contains(target))target.scrollIntoView({block:'start'})}catch{}
+}
+async function renderWiki(b,page,hash=''){
+ const load=beginReaderLoad();
+ const atContents=window.KDLReader.normalizeWikiPage(page)===window.KDLReader.normalizeWikiPage(b.wiki);
+ const sourceUrl=atContents?(b.source||b.url):'https://wikisource.org/wiki/'+encodeURIComponent(page.replace(/ /g,'_'));
+ $('#readerContents').hidden=atContents;$('#readerContents').onclick=()=>openWikiChapter(b,b.wiki);
+ $('#readerOriginal').href=sourceUrl;$('#readerNav').hidden=true;readerSections=[];currentSection=-1;
+ $('#readerContent').scrollTop=0;
+ $('#readerContent').innerHTML=`<div class="reader-loading" role="status">${escapeHtml(t('loading'))}</div>`;
+ const showArticle=html=>{
+  $('#readerContent').innerHTML=(b.availability==='partial'?`<div class="partial-banner">${escapeHtml(t('partialNotice'))}</div>`:'')+`<article class="reader-article" dir="${b.rtl?'rtl':'ltr'}">${html}</article>`;
+  bindWikiChapters(b,page);scrollToReaderAnchor(hash||location.hash);
+ };
+ if(atContents&&archiveEligible(b)){
   try{
-    const api=`https://wikisource.org/w/api.php?action=parse&page=${encodeURIComponent(page)}&prop=text%7Csections%7Cdisplaytitle&format=json&origin=*`;
-    const res=await fetch(api,{signal:controller.signal,mode:'cors',credentials:'omit'});
-    clearTimeout(timeout);
-    if(!res.ok)throw new Error('HTTP '+res.status);
-    const data=await res.json();if(readerBook!==b)return; if(data.error)throw new Error(data.error.info||'Wikisource error');
-    const doc=new DOMParser().parseFromString(data.parse.text['*'],'text/html');
-    doc.querySelectorAll('script,style,iframe,object,embed,form,input,button,link,meta,.mw-editsection,.navbox,.metadata,.noprint,.catlinks,.printfooter,.sistersitebox,.ws-noexport').forEach(n=>n.remove());
-    doc.querySelectorAll('[style]').forEach(el=>{const s=el.getAttribute('style')||''; if(/position\s*:\s*(fixed|absolute)/i.test(s))el.removeAttribute('style')});
-    doc.querySelectorAll('*').forEach(el=>[...el.attributes].forEach(a=>{if(/^on/i.test(a.name)||['srcset','loading'].includes(a.name))el.removeAttribute(a.name)}));
-    doc.querySelectorAll('img').forEach(img=>{const src=img.getAttribute('src');if(src&&src.startsWith('//'))img.src='https:'+src});
-    doc.querySelectorAll('a').forEach(a=>{const href=a.getAttribute('href')||''; if(href.startsWith('/wiki/')){const raw=href.slice(6);a.href='https://wikisource.org/wiki/'+raw;a.target='_blank';a.rel='noopener';}});
-    const wrap=document.createElement('article');wrap.className='reader-article';wrap.dir=b.rtl?'rtl':'ltr';while(doc.body.firstChild)wrap.appendChild(doc.body.firstChild);
-    const content=$('#readerContent'); content.innerHTML=''; if(b.availability==='partial'){const note=document.createElement('div');note.className='partial-banner';note.textContent=t('partialNotice');content.appendChild(note)} content.appendChild(wrap);
-    setReaderSections(data.parse.sections||[]);
-  }catch(err){clearTimeout(timeout);if(readerBook!==b)return;$('#readerNav').hidden=true;$('#readerContent').innerHTML=`<div class="reader-error"><strong>${escapeHtml(t('readerFailed'))}</strong><p>${escapeHtml(t('readerFallback'))}</p><a class="primary-button" href="${sourceUrl}" target="_blank" rel="noopener">${escapeHtml(t('openOriginal'))} ↗</a></div>`;}
+   const html=await window.KDLReader.fetchText(localTextUrl(b),{signal:load.signal,timeout:6000});
+   if(!load.current())return;
+   showArticle(html);
+   try{
+    const meta=JSON.parse(await window.KDLReader.fetchText(`${archiveBase(b)}/metadata.json`,{signal:load.signal,timeout:4000}));
+    if(load.current())setReaderSections(meta.sections||[]);
+   }catch{}
+   return;
+  }catch{if(!load.current())return}
+ }
+ try{
+  const api=`https://wikisource.org/w/api.php?action=parse&page=${encodeURIComponent(page)}&prop=text%7Csections%7Cdisplaytitle&format=json&origin=*`;
+  const raw=await window.KDLReader.fetchText(api,{signal:load.signal});
+  if(!load.current())return;
+  const data=window.KDLReader.parseWikiResponse(raw);
+  if(data.error||!data.parse?.text?.['*'])throw new Error(data.error?.info||'Wikisource text missing');
+  const doc=new DOMParser().parseFromString(data.parse.text['*'],'text/html');
+  doc.querySelectorAll('script,style,iframe,object,embed,form,input,button,link,meta,.mw-editsection,.navbox,.metadata,.noprint,.catlinks,.printfooter,.sistersitebox,.ws-noexport').forEach(n=>n.remove());
+  doc.querySelectorAll('[style]').forEach(el=>{const s=el.getAttribute('style')||'';if(/position\s*:\s*(fixed|absolute)/i.test(s))el.removeAttribute('style')});
+  doc.querySelectorAll('*').forEach(el=>[...el.attributes].forEach(a=>{if(/^on/i.test(a.name)||['srcset','loading'].includes(a.name))el.removeAttribute(a.name)}));
+  doc.querySelectorAll('img[src]').forEach(img=>{img.src=new URL(img.getAttribute('src'),sourceUrl).href});
+  doc.querySelectorAll('a[href]').forEach(link=>{
+   const href=link.getAttribute('href');
+   if(href.startsWith('#'))return;
+   const url=new URL(href,sourceUrl);if(!['https:','http:'].includes(url.protocol)){link.removeAttribute('href');return}
+   link.href=url.href;link.target='_blank';link.rel='noopener';
+  });
+  showArticle(doc.body.innerHTML);setReaderSections(data.parse.sections||[]);
+ }catch(error){if(load.current())renderReaderError(b,()=>renderWiki(b,page,hash),sourceUrl)}
 }
 function setReaderSections(sections){readerSections=sections.filter(s=>s.anchor&&s.line).map(s=>({anchor:s.anchor,title:s.line.replace(/<[^>]+>/g,'')}));currentSection=readerSections.length?0:-1;setupSectionNav()}
 function setupSectionNav(){const nav=$('#readerNav');if(!readerSections.length){nav.hidden=true;return}nav.hidden=false;updateSectionControls();}

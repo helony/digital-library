@@ -34,3 +34,10 @@ Object.assign(window.KDL_INTERFACE.en,{seeAllDengbej:'See all Dengbêj',showLess
 Object.assign(window.KDL_INTERFACE.kmr,{seeAllDengbej:'Hemû dengbêjan bibîne',showLessDengbej:'Kêmtir nîşan bide'});
 Object.assign(window.KDL_INTERFACE.ckb,{seeAllDengbej:'هەموو دەنگبێژەکان ببینە',showLessDengbej:'کەمتر پیشان بدە'});
 Object.assign(window.KDL_INTERFACE.diq,{seeAllDengbej:'Hemû dengbêjan bivîne',showLessDengbej:'Tayêr nîşan bide'});
+
+Object.assign(window.KDL_INTERFACE.en,{retryRead:'Try again',bookContents:'Contents',pdfHelp:'PDF not showing?'});
+Object.assign(window.KDL_INTERFACE.kmr,{retryRead:'Dîsa biceribîne',bookContents:'Naverok',pdfHelp:'PDF nayê xuyakirin?'});
+Object.assign(window.KDL_INTERFACE.ckb,{retryRead:'دووبارە هەوڵ بدە',bookContents:'ناوەڕۆک',pdfHelp:'PDF دەرناکەوێت؟'});
+Object.assign(window.KDL_INTERFACE.diq,{retryRead:'Reyna biceribne',bookContents:'Naverok',pdfHelp:'PDF nêaseno?'});
+
+Object.assign(window.KDL_INTERFACE.en,{rights_cc_by_nc_reader:'An unmodified publisher PDF is provided here for noncommercial reading under CC BY-NC 4.0. Original attribution and license notices are retained. Individual images may have separate reuse terms.'});

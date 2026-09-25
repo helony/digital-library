@@ -5,6 +5,8 @@ on:
     paths:
       - .github/workflows/archive-pdfs.yml
       - archive-manifest.json
+      - data/licensed-reader-copies.json
+      - tools/preserve_licensed_books.py
   workflow_dispatch:
 
 permissions:
@@ -25,6 +27,7 @@ jobs:
       - name: Save eligible PDFs and verify checksums
         run: |
           python3 tools/archive_books.py --format=pdf
+          python3 tools/preserve_licensed_books.py
           python3 tools/verify_library.py
       - name: Commit local preservation copies
         run: |
