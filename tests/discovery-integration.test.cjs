@@ -11,7 +11,7 @@ const SITE = 'https://helony.github.io/digital-library/';
 
 // Run the real page, data, event handlers and renderer. Only external reader
 // requests and the PDF canvas renderer are substituted; no browser is needed.
-function createApp({query = '?lang=en', shelf, locale = 'en'} = {}) {
+function createApp({query = '?lang=en', shelf, locale = 'en', nativePdf = false} = {}) {
   const errors = [];
   const console = new VirtualConsole();
   console.on('jsdomError', error => errors.push(error));
@@ -57,6 +57,7 @@ function createApp({query = '?lang=en', shelf, locale = 'en'} = {}) {
   window.KDLPdfReader = {
     async open(options) {
       pdfCalls.push(options);
+      if (nativePdf) { options.onFallback();return {destroy() {}}; }
       options.container.innerHTML = '<p data-mock-pdf>PDF canvas substitute</p>';
       options.onProgress({page: options.initialPage, totalPages: 1000});
       return {destroy() {}};
@@ -214,6 +215,106 @@ test('single-page preserved poetry resumes its saved position after reopening', 
     app.click('#continueGrid [data-related-read="zembilfiros"]');
     await settled();
     assert.equal(app.query('#readerContent').scrollTop, 600);
+    noErrors(app);
+  } finally { app.close(); }
+});
+
+test('finished and removed books stay off Continue reading after reload, with progress and saved books intact', async () => {
+  for (const [action, status] of [['data-finish-book', 'finished'], ['data-remove-continue', 'dismissed']]) {
+    const progress = {format: 'text', ratio: 1, chapter: '', updated: 1};
+    const app = createApp({shelf: {saved: {zembilfiros: 1}, progress: {zembilfiros: progress}}});
+    let reloaded;
+    try {
+      assert.ok(app.query('#continueGrid [data-related-read="zembilfiros"]'), '100% of a section must not finish a book automatically');
+      assert.equal(app.query('#continueNotice').hidden, true);
+      app.click('[' + action + '="zembilfiros"]');
+      assert.equal(app.query('#reader').hidden, true, 'Action must not open the reader');
+      assert.equal(app.all('#continueGrid .continue-card').length, 0);
+      assert.equal(app.query('#continueNotice').hidden, false);
+      assert.equal(app.document.activeElement, app.query('#continueUndo'));
+      assert.equal(app.shelf().progress.zembilfiros.status, status);
+      assert.equal(app.shelf().progress.zembilfiros.ratio, 1);
+      assert.equal(app.shelf().saved.zembilfiros, 1);
+      reloaded = createApp({shelf: app.shelf()});
+      assert.equal(reloaded.query('#continueReading').hidden, true);
+      assert.equal(reloaded.query('#readingStart').hidden, false);
+      reloaded.click('#bookGrid .read-book[data-slug="zembilfiros"]');
+      await settled();
+      assert.equal(reloaded.query('#readerContent').scrollTop, 1500);
+      reloaded.click('#readerClose');
+      assert.ok(reloaded.query('#continueGrid [data-related-read="zembilfiros"]'));
+      assert.equal(reloaded.shelf().progress.zembilfiros.status, 'reading');
+      app.click('#continueUndo');
+      assert.deepEqual(app.shelf().progress.zembilfiros, progress);
+      assert.equal(app.query('#continueNotice').hidden, true);
+      assert.equal(app.document.activeElement, app.query('[' + action + '="zembilfiros"]'));
+      noErrors(app);noErrors(reloaded);
+    } finally { app.close();reloaded?.close(); }
+  }
+});
+
+test('hidden history does not fill the three-card limit, and reading again clears stale Undo', async () => {
+  const progress = {
+    'mem-u-zin': {format: 'text', ratio: 0.8, status: 'finished', updated: 5},
+    'story-mame-alan': {format: 'text', ratio: 0.3, status: 'dismissed', updated: 4},
+    zembilfiros: {format: 'text', ratio: 0.5, updated: 3},
+    'diwana-melaye-ciziri': {format: 'text', ratio: 0.4, updated: 2},
+    'story-siyabend-u-xece': {format: 'text', ratio: 0.2, updated: 1},
+  };
+  const app = createApp({shelf: {saved: {}, progress}});
+  try {
+    assert.equal(app.all('#continueGrid .continue-card').length, 3);
+    app.click('[data-remove-continue="zembilfiros"]');
+    app.click('#bookGrid .read-book[data-slug="zembilfiros"]');
+    await settled();
+    app.query('#readerContent').scrollTop = 1200;
+    app.click('#readerClose');
+    assert.equal(app.query('#continueNotice').hidden, true);
+    assert.equal(app.shelf().progress.zembilfiros.ratio, 0.8);
+    app.click('#continueUndo');
+    assert.equal(app.shelf().progress.zembilfiros.ratio, 0.8);
+    noErrors(app);
+  } finally { app.close(); }
+});
+
+test('PDF completion and Undo keep its page, and continue actions translate in RTL', async () => {
+  const app = createApp();
+  try {
+    const book = app.window.KDL_BOOKS.find(record => record.readerPath && record.format === 'pdf');
+    app.input('#searchInput', book.slug);
+    app.click('#bookGrid .read-book');
+    await settled();
+    app.pdfCalls.at(-1).onProgress({page: 17, totalPages: 1000});
+    app.click('#readerClose');
+    app.input('#searchInput', '');
+    app.click('#languageButton');
+    app.click('#languageGrid [data-locale="ckb"]');
+    const finish = app.query('#continueGrid [data-finish-book]');
+    assert.notEqual(finish.textContent, 'Mark as finished');
+    app.click(finish);
+    assert.equal(app.shelf().progress[book.slug].status, 'finished');
+    assert.ok(app.query('#continueNoticeText').textContent.includes(book.title));
+    assert.notEqual(app.query('#continueUndo').textContent, 'Undo');
+    app.click('#continueUndo');
+    app.click('#continueGrid [data-related-read]');
+    await settled();
+    assert.equal(app.pdfCalls.at(-1).initialPage, 17);
+    noErrors(app);
+  } finally { app.close(); }
+});
+
+test('reopening a removed PDF also restores Continue reading when using the native fallback', async () => {
+  const app = createApp({nativePdf: true, shelf: {saved: {}, progress: {
+    'makas-kurdische-studien-1900': {format: 'pdf', page: 17, totalPages: 100, status: 'dismissed', updated: 1},
+  }}});
+  try {
+    assert.equal(app.query('#continueReading').hidden, true);
+    app.click('#bookGrid .read-book[data-slug="makas-kurdische-studien-1900"]');
+    await settled();
+    assert.ok(app.query('#readerContent .pdf-frame').src.includes('#page=17'));
+    app.click('#readerClose');
+    assert.ok(app.query('#continueGrid [data-related-read="makas-kurdische-studien-1900"]'));
+    assert.equal(app.shelf().progress['makas-kurdische-studien-1900'].status, 'reading');
     noErrors(app);
   } finally { app.close(); }
 });

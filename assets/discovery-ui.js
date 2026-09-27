@@ -86,8 +86,10 @@ function updateSaveButton(button,b){const saved=!!personalShelf.saved[b.slug];bu
 function toggleSave(slug){const b=bookBySlug(slug);if(!b)return;if(personalShelf.saved[slug])delete personalShelf.saved[slug];else personalShelf.saved[slug]=Date.now();persistShelf();$$('[data-save]').filter(button=>button.dataset.save===slug).forEach(button=>updateSaveButton(button,b));if(state.browse==='saved')renderCatalogue()}
 function saveProgress(b,progress){
  if(!b?.slug)return;
- personalShelf.progress[b.slug]={...personalShelf.progress[b.slug],...progress,updated:Date.now()};persistShelf();
+ if(continueUndo?.slug===b.slug)continueUndo=null;
+ personalShelf.progress[b.slug]={...personalShelf.progress[b.slug],...progress,status:'reading',updated:Date.now()};persistShelf();
 }
+let continueUndo=null;
 function captureTextProgress(){
  if(!readerBook||readerBook.format==='pdf'||restoringProgress||!$('#readerContent .reader-article'))return;
  const el=$('#readerContent');const ratio=Math.max(0,Math.min(1,el.scrollTop/Math.max(1,el.scrollHeight-el.clientHeight)));
@@ -104,9 +106,24 @@ function restoreTextProgress(b,chapter=''){
   restoringProgress=false;saveProgress(b,{format:'text',chapter:normalized,ratio});
  });
 }
+function dismissContinueReading(slug,status){
+ const b=bookBySlug(slug),progress=personalShelf.progress[slug];
+ if(!b||!progress||!['finished','dismissed'].includes(status))return;
+ continueUndo={slug,progress:{...progress},status};
+ personalShelf.progress[slug]={...progress,status};persistShelf();renderCatalogue();
+ $('#continueUndo').focus({preventScroll:true});
+}
+function undoContinueReading(){
+ if(!continueUndo)return;
+ const {slug,progress,status}=continueUndo;
+ personalShelf.progress[slug]=progress;continueUndo=null;persistShelf();renderCatalogue();
+ $$(status==='finished'?'[data-finish-book]':'[data-remove-continue]',$('#continueGrid')).find(button=>(button.dataset.finishBook||button.dataset.removeContinue)===slug)?.focus({preventScroll:true});
+}
 function renderContinueReading(){
- const recent=Object.entries(personalShelf.progress).sort((a,b)=>b[1].updated-a[1].updated).map(([slug,progress])=>({b:bookBySlug(slug),progress})).filter(x=>x.b).slice(0,3);
- $('#continueReading').hidden=!recent.length||!!state.q||state.mode==='voices'||state.browse!=='all';
+ const recent=Object.entries(personalShelf.progress).filter(([,progress])=>progress&&!['finished','dismissed'].includes(progress.status)).sort((a,b)=>b[1].updated-a[1].updated).map(([slug,progress])=>({b:bookBySlug(slug),progress})).filter(x=>x.b).slice(0,3);
+ $('#continueReading').hidden=(!recent.length&&!continueUndo)||!!state.q||state.mode==='voices'||state.browse!=='all';
+ $('#continueNotice').hidden=!continueUndo;
+ $('#continueNoticeText').textContent=continueUndo?t(continueUndo.status==='finished'?'finishedNotice':'removedNotice').replace('{title}',bookBySlug(continueUndo.slug)?.title||''):'';
  $('#continueGrid').innerHTML=recent.map(({b,progress})=>{
   const page=Number(progress.page),total=Number(progress.totalPages||b.pageCount);
   const pdf=(progress.format||b.format)==='pdf';
@@ -119,7 +136,7 @@ function renderContinueReading(){
    label=t('sectionProgress').replace('{percent}',value);
   }
   const cover=b.preview||`assets/motifs/${motifFor(b)}.svg`;
-  return `<a class="continue-item" href="${escapeHtml(readingUrl(b))}" data-related-read="${escapeHtml(b.slug)}"><span class="continue-cover tone-${escapeHtml(b.tone||'blue')}${b.preview?' has-scan':''}" aria-hidden="true"><img src="${escapeHtml(cover)}" alt="" loading="lazy"></span><span class="continue-copy"><strong class="continue-title" dir="auto">${escapeHtml(b.title)}</strong><span class="continue-author" dir="auto">${escapeHtml(b.author||'')}</span>${label?`<span class="continue-progress-label">${escapeHtml(label)}</span>`:''}${value!==null?`<progress class="continue-progress" max="100" value="${value}" aria-label="${escapeHtml(t('readingProgress'))}" aria-valuetext="${escapeHtml(label)}"></progress>`:''}<span class="continue-resume">${escapeHtml(t('resume'))} <span aria-hidden="true">→</span></span></span></a>`;
+  return `<article class="continue-card"><a class="continue-item" href="${escapeHtml(readingUrl(b))}" data-related-read="${escapeHtml(b.slug)}"><span class="continue-cover tone-${escapeHtml(b.tone||'blue')}${b.preview?' has-scan':''}" aria-hidden="true"><img src="${escapeHtml(cover)}" alt="" loading="lazy"></span><span class="continue-copy"><strong class="continue-title" dir="auto">${escapeHtml(b.title)}</strong><span class="continue-author" dir="auto">${escapeHtml(b.author||'')}</span>${label?`<span class="continue-progress-label">${escapeHtml(label)}</span>`:''}${value!==null?`<progress class="continue-progress" max="100" value="${value}" aria-label="${escapeHtml(t('readingProgress'))}" aria-valuetext="${escapeHtml(label)}"></progress>`:''}<span class="continue-resume">${escapeHtml(t('resume'))} <span aria-hidden="true">→</span></span></span></a><div class="continue-actions"><button type="button" data-finish-book="${escapeHtml(b.slug)}" aria-label="${escapeHtml(t('markFinished')+': '+b.title)}">${escapeHtml(t('markFinished'))}</button><button type="button" data-remove-continue="${escapeHtml(b.slug)}" aria-label="${escapeHtml(t('removeFromContinue')+': '+b.title)}">${escapeHtml(t('removeFromContinue'))}</button></div></article>`;
  }).join('');bindDiscoveryActions($('#continueReading'));
 }
 async function renderPdf(b,url){
@@ -138,6 +155,8 @@ function openProblemReport(item){
 function bindDiscoveryActions(root){
  const bind=(selector,event,handler)=>$$(selector,root).forEach(el=>{if(el.dataset.bound)return;el.dataset.bound='1';el.addEventListener(event,handler)});
  bind('[data-save]','click',e=>toggleSave(e.currentTarget.dataset.save));
+ bind('[data-finish-book]','click',e=>dismissContinueReading(e.currentTarget.dataset.finishBook,'finished'));
+ bind('[data-remove-continue]','click',e=>dismissContinueReading(e.currentTarget.dataset.removeContinue,'dismissed'));
  bind('[data-download]','click',e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();downloadBook(bookBySlug(e.currentTarget.dataset.download))});
  bind('[data-performer]','click',e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();showPerformer(e.currentTarget.dataset.performer)});
  bind('[data-performer-back]','click',()=>{state.performer='';$('#dengbejSearch').value='';renderCatalogue();updateUrl()});
@@ -148,6 +167,7 @@ function bindDiscoveryActions(root){
  bind('[data-play]','click',e=>{const r=recordingById(e.currentTarget.dataset.play);const frame=document.createElement('iframe');frame.src=r.embedUrl;frame.title=localized(r.titleTranslations||r.title);frame.allow='encrypted-media; picture-in-picture; fullscreen';frame.allowFullscreen=true;frame.referrerPolicy='strict-origin-when-cross-origin';e.currentTarget.replaceWith(frame);frame.focus()});
 }
 function initDiscoveryEvents(){
+ $('#continueUndo').addEventListener('click',undoContinueReading);
  $$('[data-browse]').forEach(button=>button.addEventListener('click',()=>{const browse=button.dataset.browse;setMode('all');state.browse=browse;state.limit=24;renderCatalogue();updateUrl()}));
  $('#loadMoreBooks').addEventListener('click',()=>{const oldCount=$$('#bookGrid .book-card').length;state.limit+=24;renderCatalogue();$$('#bookGrid .cover')[oldCount]?.focus({preventScroll:true})});
  $('#readerSave').addEventListener('click',()=>readerBook&&toggleSave(readerBook.slug));

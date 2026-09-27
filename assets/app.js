@@ -195,6 +195,7 @@ async function openReader(b,push=true){
  if(!b)return;
  if(b.format==='web'&&!b.localStory){location.href=b.url;return;}
  captureTextProgress();pdfSession?.destroy?.();pdfSession=null;readerController?.abort();readerFocus=document.activeElement;readerBook=b;readerSections=[];currentSection=-1;
+ if(['finished','dismissed'].includes(personalShelf.progress[b.slug]?.status))saveProgress(b,{});
  $('#reader').hidden=false;$('#reader').classList.toggle('is-pdf',b.format==='pdf');document.body.classList.add('modal-open');
  $('#readerSave').dataset.save=b.slug;updateSaveButton($('#readerSave'),b);
  $('#readerRelated').hidden=!MEDIA.recordings.some(r=>(r.relatedBooks||[]).includes(b.slug));
