@@ -107,7 +107,20 @@ function restoreTextProgress(b,chapter=''){
 function renderContinueReading(){
  const recent=Object.entries(personalShelf.progress).sort((a,b)=>b[1].updated-a[1].updated).map(([slug,progress])=>({b:bookBySlug(slug),progress})).filter(x=>x.b).slice(0,3);
  $('#continueReading').hidden=!recent.length||!!state.q||state.mode==='voices'||state.browse!=='all';
- $('#continueGrid').innerHTML=recent.map(({b,progress})=>`<a class="continue-item" href="${escapeHtml(readingUrl(b))}" data-related-read="${b.slug}"><strong dir="auto">${escapeHtml(b.title)}</strong><span>${escapeHtml(progress.page?t('page')+' '+progress.page:t('resume'))} →</span></a>`).join('');bindDiscoveryActions($('#continueReading'));
+ $('#continueGrid').innerHTML=recent.map(({b,progress})=>{
+  const page=Number(progress.page),total=Number(progress.totalPages||b.pageCount);
+  const pdf=(progress.format||b.format)==='pdf';
+  let label='',value=null;
+  if(pdf&&Number.isInteger(page)&&page>0){
+   label=t('page')+' '+page;
+   if(Number.isInteger(total)&&total>=page){label+=' '+t('of')+' '+total;value=page/total*100}
+  }else if(!pdf&&Number.isFinite(progress.ratio)){
+   value=Math.round(Math.max(0,Math.min(1,progress.ratio))*100);
+   label=t('sectionProgress').replace('{percent}',value);
+  }
+  const cover=b.preview||`assets/motifs/${motifFor(b)}.svg`;
+  return `<a class="continue-item" href="${escapeHtml(readingUrl(b))}" data-related-read="${escapeHtml(b.slug)}"><span class="continue-cover tone-${escapeHtml(b.tone||'blue')}${b.preview?' has-scan':''}" aria-hidden="true"><img src="${escapeHtml(cover)}" alt="" loading="lazy"></span><span class="continue-copy"><strong class="continue-title" dir="auto">${escapeHtml(b.title)}</strong><span class="continue-author" dir="auto">${escapeHtml(b.author||'')}</span>${label?`<span class="continue-progress-label">${escapeHtml(label)}</span>`:''}${value!==null?`<progress class="continue-progress" max="100" value="${value}" aria-label="${escapeHtml(t('readingProgress'))}" aria-valuetext="${escapeHtml(label)}"></progress>`:''}<span class="continue-resume">${escapeHtml(t('resume'))} <span aria-hidden="true">→</span></span></span></a>`;
+ }).join('');bindDiscoveryActions($('#continueReading'));
 }
 async function renderPdf(b,url){
  pdfSession?.destroy?.();pdfSession=null;

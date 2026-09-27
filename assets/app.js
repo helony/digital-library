@@ -113,7 +113,7 @@ function renderCatalogue(){
   const count=['subject','script','format','availability'].filter(k=>state[k]!=='all').length;
   const narrowed=count>0||state.variety!=='all';
   $('#filterCount').textContent=count;$('#filterCount').hidden=!count;
-  $('#readingStart').hidden=state.mode!=='all'||Boolean(state.q)||narrowed||state.browse!=='all';
+  $('#readingStart').hidden=state.mode!=='all'||Boolean(state.q)||narrowed||state.browse!=='all'||!$('#continueReading').hidden;
   $('#clearFiltersButton').hidden=!narrowed&&!state.q&&state.sort==='catalogue'&&state.browse==='all';
   $('#emptyState').hidden=items.length>0||(!!state.q&&searchRecordings(state.q).length>0);
   $('#loadMoreBooks').hidden=items.length<=state.limit;
