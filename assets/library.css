@@ -32,7 +32,7 @@
 .library-home .advanced-filters{padding:22px;background:#ede8df;border-radius:16px;margin-bottom:24px;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .library-home .field{font-size:15px;gap:8px}
 .library-home .field select{font-size:16px;min-height:48px;border-color:#cfc5b7}
-.shelf-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 24px}
+.shelf-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 12px}
 .shelf-heading h2{font:700 28px/1.25 Georgia,serif;margin:0}
 .shelf-heading>div{display:flex;align-items:center;gap:16px}
 #resultsCount{color:#656b70;font-size:15px;font-weight:400}
@@ -122,6 +122,7 @@
 /* A small editorial welcome, with direct routes into the collection. */
 .reading-start{display:grid;grid-template-columns:.85fr 1fr 1fr;align-items:center;background:#15263e;color:#fff7e9;border-radius:10px;margin:0 0 24px;padding:20px 24px;gap:20px;border-bottom:4px solid #a5784c;box-shadow:0 12px 28px #15263e10}
 .reading-start[hidden]{display:none}
+.library-home #bookGrid>.reading-start{grid-column:1/-1;margin:0;min-width:0}
 .reading-start-intro h2{font:700 29px/1.2 Georgia,serif;margin:0 0 9px;color:#fff7e9;text-wrap:balance}
 .reading-start-intro p{font-size:16px;line-height:1.5;margin:0;color:#d9d3c9;max-width:220px}
 .reading-pick{display:flex;align-items:center;gap:16px;min-height:100px;padding:8px 0 8px 24px;border-inline-start:1px solid #ffffff30;color:#fff7e9;text-decoration:none;border-radius:0;transition:background .15s ease}
@@ -227,7 +228,7 @@
 .library-home .pdf-fallback .text-button{min-height:36px;padding:4px 8px}
 
 /* Reading, listening and a browser-local shelf. */
-.browse-choices{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.browse-choices{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 24px}
 .browse-choices button{border:1px solid #d8c9b7;border-radius:999px;padding:11px 18px;min-height:44px;font-family:inherit;font-weight:600;font-size:16px;line-height:1.3;color:#15263e;background:#fffaf1;cursor:pointer}
 .browse-choices button[aria-pressed=true]{background:#15263e;color:#fff8e8;border-color:#15263e}
 .save-book{border:0;background:transparent;color:#77593c;font-size:26px;min-width:44px;min-height:44px;cursor:pointer;border-radius:8px}

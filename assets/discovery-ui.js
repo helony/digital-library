@@ -168,7 +168,7 @@ function bindDiscoveryActions(root){
 }
 function initDiscoveryEvents(){
  $('#continueUndo').addEventListener('click',undoContinueReading);
- $$('[data-browse]').forEach(button=>button.addEventListener('click',()=>{const browse=button.dataset.browse;setMode('all');state.browse=browse;state.limit=24;renderCatalogue();updateUrl()}));
+ $$('[data-browse]').forEach(button=>button.addEventListener('click',()=>{const browse=state.browse===button.dataset.browse?'all':button.dataset.browse;setMode('all');state.browse=browse;state.limit=24;renderCatalogue();updateUrl()}));
  $('#loadMoreBooks').addEventListener('click',()=>{const oldCount=$$('#bookGrid .book-card').length;state.limit+=24;renderCatalogue();$$('#bookGrid .cover')[oldCount]?.focus({preventScroll:true})});
  $('#readerSave').addEventListener('click',()=>readerBook&&toggleSave(readerBook.slug));
  $('#readerRelated').addEventListener('click',()=>{const b=readerBook;closeReader();showDetails(b.slug)});

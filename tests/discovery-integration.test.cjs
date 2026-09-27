@@ -119,6 +119,53 @@ test('homepage searches books, recordings and performers without expanding the d
   } finally { app.close(); }
 });
 
+test('featured reading follows the first row across sizes and retains its links after filtering', async () => {
+  const app = createApp();
+  try {
+    const featured = app.query('#readingStart');
+    for (const [width, columns] of [[1280, 4], [900, 3], [390, 2], [1280, 4]]) {
+      app.window.innerWidth = width;
+      app.window.dispatchEvent(new app.window.Event('resize'));
+      assert.equal(featured.parentElement, app.query('#bookGrid'));
+      assert.equal(featured.previousElementSibling, app.all('#bookGrid .book-card')[columns - 1]);
+      assert.equal(featured.hidden, false);
+    }
+    app.input('#searchInput', 'no-such-book-928173');
+    assert.equal(featured.hidden, true);
+    app.input('#searchInput', '');
+    assert.equal(app.query('#readingStart'), featured, 'Keep the original node and its event handlers');
+    assert.equal(featured.hidden, false);
+    app.click('#readingStart [data-featured-read="story-mame-alan"]');
+    await settled();
+    assert.equal(app.query('#reader').hidden, false);
+    assert.ok(app.query('#readerContent .reader-article'));
+    noErrors(app);
+  } finally { app.close(); }
+});
+
+test('catalogue browse options toggle off and the remaining All books control resets them', () => {
+  const app = createApp();
+  try {
+    assert.equal(app.all('[data-browse="all"]').length, 0);
+    assert.equal(app.query('.shelf-heading').nextElementSibling, app.query('#browseChoices'));
+    for (const key of ['short', 'novels', 'children', 'recent', 'saved']) {
+      const selector = '[data-browse="' + key + '"]';
+      app.click(selector);
+      assert.equal(app.query(selector).getAttribute('aria-pressed'), 'true');
+      assert.equal(app.query('#readingStart').hidden, true);
+      app.click(selector);
+      assert.equal(app.query(selector).getAttribute('aria-pressed'), 'false');
+      assert.equal(app.all('#bookGrid .book-card').length, 24);
+      assert.equal(app.query('#readingStart').hidden, false);
+    }
+    app.click('[data-browse="short"]');
+    app.click('[data-library-mode="all"]');
+    assert.equal(app.all('#browseChoices [aria-pressed="true"]').length, 0);
+    assert.equal(app.all('#bookGrid .book-card').length, 24);
+    noErrors(app);
+  } finally { app.close(); }
+});
+
 test('Arabic keyboard variants return the same Nalî book on the real homepage', () => {
   const app = createApp();
   try {

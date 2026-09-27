@@ -106,8 +106,14 @@ function markMode(){
   if(state.mode!=='voices')$$('#voicesBrowsePanel video').forEach(video=>video.pause());
   $('#bookLanguagePicker').hidden=state.mode==='voices';$('#catalogue').hidden=state.mode==='voices';$('#voicesBrowsePanel').hidden=state.mode!=='voices';$('#moreFiltersButton').hidden=state.mode==='voices';
 }
+function positionReadingStart(section=$('#readingStart')){
+  const grid=$('#bookGrid'),cards=$$('.book-card',grid);
+  const columns=window.innerWidth<=700?2:window.innerWidth<=1000?3:4;
+  const anchor=cards[Math.min(columns,cards.length)-1];
+  if(anchor){if(section.previousElementSibling!==anchor)anchor.after(section)}else if(section.parentElement!==grid)grid.append(section);
+}
 function renderCatalogue(){
-  const items=filteredBooks();renderDiscovery(items);
+  const items=filteredBooks(),readingStart=$('#readingStart');renderDiscovery(items);
   $$('[data-book-language]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.bookLanguage===state.variety)));
   $('#resultsCount').textContent=`${items.length} ${t('showBooks')}${state.q?' · '+searchRecordings(state.q).length+' '+t('recordings'):''}`;
   const count=['subject','script','format','availability'].filter(k=>state[k]!=='all').length;
@@ -125,6 +131,7 @@ function renderCatalogue(){
     const author=(b.author||'').length>80?'Khan, Mohammadirad, Molin & Noorlander':b.author;
     return `<article class="book-card" data-slug="${b.slug}"><a class="cover tone-${b.tone} ${b.preview?'has-scan':''} ${(b.title||'').length>65?'long-title':''} ${external?'':'read-book'}" href="${escapeHtml(readingUrl(b))}" data-slug="${b.slug}" aria-label="${escapeHtml(readLabel(b)+': '+b.title)}" ${external?'target="_blank" rel="noopener"':''}><span class="cover-language">${escapeHtml(language)}${b.format==='pdf'?' · PDF':''}</span><h3 class="cover-title" dir="${b.rtl?'rtl':'auto'}">${escapeHtml(b.title)}</h3>${b.preview?`<img class="cover-scan" src="${escapeHtml(b.preview)}" alt="" loading="lazy">`:`<img class="cover-ornament" src="assets/motifs/${motifFor(b)}.svg" alt="" loading="lazy" aria-hidden="true">`}${note?`<span class="edition-note">${escapeHtml(note)}</span>`:''}</a><div class="card-body">${b.preview?`<p class="scan-title" dir="auto">${escapeHtml(b.title)}</p>`:''}<p class="book-author" dir="auto">${escapeHtml(author)}</p>${shelfDescription(b)}<div class="card-actions">${saveButton(b)}<a class="shelf-read ${external?'':'read-book'}" data-slug="${b.slug}" href="${escapeHtml(readingUrl(b))}" ${external?'target="_blank" rel="noopener"':''}>${escapeHtml(readLabel(b))} <span aria-hidden="true">${external?'↗':'→'}</span></a>${b.format==='pdf'?`<a class="shelf-download" data-download="${b.slug}" href="${escapeHtml(window.KDLDiscovery.preferredFile(b))}" ${archiveEligible(b)?'download':'target="_blank" rel="noopener"'} aria-label="${escapeHtml(t('downloadPdf')+': '+b.title)}" title="${escapeHtml(t('downloadPdf'))}">↓</a>`:''}<button class="shelf-info details-book" type="button" data-slug="${b.slug}" aria-label="${escapeHtml(t('aboutBook')+': '+b.title)}">${escapeHtml(t('bookInfo'))}</button></div></div></article>`;
   }).join('');
+  positionReadingStart(readingStart);
   $$('.read-book',$('#bookGrid')).forEach(el=>el.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();openReader(bookBySlug(el.dataset.slug))}));
   $$('.details-book',$('#bookGrid')).forEach(el=>el.addEventListener('click',()=>showDetails(el.dataset.slug)));
   bindDiscoveryActions($('#bookGrid'));markMode();
@@ -327,6 +334,7 @@ function goSection(delta){if(!readerSections.length)return;currentSection=Math.m
 
 function initEvents(){
  initDiscoveryEvents();
+ window.addEventListener('resize',()=>positionReadingStart());
   $('#dengbejSearch').addEventListener('input',renderDengbej);
   $('#dengbejToggle').addEventListener('click',()=>{dengbejExpanded=!dengbejExpanded;renderDengbej()});
   $('#dengbejClear').addEventListener('click',()=>{$('#dengbejSearch').value='';renderDengbej();$('#dengbejSearch').focus()});

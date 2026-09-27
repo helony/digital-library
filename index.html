@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#11213d">
   <title>Kurdish Digital Library</title>
   <link rel="stylesheet" href="assets/styles.css?v=6.0">
-  <link rel="stylesheet" href="assets/library.css?v=7.5">
+  <link rel="stylesheet" href="assets/library.css?v=7.6">
   <link rel="stylesheet" href="assets/pdf-reader.css?v=7.1">
 
   <style>
@@ -70,22 +70,6 @@
           </div>
         </section>
         <section class="continue-reading" id="continueReading" hidden><h2 data-i18n="continueReading">Continue reading</h2><div id="continueGrid"></div><div class="continue-notice" id="continueNotice" hidden><span id="continueNoticeText" role="status" aria-live="polite" aria-atomic="true"></span><button type="button" class="text-button" id="continueUndo" data-i18n="undo">Undo</button></div></section>
-        <section class="reading-start" id="readingStart" aria-labelledby="readingStartTitle">
-          <div class="reading-start-intro">
-            <h2 id="readingStartTitle" data-i18n="startTitle">A place to begin</h2>
-            <p data-i18n="startIntro">Meet a story. Stay for a poem.</p>
-          </div>
-          <a class="reading-pick" href="?read=story-mame-alan" data-featured-read="story-mame-alan">
-            <img src="assets/motifs/folk-oral.svg" alt="" width="62" height="76">
-            <span class="reading-pick-copy"><span class="reading-pick-label" data-i18n="startStory">Step into a story</span><strong dir="auto">Mamê Alan</strong><span class="reading-pick-note" data-i18n="startStoryNote">Kurmancî · A modern retelling</span></span>
-            <span class="reading-pick-arrow" aria-hidden="true">→</span>
-          </a>
-          <a class="reading-pick" href="?read=zembilfiros" data-featured-read="zembilfiros">
-            <img src="assets/motifs/love-classical.svg" alt="" width="62" height="76">
-            <span class="reading-pick-copy"><span class="reading-pick-label" data-i18n="startPoem">Spend a moment with poetry</span><strong dir="auto">Zembîlfiroş</strong><span class="reading-pick-note" data-i18n="startPoemNote">Kurmancî · A classical poem</span></span>
-            <span class="reading-pick-arrow" aria-hidden="true">→</span>
-          </a>
-        </section>
         <section class="voices-browser" id="voicesBrowsePanel" aria-labelledby="voicesBrowseTitle" hidden>
           <div class="voices-browser-head">
             <div>
@@ -114,8 +98,10 @@
 
         <section class="catalogue-panel" id="catalogue" aria-labelledby="catalogueHeading">
           <h2 class="visually-hidden" id="catalogueHeading" data-i18n="catalogue">Catalogue</h2>
+          <section id="performerSearchResults" class="mixed-results" hidden><h2 data-i18n="performers">Performers</h2><div id="performerSearchGrid"></div></section>
+          <section id="mediaSearchResults" class="mixed-results" hidden><h2 data-i18n="recordings">Recordings</h2><div id="mediaSearchGrid" class="dengbej-grid"></div></section>
+          <div class="shelf-heading"><h2 data-i18n="exploreLibrary">Explore the library</h2><div><button class="filter-toggle" id="moreFiltersButton" type="button" aria-expanded="false" aria-controls="advancedFilters"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3"/><circle cx="15" cy="17" r="3"/></svg><span data-i18n="filters">Filters</span><span id="filterCount" hidden></span></button><span id="resultsCount" role="status" aria-live="polite"></span><button class="text-button" id="clearFiltersButton" type="button" data-i18n="clearFilters" hidden>Clear filters</button></div></div>
           <div class="browse-choices" id="browseChoices" role="group" aria-label="Find your next read">
-            <button type="button" data-browse="all" data-i18n="allBooks" aria-pressed="true">All books</button>
             <button type="button" data-browse="short" data-i18n="shortReads" aria-pressed="false">Short reads</button>
             <button type="button" data-browse="novels" data-i18n="novels" aria-pressed="false">Novels</button>
             <button type="button" data-browse="children" data-i18n="childrenStories" aria-pressed="false">Children’s stories</button>
@@ -123,9 +109,6 @@
             <button type="button" data-browse="saved" data-i18n="savedBooks" aria-pressed="false">Saved books</button>
           </div>
           <p id="savedNote" class="saved-note" data-i18n="savedOnDevice" hidden>Saved in this browser</p>
-          <section id="performerSearchResults" class="mixed-results" hidden><h2 data-i18n="performers">Performers</h2><div id="performerSearchGrid"></div></section>
-          <section id="mediaSearchResults" class="mixed-results" hidden><h2 data-i18n="recordings">Recordings</h2><div id="mediaSearchGrid" class="dengbej-grid"></div></section>
-          <div class="shelf-heading"><h2 data-i18n="exploreLibrary">Explore the library</h2><div><button class="filter-toggle" id="moreFiltersButton" type="button" aria-expanded="false" aria-controls="advancedFilters"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3"/><circle cx="15" cy="17" r="3"/></svg><span data-i18n="filters">Filters</span><span id="filterCount" hidden></span></button><span id="resultsCount" role="status" aria-live="polite"></span><button class="text-button" id="clearFiltersButton" type="button" data-i18n="clearFilters" hidden>Clear filters</button></div></div>
           <div class="advanced-filters" id="advancedFilters" hidden>
             <label class="field"><span data-i18n="subject">Subject</span><select id="subjectFilter"></select></label>
             <label class="field"><span data-i18n="format">Format</span><select id="formatFilter"></select></label>
@@ -146,6 +129,22 @@
 <article class="book-card static-book-card" data-slug="makas-kurdische-studien-1900">
 <a class="cover tone-teal  " href="books/makas-kurdische-studien-1900/book.pdf"><span class="cover-language">Kurmancî · PDF</span><h3 class="cover-title" dir="auto">Kurdische Studien</h3><img class="cover-ornament" src="assets/motifs/folk-oral.svg" alt="" loading="lazy"></a>
 <div class="card-body"><p class="book-author" dir="auto">Hugo Makas</p><p class="book-summary" lang="en" dir="auto">A Diyarbakır dialect sample, a Gawar poem and Yazidi prayers, with German commentary.</p><div class="card-actions"><a class="shelf-read" href="books/makas-kurdische-studien-1900/book.pdf">Read →</a><a class="shelf-info" href="book/makas-kurdische-studien-1900/index.html">Info</a></div></div></article>
+        <section class="reading-start" id="readingStart" aria-labelledby="readingStartTitle">
+          <div class="reading-start-intro">
+            <h2 id="readingStartTitle" data-i18n="startTitle">A place to begin</h2>
+            <p data-i18n="startIntro">Meet a story. Stay for a poem.</p>
+          </div>
+          <a class="reading-pick" href="?read=story-mame-alan" data-featured-read="story-mame-alan">
+            <img src="assets/motifs/folk-oral.svg" alt="" width="62" height="76">
+            <span class="reading-pick-copy"><span class="reading-pick-label" data-i18n="startStory">Step into a story</span><strong dir="auto">Mamê Alan</strong><span class="reading-pick-note" data-i18n="startStoryNote">Kurmancî · A modern retelling</span></span>
+            <span class="reading-pick-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="reading-pick" href="?read=zembilfiros" data-featured-read="zembilfiros">
+            <img src="assets/motifs/love-classical.svg" alt="" width="62" height="76">
+            <span class="reading-pick-copy"><span class="reading-pick-label" data-i18n="startPoem">Spend a moment with poetry</span><strong dir="auto">Zembîlfiroş</strong><span class="reading-pick-note" data-i18n="startPoemNote">Kurmancî · A classical poem</span></span>
+            <span class="reading-pick-arrow" aria-hidden="true">→</span>
+          </a>
+        </section>
 <article class="book-card static-book-card" data-slug="diwana-melaye-ciziri">
 <a class="cover tone-plum  " href="books/diwana-melaye-ciziri/content.html"><span class="cover-language">Kurmancî</span><h3 class="cover-title" dir="auto">دیوانا مەلایێ جزیری</h3><img class="cover-ornament" src="assets/motifs/love-classical.svg" alt="" loading="lazy"></a>
 <div class="card-body"><p class="book-author" dir="auto">Melayê Cizîrî</p><p class="book-summary" lang="en" dir="auto">Classical Kurmanji poetry exploring love and mystical longing.</p><div class="card-actions"><a class="shelf-read" href="books/diwana-melaye-ciziri/content.html">Read →</a><a class="shelf-info" href="book/diwana-melaye-ciziri/index.html">Info</a></div></div></article>
@@ -634,9 +633,9 @@
   <script src="assets/recording-data.js?v=7.1"></script>
   <script src="assets/locale-complete.js?v=7.5"></script>
   <script src="assets/discovery-utils.js?v=7.1"></script>
-  <script src="assets/discovery-ui.js?v=7.5"></script>
+  <script src="assets/discovery-ui.js?v=7.6"></script>
   <script src="assets/pdf-reader.js?v=7.1"></script>
-  <script src="assets/app.js?v=7.5"></script>
+  <script src="assets/app.js?v=7.6"></script>
 
   <script>
   (() => {

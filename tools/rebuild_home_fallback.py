@@ -38,10 +38,15 @@ def main():
 <div class="card-body">{scan_title}<p class="book-author" dir="auto">{e(author)}</p><p class="book-summary" lang="en" dir="auto">{e(b.get("summary",b.get("desc",{})).get("en",""))}</p><div class="card-actions"><a class="shelf-read" href="{e(url)}">{label} →</a>{info}</div></div></article>''')
     p = ROOT / 'index.html'
     text = p.read_text()
+    # Keep the featured reading links when regenerating the static book grid.
+    featured_start = text.index('        <section class="reading-start"')
+    featured_end = text.index('        </section>', featured_start) + len('        </section>')
+    featured = text[featured_start:featured_end]
     start = text.index('          <div class="book-grid" id="bookGrid"')
     end = text.index('          <div class="empty-state" id="emptyState"', start)
     pagination = '          <div class="load-more-wrap"><button id="loadMoreBooks" class="secondary-button" type="button" data-i18n="loadMore">Show more books</button></div>\n'
-    text = text[:start] + '          <div class="book-grid" id="bookGrid">\n' + '\n'.join(cards) + '\n          </div>\n' + pagination + text[end:]
+    shelf = cards[:4] + [featured] + cards[4:]
+    text = text[:start] + '          <div class="book-grid" id="bookGrid">\n' + '\n'.join(shelf) + '\n          </div>\n' + pagination + text[end:]
     p.write_text(text)
     print(f'Rebuilt shelf with {len(records)} catalogue records and {len(stories)} story entries.')
 
