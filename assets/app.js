@@ -50,7 +50,7 @@ function applyLocale(){
   $('#suggestButton').setAttribute('aria-label',t('suggest'));
   $('#suggestButton').title=t('suggest');
   $$('[data-close-dialog]').forEach(el=>el.setAttribute('aria-label',t('close')));
-  $$('.footer-links a,.top-nav a[href*="index.html"]').forEach(a=>{const u=new URL(a.href);u.searchParams.set('lang',state.locale);a.href=u.href});
+  $$('.footer-links a,.top-nav a[href*="index.html"],.explore-news').forEach(a=>{const u=new URL(a.href);u.searchParams.set('lang',state.locale);a.href=u.href});
   $$('[data-i18n]').forEach(el=>{el.textContent=t(el.dataset.i18n)}); $$('[data-i18n-placeholder]').forEach(el=>{el.placeholder=t(el.dataset.i18nPlaceholder)});
   buildOptions($('#subjectFilter'),SUBJECTS); buildOptions($('#sortFilter'),SORTS); buildOptions($('#scriptFilter'),SCRIPTS); buildOptions($('#formatFilter'),FORMATS); buildOptions($('#availabilityFilter'),AVAIL);
   $('#subjectFilter').value=state.subject; $('#sortFilter').value=state.sort; $('#scriptFilter').value=state.script; $('#formatFilter').value=state.format; $('#availabilityFilter').value=state.availability;
@@ -235,11 +235,33 @@ function renderReaderError(b,retry,sourceUrl=b.source||b.url){
  $('#readerContent').innerHTML=`<div class="reader-error" role="alert"><p>${escapeHtml(t('readerFailed'))}</p><div class="reader-recovery"><button class="primary-button" type="button" data-reader-retry>${escapeHtml(t('retryRead'))}</button><a class="secondary-button" href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(t('openOriginal'))} ↗</a></div></div>`;
  $('[data-reader-retry]').addEventListener('click',retry);
 }
-function renderNativePdf(b,readUrl=b.url){
+function renderNativePdf(b,readUrl=b.url,fallback={}){
+ const signal=readerController?.signal;
+ const active=()=>readerBook===b&&!signal?.aborted;
+ if(!active())return;
+ const saved=personalShelf.progress[b.slug]||{};
+ // Catalogue pageCount can describe printed pages; only a measured PDF total
+ // (or the saved canvas-reader total) is safe to use as an input limit.
+ const total=[saved.totalPages,b.sourcePageCount].map(Number).find(value=>Number.isSafeInteger(value)&&value>0);
+ const clampPage=value=>Math.max(1,Math.min(total||Number.MAX_SAFE_INTEGER,Math.trunc(Number(value)||1)));
+ const page=clampPage(fallback.page||saved.page||b.startPage||1);
+ const pageUrl=value=>{const url=new URL(readUrl,location.href);url.hash='page='+value+'&view=FitH';return url.href};
+ saveProgress(b,{format:'pdf',page,...(total?{totalPages:total}:{})});
  const download=$('#readerDownload');download.href=readUrl;download.hidden=false;if(!readUrl.startsWith('books/')){download.target='_blank';download.rel='noopener'}else{download.removeAttribute('target');download.removeAttribute('rel')}
- $('#readerContent').innerHTML=`<p class="native-pdf-note">${escapeHtml(t('nativePdfNote'))}</p><div class="pdf-fallback"><span>${escapeHtml(t('pdfHelp'))}</span><a href="${escapeHtml(readUrl)}" target="_blank" rel="noopener">${escapeHtml(t('openFullScreen'))} ↗</a><button type="button" class="text-button" data-reader-retry>${escapeHtml(t('retryRead'))}</button></div><iframe class="pdf-frame" title="${escapeHtml(b.title)} PDF" src="${escapeHtml(readUrl)}#page=${personalShelf.progress[b.slug]?.page||b.startPage||1}&view=FitH"></iframe>`;
+ $('#readerContent').innerHTML=`<p class="native-pdf-note" id="nativePdfHelp">${escapeHtml(t('nativePdfNote'))}</p><form class="native-pdf-bookmark" novalidate><label for="nativePdfPage">${escapeHtml(t('pdfBookmarkLabel'))}</label><input id="nativePdfPage" name="page" type="number" inputmode="numeric" min="1" step="1" ${total?`max="${total}"`:''} value="${page}" required aria-describedby="nativePdfHelp">${total?`<span>${escapeHtml(t('of'))} ${total}</span>`:''}<button type="submit">${escapeHtml(t('pdfSavePage'))}</button><span class="native-pdf-saved" role="status" aria-live="polite"></span></form><div class="pdf-fallback"><span>${escapeHtml(t('pdfHelp'))}</span><a data-native-fullscreen href="${escapeHtml(pageUrl(page))}" target="_blank" rel="noopener">${escapeHtml(t('openFullScreen'))} ↗</a><button type="button" class="text-button" data-reader-retry>${escapeHtml(t('retryRead'))}</button></div><iframe class="pdf-frame" title="${escapeHtml(b.title)} PDF" src="${escapeHtml(pageUrl(page))}"></iframe>`;
+ const bookmark=$('.native-pdf-bookmark'),input=$('#nativePdfPage'),status=$('.native-pdf-saved');
+ bookmark.addEventListener('submit',event=>{
+  event.preventDefault();if(!active()||!bookmark.isConnected)return;
+  const requested=Number(input.value);
+  if(!input.value.trim()||!Number.isFinite(requested)||!Number.isInteger(requested)){input.reportValidity();return;}
+  const page=clampPage(requested);input.value=String(page);
+  saveProgress(b,{format:'pdf',page,...(total?{totalPages:total}:{})});
+  $('[data-native-fullscreen]').href=pageUrl(page);
+  status.textContent=t('pdfPageSaved').replace('{page}',page);
+ });
+ input.addEventListener('input',()=>{status.textContent=''});
  $('[data-reader-retry]').addEventListener('click',()=>renderPdf(b,readUrl));
- $('.pdf-frame').addEventListener('error',()=>{if(readerBook===b)renderReaderError(b,()=>renderPdf(b,readUrl),readUrl)},{once:true});
+ $('.pdf-frame').addEventListener('error',()=>{if(active())renderReaderError(b,()=>renderPdf(b,readUrl),readUrl)},{once:true});
 }
 async function renderStory(b){
  const load=beginReaderLoad();

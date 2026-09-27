@@ -125,7 +125,7 @@ function renderContinueReading(){
  $('#continueNotice').hidden=!continueUndo;
  $('#continueNoticeText').textContent=continueUndo?t(continueUndo.status==='finished'?'finishedNotice':'removedNotice').replace('{title}',bookBySlug(continueUndo.slug)?.title||''):'';
  $('#continueGrid').innerHTML=recent.map(({b,progress})=>{
-  const page=Number(progress.page),total=Number(progress.totalPages||b.pageCount);
+  const page=Number(progress.page),total=Number(progress.totalPages||b.sourcePageCount);
   const pdf=(progress.format||b.format)==='pdf';
   let label='',value=null;
   if(pdf&&Number.isInteger(page)&&page>0){
@@ -145,7 +145,7 @@ async function renderPdf(b,url){
  if(url.startsWith('books/')){download.removeAttribute('target');download.removeAttribute('rel')}else{download.target='_blank';download.rel='noopener'}
  const load=beginReaderLoad();
  try{
-  const session=await window.KDLPdfReader.open({container:$('#readerContent'),url,slug:b.slug,title:b.title,signal:load.signal,labels:{...LOCALES.en,...LOCALES[state.locale]},onFallback:()=>{if(load.current())renderNativePdf(b,url)},initialPage:personalShelf.progress[b.slug]?.page||b.startPage||1,onProgress:progress=>{if(load.current())saveProgress(b,{page:progress.page,totalPages:progress.totalPages,format:'pdf'})}});
+  const session=await window.KDLPdfReader.open({container:$('#readerContent'),url,slug:b.slug,title:b.title,signal:load.signal,labels:{...LOCALES.en,...LOCALES[state.locale]},onFallback:fallback=>{if(load.current())renderNativePdf(b,url,fallback)},initialPage:personalShelf.progress[b.slug]?.page||b.startPage||1,onProgress:progress=>{if(load.current())saveProgress(b,{page:progress.page,totalPages:progress.totalPages,format:'pdf'})}});
   if(!load.current()){session.destroy();return}pdfSession=session;
  }catch(error){if(load.current())renderNativePdf(b,url)}
 }

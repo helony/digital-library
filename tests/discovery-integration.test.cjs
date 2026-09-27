@@ -57,6 +57,7 @@ function createApp({query = '?lang=en', shelf, locale = 'en', nativePdf = false}
   window.KDLPdfReader = {
     async open(options) {
       pdfCalls.push(options);
+      if (nativePdf === 'reject') throw new Error('Source does not allow canvas PDF loading');
       if (nativePdf) { options.onFallback();return {destroy() {}}; }
       options.container.innerHTML = '<p data-mock-pdf>PDF canvas substitute</p>';
       options.onProgress({page: options.initialPage, totalPages: 1000});
@@ -364,6 +365,108 @@ test('reopening a removed PDF also restores Continue reading when using the nati
     assert.equal(app.shelf().progress['makas-kurdische-studien-1900'].status, 'reading');
     noErrors(app);
   } finally { app.close(); }
+});
+
+test('a first-time native PDF enters Continue reading and its manual bookmark survives a reload', async () => {
+  const slug = 'bilbil-andersen';
+  const app = createApp({nativePdf: 'reject'});
+  let reloaded;
+  try {
+    app.input('#searchInput', slug);
+    app.click('#bookGrid .read-book');
+    await settled();
+    assert.equal(app.shelf().progress[slug].page, 9, 'An anthology opens at its catalogue start page');
+    assert.equal(app.query('#nativePdfPage').max, '', 'Printed page counts must not limit PDF page bookmarks');
+    assert.equal(app.query('#nativePdfPage').value, '9');
+    const form = app.query('.native-pdf-bookmark');
+    app.input('#nativePdfPage', '17');
+    assert.equal(app.shelf().progress[slug].page, 9, 'Typing must not silently change the bookmark');
+    form.dispatchEvent(new app.window.Event('submit', {bubbles: true, cancelable: true}));
+    assert.equal(app.shelf().progress[slug].page, 17);
+    assert.match(app.query('.native-pdf-saved').textContent, /17/);
+    assert.match(app.query('[data-native-fullscreen]').href, /#page=17&view=FitH$/);
+    assert.match(app.query('.pdf-frame').src, /#page=9&view=FitH$/, 'Saving must not reload the PDF being read');
+    app.click('#readerClose');
+    app.input('#searchInput', '');
+    assert.equal(app.query('#continueReading').hidden, false);
+    assert.equal(app.query('#continueGrid .continue-progress-label').textContent, 'Page 17');
+    assert.equal(app.query('#continueGrid progress'), null, 'Unknown PDF totals must not produce an invented percentage');
+    // Detached form handlers and late canvas callbacks cannot overwrite a saved bookmark.
+    form.querySelector('input').value = '88';
+    form.dispatchEvent(new app.window.Event('submit', {bubbles: true, cancelable: true}));
+    app.pdfCalls.at(-1).onProgress({page: 99, totalPages: 100});
+    assert.equal(app.shelf().progress[slug].page, 17);
+    reloaded = createApp({nativePdf: true, shelf: app.shelf()});
+    reloaded.click('#continueGrid [data-related-read="' + slug + '"]');
+    await settled();
+    assert.equal(reloaded.pdfCalls.at(-1).initialPage, 17);
+    assert.equal(reloaded.query('#nativePdfPage').value, '17');
+    assert.match(reloaded.query('.pdf-frame').src, /#page=17&view=FitH$/);
+    noErrors(app);noErrors(reloaded);
+  } finally { app.close();reloaded?.close(); }
+});
+
+test('native PDF page bookmarks clamp to known PDF bounds and ignore invalid values', async () => {
+  const slug = 'makas-kurdische-studien-1900';
+  const app = createApp({nativePdf: true, shelf: {saved: {}, progress: {
+    [slug]: {format: 'pdf', page: 17, totalPages: 100, status: 'reading', updated: 1},
+  }}});
+  try {
+    app.click('#continueGrid [data-related-read]');
+    await settled();
+    assert.equal(app.query('#nativePdfPage').max, '100');
+    const save = value => {
+      app.input('#nativePdfPage', value);
+      app.query('.native-pdf-bookmark').dispatchEvent(new app.window.Event('submit', {bubbles: true, cancelable: true}));
+    };
+    save('999');assert.equal(app.shelf().progress[slug].page, 100);
+    save('-2');assert.equal(app.shelf().progress[slug].page, 1);
+    save('');assert.equal(app.shelf().progress[slug].page, 1);
+    save('12.5');assert.equal(app.shelf().progress[slug].page, 1);
+    save('23');assert.equal(app.shelf().progress[slug].page, 23);
+    assert.equal(app.shelf().progress[slug].totalPages, 100);
+    app.click('#readerClose');
+    assert.equal(app.query('#continueGrid .continue-progress-label').textContent, 'Page 23 of 100');
+    noErrors(app);
+  } finally { app.close(); }
+});
+
+test('switching to the native PDF viewer keeps the last rendered page and measured total', async () => {
+  const app = createApp();
+  try {
+    const book = app.window.KDL_BOOKS.find(record => record.readerPath && record.format === 'pdf');
+    app.input('#searchInput', book.slug);
+    app.click('#bookGrid .read-book');
+    await settled();
+    const session = app.pdfCalls.at(-1);
+    session.onProgress({page: 17, totalPages: 1000});
+    session.onFallback({page: 17});
+    assert.equal(app.query('#nativePdfPage').value, '17');
+    assert.equal(app.query('#nativePdfPage').max, '1000');
+    assert.equal(app.shelf().progress[book.slug].page, 17);
+    app.click('#readerClose');
+    session.onFallback({page: 28});
+    assert.equal(app.query('.native-pdf-bookmark'), null);
+    assert.equal(app.shelf().progress[book.slug].page, 17);
+    noErrors(app);
+  } finally { app.close(); }
+});
+
+test('native PDF bookmark controls and confirmation are translated in every interface locale', async () => {
+  for (const locale of ['en', 'kmr', 'ckb', 'diq', 'hac', 'sdh']) {
+    const app = createApp({nativePdf: true, locale, query: '?lang=' + locale + '&read=bilbil-andersen'});
+    try {
+      await settled();
+      const labels = app.window.KDL_COMPLETE[locale];
+      assert.equal(app.query('.native-pdf-note').textContent, labels.nativePdfNote);
+      assert.equal(app.query('.native-pdf-bookmark button').textContent, labels.pdfSavePage);
+      assert.equal(app.query('.native-pdf-bookmark label').textContent, labels.pdfBookmarkLabel);
+      app.input('#nativePdfPage', '23');
+      app.query('.native-pdf-bookmark').dispatchEvent(new app.window.Event('submit', {bubbles: true, cancelable: true}));
+      assert.equal(app.query('.native-pdf-saved').textContent, labels.pdfPageSaved.replace('{page}', '23'));
+      noErrors(app);
+    } finally { app.close(); }
+  }
 });
 
 test('reader, shelf download and resumed PDF all use the same preferred file', async () => {
