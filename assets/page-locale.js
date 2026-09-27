@@ -37,7 +37,7 @@
   }
 
   const phraseKeys = {
-    'Authors': 'navAuthors', 'Preservation': 'navPreservation', 'About': 'navAbout',
+    'Authors': 'navAuthors', 'Preservation': 'navPreservation', 'About': 'navAbout', 'News': 'navNews',
     'BROWSE THE COLLECTION': 'exploreLibrary', 'ABOUT THE LIBRARY': 'aboutLibrary',
     'AUTHOR RECORD': 'authorRecord', 'PRESERVATION DASHBOARD': 'archiveDashboard',
     'Source & reuse': 'sourceAndRights', 'Read': 'readNow', 'Read now': 'readNow',

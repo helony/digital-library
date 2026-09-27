@@ -1,0 +1,60 @@
+name: Refresh Kurdish news
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/refresh-news.yml'
+      - 'tools/refresh_news.py'
+      - 'data/news-sources.json'
+  schedule:
+    - cron: '37 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-kurdish-news
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check feed importer
+        run: python3 -m unittest discover -s tests -p 'test_news.py'
+      - name: Refresh permitted source metadata
+        run: python3 tools/refresh_news.py
+      - name: Validate news data
+        run: python3 tools/refresh_news.py --check
+      - name: Save daily check
+        run: |
+          if git diff --quiet -- data/news.json; then
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/news.json
+          git commit -m 'Refresh credited Kurdish news links'
+          git push origin HEAD:main
+      - name: Summarize source checks
+        if: always()
+        run: |
+          python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          data = json.loads(Path('data/news.json').read_text())
+          print('### News source check')
+          print(f"Checked: {data['checkedAt']}")
+          print(f"\nRetained stories: {len(data['items'])}")
+          for source in data['sources']:
+              print(f"\n- {source['name']}: {source['status']}")
+          PY

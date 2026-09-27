@@ -318,3 +318,11 @@ button:focus-visible,a:focus-visible{outline:3px solid #ad741f;outline-offset:3p
 .book-language-options button:hover{color:#15263e;border-bottom-color:#b7a58b}
 .book-language-options button[aria-pressed="true"]{color:#15263e;border-bottom-color:#9b6140;font-weight:750}
 @media(max-width:700px){.book-languages{display:block;margin-bottom:18px}.book-languages>p{margin-bottom:4px}.book-language-options{gap:0 18px}.book-language-options button{font-size:14px;max-width:100%;overflow-wrap:anywhere}}
+
+/* Keep the main destinations reachable on compact screens. */
+@media(max-width:1000px){
+ .library-home .header-inner{flex-wrap:wrap;padding-block:10px;gap:6px 12px}
+ .library-home .header-actions{margin-inline-start:auto}
+ .library-home .top-nav{display:flex;order:3;flex-basis:100%;margin:0;gap:24px;flex-wrap:wrap}
+ .library-home .top-nav a,.library-home .top-nav button{font-size:14px;padding:5px 0}
+}

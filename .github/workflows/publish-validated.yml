@@ -5,11 +5,12 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-  # Archive commits use GITHUB_TOKEN, so their pushes do not start workflows.
+  # Updater commits use GITHUB_TOKEN, so their pushes do not start workflows.
   workflow_run:
     workflows:
       - Archive eligible historical PDF scans
       - Archive eligible Wikisource texts
+      - Refresh Kurdish news
     types: [completed]
     branches: [main]
 
@@ -31,7 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          # Include newly preserved files after a successful archive run.
+          # Include new preserved files or news data after a successful updater.
           ref: ${{ github.event_name == 'workflow_run' && 'main' || github.sha }}
       - uses: actions/setup-node@v4
         with:

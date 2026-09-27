@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "maxItems": 100,
+  "sources": [
+    {
+      "id": "global-voices",
+      "name": "Global Voices",
+      "url": "https://globalvoices.org/",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "policyUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "reviewedAt": "2026-09-27",
+      "allowedHosts": ["globalvoices.org"],
+      "feeds": [
+        "https://globalvoices.org/feed/",
+        "https://globalvoices.org/-/world/middle-east-north-africa/iran/feed/",
+        "https://globalvoices.org/-/world/middle-east-north-africa/iraq/feed/",
+        "https://globalvoices.org/-/world/middle-east-north-africa/syria/feed/",
+        "https://globalvoices.org/-/world/middle-east-north-africa/turkey/feed/"
+      ],
+      "language": "en",
+      "reuse": "Original Global Voices titles and bylines only; original article links and dates. No article bodies, excerpts, images, audio or video. Skip syndicated work, article-level exceptions, and pages without the expected article-level license."
+    }
+  ]
+}

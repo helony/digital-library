@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-27T21:04:35Z",
+  "lastSuccessfulCheck": "2026-09-27T21:04:35Z",
+  "sources": [
+    {
+      "id": "global-voices",
+      "name": "Global Voices",
+      "url": "https://globalvoices.org/",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "policyUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
+      "status": "ok",
+      "lastSuccessfulCheck": "2026-09-27T21:04:35Z"
+    }
+  ],
+  "items": [
+    {
+      "id": "global-voices-b8c820d5b7c57709",
+      "url": "https://globalvoices.org/2025/08/27/two-alphabets-one-struggle-how-kurdish-communities-are-building-a-digital-future/",
+      "title": "Two alphabets, one struggle: How Kurdish communities are building a digital future",
+      "publishedAt": "2025-08-27T02:00:10Z",
+      "author": "Eduardo Avila",
+      "sourceId": "global-voices",
+      "language": "en",
+      "topics": [
+        "culture",
+        "people",
+        "affairs"
+      ]
+    },
+    {
+      "id": "global-voices-62577a396333b335",
+      "url": "https://globalvoices.org/2025/08/08/have-the-kurds-turned-away-from-the-quest-for-an-autonomous-state/",
+      "title": "Have the Kurds turned away from the quest for an autonomous state?",
+      "publishedAt": "2025-08-08T01:11:55Z",
+      "author": "Stephanie Almughrabi",
+      "sourceId": "global-voices",
+      "language": "en",
+      "topics": [
+        "politics",
+        "affairs"
+      ]
+    },
+    {
+      "id": "global-voices-67e9be7f69d76e60",
+      "url": "https://globalvoices.org/2023/09/06/how-kurdish-language-divisions-hinder-access-to-information/",
+      "title": "How Kurdish language divisions hinder access to information",
+      "publishedAt": "2023-09-06T14:07:25Z",
+      "author": "Tara Aziz",
+      "sourceId": "global-voices",
+      "language": "en",
+      "topics": [
+        "culture",
+        "affairs"
+      ]
+    },
+    {
+      "id": "global-voices-3822845ed16d9f47",
+      "url": "https://globalvoices.org/2023/05/08/the-plight-of-kurdish-journalists-in-their-struggle-for-free-expression/",
+      "title": "The plight of Kurdish journalists in their struggle for free expression",
+      "publishedAt": "2023-05-08T14:23:17Z",
+      "author": "Tara Aziz",
+      "sourceId": "global-voices",
+      "language": "en",
+      "topics": [
+        "politics",
+        "people",
+        "affairs"
+      ]
+    }
+  ]
+}
