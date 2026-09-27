@@ -2,9 +2,9 @@
   "ok": 36,
   "missing": 0,
   "blocking_missing": 0,
-  "missing_scope": "wiki",
+  "missing_scope": "pdf",
   "checksum_mismatch": 0,
-  "manual_review": 45,
+  "manual_review": 48,
   "items": [
     {
       "kdl_id": "KDL-KMR-0001",
@@ -481,6 +481,21 @@
     {
       "kdl_id": "KDL-KMR-0069",
       "slug": "lescot-contes-proverbes-enigmes-1940",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-DIQ-0003",
+      "slug": "mahmesa-hayig-2007",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-DIQ-0004",
+      "slug": "memik-axa-wo-dersimij",
+      "status": "manual_review"
+    },
+    {
+      "kdl_id": "KDL-DIQ-0005",
+      "slug": "taye-lawike-dersimi-1992",
       "status": "manual_review"
     }
   ]
