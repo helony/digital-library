@@ -141,7 +141,7 @@ test('switching to Soranî translates descriptions without filtering out other b
     app.click('#languageGrid [data-locale="ckb"]');
     assert.equal(app.document.documentElement.lang, 'ckb');
     assert.equal(app.document.documentElement.dir, 'rtl');
-    assert.equal(app.query('#varietyFilter').value, 'all');
+    assert.equal(app.query('[data-book-language][aria-pressed="true"]').dataset.bookLanguage, 'all');
     assert.deepEqual(app.all('#bookGrid .book-card').map(card => card.dataset.slug), before);
     assert.notEqual(app.query('#searchInput').placeholder, searchPlaceholder);
     const book = [...app.window.KDL_BOOKS, ...app.window.KDL_STORIES].find(record => record.slug === before[0]);

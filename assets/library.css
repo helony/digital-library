@@ -286,3 +286,12 @@ button:focus-visible,a:focus-visible{outline:3px solid #ad741f;outline-offset:3p
 }
 
 .media-language-note{display:block;margin-top:.35rem;font-size:.8rem;color:var(--muted)}
+
+/* Book languages stay visible above the catalogue's browsing choices. */
+.book-languages{padding:20px 22px;margin-bottom:22px;background:#fffcf6;border:1px solid #d9cebd;border-radius:16px}
+.book-languages>p{margin:0 0 12px;color:#644333;font-size:16px;line-height:1.4;font-weight:700}
+.book-language-options{display:flex;flex-wrap:wrap;gap:9px}
+.book-language-options button{font-family:inherit;font-size:15px;font-weight:600;line-height:1.4;min-height:46px;padding:10px 16px;border:1px solid #d5c9b7;border-radius:999px;background:#f8f4ec;color:#26364c;cursor:pointer}
+.book-language-options button:hover{background:#ece3d5;border-color:#a68b67}
+.book-language-options button[aria-pressed="true"]{background:#15263e;border-color:#15263e;color:#fff7e9}
+@media(max-width:700px){.book-languages{padding:18px 16px}.book-language-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.book-language-options button{padding:10px 8px;font-size:14px;overflow-wrap:anywhere}}
