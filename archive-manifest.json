@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25",
+  "generated": "2026-09-27",
   "policy": "Only records explicitly marked archiveEligible are auto-archived. Other records require manual rights review.",
   "identifier_scheme": "KDL-<primary ISO 639-3 code>-<4 digit sequence>. Identifiers are permanent and should never be reassigned.",
   "items": [
@@ -1379,6 +1379,57 @@
       "wiki_title": null,
       "local_path": null,
       "checked": "2026-09-25"
+    },
+    {
+      "id": 167,
+      "kdl_id": "KDL-DIQ-0003",
+      "slug": "mahmesa-hayig-2007",
+      "title": "Mahmeşa",
+      "author": "Rosan Hayıg",
+      "author_slug": "rosan-hayig",
+      "format": "pdf",
+      "eligible": false,
+      "rights_type": "check",
+      "rights_key": "rights_private_noncommercial_external",
+      "source": "https://forum-linguistik.de/zza/zazakid%C4%B1m%C4%B1li/%E2%80%A2-mahme%C5%9Fa",
+      "remote_url": "https://forum-linguistik.de/sites/www.forum-linguistik.de/files/uploads/Mahmesha.pdf",
+      "wiki_title": null,
+      "local_path": null,
+      "checked": "2026-09-27"
+    },
+    {
+      "id": 168,
+      "kdl_id": "KDL-DIQ-0004",
+      "slug": "memik-axa-wo-dersimij",
+      "title": "Memik axa wo Dêrsimij",
+      "author": "Haydar Işık",
+      "author_slug": "haydar-isik",
+      "format": "pdf",
+      "eligible": false,
+      "rights_type": "check",
+      "rights_key": "rights_institutional_pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=251",
+      "remote_url": "https://bnk.institutkurde.org/images/pdf/9ZHRSU2JLW.pdf",
+      "wiki_title": null,
+      "local_path": null,
+      "checked": "2026-09-27"
+    },
+    {
+      "id": 169,
+      "kdl_id": "KDL-DIQ-0005",
+      "slug": "taye-lawike-dersimi-1992",
+      "title": "Tayê lawıkê Dêrsımi / Dersim türküleri",
+      "author": "Mustafa Düzgün",
+      "author_slug": "mustafa-duzgun",
+      "format": "pdf",
+      "eligible": false,
+      "rights_type": "check",
+      "rights_key": "rights_institutional_pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=1551",
+      "remote_url": "https://bnk.institutkurde.org/images/pdf/P4CBV65JAY.pdf",
+      "wiki_title": null,
+      "local_path": null,
+      "checked": "2026-09-27"
     }
   ]
 }

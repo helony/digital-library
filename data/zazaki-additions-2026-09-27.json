@@ -1,0 +1,41 @@
+{
+  "checked": "2026-09-27",
+  "records": [
+    {
+      "slug": "mahmesa-hayig-2007",
+      "source": "https://forum-linguistik.de/zza/zazakid%C4%B1m%C4%B1li/%E2%80%A2-mahme%C5%9Fa",
+      "pdf": "https://forum-linguistik.de/sites/www.forum-linguistik.de/files/uploads/Mahmesha.pdf",
+      "pdfPages": 214,
+      "bytes": 3980569,
+      "sha256": "335a679199b08749e7a53fe9b15980360903f6d1dad3b1b04e684741dafb8b66",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "External PDF; not mirrored. Header, EOF and all pages parsed; title page visually checked.",
+      "rightsSource": "https://forum-linguistik.de/zza"
+    },
+    {
+      "slug": "memik-axa-wo-dersimij",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=251",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/9ZHRSU2JLW.pdf",
+      "pdfPages": 150,
+      "bytes": 6042791,
+      "sha256": "d85d6dd9c858841954abcf10e43605d678facb6a27cc96264fa2df9634197ad3",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "External PDF; not mirrored. Header, EOF and all pages parsed; title page visually checked.",
+      "rightsSource": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=251"
+    },
+    {
+      "slug": "taye-lawike-dersimi-1992",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=1551",
+      "pdf": "https://bnk.institutkurde.org/images/pdf/P4CBV65JAY.pdf",
+      "pdfPages": 388,
+      "bytes": 7498292,
+      "sha256": "e2b1d9ae5429f6e7df7df662462c234bd99a4cb54bccaa702c2e6b0fe5ad266a",
+      "contentType": "application/pdf",
+      "script": "Latin",
+      "notes": "External PDF; not mirrored. Header, EOF and all pages parsed; title page visually checked.",
+      "rightsSource": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=1551"
+    }
+  ]
+}

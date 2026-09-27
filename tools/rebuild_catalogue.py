@@ -30,6 +30,7 @@ def portable(r):
       'rights_wiki_pd':'The historical work is public domain; Wikisource text is available under CC BY-SA.',
       'rights_authorized_share':'The source states that the copyright holder authorized sharing. This is not the same as public domain and does not necessarily permit all reuse.',
       'rights_zazaki1899':'The 1899 historical work is public domain; the Wikisource transcription is available under CC BY-SA.',
+      'rights_private_noncommercial_external':'Forum Linguistik makes this PDF available for private, noncommercial use only. The file remains on its source website; it is not mirrored here. Copyright and attribution notices remain applicable.',
       'rights_institutional_pdf':'This PDF is provided for reading by the Kurdish Institute of Paris. Copyright in the edition and translation may remain with their respective rights holders. The file is embedded from the institute; no redistribution permission is asserted.',
       'rights_institutional_reading':'This 1988 edition is available to read from the Kurdish Institute of Paris. Its modern rewritings may remain copyrighted; no permission to redistribute the PDF is asserted.',
       'rights_cc_by_nc_reader':'An unmodified publisher PDF is provided here for noncommercial reading under CC BY-NC 4.0. Original attribution and license notices are retained. Individual images may have separate reuse terms.',

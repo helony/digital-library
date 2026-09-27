@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "library": "Kurdish Digital Library",
-  "updated": "2026-09-25",
+  "updated": "2026-09-27",
   "records": [
     {
       "id": 1,
@@ -4319,6 +4319,178 @@
       "browseTags": [],
       "translator": "Roger Lescot (French translations)",
       "publisher": "Paul Geuthner"
+    },
+    {
+      "id": 167,
+      "slug": "mahmesa-hayig-2007",
+      "title": "Mahmeşa",
+      "author": "Rosan Hayıg",
+      "authorSlug": "rosan-hayig",
+      "v": "diq",
+      "variety": "Zazakî",
+      "year": "2007",
+      "yearSort": 2007,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://forum-linguistik.de/sites/www.forum-linguistik.de/files/uploads/Mahmesha.pdf",
+      "source": "https://forum-linguistik.de/zza/zazakid%C4%B1m%C4%B1li/%E2%80%A2-mahme%C5%9Fa",
+      "institution": "Forum Linguistik",
+      "rightsKey": "rights_private_noncommercial_external",
+      "rightsType": "check",
+      "desc": {
+        "en": "Fourteen Zazakî folktales by Rosan Hayıg, with German and English translations. Published by Tiji in 2007.",
+        "kmr": "Çardeh çîrokên gelêrî yên Zazakî ji Rosan Hayıg, bi wergerên Almanî û Îngilîzî. Tiji, 2007.",
+        "ckb": "چواردە چیرۆکی فۆلکلۆریی زازاکی لەلایەن ڕۆسان هایگ، لەگەڵ وەرگێڕانی ئەڵمانی و ئینگلیزی. تیژی، ٢٠٠٧.",
+        "diq": "Çarês estanıkê Zazakî yê Rosan Hayıgî, bi açarnayışanê Almankî û Îngilizkî. Tiji, 2007.",
+        "hac": "چواردە چیرۆکی گەلیی زازاکی جە ڕۆسان هایگ، لەگەڵ تەرجەمەی ئەڵمانی و ئینگلیزی. تیژی، ٢٠٠٧.",
+        "sdh": "چواردە چیرووگ گەلی زازاکی ژە ڕۆسان هایگ، وە تەرجوومەی ئەڵمانی و ئینگلیسی. تیژی، ٢٠٠٧."
+      },
+      "summary": {
+        "en": "Fourteen Zazakî folktales by Rosan Hayıg, with German and English translations. Published by Tiji in 2007.",
+        "kmr": "Çardeh çîrokên gelêrî yên Zazakî ji Rosan Hayıg, bi wergerên Almanî û Îngilîzî. Tiji, 2007.",
+        "ckb": "چواردە چیرۆکی فۆلکلۆریی زازاکی لەلایەن ڕۆسان هایگ، لەگەڵ وەرگێڕانی ئەڵمانی و ئینگلیزی. تیژی، ٢٠٠٧.",
+        "diq": "Çarês estanıkê Zazakî yê Rosan Hayıgî, bi açarnayışanê Almankî û Îngilizkî. Tiji, 2007.",
+        "hac": "چواردە چیرۆکی گەلیی زازاکی جە ڕۆسان هایگ، لەگەڵ تەرجەمەی ئەڵمانی و ئینگلیزی. تیژی، ٢٠٠٧.",
+        "sdh": "چواردە چیرووگ گەلی زازاکی ژە ڕۆسان هایگ، وە تەرجوومەی ئەڵمانی و ئینگلیسی. تیژی، ٢٠٠٧."
+      },
+      "aliases": [
+        "Mahmesha",
+        "Mahmescha",
+        "Roşan Hayig",
+        "Vızêr ra Ewro Istanıkê Zazayan",
+        "Zaza Folktales: Then and Now",
+        "Çermik",
+        "Dimilkî",
+        "Kirmanckî"
+      ],
+      "tone": "gold",
+      "added": "2026-09-27",
+      "checked": "2026-09-27",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-DIQ-0003",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 214,
+      "browseTags": [],
+      "publisher": "Vêjiyaişê Tiji / Tij Yayınları",
+      "translator": "Fahri Pamukçu (English); Eberhard Werner and Brigitte Werner (German)"
+    },
+    {
+      "id": 168,
+      "slug": "memik-axa-wo-dersimij",
+      "title": "Memik axa wo Dêrsimij",
+      "author": "Haydar Işık",
+      "authorSlug": "haydar-isik",
+      "v": "diq",
+      "variety": "Zazakî",
+      "year": "1994",
+      "yearSort": 1994,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/9ZHRSU2JLW.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=251",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "Haydar Işık’s novel in Zazakî, translated from Turkish by Mihem Himbêlij. This is the 1994 Apec edition.",
+        "kmr": "Romana Haydar Işık bi Zazakî, ji Tirkî bi wergera Mihem Himbêlij. Çapa Apecê ya 1994an.",
+        "ckb": "ڕۆمانەکەی حەیدەر ئیشیک بە زازاکی، بە وەرگێڕانی میهەم هیمبێلیج لە تورکییەوە. چاپی ئەپێک، ١٩٩٤.",
+        "diq": "Romanê Haydar Işıkî bi Zazakî, bi açarnayışê Mihem Himbêlijî Tirkî ra. Çapê Apecî yê 1994î.",
+        "hac": "ڕۆمانێ حەیدەر ئیشیک وە زازاکی؛ تەرجەمەی میهەم هیمبێلیج جە تورکی. چاپێ ئەپێک، ١٩٩٤.",
+        "sdh": "ڕۆمان حەیدەر ئیشیک وە زازاکی؛ تەرجوومەی میهەم هیمبێلیج ژە تورکی. چاپ ئەپێک، ١٩٩٤."
+      },
+      "summary": {
+        "en": "Haydar Işık’s novel in Zazakî, translated from Turkish by Mihem Himbêlij. This is the 1994 Apec edition.",
+        "kmr": "Romana Haydar Işık bi Zazakî, ji Tirkî bi wergera Mihem Himbêlij. Çapa Apecê ya 1994an.",
+        "ckb": "ڕۆمانەکەی حەیدەر ئیشیک بە زازاکی، بە وەرگێڕانی میهەم هیمبێلیج لە تورکییەوە. چاپی ئەپێک، ١٩٩٤.",
+        "diq": "Romanê Haydar Işıkî bi Zazakî, bi açarnayışê Mihem Himbêlijî Tirkî ra. Çapê Apecî yê 1994î.",
+        "hac": "ڕۆمانێ حەیدەر ئیشیک وە زازاکی؛ تەرجەمەی میهەم هیمبێلیج جە تورکی. چاپێ ئەپێک، ١٩٩٤.",
+        "sdh": "ڕۆمان حەیدەر ئیشیک وە زازاکی؛ تەرجوومەی میهەم هیمبێلیج ژە تورکی. چاپ ئەپێک، ١٩٩٤."
+      },
+      "aliases": [
+        "Heyder Işık",
+        "Dersimli Memik Ağa",
+        "Mihem Himbêlij",
+        "Dimilkî",
+        "Kirmanckî"
+      ],
+      "tone": "blue",
+      "added": "2026-09-27",
+      "checked": "2026-09-27",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-DIQ-0004",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 150,
+      "browseTags": [
+        "novels"
+      ],
+      "publisher": "Apec",
+      "translator": "Mihem Himbêlij"
+    },
+    {
+      "id": 169,
+      "slug": "taye-lawike-dersimi-1992",
+      "title": "Tayê lawıkê Dêrsımi / Dersim türküleri",
+      "author": "Mustafa Düzgün",
+      "authorSlug": "mustafa-duzgun",
+      "v": "diq",
+      "variety": "Zazakî",
+      "year": "1992",
+      "yearSort": 1992,
+      "subject": "folklore",
+      "script": "latin",
+      "format": "pdf",
+      "url": "https://bnk.institutkurde.org/images/pdf/P4CBV65JAY.pdf",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=1551",
+      "institution": "Kurdish Institute of Paris",
+      "rightsKey": "rights_institutional_pdf",
+      "rightsType": "check",
+      "desc": {
+        "en": "A collection of Dersim songs and laments compiled by Mustafa Düzgün, with Zazakî texts and Turkish translations and commentary. Berhem, 1992.",
+        "kmr": "Berhevoka stran û şînên Dêrsimê ya Mustafa Düzgün, bi tekstên Zazakî, werger û şîroveyên Tirkî. Berhem, 1992.",
+        "ckb": "کۆمەڵە گۆرانی و لاواندنەوەیەکی دەرسیم بە کۆکردنەوەی موستەفا دوزگون؛ دەقی زازاکی لەگەڵ وەرگێڕان و لێکدانەوەی تورکی. بەرهەم، ١٩٩٢.",
+        "diq": "Komê lawikan û şiwaranê Dêrsimî, bi arêkerdişê Mustafa Düzgünî. Metnê Zazakî bi açarnayış û şîroveyê Tirkî. Berhem, 1992.",
+        "hac": "کۆکردەوەی گۆرانی و شینی دەرسیم جە موستەفا دوزگون؛ دەقوو زازاکی لەگەڵ تەرجەمە و شەرحی تورکی. بەرهەم، ١٩٩٢.",
+        "sdh": "کۆکردەوەی گۆرانی و شین دەرسیم ژە موستەفا دوزگون؛ دەقە زازاکیەگان وە تەرجوومە و شەرح تورکی. بەرهەم، ١٩٩٢."
+      },
+      "summary": {
+        "en": "A collection of Dersim songs and laments compiled by Mustafa Düzgün, with Zazakî texts and Turkish translations and commentary. Berhem, 1992.",
+        "kmr": "Berhevoka stran û şînên Dêrsimê ya Mustafa Düzgün, bi tekstên Zazakî, werger û şîroveyên Tirkî. Berhem, 1992.",
+        "ckb": "کۆمەڵە گۆرانی و لاواندنەوەیەکی دەرسیم بە کۆکردنەوەی موستەفا دوزگون؛ دەقی زازاکی لەگەڵ وەرگێڕان و لێکدانەوەی تورکی. بەرهەم، ١٩٩٢.",
+        "diq": "Komê lawikan û şiwaranê Dêrsimî, bi arêkerdişê Mustafa Düzgünî. Metnê Zazakî bi açarnayış û şîroveyê Tirkî. Berhem, 1992.",
+        "hac": "کۆکردەوەی گۆرانی و شینی دەرسیم جە موستەفا دوزگون؛ دەقوو زازاکی لەگەڵ تەرجەمە و شەرحی تورکی. بەرهەم، ١٩٩٢.",
+        "sdh": "کۆکردەوەی گۆرانی و شین دەرسیم ژە موستەفا دوزگون؛ دەقە زازاکیەگان وە تەرجوومە و شەرح تورکی. بەرهەم، ١٩٩٢."
+      },
+      "aliases": [
+        "Dersim Türküleri",
+        "Ağıtlar",
+        "Şiwarî",
+        "Kırmancki",
+        "Kirmanckî",
+        "Dimilkî"
+      ],
+      "tone": "brown",
+      "added": "2026-09-27",
+      "checked": "2026-09-27",
+      "availability": "full",
+      "wiki": null,
+      "rtl": false,
+      "kdlId": "KDL-DIQ-0005",
+      "archiveEligible": false,
+      "localPath": null,
+      "pageCount": 388,
+      "browseTags": [
+        "poetry"
+      ],
+      "publisher": "Berhem"
     }
   ]
 }

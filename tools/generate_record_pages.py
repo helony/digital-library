@@ -14,7 +14,7 @@ def head(title,prefix):
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#11213d"><title>{e(title)} · Kurdish Digital Library</title><link rel="stylesheet" href="{prefix}assets/styles.css"><link rel="stylesheet" href="{prefix}assets/library.css?v=7.1"></head><body class="library-home"><header class="site-header"><div class="header-inner"><a class="brand" href="{prefix}index.html"><span class="brand-mark" aria-hidden="true">▥</span><span><strong>Kurdish Digital Library</strong></span></a><nav class="top-nav" aria-label="Library"><a href="{prefix}authors/index.html">Authors</a><a href="{prefix}preservation/index.html">Preservation</a><a href="{prefix}about/index.html">About</a></nav></div></header>'''
 
 def footer(prefix):
-    return f'''<footer class="site-footer"><div class="shell footer-inner"><strong>Kurdish Digital Library</strong><span>Open access · Clear provenance · Preservation-first</span><span class="footer-links"><a href="{prefix}catalogue.json">JSON</a> · <a href="{prefix}catalogue.csv">CSV</a></span></div></footer><script src="{prefix}assets/locale-complete.js?v=7.1"></script><script src="{prefix}assets/page-locale.js?v=7.1"></script></body></html>'''
+    return f'''<footer class="site-footer"><div class="shell footer-inner"><strong>Kurdish Digital Library</strong><span>Open access · Clear provenance · Preservation-first</span><span class="footer-links"><a href="{prefix}catalogue.json">JSON</a> · <a href="{prefix}catalogue.csv">CSV</a></span></div></footer><script src="{prefix}assets/locale-complete.js?v=7.2"></script><script src="{prefix}assets/page-locale.js?v=7.1"></script></body></html>'''
 
 RIGHTS={
   'rights_pd_old':'Underlying historical work is public domain because the author died more than 100 years ago. A Wikisource transcription may carry CC BY-SA attribution requirements.',
@@ -27,6 +27,7 @@ RIGHTS={
   'rights_wiki_pd':'The historical work is public domain; Wikisource text is available under CC BY-SA.',
   'rights_authorized_share':'The source states that the copyright holder authorized sharing. This is not the same as public domain and does not necessarily permit all reuse.',
   'rights_zazaki1899':'The 1899 historical work is public domain; the Wikisource transcription is available under CC BY-SA.',
+  'rights_private_noncommercial_external':'Forum Linguistik makes this PDF available for private, noncommercial use only. The file remains on its source website; it is not mirrored here. Copyright and attribution notices remain applicable.',
   'rights_institutional_pdf':'This PDF is provided for reading by the Kurdish Institute of Paris. Copyright in the edition and translation may remain with their respective rights holders. The file is embedded from the institute; no redistribution permission is asserted.',
       'rights_institutional_reading':'This 1988 edition is available to read from the Kurdish Institute of Paris. Its modern rewritings may remain copyrighted; no permission to redistribute the PDF is asserted.',
       'rights_cc_by_nc_reader':'An unmodified publisher PDF is provided here for noncommercial reading under CC BY-NC 4.0. Original attribution and license notices are retained. Individual images may have separate reuse terms.',
