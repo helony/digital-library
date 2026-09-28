@@ -106,6 +106,22 @@ class LibraryChecks(unittest.TestCase):
                 path.write_bytes(b'%PDF-1.7\nnot a page tree\n%%EOF')
                 self.assertIn('could not read pages', pdf_failure(path, require_parser=True))
 
+    def test_python_parser_handles_aes_without_ignoring_opening_passwords(self):
+        # GitHub runners use pypdf rather than the locally installed pdfinfo.
+        # These public PDFs may use AES while permitting an empty opening password.
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / 'encrypted.pdf'
+            for algorithm in ('AES-128', 'AES-256'):
+                for password in ('', 'required-password'):
+                    with self.subTest(algorithm=algorithm, protected=bool(password)):
+                        writer = PdfWriter()
+                        writer.add_blank_page(width=612, height=792)
+                        writer.encrypt(password, owner_password='owner-password', algorithm=algorithm)
+                        writer.write(path)
+                        with patch('check_library.shutil.which', return_value=None):
+                            result = pdf_failure(path, require_parser=True)
+                        self.assertEqual(result, 'PDF is password-protected' if password else None)
+
     def test_unavailable_and_rate_limited_are_distinct(self):
         for status, expected in [(404, 'failed'), (410, 'failed'), (403, 'unverified'), (429, 'unverified'), (503, 'unverified')]:
             with self.subTest(status=status), patch('check_library.urlopen', side_effect=HTTPError('https://example.org', status, '', {}, None)):

@@ -1,2 +1,3 @@
 # Used by the offline publishing gate and the scheduled PDF link check.
-pypdf==6.10.0
+# AES-encrypted PDFs also need the crypto extra, including files with no opening password.
+pypdf[crypto]==6.10.0
