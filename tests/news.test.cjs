@@ -21,7 +21,16 @@ const collection = (changes = {}) => ({
   ...changes,
 });
 
-async function createApp({data = collection(), query = '?lang=en', storedLocale, reject = false} = {}) {
+const kurdishCollection = () => ({
+  schemaVersion: 1, checkedAt: fresh(), lastSuccessfulCheck: fresh(),
+  sources: [{id: 'voa-kmr', status: 'ok'}, {id: 'voa-ckb', status: 'ok'}],
+  items: [
+    {id: 'voa-kmr-8200001', title: 'Nûçeyên çanda kurdî', author: 'Dengê Amerîka', url: 'https://www.dengeamerika.com/a/cand/8200001.html', publishedAt: daysAgo(1), sourceId: 'voa-kmr', language: 'kmr', topics: ['culture']},
+    {id: 'voa-ckb-8200002', title: 'هەواڵی کوردستان', author: 'دەنگی ئەمەریکا', url: 'https://www.dengiamerika.com/a/8200002.html', publishedAt: daysAgo(2), sourceId: 'voa-ckb', language: 'ckb', topics: ['politics']},
+  ],
+});
+
+async function createApp({data = collection(), kurdish = kurdishCollection(), query = '?lang=en&articles=en', storedLocale, reject = false, rejectKurdish = false} = {}) {
   const errors = [];
   const virtualConsole = new VirtualConsole();
   virtualConsole.on('jsdomError', error => errors.push(error));
@@ -33,7 +42,8 @@ async function createApp({data = collection(), query = '?lang=en', storedLocale,
   window.fetch = async (url, options) => {
     requests.push({url, options});
     if (reject) throw new Error('Offline');
-    return {ok: true, json: async () => data};
+    if (rejectKurdish && url.includes('kurdish-news')) throw new Error('Kurdish feed unavailable');
+    return {ok: true, json: async () => url.includes('kurdish-news') ? kurdish : data};
   };
   for (const script of window.document.querySelectorAll('script[src]')) {
     const file = path.resolve(ROOT, 'news', script.getAttribute('src').split('?')[0]);
@@ -64,21 +74,21 @@ test('news uses only populated topic filters, keeps keyboard focus and original 
     assert.equal(document.querySelector('#newsNotice').hidden, true, 'Old reporting is distinct from a failed daily refresh');
     document.querySelector('[data-topic="all"]').click();
     assert.equal(document.querySelectorAll('.news-card').length, 2);
-    assert.equal(app.requests.length, 1);
+    assert.equal(app.requests.length, 2);
     assert.equal(app.requests[0].url, '../data/news.json');
     assert.deepEqual(app.errors, []);
   } finally { app.close(); }
 });
 
 test('news respects locale priority and RTL while preserving English article titles', async () => {
-  const app = await createApp({query: '?lang=ckb', storedLocale: 'kmr'});
+  const app = await createApp({query: '?lang=ckb&articles=en', storedLocale: 'kmr'});
   try {
     const {document, window} = app;
     assert.equal(document.documentElement.lang, 'ckb');
     assert.equal(document.documentElement.dir, 'rtl');
     assert.equal(document.querySelector('#newsTitle').textContent, 'هەواڵ و کولتوور');
     assert.equal(document.querySelector('.news-card h3').lang, 'en');
-    assert.equal(document.querySelector('.news-card h3').dir, 'auto');
+    assert.equal(document.querySelector('.news-card h3').dir, 'ltr');
     assert.equal(document.querySelector('.news-card h3').textContent, 'Kurdish language online');
     assert.match(document.querySelector('[data-common-i18n="navAbout"]').href, /\?lang=ckb$/);
     const select = document.querySelector('#newsLanguage');
@@ -91,7 +101,7 @@ test('news respects locale priority and RTL while preserving English article tit
       assert.equal(document.querySelector('.news-card h3').textContent, 'Kurdish language online');
       assert.ok(document.querySelector('#newsTitle').textContent);
     }
-    assert.equal(window.location.search, '');
+    assert.equal(window.location.search, '?articles=en');
     assert.equal(new URL(document.querySelector('[data-common-i18n="navAbout"]').href).search, '');
     assert.deepEqual(app.errors, []);
   } finally { app.close(); }
@@ -166,6 +176,73 @@ test('news empty feed remains an honest empty state', async () => {
     assert.equal(document.querySelector('#newsTopics').children.length, 0);
     assert.equal(document.querySelector('#newsArchive').hidden, true);
     assert.equal(document.querySelector('#newsCount').textContent, 'Stories: 0');
+    assert.deepEqual(app.errors, []);
+  } finally { app.close(); }
+});
+
+
+test('Kurdish is the default; prominent controls separate native articles from English', async () => {
+  const app = await createApp({query: '?lang=en'});
+  try {
+    const {document, window} = app;
+    assert.deepEqual([...document.querySelectorAll('.news-card h3')].map(node => node.lang), ['kmr', 'ckb']);
+    assert.equal(document.querySelector('#newsArchive').hidden, true);
+    assert.equal(document.querySelector('.news-card h3').textContent, 'Nûçeyên çanda kurdî');
+    const sorani = document.querySelector('[data-article-language="ckb"]');
+    sorani.focus(); sorani.click();
+    assert.equal(document.activeElement, sorani);
+    assert.equal(document.querySelectorAll('.news-card').length, 1);
+    assert.equal(document.querySelector('.news-card h3').dir, 'rtl');
+    assert.equal(document.querySelector('.news-card h3').textContent, 'هەواڵی کوردستان');
+    assert.match(document.querySelector('.news-original').href, /^https:\/\/www.dengiamerika.com\//);
+    assert.match(document.querySelector('.news-original').textContent, /دەنگی ئەمەریکا/);
+    assert.equal(document.querySelector('.news-card-license').href, 'https://www.voanews.com/p/5338.html');
+    const select = document.querySelector('#newsLanguage');
+    select.value = 'kmr'; select.dispatchEvent(new window.Event('change'));
+    assert.equal(document.querySelector('.news-card h3').lang, 'ckb', 'Explicit reading language survives interface changes');
+    document.querySelector('[data-article-language="en"]').click();
+    assert.equal(document.querySelectorAll('.news-card').length, 2);
+    assert.equal(document.querySelector('#newsArchive').hidden, false);
+    assert.equal(new URL(window.location.href).searchParams.get('articles'), 'en');
+    assert.deepEqual(app.errors, []);
+  } finally { app.close(); }
+});
+
+test('Kurdish interface defaults to its own article language and survives reload via URL', async () => {
+  for (const language of ['kmr', 'ckb']) {
+    const app = await createApp({query: '?lang=' + language});
+    try {
+      assert.equal(app.document.querySelectorAll('.news-card').length, 1);
+      assert.equal(app.document.querySelector('.news-card h3').lang, language);
+      assert.deepEqual(app.errors, []);
+    } finally { app.close(); }
+  }
+  const app = await createApp({query: '?lang=en&articles=ckb'});
+  try { assert.equal(app.document.querySelector('.news-card h3').lang, 'ckb'); } finally { app.close(); }
+});
+
+test('one failed collection does not hide the other or substitute English for Kurdish', async () => {
+  const app = await createApp({query: '?lang=en', rejectKurdish: true});
+  try {
+    assert.equal(app.document.querySelectorAll('.news-card').length, 0);
+    assert.match(app.document.querySelector('#newsUpdated').textContent, /could not be loaded/);
+    app.document.querySelector('[data-article-language="en"]').click();
+    assert.equal(app.document.querySelectorAll('.news-card').length, 2);
+    assert.ok(app.document.querySelector('#newsUpdated time'));
+    assert.deepEqual(app.errors, []);
+  } finally { app.close(); }
+});
+
+test('native news rejects spoofed publishers, mixed language metadata and duplicate article IDs', async () => {
+  const data = kurdishCollection();
+  const valid = data.items[0];
+  data.items.push({...valid, url: 'https://www.dengeamerika.com/a/other-slug/8200001.html'});
+  data.items.push({...valid, url: 'https://www.dengeamerika.com.evil.test/a/8200003.html'});
+  data.items.push({...valid, url: 'https://www.dengiamerika.com/a/8200004.html'});
+  data.items.push({...valid, url: 'https://www.dengeamerika.com/a/8200005.html', language: 'ckb'});
+  const app = await createApp({query: '?lang=en', kurdish: data});
+  try {
+    assert.equal(app.document.querySelectorAll('.news-card').length, 2);
     assert.deepEqual(app.errors, []);
   } finally { app.close(); }
 });

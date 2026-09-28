@@ -10,4 +10,5 @@ python3 -m unittest discover -s tests -p 'test_*.py'
 python3 tools/rebuild_recording_data.py --check
 python3 tools/rebuild_pdf_index.py --check
 python3 tools/refresh_news.py --check
+python3 tools/refresh_kurdish_news.py --check
 python3 tools/check_library.py --require-pdf-parser --report reports/prepublish.json

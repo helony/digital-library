@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "maxItemsPerSource": 40,
+  "sources": [
+    {
+      "name": "Dengê Amerîka · VOA",
+      "host": "www.dengeamerika.com",
+      "language": "kmr",
+      "pageLanguage": "kr-Latn",
+      "feeds": [
+        "https://www.dengeamerika.com/api/",
+        "https://www.dengeamerika.com/api/ztpttl-vomx-tpekjkq",
+        "https://www.dengeamerika.com/api/ziuv_l-vomx-tpemikm"
+      ],
+      "id": "voa-kmr",
+      "url": "https://www.dengeamerika.com/",
+      "license": "VOA-produced material",
+      "licenseUrl": "https://www.voanews.com/p/5338.html",
+      "policyUrl": "https://www.voanews.com/p/5338.html",
+      "reviewedAt": "2026-09-28",
+      "reuse": "Original VOA titles and bylines only, with original dates and source links. Reject wire-service credits, syndicated text, missing authors and non-text media. No article bodies, excerpts, images or media are published."
+    },
+    {
+      "name": "دەنگی ئەمەریکا · VOA",
+      "host": "www.dengiamerika.com",
+      "language": "ckb",
+      "pageLanguage": "ku-CKB",
+      "feeds": [
+        "https://www.dengiamerika.com/api/",
+        "https://www.dengiamerika.com/api/z_itvl-vomx-tpevgkr"
+      ],
+      "id": "voa-ckb",
+      "url": "https://www.dengiamerika.com/",
+      "license": "VOA-produced material",
+      "licenseUrl": "https://www.voanews.com/p/5338.html",
+      "policyUrl": "https://www.voanews.com/p/5338.html",
+      "reviewedAt": "2026-09-28",
+      "reuse": "Original VOA titles and bylines only, with original dates and source links. Reject wire-service credits, syndicated text, missing authors and non-text media. No article bodies, excerpts, images or media are published."
+    }
+  ]
+}

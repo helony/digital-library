@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-28T13:37:29Z",
+  "lastSuccessfulCheck": "2026-09-28T13:37:29Z",
+  "sources": [
+    {
+      "id": "voa-kmr",
+      "name": "Dengê Amerîka · VOA",
+      "url": "https://www.dengeamerika.com/",
+      "language": "kmr",
+      "license": "VOA-produced material",
+      "licenseUrl": "https://www.voanews.com/p/5338.html",
+      "policyUrl": "https://www.voanews.com/p/5338.html",
+      "status": "ok",
+      "lastSuccessfulCheck": "2026-09-28T13:37:29Z"
+    },
+    {
+      "id": "voa-ckb",
+      "name": "دەنگی ئەمەریکا · VOA",
+      "url": "https://www.dengiamerika.com/",
+      "language": "ckb",
+      "license": "VOA-produced material",
+      "licenseUrl": "https://www.voanews.com/p/5338.html",
+      "policyUrl": "https://www.voanews.com/p/5338.html",
+      "status": "ok",
+      "lastSuccessfulCheck": "2026-09-28T13:37:29Z"
+    }
+  ],
+  "items": [
+    {
+      "id": "voa-kmr-8204709",
+      "url": "https://www.dengeamerika.com/a/us-kurds-iraq-peshmerga/8204709.html",
+      "title": "Wezareta Pêşmerge: Hevpeymanîya Navneteweyî Alîkarîya Darayî bo Hêzên Me Rawestandîye",
+      "publishedAt": "2026-09-26T14:15:36Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "politics"
+      ],
+      "author": "Dengê Amerîka"
+    },
+    {
+      "id": "voa-kmr-8204324",
+      "url": "https://www.dengeamerika.com/a/binali-yildirim-turkey-pkk-kurds-ocalan-peace/8204324.html",
+      "title": "Binali Yildirim Derbarê Pêvajoya Aştîyê Geşbîn e",
+      "publishedAt": "2026-09-25T15:53:43Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "affairs"
+      ],
+      "author": "Dengê Amerîka"
+    },
+    {
+      "id": "voa-ckb-8202797",
+      "url": "https://www.dengiamerika.com/a/8202797.html",
+      "title": "وتەبێژی یەکێتی فڕۆکەوانی و گشتیاری هەرێمی کوردستان: هیچ نووسراوێک نەگەشتووە بۆ ڕاگرتنی گەشتە...",
+      "publishedAt": "2026-09-22T13:53:14Z",
+      "sourceId": "voa-ckb",
+      "language": "ckb",
+      "topics": [
+        "geography"
+      ],
+      "author": "دیار جەمال"
+    },
+    {
+      "id": "voa-kmr-8201151",
+      "url": "https://www.dengeamerika.com/a/roza-margirêt/8201151.html",
+      "title": "Xwişka Margrêt Behsa Jiyan û Xebata Wê ya Pêşmergatîyê Dike",
+      "publishedAt": "2026-09-17T18:07:33Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "politics",
+        "people"
+      ],
+      "author": "Necîb Balayî"
+    },
+    {
+      "id": "voa-kmr-8200734",
+      "url": "https://www.dengeamerika.com/a/girêsipî-syria-mine-kurds/8200734.html",
+      "title": "Mayîn û Wêranî Vegera Derbiderên Girê Sipî Asteng Dikin",
+      "publishedAt": "2026-09-16T22:37:09Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "affairs"
+      ],
+      "author": "Dengê Amerîka"
+    },
+    {
+      "id": "voa-kmr-8200661",
+      "url": "https://www.dengeamerika.com/a/jina-mahsa-amini-iran-reactions-kurds/8200661.html",
+      "title": "Kurd bi Çalakî û Peyaman Salvegera 4'an a Mirina Jîna Emînî bi Bîr Tînin",
+      "publishedAt": "2026-09-16T16:24:48Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "affairs"
+      ],
+      "author": "Ozlem Yasak"
+    },
+    {
+      "id": "voa-kmr-8200620",
+      "url": "https://www.dengeamerika.com/a/jina-amini-dem-party-kurds-turkey/8200620.html",
+      "title": "DEM Partî Dibêje Jîna Emînî Sembola Têkoşîna Jinan e",
+      "publishedAt": "2026-09-16T13:55:22Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "people"
+      ],
+      "author": "Dengê Amerîka"
+    }
+  ]
+}

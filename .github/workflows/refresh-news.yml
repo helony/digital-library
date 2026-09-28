@@ -6,9 +6,12 @@ on:
     paths:
       - '.github/workflows/refresh-news.yml'
       - 'tools/refresh_news.py'
+      - 'tools/refresh_kurdish_news.py'
       - 'data/news-sources.json'
+      - 'data/kurdish-news-sources.json'
   schedule:
-    - cron: '37 7 * * *'
+    # Off the busy hour; a second daily attempt helps recover from delays.
+    - cron: '37 7,19 * * *'
   workflow_dispatch:
 
 permissions:
@@ -30,20 +33,25 @@ jobs:
         with:
           python-version: '3.12'
       - name: Check feed importer
-        run: python3 -m unittest discover -s tests -p 'test_news.py'
+        run: python3 -m unittest discover -s tests -p 'test_news*.py'
       - name: Refresh permitted source metadata
-        run: python3 tools/refresh_news.py
+        run: |
+          python3 tools/refresh_news.py
+          python3 tools/refresh_kurdish_news.py
       - name: Validate news data
-        run: python3 tools/refresh_news.py --check
+        run: |
+          python3 tools/refresh_news.py --check
+          python3 tools/refresh_kurdish_news.py --check
       - name: Save daily check
         run: |
-          if git diff --quiet -- data/news.json; then
+          if git diff --quiet -- data/news.json data/kurdish-news.json; then
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/news.json
+          git add data/news.json data/kurdish-news.json
           git commit -m 'Refresh credited Kurdish news links'
+          git pull --rebase origin main
           git push origin HEAD:main
       - name: Summarize source checks
         if: always()
@@ -51,10 +59,22 @@ jobs:
           python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
           import json
           from pathlib import Path
-          data = json.loads(Path('data/news.json').read_text())
           print('### News source check')
-          print(f"Checked: {data['checkedAt']}")
-          print(f"\nRetained stories: {len(data['items'])}")
-          for source in data['sources']:
-              print(f"\n- {source['name']}: {source['status']}")
+          for filename in ['news.json', 'kurdish-news.json']:
+              data = json.loads((Path('data') / filename).read_text())
+              print(f"\nChecked: {data['checkedAt']}")
+              print(f"\nRetained stories: {len(data['items'])}")
+              for source in data['sources']:
+                  print(f"\n- {source['name']}: {source['status']}")
+          PY
+      - name: Flag incomplete source checks
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          for filename in ['news.json', 'kurdish-news.json']:
+              data = json.loads((Path('data') / filename).read_text())
+              for source in data['sources']:
+                  if source['status'] != 'ok':
+                      print(f"::warning::{source['id']}: {source['status']}; preserved verified links; inspect refresh logs.")
           PY
