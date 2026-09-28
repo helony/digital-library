@@ -285,7 +285,18 @@ window.KDL_COMPLETE = {
     "archiveIntro": "The library checks whether eligible reading copies are present. Local copy means a file is hosted here; external source means reading depends on another site. Manual review means automatic copying is disabled.",
     "archivePolicyAutomatic": "This record is eligible for a library-hosted preservation copy. When the local archive file is present, the main reader prefers it over the external source.",
     "archivePolicyManual": "This record is not automatically mirrored by the preservation tool. The rights status requires jurisdiction-specific or manual review.",
-    "archivePolicyLicensed": "An unmodified publisher PDF is hosted here for noncommercial reading under CC BY-NC 4.0. The original credits and license notices are retained."
+    "archivePolicyLicensed": "An unmodified publisher PDF is hosted here for noncommercial reading under CC BY-NC 4.0. The original credits and license notices are retained.",
+    "audioStoriesTitle": "Stories to listen to",
+    "audioStoriesIntro": "Folk tales told aloud. Choose a language and press play.",
+    "audioLanguage": "Story language",
+    "pauseAudio": "Pause",
+    "resumeAudio": "Continue from {time}",
+    "audioSavedHere": "Your place is saved in this browser.",
+    "audioFinished": "Finished — listen again anytime.",
+    "audioError": "Could not play. Try again or open the source below.",
+    "restartAudio": "Start over",
+    "listenAtSource": "Listen on Cambridge",
+    "storyTranscript": "Read the transcript and translation"
   },
   "kmr": {
     "label": "Kurmancî",
@@ -567,7 +578,18 @@ window.KDL_COMPLETE = {
     "archiveIntro": "Pirtûkxane hebûna kopiyên xwendinê yên destûrdayî kontrol dike. Kopiya li vir dosyayeke li vê malperê ye; çavkaniya derveyî bi malpereke din ve girêdayî ye. Kontrola destî tê wê maneyê ku kopîkirina xweber neçalak e.",
     "archivePolicyAutomatic": "Ev tomar ji bo kopiyeke parastinê ya li pirtûkxaneyê guncaw e. Dema dosyeya arşîvê li vir hebe, xwînera sereke wê li şûna çavkaniya derveyî bikar tîne.",
     "archivePolicyManual": "Amûra parastinê vê tomarê bi xweber kopî nake. Rewşa mafan li gorî qanûnên herêmê an bi kontrola destî divê were nirxandin.",
-    "archivePolicyLicensed": "PDFa neguherandî ya weşanxaneyê li vir bi CC BY-NC 4.0 ji bo xwendina ne-bazirganî tê dayîn. Navdêrkirin û agahiyên destûra orîjînal hatine parastin."
+    "archivePolicyLicensed": "PDFa neguherandî ya weşanxaneyê li vir bi CC BY-NC 4.0 ji bo xwendina ne-bazirganî tê dayîn. Navdêrkirin û agahiyên destûra orîjînal hatine parastin.",
+    "audioStoriesTitle": "Çîrokên bi deng",
+    "audioStoriesIntro": "Çîrokên gelêrî bi deng. Zimanekî hilbijêre û guhdar bike.",
+    "audioLanguage": "Zimanê çîrokê",
+    "pauseAudio": "Rawestîne",
+    "resumeAudio": "Ji {time} bidomîne",
+    "audioSavedHere": "Cihê te di vê gerokê de tê tomarkirin.",
+    "audioFinished": "Qediya — kengê bixwazî dîsa bibihîze.",
+    "audioError": "Deng nehat lîstin. Dîsa biceribîne an çavkaniya jêrîn veke.",
+    "restartAudio": "Ji destpêkê",
+    "listenAtSource": "Li Cambridge bibihîze",
+    "storyTranscript": "Nivîs û wergerê bixwîne"
   },
   "ckb": {
     "label": "سۆرانی",
@@ -849,7 +871,18 @@ window.KDL_COMPLETE = {
     "archiveIntro": "کتێبخانە بوونی کۆپییە ڕێگەپێدراوەکانی خوێندنەوە دەپشکنێت. کۆپی ناوخۆیی واتە فایلێک لێرە میوانداریکراوە؛ سەرچاوەی دەرەکی واتە خوێندنەوە بە ماڵپەڕێکی ترەوە بەستراوە. پشکنینی دەستی واتە کۆپیکردنی خۆکار ناچالاکە.",
     "archivePolicyAutomatic": "ئەم تۆمارە گونجاوە بۆ کۆپییەکی پاراستن لە کتێبخانەدا. کاتێک فایلی ئەرشیڤ لێرە هەبێت، خوێنەرەوەی سەرەکی لەبری سەرچاوەی دەرەکی ئەو کۆپییە بەکاردەهێنێت.",
     "archivePolicyManual": "ئامرازی پاراستن ئەم تۆمارە بە خۆکار کۆپی ناکات. دۆخی مافەکان پێویستی بە پشکنین بەپێی یاسای ناوچەکە یان پشکنینی دەستی هەیە.",
-    "archivePolicyLicensed": "PDFی بێگۆڕانی بڵاوکەرەوە لێرە بە CC BY-NC 4.0 بۆ خوێندنەوەی نابازرگانی پێشکەش دەکرێت. ناوهێنان و ئاگادارکردنەوەکانی مۆڵەتی ڕەسەن پارێزراون."
+    "archivePolicyLicensed": "PDFی بێگۆڕانی بڵاوکەرەوە لێرە بە CC BY-NC 4.0 بۆ خوێندنەوەی نابازرگانی پێشکەش دەکرێت. ناوهێنان و ئاگادارکردنەوەکانی مۆڵەتی ڕەسەن پارێزراون.",
+    "audioStoriesTitle": "چیرۆکی دەنگی",
+    "audioStoriesIntro": "چیرۆکی گەل بە دەنگی چیرۆکبێژان. زمانێک هەڵبژێرە و گوێ بگرە.",
+    "audioLanguage": "زمانی چیرۆک",
+    "pauseAudio": "ڕابگرە",
+    "resumeAudio": "لە {time} بەردەوام بە",
+    "audioSavedHere": "شوێنەکەت لەم وێبگەڕەدا پاشەکەوت دەکرێت.",
+    "audioFinished": "تەواو بوو — هەر کاتێک بتەوێت دووبارە گوێ بگرە.",
+    "audioError": "دەنگەکە لێ نەدرا. دووبارە هەوڵ بدە یان سەرچاوەکەی خوارەوە بکەرەوە.",
+    "restartAudio": "لە سەرەتاوە",
+    "listenAtSource": "لە Cambridge گوێ بگرە",
+    "storyTranscript": "دەق و وەرگێڕانەکە بخوێنەوە"
   },
   "diq": {
     "label": "Zazakî",
@@ -1131,7 +1164,18 @@ window.KDL_COMPLETE = {
     "archiveIntro": "Kıtabxane estbîyayışê kopyayanê destûrdayeyî kontrol kena. Kopyaya tîya dosyaya na malperî ya; çımeya teberî bi malperêkê bînî girêdaye ya. Kontrolê destî yanî kopyakerdişê otomatîk neçalak o.",
     "archivePolicyAutomatic": "Na tomar qandê kopyayêka parastışî ya kıtabxaneyî munasib a. Wexto dosyaya arşîvî tîya esta, wanoxê sereke çımeya teberî ra verê na kopya bıkar ano.",
     "archivePolicyManual": "Amûrê arşîvkerdişî na tomar bi otomatîk kopya nêkeno. Rewşa heqan kontrolê gorê qanûnanê herêmî yan kontrolê destî wazena.",
-    "archivePolicyLicensed": "PDFê weşanxaneyî bê vurnayış tîya CC BY-NC 4.0 de qandê wanayışê ne-ticarî yeno dayış. Name û notê destûrê orijînalî parastî yê."
+    "archivePolicyLicensed": "PDFê weşanxaneyî bê vurnayış tîya CC BY-NC 4.0 de qandê wanayışê ne-ticarî yeno dayış. Name û notê destûrê orijînalî parastî yê.",
+    "audioStoriesTitle": "Çîrokê bi veng",
+    "audioStoriesIntro": "Çîrokê gelî bi veng. Ziwanêk weçîne û goş bide.",
+    "audioLanguage": "Ziwanê çîroke",
+    "pauseAudio": "Bide vindarnayene",
+    "resumeAudio": "{time} ra dewam bike",
+    "audioSavedHere": "Caê to no gerok de qeyd beno.",
+    "audioFinished": "Qedîya — key wazena reyna goş bide.",
+    "audioError": "Veng nêame lîstene. Reyna biceribne yan çımeyê cêrî ake.",
+    "restartAudio": "Sere ra",
+    "listenAtSource": "Cambridge de goş bide",
+    "storyTranscript": "Nuşte û açarnayîşî biwane"
   },
   "hac": {
     "label": "هەورامی",
@@ -1413,7 +1457,18 @@ window.KDL_COMPLETE = {
     "archiveIntro": "کتێبخانە هەبیەی کۆپیێ ڕێپێدراوێ خوێندنە پشکنۆ. کۆپیێ ئێرە واتە فایل ئێرەیەن؛ سەرچاوەی دەرەکی واتە خوێندنە وە ماڵپەڕێکی ترەوە بەستەن. پشکنەی دەستی واتە کۆپیکەردەی خۆکار ناچالاکەن.",
     "archivePolicyAutomatic": "ئێ تۆمارە پەی کۆپیێکی پارێزەی چە کتێبخانە گونجاوەن. وەختێ فایلێ ئەرشیڤ ئێرە هەبۆ، خوێنەرێ سەرەکی چە جێگای سەرچاوەی دەرەکی ئەو کۆپییە بەکار ئانۆ.",
     "archivePolicyManual": "ئامرازێ پارێزەی ئێ تۆمارە وە خۆکار کۆپی نەکەرۆ. ڕەوشێ ماف پێویست وە پشکنەی وە پێی یاسای ناوچە یا پشکنەی دەستیەن.",
-    "archivePolicyLicensed": "PDFێ بڵاوکەرەوە بێ وەگۆڕەی ئێرە وە CC BY-NC 4.0 پەی خوێندنەی نابازرگانی دەرێنە. نام و ئاگاداریێ مۆڵەتێ ئەسڵی پارێز بیەن."
+    "archivePolicyLicensed": "PDFێ بڵاوکەرەوە بێ وەگۆڕەی ئێرە وە CC BY-NC 4.0 پەی خوێندنەی نابازرگانی دەرێنە. نام و ئاگاداریێ مۆڵەتێ ئەسڵی پارێز بیەن.",
+    "audioStoriesTitle": "حەکایەتێ دەنگی",
+    "audioStoriesIntro": "حەکایەتێ خەڵکی بە دەنگ. زوانێ هەڵبژەرە و گوش دارە.",
+    "audioLanguage": "زوانێ حەکایەت",
+    "pauseAudio": "ڕاوەسنە",
+    "resumeAudio": "چە {time} بەردەوام بە",
+    "audioSavedHere": "جێگەکەت چە ئێ گەڕۆکە هەڵگیرێ.",
+    "audioFinished": "تەواو بی — هەر وەختێ مەیلت وا دووارە گوش دارە.",
+    "audioError": "دەنگ پەخش نەبی. دووارە تاقی کەرەوە یا سەرچاوەی خوارەوە کەرەوە.",
+    "restartAudio": "چە سەرەتاوە",
+    "listenAtSource": "چە Cambridge گوش دارە",
+    "storyTranscript": "نوسە و تەرجەمە بخوەنەوە"
   },
   "sdh": {
     "label": "کوردی خوارین",
@@ -1695,7 +1750,18 @@ window.KDL_COMPLETE = {
     "archiveIntro": "کتێوخانە هەبۊن کۆپیەیل ڕێپێدراو خوەنین پشکنێ. کۆپی ئێرە واتە فایل ئێرەیە؛ سەرچاوەی دەرەکی واتە خوەنین وە ماڵپەڕێگ ترەوە بەستە. پشکنین دەستی واتە کۆپی کردن خۆکار ناچالاکە.",
     "archivePolicyAutomatic": "ئی تۆمارە وە کۆپیێگ پارێزن لە کتێوخانە گونجاوە. وەختی فایل ئەرشیڤ ئێرە هەبۊ، خوەنەر سەرەکی وە جێ سەرچاوەی دەرەکی ئەو کۆپییە بەکار هێنێ.",
     "archivePolicyManual": "ئامراز پارێزن ئی تۆمارە وە خۆکار کۆپی نەکەێ. ڕەوش ماف پێویستی وە پشکنین وە پێ یاسای ناوچە یا پشکنین دەستی هەیە.",
-    "archivePolicyLicensed": "PDF بڵاوکەرەوە بێ گۊڕان ئێرە وە CC BY-NC 4.0 وە خوەنین نابازرگانی دریە. ناو و ئاگاداریەیل مۆڵەت ئەسڵی پارێزریە."
+    "archivePolicyLicensed": "PDF بڵاوکەرەوە بێ گۊڕان ئێرە وە CC BY-NC 4.0 وە خوەنین نابازرگانی دریە. ناو و ئاگاداریەیل مۆڵەت ئەسڵی پارێزریە.",
+    "audioStoriesTitle": "چیرۆکەیل دەنگی",
+    "audioStoriesIntro": "چیرۆکەیل خەڵک وە دەنگ. زوانێگ هەڵبژێر و گووش بگر.",
+    "audioLanguage": "زوان چیرۆک",
+    "pauseAudio": "ڕاوەسێن",
+    "resumeAudio": "لە {time} بەردەوام بە",
+    "audioSavedHere": "جێگەت لە ئی گەڕۆکە هەڵگیرێ.",
+    "audioFinished": "تەواو بی — هەر وەختێگ خوازی دووارە گووش بگر.",
+    "audioError": "دەنگ پەخش نەبی. دووارە تاقی بکەوە یا سەرچاوەی خوارەوە بکەوە.",
+    "restartAudio": "لە سەرەتاوە",
+    "listenAtSource": "لە Cambridge گووش بگر",
+    "storyTranscript": "نوسە و وەرگێڕان بخوەنەوە"
   }
 };
 window.KDL_TRANSLATION_REVIEW = {

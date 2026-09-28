@@ -102,7 +102,7 @@ function readingUrl(b){return b.format==='web'&&!b.localStory?b.url:`?read=${enc
 let dengbejExpanded=false;
 function markMode(){
   $$('[data-library-mode]').forEach(button=>{const active=button.dataset.libraryMode===state.mode;button.classList.toggle('is-active',active);button.setAttribute('aria-pressed',String(active))});
-  renderDengbej();renderSpoken();
+  renderAudioStories();renderDengbej();renderSpoken();
   if(state.mode!=='voices')$$('#voicesBrowsePanel video').forEach(video=>video.pause());
   $('#bookLanguagePicker').hidden=state.mode==='voices';$('#catalogue').hidden=state.mode==='voices';$('#voicesBrowsePanel').hidden=state.mode!=='voices';$('#moreFiltersButton').hidden=state.mode==='voices';
 }
@@ -113,6 +113,7 @@ function positionReadingStart(section=$('#readingStart')){
   if(anchor){if(section.previousElementSibling!==anchor)anchor.after(section)}else if(section.parentElement!==grid)grid.append(section);
 }
 function renderCatalogue(){
+  window.KDLListening.pause();
   const items=filteredBooks(),readingStart=$('#readingStart');renderDiscovery(items);
   $$('[data-book-language]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.bookLanguage===state.variety)));
   $('#resultsCount').textContent=`${items.length} ${t('showBooks')}${state.q?' · '+searchRecordings(state.q).length+' '+t('recordings'):''}`;
@@ -159,6 +160,7 @@ async function downloadBook(b){const target=await resolveBookFile(b);const a=doc
 
 let detailsFocus=null, catalogueScroll=0;
 function showDetails(slug,push=true){
+ window.KDLListening.pause();
  const b=bookBySlug(slug);if(!b)return;
  if(push){detailsFocus=document.activeElement;catalogueScroll=window.scrollY;}
  $('#cataloguePage').hidden=true;$('#detailsPage').hidden=false;window.scrollTo({top:0,behavior:'instant'});
@@ -199,6 +201,7 @@ function beginReaderLoad(){
 function applyReaderPrefs(){document.documentElement.style.setProperty('--reader-size',readerFont+'px');document.documentElement.style.setProperty('--reader-width',wideReader?'1040px':'780px')}
 let readerFocus=null;
 async function openReader(b,push=true){
+ window.KDLListening.pause();
  if(!b)return;
  if(b.format==='web'&&!b.localStory){location.href=b.url;return;}
  captureTextProgress();pdfSession?.destroy?.();pdfSession=null;readerController?.abort();readerFocus=document.activeElement;readerBook=b;readerSections=[];currentSection=-1;

@@ -1,0 +1,39 @@
+{
+  "sourceUrl": "https://zenodo.org/records/15419952",
+  "metadataUrl": "https://zenodo.org/api/records/15419952",
+  "archiveChecksum": "md5:9dc1bc3b864853c039eadb6b9ce798f1",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "checked": "2026-09-28",
+  "credit": "Masoud Mohammadirad, University of Cambridge; fieldwork 2022",
+  "changes": "Complete WAV recordings converted to mono 32 kHz, 64 kbps MP3; no cuts.",
+  "recordings": [
+    {
+      "id": "hewrami-child-goat",
+      "archiveMember": "Corpus of Hewramî recordings/text 1. zaroɫe û bizê/ZB-001-speaker4.wav",
+      "sourceSha256": "87ba691868bc8934a08dc0675a0d198425e4114c033bd23e11691e7ac7f93f42",
+      "audioUrl": "assets/audio/hewrami-child-goat.mp3",
+      "audioSha256": "fa667dd0e86b9b39ae31c04cccac66c823029562c1b97af3776e9ee192a6ad7b",
+      "durationSeconds": 244.58,
+      "bytes": 1957005
+    },
+    {
+      "id": "hewrami-child-tree",
+      "archiveMember": "Corpus of Hewramî recordings/text 2. zaroɫe û qiřolû darî/ZQ-001-speaker5.wav",
+      "sourceSha256": "47b4d714edfff73a7614f668e164e7f6bebdad3f9f3472bc1529391c43846c66",
+      "audioUrl": "assets/audio/hewrami-child-tree.mp3",
+      "audioSha256": "0983c6b4c38a965801c10da816855cf35f63c2a0d862b42e082eaf2c2e656c3c",
+      "durationSeconds": 236.16,
+      "bytes": 1889613
+    },
+    {
+      "id": "hewrami-grasshoppers",
+      "archiveMember": "Corpus of Hewramî recordings/text 4. peɫê merekuř/PM-001-speaker5.wav",
+      "sourceSha256": "491742971db0b81ca7404023bf149cbf59b0de73bcd9aab37b347b72b2d565bb",
+      "audioUrl": "assets/audio/hewrami-grasshoppers.mp3",
+      "audioSha256": "f11646375e109c756180ecc5df9fa220dd72e70d411cd137356e4dbb053a5979",
+      "durationSeconds": 226.8,
+      "bytes": 1814733
+    }
+  ]
+}

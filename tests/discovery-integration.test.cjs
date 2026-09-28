@@ -11,7 +11,7 @@ const SITE = 'https://helony.github.io/digital-library/';
 
 // Run the real page, data, event handlers and renderer. Only external reader
 // requests and the PDF canvas renderer are substituted; no browser is needed.
-function createApp({query = '?lang=en', shelf, locale = 'en', nativePdf = false} = {}) {
+function createApp({query = '?lang=en', shelf, listening, locale = 'en', nativePdf = false} = {}) {
   const errors = [];
   const console = new VirtualConsole();
   console.on('jsdomError', error => errors.push(error));
@@ -33,6 +33,7 @@ function createApp({query = '?lang=en', shelf, locale = 'en', nativePdf = false}
   window.CSS = {escape: value => String(value).replace(/[^a-zA-Z0-9_-]/g, '\\$&')};
   if (locale) window.localStorage.setItem('kdl_locale', locale);
   if (shelf) window.localStorage.setItem('kdl_personal_shelf', JSON.stringify(shelf));
+  if (listening) window.localStorage.setItem('kdl_listening_progress', JSON.stringify(listening));
 
   const readerContent = document.querySelector('#readerContent');
   Object.defineProperty(readerContent, 'scrollHeight', {get: () => 2000});
@@ -99,6 +100,69 @@ function createApp({query = '?lang=en', shelf, locale = 'en', nativePdf = false}
 async function settled() {
   await new Promise(resolve => setTimeout(resolve, 35));
 }
+
+test('audio language filters and recording links lead to the correct playable or source-only story', () => {
+  const app=createApp({query:'?mode=voices&lang=en'});
+  try {
+    assert.equal(app.all('#audioStoriesGrid [data-recording]').length,6);
+    assert.equal(app.all('#audioStoriesGrid audio').length,3);
+    assert.equal(app.all('#dengbejGrid [data-recording]').length,3);
+    app.click('[data-audio-language="kmr"]');
+    assert.equal(app.all('#audioStoriesGrid [data-recording]').length,2);
+    assert.equal(app.all('#audioStoriesGrid audio').length,0);
+    assert.ok(app.all('#audioStoriesGrid .story-source-play').every(a=>a.hostname==='kurdic.ames.cam.ac.uk'));
+    app.history('?mode=voices&recording=hewrami-child-goat&lang=ckb');
+    assert.equal(app.query('[data-audio-language="hac"]').getAttribute('aria-pressed'),'true');
+    assert.ok(app.query('#audioStoriesGrid [data-recording="hewrami-child-goat"] audio'));
+    assert.equal(app.document.documentElement.dir,'rtl');
+    noErrors(app);
+  } finally {app.close()}
+});
+
+test('listening resumes after navigation, unplayed cards preserve progress, and finishing clears it', () => {
+  const id='hewrami-child-goat';
+  const app=createApp({query:'?mode=voices&lang=en',listening:{[id]:{seconds:73,updated:1}}});
+  try {
+    // Switching language filters must not save an unloaded player's 0 over the bookmark.
+    app.click('[data-audio-language="ckb"]');app.click('[data-audio-language="hac"]');
+    let audio=app.query('[data-story-audio="'+id+'"]');
+    Object.defineProperty(audio,'duration',{value:244});
+    Object.defineProperty(audio,'readyState',{value:1});
+    audio.dispatchEvent(new app.window.Event('loadedmetadata'));
+    assert.equal(audio.currentTime,73);
+    audio.currentTime=120;audio.dispatchEvent(new app.window.Event('pause'));
+    app.click('[data-library-mode="all"]');
+    app.click('[data-library-mode="voices"]');
+    audio=app.query('[data-story-audio="'+id+'"]');
+    Object.defineProperty(audio,'duration',{value:244});
+    Object.defineProperty(audio,'readyState',{value:1});
+    audio.dispatchEvent(new app.window.Event('loadedmetadata'));
+    assert.equal(audio.currentTime,120);
+    Object.defineProperty(audio,'ended',{value:true});
+    audio.currentTime=244;audio.dispatchEvent(new app.window.Event('ended'));
+    app.click('[data-library-mode="all"]');
+    assert.equal(JSON.parse(app.window.localStorage.getItem('kdl_listening_progress'))[id],undefined);
+    noErrors(app);
+  } finally {app.close()}
+});
+
+test('only one story plays at a time and playback errors leave a usable source link', async () => {
+  const app=createApp({query:'?mode=voices&lang=en'});
+  try {
+    let paused=0;
+    const players=app.all('#audioStoriesGrid audio');
+    players[0].pause=()=>{paused++};
+    players[1].dispatchEvent(new app.window.Event('play'));
+    assert.equal(paused,1);
+    const card=players[0].closest('[data-recording]');
+    players[0].play=()=>Promise.reject(new Error('Unavailable'));
+    app.click(card.querySelector('[data-audio-toggle]'));
+    await settled();
+    assert.match(card.querySelector('[data-audio-status]').textContent,/Could not play/);
+    assert.ok(card.querySelector('.audio-credits a[href="https://zenodo.org/records/15419952"]'));
+    noErrors(app);
+  } finally {app.close()}
+});
 
 function noErrors(app) {
   assert.deepEqual(app.errors.map(error => error.message || String(error)), []);

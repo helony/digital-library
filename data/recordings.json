@@ -1354,6 +1354,305 @@
         "hac": "تۆمارە کوردییەکانی Lingua Libre",
         "sdh": "تۆمارە کوردییەکانی Lingua Libre"
       }
+    },
+    {
+      "id": "hewrami-child-goat",
+      "title": "zaroɫe û bizê",
+      "titleTranslations": {
+        "en": "The child and the goat",
+        "kmr": "Zarok û bizin",
+        "ckb": "منداڵ و بزنەکە",
+        "diq": "Domane û bize",
+        "hac": "منداڵ و بزنەکە",
+        "sdh": "منداڵ و بزنەکە"
+      },
+      "kind": "audio-story",
+      "collection": "stories",
+      "language": "hac",
+      "narrator": "Saleh",
+      "performerIds": [],
+      "relatedBooks": [],
+      "description": {
+        "en": "A Hewramî tale about a lost child and an unexpected protector. Recorded in Hewraman Tekht in 2022.",
+        "kmr": "Çîrokeke Hewramî li ser zarokekî winda û parêzvanekî neçaverêkirî. Li Hewraman Tekhtê, 2022.",
+        "ckb": "چیرۆکێکی هەورامی دەربارەی منداڵێکی ونبوو و پارێزەرێکی چاوەڕواننەکراو. هەورامان تەخت، ٢٠٢٢.",
+        "diq": "Çîrokêka Hewramî derheqê domanêkê vîndî û pawitoxêkê nêpawitî de. Hewraman Tekht, 2022.",
+        "hac": "چیرۆکێکی هەورامی دەربارەی منداڵێکی ونبوو و پارێزەرێکی چاوەڕواننەکراو. هەورامان تەخت، ٢٠٢٢.",
+        "sdh": "چیرۆکێکی هەورامی دەربارەی منداڵێکی ونبوو و پارێزەرێکی چاوەڕواننەکراو. هەورامان تەخت، ٢٠٢٢."
+      },
+      "aliases": [
+        "Hewramî",
+        "Hawrami",
+        "Gorani",
+        "Goranî",
+        "audio story",
+        "sesli hikaye"
+      ],
+      "sourceUrl": "https://zenodo.org/records/15419952",
+      "credit": "Narrator: Saleh. Recording, transcription and translation: Masoud Mohammadirad (2022). Corpus published on Zenodo (2025).",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": {
+        "en": "Complete recording; WAV converted to MP3.",
+        "kmr": "Tomara tevahî; WAV hat veguhastin MP3.",
+        "ckb": "تۆماری تەواو؛ WAV گۆڕدراوە بۆ MP3.",
+        "diq": "Qeydê temamî; WAV vurîya MP3.",
+        "hac": "تۆماری تەواو؛ WAV گۆڕدراوە بۆ MP3.",
+        "sdh": "تۆماری تەواو؛ WAV گۆڕدراوە بۆ MP3."
+      },
+      "transcriptUrl": "https://langsci-press.org/catalog/book/531",
+      "rightsEvidence": "https://zenodo.org/api/records/15419952",
+      "rightsChecked": "2026-09-28",
+      "audioUrl": "assets/audio/hewrami-child-goat.mp3",
+      "audioSha256": "fa667dd0e86b9b39ae31c04cccac66c823029562c1b97af3776e9ee192a6ad7b",
+      "durationSeconds": 244.58
+    },
+    {
+      "id": "hewrami-child-tree",
+      "title": "zaroɫe û qiřolû darî",
+      "titleTranslations": {
+        "en": "The child and the tree",
+        "kmr": "Zarok û dar",
+        "ckb": "منداڵ و دارەکە",
+        "diq": "Domane û dare",
+        "hac": "منداڵ و دارەکە",
+        "sdh": "منداڵ و دارەکە"
+      },
+      "kind": "audio-story",
+      "collection": "stories",
+      "language": "hac",
+      "narrator": "Mohammad",
+      "performerIds": [],
+      "relatedBooks": [],
+      "description": {
+        "en": "Another telling of a child’s survival, this time with help from a tree. Recorded in Serûpîrî in 2022.",
+        "kmr": "Vegotineke din a rizgariya zarokekî, vê carê bi alîkariya darekê. Li Serûpîrî, 2022.",
+        "ckb": "گێڕانەوەیەکی تری ڕزگاربوونی منداڵێک، ئەم جارە بە یارمەتی دارێک. سەروپیری، ٢٠٢٢.",
+        "diq": "Vatişêkê bîn derheqê xelasbîyayîşê domanêkî de, na rey bi hetkarîya dare. Serûpîrî, 2022.",
+        "hac": "گێڕانەوەیەکی تری ڕزگاربوونی منداڵێک، ئەم جارە بە یارمەتی دارێک. سەروپیری، ٢٠٢٢.",
+        "sdh": "گێڕانەوەیەکی تری ڕزگاربوونی منداڵێک، ئەم جارە بە یارمەتی دارێک. سەروپیری، ٢٠٢٢."
+      },
+      "aliases": [
+        "Hewramî",
+        "Hawrami",
+        "Gorani",
+        "Goranî",
+        "audio story",
+        "sesli hikaye"
+      ],
+      "sourceUrl": "https://zenodo.org/records/15419952",
+      "credit": "Narrator: Mohammad. Recording, transcription and translation: Masoud Mohammadirad (2022). Corpus published on Zenodo (2025).",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": {
+        "en": "Complete recording; WAV converted to MP3.",
+        "kmr": "Tomara tevahî; WAV hat veguhastin MP3.",
+        "ckb": "تۆماری تەواو؛ WAV گۆڕدراوە بۆ MP3.",
+        "diq": "Qeydê temamî; WAV vurîya MP3.",
+        "hac": "تۆماری تەواو؛ WAV گۆڕدراوە بۆ MP3.",
+        "sdh": "تۆماری تەواو؛ WAV گۆڕدراوە بۆ MP3."
+      },
+      "transcriptUrl": "https://langsci-press.org/catalog/book/531",
+      "rightsEvidence": "https://zenodo.org/api/records/15419952",
+      "rightsChecked": "2026-09-28",
+      "audioUrl": "assets/audio/hewrami-child-tree.mp3",
+      "audioSha256": "0983c6b4c38a965801c10da816855cf35f63c2a0d862b42e082eaf2c2e656c3c",
+      "durationSeconds": 236.16
+    },
+    {
+      "id": "hewrami-grasshoppers",
+      "title": "peɫê merekuř",
+      "titleTranslations": {
+        "en": "The grasshoppers",
+        "kmr": "Kulî",
+        "ckb": "کوللەکان",
+        "diq": "Kulî",
+        "hac": "کوللەکان",
+        "sdh": "کوللەکان"
+      },
+      "kind": "audio-story",
+      "collection": "stories",
+      "language": "hac",
+      "narrator": "Mohammad",
+      "performerIds": [],
+      "relatedBooks": [],
+      "description": {
+        "en": "Grasshoppers ask Sheikh Aladin where they may settle. A Hewramî folk tale recorded in Serûpîrî in 2022.",
+        "kmr": "Kulî ji Şêx Eledîn dipirsin ku li ku derê bimînin. Çîrokeke Hewramî, Serûpîrî, 2022.",
+        "ckb": "کوللەکان لە شێخ عەلائەدین دەپرسن لە کوێ نیشتەجێ ببن. چیرۆکێکی هەورامی، سەروپیری، ٢٠٢٢.",
+        "diq": "Kulî Şêx Eledînî ra pers kenê ke kotî bimânê. Çîrokêka Hewramî, Serûpîrî, 2022.",
+        "hac": "کوللەکان لە شێخ عەلائەدین دەپرسن لە کوێ نیشتەجێ ببن. چیرۆکێکی هەورامی، سەروپیری، ٢٠٢٢.",
+        "sdh": "کوللەکان لە شێخ عەلائەدین دەپرسن لە کوێ نیشتەجێ ببن. چیرۆکێکی هەورامی، سەروپیری، ٢٠٢٢."
+      },
+      "aliases": [
+        "Hewramî",
+        "Hawrami",
+        "Gorani",
+        "Goranî",
+        "audio story",
+        "sesli hikaye"
+      ],
+      "sourceUrl": "https://zenodo.org/records/15419952",
+      "credit": "Narrator: Mohammad. Recording, transcription and translation: Masoud Mohammadirad (2022). Corpus published on Zenodo (2025).",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": {
+        "en": "Complete recording; WAV converted to MP3.",
+        "kmr": "Tomara tevahî; WAV hat veguhastin MP3.",
+        "ckb": "تۆماری تەواو؛ WAV گۆڕدراوە بۆ MP3.",
+        "diq": "Qeydê temamî; WAV vurîya MP3.",
+        "hac": "تۆماری تەواو؛ WAV گۆڕدراوە بۆ MP3.",
+        "sdh": "تۆماری تەواو؛ WAV گۆڕدراوە بۆ MP3."
+      },
+      "transcriptUrl": "https://langsci-press.org/catalog/book/531",
+      "rightsEvidence": "https://zenodo.org/api/records/15419952",
+      "rightsChecked": "2026-09-28",
+      "audioUrl": "assets/audio/hewrami-grasshoppers.mp3",
+      "audioSha256": "f11646375e109c756180ecc5df9fa220dd72e70d411cd137356e4dbb053a5979",
+      "durationSeconds": 226.8
+    },
+    {
+      "id": "cambridge-zembilfiros",
+      "title": "Zembîlfiroş",
+      "titleTranslations": {
+        "en": "Zembîlfiroş — the basket seller",
+        "kmr": "Zembîlfiroş",
+        "ckb": "زەمبیلفرۆش",
+        "diq": "Zembîlfiroş",
+        "hac": "زەمبیلفرۆش",
+        "sdh": "زەمبیلفرۆش"
+      },
+      "kind": "archive",
+      "collection": "stories",
+      "language": "kmr",
+      "narrator": "Ahmad Abubakir Suleiman",
+      "performerIds": [],
+      "relatedBooks": [
+        "zembilfiros",
+        "story-zembilfiros",
+        "neo-aramaic-kurdish-folklore-2022-v2"
+      ],
+      "description": {
+        "en": "A spoken Kurmancî telling from Khizava, with a transcript and English translation on Cambridge’s website.",
+        "kmr": "Vegotineke devkî bi Kurmancî ji Xîzavayê. Nivîs û wergera îngilîzî li malpera Cambridge hene.",
+        "ckb": "گێڕانەوەیەکی کرمانجی لە خیزاڤا، لەگەڵ دەق و وەرگێڕانی ئینگلیزی لە ماڵپەڕی Cambridge.",
+        "diq": "Vatişêk bi Kurmancî Xîzava ra. Nuşte û açarnayîşê îngilizkî malpera Cambridge de estê.",
+        "hac": "گێڕانەوەیەکی کرمانجی لە خیزاڤا، لەگەڵ دەق و وەرگێڕانی ئینگلیزی لە ماڵپەڕی Cambridge.",
+        "sdh": "گێڕانەوەیەکی کرمانجی لە خیزاڤا، لەگەڵ دەق و وەرگێڕانی ئینگلیزی لە ماڵپەڕی Cambridge."
+      },
+      "connection": {
+        "en": "This spoken folk tale is also transcribed and translated in volume II of the folklore collection. Oral tellings may differ from other versions.",
+        "kmr": "Ev çîroka devkî di cilda duyemîn a berhevoka folklorê de jî hatiye nivîsandin û wergerandin. Vegotin dikarin ji hev cuda bin.",
+        "ckb": "ئەم چیرۆکە زارەکییە لە بەرگی دووەمی کۆمەڵەی فۆلکلۆردا نووسراوەتەوە و وەرگێڕدراوە. گێڕانەوەکان دەکرێت جیاواز بن.",
+        "diq": "Na çîroka fekî cilda dîyina komkirdişê folklorî de zî nusîyaya û açarnîyaya. Vatişî eşkenê cîya bibê.",
+        "hac": "ئەم چیرۆکە زارەکییە لە بەرگی دووەمی کۆمەڵەی فۆلکلۆردا نووسراوەتەوە و وەرگێڕدراوە. گێڕانەوەکان دەکرێت جیاواز بن.",
+        "sdh": "ئەم چیرۆکە زارەکییە لە بەرگی دووەمی کۆمەڵەی فۆلکلۆردا نووسراوەتەوە و وەرگێڕدراوە. گێڕانەوەکان دەکرێت جیاواز بن."
+      },
+      "aliases": [
+        "Kurmancî Kurmanji",
+        "audio story",
+        "sesli hikaye"
+      ],
+      "sourceUrl": "https://kurdic.ames.cam.ac.uk/audio/247/",
+      "transcriptUrl": "https://kurdic.ames.cam.ac.uk/audio/247/",
+      "credit": "Narrator: Ahmad Abubakir Suleiman. Lourd Hanna, fieldwork 2020. Transcription: Masoud Mohammadirad. University of Cambridge, Kurdish and Gorani Dialect Database.",
+      "access": "source-link",
+      "rightsChecked": "2026-09-28",
+      "rightsNote": "Link to the public source player only; no audio copied or embedded. No reuse license asserted."
+    },
+    {
+      "id": "cambridge-dindik-hinar",
+      "title": "Dindik Hinar",
+      "titleTranslations": {
+        "en": "Dindik Hinar — Pomegranate Grain",
+        "kmr": "Dindik Hinar",
+        "ckb": "دندک هنار",
+        "diq": "Dindik Hinar",
+        "hac": "دندک هنار",
+        "sdh": "دندک هنار"
+      },
+      "kind": "archive",
+      "collection": "stories",
+      "language": "kmr",
+      "narrator": "Bizhan Khoshavi Ahmad",
+      "performerIds": [],
+      "relatedBooks": [
+        "neo-aramaic-kurdish-folklore-2022-v2"
+      ],
+      "description": {
+        "en": "A long folk tale handed down from a grandmother, told in Duhok Kurmancî. Listen on Cambridge’s website.",
+        "kmr": "Çîrokeke dirêj a ji dapîrekê hatiye bihîstin, bi Kurmanciya Dihokê. Li malpera Cambridge bibihîze.",
+        "ckb": "چیرۆکێکی درێژ لە داپیرەوە، بە کرمانجیی دهۆک. لە ماڵپەڕی Cambridge گوێ بگرە.",
+        "diq": "Çîrokêka derge dapîre ra, bi Kurmancîya Dihokî. Malpera Cambridge de goş bide.",
+        "hac": "چیرۆکێکی درێژ لە داپیرەوە، بە کرمانجیی دهۆک. لە ماڵپەڕی Cambridge گوێ بگرە.",
+        "sdh": "چیرۆکێکی درێژ لە داپیرەوە، بە کرمانجیی دهۆک. لە ماڵپەڕی Cambridge گوێ بگرە."
+      },
+      "connection": {
+        "en": "This spoken folk tale is also transcribed and translated in volume II of the folklore collection. Oral tellings may differ from other versions.",
+        "kmr": "Ev çîroka devkî di cilda duyemîn a berhevoka folklorê de jî hatiye nivîsandin û wergerandin. Vegotin dikarin ji hev cuda bin.",
+        "ckb": "ئەم چیرۆکە زارەکییە لە بەرگی دووەمی کۆمەڵەی فۆلکلۆردا نووسراوەتەوە و وەرگێڕدراوە. گێڕانەوەکان دەکرێت جیاواز بن.",
+        "diq": "Na çîroka fekî cilda dîyina komkirdişê folklorî de zî nusîyaya û açarnîyaya. Vatişî eşkenê cîya bibê.",
+        "hac": "ئەم چیرۆکە زارەکییە لە بەرگی دووەمی کۆمەڵەی فۆلکلۆردا نووسراوەتەوە و وەرگێڕدراوە. گێڕانەوەکان دەکرێت جیاواز بن.",
+        "sdh": "ئەم چیرۆکە زارەکییە لە بەرگی دووەمی کۆمەڵەی فۆلکلۆردا نووسراوەتەوە و وەرگێڕدراوە. گێڕانەوەکان دەکرێت جیاواز بن."
+      },
+      "aliases": [
+        "Kurmancî Kurmanji",
+        "audio story",
+        "sesli hikaye"
+      ],
+      "sourceUrl": "https://kurdic.ames.cam.ac.uk/audio/243/",
+      "transcriptUrl": "https://kurdic.ames.cam.ac.uk/audio/243/",
+      "credit": "Narrator: Bizhan Khoshavi Ahmad. Lourd Hanna, fieldwork 2021. Transcription: Masoud Mohammadirad. University of Cambridge, Kurdish and Gorani Dialect Database.",
+      "access": "source-link",
+      "rightsChecked": "2026-09-28",
+      "rightsNote": "Link to the public source player only; no audio copied or embedded. No reuse license asserted."
+    },
+    {
+      "id": "cambridge-pious-fox",
+      "title": "A ‘Pious’ Fox",
+      "titleTranslations": {
+        "en": "The crafty fox",
+        "kmr": "Roviyê hîlebaz",
+        "ckb": "ڕێوی فێڵباز",
+        "diq": "Luyê fêlbaz",
+        "hac": "ڕێوی فێڵباز",
+        "sdh": "ڕێوی فێڵباز"
+      },
+      "kind": "archive",
+      "collection": "stories",
+      "language": "ckb",
+      "narrator": "Hawsar Najat Bapir",
+      "performerIds": [],
+      "relatedBooks": [
+        "neo-aramaic-kurdish-folklore-2022-v2"
+      ],
+      "description": {
+        "en": "A fox, a rooster and a dove in a Sorani tale from Shaqlawa. Listen and follow the transcript on Cambridge’s website.",
+        "kmr": "Rovî, dîk û kevok di çîrokeke Soranî ji Şeqlawe de. Deng û nivîs li malpera Cambridge hene.",
+        "ckb": "ڕێوی و کەڵەشێر و کۆتر لە چیرۆکێکی سۆرانیی شەقڵاوەدا. لە ماڵپەڕی Cambridge گوێ بگرە و دەقەکە بخوێنەوە.",
+        "diq": "Luye, dik û kevoke çîrokêka Soranî ya Şeqlawe de. Veng û nuşte malpera Cambridge de estê.",
+        "hac": "ڕێوی و کەڵەشێر و کۆتر لە چیرۆکێکی سۆرانیی شەقڵاوەدا. لە ماڵپەڕی Cambridge گوێ بگرە و دەقەکە بخوێنەوە.",
+        "sdh": "ڕێوی و کەڵەشێر و کۆتر لە چیرۆکێکی سۆرانیی شەقڵاوەدا. لە ماڵپەڕی Cambridge گوێ بگرە و دەقەکە بخوێنەوە."
+      },
+      "connection": {
+        "en": "This spoken folk tale is also transcribed and translated in volume II of the folklore collection. Oral tellings may differ from other versions.",
+        "kmr": "Ev çîroka devkî di cilda duyemîn a berhevoka folklorê de jî hatiye nivîsandin û wergerandin. Vegotin dikarin ji hev cuda bin.",
+        "ckb": "ئەم چیرۆکە زارەکییە لە بەرگی دووەمی کۆمەڵەی فۆلکلۆردا نووسراوەتەوە و وەرگێڕدراوە. گێڕانەوەکان دەکرێت جیاواز بن.",
+        "diq": "Na çîroka fekî cilda dîyina komkirdişê folklorî de zî nusîyaya û açarnîyaya. Vatişî eşkenê cîya bibê.",
+        "hac": "ئەم چیرۆکە زارەکییە لە بەرگی دووەمی کۆمەڵەی فۆلکلۆردا نووسراوەتەوە و وەرگێڕدراوە. گێڕانەوەکان دەکرێت جیاواز بن.",
+        "sdh": "ئەم چیرۆکە زارەکییە لە بەرگی دووەمی کۆمەڵەی فۆلکلۆردا نووسراوەتەوە و وەرگێڕدراوە. گێڕانەوەکان دەکرێت جیاواز بن."
+      },
+      "aliases": [
+        "Soranî Sorani",
+        "audio story",
+        "sesli hikaye"
+      ],
+      "sourceUrl": "https://kurdic.ames.cam.ac.uk/audio/235/",
+      "transcriptUrl": "https://kurdic.ames.cam.ac.uk/audio/235/",
+      "credit": "Narrator: Hawsar Najat Bapir. Lourd Hanna, fieldwork 2021. Transcription: Masoud Mohammadirad. University of Cambridge, Kurdish and Gorani Dialect Database.",
+      "access": "source-link",
+      "rightsChecked": "2026-09-28",
+      "rightsNote": "Link to the public source player only; no audio copied or embedded. No reuse license asserted."
     }
   ],
   "localeFallbacks": {

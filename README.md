@@ -6,7 +6,8 @@ A multilingual library connecting Kurdish books, stories, poetry, and recorded v
 
 - 135 readable works: 84 core catalogue entries plus story shelves, with three additional source-guide records kept out of the reading grid.
 - 57 PDF titles; 14 verified local PDF files, with publisher-hosted reading for the remaining titles.
-- One search across books, authors, performers and 24 media entries, including 18 Dengbêj performances.
+- One search across books, authors, performers and 30 media entries, including 18 Dengbêj performances.
+- A [listening shelf](docs/audio-stories.md) with three licensed Hewramî audio stories, saved listening positions, and three Kurmancî/Soranî source-player links.
 - Accent-insensitive and Arabic-keyboard-equivalent search, browse categories, saved books and reading progress in this browser.
 - A self-hosted PDF.js reader with mobile controls, page restoration, text access and an external-source fallback.
 - Linked reading/listening, performer introductions, source credits and problem reports.

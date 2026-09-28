@@ -208,6 +208,34 @@
 .dengbej-recording h4{margin-bottom:8px}
 .dengbej-recording .dengbej-credit{margin-top:8px}
 
+/* The listening shelf keeps the action large and the recording language visible. */
+.audio-language-picker{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.audio-language-picker>span{margin-inline-end:8px;font-weight:600;color:#5d5046}
+.audio-language-picker button{min-height:44px;padding:9px 17px;border:1px solid #cbbba7;border-radius:24px;background:#fffcf6;color:#26364b;font:inherit;cursor:pointer}
+.audio-language-picker button[aria-pressed="true"]{background:#15263e;border-color:#15263e;color:#fff8e8}
+.audio-story-heading{display:flex;align-items:center;justify-content:space-between;width:100%;padding:17px 24px;background:#eee2cd;color:#4e3927;font-size:15px}
+.audio-story-card:nth-child(3n+2) .audio-story-heading{background:#dfe8e0;color:#344c41}
+.audio-story-card:nth-child(3n+3) .audio-story-heading{background:#e2e7ee;color:#26364b}
+.audio-language{font-weight:700}
+.audio-story-card .audio-narrator{font-size:15px;margin-bottom:12px;color:#746044}
+.audio-story-card .dengbej-recording-body{display:flex;flex-direction:column;flex:1;min-width:0}
+.story-player{margin-top:auto;padding-top:4px}
+.story-play,.story-source-play{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:64px;border:0;border-radius:13px;background:#15263e;color:#fff8e8;line-height:1.4;cursor:pointer;text-decoration:none;padding:12px}
+.story-play{font-family:inherit;font-size:19px;font-weight:600}
+.story-play-icon{display:grid;place-items:center;width:37px;height:37px;border:1px solid #b5a77f;border-radius:50%;color:#f0cd86;font-size:18px;direction:ltr}
+.story-source-play{font-family:inherit;font-size:17px;font-weight:600;margin-top:auto}
+.story-play:hover,.story-source-play:hover{background:#29415b;color:#fff8e8}
+.story-player audio{display:block;width:100%;height:44px;margin-top:12px;direction:ltr}
+.story-player-footer{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:6px;margin:8px 0;font-size:13px;color:#65594a;min-height:40px}
+.story-player-footer .text-button{min-height:44px;font-size:13px;padding:7px 0}
+.audio-credits{margin-top:16px;padding-top:14px;border-top:1px solid #e5dacc;font-size:14px;line-height:1.5;color:#65594a}
+.audio-credits summary{cursor:pointer;min-height:30px}
+.audio-credits a{color:#455c70;text-underline-offset:3px}
+.audio-credits p{font-size:14px;margin:8px 0}
+.audio-transcript{display:block;margin-top:8px}
+.audio-story-card .related-reading{margin-top:14px}
+.audio-language-picker button:focus-visible,.story-play:focus-visible,.story-source-play:focus-visible,.audio-credits summary:focus-visible{outline:3px solid #ad791f;outline-offset:3px}
+
 /* Full illustrated books: generous reading size, original credited artwork. */
 .library-home .reader-article.illustrated-story{max-width:1040px}
 .illustrated-page{display:grid;gap:24px;align-items:center;padding:28px 0;border-bottom:1px solid #e8dfd1}

@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#11213d">
   <title>Kurdish Digital Library</title>
   <link rel="stylesheet" href="assets/styles.css?v=6.0">
-  <link rel="stylesheet" href="assets/library.css?v=7.8">
+  <link rel="stylesheet" href="assets/library.css?v=7.9">
   <link rel="stylesheet" href="assets/pdf-reader.css?v=7.8">
 
   <style>
@@ -82,6 +82,17 @@
             <span class="voices-open-chip" data-i18n="sourcesCredited">Sources credited</span>
           </div>
 
+          <section id="audioStoriesSection" aria-labelledby="audioStoriesTitle">
+            <div class="listening-section-title"><h3 id="audioStoriesTitle" data-i18n="audioStoriesTitle">Stories to listen to</h3><p data-i18n="audioStoriesIntro">Folk tales told aloud. Choose a language and press play.</p></div>
+            <div class="audio-language-picker" role="group" aria-labelledby="audioLanguageLabel">
+              <span id="audioLanguageLabel" data-i18n="audioLanguage">Story language</span>
+              <button type="button" data-audio-language="all" aria-pressed="true" aria-controls="audioStoriesGrid" data-i18n="allBookLanguages">All languages</button>
+              <button type="button" data-audio-language="kmr" aria-pressed="false" aria-controls="audioStoriesGrid">Kurmancî</button>
+              <button type="button" data-audio-language="ckb" aria-pressed="false" aria-controls="audioStoriesGrid">Soranî</button>
+              <button type="button" data-audio-language="hac" aria-pressed="false" aria-controls="audioStoriesGrid">Hewramî</button>
+            </div>
+            <div class="dengbej-grid" id="audioStoriesGrid"></div>
+          </section>
           <section class="dengbej-section" id="dengbej" aria-labelledby="dengbejTitle">
             <div class="listening-section-title"><h3 id="dengbejTitle">Dengbêj</h3><p data-i18n="dengbejIntro">Stories carried in song.</p></div>
             <div class="dengbej-search" role="search" aria-labelledby="dengbejSearchLabel">
@@ -632,12 +643,13 @@
   <script src="assets/visual-previews.js?v=6.7"></script>
   <script src="assets/library-i18n.js?v=7.1"></script>
   <script src="assets/reader-utils.js?v=7.1"></script>
-  <script src="assets/recording-data.js?v=7.1"></script>
-  <script src="assets/locale-complete.js?v=7.8"></script>
+  <script src="assets/recording-data.js?v=7.9"></script>
+  <script src="assets/locale-complete.js?v=7.9"></script>
   <script src="assets/discovery-utils.js?v=7.1"></script>
-  <script src="assets/discovery-ui.js?v=7.8"></script>
+  <script src="assets/discovery-ui.js?v=7.9"></script>
+  <script src="assets/audio-stories.js?v=7.9"></script>
   <script src="assets/pdf-reader.js?v=7.1"></script>
-  <script src="assets/app.js?v=7.8"></script>
+  <script src="assets/app.js?v=7.9"></script>
 
   <script>
   (() => {

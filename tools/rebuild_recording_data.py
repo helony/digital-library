@@ -8,7 +8,9 @@ separately so an intermittent media-provider outage cannot alter the data.
 """
 
 import argparse
+import hashlib
 import json
+import math
 import re
 import sys
 from pathlib import Path
@@ -142,14 +144,51 @@ def load_and_validate(root=ROOT):
         if "connectionSources" in recording:
             sources(recording["connectionSources"], f"{recording_id}.connectionSources")
         kind = recording.get("kind")
-        require(kind in ("dengbej", "spoken", "archive"), f"{recording_id}: invalid kind")
-        require(recording.get("collection") in ("dengbej", "spoken"),
+        require(kind in ("dengbej", "spoken", "archive", "audio-story"), f"{recording_id}: invalid kind")
+        require(recording.get("collection") in ("dengbej", "spoken", "stories"),
                 f"{recording_id}: invalid collection")
         url(recording.get("sourceUrl"), f"{recording_id}.sourceUrl")
-        for key in ("embedUrl", "videoUrl", "thumbnailUrl", "creditUrl", "licenseUrl"):
+        for key in ("embedUrl", "videoUrl", "thumbnailUrl", "creditUrl", "licenseUrl", "transcriptUrl", "rightsEvidence"):
             if key in recording:
                 url(recording[key], f"{recording_id}.{key}")
-        if kind == "dengbej":
+        if recording.get("collection") == "stories":
+            require(recording.get("language") in LOCALES[1:], f"{recording_id}: missing story language")
+            require(text(recording.get("narrator")), f"{recording_id}: missing narrator")
+            require(kind in ("audio-story", "archive"), f"{recording_id}: invalid story kind")
+            if kind == "archive":
+                require(recording.get("access") == "source-link" and not recording.get("audioUrl"),
+                        f"{recording_id}: source-only stories must link to their original player")
+        if kind == "audio-story":
+            require(recording.get("collection") == "stories", f"{recording_id}: audio story in wrong collection")
+            require(text(recording.get("license")) and text(recording.get("licenseUrl")),
+                    f"{recording_id}: missing audio reuse license")
+            require(text(recording.get("rightsEvidence")) and text(recording.get("rightsChecked")),
+                    f"{recording_id}: missing rights evidence")
+            translated(recording.get("changes"), f"{recording_id}.changes")
+            duration = recording.get("durationSeconds")
+            require(isinstance(duration, (int, float)) and math.isfinite(duration) and duration > 0,
+                    f"{recording_id}: invalid duration")
+            audio = recording.get("audioUrl", "")
+            local_file(audio, f"{recording_id}.audioUrl")
+            path = (root / audio).resolve() if isinstance(audio, str) else root
+            require(isinstance(audio, str) and audio.startswith("assets/audio/") and audio.endswith(".mp3"),
+                    f"{recording_id}: expected a local MP3 under assets/audio")
+            if path.is_relative_to(root.resolve()) and path.is_file():
+                content = path.read_bytes()
+                require(len(content) > 1000 and (content.startswith(b"ID3") or content[:2] in (b"\xff\xfb", b"\xff\xf3", b"\xff\xf2")),
+                        f"{recording_id}: invalid MP3 contents")
+                require(hashlib.sha256(content).hexdigest() == recording.get("audioSha256"),
+                        f"{recording_id}: audio checksum mismatch")
+            manifest_path = root / "data/audio-story-sources.json"
+            require(manifest_path.is_file(), f"{recording_id}: missing audio source manifest")
+            if manifest_path.is_file():
+                manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+                entry = next((item for item in manifest.get("recordings", []) if item.get("id") == recording_id), {})
+                require(all(entry.get(key) == recording.get(key) for key in ("audioUrl", "audioSha256", "durationSeconds")),
+                        f"{recording_id}: source manifest does not match audio metadata")
+                require(manifest.get("license") == recording.get("license") and manifest.get("sourceUrl") == recording.get("sourceUrl"),
+                        f"{recording_id}: source manifest does not match rights metadata")
+        elif kind == "dengbej":
             require(bool(recording.get("performerIds")), f"{recording_id}: missing performer")
             embedded = urlparse(recording.get("embedUrl", ""))
             video_id = embedded.path.removeprefix("/embed/")

@@ -14,7 +14,7 @@ function mediaFallbackNote(value){const {language}=localizedContent(value);retur
 function performerById(id){return MEDIA.performers.find(p=>p.id===id)}
 function recordingById(id){return MEDIA.recordings.find(r=>r.id===id)}
 function performerLinks(r){return (r.performerIds||[]).map(id=>{const p=performerById(id);return p?`<a href="?mode=voices&performer=${encodeURIComponent(id)}&lang=${state.locale}" data-performer="${escapeHtml(id)}" dir="auto">${escapeHtml(p.name)}</a>`:''}).join(' · ')}
-function recordingSearchText(r){return [r.title,r.credit,...Object.values(r.titleTranslations||{}),...(r.aliases||[]),...Object.values(r.description||{}),...(r.performerIds||[]).flatMap(id=>{const p=performerById(id);return p?[p.name,...(p.aliases||[])]:[]})].join(' ')}
+function recordingSearchText(r){return [r.title,r.credit,r.narrator,r.language,...Object.values(r.titleTranslations||{}),...(r.aliases||[]),...Object.values(r.description||{}),...(r.performerIds||[]).flatMap(id=>{const p=performerById(id);return p?[p.name,...(p.aliases||[])]:[]})].join(' ')}
 function performerPortrait(p){
  const portrait=p.portrait;if(!portrait)return '';
  const credit=localized(portrait.creditI18n)||portrait.credit||'';
@@ -22,11 +22,19 @@ function performerPortrait(p){
 }
 function searchRecordings(q){return MEDIA.recordings.filter(r=>matchesSearchText(normalizeText(recordingSearchText(r)),q))}
 function recordingCard(r){
+ if(r.collection==='stories')return audioStoryCard(r);
  const title=escapeHtml(localized(r.titleTranslations||r.title));
  const preview=r.thumbnailUrl||r.poster;
  const media=r.embedUrl?`<button class="recording-play" type="button" data-play="${r.id}" aria-label="${escapeHtml(t('listen')+': '+localized(r.titleTranslations||r.title))}">${preview?`<img src="${escapeHtml(preview)}" alt="" loading="lazy">`:''}<span aria-hidden="true">▶</span></button>`:r.videoUrl?`<video controls playsinline preload="none" poster="${escapeHtml(r.poster||'')}" aria-label="${title}"><source src="${escapeHtml(r.videoUrl)}" type="video/webm"></video>`:`<span class="archive-symbol" aria-hidden="true">◉</span>`;
  const related=(r.relatedBooks||[]).map(slug=>bookBySlug(slug)).filter(Boolean);
  return `<article class="dengbej-card dengbej-recording" data-recording="${r.id}"><div class="recording-media">${media}</div><div class="dengbej-recording-body"><h4${mediaAttributes(r.titleTranslations)||' dir="auto"'}>${title}</h4><p class="performer-links">${performerLinks(r)}</p>${r.kind==='archive'||r.kind==='spoken'?`<p${mediaAttributes(r.description)}>${escapeHtml(localized(r.description))}${mediaFallbackNote(r.description)}</p>`:''}${related.length?`<div class="related-reading"><span>${escapeHtml(t('relatedBooks'))}</span>${related.map(b=>`<a href="${escapeHtml(readingUrl(b))}" data-related-read="${b.slug}">${escapeHtml(b.title)} →</a>`).join('')}</div>`:''}<a class="text-button" href="${escapeHtml(r.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(t(r.embedUrl?'listenYoutube':r.kind==='archive'?'listenArchive':'sourceAndRights'))} ↗</a><span class="dengbej-credit">${r.creditUrl?`<a href="${escapeHtml(r.creditUrl)}" target="_blank" rel="noopener">${escapeHtml(r.credit||'')} ↗</a>`:escapeHtml(r.credit||'')}${r.license?' · '+escapeHtml(typeof r.license==='string'?r.license:r.license.label||''):''}</span><button class="text-button media-report" type="button" data-report-media="${r.id}">${escapeHtml(t('reportProblem'))}</button></div></article>`;
+}
+function audioTime(seconds){const n=Math.max(0,Math.floor(Number(seconds)||0));return Math.floor(n/60)+':'+String(n%60).padStart(2,'0')}
+function audioStoryCard(r){
+ const title=escapeHtml(localized(r.titleTranslations||r.title)),language={kmr:'Kurmancî',ckb:'Soranî',hac:'Hewramî'}[r.language]||r.language;
+ const related=(r.relatedBooks||[]).map(bookBySlug).filter(Boolean);
+ const sound=r.audioUrl?`<div class="story-player" data-story-player><button class="story-play" type="button" data-audio-toggle><span class="story-play-icon" data-audio-icon aria-hidden="true">▶</span><span data-audio-label>${escapeHtml(t('listen'))}</span></button><audio controls preload="none" data-story-audio="${escapeHtml(r.id)}" aria-label="${title}" src="${escapeHtml(r.audioUrl)}"></audio><div class="story-player-footer"><span data-audio-status role="status">${escapeHtml(t('audioSavedHere'))}</span><button class="text-button" type="button" data-audio-restart aria-label="${escapeHtml(t('restartAudio')+': '+localized(r.titleTranslations||r.title))}">↺ ${escapeHtml(t('restartAudio'))}</button></div></div>`:`<a class="story-source-play" href="${escapeHtml(r.sourceUrl)}" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> ${escapeHtml(t('listenAtSource'))} ↗</a>`;
+ return `<article class="dengbej-card dengbej-recording audio-story-card" data-recording="${escapeHtml(r.id)}"><div class="audio-story-heading"><span class="audio-language" dir="auto">${escapeHtml(language)}</span><span dir="ltr">${r.durationSeconds?audioTime(r.durationSeconds):'↗'}</span></div><div class="dengbej-recording-body"><h4${mediaAttributes(r.titleTranslations)||' dir="auto"'}>${title}</h4><p class="audio-narrator" dir="auto">${escapeHtml(r.narrator)}</p><p${mediaAttributes(r.description)}>${escapeHtml(localized(r.description))}${mediaFallbackNote(r.description)}</p>${sound}${related.length?`<div class="related-reading"><span>${escapeHtml(t('relatedBooks'))}</span>${related.map(b=>`<a href="${escapeHtml(readingUrl(b))}" data-related-read="${escapeHtml(b.slug)}">${escapeHtml(b.title)} →</a>`).join('')}</div>`:''}<details class="audio-credits"><summary>${escapeHtml(t('sourceAndRights'))}</summary><p class="dengbej-credit">${escapeHtml(r.credit)}</p><a href="${escapeHtml(r.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(t('sourceAndRights'))} ↗</a>${r.license?` · <a href="${escapeHtml(r.licenseUrl)}" target="_blank" rel="noopener">${escapeHtml(r.license)}</a><p${mediaAttributes(r.changes)}>${escapeHtml(localized(r.changes))}${mediaFallbackNote(r.changes)}</p>`:''}${r.transcriptUrl?`<a class="audio-transcript" href="${escapeHtml(r.transcriptUrl)}" target="_blank" rel="noopener">${escapeHtml(t('storyTranscript'))} ↗</a>`:''}<button class="text-button media-report" type="button" data-report-media="${escapeHtml(r.id)}">${escapeHtml(t('reportProblem'))}</button></details></div></article>`;
 }
 function renderDengbej(){
  const query=$('#dengbejSearch').value;
@@ -72,7 +80,8 @@ function showPerformer(id,push=true){
 function openRecording(id,update=true){
  const r=recordingById(id);if(!r)return;
  if(!$('#reader').hidden)closeReader();if(!$('#detailsPage').hidden)closeDetails();
- state.mode='voices';state.performer='';state.q='';$('#searchInput').value='';$('#dengbejSearch').value=localized(r.titleTranslations||r.title);dengbejExpanded=true;
+ state.mode='voices';state.performer='';state.q='';$('#searchInput').value='';$('#dengbejSearch').value=r.collection==='stories'?'':localized(r.titleTranslations||r.title);dengbejExpanded=true;
+ if(r.collection==='stories')audioStoryLanguage=r.language;
  renderCatalogue();if(update)updateUrl({recording:id});
  $('#voicesBrowsePanel [data-recording="'+CSS.escape(id)+'"]')?.scrollIntoView({block:'center',behavior:'smooth'});
 }
@@ -153,6 +162,7 @@ function openProblemReport(item){
  $('#reportItem').value=item.title||'';$('#reportSource').value=item.source||item.sourceUrl||item.url||'';$('#reportPage').value=location.href;$('#reportStatus').textContent='';$('#reportMessage').value='';openDialog('reportDialog');
 }
 function bindDiscoveryActions(root){
+ window.KDLListening?.bind(root);
  const bind=(selector,event,handler)=>$$(selector,root).forEach(el=>{if(el.dataset.bound)return;el.dataset.bound='1';el.addEventListener(event,handler)});
  bind('[data-save]','click',e=>toggleSave(e.currentTarget.dataset.save));
  bind('[data-finish-book]','click',e=>dismissContinueReading(e.currentTarget.dataset.finishBook,'finished'));
@@ -164,7 +174,7 @@ function bindDiscoveryActions(root){
  bind('[data-open-recording]','click',e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();openRecording(e.currentTarget.dataset.openRecording)});
  bind('[data-report-book]','click',e=>openProblemReport(bookBySlug(e.currentTarget.dataset.reportBook)));
  bind('[data-report-media]','click',e=>openProblemReport(recordingById(e.currentTarget.dataset.reportMedia)));
- bind('[data-play]','click',e=>{const r=recordingById(e.currentTarget.dataset.play);const frame=document.createElement('iframe');frame.src=r.embedUrl;frame.title=localized(r.titleTranslations||r.title);frame.allow='encrypted-media; picture-in-picture; fullscreen';frame.allowFullscreen=true;frame.referrerPolicy='strict-origin-when-cross-origin';e.currentTarget.replaceWith(frame);frame.focus()});
+ bind('[data-play]','click',e=>{window.KDLListening?.pause();const r=recordingById(e.currentTarget.dataset.play);const frame=document.createElement('iframe');frame.src=r.embedUrl;frame.title=localized(r.titleTranslations||r.title);frame.allow='encrypted-media; picture-in-picture; fullscreen';frame.allowFullscreen=true;frame.referrerPolicy='strict-origin-when-cross-origin';e.currentTarget.replaceWith(frame);frame.focus()});
 }
 function initDiscoveryEvents(){
  $('#continueUndo').addEventListener('click',undoContinueReading);
