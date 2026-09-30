@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-09-30T14:11:21Z",
-  "lastSuccessfulCheck": "2026-09-30T14:11:21Z",
+  "checkedAt": "2026-09-30T23:10:51Z",
+  "lastSuccessfulCheck": "2026-09-30T23:10:51Z",
   "sources": [
     {
       "id": "voa-kmr",
@@ -12,7 +12,7 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-09-30T14:11:21Z"
+      "lastSuccessfulCheck": "2026-09-30T23:10:51Z"
     },
     {
       "id": "voa-ckb",
@@ -23,10 +23,58 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-09-30T14:11:21Z"
+      "lastSuccessfulCheck": "2026-09-30T23:10:51Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-kmr-8206342",
+      "url": "https://www.dengeamerika.com/a/mgk-turkey-erdogan-pkk/8206342.html",
+      "title": "MGK'ê Piştrastkirina Hilweşîn û Çekberdana PKK’ê Ranegihand",
+      "publishedAt": "2026-09-30T21:24:46Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "affairs"
+      ],
+      "author": "Dengê Amerîka"
+    },
+    {
+      "id": "voa-ckb-8206334",
+      "url": "https://www.dengiamerika.com/a/8206334.html",
+      "title": "سیناتۆرێک: پێویستە ئەمەریکا بەردەوام بێت لە هاوکاریی و پشتگیریی پێشمەرگە",
+      "publishedAt": "2026-09-30T19:23:46Z",
+      "sourceId": "voa-ckb",
+      "language": "ckb",
+      "topics": [
+        "politics"
+      ],
+      "author": "مەریوان حەمە"
+    },
+    {
+      "id": "voa-kmr-8206243",
+      "url": "https://www.dengeamerika.com/a/iraq-kurdistan-usa-troops/8206243.html",
+      "title": "Piştî Vekişîna Hêzên Amerîkî, Çi li Pêş Herêma Kurdistanê Ye?",
+      "publishedAt": "2026-09-30T17:03:13Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "affairs"
+      ],
+      "author": "Semîra Elî Mendî"
+    },
+    {
+      "id": "voa-kmr-8206221",
+      "url": "https://www.dengeamerika.com/a/turkey-pkk-ocalan-peace-london/8206221.html",
+      "title": "Abdulla Ocalan Dibêje “Bêdengbûna Çekan Destpêkek e”",
+      "publishedAt": "2026-09-30T15:48:15Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "affairs"
+      ],
+      "author": "Dengê Amerîka"
+    },
     {
       "id": "voa-kmr-8204709",
       "url": "https://www.dengeamerika.com/a/us-kurds-iraq-peshmerga/8204709.html",
