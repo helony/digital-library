@@ -3980,7 +3980,17 @@
         "novels"
       ],
       "translator": "Firat Cewerî",
-      "publisher": "Nûdem"
+      "publisher": "Nûdem",
+      "readingAlternatives": [
+        {
+          "name": "Heft Reng",
+          "url": "https://dl.dropboxusercontent.com/scl/fi/zlgiyizzr3ag0cozp9edu/Dostoyevski-ev-n-sp.pdf?dl=0&rlkey=0lfnuv505yxwyh50ijnkdz90t&st=xndzq6cn",
+          "source": "https://heft-reng.blogspot.com/p/e-kitaplar.html",
+          "checked": "2026-10-01",
+          "pageCount": 80,
+          "note": "External reading link from Heft Reng. HTTP 200 and all 80 PDF pages parsed on 2026-10-01; availability varies by network. No redistribution permission verified. Do not mirror."
+        }
+      ]
     },
     {
       "id": 161,

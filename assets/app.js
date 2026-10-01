@@ -250,8 +250,10 @@ function renderNativePdf(b,readUrl=b.url,fallback={}){
  const page=clampPage(fallback.page||saved.page||b.startPage||1);
  const pageUrl=value=>{const url=new URL(readUrl,location.href);url.hash='page='+value+'&view=FitH';return url.href};
  const external=new URL(readUrl,location.href).origin!==location.origin;
+ const alternatives=(b.readingAlternatives||[]).filter(item=>{try{return new URL(item.url).protocol==='https:'}catch{return false}});
+ const alternativeLinks=alternatives.map(item=>{const link=new URL(item.url);link.hash='page='+page+'&view=FitH';return `<p><a class="secondary-button" data-pdf-alternative href="${escapeHtml(link.href)}" target="_blank" rel="noopener">${escapeHtml(t('openPdfTab'))} · ${escapeHtml(item.name)} ↗</a></p>`}).join('');
  const sourceView=external
-  ? `<section class="external-pdf-card"><h2 dir="auto">${escapeHtml(b.title)}</h2><p>${escapeHtml(t('externalPdfNote'))}</p><a class="primary-button" data-native-fullscreen href="${escapeHtml(pageUrl(page))}" target="_blank" rel="noopener">${escapeHtml(t('openPdfTab'))} ↗</a></section>`
+  ? `<section class="external-pdf-card"><h2 dir="auto">${escapeHtml(b.title)}</h2><p>${escapeHtml(t('externalPdfNote'))}</p><a class="primary-button" data-native-fullscreen href="${escapeHtml(pageUrl(page))}" target="_blank" rel="noopener">${escapeHtml(t('openPdfTab'))} ↗</a>${alternativeLinks}</section>`
   : `<div class="pdf-fallback"><span>${escapeHtml(t('pdfHelp'))}</span><a data-native-fullscreen href="${escapeHtml(pageUrl(page))}" target="_blank" rel="noopener">${escapeHtml(t('openFullScreen'))} ↗</a><button type="button" class="text-button" data-reader-retry>${escapeHtml(t('retryRead'))}</button></div><iframe class="pdf-frame" title="${escapeHtml(b.title)} PDF" src="${escapeHtml(pageUrl(page))}"></iframe>`;
  saveProgress(b,{format:'pdf',page,...(total?{totalPages:total}:{})});
  const download=$('#readerDownload');download.href=readUrl;download.hidden=false;if(!readUrl.startsWith('books/')){download.target='_blank';download.rel='noopener'}else{download.removeAttribute('target');download.removeAttribute('rel')}
@@ -264,6 +266,7 @@ function renderNativePdf(b,readUrl=b.url,fallback={}){
   const page=clampPage(requested);input.value=String(page);
   saveProgress(b,{format:'pdf',page,...(total?{totalPages:total}:{})});
   $('[data-native-fullscreen]').href=pageUrl(page);
+  $$('[data-pdf-alternative]').forEach(link=>{const url=new URL(link.href);url.hash='page='+page+'&view=FitH';link.href=url.href});
   status.textContent=t('pdfPageSaved').replace('{page}',page);
  });
  input.addEventListener('input',()=>{status.textContent=''});

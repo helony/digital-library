@@ -588,3 +588,26 @@ test('compact suggestion control keeps a translated name and opens the form in b
     noErrors(app);
   } finally { app.close(); }
 });
+
+
+test('Şevên spî offers its alternative external PDF and keeps its bookmark in both links', async () => {
+  const app = createApp({nativePdf: 'reject', query: '?lang=en&read=seven-spi-dostoyevski'});
+  try {
+    await settled();
+    const alternative = app.query('[data-pdf-alternative]');
+    assert.ok(alternative);
+    assert.equal(new URL(alternative.href).hostname, 'dl.dropboxusercontent.com');
+    assert.match(alternative.textContent, /Heft Reng/);
+    assert.equal(alternative.target, '_blank');
+    assert.match(alternative.rel, /noopener/);
+    app.input('#nativePdfPage', '17');
+    app.query('.native-pdf-bookmark').dispatchEvent(new app.window.Event('submit', {bubbles: true, cancelable: true}));
+    for (const link of app.all('[data-pdf-alternative], [data-native-fullscreen]')) {
+      assert.equal(new URL(link.href).hash, '#page=17&view=FitH');
+    }
+    assert.equal(new URL(alternative.href).searchParams.get('rlkey'), '0lfnuv505yxwyh50ijnkdz90t');
+    assert.equal(app.shelf().progress['seven-spi-dostoyevski'].page, 17);
+    assert.equal(app.query('.pdf-frame'), null);
+    noErrors(app);
+  } finally { app.close(); }
+});

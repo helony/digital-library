@@ -183,6 +183,13 @@ def validate(root=ROOT, require_parser=False, strict_archives=False):
             issue('failed', 'book', identity, 'Slug must use lowercase letters, digits, and hyphens')
         if book.get('format') not in ('pdf', 'wiki', 'web'):
             issue('failed', 'book', identity, 'Unknown reading format')
+        alternatives = book.get('readingAlternatives', [])
+        if not isinstance(alternatives, list) or any(
+            not isinstance(item, dict) or not item.get('name') or
+            not str(item.get('url', '')).startswith('https://') or not is_http(item.get('source'))
+            for item in alternatives
+        ):
+            issue('failed', 'book', identity, 'Reading alternatives need a name, HTTPS PDF URL and source URL')
         tags = book.get('browseTags', [])
         if not isinstance(tags, list) or any(tag not in ('short', 'novels', 'children', 'poetry', 'reference') for tag in tags):
             issue('failed', 'book', identity, 'Unknown browseTags category')
@@ -299,6 +306,8 @@ def remote_targets(root=ROOT):
         if book.get('sourceOnly'):
             continue
         identity = book['slug']
+        for alternative in book.get('readingAlternatives', []):
+            add('pdf', identity, alternative['url'])
         if book.get('format') == 'pdf':
             local = book.get('readerPath') or book.get('localPath')
             if local and (root / local).is_file():
