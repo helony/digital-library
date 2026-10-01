@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "library": "Kurdish Digital Library",
-  "updated": "2026-09-27",
+  "updated": "2026-10-01",
   "records": [
     {
       "id": 1,
@@ -3937,10 +3937,10 @@
       "subject": "folklore",
       "script": "latin",
       "format": "pdf",
-      "url": "https://bnk.institutkurde.org/images/pdf/UTELSHF8ZD.pdf",
-      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=218",
-      "institution": "Kurdish Institute of Paris",
-      "rightsKey": "rights_institutional_pdf",
+      "url": "https://dl.dropboxusercontent.com/scl/fi/zlgiyizzr3ag0cozp9edu/Dostoyevski-ev-n-sp.pdf?dl=0&rlkey=0lfnuv505yxwyh50ijnkdz90t&st=xndzq6cn",
+      "source": "https://heft-reng.blogspot.com/p/e-kitaplar.html",
+      "institution": "Heft Reng",
+      "rightsKey": "rights_external_pdf",
       "rightsType": "check",
       "desc": {
         "en": "Dostoyevsky’s White Nights in Firat Cewerî’s Kurmanji translation. The short novel explores the loneliness and uncertain love of Nastenka and a young dreamer; this edition was published by Nûdem in 1993.",
@@ -3968,7 +3968,7 @@
       ],
       "tone": "blue",
       "added": "2026-09-25",
-      "checked": "2026-09-25",
+      "checked": "2026-10-01",
       "availability": "full",
       "wiki": null,
       "rtl": false,
@@ -3981,16 +3981,16 @@
       ],
       "translator": "Firat Cewerî",
       "publisher": "Nûdem",
-      "readingAlternatives": [
-        {
-          "name": "Heft Reng",
-          "url": "https://dl.dropboxusercontent.com/scl/fi/zlgiyizzr3ag0cozp9edu/Dostoyevski-ev-n-sp.pdf?dl=0&rlkey=0lfnuv505yxwyh50ijnkdz90t&st=xndzq6cn",
-          "source": "https://heft-reng.blogspot.com/p/e-kitaplar.html",
-          "checked": "2026-10-01",
-          "pageCount": 80,
-          "note": "External reading link from Heft Reng. HTTP 200 and all 80 PDF pages parsed on 2026-10-01; availability varies by network. No redistribution permission verified. Do not mirror."
-        }
-      ]
+      "catalogueSource": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=218",
+      "catalogueInstitution": "Kurdish Institute of Paris",
+      "downloadOnly": true,
+      "sourcePageCount": 80,
+      "fileVerification": {
+        "checked": "2026-10-01",
+        "sha256": "337a1320f36c6af03201c0e883cd53d0d8ec27f9ee41ec5ea86e51e3f8b9cedf",
+        "pages": 80,
+        "note": "Same Firat Cewerî translation and Nûdem 1993 edition. External download confirmed by the user; uploaded file parsed and a reading page visually checked. Redistribution permission has not been verified; do not mirror."
+      }
     },
     {
       "id": 161,

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-27",
+  "generated": "2026-10-01",
   "policy": "Only records explicitly marked archiveEligible are auto-archived. Other records require manual rights review.",
   "identifier_scheme": "KDL-<primary ISO 639-3 code>-<4 digit sequence>. Identifiers are permanent and should never be reassigned.",
   "items": [
@@ -1271,12 +1271,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
-      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=218",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/UTELSHF8ZD.pdf",
+      "rights_key": "rights_external_pdf",
+      "source": "https://heft-reng.blogspot.com/p/e-kitaplar.html",
+      "remote_url": "https://dl.dropboxusercontent.com/scl/fi/zlgiyizzr3ag0cozp9edu/Dostoyevski-ev-n-sp.pdf?dl=0&rlkey=0lfnuv505yxwyh50ijnkdz90t&st=xndzq6cn",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-01"
     },
     {
       "id": 161,

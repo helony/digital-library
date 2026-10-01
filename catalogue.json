@@ -1,6 +1,6 @@
 {
   "library": "Kurdish Digital Library",
-  "generated": "2026-09-27",
+  "generated": "2026-10-01",
   "record_count": 84,
   "records": [
     {
@@ -2447,14 +2447,14 @@
       "subject": "folklore",
       "format": "pdf",
       "availability": "full",
-      "source_institution": "Kurdish Institute of Paris",
-      "source_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=218",
-      "remote_read_url": "https://bnk.institutkurde.org/images/pdf/UTELSHF8ZD.pdf",
+      "source_institution": "Heft Reng",
+      "source_url": "https://heft-reng.blogspot.com/p/e-kitaplar.html",
+      "remote_read_url": "https://dl.dropboxusercontent.com/scl/fi/zlgiyizzr3ag0cozp9edu/Dostoyevski-ev-n-sp.pdf?dl=0&rlkey=0lfnuv505yxwyh50ijnkdz90t&st=xndzq6cn",
       "wikisource_title": null,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
-      "rights_note_en": "This PDF is provided for reading by the Kurdish Institute of Paris. Copyright in the edition and translation may remain with their respective rights holders. The file is embedded from the institute; no redistribution permission is asserted.",
-      "source_rights_checked": "2026-09-25",
+      "rights_key": "rights_external_pdf",
+      "rights_note_en": "This is an external PDF link. Copyright may apply to the edition and translation; permission to redistribute the file has not been verified. The library does not host a copy.",
+      "source_rights_checked": "2026-10-01",
       "catalogue_added": "2026-09-25",
       "archive_eligible": false,
       "planned_local_path": null,

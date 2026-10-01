@@ -153,6 +153,7 @@ async function renderPdf(b,url){
  const download=$('#readerDownload');download.href=url;download.hidden=false;
  if(url.startsWith('books/')){download.removeAttribute('target');download.removeAttribute('rel')}else{download.target='_blank';download.rel='noopener'}
  const load=beginReaderLoad();
+ if(b.downloadOnly&&new URL(url,location.href).origin!==location.origin){renderNativePdf(b,url);return}
  try{
   const session=await window.KDLPdfReader.open({container:$('#readerContent'),url,slug:b.slug,title:b.title,signal:load.signal,labels:{...LOCALES.en,...LOCALES[state.locale]},onFallback:fallback=>{if(load.current())renderNativePdf(b,url,fallback)},initialPage:personalShelf.progress[b.slug]?.page||b.startPage||1,onProgress:progress=>{if(load.current())saveProgress(b,{page:progress.page,totalPages:progress.totalPages,format:'pdf'})}});
   if(!load.current()){session.destroy();return}pdfSession=session;

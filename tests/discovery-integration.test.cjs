@@ -590,24 +590,33 @@ test('compact suggestion control keeps a translated name and opens the form in b
 });
 
 
-test('Şevên spî offers its alternative external PDF and keeps its bookmark in both links', async () => {
-  const app = createApp({nativePdf: 'reject', query: '?lang=en&read=seven-spi-dostoyevski'});
+test('Şevên spî uses the confirmed download in the reader and shelf without trying an embed', async () => {
+  const app = createApp({query: '?lang=en&read=seven-spi-dostoyevski'});
   try {
     await settled();
-    const alternative = app.query('[data-pdf-alternative]');
-    assert.ok(alternative);
-    assert.equal(new URL(alternative.href).hostname, 'dl.dropboxusercontent.com');
-    assert.match(alternative.textContent, /Heft Reng/);
-    assert.equal(alternative.target, '_blank');
-    assert.match(alternative.rel, /noopener/);
+    const main = app.query('[data-native-fullscreen]');
+    const book = app.window.KDL_BOOKS.find(b => b.slug === 'seven-spi-dostoyevski');
+    assert.ok(main);
+    assert.equal(app.pdfCalls.length, 0, 'A known download source must not show a failing embedded reader first');
+    assert.equal(main.textContent, 'Download PDF ↗');
+    assert.equal(new URL(main.href).hostname, 'dl.dropboxusercontent.com');
+    assert.equal(app.query('#readerDownload').href, book.url);
+    assert.equal(app.query('#readerOriginal').href, book.source);
+    assert.equal(app.query('[data-pdf-alternative]'), null);
+    assert.equal(app.query('.pdf-frame'), null);
+    assert.equal(app.query('.external-pdf-card p').textContent, app.window.KDL_COMPLETE.en.externalPdfDownloadNote);
+    assert.equal(app.query('#nativePdfPage').max, '80');
     app.input('#nativePdfPage', '17');
     app.query('.native-pdf-bookmark').dispatchEvent(new app.window.Event('submit', {bubbles: true, cancelable: true}));
-    for (const link of app.all('[data-pdf-alternative], [data-native-fullscreen]')) {
-      assert.equal(new URL(link.href).hash, '#page=17&view=FitH');
-    }
-    assert.equal(new URL(alternative.href).searchParams.get('rlkey'), '0lfnuv505yxwyh50ijnkdz90t');
-    assert.equal(app.shelf().progress['seven-spi-dostoyevski'].page, 17);
-    assert.equal(app.query('.pdf-frame'), null);
+    assert.equal(new URL(main.href).hash, '#page=17&view=FitH');
+    assert.equal(new URL(main.href).searchParams.get('rlkey'), '0lfnuv505yxwyh50ijnkdz90t');
+    assert.equal(app.shelf().progress[book.slug].page, 17);
+    app.click('#readerClose');
+    app.input('#searchInput', book.slug);
+    assert.equal(app.query('#bookGrid [data-download]').href, book.url);
+    app.click('#bookGrid [data-download]');
+    await settled();
+    assert.equal(app.downloads.at(-1), book.url);
     noErrors(app);
   } finally { app.close(); }
 });
