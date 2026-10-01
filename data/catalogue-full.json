@@ -3940,7 +3940,7 @@
       "url": "https://dl.dropboxusercontent.com/scl/fi/zlgiyizzr3ag0cozp9edu/Dostoyevski-ev-n-sp.pdf?dl=0&rlkey=0lfnuv505yxwyh50ijnkdz90t&st=xndzq6cn",
       "source": "https://heft-reng.blogspot.com/p/e-kitaplar.html",
       "institution": "Heft Reng",
-      "rightsKey": "rights_external_pdf",
+      "rightsKey": "rights_user_supplied_reader",
       "rightsType": "check",
       "desc": {
         "en": "Dostoyevsky’s White Nights in Firat Cewerî’s Kurmanji translation. The short novel explores the loneliness and uncertain love of Nastenka and a young dreamer; this edition was published by Nûdem in 1993.",
@@ -3983,14 +3983,14 @@
       "publisher": "Nûdem",
       "catalogueSource": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=218",
       "catalogueInstitution": "Kurdish Institute of Paris",
-      "downloadOnly": true,
       "sourcePageCount": 80,
       "fileVerification": {
         "checked": "2026-10-01",
         "sha256": "337a1320f36c6af03201c0e883cd53d0d8ec27f9ee41ec5ea86e51e3f8b9cedf",
         "pages": 80,
-        "note": "Same Firat Cewerî translation and Nûdem 1993 edition. External download confirmed by the user; uploaded file parsed and a reading page visually checked. Redistribution permission has not been verified; do not mirror."
-      }
+        "note": "Unmodified PDF supplied by the site owner for hosting in the website reader on 2026-10-01. Firat Cewerî translation, Nûdem 1993 edition; 80 pages parsed and a reading page visually checked. No open license or independent redistribution permission is asserted."
+      },
+      "readerPath": "books/seven-spi-dostoyevski/book.pdf"
     },
     {
       "id": 161,

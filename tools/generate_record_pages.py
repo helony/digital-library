@@ -17,6 +17,7 @@ def footer(prefix):
     return f'''<footer class="site-footer"><div class="shell footer-inner"><strong>Kurdish Digital Library</strong><span>Open access · Clear provenance · Preservation-first</span><span class="footer-links"><a href="{prefix}catalogue.json">JSON</a> · <a href="{prefix}catalogue.csv">CSV</a></span></div></footer><script src="{prefix}assets/locale-complete.js?v=7.2"></script><script src="{prefix}assets/page-locale.js?v=7.1"></script></body></html>'''
 
 RIGHTS={
+  'rights_user_supplied_reader':'This reader copy was supplied by the site owner. Original credits and copyright notices are retained. No open license is asserted.',
   'rights_pd_old':'Underlying historical work is public domain because the author died more than 100 years ago. A Wikisource transcription may carry CC BY-SA attribution requirements.',
   'rights_pd_old_scan':'The underlying historical work is public domain because the author died more than 100 years ago. Check the source record for any terms applying to this scan.',
   'rights_pd_us':'The source identifies this pre-1931 scan as public domain in the United States. Copyright status can differ by jurisdiction.',

@@ -590,33 +590,32 @@ test('compact suggestion control keeps a translated name and opens the form in b
 });
 
 
-test('Şevên spî uses the confirmed download in the reader and shelf without trying an embed', async () => {
+test('Şevên spî opens the uploaded PDF on site, saves progress and downloads the same file', async () => {
   const app = createApp({query: '?lang=en&read=seven-spi-dostoyevski'});
   try {
     await settled();
-    const main = app.query('[data-native-fullscreen]');
     const book = app.window.KDL_BOOKS.find(b => b.slug === 'seven-spi-dostoyevski');
-    assert.ok(main);
-    assert.equal(app.pdfCalls.length, 0, 'A known download source must not show a failing embedded reader first');
-    assert.equal(main.textContent, 'Download PDF ↗');
-    assert.equal(new URL(main.href).hostname, 'dl.dropboxusercontent.com');
-    assert.equal(app.query('#readerDownload').href, book.url);
+    const localPath = 'books/seven-spi-dostoyevski/book.pdf';
+    assert.equal(app.pdfCalls.at(-1).url, localPath);
+    assert.equal(app.query('#readerDownload').getAttribute('href'), localPath);
     assert.equal(app.query('#readerOriginal').href, book.source);
-    assert.equal(app.query('[data-pdf-alternative]'), null);
+    assert.ok(app.query('[data-mock-pdf]'));
+    assert.equal(app.query('.external-pdf-card'), null);
+    assert.equal(app.query('.native-pdf-bookmark'), null);
     assert.equal(app.query('.pdf-frame'), null);
-    assert.equal(app.query('.external-pdf-card p').textContent, app.window.KDL_COMPLETE.en.externalPdfDownloadNote);
-    assert.equal(app.query('#nativePdfPage').max, '80');
-    app.input('#nativePdfPage', '17');
-    app.query('.native-pdf-bookmark').dispatchEvent(new app.window.Event('submit', {bubbles: true, cancelable: true}));
-    assert.equal(new URL(main.href).hash, '#page=17&view=FitH');
-    assert.equal(new URL(main.href).searchParams.get('rlkey'), '0lfnuv505yxwyh50ijnkdz90t');
+    app.pdfCalls.at(-1).onProgress({page: 17, totalPages: 80});
     assert.equal(app.shelf().progress[book.slug].page, 17);
     app.click('#readerClose');
+    app.click('#continueGrid [data-related-read="' + book.slug + '"]');
+    await settled();
+    assert.equal(app.pdfCalls.at(-1).url, localPath);
+    assert.equal(app.pdfCalls.at(-1).initialPage, 17);
+    app.click('#readerClose');
     app.input('#searchInput', book.slug);
-    assert.equal(app.query('#bookGrid [data-download]').href, book.url);
+    assert.equal(app.query('#bookGrid [data-download]').getAttribute('href'), localPath);
     app.click('#bookGrid [data-download]');
     await settled();
-    assert.equal(app.downloads.at(-1), book.url);
+    assert.equal(app.downloads.at(-1), new URL(localPath, SITE).href);
     noErrors(app);
   } finally { app.close(); }
 });

@@ -1271,7 +1271,7 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_external_pdf",
+      "rights_key": "rights_user_supplied_reader",
       "source": "https://heft-reng.blogspot.com/p/e-kitaplar.html",
       "remote_url": "https://dl.dropboxusercontent.com/scl/fi/zlgiyizzr3ag0cozp9edu/Dostoyevski-ev-n-sp.pdf?dl=0&rlkey=0lfnuv505yxwyh50ijnkdz90t&st=xndzq6cn",
       "wiki_title": null,
