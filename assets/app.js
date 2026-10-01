@@ -249,9 +249,13 @@ function renderNativePdf(b,readUrl=b.url,fallback={}){
  const clampPage=value=>Math.max(1,Math.min(total||Number.MAX_SAFE_INTEGER,Math.trunc(Number(value)||1)));
  const page=clampPage(fallback.page||saved.page||b.startPage||1);
  const pageUrl=value=>{const url=new URL(readUrl,location.href);url.hash='page='+value+'&view=FitH';return url.href};
+ const external=new URL(readUrl,location.href).origin!==location.origin;
+ const sourceView=external
+  ? `<section class="external-pdf-card"><h2 dir="auto">${escapeHtml(b.title)}</h2><p>${escapeHtml(t('externalPdfNote'))}</p><a class="primary-button" data-native-fullscreen href="${escapeHtml(pageUrl(page))}" target="_blank" rel="noopener">${escapeHtml(t('openPdfTab'))} ↗</a></section>`
+  : `<div class="pdf-fallback"><span>${escapeHtml(t('pdfHelp'))}</span><a data-native-fullscreen href="${escapeHtml(pageUrl(page))}" target="_blank" rel="noopener">${escapeHtml(t('openFullScreen'))} ↗</a><button type="button" class="text-button" data-reader-retry>${escapeHtml(t('retryRead'))}</button></div><iframe class="pdf-frame" title="${escapeHtml(b.title)} PDF" src="${escapeHtml(pageUrl(page))}"></iframe>`;
  saveProgress(b,{format:'pdf',page,...(total?{totalPages:total}:{})});
  const download=$('#readerDownload');download.href=readUrl;download.hidden=false;if(!readUrl.startsWith('books/')){download.target='_blank';download.rel='noopener'}else{download.removeAttribute('target');download.removeAttribute('rel')}
- $('#readerContent').innerHTML=`<p class="native-pdf-note" id="nativePdfHelp">${escapeHtml(t('nativePdfNote'))}</p><form class="native-pdf-bookmark" novalidate><label for="nativePdfPage">${escapeHtml(t('pdfBookmarkLabel'))}</label><input id="nativePdfPage" name="page" type="number" inputmode="numeric" min="1" step="1" ${total?`max="${total}"`:''} value="${page}" required aria-describedby="nativePdfHelp">${total?`<span>${escapeHtml(t('of'))} ${total}</span>`:''}<button type="submit">${escapeHtml(t('pdfSavePage'))}</button><span class="native-pdf-saved" role="status" aria-live="polite"></span></form><div class="pdf-fallback"><span>${escapeHtml(t('pdfHelp'))}</span><a data-native-fullscreen href="${escapeHtml(pageUrl(page))}" target="_blank" rel="noopener">${escapeHtml(t('openFullScreen'))} ↗</a><button type="button" class="text-button" data-reader-retry>${escapeHtml(t('retryRead'))}</button></div><iframe class="pdf-frame" title="${escapeHtml(b.title)} PDF" src="${escapeHtml(pageUrl(page))}"></iframe>`;
+ $('#readerContent').innerHTML=`<p class="native-pdf-note" id="nativePdfHelp">${escapeHtml(t('nativePdfNote'))}</p><form class="native-pdf-bookmark" novalidate><label for="nativePdfPage">${escapeHtml(t('pdfBookmarkLabel'))}</label><input id="nativePdfPage" name="page" type="number" inputmode="numeric" min="1" step="1" ${total?`max="${total}"`:''} value="${page}" required aria-describedby="nativePdfHelp">${total?`<span>${escapeHtml(t('of'))} ${total}</span>`:''}<button type="submit">${escapeHtml(t('pdfSavePage'))}</button><span class="native-pdf-saved" role="status" aria-live="polite"></span></form>${sourceView}`;
  const bookmark=$('.native-pdf-bookmark'),input=$('#nativePdfPage'),status=$('.native-pdf-saved');
  bookmark.addEventListener('submit',event=>{
   event.preventDefault();if(!active()||!bookmark.isConnected)return;
@@ -263,8 +267,8 @@ function renderNativePdf(b,readUrl=b.url,fallback={}){
   status.textContent=t('pdfPageSaved').replace('{page}',page);
  });
  input.addEventListener('input',()=>{status.textContent=''});
- $('[data-reader-retry]').addEventListener('click',()=>renderPdf(b,readUrl));
- $('.pdf-frame').addEventListener('error',()=>{if(active())renderReaderError(b,()=>renderPdf(b,readUrl),readUrl)},{once:true});
+ $('[data-reader-retry]')?.addEventListener('click',()=>renderPdf(b,readUrl));
+ $('.pdf-frame')?.addEventListener('error',()=>{if(active())renderReaderError(b,()=>renderPdf(b,readUrl),readUrl)},{once:true});
 }
 async function renderStory(b){
  const load=beginReaderLoad();

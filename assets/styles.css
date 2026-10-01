@@ -426,3 +426,6 @@
 .path-links a{font-weight:700;color:#225e58;text-decoration:underline;text-underline-offset:3px}
 .path-links a:focus-visible{outline:3px solid #225e58;outline-offset:3px}
 @media(max-width:720px){.reading-paths{padding:18px}.reading-paths-heading{display:block}.reading-paths-heading p{margin-top:7px}.path-grid{grid-template-columns:1fr}}
+
+/* An explicit reading link replaces unreliable cross-origin native embeds. */
+.external-pdf-card{max-width:42rem;margin:2rem auto;padding:clamp(1.25rem,4vw,2.5rem);border:1px solid var(--line,#d8d0c4);border-radius:16px;background:var(--paper,#faf7f0);text-align:center}.external-pdf-card h2{margin:0 0 .75rem}.external-pdf-card p{max-width:34rem;margin:0 auto 1.5rem;line-height:1.7}.external-pdf-card .primary-button{display:inline-flex;white-space:normal;justify-content:center}

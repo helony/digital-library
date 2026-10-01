@@ -449,7 +449,9 @@ test('a first-time native PDF enters Continue reading and its manual bookmark su
     assert.equal(app.shelf().progress[slug].page, 17);
     assert.match(app.query('.native-pdf-saved').textContent, /17/);
     assert.match(app.query('[data-native-fullscreen]').href, /#page=17&view=FitH$/);
-    assert.match(app.query('.pdf-frame').src, /#page=9&view=FitH$/, 'Saving must not reload the PDF being read');
+    assert.equal(app.query('.pdf-frame'), null, 'External fallback must not create another unreliable embed');
+    assert.ok(app.query('.external-pdf-card'));
+    assert.equal(app.query('[data-native-fullscreen]').target, '_blank');
     app.click('#readerClose');
     app.input('#searchInput', '');
     assert.equal(app.query('#continueReading').hidden, false);
@@ -465,7 +467,8 @@ test('a first-time native PDF enters Continue reading and its manual bookmark su
     await settled();
     assert.equal(reloaded.pdfCalls.at(-1).initialPage, 17);
     assert.equal(reloaded.query('#nativePdfPage').value, '17');
-    assert.match(reloaded.query('.pdf-frame').src, /#page=17&view=FitH$/);
+    assert.match(reloaded.query('[data-native-fullscreen]').href, /#page=17&view=FitH$/);
+    assert.equal(reloaded.query('.pdf-frame'), null);
     noErrors(app);noErrors(reloaded);
   } finally { app.close();reloaded?.close(); }
 });
@@ -523,6 +526,8 @@ test('native PDF bookmark controls and confirmation are translated in every inte
       await settled();
       const labels = app.window.KDL_COMPLETE[locale];
       assert.equal(app.query('.native-pdf-note').textContent, labels.nativePdfNote);
+      assert.equal(app.query('.external-pdf-card p').textContent, labels.externalPdfNote);
+      assert.equal(app.query('[data-native-fullscreen]').textContent, labels.openPdfTab + ' ↗');
       assert.equal(app.query('.native-pdf-bookmark button').textContent, labels.pdfSavePage);
       assert.equal(app.query('.native-pdf-bookmark label').textContent, labels.pdfBookmarkLabel);
       app.input('#nativePdfPage', '23');
