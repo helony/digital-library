@@ -14,9 +14,10 @@ def head(title,prefix):
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#11213d"><title>{e(title)} · Kurdish Digital Library</title><link rel="stylesheet" href="{prefix}assets/styles.css"><link rel="stylesheet" href="{prefix}assets/library.css?v=7.1"></head><body class="library-home"><header class="site-header"><div class="header-inner"><a class="brand" href="{prefix}index.html"><span class="brand-mark" aria-hidden="true">▥</span><span><strong>Kurdish Digital Library</strong></span></a><nav class="top-nav" aria-label="Library"><a href="{prefix}authors/index.html">Authors</a><a href="{prefix}preservation/index.html">Preservation</a><a href="{prefix}about/index.html">About</a></nav></div></header>'''
 
 def footer(prefix):
-    return f'''<footer class="site-footer"><div class="shell footer-inner"><strong>Kurdish Digital Library</strong><span>Open access · Clear provenance · Preservation-first</span><span class="footer-links"><a href="{prefix}catalogue.json">JSON</a> · <a href="{prefix}catalogue.csv">CSV</a></span></div></footer><script src="{prefix}assets/locale-complete.js?v=7.2"></script><script src="{prefix}assets/page-locale.js?v=7.1"></script></body></html>'''
+    return f'''<footer class="site-footer"><div class="shell footer-inner"><strong>Kurdish Digital Library</strong><span>Open access · Clear provenance · Preservation-first</span><span class="footer-links"><a href="{prefix}catalogue.json">JSON</a> · <a href="{prefix}catalogue.csv">CSV</a></span></div></footer><script src="{prefix}assets/locale-complete.js?v=20261002"></script><script src="{prefix}assets/page-locale.js?v=20261002"></script></body></html>'''
 
 RIGHTS={
+  'rights_reading_paused':'Online reading and PDF downloads are paused while sharing permissions are reviewed. Bibliographic information remains available.',
   'rights_user_supplied_reader':'This reader copy was supplied by the site owner. Original credits and copyright notices are retained. No open license is asserted.',
   'rights_pd_old':'Underlying historical work is public domain because the author died more than 100 years ago. A Wikisource transcription may carry CC BY-SA attribution requirements.',
   'rights_pd_old_scan':'The underlying historical work is public domain because the author died more than 100 years ago. Check the source record for any terms applying to this scan.',
@@ -55,7 +56,9 @@ def main():
         cards.append(f'''<a class="directory-card" href="{e(slug)}/index.html"><span class="directory-count">{len(works)} work{'s' if len(works)!=1 else ''}</span><strong>{e(author)}</strong><span>{e(', '.join(sorted(set(w['variety'] for w in works))))}</span></a>''')
         rows=[]
         for r in sorted(works,key=lambda x:(x['yearSort'],x['title'])):
-            rows.append(f'''<article class="record-row"><div><span class="record-id">{e(r['kdlId'])}</span><h3><a href="../../index.html?read={e(r['slug'])}">{e(r['title'])}</a></h3><p>{e(r['year'])} · {e(r['variety'])} · {e(r['subject'].title())}</p></div><a class="secondary-button" href="../../index.html?read={e(r['slug'])}">Read →</a></article>''')
+            action = 'Details' if r.get('accessPaused') else 'Read'
+            route = 'book' if r.get('accessPaused') else 'read'
+            rows.append(f'''<article class="record-row"><div><span class="record-id">{e(r['kdlId'])}</span><h3><a href="../../index.html?{route}={e(r['slug'])}">{e(r['title'])}</a></h3><p>{e(r['year'])} · {e(r['variety'])} · {e(r['subject'].title())}</p></div><a class="secondary-button" href="../../index.html?{route}={e(r['slug'])}">{action} →</a></article>''')
         d=author_root/slug; d.mkdir(parents=True,exist_ok=True)
         (d/'index.html').write_text(head(author,'../../')+f'''<main class="info-page"><div class="shell info-shell"><a class="back-link static-back" href="../index.html">← All authors</a><div class="page-kicker">AUTHOR RECORD</div><h1>{e(author)}</h1><p class="page-lead">Read works by {e(author)}.</p><div class="summary-strip"><strong>{len(works)}</strong><span>catalogue work{'s' if len(works)!=1 else ''}</span><strong>{len(set(w['variety'] for w in works))}</strong><span>language varieties represented</span></div><section class="record-list">{''.join(rows)}</section></div></main>'''+footer('../../'),encoding='utf-8')
 
@@ -68,12 +71,15 @@ def main():
         schema={'@context':'https://schema.org','@type':'Book','name':r['title'],'author':{'@type':'Person','name':r['author']},'datePublished':str(r['yearSort']),'identifier':r['kdlId'],'inLanguage':r['v']}
         read_label='Read available section' if r['availability']=='partial' else 'Read PDF' if r['format']=='pdf' else 'Read now'
         download_url='../../'+r['readerPath'] if r.get('readerPath') else '../../'+r['localPath'] if r.get('archiveEligible') and r.get('localPath') else r['url']
-        download=f'<a class="secondary-button" href="{e(download_url)}" download>↓ Download PDF</a>' if r['format']=='pdf' else ''
+        download=f'<a class="secondary-button" href="{e(download_url)}" download>↓ Download PDF</a>' if r['format']=='pdf' and not r.get('accessPaused') else ''
+        actions = f'<a class="primary-button" href="../../index.html?read={e(r["slug"])}">{read_label} →</a>{download}'
+        if r.get('accessPaused'):
+            actions = '<p>' + e(RIGHTS['rights_reading_paused']) + '</p>'
         page=head(r['title'],'../../')+f'''<script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script>
 <main class="info-page"><div class="shell info-shell"><a class="back-link static-back" href="../../index.html">← Back to books</a>
 <article class="details-main"><h1 dir="auto">{e(r['title'])}</h1><p class="details-byline"><a href="../../authors/{e(r['authorSlug'])}/index.html">{e(r['author'])}</a> · {e(r['variety'])}</p>
 <p class="details-description">{e(r.get('desc',{}).get('en',''))}</p>
-<div class="details-actions"><a class="primary-button" href="../../index.html?read={e(r['slug'])}">{read_label} →</a>{download}</div>
+<div class="details-actions">{actions}</div>
 <details class="source-details"><summary>Source &amp; reuse</summary><p><a href="{e(r['source'])}" target="_blank" rel="noopener">{e(r['institution'])} ↗</a></p><p>{e(RIGHTS.get(r['rightsKey'],'See the source for rights information.'))}</p><p>{e(r['year'])} · {e(r['script'])} · {e(r['kdlId'])}</p><p>{e(note)}</p></details>
 </article></div></main>'''+footer('../../')
         (d/'index.html').write_text(page,encoding='utf-8')

@@ -21,6 +21,8 @@ def main():
     cards = []
     for b in sorted((b for b in records + stories if not b.get('sourceOnly')), key=rank):
         url = b.get('readerPath') or (b.get('localPath') if b.get('localPath') and (ROOT / b['localPath']).is_file() else None) or b['url']
+        if b.get('accessPaused'):
+            url = 'book/' + b['slug'] + '/index.html'
         motif = b.get('motif') or {'poetry': 'love-classical', 'religious': 'mystical-medallion', 'reference': 'editorial-reference', 'education': 'editorial-reference'}.get(b['subject'], 'folk-oral')
         language = {'kmr': 'Kurmancî', 'ckb': 'Soranî', 'diq': 'Zazakî', 'hac': 'Hewramî', 'sdh': 'Kurdî Xwarîn'}[b['v']]
         note = {'partial': 'Available section', 'retelling': 'Retelling', 'reference': 'Source record'}.get(b['availability'], '')
@@ -32,7 +34,7 @@ def main():
         note_html = f'<span class="edition-note">{note}</span>' if note else ''
         author = 'Khan, Mohammadirad, Molin & Noorlander' if len(b['author']) > 80 else b['author']
         info = f'<a class="shelf-info" href="book/{e(b["slug"])}/index.html">Info</a>' if b.get('kdlId') else ''
-        label = 'Source record' if b.get('sourceOnly') else 'Read available section' if b['availability'] == 'partial' else 'Read'
+        label = 'Details' if b.get('accessPaused') else 'Source record' if b.get('sourceOnly') else 'Read available section' if b['availability'] == 'partial' else 'Read'
         cards.append(f'''<article class="book-card static-book-card" data-slug="{e(b['slug'])}">
 <a class="cover tone-{e(b['tone'])} {long_class} {preview_class}" href="{e(url)}"><span class="cover-language">{language}{' · PDF' if b['format']=='pdf' else ''}</span><h3 class="cover-title" dir="auto">{e(b['title'])}</h3>{art}{note_html}</a>
 <div class="card-body">{scan_title}<p class="book-author" dir="auto">{e(author)}</p><p class="book-summary" lang="en" dir="auto">{e(b.get("summary",b.get("desc",{})).get("en",""))}</p><div class="card-actions"><a class="shelf-read" href="{e(url)}">{label} →</a>{info}</div></div></article>''')

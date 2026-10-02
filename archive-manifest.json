@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01",
+  "generated": "2026-10-02",
   "policy": "Only records explicitly marked archiveEligible are auto-archived. Other records require manual rights review.",
   "identifier_scheme": "KDL-<primary ISO 639-3 code>-<4 digit sequence>. Identifiers are permanent and should never be reassigned.",
   "items": [
@@ -13,12 +13,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "regional",
-      "rights_key": "rights_pd_us",
+      "rights_key": "rights_reading_paused",
       "source": "https://archive.org/details/rosettaproject_kmr_multiple-1",
-      "remote_url": "https://archive.org/download/rosettaproject_kmr_multiple-1/rosettaproject_kmr_multiple-1_text.pdf",
+      "remote_url": "https://archive.org/details/rosettaproject_kmr_multiple-1",
       "wiki_title": null,
-      "local_path": "books/soane-grammar-1913/book.pdf",
-      "checked": "2026-09-18"
+      "local_path": null,
+      "checked": "2026-10-02"
     },
     {
       "id": 2,
@@ -81,12 +81,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "regional",
-      "rights_key": "rights_pd_us",
-      "source": "https://bnk.institutkurde.org/images/pdf/BXQSR9A3D7.pdf",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/BXQSR9A3D7.pdf",
+      "rights_key": "rights_reading_paused",
+      "source": "https://bnk.institutkurde.org/",
+      "remote_url": "https://bnk.institutkurde.org/",
       "wiki_title": null,
-      "local_path": "books/practical-kurdish-grammar/book.pdf",
-      "checked": "2026-09-18"
+      "local_path": null,
+      "checked": "2026-10-02"
     },
     {
       "id": 6,
@@ -98,12 +98,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "regional",
-      "rights_key": "rights_pd_us",
-      "source": "https://bnk.institutkurde.org/images/pdf/LZ68BVJ32M.pdf",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/LZ68BVJ32M.pdf",
+      "rights_key": "rights_reading_paused",
+      "source": "https://bnk.institutkurde.org/",
+      "remote_url": "https://bnk.institutkurde.org/",
       "wiki_title": null,
-      "local_path": "books/elementary-kurmanji-grammar/book.pdf",
-      "checked": "2026-09-18"
+      "local_path": null,
+      "checked": "2026-10-02"
     },
     {
       "id": 7,
@@ -115,12 +115,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_1932",
-      "source": "https://bnk.institutkurde.org/images/pdf/JSE3P1NGHY.pdf",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/JSE3P1NGHY.pdf",
+      "rights_key": "rights_reading_paused",
+      "source": "https://bnk.institutkurde.org/",
+      "remote_url": "https://bnk.institutkurde.org/",
       "wiki_title": null,
-      "local_path": "books/rezana-elfabeya-qurdi/book.pdf",
-      "checked": "2026-09-18"
+      "local_path": null,
+      "checked": "2026-10-02"
     },
     {
       "id": 8,
@@ -132,12 +132,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_1932",
-      "source": "https://bnk.institutkurde.org/images/pdf/72A9XUKYVC.pdf",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/72A9XUKYVC.pdf",
+      "rights_key": "rights_reading_paused",
+      "source": "https://bnk.institutkurde.org/",
+      "remote_url": "https://bnk.institutkurde.org/",
       "wiki_title": null,
-      "local_path": "books/rupelinen-elfabe/book.pdf",
-      "checked": "2026-09-18"
+      "local_path": null,
+      "checked": "2026-10-02"
     },
     {
       "id": 9,
@@ -421,12 +421,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "regional",
-      "rights_key": "rights_pd_us",
+      "rights_key": "rights_reading_paused",
       "source": "https://pmb.institutkurde.org/opac_css/index.php?lvl=notice_display&id=10175",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/V79NPJMH31.pdf",
+      "remote_url": "https://pmb.institutkurde.org/opac_css/index.php?lvl=notice_display&id=10175",
       "wiki_title": null,
-      "local_path": "books/makas-kurdische-texte-mardin-1924/book.pdf",
-      "checked": "2026-09-21"
+      "local_path": null,
+      "checked": "2026-10-02"
     },
     {
       "id": 26,
@@ -812,12 +812,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_reading",
-      "source": "https://bnk.institutkurde.org/images/pdf/PCCS9HEK9S.pdf",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/PCCS9HEK9S.pdf",
+      "rights_key": "rights_reading_paused",
+      "source": "https://bnk.institutkurde.org/",
+      "remote_url": "https://bnk.institutkurde.org/",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 49,
@@ -863,12 +863,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=945",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/FT79RMV3A2.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=945",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 52,
@@ -880,12 +880,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=29",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/BUF852RWPN.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=29",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 53,
@@ -897,12 +897,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=1567",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/XAWE8RYQHJ.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=1567",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 54,
@@ -914,12 +914,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=47",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/ERFWLD1B9T.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=47",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 55,
@@ -931,12 +931,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=48",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/P2BRV8NFJW.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=48",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 56,
@@ -948,12 +948,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=972",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/JGTZHUKDXS.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=972",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 57,
@@ -965,12 +965,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=55",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/Y7GSZJH1T8.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=55",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 58,
@@ -982,12 +982,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=247",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/MHTBKPRFQV.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=247",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 59,
@@ -999,12 +999,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=4939",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/B6ZLHXTMQV.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=4939",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 60,
@@ -1016,12 +1016,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=40",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/D94U3BAEZH.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=40",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 61,
@@ -1033,12 +1033,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=624",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/WJLYE157R6.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=624",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 62,
@@ -1050,12 +1050,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=988",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/X5DBTFUELA.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=988",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 63,
@@ -1067,12 +1067,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=427",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/1YZSCMR8XJ.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=427",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 64,
@@ -1084,12 +1084,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=65",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/MUYVF2PK4D.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=65",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 65,
@@ -1101,12 +1101,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=1561",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/JKAP4GTHRS.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=1561",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 66,
@@ -1118,12 +1118,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=1167",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/XQR8EP3ZA2.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=1167",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 67,
@@ -1135,12 +1135,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=177",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/C4VL1Z5X8R.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=177",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 68,
@@ -1152,12 +1152,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=4593",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/EY9M7PC8Z2.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=4593",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 69,
@@ -1169,12 +1169,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=176",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/S3R5XY2H16.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=176",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 70,
@@ -1186,12 +1186,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=943",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/Z691S28JYK.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=943",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 156,
@@ -1203,12 +1203,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=190",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/5X9E64WM3Q.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=190",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 157,
@@ -1220,12 +1220,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=199",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/XJRN928HE7.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=199",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 158,
@@ -1237,12 +1237,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=205",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/XA2B4WZEJG.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=205",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 159,
@@ -1254,12 +1254,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=198",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/VPAEBFJ32U.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=198",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 160,
@@ -1271,12 +1271,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_user_supplied_reader",
-      "source": "https://heft-reng.blogspot.com/p/e-kitaplar.html",
-      "remote_url": "https://dl.dropboxusercontent.com/scl/fi/zlgiyizzr3ag0cozp9edu/Dostoyevski-ev-n-sp.pdf?dl=0&rlkey=0lfnuv505yxwyh50ijnkdz90t&st=xndzq6cn",
+      "rights_key": "rights_reading_paused",
+      "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=218",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=218",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-10-01"
+      "checked": "2026-10-02"
     },
     {
       "id": 161,
@@ -1288,12 +1288,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=444",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/TLXEQR23JZ.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=444",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 162,
@@ -1305,12 +1305,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=217",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/CW5N6MU18X.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=217",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 163,
@@ -1322,12 +1322,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=4901",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/KX1EZBXKTQ.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=4901",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 164,
@@ -1339,12 +1339,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=911",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/KRTZC8173S.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=911",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 165,
@@ -1356,12 +1356,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=245",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/Y5TJZVSCRP.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=245",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 166,
@@ -1373,12 +1373,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=434",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/K6SAXT59YC.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=434",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-25"
+      "checked": "2026-10-02"
     },
     {
       "id": 167,
@@ -1390,12 +1390,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_private_noncommercial_external",
+      "rights_key": "rights_reading_paused",
       "source": "https://forum-linguistik.de/zza/zazakid%C4%B1m%C4%B1li/%E2%80%A2-mahme%C5%9Fa",
-      "remote_url": "https://forum-linguistik.de/sites/www.forum-linguistik.de/files/uploads/Mahmesha.pdf",
+      "remote_url": "https://forum-linguistik.de/zza/zazakid%C4%B1m%C4%B1li/%E2%80%A2-mahme%C5%9Fa",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-27"
+      "checked": "2026-10-02"
     },
     {
       "id": 168,
@@ -1407,12 +1407,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=251",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/9ZHRSU2JLW.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=251",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-27"
+      "checked": "2026-10-02"
     },
     {
       "id": 169,
@@ -1424,12 +1424,12 @@
       "format": "pdf",
       "eligible": false,
       "rights_type": "check",
-      "rights_key": "rights_institutional_pdf",
+      "rights_key": "rights_reading_paused",
       "source": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=1551",
-      "remote_url": "https://bnk.institutkurde.org/images/pdf/P4CBV65JAY.pdf",
+      "remote_url": "https://bnk.institutkurde.org/catalogue/detail.php?pirtuk=1551",
       "wiki_title": null,
       "local_path": null,
-      "checked": "2026-09-27"
+      "checked": "2026-10-02"
     }
   ]
 }

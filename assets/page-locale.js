@@ -52,13 +52,13 @@
     'Review': 'review', 'Local copy': 'localCopy', 'External fallback': 'externalFallback',
     'Open access · Clear provenance · Preservation-first': 'footer',
     'Independent catalogue & preservation archive': 'brandSub',
-    'Loading catalogue…': 'loading', 'Read PDF': 'openPdf', 'Download PDF': 'downloadPdf',
+    'Loading catalogue…': 'loading', 'Read PDF': 'openPdf', 'Download PDF': 'downloadPdf', 'Details': 'details',
   };
   for (const [key, value] of Object.entries(dictionaries.en)) {
     if (key.startsWith('rights_')) phraseKeys[value] = key;
   }
   const interfaceSelectors = [
-    '.top-nav a', '.back-link', '.page-kicker', '.source-details summary', '.details-actions a',
+    '.details-actions p', '.top-nav a', '.back-link', '.page-kicker', '.source-details summary', '.details-actions a',
     '.record-list .secondary-button', '.machine-links a', '.site-footer .footer-inner > span:not(.footer-links)',
     '.brand small', '.summary-strip span', '.status-card span', '.audit-table th',
     '.audit-table td:nth-child(4)', '.status-pill', '.audit-table td[colspan]',
@@ -140,7 +140,7 @@
       const headings = document.querySelectorAll('.record-main h2');
       ['aboutFindHeading', 'aboutPreserveHeading', 'aboutRightsHeading'].forEach((key, index) => bind(headings[index], key));
       const paragraphs = document.querySelectorAll('.record-main > p');
-      ['aboutFind', 'aboutPreserve', 'aboutRights', 'createdBy'].forEach((key, index) => bind(paragraphs[index], key));
+      ['aboutFind', 'aboutPreserve', 'aboutRights'].forEach((key, index) => bind(paragraphs[index], key));
       [[1, 'preservation/index.html', 'preservation'], [2, 'RIGHTS_POLICY.md', 'rightsReuse']].forEach(([index, path, key]) => {
         if (!paragraphs[index]) return;
         const link = document.createElement('a');

@@ -129,7 +129,7 @@ function undoContinueReading(){
  $$(status==='finished'?'[data-finish-book]':'[data-remove-continue]',$('#continueGrid')).find(button=>(button.dataset.finishBook||button.dataset.removeContinue)===slug)?.focus({preventScroll:true});
 }
 function renderContinueReading(){
- const recent=Object.entries(personalShelf.progress).filter(([,progress])=>progress&&!['finished','dismissed'].includes(progress.status)).sort((a,b)=>b[1].updated-a[1].updated).map(([slug,progress])=>({b:bookBySlug(slug),progress})).filter(x=>x.b).slice(0,3);
+ const recent=Object.entries(personalShelf.progress).filter(([,progress])=>progress&&!['finished','dismissed'].includes(progress.status)).sort((a,b)=>b[1].updated-a[1].updated).map(([slug,progress])=>({b:bookBySlug(slug),progress})).filter(x=>x.b&&!x.b.accessPaused).slice(0,3);
  $('#continueReading').hidden=(!recent.length&&!continueUndo)||!!state.q||state.mode==='voices'||state.browse!=='all';
  $('#continueNotice').hidden=!continueUndo;
  $('#continueNoticeText').textContent=continueUndo?t(continueUndo.status==='finished'?'finishedNotice':'removedNotice').replace('{title}',bookBySlug(continueUndo.slug)?.title||''):'';

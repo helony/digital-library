@@ -432,8 +432,9 @@ test('reopening a removed PDF also restores Continue reading when using the nati
 });
 
 test('a first-time native PDF enters Continue reading and its manual bookmark survives a reload', async () => {
-  const slug = 'bilbil-andersen';
+  const slug = 'mann-mukri-texts-1906';
   const app = createApp({nativePdf: 'reject'});
+  vm.runInContext("bookBySlug('mann-mukri-texts-1906').startPage = 9", app.dom.getInternalVMContext());
   let reloaded;
   try {
     app.input('#searchInput', slug);
@@ -521,7 +522,7 @@ test('switching to the native PDF viewer keeps the last rendered page and measur
 
 test('native PDF bookmark controls and confirmation are translated in every interface locale', async () => {
   for (const locale of ['en', 'kmr', 'ckb', 'diq', 'hac', 'sdh']) {
-    const app = createApp({nativePdf: true, locale, query: '?lang=' + locale + '&read=bilbil-andersen'});
+    const app = createApp({nativePdf: true, locale, query: '?lang=' + locale + '&read=mann-mukri-texts-1906'});
     try {
       await settled();
       const labels = app.window.KDL_COMPLETE[locale];
@@ -590,32 +591,27 @@ test('compact suggestion control keeps a translated name and opens the form in b
 });
 
 
-test('Şevên spî opens the uploaded PDF on site, saves progress and downloads the same file', async () => {
-  const app = createApp({query: '?lang=en&read=seven-spi-dostoyevski'});
+test('paused PDF deep links show information without reading, downloads or restored progress', async () => {
+  const slug = 'seven-spi-dostoyevski';
+  const app = createApp({query: '?lang=en&read=' + slug, shelf: {saved: [], progress: {[slug]: {page: 18, totalPages: 80, format: 'pdf', updated: Date.now()}}}});
   try {
     await settled();
-    const book = app.window.KDL_BOOKS.find(b => b.slug === 'seven-spi-dostoyevski');
-    const localPath = 'books/seven-spi-dostoyevski/book.pdf';
-    assert.equal(app.pdfCalls.at(-1).url, localPath);
-    assert.equal(app.query('#readerDownload').getAttribute('href'), localPath);
-    assert.equal(app.query('#readerOriginal').href, book.source);
-    assert.ok(app.query('[data-mock-pdf]'));
-    assert.equal(app.query('.external-pdf-card'), null);
-    assert.equal(app.query('.native-pdf-bookmark'), null);
-    assert.equal(app.query('.pdf-frame'), null);
-    app.pdfCalls.at(-1).onProgress({page: 17, totalPages: 80});
-    assert.equal(app.shelf().progress[book.slug].page, 17);
-    app.click('#readerClose');
-    app.click('#continueGrid [data-related-read="' + book.slug + '"]');
-    await settled();
-    assert.equal(app.pdfCalls.at(-1).url, localPath);
-    assert.equal(app.pdfCalls.at(-1).initialPage, 17);
-    app.click('#readerClose');
-    app.input('#searchInput', book.slug);
-    assert.equal(app.query('#bookGrid [data-download]').getAttribute('href'), localPath);
-    app.click('#bookGrid [data-download]');
-    await settled();
-    assert.equal(app.downloads.at(-1), new URL(localPath, SITE).href);
+    const book = app.window.KDL_BOOKS.find(b => b.slug === slug);
+    assert.equal(book.accessPaused, true);
+    assert.equal(app.pdfCalls.length, 0);
+    assert.equal(app.query('#reader').hidden, true);
+    assert.equal(app.query('#detailsPage').hidden, false);
+    assert.equal(app.query('#detailsRead').hidden, true);
+    assert.equal(app.query('#detailsDownload'), null);
+    assert.ok(app.query('#detailsContent').textContent.includes(app.window.KDL_COMPLETE.en.rights_reading_paused));
+    assert.equal(app.query('#continueGrid [data-related-read="' + slug + '"]'), null);
+    await app.window.downloadBook(book);
+    assert.equal(app.downloads.length, 0);
+    app.window.closeDetails();
+    app.input('#searchInput', slug);
+    assert.equal(app.query('#bookGrid [data-download]'), null);
+    assert.ok(app.query('#bookGrid .shelf-read').href.includes('?book='));
+    assert.equal(fs.existsSync(path.join(ROOT, 'books', slug, 'book.pdf')), false);
     noErrors(app);
   } finally { app.close(); }
 });

@@ -303,7 +303,7 @@ def remote_targets(root=ROOT):
             else:
                 tasks[key] = dict(kind=kind, ids=[identity], url=url, **extra)
     for book in books + stories:
-        if book.get('sourceOnly'):
+        if book.get('sourceOnly') or book.get('accessPaused'):
             continue
         identity = book['slug']
         for alternative in book.get('readingAlternatives', []):

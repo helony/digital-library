@@ -69,8 +69,13 @@ test('all three generated preservation policies translate and survive switching 
         assert.equal(document.querySelector('main h1').textContent, title);
       }
       const actions = document.querySelectorAll('.details-actions a');
-      assert.equal(actions[0].textContent, 'Read PDF →');
-      assert.equal(actions[1].textContent, '↓ Download PDF');
+      if (records.find(b => b.slug === slug).accessPaused) {
+        assert.equal(actions.length, 0);
+        assert.equal(document.querySelector('.details-actions p').textContent, window.KDL_COMPLETE.en.rights_reading_paused);
+      } else {
+        assert.equal(actions[0].textContent, 'Read PDF →');
+        assert.equal(actions[1].textContent, '↓ Download PDF');
+      }
     } finally { dom.window.close(); }
   }
 });
