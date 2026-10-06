@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-06T00:55:54Z",
+  "checkedAt": "2026-10-06T14:26:07Z",
   "lastSuccessfulCheck": "2026-09-30T23:10:51Z",
   "sources": [
     {
@@ -23,10 +23,22 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-10-06T00:55:54Z"
+      "lastSuccessfulCheck": "2026-10-06T14:26:07Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-kmr-8208282",
+      "url": "https://www.dengeamerika.com/a/missing-yazidis-rojava-syria/8208282.html",
+      "title": "Li Rojava Dosyaya Windayên Êzîdî Hîn li Benda Çareserîyê ye",
+      "publishedAt": "2026-10-06T13:08:13Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "politics"
+      ],
+      "author": "Emced Kurdo"
+    },
     {
       "id": "voa-kmr-8207049",
       "url": "https://www.dengeamerika.com/a/kurd-iran-kolber/8207049.html",
