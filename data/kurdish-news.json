@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-07T14:43:08Z",
+  "checkedAt": "2026-10-07T23:45:41Z",
   "lastSuccessfulCheck": "2026-09-30T23:10:51Z",
   "sources": [
     {
@@ -23,10 +23,22 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-10-07T14:43:08Z"
+      "lastSuccessfulCheck": "2026-10-07T23:45:41Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-kmr-8208880",
+      "url": "https://www.dengeamerika.com/a/kurd-amerika-nashville/8208880.html",
+      "title": "Nashville, 50 Saliya Hatina Kurdan bo Amerîkayê bi Daxuyanîyek Fermî Naskir",
+      "publishedAt": "2026-10-07T21:34:05Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "culture"
+      ],
+      "author": "Necîb Balayî"
+    },
     {
       "id": "voa-kmr-8208282",
       "url": "https://www.dengeamerika.com/a/missing-yazidis-rojava-syria/8208282.html",
