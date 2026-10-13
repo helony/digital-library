@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-13T15:14:42Z",
+  "checkedAt": "2026-10-13T23:24:24Z",
   "lastSuccessfulCheck": "2026-09-30T23:10:51Z",
   "sources": [
     {
@@ -23,10 +23,22 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-10-13T15:14:42Z"
+      "lastSuccessfulCheck": "2026-10-13T23:24:24Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-kmr-8210863",
+      "url": "https://www.dengeamerika.com/a/syria-krg-hewler-meri-kurds/8210863.html",
+      "title": "Ebdî ji Hewlêrê: Yekîtîya Kurdan û Garantiyên Destûrî Pêwîstî in",
+      "publishedAt": "2026-10-13T21:20:20Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "affairs"
+      ],
+      "author": "Ozlem Yasak · Dengê Amerîka"
+    },
     {
       "id": "voa-ckb-8210542",
       "url": "https://www.dengiamerika.com/a/8210542.html",
