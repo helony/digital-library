@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-15T12:49:30Z",
+  "checkedAt": "2026-10-15T22:39:11Z",
   "lastSuccessfulCheck": "2026-09-30T23:10:51Z",
   "sources": [
     {
@@ -23,10 +23,23 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-10-15T12:49:30Z"
+      "lastSuccessfulCheck": "2026-10-15T22:39:11Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-kmr-8211575",
+      "url": "https://www.dengeamerika.com/a/bruksel-kurds-turkey-middle-east/8211575.html",
+      "title": "Li Brukselê Banga Aştî û Mafên Kurdan Hat Kirin",
+      "publishedAt": "2026-10-15T16:07:48Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "politics",
+        "affairs"
+      ],
+      "author": "Dengê Amerîka"
+    },
     {
       "id": "voa-kmr-8210863",
       "url": "https://www.dengeamerika.com/a/syria-krg-hewler-meri-kurds/8210863.html",
