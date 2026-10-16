@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-16T12:41:27Z",
+  "checkedAt": "2026-10-16T22:10:52Z",
   "lastSuccessfulCheck": "2026-09-30T23:10:51Z",
   "sources": [
     {
@@ -23,10 +23,47 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-10-16T12:41:27Z"
+      "lastSuccessfulCheck": "2026-10-16T22:10:52Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-kmr-8212080",
+      "url": "https://www.dengeamerika.com/a/iraq-mp/8212080.html",
+      "title": "Nerazîbûna Krîstîyan û Kurdan Dengdan li ser Wezareta Koçberîyê Îraqê Paş Xist",
+      "publishedAt": "2026-10-16T18:45:12Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "politics",
+        "affairs"
+      ],
+      "author": "Semîra Elî Mendî"
+    },
+    {
+      "id": "voa-kmr-8211994",
+      "url": "https://www.dengeamerika.com/a/eu-kurds-bruksel-kurds-turkey/8211994.html",
+      "title": "Konferansa Derbarê Aştîyê û Pirsa Kurd Banga Cîbicîkirina 20 Gavan Dike",
+      "publishedAt": "2026-10-16T16:45:00Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "politics"
+      ],
+      "author": "Dengê Amerîka"
+    },
+    {
+      "id": "voa-kmr-8211923",
+      "url": "https://www.dengeamerika.com/a/usa-iraq-iran/8211923.html",
+      "title": "Wezareta Derve ya Amerîkayê bo VOA Kurdî: Îran bi Mîlîşayên Îraqî Gefê li Serweriya Îraqê Dike",
+      "publishedAt": "2026-10-16T14:24:28Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "politics"
+      ],
+      "author": "Semîra Elî Mendî"
+    },
     {
       "id": "voa-kmr-8211575",
       "url": "https://www.dengeamerika.com/a/bruksel-kurds-turkey-middle-east/8211575.html",
