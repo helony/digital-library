@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-20T12:56:08Z",
+  "checkedAt": "2026-10-20T22:35:30Z",
   "lastSuccessfulCheck": "2026-09-30T23:10:51Z",
   "sources": [
     {
@@ -23,10 +23,22 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-10-20T12:56:08Z"
+      "lastSuccessfulCheck": "2026-10-20T22:35:30Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-kmr-8213311",
+      "url": "https://www.dengeamerika.com/a/iraq-iran-kurd/8213311.html",
+      "title": "Çarenûsa Komên Kurd ên Opozîsyona Îranê û Serxwebûna Biryarên Îraqê",
+      "publishedAt": "2026-10-20T18:16:36Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "affairs"
+      ],
+      "author": "Semîra Elî Mendî"
+    },
     {
       "id": "voa-kmr-8212080",
       "url": "https://www.dengeamerika.com/a/iraq-mp/8212080.html",
