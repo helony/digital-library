@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-28T23:28:47Z",
-  "lastSuccessfulCheck": "2026-10-28T23:28:47Z",
+  "checkedAt": "2026-10-29T14:37:28Z",
+  "lastSuccessfulCheck": "2026-10-29T14:37:28Z",
   "sources": [
     {
       "id": "global-voices",
@@ -11,7 +11,7 @@
       "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
       "policyUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-10-28T23:28:47Z"
+      "lastSuccessfulCheck": "2026-10-29T14:37:28Z"
     }
   ],
   "items": [
