@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-30T14:29:14Z",
+  "checkedAt": "2026-10-30T23:09:45Z",
   "lastSuccessfulCheck": "2026-09-30T23:10:51Z",
   "sources": [
     {
@@ -23,10 +23,24 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-10-30T14:29:14Z"
+      "lastSuccessfulCheck": "2026-10-30T23:09:45Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-kmr-8216887",
+      "url": "https://www.dengeamerika.com/a/suriye-kurd/8216887.html",
+      "title": "Çima Opozîsyona Kurdî li Hember Hikûmeta Demkî ya Sûrîyê Nîne?",
+      "publishedAt": "2026-10-30T15:18:04Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "politics",
+        "music",
+        "people"
+      ],
+      "author": "Ridwan Bêzar"
+    },
     {
       "id": "voa-kmr-8216139",
       "url": "https://www.dengeamerika.com/a/iraq-kurdistan-budget/8216139.html",
