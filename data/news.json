@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-04T15:43:10Z",
-  "lastSuccessfulCheck": "2026-11-04T00:10:53Z",
+  "checkedAt": "2026-11-05T00:30:39Z",
+  "lastSuccessfulCheck": "2026-11-05T00:30:39Z",
   "sources": [
     {
       "id": "global-voices",
@@ -10,8 +10,8 @@
       "license": "CC BY 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
       "policyUrl": "https://globalvoices.org/about/global-voices-attribution-policy/",
-      "status": "partial",
-      "lastSuccessfulCheck": "2026-11-04T00:10:53Z"
+      "status": "ok",
+      "lastSuccessfulCheck": "2026-11-05T00:30:39Z"
     }
   ],
   "items": [
