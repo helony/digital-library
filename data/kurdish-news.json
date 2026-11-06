@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-06T00:31:30Z",
+  "checkedAt": "2026-11-06T15:20:03Z",
   "lastSuccessfulCheck": "2026-09-30T23:10:51Z",
   "sources": [
     {
@@ -23,10 +23,22 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-06T00:31:30Z"
+      "lastSuccessfulCheck": "2026-11-06T15:20:03Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-kmr-8219632",
+      "url": "https://www.dengeamerika.com/a/amedspor-galatasary-game/8219632.html",
+      "title": "Sibe Maça Amedspor û Galatasaray li Stenbolê ye",
+      "publishedAt": "2026-11-06T12:53:58Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "affairs"
+      ],
+      "author": "Dengê Amerîka"
+    },
     {
       "id": "voa-kmr-8219275",
       "url": "https://www.dengeamerika.com/a/puk-krg-withdrawal/8219275.html",
