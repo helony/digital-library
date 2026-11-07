@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-07T14:18:26Z",
+  "checkedAt": "2026-11-07T22:57:01Z",
   "lastSuccessfulCheck": "2026-09-30T23:10:51Z",
   "sources": [
     {
@@ -23,10 +23,46 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-07T14:18:26Z"
+      "lastSuccessfulCheck": "2026-11-07T22:57:01Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-kmr-8220047",
+      "url": "https://www.dengeamerika.com/a/amedspor-galatasaray/8220047.html",
+      "title": "Amedspor li Hember Galatasaray Têk Çû",
+      "publishedAt": "2026-11-07T18:21:31Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "affairs"
+      ],
+      "author": "Dengê Amerîka"
+    },
+    {
+      "id": "voa-kmr-8220031",
+      "url": "https://www.dengeamerika.com/a/usa-kurds-iraq-/8220031.html",
+      "title": "Amerîka Helwesta Xwe li ser Alozîyên Siyasî yên Herêma Kurdistanê Diyar Dike",
+      "publishedAt": "2026-11-07T16:59:52Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "politics"
+      ],
+      "author": "Dengê Amerîka"
+    },
+    {
+      "id": "voa-kmr-8220001",
+      "url": "https://www.dengeamerika.com/a/turkey-sick-prisoner-dies/8220001.html",
+      "title": "Girtîyekî Kurd li Nexweşxaneyeke Enqerê Jiyana Xwe ji Dest Da",
+      "publishedAt": "2026-11-07T14:21:07Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "people"
+      ],
+      "author": "Dengê Amerîka"
+    },
     {
       "id": "voa-kmr-8219632",
       "url": "https://www.dengeamerika.com/a/amedspor-galatasary-game/8219632.html",
