@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-07T22:57:01Z",
+  "checkedAt": "2026-11-08T14:28:33Z",
   "lastSuccessfulCheck": "2026-09-30T23:10:51Z",
   "sources": [
     {
@@ -23,10 +23,23 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-07T22:57:01Z"
+      "lastSuccessfulCheck": "2026-11-08T14:28:33Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-ckb-8220198",
+      "url": "https://www.dengiamerika.com/a/8220198.html",
+      "title": "گیان لەدەستدانی دوو کەس لە لافاوەکەی هەولێر؛بەرپرسێکیش خەڵکی بە کەمتەرخەم تۆمەتبار دەکات",
+      "publishedAt": "2026-11-08T13:44:07Z",
+      "sourceId": "voa-ckb",
+      "language": "ckb",
+      "topics": [
+        "people",
+        "geography"
+      ],
+      "author": "دیار جەمال"
+    },
     {
       "id": "voa-kmr-8220047",
       "url": "https://www.dengeamerika.com/a/amedspor-galatasaray/8220047.html",
