@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-08T23:05:25Z",
+  "checkedAt": "2026-11-09T17:45:56Z",
   "lastSuccessfulCheck": "2026-09-30T23:10:51Z",
   "sources": [
     {
@@ -23,10 +23,22 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-08T23:05:25Z"
+      "lastSuccessfulCheck": "2026-11-09T17:45:56Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-ckb-8220493",
+      "url": "https://www.dengiamerika.com/a/8220493.html",
+      "title": "مەحمود عوسمان دەڵێت لە ئەگەری ڕێکنەکەوتنی پارتی و یەکێتی باشترە هەرێمی کوردستان بکرێت بە دوو کانتۆن",
+      "publishedAt": "2026-11-09T15:47:17Z",
+      "sourceId": "voa-ckb",
+      "language": "ckb",
+      "topics": [
+        "politics"
+      ],
+      "author": "دیار جەمال"
+    },
     {
       "id": "voa-ckb-8220198",
       "url": "https://www.dengiamerika.com/a/8220198.html",
