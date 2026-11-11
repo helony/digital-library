@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-10T15:45:11Z",
+  "checkedAt": "2026-11-11T00:13:04Z",
   "lastSuccessfulCheck": "2026-09-30T23:10:51Z",
   "sources": [
     {
@@ -23,10 +23,22 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-10T15:45:11Z"
+      "lastSuccessfulCheck": "2026-11-11T00:13:04Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-kmr-8221055",
+      "url": "https://www.dengeamerika.com/a/usa-iraq-kurdistan-krg-barrack/8221055.html",
+      "title": "Hêzên Siyasî Peyama Washingtonê ji bo Herêma Kurdistanê Çawa Şîrove Dikin?",
+      "publishedAt": "2026-11-10T18:56:40Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "politics"
+      ],
+      "author": "Semîra Elî Mendî"
+    },
     {
       "id": "voa-ckb-8220493",
       "url": "https://www.dengiamerika.com/a/8220493.html",
