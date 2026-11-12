@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-12T01:38:41Z",
-  "lastSuccessfulCheck": "2026-11-12T01:38:41Z",
+  "checkedAt": "2026-11-12T16:10:23Z",
+  "lastSuccessfulCheck": "2026-11-12T16:10:23Z",
   "sources": [
     {
       "id": "voa-kmr",
@@ -12,7 +12,7 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-12T01:38:41Z"
+      "lastSuccessfulCheck": "2026-11-12T16:10:23Z"
     },
     {
       "id": "voa-ckb",
@@ -23,10 +23,34 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-12T01:38:41Z"
+      "lastSuccessfulCheck": "2026-11-12T16:10:23Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-kmr-8222902",
+      "url": "https://www.dengeamerika.com/a/iraq-iran-barzani/8222902.html",
+      "title": "Nêçîrvan Barzanî û Serokê Îranê li Tirkîyê Kom Bûn",
+      "publishedAt": "2026-11-12T15:28:35Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "politics"
+      ],
+      "author": "Dengê Amerîka"
+    },
+    {
+      "id": "voa-kmr-8222913",
+      "url": "https://www.dengeamerika.com/a/babacan-peace-process/8222913.html",
+      "title": "Babacan: Berî Herkesî Me Piştgirî Da Pêvajoya Tirkîyeya Bêteror",
+      "publishedAt": "2026-11-12T15:19:54Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "politics"
+      ],
+      "author": "Dengê Amerîka"
+    },
     {
       "id": "voa-kmr-8221055",
       "url": "https://www.dengeamerika.com/a/usa-iraq-kurdistan-krg-barrack/8221055.html",
