@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-13T00:39:57Z",
-  "lastSuccessfulCheck": "2026-11-13T00:39:57Z",
+  "checkedAt": "2026-11-13T15:39:12Z",
+  "lastSuccessfulCheck": "2026-11-13T15:39:12Z",
   "sources": [
     {
       "id": "voa-kmr",
@@ -12,7 +12,7 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-13T00:39:57Z"
+      "lastSuccessfulCheck": "2026-11-13T15:39:12Z"
     },
     {
       "id": "voa-ckb",
@@ -23,10 +23,36 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-13T00:39:57Z"
+      "lastSuccessfulCheck": "2026-11-13T15:39:12Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-kmr-8223305",
+      "url": "https://www.dengeamerika.com/a/turkey-kurdish-language-ed/8223305.html",
+      "title": "Wezareta Perwerdeyê ya Tirkîyê: Niha 153 Mamosteyên Zimanê Kurdî yên Dewletê Hene",
+      "publishedAt": "2026-11-13T13:53:14Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "culture",
+        "people",
+        "affairs"
+      ],
+      "author": "Dengê Amerîka"
+    },
+    {
+      "id": "voa-kmr-8223279",
+      "url": "https://www.dengeamerika.com/a/turkey-league-disicpline/8223279.html",
+      "title": "Federasyona Futbolê li Tirkîyê Derheqê Maça Amedspor û Galatasaray Biryarên Dîsîplînê Radigihîne",
+      "publishedAt": "2026-11-13T12:35:12Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "affairs"
+      ],
+      "author": "Dengê Amerîka"
+    },
     {
       "id": "voa-kmr-8223006",
       "url": "https://www.dengeamerika.com/a/iraq-kurdistan-krg-talabani/8223006.html",
