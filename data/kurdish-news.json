@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-12T16:10:23Z",
-  "lastSuccessfulCheck": "2026-11-12T16:10:23Z",
+  "checkedAt": "2026-11-13T00:39:57Z",
+  "lastSuccessfulCheck": "2026-11-13T00:39:57Z",
   "sources": [
     {
       "id": "voa-kmr",
@@ -12,7 +12,7 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-12T16:10:23Z"
+      "lastSuccessfulCheck": "2026-11-13T00:39:57Z"
     },
     {
       "id": "voa-ckb",
@@ -23,10 +23,22 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-12T16:10:23Z"
+      "lastSuccessfulCheck": "2026-11-13T00:39:57Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-kmr-8223006",
+      "url": "https://www.dengeamerika.com/a/iraq-kurdistan-krg-talabani/8223006.html",
+      "title": "Talebanî: Rûniştina Parlemana Herêma Kurdistanê 'Mezintirîn Qeyrana Siyasî' ye",
+      "publishedAt": "2026-11-12T19:20:46Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "politics"
+      ],
+      "author": "Dengê Amerîka"
+    },
     {
       "id": "voa-kmr-8222902",
       "url": "https://www.dengeamerika.com/a/iraq-iran-barzani/8222902.html",
