@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-18T16:42:00Z",
-  "lastSuccessfulCheck": "2026-11-18T16:42:00Z",
+  "checkedAt": "2026-11-19T01:26:24Z",
+  "lastSuccessfulCheck": "2026-11-19T01:26:24Z",
   "sources": [
     {
       "id": "voa-kmr",
@@ -12,7 +12,7 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-18T16:42:00Z"
+      "lastSuccessfulCheck": "2026-11-19T01:26:24Z"
     },
     {
       "id": "voa-ckb",
@@ -23,10 +23,22 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-18T16:42:00Z"
+      "lastSuccessfulCheck": "2026-11-19T01:26:24Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-kmr-8225071",
+      "url": "https://www.dengeamerika.com/a/usa-iraq-zaidi-iran/8225071.html",
+      "title": "Wezareta Derve bo VOA: Em Çaverê Dikin el-Zeydî Mîlîşyayên Girêdayî Îranê Berpirsiyar Bigire",
+      "publishedAt": "2026-11-18T17:29:40Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "politics"
+      ],
+      "author": "Semîra Elî Mendî"
+    },
     {
       "id": "voa-kmr-8224711",
       "url": "https://www.dengeamerika.com/a/qubad-talabani-krg-tirkiye-erman-topcu/8224711.html",
