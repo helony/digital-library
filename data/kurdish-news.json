@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-19T16:45:13Z",
-  "lastSuccessfulCheck": "2026-11-19T16:45:13Z",
+  "checkedAt": "2026-11-20T01:25:34Z",
+  "lastSuccessfulCheck": "2026-11-20T01:25:34Z",
   "sources": [
     {
       "id": "voa-kmr",
@@ -12,7 +12,7 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-19T16:45:13Z"
+      "lastSuccessfulCheck": "2026-11-20T01:25:34Z"
     },
     {
       "id": "voa-ckb",
@@ -23,10 +23,36 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-19T16:45:13Z"
+      "lastSuccessfulCheck": "2026-11-20T01:25:34Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-kmr-8225673",
+      "url": "https://www.dengeamerika.com/a/ozel-yeni-party-kurds/8225673.html",
+      "title": "Ozel Dibêje Kurd Helwesta Yenî Partîyê Baş Fêm Dikin",
+      "publishedAt": "2026-11-19T18:54:51Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "politics"
+      ],
+      "author": "Dengê Amerîka"
+    },
+    {
+      "id": "voa-kmr-8225642",
+      "url": "https://www.dengeamerika.com/a/trump-china-visit/8225642.html",
+      "title": "Serok Trump: Serdana Min a Çînê Tijî Encamên Girîng Bû",
+      "publishedAt": "2026-11-19T17:47:20Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "politics",
+        "people",
+        "geography"
+      ],
+      "author": "Dengê Amerîka"
+    },
     {
       "id": "voa-kmr-8225071",
       "url": "https://www.dengeamerika.com/a/usa-iraq-zaidi-iran/8225071.html",
@@ -594,18 +620,6 @@
         "affairs"
       ],
       "author": "Ozlem Yasak"
-    },
-    {
-      "id": "voa-kmr-8200620",
-      "url": "https://www.dengeamerika.com/a/jina-amini-dem-party-kurds-turkey/8200620.html",
-      "title": "DEM Partî Dibêje Jîna Emînî Sembola Têkoşîna Jinan e",
-      "publishedAt": "2026-09-16T13:55:22Z",
-      "sourceId": "voa-kmr",
-      "language": "kmr",
-      "topics": [
-        "people"
-      ],
-      "author": "Dengê Amerîka"
     }
   ]
 }
