@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-21T23:53:53Z",
-  "lastSuccessfulCheck": "2026-11-21T23:53:53Z",
+  "checkedAt": "2026-11-22T15:36:49Z",
+  "lastSuccessfulCheck": "2026-11-22T15:36:49Z",
   "sources": [
     {
       "id": "voa-kmr",
@@ -12,7 +12,7 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-21T23:53:53Z"
+      "lastSuccessfulCheck": "2026-11-22T15:36:49Z"
     },
     {
       "id": "voa-ckb",
@@ -23,7 +23,7 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-21T23:53:53Z"
+      "lastSuccessfulCheck": "2026-11-22T15:36:49Z"
     }
   ],
   "items": [
