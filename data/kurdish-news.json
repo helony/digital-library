@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-27T02:22:11Z",
-  "lastSuccessfulCheck": "2026-11-27T02:22:11Z",
+  "checkedAt": "2026-11-27T17:38:00Z",
+  "lastSuccessfulCheck": "2026-11-27T17:38:00Z",
   "sources": [
     {
       "id": "voa-kmr",
@@ -12,7 +12,7 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-27T02:22:11Z"
+      "lastSuccessfulCheck": "2026-11-27T17:38:00Z"
     },
     {
       "id": "voa-ckb",
@@ -23,10 +23,25 @@
       "licenseUrl": "https://www.voanews.com/p/5338.html",
       "policyUrl": "https://www.voanews.com/p/5338.html",
       "status": "ok",
-      "lastSuccessfulCheck": "2026-11-27T02:22:11Z"
+      "lastSuccessfulCheck": "2026-11-27T17:38:00Z"
     }
   ],
   "items": [
+    {
+      "id": "voa-kmr-8228576",
+      "url": "https://www.dengeamerika.com/a/kurd-ziman-tirkiye/8228576.html",
+      "title": "Tirkîyê ji Wezîfedarkirina 15 Hezar Mamostayan Tenê 16 Mamostayan bo Zimanê Kurd Vediqetîne",
+      "publishedAt": "2026-11-27T12:44:16Z",
+      "sourceId": "voa-kmr",
+      "language": "kmr",
+      "topics": [
+        "politics",
+        "culture",
+        "people",
+        "affairs"
+      ],
+      "author": "Omer Baran"
+    },
     {
       "id": "voa-ckb-8228188",
       "url": "https://www.dengiamerika.com/a/8228188.html",
@@ -622,18 +637,6 @@
         "politics"
       ],
       "author": "مەریوان حەمە"
-    },
-    {
-      "id": "voa-kmr-8206243",
-      "url": "https://www.dengeamerika.com/a/iraq-kurdistan-usa-troops/8206243.html",
-      "title": "Piştî Vekişîna Hêzên Amerîkî, Çi li Pêş Herêma Kurdistanê Ye?",
-      "publishedAt": "2026-09-30T17:03:13Z",
-      "sourceId": "voa-kmr",
-      "language": "kmr",
-      "topics": [
-        "affairs"
-      ],
-      "author": "Semîra Elî Mendî"
     },
     {
       "id": "voa-ckb-8202797",
